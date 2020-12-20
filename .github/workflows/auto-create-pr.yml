@@ -1,0 +1,46 @@
+# https://github.com/thomaseizinger/create-pull-request
+name: 'Create PR'
+
+on:
+  create:
+    branches:
+      - '**'
+
+jobs:
+  create-pr-for-branch:
+    if: |
+      startsWith(github.head_ref, 'einselbst') == false &&
+      startsWith(github.head_ref, 'dependabot') == false &&
+      startsWith(github.head_ref, 'renovate') == false
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Extract branch name
+        id: extract_branch
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+
+      - name: Create pull request to main
+        uses: thomaseizinger/create-pull-request@master
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          head: ${{ github.ref }}
+          base: main
+          title: ${{ steps.extract_branch.outputs.branch }}
+          body: |
+           Hi!
+           This PR was created in response to a new branch.
+
+      - name: Create pull request to pure
+        uses: thomaseizinger/create-pull-request@master
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          head: release/v${{ github.event.inputs.versionName }}
+          base: pure
+          title: ${{ steps.extract_branch.outputs.branch }}
+          body: |
+              Hi!
+              This PR was created in response to a new branch.
