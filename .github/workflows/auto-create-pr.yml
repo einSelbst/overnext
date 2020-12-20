@@ -34,9 +34,9 @@ jobs:
            Hi!
            This PR was created in response to a new branch.
 
-    - name: Create pull request to pure
-      uses: thomaseizinger/create-pull-request@master
-      with:
+      - name: Create pull request to pure
+        uses: thomaseizinger/create-pull-request@master
+        with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           head: release/v${{ github.event.inputs.versionName }}
           base: pure
