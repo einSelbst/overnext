@@ -1,6 +1,6 @@
 {
   "extends": [
-    "config:base"
+    "github>einselbst/einselbst-renovate-config"
   ],
   "packageRules": [
     {
