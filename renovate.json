@@ -1,11 +1,5 @@
 {
   "extends": [
     "github>einselbst/einselbst-renovate-config"
-  ],
-  "packageRules": [
-    {
-      "updateTypes": ["minor", "patch"],
-      "automerge": true
-    }
   ]
 }
