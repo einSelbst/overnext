@@ -30,3 +30,9 @@ Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&ut
 - Linting, typechecking and formatting on by default using [`husky`](https://github.com/typicode/husky) for commit hooks
 - Testing with [Jest](https://jestjs.io/) and [`react-testing-library`](https://testing-library.com/docs/react-testing-library/intro)
 - Commits follow the [Conventional Commits convention](https://www.conventionalcommits.org/) and are supported via [Commitizen](https://github.com/commitizen/cz-cli). To make a new commit type `yarn cz` and follow the prompts.
+
+# CI
+
+This uses github actions.
+
+- basic: runs linter, tests and build for different node versions
