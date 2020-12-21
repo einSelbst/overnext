@@ -1,5 +1,3 @@
 {
-  "extends": [
-    "github>einselbst/einselbst-renovate-config"
-  ]
+  "extends": ["github>einselbst/einselbst-renovate-config"]
 }
