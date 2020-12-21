@@ -1,7 +1,7 @@
 // import App from "next/app";
-import type { AppProps /*, AppContext */ } from 'next/app'
+import { AppProps /*, AppContext */ } from 'next/app'
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp ({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />
 }
 
