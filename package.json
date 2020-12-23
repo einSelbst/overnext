@@ -14,7 +14,7 @@
     "format": "prettier-standard --format --lint",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "test": "jest",
-    "test-all": "yarn lint && yarn type-check && yarn test"
+    "validate": "yarn format && yarn lint && yarn type-check && yarn test"
   },
   "husky": {
     "hooks": {
