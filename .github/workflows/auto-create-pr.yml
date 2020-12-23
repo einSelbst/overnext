@@ -31,8 +31,8 @@ jobs:
           base: main
           title: ${{ steps.extract_branch.outputs.branch }}
           body: |
-           Hi!
-           This PR was created in response to a new branch.
+            Hi!
+            This PR was created in response to a new branch.
 
       - name: Create pull request to pure
         uses: thomaseizinger/create-pull-request@master
@@ -42,5 +42,5 @@ jobs:
           base: pure
           title: ${{ steps.extract_branch.outputs.branch }}
           body: |
-              Hi!
-              This PR was created in response to a new branch.
+            Hi!
+            This PR was created in response to a new branch.
