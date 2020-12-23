@@ -32,8 +32,25 @@ Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&ut
 - Testing with [Jest](https://jestjs.io/) and [`react-testing-library`](https://testing-library.com/docs/react-testing-library/intro)
 - Commits follow the [Conventional Commits convention](https://www.conventionalcommits.org/) and are supported via [Commitizen](https://github.com/commitizen/cz-cli). To make a new commit type `yarn cz` and follow the prompts.
 
+I haven't made my mind up regarding code documentation and the usage of jsdoc.
+
+## Scripts
+
+```bash
+yarn dev      - start dev server
+yarn cz       - make new commit
+yarn release  - make new release
+yarn type-check - run typescript compiler
+yarn lint     - run eslint
+yarn format   - run prettier
+yarn test     - run jest
+yarn validate - run tsc, prettier, eslint and the tests
+```
+
 # CI
 
-This uses github actions.
+## Github Actions
 
 - basic: runs linter, tests and build for different node versions
+- auto-create-pr: creates Pull Requests for new branches
+- compressed-size: checks the size of the bundled files and adds a comment in the PR
