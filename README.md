@@ -34,12 +34,14 @@
 ## next plugins
 
 - [compose plugins](https://github.com/cyrilwanner/next-compose-plugins)
-- [bundle analyzer](https://github.com/vercel/next.js/tree/canary/packages/next-bundle-analyzer)
+- webpack [bundle analyzer](https://github.com/vercel/next.js/tree/canary/packages/next-bundle-analyzer)
 
 ## Scripts
 
 ```bash
 yarn dev      - start dev server
+yarn build    - build project
+yarn build:analyze - build project and visualize chunks
 yarn cz       - make new commit
 yarn release  - make new release
 yarn type-check - run typescript compiler
