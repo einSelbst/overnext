@@ -22,9 +22,15 @@
 - [Prettier-Standard](https://github.com/sheerun/prettier-standard)
   - [prettierx](https://github.com/brodybits/prettierx/)
 - [ESLint](https://eslint.org/)
-  - ToDo: https://github.com/vercel/next.js/tree/canary/packages/eslint-plugin-next
+  - [eslint-plugin-next](https://github.com/vercel/next.js/tree/canary/packages/eslint-plugin-next)
+  - [eslint-plugin-jsx-a11y]()
+  - [eslint-plugin-import](https://github.com/benmosher/eslint-plugin-import)
+  - [eslint-plugin-jest](https://github.com/jest-community/eslint-plugin-jest)
+  - [eslint-plugin-jest-dom](https://github.com/testing-library/eslint-plugin-jest-dom)
+  - TODO: add more https://github.com/dustinspecker/awesome-eslint
 - [`husky`](https://github.com/typicode/husky) for hooks
   - [lint-staged](https://github.com/okonet/lint-staged)
+- [axe-core/react](https://github.com/dequelabs/axe-core-npm)
 
 # Testing
 

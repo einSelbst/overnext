@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home page matches snapshot 1`] = `
+exports[`home page matches snapshot 1`] = `
 <DocumentFragment>
   <div
     class="jsx-2250570153 container"

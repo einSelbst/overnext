@@ -1,14 +1,24 @@
 {
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": ["@typescript-eslint", "@next/next"],
   "extends": [
     "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:jsx-a11y/strict",
     "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended"
-    // Uncomment the following lines to enable eslint-config-prettier
-    // Is not enabled right now to avoid issues with the Next.js repo
-    // "prettier",
-    // "prettier/@typescript-eslint"
+    "plugin:react-hooks/recommended",
+    "plugin:@next/next/recommended",
+    "plugin:jest/all",
+    "plugin:jest-dom/recommended"
   ],
   "env": {
     "es6": true,
@@ -16,23 +26,39 @@
     "jest": true,
     "node": true
   },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "rules": {
     "react/react-in-jsx-scope": 0,
-    "react/display-name": 0,
-    "react/prop-types": 0,
-    "@typescript-eslint/explicit-function-return-type": 0,
-    "@typescript-eslint/explicit-member-accessibility": 0,
-    "@typescript-eslint/indent": 0,
-    "@typescript-eslint/member-delimiter-style": 0,
-    "@typescript-eslint/no-explicit-any": 0,
+
+    "@typescript-eslint/explicit-module-boundary-types": 0,
     "@typescript-eslint/no-var-requires": 0,
-    "@typescript-eslint/no-use-before-define": 0,
     "@typescript-eslint/no-unused-vars": [
       2,
       {
         "argsIgnorePattern": "^_"
       }
     ],
+
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"]
+      }
+    ],
+    "jsx-a11y/label-has-associated-control": "error",
+
+    "jest/prefer-expect-assertions": "off",
+    "jest/expect-expect": [
+      "error",
+      {
+        "assertFunctionNames": ["expect", "getBy*"]
+      }
+    ],
+
     "no-console": [
       2,
       {
