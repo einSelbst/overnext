@@ -37,7 +37,9 @@
 - [Jest](https://jestjs.io/)
   - [`react-testing-library`](https://testing-library.com/docs/react-testing-library/intro)
 
-## next plugins
+# Next.js Configuration
+
+## Plugins
 
 - [compose plugins](https://github.com/cyrilwanner/next-compose-plugins)
 - webpack [bundle analyzer](https://github.com/vercel/next.js/tree/canary/packages/next-bundle-analyzer)
@@ -56,6 +58,8 @@ yarn format   - run prettier
 yarn test     - run jest
 yarn validate - run tsc, prettier, eslint and the tests
 ```
+
+# CI
 
 ## Github Actions
 
