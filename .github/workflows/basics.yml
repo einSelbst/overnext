@@ -8,7 +8,7 @@ on:
 
 jobs:
   ci:
-    name: Continuous integration
+    name: Validate
     runs-on: ubuntu-latest
 
     strategy:

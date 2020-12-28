@@ -1,12 +1,12 @@
 # https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#configuring-workflow-events
-name: Compressed Size
+name: Audit
 
 on:
   pull_request:
     types: [assigned, opened, synchronize, reopened]
 
 jobs:
-  compressed-size:
+  Compressed Size:
     name: Compare compressed file sizes
     runs-on: ubuntu-latest
 

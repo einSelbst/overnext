@@ -37,6 +37,10 @@
 - [Jest](https://jestjs.io/)
   - [`react-testing-library`](https://testing-library.com/docs/react-testing-library/intro)
 
+# Audits
+
+- Lighthouse
+
 # Next.js Configuration
 
 ## Plugins
@@ -66,6 +70,9 @@ yarn validate - run tsc, prettier, eslint and the tests
 - basic: runs linter, tests and build for different node versions
 - auto-create-pr: creates Pull Requests for new branches
 - compressed-size: checks the size of the bundled files and adds a comment in the PR
+- ESLint: another action that runs eslint and prints a summary in the PR
+- Lighthouse on Vercel: Runs a Lighthouse Audit on the Vercel Preview URL
+- Labeler: adds labels to PR's based on the changed files
 
 # Deployment
 
