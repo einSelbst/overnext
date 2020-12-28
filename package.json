@@ -15,8 +15,7 @@
     "format": "prettier-standard --format --lint",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "test": "jest",
-    "validate": "yarn format && yarn lint && yarn type-check && yarn test",
-    "update:badges": "update-badge next react jest node typescript eslint"
+    "validate": "yarn format && yarn lint && yarn type-check && yarn test"
   },
   "husky": {
     "hooks": {
