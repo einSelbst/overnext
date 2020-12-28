@@ -17,8 +17,7 @@ jobs:
     steps:
       - name: print branch name
         run: |
-          echo "something"
-          echo "branch name ${github.head_ref}"
+          echo "branch name $GITHUB_REF"
 
       - name: Checkout
         uses: actions/checkout@v2
