@@ -1,0 +1,35 @@
+name: eslint
+
+on:
+  # By adding a schedule task to this workflow we will automatically
+  # begin serializing read-only runs and handling them. The cron job
+  # below is set to run every 15 minutes, GitHub will ignore anything
+  # under 10 minutes and run every 10 minutes anyway.
+  schedule:
+    - cron: '*/15 * * * *'
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - closed
+
+jobs:
+  eslint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+      - name: Cache yarn directory
+        id: cache-yarn-dir
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: ${{ runner.os }}-yarn-
+      - name: Install dependencies
+        if: steps.cache-yarn-dir.outputs.cache-hit != 'true'
+        run: yarn install --frozen-lockfile
+      - name: Run Eslint
+        uses: bradennapier/eslint-plus-action@v3.4.2
