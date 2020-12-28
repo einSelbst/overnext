@@ -3,7 +3,6 @@ name: Vercel Preview URL Audit
 on:
   issue_comment:
     types: [edited]
-  push:
 
 jobs:
   lighthouse:
