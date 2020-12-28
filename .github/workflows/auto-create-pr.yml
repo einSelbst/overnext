@@ -9,9 +9,9 @@ on:
 jobs:
   create-pr-for-branch:
     if: |
-      startsWith(github.head_ref, 'einSelbst') == false &&
-      startsWith(github.head_ref, 'dependabot') == false &&
-      startsWith(github.head_ref, 'renovate') == false
+      startsWith(github.ref, 'einSelbst') == false &&
+      startsWith(github.ref, 'dependabot') == false &&
+      startsWith(github.ref, 'renovate') == false
     runs-on: ubuntu-latest
 
     steps:
@@ -38,7 +38,8 @@ jobs:
         uses: thomaseizinger/create-pull-request@master
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          head: release/v${{ github.event.inputs.versionName }}
+          head: ${{ github.ref }}
+          # head: release/v${{ github.event.inputs.versionName }}
           base: pure
           title: ${{ steps.extract_branch.outputs.branch }}
           body: |
