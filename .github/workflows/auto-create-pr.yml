@@ -9,9 +9,9 @@ on:
 jobs:
   create-pr-for-branch:
     if: |
-      startsWith(github.head_ref, 'einSelbst') == false &&
-      startsWith(github.head_ref, 'dependabot') == false &&
-      startsWith(github.head_ref, 'renovate') == false
+      startsWith(github.ref, 'einSelbst') == false &&
+      startsWith(github.ref, 'dependabot') == false &&
+      startsWith(github.ref, 'renovate') == false
     runs-on: ubuntu-latest
 
     steps:
