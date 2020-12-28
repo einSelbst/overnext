@@ -33,18 +33,6 @@ jobs:
           body: |
             Hi!
             This PR was created in response to a new branch.
-
-      - name: Create pull request to pure
-        uses: thomaseizinger/create-pull-request@master
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          head: ${{ github.ref }}
-          # head: release/v${{ github.event.inputs.versionName }}
-          base: pure
-          title: ${{ steps.extract_branch.outputs.branch }}
-          body: |
-            Hi!
-            This PR was created in response to a new branch.
             ${GITHUB_WORKFLOW} - The name of the workflow
             ${GITHUB_RUN_ID}	A unique number for each run within a repository. This number does not change if you re-run the workflow run.
             $GITHUB_RUN_NUMBER}	A unique number for each run of a particular workflow in a repository. This number begins at 1 for the workflow's first run, and increments with each new run. This number does not change if you re-run the workflow run.
@@ -62,3 +50,15 @@ jobs:
             ${GITHUB_SERVER_URL}	Returns the URL of the GitHub server. For example: https://github.com.
             ${GITHUB_API_URL}	Returns the API URL. For example: https://api.github.com.
             ${GITHUB_GRAPHQL_URL} GraphQL URL
+
+      - name: Create pull request to pure
+        if: false # not needed at the moment
+        uses: thomaseizinger/create-pull-request@master
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          head: release/v${{ github.event.inputs.versionName }}
+          base: pure
+          title: ${{ steps.extract_branch.outputs.branch }}
+          body: |
+            Hi!
+            This PR was created in response to a new branch.
