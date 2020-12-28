@@ -9,12 +9,17 @@ on:
 jobs:
   create-pr-for-branch:
     if: |
-      startsWith(github.head_ref, 'einSelbst') == false &&
-      startsWith(github.head_ref, 'dependabot') == false &&
-      startsWith(github.head_ref, 'renovate') == false
+      contains(github.head_ref, 'einSelbst') == false &&
+      contains(github.head_ref, 'dependabot') == false &&
+      contains(github.head_ref, 'renovate') == false
     runs-on: ubuntu-latest
 
     steps:
+      - name: print branch name
+        run: |
+          echo "something"
+          echo "branch name ${github.head_ref}"
+
       - name: Checkout
         uses: actions/checkout@v2
 
