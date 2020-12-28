@@ -15,7 +15,7 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           number: ${{ github.event.issue.number }}
-          header: lighthouse
+          header: Lighthouse Audit Vercel
           message: |
             Running Lighthouse audit...
       - name: Capture Vercel preview URL

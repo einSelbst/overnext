@@ -1,4 +1,4 @@
-name: ESlint
+name: ESLint
 
 on:
   # By adding a schedule task to this workflow we will automatically
@@ -15,6 +15,7 @@ on:
 
 jobs:
   eslint:
+    name: Run ESLint
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
