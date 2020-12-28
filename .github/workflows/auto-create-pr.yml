@@ -38,7 +38,8 @@ jobs:
         uses: thomaseizinger/create-pull-request@master
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          head: release/v${{ github.event.inputs.versionName }}
+          head: ${{ github.ref }}
+          # head: release/v${{ github.event.inputs.versionName }}
           base: pure
           title: ${{ steps.extract_branch.outputs.branch }}
           body: |
