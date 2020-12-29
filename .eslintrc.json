@@ -16,9 +16,7 @@
     "plugin:jsx-a11y/strict",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
-    "plugin:@next/next/recommended",
-    "plugin:jest/all",
-    "plugin:jest-dom/recommended"
+    "plugin:@next/next/recommended"
   ],
   "env": {
     "es6": true,
@@ -32,17 +30,15 @@
     }
   },
   "rules": {
-    "react/react-in-jsx-scope": 0,
-
-    "@typescript-eslint/explicit-module-boundary-types": 0,
-    "@typescript-eslint/no-var-requires": 0,
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/no-unused-vars": [
       2,
       {
         "argsIgnorePattern": "^_"
       }
     ],
-
     "jsx-a11y/anchor-is-valid": [
       "error",
       {
@@ -50,20 +46,29 @@
       }
     ],
     "jsx-a11y/label-has-associated-control": "error",
-
-    "jest/prefer-expect-assertions": "off",
-    "jest/expect-expect": [
-      "error",
-      {
-        "assertFunctionNames": ["expect", "getBy*"]
-      }
-    ],
-
     "no-console": [
       2,
       {
         "allow": ["warn", "error"]
       }
     ]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["cypress/**/*.js", "**/*.spec.js"],
+      "plugins": ["cypress"],
+      "extends": ["plugin:cypress/recommended"],
+      "rules": {
+        "no-console": "off",
+        "no-unused-expressions": "off",
+        "cypress/no-unnecessary-waiting": "off",
+        "@typescript-eslint/no-empty-function": "off",
+        "@typescript-eslint/ban-ts-comment": "off"
+      }
+    },
+    {
+      "files": ["**/*.test.[js|ts]"],
+      "extends": ["plugin:jest/all", "plugin:jest-dom/recommended"]
+    }
+  ]
 }
