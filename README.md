@@ -113,6 +113,6 @@ yarn validate - run tsc, prettier, eslint and the tests
 - [Vercel](https://vercel.com/import?filter=next.js)
 - ToDo: Netlify
 
-# Credit
+# Credits
 
-...where credit is due, thanks to @bahmutov, @thomaseizinger
+...where credit is due, thanks to @bahmutov, @ferlopezm94, @thomaseizinger.
