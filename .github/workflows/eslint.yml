@@ -12,6 +12,9 @@ on:
       - opened
       - synchronize
       - closed
+  repository_dispatch:
+    types:
+      - ci-checks
 
 jobs:
   eslint:

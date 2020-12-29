@@ -51,6 +51,16 @@ jobs:
             ${GITHUB_API_URL}	Returns the API URL. For example: https://api.github.com.
             ${GITHUB_GRAPHQL_URL} GraphQL URL
 
+      # GitHub Action does not allow recursion so the CI checks are
+      # not triggered when the branch is pushed
+      - name: Trigger CI checks for new pull request
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # token: ${{ secrets.GITHUB_REPO_TOKEN }}
+          event-type: ci-checks
+          # client-payload: '{"branch": "release/${{ env.RELEASE_VERSION }}"}'
+
       - name: Create pull request to pure
         if: false # not needed at the moment
         uses: thomaseizinger/create-pull-request@master

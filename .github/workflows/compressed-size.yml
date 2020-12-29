@@ -4,6 +4,9 @@ name: Audit
 on:
   pull_request:
     types: [assigned, opened, synchronize, reopened]
+  repository_dispatch:
+    types:
+      - ci-checks
 
 jobs:
   Compressed Size:
