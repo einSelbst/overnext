@@ -1,7 +1,11 @@
 # see https://github.com/marketplace/actions/labeler
 name: 'Pull Request Labeler'
 
-on: pull_request_target
+on:
+  pull_request_target:
+  repository_dispatch:
+    types:
+      - ci-checks
 
 jobs:
   triage:

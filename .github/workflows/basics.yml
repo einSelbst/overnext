@@ -5,6 +5,9 @@ on:
     branches:
       - main
       - pure
+  repository_dispatch:
+    types:
+      - ci-checks
 
 jobs:
   ci:

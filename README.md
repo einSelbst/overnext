@@ -1,14 +1,46 @@
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-
 # NextJS Opinionated Typescript Boilerplate
 
+![next version](https://img.shields.io/badge/next-latest-brightgreen) ![react version](https://img.shields.io/badge/react-17.0.1-brightgreen) ![typescript version](https://img.shields.io/badge/typescript-4.1.3-brightgreen) ![jest version](https://img.shields.io/badge/jest-26.6.3-brightgreen) ![eslint version](https://img.shields.io/badge/eslint-7.16.0-brightgreen) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
 # DX
+
+- automation, inspirations https://github.com/sdras/awesome-actions
+- conformity, inspirations https://github.com/dustinspecker/awesome-eslint
 
 ## Commit Style
 
 - [Conventional Commits convention](https://www.conventionalcommits.org/)
   - [Commitizen](https://github.com/commitizen/cz-cli)
+
+## Project Automation / Labeling
+
+### Issues
+
+- ToDo: https://github.com/coblox/zenhub-link-pr-to-issue
+- ToDo: https://github.com/damccorm/tag-ur-it
+- ToDo: https://github.com/Renato66/auto-label
+- ToDo: https://github.com/Naturalclar/issue-action
+
+### Projects
+
+- ToDo: https://github.com/technote-space/auto-card-labeler
+- ToDo: https://github.com/alex-page/github-project-automation-plus
+- ToDo: https://github.com/marketplace/actions/move-labeled-or-milestoned-issue-to-a-specific-project-column
+- ToDo: https://github.com/philschatz/project-bot
+- ToDo: https://github.com/takanabe/github-actions-automate-projects
+
+### Milestones
+
+- ToDo: https://github.com/WyriHaximus/github-action-create-milestone
+
+### Branches
+
+- ToDo: https://github.com/robvanderleek/create-issue-branch
+
+### Pull Requests
+
+- ToDo: https://github.com/Decathlon/pull-request-labeler-action
+- ToDo: https://github.com/jpmcb/prow-github-actions
 
 # Code Style
 
@@ -73,9 +105,14 @@ yarn validate - run tsc, prettier, eslint and the tests
 - ESLint: another action that runs eslint and prints a summary in the PR
 - Lighthouse on Vercel: Runs a Lighthouse Audit on the Vercel Preview URL
 - Labeler: adds labels to PR's based on the changed files
+- Badges: update badges in README
 
 # Deployment
 
 - [Documentation](https://nextjs.org/docs/deployment)
 - [Vercel](https://vercel.com/import?filter=next.js)
 - ToDo: Netlify
+
+# Credit
+
+...where credit is due, thanks to @bahmutov, @thomaseizinger

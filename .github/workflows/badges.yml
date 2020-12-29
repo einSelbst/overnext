@@ -1,0 +1,37 @@
+name: badges
+on:
+  push:
+    # update README badge only if the README, package.lock,
+    # package.json or this file changes
+    branches:
+      - main
+    paths:
+      - README.md
+      - package.json
+      - package.lock
+      - .github/workflows/badges.yml
+
+jobs:
+  build:
+    name: Badges
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@v2
+
+      - name: Install all dependencies 📦
+        uses: cypress-io/github-action@v2
+        with:
+          # just perform install
+          runTests: false
+
+      - name: Update version badges 🏷
+        # run: npm run update:badges
+        run: npx update-badge react typescript jest eslint
+
+      # commit any changed files
+      # https://github.com/mikeal/publish-to-github-action
+      - name: Push any changes to repo 📤
+        uses: mikeal/publish-to-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
