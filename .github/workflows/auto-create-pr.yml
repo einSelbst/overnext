@@ -93,7 +93,7 @@ jobs:
         if: false # not needed at the moment
         uses: thomaseizinger/create-pull-request@master
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.ACTION_TOKEN }}
           head: release/v${{ github.event.inputs.versionName }}
           base: pure
           title: ${{ steps.extract_branch.outputs.branch }}
