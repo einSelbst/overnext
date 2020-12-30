@@ -5,7 +5,7 @@ context('Misc', () => {
     cy.visit('https://example.cypress.io/commands/misc')
   })
 
-  test('.end() - end the command chain', () => {
+  it('.end() - end the command chain', () => {
     // https://on.cypress.io/end
 
     // cy.end is useful when you want to end a chain of commands
@@ -21,10 +21,10 @@ context('Misc', () => {
     })
   })
 
-  test('cy.exec() - execute a system command', () => {
+  it('cy.exec() - execute a system command', () => {
     // execute a system command.
     // so you can take actions necessary for
-    // your test outside the scope of Cypress.
+    // your it outside the scope of Cypress.
     // https://on.cypress.io/exec
 
     // we can use Cypress.platform string to
@@ -34,12 +34,12 @@ context('Misc', () => {
 
     // on CircleCI Windows build machines we have a failure to run bash shell
     // https://github.com/cypress-io/cypress/issues/5169
-    // so skip some of the tests by passing flag "--env circle=true"
+    // so skip some of the its by passing flag "--env circle=true"
     const isCircleOnWindows =
       Cypress.platform === 'win32' && Cypress.env('circle')
 
     if (isCircleOnWindows) {
-      cy.log('Skipping test on CircleCI')
+      cy.log('Skipping it on CircleCI')
 
       return
     }
@@ -49,7 +49,7 @@ context('Misc', () => {
     const isShippable = Cypress.platform === 'linux' && Cypress.env('shippable')
 
     if (isShippable) {
-      cy.log('Skipping test on ShippableCI')
+      cy.log('Skipping it on ShippableCI')
 
       return
     }
@@ -73,7 +73,7 @@ context('Misc', () => {
     }
   })
 
-  test('cy.focused() - get the DOM element that has focus', () => {
+  it('cy.focused() - get the DOM element that has focus', () => {
     // https://on.cypress.io/focused
     cy.get('.misc-form')
       .find('#name')
@@ -87,12 +87,12 @@ context('Misc', () => {
   })
 
   context('Cypress.Screenshot', function () {
-    test('cy.screenshot() - take a screenshot', () => {
+    it('cy.screenshot() - take a screenshot', () => {
       // https://on.cypress.io/screenshot
       cy.screenshot('my-image')
     })
 
-    test('cypress.Screenshot.defaults() - change default config of screenshots', function () {
+    it('cypress.Screenshot.defaults() - change default config of screenshots', function () {
       Cypress.Screenshot.defaults({
         blackout: ['.foo'],
         capture: 'viewport',
@@ -106,7 +106,7 @@ context('Misc', () => {
     })
   })
 
-  test('cy.wrap() - wrap an object', () => {
+  it('cy.wrap() - wrap an object', () => {
     // https://on.cypress.io/wrap
     cy.wrap({ foo: 'bar' })
       .should('have.property', 'foo')

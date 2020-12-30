@@ -11,7 +11,7 @@ context('Navigation', () => {
       .click()
   })
 
-  test("cy.go() - go back or forward in the browser's history", () => {
+  it("cy.go() - go back or forward in the browser's history", () => {
     // https://on.cypress.io/go
 
     cy.location('pathname').should('include', 'navigation')
@@ -31,7 +31,7 @@ context('Navigation', () => {
     cy.location('pathname').should('include', 'navigation')
   })
 
-  test('cy.reload() - reload the page', () => {
+  it('cy.reload() - reload the page', () => {
     // https://on.cypress.io/reload
     cy.reload()
 
@@ -39,7 +39,7 @@ context('Navigation', () => {
     cy.reload(true)
   })
 
-  test('cy.visit() - visit a remote url', () => {
+  it('cy.visit() - visit a remote url', () => {
     // https://on.cypress.io/visit
 
     // Visit any sub-domain of your current domain

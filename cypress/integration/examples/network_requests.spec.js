@@ -7,7 +7,7 @@ context('Network Requests', () => {
 
   // Manage HTTP requests in your app
 
-  test('cy.request() - make an XHR request', () => {
+  it('cy.request() - make an XHR request', () => {
     // https://on.cypress.io/request
     cy.request('https://jsonplaceholder.cypress.io/comments').should(
       response => {
@@ -23,7 +23,7 @@ context('Network Requests', () => {
     )
   })
 
-  test('cy.request() - verify response using BDD syntax', () => {
+  it('cy.request() - verify response using BDD syntax', () => {
     cy.request('https://jsonplaceholder.cypress.io/comments').then(response => {
       // https://on.cypress.io/assertions
       expect(response)
@@ -37,7 +37,7 @@ context('Network Requests', () => {
     })
   })
 
-  test('cy.request() with query parameters', () => {
+  it('cy.request() with query parameters', () => {
     // will execute request
     // https://jsonplaceholder.cypress.io/comments?postId=1&id=3
     cy.request({
@@ -57,7 +57,7 @@ context('Network Requests', () => {
       })
   })
 
-  test('cy.request() - pass result to the second request', () => {
+  it('cy.request() - pass result to the second request', () => {
     // first, let's find out the userId of the first user we have
     cy.request('https://jsonplaceholder.cypress.io/users?_limit=1')
       .its('body') // yields the response object
@@ -72,9 +72,9 @@ context('Network Requests', () => {
         // make a new post on behalf of the user
         cy.request('POST', 'https://jsonplaceholder.cypress.io/posts', {
           userId: user.id,
-          title: 'Cypress Test Runner',
+          title: 'Cypress It Runner',
           body:
-            'Fast, easy and reliable testing for anything that runs in a browser.'
+            'Fast, easy and reliable iting for anything that runs in a browser.'
         })
       })
       // note that the value here is the returned value of the 2nd request
@@ -86,7 +86,7 @@ context('Network Requests', () => {
         expect(response)
           .property('body')
           .to.contain({
-            title: 'Cypress Test Runner'
+            title: 'Cypress It Runner'
           })
 
         // we don't know the exact post id - only that it will be > 100
@@ -97,38 +97,38 @@ context('Network Requests', () => {
           .and.to.be.gt(100)
 
         // we don't know the user id here - since it was in above closure
-        // so in this test just confirm that the property is there
+        // so in this it just confirm that the property is there
         expect(response.body)
           .property('userId')
           .to.be.a('number')
       })
   })
 
-  test('cy.request() - save response in the shared test context', () => {
+  it('cy.request() - save response in the shared it context', () => {
     // https://on.cypress.io/variables-and-aliases
     cy.request('https://jsonplaceholder.cypress.io/users?_limit=1')
       .its('body')
       .its('0') // yields the first element of the returned list
-      .as('user') // saves the object in the test context
+      .as('user') // saves the object in the it context
       .then(function () {
         // NOTE 👀
         //  By the time this callback runs the "as('user')" command
-        //  has saved the user object in the test context.
-        //  To access the test context we need to use
+        //  has saved the user object in the it context.
+        //  To access the it context we need to use
         //  the "function () { ... }" callback form,
         //  otherwise "this" points at a wrong or undefined object!
         cy.request('POST', 'https://jsonplaceholder.cypress.io/posts', {
           userId: this.user.id,
-          title: 'Cypress Test Runner',
+          title: 'Cypress It Runner',
           body:
-            'Fast, easy and reliable testing for anything that runs in a browser.'
+            'Fast, easy and reliable iting for anything that runs in a browser.'
         })
           .its('body')
           .as('post') // save the new post from the response
       })
       .then(function () {
         // When this callback runs, both "cy.request" API commands have finished
-        // and the test context has "user" and "post" objects set.
+        // and the it context has "user" and "post" objects set.
         // Let's verify them.
         expect(this.post, 'post has the right user id')
           .property('userId')
@@ -136,7 +136,7 @@ context('Network Requests', () => {
       })
   })
 
-  test('cy.intercept() - route responses to matching requests', () => {
+  it('cy.intercept() - route responses to matching requests', () => {
     // https://on.cypress.io/http
 
     const message = 'whoa, this comment does not exist'

@@ -8,7 +8,7 @@ context('Local Storage', () => {
   // in between tests to maintain a clean state
   // sometimes we need to clear the local storage manually
 
-  test('cy.clearLocalStorage() - clear all data in local storage', () => {
+  it('cy.clearLocalStorage() - clear all data in local storage', () => {
     // https://on.cypress.io/clearlocalstorage
     cy.get('.ls-btn')
       .click()
