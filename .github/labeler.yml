@@ -1,10 +1,10 @@
-# Add 'repo' label to any root file changes
+# Add 'config' label to any root file changes
 config:
   - ./*
 
 # Add 'test' label to any change to *.spec.js files within the source dir
 test:
-  - src/**/*.spec.js
+  - any: ['src/**/*.test.js', 'cypress/integration/**/*.spec.js']
 
 # Add 'source' label to any change to src files within the source dir EXCEPT for the docs sub-folder
 source:
@@ -16,13 +16,13 @@ frontend:
     all: ['!src/main.js']
 
 api:
-  - any: ['src/api/*']
+  - any: ['src/pages/api/*']
 
 automation:
   - any: ['.github/workflows/**.yml']
 
 dependencies:
-  - package-lock.json
+  - 'package-lock.json'
 
 documentation:
-  - README.md
+  - 'README.md'
