@@ -1,5 +1,5 @@
 # https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#configuring-workflow-events
-name: Audit
+name: Audits
 
 on:
   pull_request:
@@ -9,7 +9,7 @@ on:
       - ci-checks
 
 jobs:
-  Compressed Size:
+  Compressed-Size:
     name: Compare compressed file sizes
     runs-on: ubuntu-latest
 
