@@ -68,6 +68,8 @@
 
 - [Jest](https://jestjs.io/)
   - [`react-testing-library`](https://testing-library.com/docs/react-testing-library/intro)
+- [Cypress](https://www.cypress.io/)
+  - [Code Coverage](https://docs.cypress.io/guides/tooling/code-coverage.html)
 
 # Audits
 
@@ -92,6 +94,7 @@ yarn type-check - run typescript compiler
 yarn lint     - run eslint
 yarn format   - run prettier
 yarn test     - run jest
+yarn test:cy  - open cypress test runner
 yarn validate - run tsc, prettier, eslint and the tests
 ```
 

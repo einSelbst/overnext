@@ -15,7 +15,9 @@
     "format": "prettier-standard --format --lint",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "test": "jest",
-    "test-dev": "cypress open",
+    "test:cy": "cypress open",
+    "e2e": "start-test 'yarn dev' 3000 'yarn test:cy'",
+    "pree2e": "rm -rf .nyc_output coverage .next || true",
     "validate": "yarn format && yarn lint && yarn type-check && yarn test"
   },
   "husky": {
