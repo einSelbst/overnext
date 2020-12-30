@@ -5,7 +5,7 @@ context('Utilities', () => {
     cy.visit('https://example.cypress.io/utilities')
   })
 
-  test('cypress._ - call a lodash method', () => {
+  it('cypress._ - call a lodash method', () => {
     // https://on.cypress.io/_
     cy.request('https://jsonplaceholder.cypress.io/users').then(response => {
       const ids = Cypress._.chain(response.body)
@@ -17,7 +17,7 @@ context('Utilities', () => {
     })
   })
 
-  test('cypress.$ - call a jQuery method', () => {
+  it('cypress.$ - call a jQuery method', () => {
     // https://on.cypress.io/$
     const $li = Cypress.$('.utility-jquery li:first')
 
@@ -27,7 +27,7 @@ context('Utilities', () => {
       .should('have.class', 'active')
   })
 
-  test('cypress.Blob - blob utilities and base64 string conversion', () => {
+  it('cypress.Blob - blob utilities and base64 string conversion', () => {
     // https://on.cypress.io/blob
     cy.get('.utility-blob').then($div => {
       // https://github.com/nolanlawson/blob-util#imgSrcToDataURL
@@ -41,7 +41,7 @@ context('Utilities', () => {
         const img = Cypress.$('<img />', { src: dataUrl })
 
         // need to explicitly return cy here since we are initially returning
-        // the Cypress.Blob.imgSrcToDataURL promise to our test
+        // the Cypress.Blob.imgSrcToDataURL promise to our it
         // append the image
         $div.append(img)
 
@@ -52,7 +52,7 @@ context('Utilities', () => {
     })
   })
 
-  test('cypress.minimatch - test out glob patterns against strings', () => {
+  it('cypress.minimatch - it out glob patterns against strings', () => {
     // https://on.cypress.io/minimatch
     let matching = Cypress.minimatch('/users/1/comments', '/users/*/comments', {
       matchBase: true
@@ -82,7 +82,7 @@ context('Utilities', () => {
     expect(matching, 'comments').to.be.false
   })
 
-  test('cypress.moment() - format or parse dates using a moment method', () => {
+  it('cypress.moment() - format or parse dates using a moment method', () => {
     // https://on.cypress.io/moment
     const time = Cypress.moment('2014-04-25T19:38:53.196Z')
       .utc()
@@ -114,7 +114,7 @@ context('Utilities', () => {
     })
   })
 
-  test('cypress.Promise - instantiate a bluebird promise', () => {
+  it('cypress.Promise - instantiate a bluebird promise', () => {
     // https://on.cypress.io/promise
     let waited = false
 

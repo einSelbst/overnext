@@ -3,7 +3,7 @@
 // https://github.com/cypress-io/cypress/issues/6720
 
 context('Spies, Stubs, and Clock', () => {
-  test('cy.spy() - wrap a method in a spy', () => {
+  it('cy.spy() - wrap a method in a spy', () => {
     // https://on.cypress.io/spy
     cy.visit('https://example.cypress.io/commands/spies-stubs-clocks')
 
@@ -18,7 +18,7 @@ context('Spies, Stubs, and Clock', () => {
     expect(spy).to.be.called
   })
 
-  test('cy.spy() retries until assertions pass', () => {
+  it('cy.spy() retries until assertions pass', () => {
     cy.visit('https://example.cypress.io/commands/spies-stubs-clocks')
 
     const obj = {
@@ -44,7 +44,7 @@ context('Spies, Stubs, and Clock', () => {
     cy.get('@foo').should('have.been.calledTwice')
   })
 
-  test('cy.stub() - create a stub and/or replace a function with stub', () => {
+  it('cy.stub() - create a stub and/or replace a function with stub', () => {
     // https://on.cypress.io/stub
     cy.visit('https://example.cypress.io/commands/spies-stubs-clocks')
 
@@ -66,7 +66,7 @@ context('Spies, Stubs, and Clock', () => {
     expect(stub).to.be.called
   })
 
-  test('cy.clock() - control time in the browser', () => {
+  it('cy.clock() - control time in the browser', () => {
     // https://on.cypress.io/clock
 
     // create the date in UTC so its always the same
@@ -80,7 +80,7 @@ context('Spies, Stubs, and Clock', () => {
       .should('have.text', '1489449600')
   })
 
-  test('cy.tick() - move time in the browser', () => {
+  it('cy.tick() - move time in the browser', () => {
     // https://on.cypress.io/tick
 
     // create the date in UTC so its always the same
@@ -99,9 +99,9 @@ context('Spies, Stubs, and Clock', () => {
       .should('have.text', '1489449610')
   })
 
-  test('cy.stub() matches depending on arguments', () => {
+  it('cy.stub() matches depending on arguments', () => {
     // see all possible matchers at
-    // https://sinonjs.org/releases/latest/matchers/
+    // https://sinonjs.org/releases/lait/matchers/
     const greeter = {
       /**
        * Greets a person
@@ -129,9 +129,9 @@ context('Spies, Stubs, and Clock', () => {
     expect(greeter.greet()).to.equal('Hello, undefined!')
   })
 
-  test('matches call arguments using Sinon matchers', () => {
+  it('matches call arguments using Sinon matchers', () => {
     // see all possible matchers at
-    // https://sinonjs.org/releases/latest/matchers/
+    // https://sinonjs.org/releases/lait/matchers/
     const calculator = {
       /**
        * returns the sum of two arguments
@@ -212,7 +212,7 @@ context('Spies, Stubs, and Clock', () => {
       Cypress.sinon.match(3)
     )
 
-    // you can alias matchers for shorter test code
+    // you can alias matchers for shorter it code
     const { match: M } = Cypress.sinon
 
     cy.get('@add').should('have.been.calledWith', M.number, M(3))

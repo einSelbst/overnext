@@ -5,35 +5,35 @@ context('Traversal', () => {
     cy.visit('https://example.cypress.io/commands/traversal')
   })
 
-  test('.children() - get child DOM elements', () => {
+  it('.children() - get child DOM elements', () => {
     // https://on.cypress.io/children
     cy.get('.traversal-breadcrumb')
       .children('.active')
       .should('contain', 'Data')
   })
 
-  test('.closest() - get closest ancestor DOM element', () => {
+  it('.closest() - get closest ancestor DOM element', () => {
     // https://on.cypress.io/closest
     cy.get('.traversal-badge')
       .closest('ul')
       .should('have.class', 'list-group')
   })
 
-  test('.eq() - get a DOM element at a specific index', () => {
+  it('.eq() - get a DOM element at a specific index', () => {
     // https://on.cypress.io/eq
     cy.get('.traversal-list>li')
       .eq(1)
       .should('contain', 'siamese')
   })
 
-  test('.filter() - get DOM elements that match the selector', () => {
+  it('.filter() - get DOM elements that match the selector', () => {
     // https://on.cypress.io/filter
     cy.get('.traversal-nav>li')
       .filter('.active')
       .should('contain', 'About')
   })
 
-  test('.find() - get descendant DOM elements of the selector', () => {
+  it('.find() - get descendant DOM elements of the selector', () => {
     // https://on.cypress.io/find
     cy.get('.traversal-pagination')
       .find('li')
@@ -41,21 +41,21 @@ context('Traversal', () => {
       .should('have.length', 7)
   })
 
-  test('.first() - get first DOM element', () => {
+  it('.first() - get first DOM element', () => {
     // https://on.cypress.io/first
     cy.get('.traversal-table td')
       .first()
       .should('contain', '1')
   })
 
-  test('.last() - get last DOM element', () => {
+  it('.last() - get last DOM element', () => {
     // https://on.cypress.io/last
     cy.get('.traversal-buttons .btn')
       .last()
       .should('contain', 'Submit')
   })
 
-  test('.next() - get next sibling DOM element', () => {
+  it('.next() - get next sibling DOM element', () => {
     // https://on.cypress.io/next
     cy.get('.traversal-ul')
       .contains('apples')
@@ -63,7 +63,7 @@ context('Traversal', () => {
       .should('contain', 'oranges')
   })
 
-  test('.nextAll() - get all next sibling DOM elements', () => {
+  it('.nextAll() - get all next sibling DOM elements', () => {
     // https://on.cypress.io/nextall
     cy.get('.traversal-next-all')
       .contains('oranges')
@@ -71,35 +71,35 @@ context('Traversal', () => {
       .should('have.length', 3)
   })
 
-  test('.nextUntil() - get next sibling DOM elements until next el', () => {
+  it('.nextUntil() - get next sibling DOM elements until next el', () => {
     // https://on.cypress.io/nextuntil
     cy.get('#veggies')
       .nextUntil('#nuts')
       .should('have.length', 3)
   })
 
-  test('.not() - remove DOM elements from set of DOM elements', () => {
+  it('.not() - remove DOM elements from set of DOM elements', () => {
     // https://on.cypress.io/not
     cy.get('.traversal-disabled .btn')
       .not('[disabled]')
       .should('not.contain', 'Disabled')
   })
 
-  test('.parent() - get parent DOM element from DOM elements', () => {
+  it('.parent() - get parent DOM element from DOM elements', () => {
     // https://on.cypress.io/parent
     cy.get('.traversal-mark')
       .parent()
       .should('contain', 'Morbi leo risus')
   })
 
-  test('.parents() - get parent DOM elements from DOM elements', () => {
+  it('.parents() - get parent DOM elements from DOM elements', () => {
     // https://on.cypress.io/parents
     cy.get('.traversal-cite')
       .parents()
       .should('match', 'blockquote')
   })
 
-  test('.parentsUntil() - get parent DOM elements from DOM elements until el', () => {
+  it('.parentsUntil() - get parent DOM elements from DOM elements until el', () => {
     // https://on.cypress.io/parentsuntil
     cy.get('.clothes-nav')
       .find('.active')
@@ -107,7 +107,7 @@ context('Traversal', () => {
       .should('have.length', 2)
   })
 
-  test('.prev() - get previous sibling DOM element', () => {
+  it('.prev() - get previous sibling DOM element', () => {
     // https://on.cypress.io/prev
     cy.get('.birds')
       .find('.active')
@@ -115,7 +115,7 @@ context('Traversal', () => {
       .should('contain', 'Lorikeets')
   })
 
-  test('.prevAll() - get all previous sibling DOM elements', () => {
+  it('.prevAll() - get all previous sibling DOM elements', () => {
     // https://on.cypress.io/prevAll
     cy.get('.fruits-list')
       .find('.third')
@@ -123,7 +123,7 @@ context('Traversal', () => {
       .should('have.length', 2)
   })
 
-  test('.prevUntil() - get all previous sibling DOM elements until el', () => {
+  it('.prevUntil() - get all previous sibling DOM elements until el', () => {
     // https://on.cypress.io/prevUntil
     cy.get('.foods-list')
       .find('#nuts')
@@ -131,7 +131,7 @@ context('Traversal', () => {
       .should('have.length', 3)
   })
 
-  test('.siblings() - get all sibling DOM elements', () => {
+  it('.siblings() - get all sibling DOM elements', () => {
     // https://on.cypress.io/siblings
     cy.get('.traversal-pills .active')
       .siblings()

@@ -7,7 +7,7 @@ context('Actions', () => {
 
   // https://on.cypress.io/interacting-with-elements
 
-  test('.type() - type into a DOM element', () => {
+  it('.type() - type into a DOM element', () => {
     // https://on.cypress.io/type
     cy.get('.action-email')
       .type('fake@email.com')
@@ -34,7 +34,7 @@ context('Actions', () => {
       .should('have.value', 'disabled error checking')
   })
 
-  test('.focus() - focus on a DOM element', () => {
+  it('.focus() - focus on a DOM element', () => {
     // https://on.cypress.io/focus
     cy.get('.action-focus')
       .focus()
@@ -43,7 +43,7 @@ context('Actions', () => {
       .should('have.attr', 'style', 'color: orange;')
   })
 
-  test('.blur() - blur off a DOM element', () => {
+  it('.blur() - blur off a DOM element', () => {
     // https://on.cypress.io/blur
     cy.get('.action-blur')
       .type('About to blur')
@@ -53,7 +53,7 @@ context('Actions', () => {
       .should('have.attr', 'style', 'color: red;')
   })
 
-  test('.clear() - clears an input or textarea element', () => {
+  it('.clear() - clears an input or textarea element', () => {
     // https://on.cypress.io/clear
     cy.get('.action-clear')
       .type('Clear this text')
@@ -62,7 +62,7 @@ context('Actions', () => {
       .should('have.value', '')
   })
 
-  test('.submit() - submit a form', () => {
+  it('.submit() - submit a form', () => {
     // https://on.cypress.io/submit
     cy.get('.action-form')
       .find('[type="text"]')
@@ -74,7 +74,7 @@ context('Actions', () => {
       .should('contain', 'Your form has been submitted!')
   })
 
-  test('.click() - click on a DOM element', () => {
+  it('.click() - click on a DOM element', () => {
     // https://on.cypress.io/click
     cy.get('.action-btn').click()
 
@@ -122,7 +122,7 @@ context('Actions', () => {
     cy.get('.action-opacity>.btn').click({ force: true })
   })
 
-  test('.dblclick() - double click on a DOM element', () => {
+  it('.dblclick() - double click on a DOM element', () => {
     // https://on.cypress.io/dblclick
 
     // Our app has a listener on 'dblclick' event in our 'scripts.js'
@@ -133,7 +133,7 @@ context('Actions', () => {
     cy.get('.action-input-hidden').should('be.visible')
   })
 
-  test('.rightclick() - right click on a DOM element', () => {
+  it('.rightclick() - right click on a DOM element', () => {
     // https://on.cypress.io/rightclick
 
     // Our app has a listener on 'contextmenu' event in our 'scripts.js'
@@ -144,7 +144,7 @@ context('Actions', () => {
     cy.get('.rightclick-action-input-hidden').should('be.visible')
   })
 
-  test('.check() - check a checkbox or radio element', () => {
+  it('.check() - check a checkbox or radio element', () => {
     // https://on.cypress.io/check
 
     // By default, .check() will check all
@@ -179,7 +179,7 @@ context('Actions', () => {
       .should('be.checked')
   })
 
-  test('.uncheck() - uncheck a checkbox element', () => {
+  it('.uncheck() - uncheck a checkbox element', () => {
     // https://on.cypress.io/uncheck
 
     // By default, .uncheck() will uncheck all matching
@@ -207,7 +207,7 @@ context('Actions', () => {
       .should('not.be.checked')
   })
 
-  test('.select() - select an option in a <select> element', () => {
+  it('.select() - select an option in a <select> element', () => {
     // https://on.cypress.io/select
 
     // at first, no option should be selected
@@ -242,7 +242,7 @@ context('Actions', () => {
       .should('include', 'fr-oranges')
   })
 
-  test('.scrollIntoView() - scroll an element into view', () => {
+  it('.scrollIntoView() - scroll an element into view', () => {
     // https://on.cypress.io/scrollintoview
 
     // normally all of these buttons are hidden,
@@ -271,7 +271,7 @@ context('Actions', () => {
       .should('be.visible')
   })
 
-  test('.trigger() - trigger an event on a DOM element', () => {
+  it('.trigger() - trigger an event on a DOM element', () => {
     // https://on.cypress.io/trigger
 
     // To interact with a range input (slider)
@@ -288,7 +288,7 @@ context('Actions', () => {
       .should('have.text', '25')
   })
 
-  test('cy.scrollTo() - scroll the window or element to a position', () => {
+  it('cy.scrollTo() - scroll the window or element to a position', () => {
     // https://on.cypress.io/scrollTo
 
     // You can scroll to 9 specific positions of an element:

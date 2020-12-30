@@ -27,7 +27,7 @@ jobs:
 
       - name: Update version badges 🏷
         # run: npm run update:badges
-        run: npx update-badge react typescript jest eslint
+        run: npx update-badge react typescript cypress jest eslint
 
       # commit any changed files
       # https://github.com/mikeal/publish-to-github-action

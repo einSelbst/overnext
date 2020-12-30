@@ -43,8 +43,9 @@ jspm_packages/
 /.pnp
 .pnp.js
 
-# TypeScript v1 declaration files
-typings/
+# Cypress artifacts
+cypress/videos/
+cypress/screenshots/
 
 # Optional REPL history
 .node_repl_history
@@ -86,4 +87,3 @@ typings/
 
 # vercel
 .vercel
-

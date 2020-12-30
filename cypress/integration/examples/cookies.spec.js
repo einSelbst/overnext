@@ -11,7 +11,7 @@ context('Cookies', () => {
     cy.clearCookies()
   })
 
-  test('cy.getCookie() - get a browser cookie', () => {
+  it('cy.getCookie() - get a browser cookie', () => {
     // https://on.cypress.io/getcookie
     cy.get('#getCookie .set-a-cookie').click()
 
@@ -19,7 +19,7 @@ context('Cookies', () => {
     cy.getCookie('token').should('have.property', 'value', '123ABC')
   })
 
-  test('cy.getCookies() - get browser cookies', () => {
+  it('cy.getCookies() - get browser cookies', () => {
     // https://on.cypress.io/getcookies
     cy.getCookies().should('be.empty')
 
@@ -39,7 +39,7 @@ context('Cookies', () => {
       })
   })
 
-  test('cy.setCookie() - set a browser cookie', () => {
+  it('cy.setCookie() - set a browser cookie', () => {
     // https://on.cypress.io/setcookie
     cy.getCookies().should('be.empty')
 
@@ -49,7 +49,7 @@ context('Cookies', () => {
     cy.getCookie('foo').should('have.property', 'value', 'bar')
   })
 
-  test('cy.clearCookie() - clear a browser cookie', () => {
+  it('cy.clearCookie() - clear a browser cookie', () => {
     // https://on.cypress.io/clearcookie
     cy.getCookie('token').should('be.null')
 
@@ -63,7 +63,7 @@ context('Cookies', () => {
     cy.getCookie('token').should('be.null')
   })
 
-  test('cy.clearCookies() - clear browser cookies', () => {
+  it('cy.clearCookies() - clear browser cookies', () => {
     // https://on.cypress.io/clearcookies
     cy.getCookies().should('be.empty')
 

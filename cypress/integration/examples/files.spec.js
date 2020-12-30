@@ -12,11 +12,11 @@ context('Files', () => {
 
   beforeEach(() => {
     // load example.json fixture file and store
-    // in the test context object
+    // in the it context object
     cy.fixture('example.json').as('example')
   })
 
-  test('cy.fixture() - load a fixture', () => {
+  it('cy.fixture() - load a fixture', () => {
     // https://on.cypress.io/fixture
 
     // Instead of writing a response inline you can
@@ -38,11 +38,11 @@ context('Files', () => {
       .and('include', 'Using fixtures to represent data')
   })
 
-  test('cy.fixture() or require - load a fixture', function () {
+  it('cy.fixture() or require - load a fixture', function () {
     // we are inside the "function () { ... }"
-    // callback and can use test context object "this"
+    // callback and can use it context object "this"
     // "this.example" was loaded in "beforeEach" function callback
-    expect(this.example, 'fixture in the test context').to.deep.equal(
+    expect(this.example, 'fixture in the it context').to.deep.equal(
       requiredExample
     )
 
@@ -54,7 +54,7 @@ context('Files', () => {
     )
   })
 
-  test('cy.readFile() - read file contents', () => {
+  it('cy.readFile() - read file contents', () => {
     // https://on.cypress.io/readfile
 
     // You can read a file and yield its contents
@@ -64,7 +64,7 @@ context('Files', () => {
     })
   })
 
-  test('cy.writeFile() - write to a file', () => {
+  it('cy.writeFile() - write to a file', () => {
     // https://on.cypress.io/writefile
 
     // You can write to a file
