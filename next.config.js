@@ -5,14 +5,14 @@
  */
 const { withPlugins, optional } = require('next-compose-plugins')
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true'
+  enabled: process.env.ANALYZE === 'true',
 })
 
 const nextConfiguration = {
   webpack: (config, _options) => {
     // modify the `config` here
     return config
-  }
+  },
 }
 
 const plugins = [[optional(() => withBundleAnalyzer)]]
