@@ -12,7 +12,9 @@
 ## Commit Style
 
 - [Conventional Commits convention](https://www.conventionalcommits.org/)
-  - [Commitizen](https://github.com/commitizen/cz-cli)
+
+  <details>
+    <summary>Show commit types</summary>
     - feat: A new feature
     - fix: A bug fix
     - docs: Documentation only changes
@@ -24,6 +26,8 @@
     - ci: Changes to our CI configuration files and scripts (example scopes: Github Actions, BrowserStack, SauceLabs)
     - chore: Other changes that don't modify src or test files
     - revert: Reverts a previous commit
+  </details>
+  - [Commitizen](https://github.com/commitizen/cz-cli) helper
 
 ## Project Automation / Labeling
 
@@ -72,7 +76,6 @@
   - [eslint-plugin-import](https://github.com/benmosher/eslint-plugin-import)
   - [eslint-plugin-jest](https://github.com/jest-community/eslint-plugin-jest)
   - [eslint-plugin-jest-dom](https://github.com/testing-library/eslint-plugin-jest-dom)
-  - TODO: add more https://github.com/dustinspecker/awesome-eslint
 - [`husky`](https://github.com/typicode/husky) for hooks
   - [lint-staged](https://github.com/okonet/lint-staged)
 - [axe-core/react](https://github.com/dequelabs/axe-core-npm)
@@ -99,17 +102,17 @@
 ## Scripts
 
 ```bash
-yarn dev      - start dev server
-yarn build    - build project
+yarn dev           - start dev server
+yarn build         - build project
 yarn build:analyze - build project and visualize chunks
-yarn cz       - make new commit
-yarn release  - make new release
-yarn type-check - run typescript compiler
-yarn lint     - run eslint
-yarn format   - run prettier
-yarn test     - run jest
-yarn test:cy  - open cypress test runner
-yarn validate - run tsc, prettier, eslint and the tests
+yarn cz            - make new commit
+yarn release       - make new release
+yarn type-check    - run typescript compiler
+yarn lint          - run eslint
+yarn format        - run prettier
+yarn test          - run jest
+yarn test:cy       - open cypress test runner
+yarn validate      - run tsc, prettier, eslint and the tests
 ```
 
 # CI
