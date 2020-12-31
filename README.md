@@ -2,6 +2,8 @@
 
 ![next version](https://img.shields.io/badge/next-latest-brightgreen) ![react version](https://img.shields.io/badge/react-17.0.1-brightgreen) ![typescript version](https://img.shields.io/badge/typescript-4.1.3-brightgreen) ![cypress version](https://img.shields.io/badge/cypress-6.2.0-brightgreen) ![jest version](https://img.shields.io/badge/jest-26.6.3-brightgreen) ![eslint version](https://img.shields.io/badge/eslint-7.16.0-brightgreen) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=bugs)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel) [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=code_smells)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel) [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=ncloc)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=alert_status)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel) [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=security_rating)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel) [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=sqale_index)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel) [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel)
+
 # DX
 
 - automation, inspirations https://github.com/sdras/awesome-actions
@@ -11,6 +13,17 @@
 
 - [Conventional Commits convention](https://www.conventionalcommits.org/)
   - [Commitizen](https://github.com/commitizen/cz-cli)
+    - feat: A new feature
+    - fix: A bug fix
+    - docs: Documentation only changes
+    - style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+    - refactor: A code change that neither fixes a bug nor adds a feature
+    - perf: A code change that improves performance
+    - test: Adding missing tests or correcting existing tests
+    - build: Changes that affect the build system or external dependencies (example scopes: webpack, typescript, yarn)
+    - ci: Changes to our CI configuration files and scripts (example scopes: Github Actions, BrowserStack, SauceLabs)
+    - chore: Other changes that don't modify src or test files
+    - revert: Reverts a previous commit
 
 ## Project Automation / Labeling
 
@@ -74,6 +87,7 @@
 # Audits
 
 - Lighthouse
+- [sonarcloud](https://sonarcloud.io/)
 
 # Next.js Configuration
 
@@ -109,6 +123,7 @@ yarn validate - run tsc, prettier, eslint and the tests
 - Lighthouse on Vercel: Runs a Lighthouse Audit on the Vercel Preview URL
 - Labeler: adds labels to PR's based on the changed files
 - Badges: update badges in README
+- [sonarcloud](https://github.com/SonarSource/sonarcloud-github-action): code analysis
 
 # Deployment
 

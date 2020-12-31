@@ -6,7 +6,7 @@ const coverage = (req: NextApiRequest, res: NextApiResponse) => {
   res.json({
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore TS2339
-    coverage: global.__coverage__ || null
+    coverage: global.__coverage__ || null,
   })
 }
 
