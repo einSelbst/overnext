@@ -131,6 +131,14 @@ yarn validate - run tsc, prettier, eslint and the tests
 - [Vercel](https://vercel.com/import?filter=next.js)
 - ToDo: Netlify
 
+# ToDo
+
+- [] improve tsconfig
+- [] fix running of checks on pr create
+- [] fix sonarcloud action
+- [] cypress watch mode
+- [] cypress a11y plugin
+
 # Credits
 
-...where credit is due, thanks to @bahmutov, @ferlopezm94, @thomaseizinger.
+...where credits due, thanks to @bahmutov, @ferlopezm94, @thomaseizinger and all the others where I copied code from!
