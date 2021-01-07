@@ -16,6 +16,8 @@ export const Home = (): JSX.Element => (
         Get started by editing <code>pages/index.tsx</code>
       </p>
 
+      <h2>Another Heading for validity</h2>
+
       <button
         onClick={() => {
           window.alert('With typescript and Jest')
@@ -59,7 +61,14 @@ export const Home = (): JSX.Element => (
         target='_blank'
         rel='noopener noreferrer'
       >
-        Powered by <img src='/vercel.svg' alt='Vercel Logo' className='logo' />
+        Powered by{' '}
+        <img
+          src='/vercel.svg'
+          alt='Vercel Logo'
+          width='71px'
+          height='16px'
+          className='logo'
+        />
       </a>
     </footer>
 
