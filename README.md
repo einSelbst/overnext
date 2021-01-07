@@ -63,7 +63,7 @@
 - [Typescript](https://www.typescriptlang.org/)
 - [Standard](https://github.com/standard/standard)
 - [EditorConfig](https://editorconfig.org/)
-- maybe jsdoc?
+- [typedoc](https://github.com/TypeStrong/typedoc)
 
 ## Linter
 
