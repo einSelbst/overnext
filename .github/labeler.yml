@@ -1,28 +1,31 @@
 # Add 'config' label to any root file changes
-config:
+Config:
   - ./*
 
 # Add 'test' label to any change to *.spec.js files within the source dir
-test:
+Test:
   - any: ['src/**/*.test.js', 'cypress/integration/**/*.spec.js']
 
 # Add 'source' label to any change to src files within the source dir EXCEPT for the docs sub-folder
-source:
+Core:
   - any: ['src/**/*', '!src/docs/*']
 
 # Add 'frontend` label to any change to *.js files as long as the `main.js` hasn't changed
-frontend:
+Frontend:
   - any: ['src/**/*.js']
     all: ['!src/main.js']
 
-api:
+API:
   - any: ['src/pages/api/*']
 
-automation:
+Automation:
   - any: ['.github/workflows/**.yml']
 
-dependencies:
+Dependencies:
   - any: ['package-lock.json', 'yarn.lock']
 
-documentation:
-  - 'README.md'
+Documentation:
+  - ./*.md
+
+DB:
+  - data/**/*.sql
