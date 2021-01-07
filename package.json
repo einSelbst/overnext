@@ -52,7 +52,7 @@
     "@next/bundle-analyzer": "10.0.5",
     "@next/eslint-plugin-next": "10.0.5",
     "@testing-library/react": "11.2.2",
-    "@types/jest": "26.0.19",
+    "@types/jest": "26.0.20",
     "@types/node": "13.13.36",
     "@types/react": "17.0.0",
     "@typescript-eslint/eslint-plugin": "4.12.0",
