@@ -22,7 +22,7 @@ automation:
   - any: ['.github/workflows/**.yml']
 
 dependencies:
-  - 'package-lock.json'
+  - any: ['package-lock.json', 'yarn.lock']
 
 documentation:
   - 'README.md'
