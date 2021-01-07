@@ -1,0 +1,11 @@
+{
+  "name": "@einselbst/feehicle",
+  "entryPoints": ["src"],
+  "out": "./docs/",
+  "toc": ["init", "nothing"],
+  "excludeExternals": true,
+  "excludePrivate": true,
+  "hideGenerator": true,
+  "theme": "minimal",
+  "readme": "./README.md"
+}

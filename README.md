@@ -28,7 +28,7 @@
       - revert: Reverts a previous commit
     </details>
 
-## Project Automation / Labeling
+## Project Automation / Labeling Ideas
 
 ### Issues
 
@@ -36,6 +36,7 @@
 - ToDo: https://github.com/damccorm/tag-ur-it
 - ToDo: https://github.com/Renato66/auto-label
 - ToDo: https://github.com/Naturalclar/issue-action
+- ToDo: https://github.com/nwtgck/actions-comment-run
 
 ### Projects
 
@@ -57,13 +58,15 @@
 
 - ToDo: https://github.com/Decathlon/pull-request-labeler-action
 - ToDo: https://github.com/jpmcb/prow-github-actions
+- ToDo: https://github.com/kentaro-m/task-completed-checker-action
 
 # Code Style
 
 - [Typescript](https://www.typescriptlang.org/)
 - [Standard](https://github.com/standard/standard)
 - [EditorConfig](https://editorconfig.org/)
-- maybe jsdoc?
+- [typedoc](https://github.com/TypeStrong/typedoc)
+- maybe [apiDoc](https://apidocjs.com/)
 
 ## Linter
 
@@ -125,7 +128,6 @@ yarn validate      - run tsc, prettier, eslint and the tests
 - Lighthouse on Vercel: Runs a Lighthouse Audit on the Vercel Preview URL
 - Labeler: adds labels to PR's based on the changed files
 - Badges: update badges in README
-- [sonarcloud](https://github.com/SonarSource/sonarcloud-github-action): code analysis
 
 # Deployment
 
@@ -137,9 +139,10 @@ yarn validate      - run tsc, prettier, eslint and the tests
 
 - [ ] improve tsconfig
 - [ ] fix running of checks on pr create
-- [ ] fix sonarcloud action
+- [ ] fix (remove?) sonarcloud action
 - [ ] cypress watch mode
 - [ ] cypress a11y plugin
+- [ ] automate typedoc generation
 
 # Credits
 
