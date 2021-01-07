@@ -68,9 +68,8 @@ jobs:
         uses: peter-evans/repository-dispatch@v1
         with:
           token: ${{ secrets.ACTION_TOKEN }}
-          # token: ${{ secrets.GITHUB_REPO_TOKEN }}
           event-type: ci-checks
-          # client-payload: '{"branch": "release/${{ env.RELEASE_VERSION }}"}'
+          client-payload: '{"branch": "${{steps.extract_branch.outputs.branch }}"}'
 
       - name: Create pull request to pure
         if: false # not needed at the moment
