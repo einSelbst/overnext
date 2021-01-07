@@ -29,6 +29,11 @@ exports[`home page matches snapshot 1`] = `
           pages/index.tsx
         </code>
       </p>
+      <h2
+        class="jsx-2250570153"
+      >
+        Another Heading for validity
+      </h2>
       <button
         class="jsx-2250570153"
       >
@@ -112,7 +117,9 @@ exports[`home page matches snapshot 1`] = `
         <img
           alt="Vercel Logo"
           class="jsx-2250570153 logo"
+          height="16px"
           src="/vercel.svg"
+          width="71px"
         />
       </a>
     </footer>
