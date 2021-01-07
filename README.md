@@ -8,6 +8,7 @@
 
 - automation, inspirations https://github.com/sdras/awesome-actions
 - conformity, inspirations https://github.com/dustinspecker/awesome-eslint
+- recommended repo files via [cgx](https://github.com/jeroenouw/cgx)
 
 ## Commit Style
 
