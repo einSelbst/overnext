@@ -109,6 +109,7 @@ yarn build         - build project
 yarn build:analyze - build project and visualize chunks
 yarn cz            - make new commit
 yarn release       - make new release
+yarn docs          - generate source code documentation
 yarn type-check    - run typescript compiler
 yarn lint          - run eslint
 yarn format        - run prettier
