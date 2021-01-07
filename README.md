@@ -28,38 +28,6 @@
       - revert: Reverts a previous commit
     </details>
 
-## Project Automation / Labeling Ideas
-
-### Issues
-
-- ToDo: https://github.com/coblox/zenhub-link-pr-to-issue
-- ToDo: https://github.com/damccorm/tag-ur-it
-- ToDo: https://github.com/Renato66/auto-label
-- ToDo: https://github.com/Naturalclar/issue-action
-- ToDo: https://github.com/nwtgck/actions-comment-run
-
-### Projects
-
-- ToDo: https://github.com/technote-space/auto-card-labeler
-- ToDo: https://github.com/alex-page/github-project-automation-plus
-- ToDo: https://github.com/marketplace/actions/move-labeled-or-milestoned-issue-to-a-specific-project-column
-- ToDo: https://github.com/philschatz/project-bot
-- ToDo: https://github.com/takanabe/github-actions-automate-projects
-
-### Milestones
-
-- ToDo: https://github.com/WyriHaximus/github-action-create-milestone
-
-### Branches
-
-- ToDo: https://github.com/robvanderleek/create-issue-branch
-
-### Pull Requests
-
-- ToDo: https://github.com/Decathlon/pull-request-labeler-action
-- ToDo: https://github.com/jpmcb/prow-github-actions
-- ToDo: https://github.com/kentaro-m/task-completed-checker-action
-
 # Code Style
 
 - [Typescript](https://www.typescriptlang.org/)
@@ -135,6 +103,38 @@ yarn validate      - run tsc, prettier, eslint and the tests
 - [Documentation](https://nextjs.org/docs/deployment)
 - [Vercel](https://vercel.com/import?filter=next.js)
 - ToDo: Netlify
+
+## Project Automation / Labeling Ideas
+
+### Issues
+
+- ToDo: https://github.com/coblox/zenhub-link-pr-to-issue
+- ToDo: https://github.com/damccorm/tag-ur-it
+- ToDo: https://github.com/Renato66/auto-label
+- ToDo: https://github.com/Naturalclar/issue-action
+- ToDo: https://github.com/nwtgck/actions-comment-run
+
+### Projects
+
+- ToDo: https://github.com/technote-space/auto-card-labeler
+- ToDo: https://github.com/alex-page/github-project-automation-plus
+- ToDo: https://github.com/marketplace/actions/move-labeled-or-milestoned-issue-to-a-specific-project-column
+- ToDo: https://github.com/philschatz/project-bot
+- ToDo: https://github.com/takanabe/github-actions-automate-projects
+
+### Milestones
+
+- ToDo: https://github.com/WyriHaximus/github-action-create-milestone
+
+### Branches
+
+- ToDo: https://github.com/robvanderleek/create-issue-branch
+
+### Pull Requests
+
+- ToDo: https://github.com/Decathlon/pull-request-labeler-action
+- ToDo: https://github.com/jpmcb/prow-github-actions
+- ToDo: https://github.com/kentaro-m/task-completed-checker-action
 
 # ToDo
 
