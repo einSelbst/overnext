@@ -128,7 +128,6 @@ yarn validate      - run tsc, prettier, eslint and the tests
 - Lighthouse on Vercel: Runs a Lighthouse Audit on the Vercel Preview URL
 - Labeler: adds labels to PR's based on the changed files
 - Badges: update badges in README
-- [sonarcloud](https://github.com/SonarSource/sonarcloud-github-action): code analysis
 
 # Deployment
 
