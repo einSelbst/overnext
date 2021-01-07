@@ -139,7 +139,6 @@ yarn validate      - run tsc, prettier, eslint and the tests
 
 - [ ] improve tsconfig
 - [ ] fix running of checks on pr create
-- [ ] fix (remove?) sonarcloud action
 - [ ] cypress watch mode
 - [ ] cypress a11y plugin
 - [ ] automate typedoc generation
