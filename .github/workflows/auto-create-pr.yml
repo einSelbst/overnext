@@ -32,7 +32,7 @@ jobs:
         with:
           pattern: '(-)'
           string: ${{env.CI_REF_NAME}}
-          replace-with: ' '
+          replace-with: "/u0020"
           flags: g
 
       - name: Print environment variables
