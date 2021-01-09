@@ -21,10 +21,13 @@ jobs:
       - name: Extract branch name
         id: extract_branch
         shell: bash
-        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        run: |
+          echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+          echo "::set-output name=test_capitalize::${GITHUB_REF#refs/heads/^}"
 
       - uses: FranzDiebold/github-env-vars-action@v2
       - name: Print environment variables
+        id: extract_env_vars
         run: |
           echo "CI_REPOSITORY_SLUG=$CI_REPOSITORY_SLUG"
           echo "CI_REPOSITORY_OWNER=$CI_REPOSITORY_OWNER"
@@ -51,6 +54,8 @@ jobs:
           echo "CI_WORKFLOW=$CI_WORKFLOW"
           echo "CI_ACTION=$CI_ACTION"
 
+      # dynamic body examples
+      # https://github.com/timopollmeier/actions-test/blob/c816501e5cfead943b3402871940812f516ba383/.github/workflows/create-master-merge-pr.yml
       - name: Create pull request to main
         uses: thomaseizinger/create-pull-request@master
         with:
@@ -61,6 +66,11 @@ jobs:
           body: |
             Hi!
             This PR was created in response to a new branch.
+            Hi @${{ github.actor }}!
+            1: ${{ GITHUB_WORKFLOW }} - The name of the workflow
+            2: ${{ steps.extract_branch.outputs.branch }}.
+            2: ${{ steps.extract_branch.outputs.test_capitalize }}.
+            3: ${{ steps.extract_env_vars.outputs.CI_REPOSITORY_SLUG }}
 
       # GitHub Action does not allow recursion so the CI checks are
       # not triggered when the branch is pushed
