@@ -10,7 +10,7 @@ on:
   pull_request:
     types:
       - opened
-      - synchronize
+      # - synchronize
       - closed
   repository_dispatch:
     types:
