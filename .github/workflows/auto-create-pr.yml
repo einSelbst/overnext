@@ -29,7 +29,7 @@ jobs:
         id: pr_title
         with:
           pattern: '(-)'
-          string: ${{CI_REF_NAME}}
+          string: ${{env.CI_REF_NAME}}
           replace-with: ' '
           flags: g
 
