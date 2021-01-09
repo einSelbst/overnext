@@ -9,7 +9,7 @@ on:
   # - cron: '*/15 * * * *'
   pull_request:
     types:
-      - opened
+      # - opened
       # - synchronize
       - closed
   repository_dispatch:

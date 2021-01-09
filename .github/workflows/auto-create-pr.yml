@@ -23,7 +23,6 @@ jobs:
         shell: bash
         run: |
           echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-          echo "::set-output name=test_capitalize::${GITHUB_REF#refs/heads/^}"
 
       # set CI_REF_NAME
       - uses: FranzDiebold/github-env-vars-action@v2
@@ -31,8 +30,9 @@ jobs:
         id: pr_title
         with:
           pattern: '(-)'
-          string: ${{env.CI_REF_NAME}}
-          replace-with: "\u0020"
+          string: ${{ steps.extract_branch.outputs.branch }}
+          # string: ${{env.CI_REF_NAME}}
+          replace-with: '        '
           flags: g
 
       - name: Print environment variables
@@ -74,13 +74,11 @@ jobs:
           title: ${{ steps.pr_title.outputs.replaced }}
           # title: ${{ steps.extract_branch.outputs.branch }}
           body: |
-            Hi!
-            This PR was created in response to a new branch.
             Hi @${{ github.actor }}!
-            1: ${{ github.GITHUB_WORKFLOW }} - The name of the workflow
-            2: ${{ steps.extract_branch.outputs.branch }}.
-            2: ${{ steps.extract_branch.outputs.test_capitalize }}.
-            3: ${{ steps.extract_env_vars.outputs.CI_REPOSITORY_SLUG }}
+            This PR was created in response to a new branch.
+
+            1: ${{ steps.extract_branch.outputs.branch }}
+            2: ${{ env.CI_REPOSITORY_SLUG }}
 
       # GitHub Action does not allow recursion so the CI checks are
       # not triggered when the branch is pushed
