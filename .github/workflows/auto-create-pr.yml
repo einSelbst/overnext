@@ -28,8 +28,8 @@ jobs:
       - uses: frabert/replace-string-action@v1.2
         id: pr_title
         with:
-          pattern: '(\-)!'
-          string: ${{ github.ref }}
+          pattern: '(-)'
+          string: ${{ github.ref-name }}
           replace-with: ' '
           flags: g
 
