@@ -65,6 +65,13 @@
 
 # Next.js Configuration
 
+## Features
+
+- ['src' Directory](https://nextjs.org/docs/advanced-features/src-directory)
+- [Custom 'App'](https://nextjs.org/docs/advanced-features/custom-app)
+- [Custom 'Document](https://nextjs.org/docs/advanced-features/custom-document)
+- [ToDo](https://github.com/einSelbst/feehikel/issues/75): [Measuring performance](https://nextjs.org/docs/advanced-features/measuring-performance)
+
 ## Plugins
 
 - [compose plugins](https://github.com/cyrilwanner/next-compose-plugins)

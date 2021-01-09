@@ -13,7 +13,7 @@ if (typeof window !== 'undefined' && process.env.NODE_ENV !== 'production') {
   axe(React, ReactDOM, 1000, {}) // axe(React, ReactDOM, 1000)
 }
 
-function MyApp ({ Component, pageProps }: AppProps) {
+function _app ({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />
 }
 
@@ -29,4 +29,4 @@ function MyApp ({ Component, pageProps }: AppProps) {
 //   return { ...appProps }
 // }
 
-export default MyApp
+export default _app
