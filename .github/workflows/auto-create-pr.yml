@@ -25,7 +25,16 @@ jobs:
           echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
           echo "::set-output name=test_capitalize::${GITHUB_REF#refs/heads/^}"
 
+      - uses: frabert/replace-string-action@v1.2
+        id: pr_title
+        with:
+          pattern: '(\-)!'
+          string: ${{ github.ref }}
+          replace-with: ' '
+          flags: g
+
       - uses: FranzDiebold/github-env-vars-action@v2
+
       - name: Print environment variables
         id: extract_env_vars
         run: |
@@ -62,7 +71,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           head: ${{ github.ref }}
           base: main
-          title: ${{ steps.extract_branch.outputs.branch }}
+          title: ${{ steps.pr_title.outputs.replaced }}
+          # title: ${{ steps.extract_branch.outputs.branch }}
           body: |
             Hi!
             This PR was created in response to a new branch.
