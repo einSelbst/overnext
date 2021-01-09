@@ -9,6 +9,11 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 })
 
 const nextConfiguration = {
+  i18n: {
+    locales: ['en', 'de', 'es', 'fr', 'it'],
+    defaultLocale: 'en',
+  },
+
   webpack: (config, _options) => {
     // modify the `config` here
     return config
