@@ -9,6 +9,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 const { withPlugins, optional } = require('next-compose-plugins')
 
 const nextConfiguration = {
+  poweredByHeader: false,
   i18n: {
     locales: ['en', 'de', 'es', 'fr', 'it'],
     defaultLocale: 'en',
