@@ -9,6 +9,7 @@
 - automation, inspirations https://github.com/sdras/awesome-actions
 - conformity, inspirations https://github.com/dustinspecker/awesome-eslint
 - recommended repo files via [cgx](https://github.com/jeroenouw/cgx)
+- React [Strict Mode](https://reactjs.org/docs/strict-mode.html) enabled in [development](https://nextjs.org/docs/api-reference/next.config.js/react-strict-mode)
 
 ## Commit Style
 
