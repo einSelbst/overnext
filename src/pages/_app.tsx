@@ -1,5 +1,5 @@
-// import App from "next/app";
-import { AppProps /*, AppContext */ } from 'next/app'
+import { AppProps /*, App, AppContext */ } from 'next/app'
+import Head from 'next/head'
 import React from 'react'
 
 // Conditionally inject axe into the page.
@@ -14,7 +14,16 @@ if (typeof window !== 'undefined' && process.env.NODE_ENV !== 'production') {
 }
 
 function _app ({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Head>
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+        {/* <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86" /> see https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag */}
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
+      <Component {...pageProps} />
+    </>
+  )
 }
 
 // Only uncomment this method if you have blocking data requirements for
@@ -22,7 +31,7 @@ function _app ({ Component, pageProps }: AppProps) {
 // perform automatic static optimization, causing every page in your app to
 // be server-side rendered.
 //
-// MyApp.getInitialProps = async (appContext: AppContext) => {
+// _app.getInitialProps = async (appContext: AppContext) => {
 //   // calls page's `getInitialProps` and fills `appProps.pageProps`
 //   const appProps = await App.getInitialProps(appContext);
 
