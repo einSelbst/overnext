@@ -9,6 +9,7 @@
 - automation, inspirations https://github.com/sdras/awesome-actions
 - conformity, inspirations https://github.com/dustinspecker/awesome-eslint
 - recommended repo files via [cgx](https://github.com/jeroenouw/cgx)
+- React [Strict Mode](https://reactjs.org/docs/strict-mode.html) enabled in [development](https://nextjs.org/docs/api-reference/next.config.js/react-strict-mode)
 
 ## Commit Style
 
@@ -70,6 +71,8 @@
 - ['src' Directory](https://nextjs.org/docs/advanced-features/src-directory)
 - [Custom 'App'](https://nextjs.org/docs/advanced-features/custom-app)
 - [Custom 'Document](https://nextjs.org/docs/advanced-features/custom-document)
+- [Custom Error Pages](https://nextjs.org/docs/advanced-features/custom-error-page)
+- [Internationalized Routing](https://nextjs.org/docs/advanced-features/i18n-routing)
 - [ToDo](https://github.com/einSelbst/feehikel/issues/75): [Measuring performance](https://nextjs.org/docs/advanced-features/measuring-performance)
 
 ## Plugins
