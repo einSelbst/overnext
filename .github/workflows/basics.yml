@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x]
+        node-version: [12.x, 14.x]
 
     steps:
       - name: Checkout
@@ -59,6 +59,8 @@ jobs:
 
       - name: Run tests
         run: pnpm test
+        env:
+          CI: true
 
       - name: Build
         run: pnpm build
