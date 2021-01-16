@@ -25,7 +25,7 @@
        - refactor: A code change that neither fixes a bug nor adds a feature
        - perf: A code change that improves performance
        - test: Adding missing tests or correcting existing tests
-       - build: Changes that affect the build system or external dependencies (example scopes: webpack, typescript, yarn)
+       - build: Changes that affect the build system or external dependencies (example scopes: webpack, typescript, pnpm)
        - ci: Changes to our CI configuration files and scripts (example scopes: Github Actions, BrowserStack, SauceLabs)
        - chore: Other changes that don't modify src or test files
        - revert: Reverts a previous commit
@@ -84,18 +84,18 @@
 ## Scripts
 
 ```bash
-yarn dev           - start dev server
-yarn build         - build project
-yarn build:analyze - build project and visualize chunks
-yarn cz            - make new commit
-yarn release       - make new release
-yarn docs          - generate source code documentation
-yarn type-check    - run typescript compiler
-yarn lint          - run eslint
-yarn format        - run prettier
-yarn test          - run jest
-yarn test:cy       - open cypress test runner
-yarn validate      - run tsc, prettier, eslint and the tests
+pnpm dev           - start dev server
+pnpm build         - build project
+pnpm build:analyze - build project and visualize chunks
+pnpm cz            - make new commit
+pnpm release       - make new release
+pnpm docs          - generate source code documentation
+pnpm type-check    - run typescript compiler
+pnpm lint          - run eslint
+pnpm format        - run prettier
+pnpm test          - run jest
+pnpm test:cy       - open cypress test runner
+pnpm validate      - run tsc, prettier, eslint and the tests
 ```
 
 # CI
@@ -158,4 +158,4 @@ yarn validate      - run tsc, prettier, eslint and the tests
 
 # Credits
 
-...where credits due, thanks to @bahmutov, @ferlopezm94, @thomaseizinger and all the others where I copied code from!
+...where credits due, thanks to @bahmutov, [Spencer Elliott](@elliottsj), @ferlopezm94, @thomaseizinger and all the others where I copied code from!
