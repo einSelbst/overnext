@@ -158,4 +158,4 @@ pnpm validate      - run tsc, prettier, eslint and the tests
 
 # Credits
 
-...where credits due, thanks to @bahmutov, [Spencer Elliott](@elliottsj), @ferlopezm94, @thomaseizinger and all the others where I copied code from!
+...where credits due, thanks to [@bahmutov](https://github.com/bahmutov), [@elliottsj](https://github.com/elliottsj), [@ferlopezm94](https://github.com/ferlopezm94), [@thomaseizinger](https://github.com/thomaseizinger) and all the others whom I copied code from!
