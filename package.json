@@ -17,15 +17,15 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "test": "jest",
     "test:cy": "cypress open",
-    "e2e": "start-test 'yarn dev' 3000 'yarn test:cy'",
+    "e2e": "start-test 'npm run dev' 3000 'npm run test:cy'",
     "pree2e": "rm -rf .nyc_output coverage .next || true",
-    "validate": "yarn format && yarn lint && yarn type-check && yarn test"
+    "validate": "npm run format && npm run lint && npm run type-check && npm run test"
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-push": "yarn run type-check"
+      "pre-push": "npm run type-check"
     }
   },
   "lint-staged": {
