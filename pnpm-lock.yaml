@@ -7,28 +7,28 @@ devDependencies:
   '@babel/core': 7.12.10
   '@commitlint/cli': 11.0.0
   '@commitlint/config-conventional': 11.0.0
-  '@cypress/code-coverage': 3.9.1_cypress@6.2.1
+  '@cypress/code-coverage': 3.9.2_cypress@6.2.1
   '@next/bundle-analyzer': 10.0.5
   '@next/eslint-plugin-next': 10.0.5
   '@testing-library/react': 11.2.3_react-dom@17.0.1+react@17.0.1
   '@types/jest': 26.0.20
   '@types/node': 13.13.36
   '@types/react': 17.0.0
-  '@typescript-eslint/eslint-plugin': 4.13.0_b7210263e693dcacb9967ef540d4f052
-  '@typescript-eslint/parser': 4.13.0_eslint@7.17.0+typescript@4.1.3
+  '@typescript-eslint/eslint-plugin': 4.13.0_f3178e4628777c9e52e8278f98ca1f2d
+  '@typescript-eslint/parser': 4.13.0_eslint@7.18.0+typescript@4.1.3
   babel-jest: 26.6.3_@babel+core@7.12.10
-  commitizen: 4.2.2
+  commitizen: 4.2.3
   cypress: 6.2.1
   dependency-version-badge: 1.9.1
-  eslint: 7.17.0
-  eslint-plugin-cypress: 2.11.2_eslint@7.17.0
-  eslint-plugin-import: 2.22.1_eslint@7.17.0
-  eslint-plugin-jest: 24.1.3_eslint@7.17.0+typescript@4.1.3
-  eslint-plugin-jest-dom: 3.6.5_eslint@7.17.0
-  eslint-plugin-jsx-a11y: 6.4.1_eslint@7.17.0
-  eslint-plugin-react: 7.22.0_eslint@7.17.0
-  eslint-plugin-react-hooks: 4.2.0_eslint@7.17.0
-  husky: 4.3.7
+  eslint: 7.18.0
+  eslint-plugin-cypress: 2.11.2_eslint@7.18.0
+  eslint-plugin-import: 2.22.1_eslint@7.18.0
+  eslint-plugin-jest: 24.1.3_eslint@7.18.0+typescript@4.1.3
+  eslint-plugin-jest-dom: 3.6.5_eslint@7.18.0
+  eslint-plugin-jsx-a11y: 6.4.1_eslint@7.18.0
+  eslint-plugin-react: 7.22.0_eslint@7.18.0
+  eslint-plugin-react-hooks: 4.2.0_eslint@7.18.0
+  husky: 4.3.8
   identity-obj-proxy: 3.0.0
   jest: 26.6.3
   jest-watch-typeahead: 0.6.1_jest@26.6.3
@@ -764,8 +764,8 @@ packages:
       '@babel/core': ^7.0.0-0
     resolution:
       integrity: sha512-aEIubCS0KHKM0zUos5fIoQm+AZUMt1ZvMpqz0/H5qAQ7vWylr9+PLYurT+Ic7ID/bKLd4q8hDovaG3Zch2uz5Q==
-  ? /@babel/plugin-transform-named-capturing-groups-regex/7.12.1_@babel+core@7.4.5
-  : dependencies:
+  /@babel/plugin-transform-named-capturing-groups-regex/7.12.1_@babel+core@7.4.5:
+    dependencies:
       '@babel/core': 7.4.5
       '@babel/helper-create-regexp-features-plugin': 7.12.7_@babel+core@7.4.5
     dev: true
@@ -1253,7 +1253,7 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-sErmFSEr5287bLMRl0POGnyFtJCs/lSk5yxrUIJUIHZ8eDvtTEr0V93xRgLjJVG54gJU4MbpHy1mRPA9VZbtQA==
-  /@cypress/code-coverage/3.9.1_cypress@6.2.1:
+  /@cypress/code-coverage/3.9.2_cypress@6.2.1:
     dependencies:
       '@cypress/browserify-preprocessor': 3.0.1
       cypress: 6.2.1
@@ -1267,7 +1267,7 @@ packages:
     peerDependencies:
       cypress: '*'
     resolution:
-      integrity: sha512-Y/pt8ERu6sOQUqEnp6MkJffjiaw7B7ilrbc8LWXPPwNTboMvPI03FeiByhZtgsALwAymMX3q7ddgsF9xOxBmgQ==
+      integrity: sha512-YnzkRBxdsY/Ek/68nr+MowqW59UJsd28j10mFOerW/wrSkuxGrWvOldMs8Y4tU70L4fgd4wDPqGGMer3+UzbwA==
   /@cypress/listr-verbose-renderer/0.4.1:
     dependencies:
       chalk: 1.1.3
@@ -1313,7 +1313,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-skbBzPggOVYCbnGgV+0dmBdW/s77ZkAOXIC1knS8NagwDjBrNC1LuXtQJeiN6l+m7lzmHtaoUw/ctJKdqkG57Q==
-  /@eslint/eslintrc/0.2.2:
+  /@eslint/eslintrc/0.3.0:
     dependencies:
       ajv: 6.12.6
       debug: 4.3.1
@@ -1329,7 +1329,7 @@ packages:
     engines:
       node: ^10.12.0 || >=12.0.0
     resolution:
-      integrity: sha512-EfB5OHNYp1F4px/LI/FEnGylop7nOqkQ1LRzCM0KccA2U8tvV8w01KBv37LbO7nW4H+YhKyo2LcJhRwjjV17QQ==
+      integrity: sha512-1JTKgrOKAHVivSvOYw+sJOunkBjUOvjqWk1DPja7ZFhIS2mX/4EgTT8M7eTK9jrKhL/FvXXEbQwIs3pg1xp3dg==
   /@glimmer/interfaces/0.41.4:
     dev: true
     resolution:
@@ -1875,13 +1875,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-f+fD/fQAo3BCbCDlrUpznF1A5Zp9rB0noS5vnoormHSIPFKL0Z2DcUJ3Gxp5ytH4uLRNxy7AwYUC9exZzqGMAw==
-  /@typescript-eslint/eslint-plugin/4.13.0_b7210263e693dcacb9967ef540d4f052:
+  /@typescript-eslint/eslint-plugin/4.13.0_f3178e4628777c9e52e8278f98ca1f2d:
     dependencies:
-      '@typescript-eslint/experimental-utils': 4.13.0_eslint@7.17.0+typescript@4.1.3
-      '@typescript-eslint/parser': 4.13.0_eslint@7.17.0+typescript@4.1.3
+      '@typescript-eslint/experimental-utils': 4.13.0_eslint@7.18.0+typescript@4.1.3
+      '@typescript-eslint/parser': 4.13.0_eslint@7.18.0+typescript@4.1.3
       '@typescript-eslint/scope-manager': 4.13.0
       debug: 4.3.1
-      eslint: 7.17.0
+      eslint: 7.18.0
       functional-red-black-tree: 1.0.1
       lodash: 4.17.20
       regexpp: 3.1.0
@@ -1900,13 +1900,13 @@ packages:
         optional: true
     resolution:
       integrity: sha512-ygqDUm+BUPvrr0jrXqoteMqmIaZ/bixYOc3A4BRwzEPTZPi6E+n44rzNZWaB0YvtukgP+aoj0i/fyx7FkM2p1w==
-  /@typescript-eslint/experimental-utils/4.13.0_eslint@7.17.0+typescript@4.1.3:
+  /@typescript-eslint/experimental-utils/4.13.0_eslint@7.18.0+typescript@4.1.3:
     dependencies:
       '@types/json-schema': 7.0.6
       '@typescript-eslint/scope-manager': 4.13.0
       '@typescript-eslint/types': 4.13.0
       '@typescript-eslint/typescript-estree': 4.13.0_typescript@4.1.3
-      eslint: 7.17.0
+      eslint: 7.18.0
       eslint-scope: 5.1.1
       eslint-utils: 2.1.0
     dev: true
@@ -1917,13 +1917,13 @@ packages:
       typescript: '*'
     resolution:
       integrity: sha512-/ZsuWmqagOzNkx30VWYV3MNB/Re/CGv/7EzlqZo5RegBN8tMuPaBgNK6vPBCQA8tcYrbsrTdbx3ixMRRKEEGVw==
-  /@typescript-eslint/parser/4.13.0_eslint@7.17.0+typescript@4.1.3:
+  /@typescript-eslint/parser/4.13.0_eslint@7.18.0+typescript@4.1.3:
     dependencies:
       '@typescript-eslint/scope-manager': 4.13.0
       '@typescript-eslint/types': 4.13.0
       '@typescript-eslint/typescript-estree': 4.13.0_typescript@4.1.3
       debug: 4.3.1
-      eslint: 7.17.0
+      eslint: 7.18.0
       typescript: 4.1.3
     dev: true
     engines:
@@ -2324,7 +2324,6 @@ packages:
     resolution:
       integrity: sha1-w7M6te42DYbg5ijwRorn7yfWVN8=
   /ansi-regex/3.0.0:
-    dev: true
     engines:
       node: '>=4'
     resolution:
@@ -2811,7 +2810,7 @@ packages:
       integrity: sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==
   /bl/4.0.3:
     dependencies:
-      buffer: 5.6.0
+      buffer: 5.7.1
       inherits: 2.0.4
       readable-stream: 3.6.0
     dev: false
@@ -3060,7 +3059,6 @@ packages:
     dependencies:
       base64-js: 1.5.1
       ieee754: 1.2.1
-    dev: true
     resolution:
       integrity: sha512-EHcyIPBQ4BSGlvjB16k5KgAJ27CIsHY/2JBmCRReo48y9rQ3MaUzWX3KVlBa4U7MyX02HdVj0K7C3WaB3ju7FQ==
   /builtin-status-codes/3.0.0:
@@ -3597,10 +3595,10 @@ packages:
       node: '>= 6'
     resolution:
       integrity: sha512-U7VdrJFnJgo4xjrHpTzu0yrHPGImdsmD95ZlgYSEajAn2JKzDhDTPG9kBTefmObL2w/ngeZnilk+OV9CG3d7UA==
-  /commitizen/4.2.2:
+  /commitizen/4.2.3:
     dependencies:
       cachedir: 2.2.0
-      cz-conventional-changelog: 3.3.0
+      cz-conventional-changelog: 3.2.0
       dedent: 0.7.0
       detect-indent: 6.0.0
       find-node-modules: 2.0.0
@@ -3618,7 +3616,7 @@ packages:
       node: '>= 10'
     hasBin: true
     resolution:
-      integrity: sha512-uz+E6lGsDBDI2mYA4QfOxFeqdWUYwR1ky11YmLgg2BnEEP3YbeejpT4lxzGjkYqumnXr062qTOGavR9NtX/iwQ==
+      integrity: sha512-pYlYEng7XMV2TW4xtjDKBGqeJ0Teq2zyRSx2S3Ml1XAplHSlJZK8vm1KdGclpMEZuGafbS5TeHXIVnHk8RWIzQ==
   /common-tags/1.8.0:
     dev: true
     engines:
@@ -4160,10 +4158,10 @@ packages:
     requiresBuild: true
     resolution:
       integrity: sha512-OYkSgzA4J4Q7eMjZvNf5qWpBLR4RXrkqjL3UZ1UzGGLAskO0nFTi/RomNTG6TKvL3Zp4tw4zFY1gp5MtmkCZrA==
-  /cz-conventional-changelog/3.3.0:
+  /cz-conventional-changelog/3.2.0:
     dependencies:
       chalk: 2.4.2
-      commitizen: 4.2.2
+      commitizen: 4.2.3
       conventional-commit-types: 3.0.0
       lodash.map: 4.6.0
       longest: 2.0.1
@@ -4174,7 +4172,7 @@ packages:
     optionalDependencies:
       '@commitlint/load': 11.0.0
     resolution:
-      integrity: sha512-U466fIzU5U22eES5lTNiNbZ+d8dfcHcssH4o7QsdWaCcRs/feIPCxKYSWkYBNs5mny7MvEfwpTLWjvbm94hecw==
+      integrity: sha512-yAYxeGpVi27hqIilG1nh4A9Bnx4J3Ov+eXy4koL3drrR+IO9GaWPsKjik20ht608Asqi8TQPf0mczhEeyAtMzg==
   /d/1.0.1:
     dependencies:
       es5-ext: 0.10.53
@@ -4857,23 +4855,23 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-6j9xxegbqe8/kZY8cYpcp0xhbK0EgJlg3g9mib3/miLaExuuwc3n5UEfSnU6hWMbT0FAYVvDbL9RrRgpUeQIvA==
-  /eslint-plugin-cypress/2.11.2_eslint@7.17.0:
+  /eslint-plugin-cypress/2.11.2_eslint@7.18.0:
     dependencies:
-      eslint: 7.17.0
+      eslint: 7.18.0
       globals: 11.12.0
     dev: true
     peerDependencies:
       eslint: '>= 3.2.1'
     resolution:
       integrity: sha512-1SergF1sGbVhsf7MYfOLiBhdOg6wqyeV9pXUAIDIffYTGMN3dTBQS9nFAzhLsHhO+Bn0GaVM1Ecm71XUidQ7VA==
-  /eslint-plugin-import/2.22.1_eslint@7.17.0:
+  /eslint-plugin-import/2.22.1_eslint@7.18.0:
     dependencies:
       array-includes: 3.1.2
       array.prototype.flat: 1.2.4
       contains-path: 0.1.0
       debug: 2.6.9
       doctrine: 1.5.0
-      eslint: 7.17.0
+      eslint: 7.18.0
       eslint-import-resolver-node: 0.3.4
       eslint-module-utils: 2.6.0
       has: 1.0.3
@@ -4889,11 +4887,11 @@ packages:
       eslint: ^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0
     resolution:
       integrity: sha512-8K7JjINHOpH64ozkAhpT3sd+FswIZTfMZTjdx052pnWrgRCVfp8op9tbjpAk3DdUeI/Ba4C8OjdC0r90erHEOw==
-  /eslint-plugin-jest-dom/3.6.5_eslint@7.17.0:
+  /eslint-plugin-jest-dom/3.6.5_eslint@7.18.0:
     dependencies:
       '@babel/runtime': 7.12.5
       '@testing-library/dom': 7.29.2
-      eslint: 7.17.0
+      eslint: 7.18.0
       requireindex: 1.2.0
     dev: true
     engines:
@@ -4904,10 +4902,10 @@ packages:
       eslint: '>=6.8'
     resolution:
       integrity: sha512-iaJ5aSQghp9u2ciLAseWIVu7X5tW+WwNJwMBDToK4GBfwGXXQJDLt5IBNtm6fHvC3FRzCGwvyNMIG1g5gF+icQ==
-  /eslint-plugin-jest/24.1.3_eslint@7.17.0+typescript@4.1.3:
+  /eslint-plugin-jest/24.1.3_eslint@7.18.0+typescript@4.1.3:
     dependencies:
-      '@typescript-eslint/experimental-utils': 4.13.0_eslint@7.17.0+typescript@4.1.3
-      eslint: 7.17.0
+      '@typescript-eslint/experimental-utils': 4.13.0_eslint@7.18.0+typescript@4.1.3
+      eslint: 7.18.0
     dev: true
     engines:
       node: '>=10'
@@ -4916,7 +4914,7 @@ packages:
       typescript: '*'
     resolution:
       integrity: sha512-dNGGjzuEzCE3d5EPZQ/QGtmlMotqnYWD/QpCZ1UuZlrMAdhG5rldh0N0haCvhGnUkSeuORS5VNROwF9Hrgn3Lg==
-  /eslint-plugin-jsx-a11y/6.4.1_eslint@7.17.0:
+  /eslint-plugin-jsx-a11y/6.4.1_eslint@7.18.0:
     dependencies:
       '@babel/runtime': 7.12.5
       aria-query: 4.2.2
@@ -4926,7 +4924,7 @@ packages:
       axobject-query: 2.2.0
       damerau-levenshtein: 1.0.6
       emoji-regex: 9.2.0
-      eslint: 7.17.0
+      eslint: 7.18.0
       has: 1.0.3
       jsx-ast-utils: 3.2.0
       language-tags: 1.0.5
@@ -4937,9 +4935,9 @@ packages:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7
     resolution:
       integrity: sha512-0rGPJBbwHoGNPU73/QCLP/vveMlM1b1Z9PponxO87jfr6tuH5ligXbDT6nHSSzBC8ovX2Z+BQu7Bk5D/Xgq9zg==
-  /eslint-plugin-react-hooks/4.2.0_eslint@7.17.0:
+  /eslint-plugin-react-hooks/4.2.0_eslint@7.18.0:
     dependencies:
-      eslint: 7.17.0
+      eslint: 7.18.0
     dev: true
     engines:
       node: '>=10'
@@ -4947,12 +4945,12 @@ packages:
       eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
     resolution:
       integrity: sha512-623WEiZJqxR7VdxFCKLI6d6LLpwJkGPYKODnkH3D7WpOG5KM8yWueBd8TLsNAetEJNF5iJmolaAKO3F8yzyVBQ==
-  /eslint-plugin-react/7.22.0_eslint@7.17.0:
+  /eslint-plugin-react/7.22.0_eslint@7.18.0:
     dependencies:
       array-includes: 3.1.2
       array.prototype.flatmap: 1.2.4
       doctrine: 2.1.0
-      eslint: 7.17.0
+      eslint: 7.18.0
       has: 1.0.3
       jsx-ast-utils: 3.2.0
       object.entries: 1.1.3
@@ -5059,10 +5057,10 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-K+Iayyo2LtyYhDSYwz5D5QdWw0hCacNzyq1Y821Xna2xSJj7cijoLLYmLxTQgcgZ9mC61nryMy9S7GRbYpI5Ig==
-  /eslint/7.17.0:
+  /eslint/7.18.0:
     dependencies:
       '@babel/code-frame': 7.12.11
-      '@eslint/eslintrc': 0.2.2
+      '@eslint/eslintrc': 0.3.0
       ajv: 6.12.6
       chalk: 4.1.0
       cross-spawn: 7.0.3
@@ -5103,7 +5101,7 @@ packages:
       node: ^10.12.0 || >=12.0.0
     hasBin: true
     resolution:
-      integrity: sha512-zJk08MiBgwuGoxes5sSQhOtibZ75pz0J35XTRlZOk9xMffhpA9BTbQZxoXZzOl5zMbleShbGwtw+1kGferfFwQ==
+      integrity: sha512-fbgTiE8BfUJZuBeq2Yi7J3RB3WGUQ9PNuNbmgi6jt9Iv8qrkxfy19Ds3OpL1Pm7zg3BtTVhvcUZbIRQ0wmSjAQ==
   /espree/6.2.1:
     dependencies:
       acorn: 7.4.1
@@ -6441,7 +6439,7 @@ packages:
       node: '>=8.12.0'
     resolution:
       integrity: sha512-SEQu7vl8KjNL2eoGBLF3+wAjpsNfA9XMlXAYj/3EdaNfAlxKthD1xjEQfGOUhllCGGJVNY34bRr6lPINhNjyZw==
-  /husky/4.3.7:
+  /husky/4.3.8:
     dependencies:
       chalk: 4.1.0
       ci-info: 2.0.0
@@ -6459,7 +6457,7 @@ packages:
     hasBin: true
     requiresBuild: true
     resolution:
-      integrity: sha512-0fQlcCDq/xypoyYSJvEuzbDPHFf8ZF9IXKJxlrnvxABTSzK1VPT2RKYQKrcgJ+YD39swgoB6sbzywUqFxUiqjw==
+      integrity: sha512-LCqqsB0PzJQ/AlCgfrfzRe3e3+NvmefAdKQhRYpxS4u6clblBoDdzzvHi8fmxKRzvMxPY/1WZWzomPZww0Anow==
   /iconv-lite/0.4.24:
     dependencies:
       safer-buffer: 2.1.2
@@ -6848,7 +6846,6 @@ packages:
     resolution:
       integrity: sha1-754xOG8DGn8NZDr4L95QxFfvAMs=
   /is-fullwidth-code-point/2.0.0:
-    dev: true
     engines:
       node: '>=4'
     resolution:
@@ -11425,7 +11422,6 @@ packages:
     dependencies:
       is-fullwidth-code-point: 2.0.0
       strip-ansi: 4.0.0
-    dev: true
     engines:
       node: '>=4'
     resolution:
@@ -11510,7 +11506,6 @@ packages:
   /strip-ansi/4.0.0:
     dependencies:
       ansi-regex: 3.0.0
-    dev: true
     engines:
       node: '>=4'
     resolution:
@@ -12707,7 +12702,7 @@ packages:
       integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==
   /wide-align/1.1.3:
     dependencies:
-      string-width: 1.0.2
+      string-width: 2.1.1
     dev: false
     optional: true
     resolution:
@@ -12881,7 +12876,7 @@ specifiers:
   '@babel/core': 7.12.10
   '@commitlint/cli': 11.0.0
   '@commitlint/config-conventional': 11.0.0
-  '@cypress/code-coverage': 3.9.1
+  '@cypress/code-coverage': 3.9.2
   '@next/bundle-analyzer': 10.0.5
   '@next/eslint-plugin-next': 10.0.5
   '@testing-library/react': 11.2.3
@@ -12891,10 +12886,10 @@ specifiers:
   '@typescript-eslint/eslint-plugin': 4.13.0
   '@typescript-eslint/parser': 4.13.0
   babel-jest: 26.6.3
-  commitizen: 4.2.2
+  commitizen: 4.2.3
   cypress: 6.2.1
   dependency-version-badge: 1.9.1
-  eslint: 7.17.0
+  eslint: 7.18.0
   eslint-plugin-cypress: 2.11.2
   eslint-plugin-import: 2.22.1
   eslint-plugin-jest: 24.1.3
@@ -12902,7 +12897,7 @@ specifiers:
   eslint-plugin-jsx-a11y: 6.4.1
   eslint-plugin-react: 7.22.0
   eslint-plugin-react-hooks: 4.2.0
-  husky: 4.3.7
+  husky: 4.3.8
   identity-obj-proxy: 3.0.0
   jest: 26.6.3
   jest-watch-typeahead: 0.6.1
