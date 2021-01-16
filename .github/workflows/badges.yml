@@ -24,6 +24,7 @@ jobs:
         with:
           # just perform install
           runTests: false
+          install-command: pnpm i
 
       - name: Update version badges 🏷
         # run: npm run update:badges
