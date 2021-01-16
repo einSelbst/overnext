@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x]
+        node-version: [12.x, 14.x]
 
     steps:
       - name: Checkout
@@ -29,28 +29,38 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Cache yarn directory
-        id: cache-yarn-dir
+      - name: install pnpm
+        run: |
+          npm install pnpm@next -g
+          pnpm --version
+
+      - name: pnpm install
+        run: pnpm install
+
+      - name: Cache pnpm directory
+        id: cache-pnpm-dir
         uses: actions/cache@v2
         env:
           cache-name: cache-node-modules
         with:
           path: node_modules
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: ${{ runner.os }}-yarn-
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: ${{ runner.os }}-pnpm-
 
       - name: Install dependencies
-        if: steps.cache-yarn-dir.outputs.cache-hit != 'true'
-        run: yarn install --frozen-lockfile
+        if: steps.cache-pnpm-dir.outputs.cache-hit != 'true'
+        run: pnpm install --prefer-frozen-lockfile
 
       - name: Run prettier
-        run: yarn format
+        run: pnpm format
 
       - name: Run eslint
-        run: yarn lint
+        run: pnpm lint
 
       - name: Run tests
-        run: yarn test
+        run: pnpm test
+        env:
+          CI: true
 
       - name: Build
-        run: yarn run build
+        run: pnpm build

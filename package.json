@@ -4,6 +4,7 @@
   "version": "1.0.1",
   "private": true,
   "scripts": {
+    "skip-for-now-preinstall": "npx only-allow pnpm",
     "dev": "next dev",
     "build": "next build",
     "build:ssr": "NODE_ENV=production next build",
@@ -17,15 +18,15 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "test": "jest",
     "test:cy": "cypress open",
-    "e2e": "start-test 'npm run dev' 3000 'npm run test:cy'",
+    "e2e": "start-test 'pnpm dev' 3000 'pnpm test:cy'",
     "pree2e": "rm -rf .nyc_output coverage .next || true",
-    "validate": "npm run format && npm run lint && npm run type-check && npm run test"
+    "validate": "pnpm format && pnpm lint && pnpm type-check && pnpm test"
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-push": "npm run type-check"
+      "pre-push": "pnpm type-check"
     }
   },
   "lint-staged": {
@@ -37,6 +38,10 @@
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
+  },
+  "engines": {
+    "node": ">=12",
+    "pnpm": ">=5"
   },
   "dependencies": {
     "next": "latest",
