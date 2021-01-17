@@ -2,7 +2,9 @@
   "name": "feehikel",
   "version": "1.0.1",
   "description": "Opinionated next.js boilerplate",
-  "keywords": "next.js, cypress",
+  "keywords": [
+    "next.js, cypress"
+  ],
   "homepage": "https://feehikel-git-main.einselbst.vercel.app",
   "bugs": "https://github.com/einSelbst/feehikel/issues",
   "author": "einSelbst",
