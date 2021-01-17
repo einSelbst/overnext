@@ -4,7 +4,9 @@
     "ecmaVersion": 2018,
     "ecmaFeatures": {
       "jsx": true
-    }
+    },
+    "project": "./tsconfig.eslint.json",
+    "tsconfigRootDir": "./"
   },
   "plugins": ["react", "@typescript-eslint", "import", "jsx-a11y"],
   "extends": [
