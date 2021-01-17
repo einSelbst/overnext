@@ -5,6 +5,7 @@ dependencies:
 devDependencies:
   '@axe-core/react': 4.1.0
   '@babel/core': 7.12.10
+  '@babel/runtime': 7.12.5
   '@commitlint/cli': 11.0.0
   '@commitlint/config-conventional': 11.0.0
   '@cypress/code-coverage': 3.9.2_cypress@6.2.1
@@ -35,12 +36,17 @@ devDependencies:
   lint-staged: 10.5.3
   next-compose-plugins: 2.2.1
   next-unused: 0.0.3_typescript@4.1.3
+  npm-scripts-info: 0.3.9
   prettier-standard: 16.4.1_typescript@4.1.3
   standard-version: 9.1.0
   start-server-and-test: 1.11.7
   typedoc: 0.20.15_typescript@4.1.3
   typescript: 4.1.3
 lockfileVersion: 5.2
+optionalDependencies:
+  fsevents: 2.3.1
+overrides:
+  fsevents: ^2.3.1
 packages:
   /@ampproject/toolbox-core/2.7.4:
     dependencies:
@@ -2345,7 +2351,6 @@ packages:
     resolution:
       integrity: sha1-w7M6te42DYbg5ijwRorn7yfWVN8=
   /ansi-regex/3.0.0:
-    dev: true
     engines:
       node: '>=4'
     resolution:
@@ -2831,12 +2836,6 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==
-  /bindings/1.5.0:
-    dependencies:
-      file-uri-to-path: 1.0.0
-    optional: true
-    resolution:
-      integrity: sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==
   /bl/4.0.3:
     dependencies:
       buffer: 5.7.1
@@ -3362,7 +3361,7 @@ packages:
       upath: 1.2.0
     deprecated: Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies.
     optionalDependencies:
-      fsevents: 1.2.13
+      fsevents: 2.3.1
     resolution:
       integrity: sha512-ZmZUazfOzf0Nve7duiCKD23PFSCs4JPoYyccjUFF3aQkQadqBhfzhjkwBH2mNOG9cTBwhamM37EIsIkZw3nRgg==
   /chokidar/3.4.3:
@@ -3378,7 +3377,7 @@ packages:
     engines:
       node: '>= 8.10.0'
     optionalDependencies:
-      fsevents: 2.1.3
+      fsevents: 2.3.1
     resolution:
       integrity: sha512-DtM3g7juCXQxFVSNPNByEC2+NImtBuxQQvWlHunpJIS5Ocr0lG306cC7FCi7cEA0fzmybPUIl4txBIobk1gGOQ==
   /chownr/1.1.4:
@@ -4073,7 +4072,7 @@ packages:
       cssesc: 3.0.0
       icss-utils: 4.1.1
       loader-utils: 2.0.0
-      postcss: 7.0.32
+      postcss: 7.0.35
       postcss-modules-extract-imports: 2.0.0
       postcss-modules-local-by-default: 3.0.3
       postcss-modules-scope: 2.2.0
@@ -4112,14 +4111,14 @@ packages:
   /cssnano-preset-simple/1.2.1:
     dependencies:
       caniuse-lite: 1.0.30001177
-      postcss: 7.0.32
+      postcss: 7.0.35
     dev: false
     resolution:
       integrity: sha512-B2KahOIFTV6dw5Ioy9jHshTh/vAYNnUB2enyWRgnAEg3oJBjI/035ExpePaMqS2SwpbH7gCgvQqwpMBH6hTJSw==
   /cssnano-simple/1.2.1:
     dependencies:
       cssnano-preset-simple: 1.2.1
-      postcss: 7.0.32
+      postcss: 7.0.35
     dev: false
     resolution:
       integrity: sha512-9vOyjw8Dj/T12kIOnXPZ5VnEIo6F3YMaIn0wqJXmn277R58cWpI3AvtdlCBtohX7VAUNYcyk2d0dKcXXkb5I6Q==
@@ -5667,10 +5666,6 @@ packages:
       node: '>=6.0.0'
     resolution:
       integrity: sha512-r70c72ln2YHzQINNfxDp02hAhbGkt1HffZ+Du8oetWDLjDtFja/Lm10lUaSh9e+wD+7VDvPee0b0C9SAy8pWZg==
-  /file-uri-to-path/1.0.0:
-    optional: true
-    resolution:
-      integrity: sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==
   /filing-cabinet/2.6.0:
     dependencies:
       app-module-path: 2.2.0
@@ -5978,31 +5973,7 @@ packages:
   /fs.realpath/1.0.0:
     resolution:
       integrity: sha1-FQStJSMVjKpA20onh8sBQRmU6k8=
-  /fsevents/1.2.13:
-    dependencies:
-      bindings: 1.5.0
-      nan: 2.14.2
-    deprecated: fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2.
-    engines:
-      node: '>= 4.0'
-    optional: true
-    os:
-      - darwin
-    requiresBuild: true
-    resolution:
-      integrity: sha512-oWb1Z6mkHIskLzEJ/XWX0srkpkTQ7vaopMQkyaEIoq0fmtFVxOthb8cCxeT+p3ynTdkk/RZwbgG4brR5BeWECw==
-  /fsevents/2.1.3:
-    deprecated: '"Please update to latest v2.3 or v2.2"'
-    dev: false
-    engines:
-      node: ^8.16.0 || ^10.6.0 || >=11.0.0
-    optional: true
-    os:
-      - darwin
-    resolution:
-      integrity: sha512-Auw9a4AxqWpa9GUfj370BMPzzyncfBABW8Mab7BGWBYDj4Isgq+cDKtx0i6u9jcX9pQDnswsaaOTgTmA5pEjuQ==
   /fsevents/2.3.1:
-    dev: true
     engines:
       node: ^8.16.0 || ^10.6.0 || >=11.0.0
     optional: true
@@ -6683,7 +6654,7 @@ packages:
       integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==
   /icss-utils/4.1.1:
     dependencies:
-      postcss: 7.0.32
+      postcss: 7.0.35
     dev: false
     engines:
       node: '>= 6'
@@ -7062,7 +7033,6 @@ packages:
     resolution:
       integrity: sha1-754xOG8DGn8NZDr4L95QxFfvAMs=
   /is-fullwidth-code-point/2.0.0:
-    dev: true
     engines:
       node: '>=4'
     resolution:
@@ -8288,7 +8258,6 @@ packages:
       big.js: 5.2.2
       emojis-list: 3.0.0
       json5: 1.0.1
-    dev: true
     engines:
       node: '>=4.0.0'
     resolution:
@@ -8956,10 +8925,6 @@ packages:
       node: '>=6.x.x'
     resolution:
       integrity: sha512-ISDqGcspVu6U3VKqtJZG1uR55SmNNF9uK0EMq1IvNVVZOui6MW6VR0+pIZhqz85ORAGp+4zW+5fJ/SE7bwEibA==
-  /nan/2.14.2:
-    optional: true
-    resolution:
-      integrity: sha512-M2ufzIiINKCuDfBSAUr1vWQ+vuVcA9kqx8JJUsbQi6yf1uGRyb7HfpdfUr5qLXf3B/t8dPvcjhKMmlfnP47EzQ==
   /nanoid/3.1.20:
     dev: false
     engines:
@@ -9263,6 +9228,15 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-S48WzZW777zhNIrn7gxOlISNAqi9ZC/uQFnRdbeIHhZhCA6UqpkOT8T1G7BvfdgP4Er8gF4sUbaS0i7QvIfCWw==
+  /npm-scripts-info/0.3.9:
+    dependencies:
+      chalk: 2.4.2
+      meow: 4.0.1
+      unquote: 1.1.1
+    dev: true
+    hasBin: true
+    resolution:
+      integrity: sha512-r3kftwUxThTxQoZ+RoR8xVIL1FOmqpCM6+7BH6jR4HPdigNbBs9Bg1nt3Qrqn2b8jj4NrE69+kWE3EkmNxkmkg==
   /npmlog/4.1.2:
     dependencies:
       are-we-there-yet: 1.1.5
@@ -9978,7 +9952,7 @@ packages:
       integrity: sha1-J7Ocb02U+Bsac7j3Y1HGCeXO8kQ=
   /postcss-modules-extract-imports/2.0.0:
     dependencies:
-      postcss: 7.0.32
+      postcss: 7.0.35
     dev: false
     engines:
       node: '>= 6'
@@ -9987,7 +9961,7 @@ packages:
   /postcss-modules-local-by-default/3.0.3:
     dependencies:
       icss-utils: 4.1.1
-      postcss: 7.0.32
+      postcss: 7.0.35
       postcss-selector-parser: 6.0.4
       postcss-value-parser: 4.1.0
     dev: false
@@ -9997,7 +9971,7 @@ packages:
       integrity: sha512-e3xDq+LotiGesympRlKNgaJ0PCzoUIdpH0dj47iWAui/kyTgh3CiAr1qP54uodmJhl6p9rN6BoNcdEDVJx9RDw==
   /postcss-modules-scope/2.2.0:
     dependencies:
-      postcss: 7.0.32
+      postcss: 7.0.35
       postcss-selector-parser: 6.0.4
     dev: false
     engines:
@@ -10007,13 +9981,13 @@ packages:
   /postcss-modules-values/3.0.0:
     dependencies:
       icss-utils: 4.1.1
-      postcss: 7.0.32
+      postcss: 7.0.35
     dev: false
     resolution:
       integrity: sha512-1//E5jCBrZ9DmRX+zCtmQtRSV6PV42Ix7Bzj9GbwJceduuf7IqP8MgeTXuRDHOWj2m0VzZD5+roFWDuU8RQjcg==
   /postcss-safe-parser/4.0.2:
     dependencies:
-      postcss: 7.0.32
+      postcss: 7.0.35
     dev: false
     engines:
       node: '>=6.0.0'
@@ -10096,7 +10070,6 @@ packages:
       chalk: 2.4.2
       source-map: 0.6.1
       supports-color: 6.1.0
-    dev: true
     engines:
       node: '>=6.0.0'
     resolution:
@@ -11818,7 +11791,6 @@ packages:
     dependencies:
       is-fullwidth-code-point: 2.0.0
       strip-ansi: 4.0.0
-    dev: true
     engines:
       node: '>=4'
     resolution:
@@ -11903,7 +11875,6 @@ packages:
   /strip-ansi/4.0.0:
     dependencies:
       ansi-regex: 3.0.0
-    dev: true
     engines:
       node: '>=4'
     resolution:
@@ -12783,6 +12754,10 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha1-sr9O6FFKrmFltIF4KdIbLvSZBOw=
+  /unquote/1.1.1:
+    dev: true
+    resolution:
+      integrity: sha1-j97XMk7G6IoP+LkF58CYzcCG1UQ=
   /unset-value/1.0.0:
     dependencies:
       has-value: 0.3.1
@@ -13084,7 +13059,7 @@ packages:
       eslint-scope: 4.0.3
       json-parse-better-errors: 1.0.2
       loader-runner: 2.4.0
-      loader-utils: 1.2.3
+      loader-utils: 1.4.0
       memory-fs: 0.4.1
       micromatch: 3.1.10
       mkdirp: 0.5.5
@@ -13162,7 +13137,7 @@ packages:
       integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==
   /wide-align/1.1.3:
     dependencies:
-      string-width: 1.0.2
+      string-width: 2.1.1
     dev: false
     optional: true
     resolution:
@@ -13334,6 +13309,7 @@ packages:
 specifiers:
   '@axe-core/react': 4.1.0
   '@babel/core': 7.12.10
+  '@babel/runtime': 7.12.5
   '@commitlint/cli': 11.0.0
   '@commitlint/config-conventional': 11.0.0
   '@cypress/code-coverage': 3.9.2
@@ -13357,6 +13333,7 @@ specifiers:
   eslint-plugin-jsx-a11y: 6.4.1
   eslint-plugin-react: 7.22.0
   eslint-plugin-react-hooks: 4.2.0
+  fsevents: 2.3.1
   husky: 4.3.8
   identity-obj-proxy: 3.0.0
   jest: 26.6.3
@@ -13365,6 +13342,7 @@ specifiers:
   next: latest
   next-compose-plugins: 2.2.1
   next-unused: 0.0.3
+  npm-scripts-info: 0.3.9
   prettier-standard: 16.4.1
   react: 17.0.1
   react-dom: 17.0.1
