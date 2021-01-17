@@ -81,6 +81,10 @@
 - [compose plugins](https://github.com/cyrilwanner/next-compose-plugins)
 - webpack [bundle analyzer](https://github.com/vercel/next.js/tree/canary/packages/next-bundle-analyzer)
 
+## Helper
+
+- [next-unused](https://github.com/pacocoursey/next-unused)
+
 ## Scripts
 
 ```bash
@@ -90,6 +94,7 @@ pnpm build:analyze - build project and visualize chunks
 pnpm cz            - make new commit
 pnpm release       - make new release
 pnpm docs          - generate source code documentation
+pnpm find:unused   - find unused files
 pnpm type-check    - run typescript compiler
 pnpm lint          - run eslint
 pnpm format        - run prettier
