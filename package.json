@@ -1,8 +1,13 @@
 {
   "name": "feehikel",
-  "author": "einSelbst",
   "version": "1.0.1",
+  "description": "Opinionated next.js boilerplate",
+  "keywords": "next.js, cypress",
+  "homepage": "https://feehikel-git-main.einselbst.vercel.app",
+  "bugs": "https://github.com/einSelbst/feehikel/issues",
+  "author": "einSelbst",
   "private": true,
+  "repository": "https://github.com/einSelbst/feehikel",
   "scripts": {
     "skip-for-now-preinstall": "npx only-allow pnpm",
     "?dev": "echo Start next app in dev mode",
@@ -35,26 +40,10 @@
     "?validate": "echo Format & lint & type-check & test the app",
     "validate": "pnpm format && pnpm lint && pnpm type-check && pnpm test"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-push": "pnpm type-check"
-    }
-  },
-  "lint-staged": {
-    "*": [
-      "prettier-standard --lint"
-    ]
-  },
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
-  },
-  "engines": {
-    "node": ">=12",
-    "pnpm": ">=5"
   },
   "dependencies": {
     "next": "latest",
@@ -100,6 +89,22 @@
     "start-server-and-test": "1.11.7",
     "typedoc": "0.20.15",
     "typescript": "4.1.3"
+  },
+  "engines": {
+    "node": ">=12",
+    "pnpm": ">=5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-push": "pnpm type-check"
+    }
+  },
+  "lint-staged": {
+    "*": [
+      "prettier-standard --lint"
+    ]
   },
   "next-unused": {
     "alias": {
