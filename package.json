@@ -92,7 +92,7 @@
     "next-compose-plugins": "2.2.1",
     "next-unused": "0.0.3",
     "npm-scripts-info": "0.3.9",
-    "prettier-standard": "16.4.1",
+    "prettier-standard": "16.3.0",
     "standard-version": "9.1.0",
     "start-server-and-test": "1.11.7",
     "typedoc": "0.20.16",
