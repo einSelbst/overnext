@@ -1,18 +1,16 @@
 {
+  "root": true,
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 2018,
     "ecmaFeatures": {
       "jsx": true
-    },
-    "project": "./tsconfig.eslint.json",
-    "tsconfigRootDir": "./"
+    }
   },
-  "plugins": ["react", "@typescript-eslint", "import", "jsx-a11y"],
+  "plugins": ["react", "import", "jsx-a11y"],
   "extends": [
     "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    /* "plugin:@typescript-eslint/recommended", */
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:import/typescript",
@@ -30,21 +28,12 @@
   "settings": {
     "react": {
       "version": "detect"
-    },
-    "import/resolver": {
-      "typescript": {}
     }
   },
   "rules": {
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-var-requires": "off",
-    "@typescript-eslint/no-unused-vars": [
-      2,
-      {
-        "argsIgnorePattern": "^_"
-      }
-    ],
     "import/order": [
       "error",
       {
@@ -61,6 +50,12 @@
       }
     ],
     "jsx-a11y/label-has-associated-control": "error",
+    "no-unused-vars": [
+      2,
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ],
     "no-console": [
       2,
       {
@@ -70,6 +65,29 @@
   },
   "overrides": [
     {
+      /* Config for Typescript Linting */
+      "files": ["src/**/*.ts", "src/**/*.tsx"], // Your TypeScript files extension
+      "parserOptions": {
+        "project": [
+          "tsconfig.json",
+          "cypress/tsconfig.json"
+          /* "tsconfig.eslint.json" */
+        ], // Specify it only for TypeScript files
+        "tsconfigRootDir": "."
+      },
+      "plugins": ["react", "@typescript-eslint", "import", "jsx-a11y"],
+      "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+      ],
+      "settings": {
+        "import/resolver": {
+          "typescript": {}
+        }
+      }
+    },
+    {
+      /* Config for Cypress Linting */
       "files": ["cypress/**/*.js", "**/*.spec.js"],
       "plugins": ["cypress"],
       "extends": ["plugin:cypress/recommended"],
@@ -82,6 +100,7 @@
       }
     },
     {
+      /* Config for jest Linting */
       "files": ["**/*.test.[js|ts]"],
       "extends": ["plugin:jest/all", "plugin:jest-dom/recommended"]
     }
