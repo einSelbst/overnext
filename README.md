@@ -45,10 +45,29 @@
   - [prettierx](https://github.com/brodybits/prettierx/)
 - [ESLint](https://eslint.org/)
   - [eslint-plugin-next](https://github.com/vercel/next.js/tree/canary/packages/eslint-plugin-next)
-  - [eslint-plugin-jsx-a11y]()
+  - [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint)
+  - [eslint-plugin-cypress]()
   - [eslint-plugin-import](https://github.com/benmosher/eslint-plugin-import)
   - [eslint-plugin-jest](https://github.com/jest-community/eslint-plugin-jest)
   - [eslint-plugin-jest-dom](https://github.com/testing-library/eslint-plugin-jest-dom)
+  - [eslint-plugin-jsx-a11y]()
+  - <details>
+    <summary>[eslint-plugin-promise](https://github.com/xjamundx/eslint-plugin-promise)</summary>
+      - "promise/always-return": "error"
+      - "promise/no-return-wrap": "error"
+      - "promise/param-names": "error"
+      - "promise/catch-or-return": "error"
+      - "promise/no-native": "off"
+      - "promise/no-nesting": "warn"
+      - "promise/no-promise-in-callback": "warn"
+      - "promise/no-callback-in-promise": "warn"
+      - "promise/avoid-new": "warn"
+      - "promise/no-new-statics": "error"
+      - "promise/no-return-in-finally": "warn"
+      - "promise/valid-params": "warn"
+      </details>
+  - [eslint-plugin-react]()
+  - [eslint-plugin-react-hooks]()
 - [`husky`](https://github.com/typicode/husky) for hooks
   - [lint-staged](https://github.com/okonet/lint-staged)
 - [axe-core/react](https://github.com/dequelabs/axe-core-npm)
