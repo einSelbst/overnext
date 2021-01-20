@@ -16,7 +16,11 @@ export const Home = (): JSX.Element => (
         Get started by editing <code>pages/index.tsx</code>
       </p>
 
-      <h2>Another Heading for validity</h2>
+      <div className='py-20'>
+        <h2 className='text-3xl text-center text-gray-700 dark:text-gray-100'>
+          Next.js + Tailwind CSS 2.0
+        </h2>
+      </div>
 
       <button
         onClick={() => {

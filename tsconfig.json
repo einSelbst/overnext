@@ -11,7 +11,9 @@
     "moduleResolution": "node",
     "noEmit": true,
     "paths": {
-      "@components/*": ["components/*"]
+      "@components/*": ["components/*"],
+      "@styles/*": ["styles/*"],
+      "@utils/*": ["utils/*"]
     },
     "removeComments": true,
     "resolveJsonModule": true,
