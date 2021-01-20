@@ -4,7 +4,7 @@ import NextError, { ErrorProps } from 'next/error'
 /**
  * <ErrorPage />
  */
-const _error = ({ statusCode, title }: ErrorProps) => (
+const _error = ({ statusCode, title }: ErrorProps): JSX.Element => (
   <NextError statusCode={statusCode} title={title} />
 )
 

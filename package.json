@@ -29,7 +29,7 @@
     "find:unused": "next-unused",
     "type-check": "tsc --pretty --noEmit",
     "format": "prettier-standard --format --lint",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint": "eslint . --fix",
     "?test": "echo Run only some tests for now",
     "test": "jest",
     "?test:jest": "echo Run jest tests",
