@@ -138,6 +138,8 @@ pnpm validate      - run tsc, prettier, eslint and the tests
 
 - [Documentation](https://nextjs.org/docs/deployment)
 - [Vercel](https://vercel.com/import?filter=next.js)
+  - override "Install Command": `rm -rf node_modules && npx pnpm i` (if pnpm should be used)
+  - override "Build Command": `next build` (optional)
 - ToDo: Netlify
 
 ## Project Automation / Labeling Ideas
@@ -179,6 +181,7 @@ pnpm validate      - run tsc, prettier, eslint and the tests
 - [ ] cypress watch mode
 - [ ] cypress a11y plugin
 - [ ] automate typedoc generation
+- [ ] [wdyr](https://github.com/welldone-software/why-did-you-render/issues/113) vs preact [1](https://github.com/preactjs/preact/issues/2760)
 
 # Credits
 
