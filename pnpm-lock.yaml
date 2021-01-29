@@ -1,6 +1,6 @@
 dependencies:
   autoprefixer: 10.2.4_postcss@8.2.4
-  next: 10.0.6-canary.11_c39e9db791ea05e3ec4e0e74abb7a6b5
+  next: 10.0.6-canary.12_c39e9db791ea05e3ec4e0e74abb7a6b5
   postcss: 8.2.4
   react: 17.0.1
   react-dom: 17.0.1_react@17.0.1
@@ -12,8 +12,8 @@ devDependencies:
   '@commitlint/cli': 11.0.0
   '@commitlint/config-conventional': 11.0.0
   '@cypress/code-coverage': 3.9.2_cypress@6.3.0
-  '@next/bundle-analyzer': 10.0.5
-  '@next/eslint-plugin-next': 10.0.5
+  '@next/bundle-analyzer': 10.0.6
+  '@next/eslint-plugin-next': 10.0.6
   '@testing-library/react': 11.2.3_react-dom@17.0.1+react@17.0.1
   '@types/jest': 26.0.20
   '@types/node': 13.13.36
@@ -1592,25 +1592,25 @@ packages:
       node: '>= 10.14.2'
     resolution:
       integrity: sha512-fC6QCp7Sc5sX6g8Tvbmj4XUTbyrik0akgRy03yjXbQaBWWNWGE7SGtJk98m0N8nzegD/7SggrUlivxo5ax4KWQ==
-  /@next/bundle-analyzer/10.0.5:
+  /@next/bundle-analyzer/10.0.6:
     dependencies:
       webpack-bundle-analyzer: 4.3.0
     dev: true
     resolution:
-      integrity: sha512-fDhursKrqycV7u6crESINKQKp5/Q17Xd9mI1n0BFhIvpfp8br/gSqLHeaN2DXfcOS/Rb0/FmY4pdIFjXnwdZbg==
-  /@next/env/10.0.6-canary.11:
+      integrity: sha512-zwl08fz784t0tpJFTUpoYTcPUQ3SqIEb2M+3Lyv2rMXeQ8AsRru7bSvTdW1P15ENWDDF2AovJptAoohjfutViQ==
+  /@next/env/10.0.6-canary.12:
     dev: false
     resolution:
-      integrity: sha512-K9cVYqT3JSqhW1mCpCAoWLb7DqMpLa0VFihBFWNJ7MCebtR2/F7913h3LHBsmJOVvlQvDFb2J5dRVvKdFkkA5w==
-  /@next/eslint-plugin-next/10.0.5:
+      integrity: sha512-D4jmytDXUUzB/Wj6Fqy0l44DsxWLQ9jivI6CfFCfNPlsegRIKNTqo1SVarY9nJMNDPmAMymvJ8F2tS8qZG5zOQ==
+  /@next/eslint-plugin-next/10.0.6:
     dev: true
     resolution:
-      integrity: sha512-6S/6F9nqPPKwKN9MnbaItia4tjpCNyKjjrKgl0g7KVSxSmwJ/LbVsV+ZdhEfOAsQUS0oftP6UfEuW2s3OV5chQ==
-  /@next/polyfill-module/10.0.6-canary.11:
+      integrity: sha512-Mi3Zc3eGDmtiQb1mVWmALSm7rI5YZWZY5R/LWuf5l0v1+wthjuyqpFfZf7Ot3JB7FazmR64iEDHKzSUeIjzFlw==
+  /@next/polyfill-module/10.0.6-canary.12:
     dev: false
     resolution:
-      integrity: sha512-DTCLMykcakBK0Bt08cVwVZ510X0m35TN+4Dvij2er48wzNM5HK0Sg+hAkwG45mXKN+KrMdCInfG5IgBbbGDFgw==
-  /@next/react-dev-overlay/10.0.6-canary.11_react-dom@17.0.1+react@17.0.1:
+      integrity: sha512-Omg1DKDJJzCkG3SzTagRO3AZa8nt8kDTN4tGCsQuqyD6NSHZs9LMQkMocMWVqNOT8vDDHfYPU7peuFy7e8g7Aw==
+  /@next/react-dev-overlay/10.0.6-canary.12_react-dom@17.0.1+react@17.0.1:
     dependencies:
       '@babel/code-frame': 7.12.11
       anser: 1.4.9
@@ -1630,8 +1630,8 @@ packages:
       react: ^16.9.0 || ^17
       react-dom: ^16.9.0 || ^17
     resolution:
-      integrity: sha512-JFAYPk33UyaZbBbS3ZDEhs/HpgEP9Vtc+A3aDUjBcyPo2S5m3Em34crvHaA/NtGE0LEfROV3lXg29UbYHbAang==
-  /@next/react-refresh-utils/10.0.6-canary.11_react-refresh@0.8.3:
+      integrity: sha512-zy3j3ahUVXTie9ZOfqFNxxUezLOuGzSW2jQOR6WtLz1/Lyxrn5nzP8KsYGM6semhFxTL4SXaoAXtQ93JJcwjAg==
+  /@next/react-refresh-utils/10.0.6-canary.12_react-refresh@0.8.3:
     dependencies:
       react-refresh: 0.8.3
     dev: false
@@ -1642,7 +1642,7 @@ packages:
       webpack:
         optional: true
     resolution:
-      integrity: sha512-W85sSUZGwLYT0/lYRqfr0H4qOrFRQKKb+LaIwp6L6GRoO8+Y2UHWbXo4h3cm1Z1de/q1DojHkaqL0kqzE7wXNg==
+      integrity: sha512-QLg5vhpWhQryP14ZMctIgMNk3ZRrUs7futcjCXxXAKGMUQGynaVbA7CZRYuuG9EQQppipn135kvdln8I8vHxjg==
   /@nodelib/fs.scandir/2.1.4:
     dependencies:
       '@nodelib/fs.stat': 2.0.4
@@ -8763,15 +8763,15 @@ packages:
       typescript: '*'
     resolution:
       integrity: sha512-LrjyGL6gq3v7eOL2KNkmciDZCpJjt9QjEftQEr4oZ8o5zwoEvLqfn7mgv+9Qv+i39fDrEYlF436zfwpBHp7ahg==
-  /next/10.0.6-canary.11_c39e9db791ea05e3ec4e0e74abb7a6b5:
+  /next/10.0.6-canary.12_c39e9db791ea05e3ec4e0e74abb7a6b5:
     dependencies:
       '@ampproject/toolbox-optimizer': 2.7.1-alpha.0
       '@babel/runtime': 7.12.5
       '@hapi/accept': 5.0.1
-      '@next/env': 10.0.6-canary.11
-      '@next/polyfill-module': 10.0.6-canary.11
-      '@next/react-dev-overlay': 10.0.6-canary.11_react-dom@17.0.1+react@17.0.1
-      '@next/react-refresh-utils': 10.0.6-canary.11_react-refresh@0.8.3
+      '@next/env': 10.0.6-canary.12
+      '@next/polyfill-module': 10.0.6-canary.12
+      '@next/react-dev-overlay': 10.0.6-canary.12_react-dom@17.0.1+react@17.0.1
+      '@next/react-refresh-utils': 10.0.6-canary.12_react-refresh@0.8.3
       '@opentelemetry/api': 0.14.0
       ast-types: 0.13.2
       browserslist: 4.16.1
@@ -8825,7 +8825,7 @@ packages:
       sass:
         optional: true
     resolution:
-      integrity: sha512-ifdbbFlttnO3x/iWyiiuhssXI5aiw1u/95lG/xSx/C6pLrLaSy+AdFGhP+3bI7vx6r56PwwRu8VmWvyzurfv0g==
+      integrity: sha512-qVnTQx+rqBD3ZhK+Wd1CPX4eeh+RDRghGqOprjPnOzcENKZtAUJtIVtM7DQhc1X2GZSaipsPHKs+hwyhXE8h2A==
   /nice-try/1.0.5:
     dev: true
     resolution:
@@ -12906,8 +12906,8 @@ specifiers:
   '@commitlint/cli': 11.0.0
   '@commitlint/config-conventional': 11.0.0
   '@cypress/code-coverage': 3.9.2
-  '@next/bundle-analyzer': 10.0.5
-  '@next/eslint-plugin-next': 10.0.5
+  '@next/bundle-analyzer': 10.0.6
+  '@next/eslint-plugin-next': 10.0.6
   '@testing-library/react': 11.2.3
   '@types/jest': 26.0.20
   '@types/node': 13.13.36
