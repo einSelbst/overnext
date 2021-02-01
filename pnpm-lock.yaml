@@ -11,7 +11,7 @@ devDependencies:
   '@babel/runtime': 7.12.5
   '@commitlint/cli': 11.0.0
   '@commitlint/config-conventional': 11.0.0
-  '@cypress/code-coverage': 3.9.2_cypress@6.3.0
+  '@cypress/code-coverage': 3.9.2_cypress@6.4.0
   '@next/bundle-analyzer': 10.0.6
   '@next/eslint-plugin-next': 10.0.6
   '@testing-library/react': 11.2.3_react-dom@17.0.1+react@17.0.1
@@ -23,7 +23,7 @@ devDependencies:
   '@typescript-eslint/parser': 4.14.2_eslint@7.19.0+typescript@4.1.3
   babel-jest: 26.6.3_@babel+core@7.12.10
   commitizen: 4.2.3
-  cypress: 6.3.0
+  cypress: 6.4.0
   dependency-version-badge: 1.9.1
   eslint: 7.19.0
   eslint-import-resolver-typescript: 2.3.0_846d62cfa210dc3f225625c64ae883be
@@ -1266,10 +1266,10 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-sErmFSEr5287bLMRl0POGnyFtJCs/lSk5yxrUIJUIHZ8eDvtTEr0V93xRgLjJVG54gJU4MbpHy1mRPA9VZbtQA==
-  /@cypress/code-coverage/3.9.2_cypress@6.3.0:
+  /@cypress/code-coverage/3.9.2_cypress@6.4.0:
     dependencies:
       '@cypress/browserify-preprocessor': 3.0.1
-      cypress: 6.3.0
+      cypress: 6.4.0
       debug: 4.3.1
       execa: 4.1.0
       globby: 11.0.2
@@ -4019,7 +4019,7 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-mI3zP+qxke95mmE2nddsF635V+o=
-  /cypress/6.3.0:
+  /cypress/6.4.0:
     dependencies:
       '@cypress/listr-verbose-renderer': 0.4.1
       '@cypress/request': 2.88.5
@@ -4035,6 +4035,7 @@ packages:
       cli-table3: 0.6.0
       commander: 5.1.0
       common-tags: 1.8.0
+      dayjs: 1.10.4
       debug: 4.3.1_supports-color@7.2.0
       eventemitter2: 6.4.3
       execa: 4.1.0
@@ -4065,7 +4066,7 @@ packages:
     hasBin: true
     requiresBuild: true
     resolution:
-      integrity: sha512-Ec6TAFOxdSB2HPINNJ1f7z75pENXcfCaQkz+A9j0eGSvusFJ2NNErq650DexCbNJAnCQkPqXB4XPH9kXnSQnUA==
+      integrity: sha512-SrsPsZ4IBterudkoFYBvkQmXOVxclh1/+ytbzpV8AH/D2FA+s2Qy5ISsaRzOFsbQa4KZWoi3AKwREmF1HucYkg==
   /cz-conventional-changelog/3.2.0:
     dependencies:
       chalk: 2.4.2
@@ -4141,6 +4142,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-jyCETtSl3VMZMWeRo7iY1FL19ges1t55hMo5yaam4Jrsm5EPL89UQkoQRyiI+Yf4k8r2ZpdngkV8hr1lIdjb3Q==
+  /dayjs/1.10.4:
+    dev: true
+    resolution:
+      integrity: sha512-RI/Hh4kqRc1UKLOAf/T5zdMMX5DQIlDxwUe3wSyMMnEbGunnpENCdbUgM+dW7kXidZqCttBrmw7BhN4TMddkCw==
   /debug/2.6.9:
     dependencies:
       ms: 2.0.0
@@ -12913,7 +12918,7 @@ specifiers:
   autoprefixer: 10.2.4
   babel-jest: 26.6.3
   commitizen: 4.2.3
-  cypress: 6.3.0
+  cypress: 6.4.0
   dependency-version-badge: 1.9.1
   eslint: 7.19.0
   eslint-import-resolver-typescript: 2.3.0
