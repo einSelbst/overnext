@@ -14,7 +14,7 @@ devDependencies:
   '@cypress/code-coverage': 3.9.2_cypress@6.4.0
   '@next/bundle-analyzer': 10.0.6
   '@next/eslint-plugin-next': 10.0.6
-  '@testing-library/react': 11.2.3_react-dom@17.0.1+react@17.0.1
+  '@testing-library/react': 11.2.4_react-dom@17.0.1+react@17.0.1
   '@types/jest': 26.0.20
   '@types/node': 13.13.36
   '@types/react': 17.0.0
@@ -1743,7 +1743,7 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-CtrJRiSYEfbtNGtEsd78mk1n1v2TUbeABlNIcOCJdDfkN5/JTOwQEbbQpoSRxGqzcWPgStMvJ4mNolSuBRv1NA==
-  /@testing-library/react/11.2.3_react-dom@17.0.1+react@17.0.1:
+  /@testing-library/react/11.2.4_react-dom@17.0.1+react@17.0.1:
     dependencies:
       '@babel/runtime': 7.12.5
       '@testing-library/dom': 7.29.4
@@ -1756,7 +1756,7 @@ packages:
       react: '*'
       react-dom: '*'
     resolution:
-      integrity: sha512-BirBUGPkTW28ULuCwIbYo0y2+0aavHczBT6N9r3LrsswEW3pg25l1wgoE7I8QBIy1upXWkwKpYdWY7NYYP0Bxw==
+      integrity: sha512-0j4A3eHc89g6ymLhvDzwIwTCCKf0voO387ACvJvH46YrBUFt1E66PvxSXH/u/kDVhLs8dtSPFCM06Bjo4sUojQ==
   /@types/aria-query/4.2.1:
     dev: true
     resolution:
@@ -12908,7 +12908,7 @@ specifiers:
   '@cypress/code-coverage': 3.9.2
   '@next/bundle-analyzer': 10.0.6
   '@next/eslint-plugin-next': 10.0.6
-  '@testing-library/react': 11.2.3
+  '@testing-library/react': 11.2.4
   '@types/jest': 26.0.20
   '@types/node': 13.13.36
   '@types/react': 17.0.0
