@@ -6,7 +6,7 @@ dependencies:
   react-dom: 17.0.1_react@17.0.1
   tailwindcss: 2.0.2_90874d0ac9c8f3b30e7bed02cb9a0d41
 devDependencies:
-  '@axe-core/react': 4.1.0
+  '@axe-core/react': 4.1.1
   '@babel/core': 7.12.10
   '@babel/runtime': 7.12.5
   '@commitlint/cli': 11.0.0
@@ -115,13 +115,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-ABZO4E7eeFA1QyJ2trDezxeQM5ZFa1dXw1Mpl/+1vuXDKNjJgNyWYwKp/NwRkLmrsuV0yv4UDCDe4kJOGbPKnw==
-  /@axe-core/react/4.1.0:
+  /@axe-core/react/4.1.1:
     dependencies:
       axe-core: 4.1.1
       requestidlecallback: 0.3.0
     dev: true
     resolution:
-      integrity: sha512-S5DtZFIoAdUgLNJIIFiz6Bnaf3Dzul5X+TYPT9+0z/Po3d1jlTCQq2SVKfZceVsiw5jcTr4owaS2pNWz82c7GA==
+      integrity: sha512-XwhMezqRw5/pEXMW4P19RCA/jx4ZBD4ZLdOoU6i9GWX1i0UlWF2apUZiiE6IrbIx9U4NppsiWij8O1Wu6TU5wQ==
   /@babel/code-frame/7.12.11:
     dependencies:
       '@babel/highlight': 7.10.4
@@ -12900,7 +12900,7 @@ packages:
     resolution:
       integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 specifiers:
-  '@axe-core/react': 4.1.0
+  '@axe-core/react': 4.1.1
   '@babel/core': 7.12.10
   '@babel/runtime': 7.12.5
   '@commitlint/cli': 11.0.0
