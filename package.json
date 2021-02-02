@@ -64,7 +64,7 @@
     "@cypress/code-coverage": "3.9.2",
     "@next/bundle-analyzer": "10.0.6",
     "@next/eslint-plugin-next": "10.0.6",
-    "@testing-library/react": "11.2.4",
+    "@testing-library/react": "11.2.5",
     "@types/jest": "26.0.20",
     "@types/node": "13.13.36",
     "@types/react": "17.0.0",
