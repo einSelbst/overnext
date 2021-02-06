@@ -88,5 +88,4 @@ function _app ({ Component, pageProps }: AppProps): JSX.Element {
 //   return { ...appProps }
 // }
 
-export { reportWebVitals }
 export default _app
