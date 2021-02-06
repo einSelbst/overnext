@@ -5,6 +5,42 @@ import * as ReactDOM from 'react-dom'
 import '@styles/main.css'
 
 /**
+ * Web Vitals
+ * @see https://www.freecodecamp.org/news/how-to-measure-next-js-web-vitals-using-quickmetrics/
+ */
+const reportWebVitals = (metric: { name: string; value: string }): void => {
+  // I can only send 5 metrics to free quickmetrics account
+  if (metric.name !== 'Next.js-hydration') {
+    sendMetric(metric).catch(error => console.error(error)) // eslint-disable-line no-console
+  }
+  console.log(metric) // eslint-disable-line no-console
+}
+
+const sendMetric = async ({
+  name,
+  value,
+}: {
+  name: string
+  value: string
+}): Promise<boolean> => {
+  if (!process.env.NEXT_PUBLIC_QUICK_METRICS_API_KEY) return false
+
+  // values must be integers
+  const valueInt: number = Math.round(
+    name === 'CLS' ? parseFloat(value) * 1000 : parseFloat(value)
+  )
+  const url = `https://qckm.io?m=${name}&v=${valueInt}&k=${process.env.NEXT_PUBLIC_QUICK_METRICS_API_KEY}`
+
+  // Use `navigator.sendBeacon()` if available, falling back to `fetch()`.
+  if (navigator.sendBeacon) {
+    navigator.sendBeacon(url)
+  } else {
+    await fetch(url, { method: 'POST', keepalive: true })
+  }
+  return true
+}
+
+/**
  * Determines if we are running on server or in the client.
  * @return {boolean} true if running on server
  */
@@ -52,4 +88,5 @@ function _app ({ Component, pageProps }: AppProps): JSX.Element {
 //   return { ...appProps }
 // }
 
+export { reportWebVitals }
 export default _app

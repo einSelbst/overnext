@@ -83,6 +83,7 @@
 
 - Lighthouse
 - [sonarcloud](https://sonarcloud.io/)
+- Web Vitals via [Quickmetrics](https://www.freecodecamp.org/news/how-to-measure-next-js-web-vitals-using-quickmetrics/)
 
 # Next.js Configuration
 
