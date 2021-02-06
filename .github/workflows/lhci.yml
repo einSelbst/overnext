@@ -1,0 +1,19 @@
+name: Lighthouse CI
+
+on: [push]
+
+jobs:
+  lighthouseci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - uses: pnpm/action-setup@v1.2.1
+        with:
+          version: 4.11.1
+          run_install: |
+            - recursive: true
+              args: [--frozen-lockfile, --strict-peer-dependencies]
+            - args: [--global, @lhci/cli@0.7.x]
+      - run: pnpm run build
+      - run: lhci autorun
