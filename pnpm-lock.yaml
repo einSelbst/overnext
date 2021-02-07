@@ -1,10 +1,10 @@
 dependencies:
   autoprefixer: 10.2.4_postcss@8.2.5
-  next: 10.0.7-canary.5_c39e9db791ea05e3ec4e0e74abb7a6b5
+  next: 10.0.7-canary.6_c39e9db791ea05e3ec4e0e74abb7a6b5
   postcss: 8.2.5
   react: 17.0.1
   react-dom: 17.0.1_react@17.0.1
-  tailwindcss: 2.0.2_132a6068366276bc6a71795f98f5a160
+  tailwindcss: 2.0.3_132a6068366276bc6a71795f98f5a160
 devDependencies:
   '@axe-core/react': 4.1.1
   '@babel/core': 7.12.13
@@ -1868,19 +1868,19 @@ packages:
     dev: true
     resolution:
       integrity: sha512-zwl08fz784t0tpJFTUpoYTcPUQ3SqIEb2M+3Lyv2rMXeQ8AsRru7bSvTdW1P15ENWDDF2AovJptAoohjfutViQ==
-  /@next/env/10.0.7-canary.5:
+  /@next/env/10.0.7-canary.6:
     dev: false
     resolution:
-      integrity: sha512-sqrYs+Q8A8RDcRkx3D/SoZfn031rtMnknRM6G3kxX689vGqMdWfkih/8gWtTO8Yz0oj3Ytfq+wtmSn4qq+Hjow==
+      integrity: sha512-JtDcTXxh2JA9he3/A9P3tYdHd1E+oMWtc3mGEraRvbTg0G+XU9YMCHV2hlbPjvIapuNKCAXVMD8aosuQyhKZKA==
   /@next/eslint-plugin-next/10.0.6:
     dev: true
     resolution:
       integrity: sha512-Mi3Zc3eGDmtiQb1mVWmALSm7rI5YZWZY5R/LWuf5l0v1+wthjuyqpFfZf7Ot3JB7FazmR64iEDHKzSUeIjzFlw==
-  /@next/polyfill-module/10.0.7-canary.5:
+  /@next/polyfill-module/10.0.7-canary.6:
     dev: false
     resolution:
-      integrity: sha512-SSCpnQUpWZ+BHpfukaIodGO5+BLwaJJ2PJnQzRSaehDVanKJvj2AvoaHVqNj2YNRon0DFT4w4wPnRArYQ7f1GQ==
-  /@next/react-dev-overlay/10.0.7-canary.5_react-dom@17.0.1+react@17.0.1:
+      integrity: sha512-q1pR2ZrneZAnuKaIrrd+ZkuJD0DZV/oy137WFDob+gZAXusqy4BYJlC+X3XDJvK+v0J2F0JV2sT+J+urSK1YUQ==
+  /@next/react-dev-overlay/10.0.7-canary.6_react-dom@17.0.1+react@17.0.1:
     dependencies:
       '@babel/code-frame': 7.12.11
       anser: 1.4.9
@@ -1900,8 +1900,8 @@ packages:
       react: ^16.9.0 || ^17
       react-dom: ^16.9.0 || ^17
     resolution:
-      integrity: sha512-hdGMoFfx9wvdNwL/xhWG84uAgjMso9Vqr3tSX0iJwoGAuA9KHYRhKnjAd61LwGwnb7GTjSMl7c1I7EtTSoty7w==
-  /@next/react-refresh-utils/10.0.7-canary.5_react-refresh@0.8.3:
+      integrity: sha512-RdnLcEmU4O8JNrynFMcxE2pvRL+19vaj3qEizEfglvTcVWEGP4hdTij8yaQL1fA/zjLIAt/eIP9TD5atHz9jag==
+  /@next/react-refresh-utils/10.0.7-canary.6_react-refresh@0.8.3:
     dependencies:
       react-refresh: 0.8.3
     dev: false
@@ -1912,7 +1912,7 @@ packages:
       webpack:
         optional: true
     resolution:
-      integrity: sha512-TCk+RNe66wckjLGgH3GEXgxhBJ/AWs+JiLufV+qdK80dgXHjw4Il95T1nJe6jOWke4Lk/LwpAH3h/ibk+d3GMg==
+      integrity: sha512-EHI5c0ShH0Avpze1/Mn5ycBBuUVMEfdMdNx3/4oGbyeRb8iF9YgFKrQtZpV/T8U301aco3rZUsv2m4VM4NgElw==
   /@nodelib/fs.scandir/2.1.4:
     dependencies:
       '@nodelib/fs.stat': 2.0.4
@@ -9100,15 +9100,15 @@ packages:
       typescript: '*'
     resolution:
       integrity: sha512-LrjyGL6gq3v7eOL2KNkmciDZCpJjt9QjEftQEr4oZ8o5zwoEvLqfn7mgv+9Qv+i39fDrEYlF436zfwpBHp7ahg==
-  /next/10.0.7-canary.5_c39e9db791ea05e3ec4e0e74abb7a6b5:
+  /next/10.0.7-canary.6_c39e9db791ea05e3ec4e0e74abb7a6b5:
     dependencies:
       '@ampproject/toolbox-optimizer': 2.7.1-alpha.0
       '@babel/runtime': 7.12.5
       '@hapi/accept': 5.0.1
-      '@next/env': 10.0.7-canary.5
-      '@next/polyfill-module': 10.0.7-canary.5
-      '@next/react-dev-overlay': 10.0.7-canary.5_react-dom@17.0.1+react@17.0.1
-      '@next/react-refresh-utils': 10.0.7-canary.5_react-refresh@0.8.3
+      '@next/env': 10.0.7-canary.6
+      '@next/polyfill-module': 10.0.7-canary.6
+      '@next/react-dev-overlay': 10.0.7-canary.6_react-dom@17.0.1+react@17.0.1
+      '@next/react-refresh-utils': 10.0.7-canary.6_react-refresh@0.8.3
       '@opentelemetry/api': 0.14.0
       ast-types: 0.13.2
       browserslist: 4.16.1
@@ -9162,7 +9162,7 @@ packages:
       sass:
         optional: true
     resolution:
-      integrity: sha512-/yMl8b8vo9YTx6qspWC4qlxym/+Ti/EF9PCeo2MfRikLMNNm50W1YgCS8isjQsxRIkXpoINBd/IK8AxuW6fOaA==
+      integrity: sha512-L7dTBLzZ2qanoGDN1dQMGCfIE6UCrB+AR3nks+2lmO3sBcqQqpkXhskCXhXzqApIm9pWk0L3B0/8j01W039QUg==
   /nice-try/1.0.5:
     dev: true
     resolution:
@@ -10067,7 +10067,7 @@ packages:
   /postcss-js/3.0.3:
     dependencies:
       camelcase-css: 2.0.1
-      postcss: 8.2.4
+      postcss: 8.2.5
     dev: false
     engines:
       node: '>=10.0'
@@ -10190,16 +10190,6 @@ packages:
       node: ^10 || ^12 || >=14
     resolution:
       integrity: sha512-llCQW1Pz4MOPwbZLmOddGM9eIJ8Bh7SZ2Oj5sxZva77uVaotYDsYTch1WBTNu7fUY0fpWp0fdt7uW40D4sRiiQ==
-  /postcss/8.2.4:
-    dependencies:
-      colorette: 1.2.1
-      nanoid: 3.1.20
-      source-map: 0.6.1
-    dev: false
-    engines:
-      node: ^10 || ^12 || >=14
-    resolution:
-      integrity: sha512-kRFftRoExRVXZlwUuay9iC824qmXPcQQVzAjbCCgjpXnkdMCJYBu2gTwAaFBzv8ewND6O8xFb3aELmEkh9zTzg==
   /postcss/8.2.5:
     dependencies:
       colorette: 1.2.1
@@ -10488,7 +10478,7 @@ packages:
     dependencies:
       commander: 6.2.1
       glob: 7.1.6
-      postcss: 8.2.4
+      postcss: 8.2.5
       postcss-selector-parser: 6.0.4
     dev: false
     hasBin: true
@@ -12095,7 +12085,7 @@ packages:
       node: '>=10.0.0'
     resolution:
       integrity: sha512-rxZevLGTUzWna/qBLObOe16kB2RTnnbhciwgPbMMlazz1yZGVEgnZK762xyVdVznhqxrfCeBMmMkgOOaPwjH7g==
-  /tailwindcss/2.0.2_132a6068366276bc6a71795f98f5a160:
+  /tailwindcss/2.0.3_132a6068366276bc6a71795f98f5a160:
     dependencies:
       '@fullhuman/postcss-purgecss': 3.1.3
       autoprefixer: 10.2.4_postcss@8.2.5
@@ -12127,7 +12117,7 @@ packages:
       autoprefixer: ^10.0.2
       postcss: ^8.0.9
     resolution:
-      integrity: sha512-nO9JRE1pO7SF9RnYAl6g7uzeHdrmKAFqNjT9NtZUfxqimJZAOOLOEyIEUiMq12+xIc7mC2Ey3Vf90XjHpWKfbw==
+      integrity: sha512-s8NEqdLBiVbbdL0a5XwTb8jKmIonOuI4RMENEcKLR61jw6SdKvBss7NWZzwCaD+ZIjlgmesv8tmrjXEp7C0eAQ==
   /tapable/1.1.3:
     dev: true
     engines:
@@ -13278,6 +13268,6 @@ specifiers:
   react-dom: 17.0.1
   standard-version: 9.1.0
   start-server-and-test: 1.12.0
-  tailwindcss: 2.0.2
+  tailwindcss: 2.0.3
   typedoc: 0.20.23
   typescript: 4.1.3
