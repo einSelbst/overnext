@@ -1,0 +1,22 @@
+name: Lighthouse CI
+
+on: [push]
+
+jobs:
+  lighthouseci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - uses: pnpm/action-setup@v1.2.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          version: 5.16.0
+          run_install: |
+            - recursive: true
+              args: [--frozen-lockfile, --strict-peer-dependencies]
+      - run: npm install -g @lhci/cli@0.7.x
+      - run: pnpm run build
+      - run: lhci autorun --upload.target=temporary-public-storage --collect.startServerCommand="pnpm start" || echo "LHCI failed!"
