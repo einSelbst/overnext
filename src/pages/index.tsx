@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 
 export const Home = (): JSX.Element => (
   <div className='container'>
@@ -8,6 +9,9 @@ export const Home = (): JSX.Element => (
     </Head>
 
     <main>
+      <Link href='/legal' locale='fr'>
+        <a href='fr/legal'>To /fr/legal</a>
+      </Link>
       <h1 className='title'>
         Welcome to <a href='https://nextjs.org'>Next.js!</a>
       </h1>
