@@ -10,7 +10,7 @@ export const Home = (): JSX.Element => (
 
     <main>
       <Link href='/legal' locale='fr'>
-        <a>To /fr/legal</a>
+        <a href='fr/legal'>To /fr/legal</a>
       </Link>
       <h1 className='title'>
         Welcome to <a href='https://nextjs.org'>Next.js!</a>
