@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 
-const Topic = (): JSX.Element => {
+const _Topic = (): JSX.Element => {
   const router = useRouter();
   const { topic, locale } = router.query;
   return(
@@ -11,4 +11,4 @@ const Topic = (): JSX.Element => {
   )
 };
 
-export default Topic;
+export default _Topic;
