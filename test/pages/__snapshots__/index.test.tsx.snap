@@ -8,6 +8,12 @@ exports[`home page matches snapshot 1`] = `
     <main
       class="jsx-1799183244"
     >
+      <a
+        class="jsx-1799183244"
+        href="fr/legal"
+      >
+        To /fr/legal
+      </a>
       <h1
         class="jsx-1799183244 title"
       >
