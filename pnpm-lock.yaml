@@ -35,7 +35,7 @@ devDependencies:
   eslint-plugin-promise: 4.2.1
   eslint-plugin-react: 7.22.0_eslint@7.19.0
   eslint-plugin-react-hooks: 4.2.0_eslint@7.19.0
-  husky: 4.3.8
+  husky: 5.0.9
   identity-obj-proxy: 3.0.0
   jest: 26.6.3
   jest-watch-typeahead: 0.6.1_jest@26.6.3
@@ -3580,10 +3580,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-zHig5N+tPWARooBnb0Zx1MFcdfpyJrfTJ3Y5L+IFvUm8rM74hHz66z0gw0x4tijh5CorKkKUCnW82R2vmpeCRA==
-  /compare-versions/3.6.0:
-    dev: true
-    resolution:
-      integrity: sha512-W6Af2Iw1z4CB7q4uU4hv646dW9GQuBM+YpC0UvUCWSD8w90SJjp+ujJuXaEMtAXBtSqGfMPuFOVn4/+FlaqfBA==
   /component-emitter/1.3.0:
     dev: true
     resolution:
@@ -5613,14 +5609,6 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-78/PXT1wlLLDgTzDs7sjq9hzz0vXD+zn+7wypEe4fXQxCmdmqfGsEPQxmiCSQI3ajFV91bVSsvNtrJRiW6nGng==
-  /find-versions/4.0.0:
-    dependencies:
-      semver-regex: 3.1.2
-    dev: true
-    engines:
-      node: '>=10'
-    resolution:
-      integrity: sha512-wgpWy002tA+wgmO27buH/9KzyEOQnKsG/R0yrcjPT9BOFm0zRBVQbZ95nRGXWMywS8YR5knRbpohio0bcJABxQ==
   /find/0.3.0:
     dependencies:
       traverse-chain: 0.1.0
@@ -6447,25 +6435,13 @@ packages:
       node: '>=8.12.0'
     resolution:
       integrity: sha512-SEQu7vl8KjNL2eoGBLF3+wAjpsNfA9XMlXAYj/3EdaNfAlxKthD1xjEQfGOUhllCGGJVNY34bRr6lPINhNjyZw==
-  /husky/4.3.8:
-    dependencies:
-      chalk: 4.1.0
-      ci-info: 2.0.0
-      compare-versions: 3.6.0
-      cosmiconfig: 7.0.0
-      find-versions: 4.0.0
-      opencollective-postinstall: 2.0.3
-      pkg-dir: 5.0.0
-      please-upgrade-node: 3.2.0
-      slash: 3.0.0
-      which-pm-runs: 1.0.0
+  /husky/5.0.9:
     dev: true
     engines:
-      node: '>=10'
+      node: '>= 10'
     hasBin: true
-    requiresBuild: true
     resolution:
-      integrity: sha512-LCqqsB0PzJQ/AlCgfrfzRe3e3+NvmefAdKQhRYpxS4u6clblBoDdzzvHi8fmxKRzvMxPY/1WZWzomPZww0Anow==
+      integrity: sha512-0SjcaY21a+IRdx7p7r/X33Vc09UR2m8SbP8yfkhUX2/jAmwcz+GR7i9jXkp2pP3GfX23JhMkVP6SWwXB18uXtg==
   /iconv-lite/0.4.24:
     dependencies:
       safer-buffer: 2.1.2
@@ -9212,11 +9188,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-F+th54mPc0l1lp1ZcFMyL/jTs2Tlq4SqIHKIXGZOR/VkHkF9A7Fr5rRr5+ZG/lWeRsyrClLYRq7s/yFQ/XhWCA==
-  /opencollective-postinstall/2.0.3:
-    dev: true
-    hasBin: true
-    resolution:
-      integrity: sha512-8AV/sCtuzUeTo8gQK5qDZzARrulB3egtLzFgteqB2tcT4Mw7B8Kt7JcDHmltjz6FOAHsvTevk70gZEbhM4ZS9Q==
   /opener/1.5.2:
     dev: true
     hasBin: true
@@ -9683,14 +9654,6 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-HRDzbaKjC+AOWVXxAU/x54COGeIv9eb+6CkDSQoNTt4XyWoIJvuPsXizxu/Fr23EiekbtZwmh1IcIG/l/a10GQ==
-  /pkg-dir/5.0.0:
-    dependencies:
-      find-up: 5.0.0
-    dev: true
-    engines:
-      node: '>=10'
-    resolution:
-      integrity: sha512-NPE8TDbzl/3YQYY7CSS228s3g2ollTFnc+Qi3tqmqJp9Vg2ovUpixcJEo2HJScN2Ez+kEaal6y70c0ehqJBJeA==
   /platform/1.3.6:
     dev: false
     resolution:
@@ -10883,12 +10846,6 @@ packages:
     dev: true
     resolution:
       integrity: sha1-De4hahyUGrN+nvsXiPavxf9VN/w=
-  /semver-regex/3.1.2:
-    dev: true
-    engines:
-      node: '>=8'
-    resolution:
-      integrity: sha512-bXWyL6EAKOJa81XG1OZ/Yyuq+oT0b2YLlxx7c+mrdYPaPbnj6WgVULXhinMIeZGufuUBu/eVRqXEhiv4imfwxA==
   /semver/5.7.1:
     hasBin: true
     resolution:
@@ -12694,6 +12651,8 @@ packages:
     resolution:
       integrity: sha1-2e8H3Od7mQK4o6j6SzHD4/fm6Ho=
   /which-pm-runs/1.0.0:
+    dev: false
+    optional: true
     resolution:
       integrity: sha1-Zws6+8VS4LVd9rd4DKdGFfI60cs=
   /which/1.3.1:
@@ -12921,7 +12880,7 @@ specifiers:
   eslint-plugin-react: 7.22.0
   eslint-plugin-react-hooks: 4.2.0
   fsevents: 2.3.2
-  husky: 4.3.8
+  husky: 5.0.9
   identity-obj-proxy: 3.0.0
   jest: 26.6.3
   jest-watch-typeahead: 0.6.1
