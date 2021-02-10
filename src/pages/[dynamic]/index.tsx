@@ -1,10 +1,10 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
 import React from 'react'
 
-const DynamicPage = (): JSX.Element => {
+const DynamicPage = (props: { dynamic: string}): JSX.Element => {
   return (
     <div>
-      <h1>DynamicPage Component</h1>
+      <h1>DynamicPage Component {props.dynamic}</h1>
     </div>
   )
 }
@@ -19,12 +19,11 @@ export const getStaticProps: GetStaticProps = () => {
 
 export const getStaticPaths: GetStaticPaths = () => {
   return {
-    /* paths: [...Array<T>(10000)].map((_, index) => ({ */
-    paths: Array.from({length: 1000}, ((_, index) => ({
+    paths: Array.from({length: 10}, (_, index) => ({
       params: {
         dynamic: `page-${index}`,
       },
-    }))),
+    })),
     fallback: false,
   }
 }
