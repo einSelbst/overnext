@@ -15,6 +15,7 @@
     "?dev": "echo Start next app in dev mode",
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "build:ssr": "NODE_ENV=production next build",
     "build:analyze": "ANALYZE=true next build",
     "start": "next start",
