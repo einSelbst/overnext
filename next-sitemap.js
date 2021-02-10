@@ -1,5 +1,10 @@
+const baseUrl = () => {
+  if (process.env.VERCEL === '1') return process.env.VERCEL_URL
+  return false;
+};
+
 module.exports = {
-  siteUrl: 'https://example.com',
+  siteUrl: baseUrl() || 'https://example.com',
   changefreq: 'daily',
   priority: 0.7,
   sitemapSize: 5000,
