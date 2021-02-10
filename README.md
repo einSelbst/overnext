@@ -33,7 +33,7 @@
 
 # Code Style
 
-- [Typescript](https://www.typescriptlang.org/)
+- [Typescript](https://www.typescriptlang.org/) with [tslib](https://www.npmjs.com/package/tslib), [prop-types](https://www.npmjs.com/package/prop-types)
 - [Standard](https://github.com/standard/standard)
 - [EditorConfig](https://editorconfig.org/)
 - [typedoc](https://github.com/TypeStrong/typedoc)
