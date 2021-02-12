@@ -47,16 +47,16 @@ export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
     url: `page-${index}`,
   }))
 
-  const paths = rawPaths
+  const pathss = rawPaths
          .map((page) => page.url)
          .filter((url) => {
            /* console.log(url) */
            /* console.log(locales) */
-           if (true==true) return url
-      if (!url || !locales) return url
+            return url
+      //if (!url || !locales) return url
            /* console.log('shouldnt log') */
       // If there are locales, only include the pages that include one of the available locales
-      if (locales.includes(url.split('/')[0])) return url
+      //if (locales.includes(url.split('/')[0])) return url
 
       //invalidPaths.push(url)
     })
@@ -67,7 +67,7 @@ export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
     //const { pages } = await getAllPages()
     //const [invalidPaths, log] = missingLocaleInPages()
     paths: [
-      { params: { slug: 'page-1', dynamic: 'page-1' } },
+      { params: { slug: 'page-1', dynamic: 'page-1', pathss } },
       { params: { slug: 'page-1', dynamic: 'page-1' }, locale: 'en'},
       { params: { slug: 'page-1', dynamic: 'page-1' }, locale: 'fr' },
     ],
