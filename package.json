@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "Opinionated next.js boilerplate",
   "keywords": [
-    "next.js, cypress"
+    "next.js, cypress", "i18n"
   ],
   "homepage": "https://feehikel-git-main.einselbst.vercel.app",
   "bugs": "https://github.com/einSelbst/feehikel/issues",
@@ -11,7 +11,7 @@
   "private": true,
   "repository": "https://github.com/einSelbst/feehikel",
   "scripts": {
-    "skip-for-now-preinstall": "npx only-allow pnpm",
+    "preinstall": "npx only-allow pnpm",
     "?dev": "echo Start next app in dev mode",
     "dev": "next dev",
     "build": "next build",
@@ -19,6 +19,8 @@
     "build:ssr": "NODE_ENV=production next build",
     "build:analyze": "ANALYZE=true next build",
     "start": "next start",
+    "?serve": "echo Build app and start server",
+    "serve": "pnpm build && next start",
     "?cz": "Make new commit",
     "cz": "git-cz",
     "?release": "Prepare a new release",
