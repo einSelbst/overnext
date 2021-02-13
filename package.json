@@ -3,7 +3,8 @@
   "version": "1.0.1",
   "description": "Opinionated next.js boilerplate",
   "keywords": [
-    "next.js, cypress", "i18n"
+    "next.js, cypress",
+    "i18n"
   ],
   "homepage": "https://feehikel-git-main.einselbst.vercel.app",
   "bugs": "https://github.com/einSelbst/feehikel/issues",
@@ -42,7 +43,7 @@
     "?e2e": "echo Start test server and run cypress",
     "e2e": "start-test 'pnpm dev' 3000 'pnpm test:cy'",
     "pree2e": "rm -rf .nyc_output coverage .next || true",
-    "?validate": "echo Format & lint & type-check & test the app",
+    "?validate": "echo Format, lint, type-check & test the app",
     "validate": "pnpm format && pnpm lint && pnpm type-check && pnpm test"
   },
   "config": {

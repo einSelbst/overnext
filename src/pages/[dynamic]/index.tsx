@@ -3,10 +3,13 @@ import {
   GetStaticProps,
   /* GetStaticPathsContext, */
   /* GetStaticPropsContext, */
-  InferGetStaticPropsType } from 'next'
+  InferGetStaticPropsType,
+} from 'next'
 import React from 'react'
 
-const DynamicPage = (props: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element => {
+const DynamicPage = (
+  props: InferGetStaticPropsType<typeof getStaticProps>
+): JSX.Element => {
   return (
     <div>
       <h1>DynamicPage Component {props.dynamic}</h1>
@@ -24,7 +27,7 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   //const res = await fetch(`https://.../posts?locale=${locale}`)
   //const posts = await res.json()
 
-  const res = await new Promise(resolve => resolve('Hello'));
+  const res = await new Promise(resolve => resolve('Hello'))
 
   return {
     props: {
@@ -39,8 +42,8 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
-  await new Promise(resolve => resolve('Hello'));
-  const rawPaths = Array.from({length: 10}, (_, index) => ({
+  await new Promise(resolve => resolve('Hello'))
+  const rawPaths = Array.from({ length: 10 }, (_, index) => ({
     params: {
       dynamic: `page-${index}`,
     },
@@ -48,13 +51,13 @@ export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
   }))
 
   const pathss = rawPaths
-         .map((page) => page.url)
-         .filter((url) => {
-           /* console.log(url) */
-           /* console.log(locales) */
-            return url
+    .map(page => page.url)
+    .filter(url => {
+      /* console.log(url) */
+      /* console.log(locales) */
+      return url
       //if (!url || !locales) return url
-           /* console.log('shouldnt log') */
+      /* console.log('shouldnt log') */
       // If there are locales, only include the pages that include one of the available locales
       //if (locales.includes(url.split('/')[0])) return url
 
@@ -68,14 +71,13 @@ export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
     //const [invalidPaths, log] = missingLocaleInPages()
     paths: [
       { params: { slug: 'page-1', dynamic: 'page-1', pathss } },
-      { params: { slug: 'page-1', dynamic: 'page-1' }, locale: 'en'},
+      { params: { slug: 'page-1', dynamic: 'page-1' }, locale: 'en' },
       { params: { slug: 'page-1', dynamic: 'page-1' }, locale: 'fr' },
     ],
     // Fallback shouldn't be enabled here or otherwise this route
-        // will catch every page, even 404s, and we don't want that
-        fallback: false,
-      }
-      }
-
+    // will catch every page, even 404s, and we don't want that
+    fallback: false,
+  }
+}
 
 export default DynamicPage

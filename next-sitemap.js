@@ -1,7 +1,7 @@
 const baseUrl = () => {
   if (process.env.VERCEL === '1') return process.env.VERCEL_URL
-  return false;
-};
+  return false
+}
 
 module.exports = {
   siteUrl: baseUrl() || 'https://example.com',
