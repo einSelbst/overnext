@@ -6,7 +6,6 @@ describe('home page', () => {
   it('matches snapshot', () => {
     const { asFragment } = render(<Home />, {})
     // inline-snapshots require 'prettier', but I use 'prettierx'
-    // eslint-disable-next-line jest/prefer-inline-snapshots
     expect(asFragment()).toMatchSnapshot()
   })
 

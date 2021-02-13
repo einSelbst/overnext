@@ -11,7 +11,7 @@ import '@styles/main.css'
 const reportWebVitals = (metric: { name: string; value: string }): void => {
   // I can only send 5 metrics to free quickmetrics account
   if (metric.name !== 'Next.js-hydration') {
-    sendMetric(metric).catch(error => console.error(error)) // eslint-disable-line no-console
+    sendMetric(metric).catch(error => console.error(error))
   }
   console.log(metric) // eslint-disable-line no-console
 }
