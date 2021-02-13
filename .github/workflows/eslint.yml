@@ -23,19 +23,30 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
-      - name: Cache yarn directory
-        id: cache-yarn-dir
+
+      - name: install pnpm
+        run: |
+          npm install pnpm@next -g
+          pnpm --version
+
+      - name: pnpm install
+        run: pnpm install
+
+      - name: Cache pnpm directory
+        id: cache-pnpm-dir
         uses: actions/cache@v2
         env:
           cache-name: cache-node-modules
         with:
           path: node_modules
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: ${{ runner.os }}-yarn-
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: ${{ runner.os }}-pnpm-
+
       - name: Install dependencies
-        if: steps.cache-yarn-dir.outputs.cache-hit != 'true'
-        run: yarn install --frozen-lockfile
+        if: steps.cache-pnpm-dir.outputs.cache-hit != 'true'
+
       - name: Run Eslint
         uses: bradennapier/eslint-plus-action@v3.4.2
         with:
-          configFile: .eslintrc.json
+          reportIgnoredFiles: true
+          # configFile: .eslintrc.json
