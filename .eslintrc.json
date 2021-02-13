@@ -7,6 +7,7 @@
       "jsx": true
     }
   },
+  "reportUnusedDisableDirectives": true,
   "plugins": ["react", "import", "jsx-a11y"],
   "extends": [
     "eslint:recommended",
@@ -35,9 +36,10 @@
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/no-unused-vars": [
-      2,
+      "error",
       {
-        "argsIgnorePattern": "^_"
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_"
       }
     ],
     "import/order": [
