@@ -37,7 +37,6 @@
 - [Standard](https://github.com/standard/standard)
 - [EditorConfig](https://editorconfig.org/)
 - [typedoc](https://github.com/TypeStrong/typedoc)
-- maybe [apiDoc](https://apidocjs.com/)
 
 ## Linter
 
@@ -94,7 +93,7 @@
 - [Custom 'Document](https://nextjs.org/docs/advanced-features/custom-document)
 - [Custom Error Pages](https://nextjs.org/docs/advanced-features/custom-error-page)
 - [Internationalized Routing](https://nextjs.org/docs/advanced-features/i18n-routing)
-- [ToDo](https://github.com/einSelbst/feehikel/issues/75): [Measuring performance](https://nextjs.org/docs/advanced-features/measuring-performance)
+- [Measuring performance](https://nextjs.org/docs/advanced-features/measuring-performance)
 
 ## Plugins
 
@@ -103,6 +102,7 @@
 
 ## Helper
 
+- [next-sitemap](https://github.com/iamvishnusankar/next-sitemap)
 - [next-unused](https://github.com/pacocoursey/next-unused)
 
 ## Scripts
@@ -140,7 +140,7 @@ pnpm validate      - run tsc, prettier, eslint and the tests
 - [Documentation](https://nextjs.org/docs/deployment)
 - [Vercel](https://vercel.com/import?filter=next.js)
   - override "Install Command": `rm -rf node_modules && npx pnpm i` (if pnpm should be used)
-  - override "Build Command": `next build` (optional)
+  - override "Build Command": `next build && npx pnpm run postbuild` (optional)
 - ToDo: Netlify
 
 ## Project Automation / Labeling Ideas
@@ -177,13 +177,14 @@ pnpm validate      - run tsc, prettier, eslint and the tests
 
 # ToDo
 
-- [ ] improve tsconfig
 - [ ] fix running of checks on pr create
 - [ ] cypress watch mode
 - [ ] cypress a11y plugin
-- [ ] automate typedoc generation
 - [ ] [wdyr](https://github.com/welldone-software/why-did-you-render/issues/113) vs preact [1](https://github.com/preactjs/preact/issues/2760)
+- [ ] https://github.com/vercel/next.js/tree/canary/examples/with-env-from-next-config-js
+- [ ] automate typedoc generation
+- [ ] maybe [apiDoc](https://apidocjs.com/)
 
 # Credits
 
-...where credits due, thanks to [@bahmutov](https://github.com/bahmutov), [@elliottsj](https://github.com/elliottsj), [@ferlopezm94](https://github.com/ferlopezm94), [@thomaseizinger](https://github.com/thomaseizinger) and all the others whom I copied code from!
+...where credits due, thanks to [@bahmutov](https://github.com/bahmutov), [@elliottsj](https://github.com/elliottsj), [@ferlopezm94](https://github.com/ferlopezm94),[@iamvishnusankar](https://github.com/iamvishnusankar), [@thomaseizinger](https://github.com/thomaseizinger) and all the others whom I copied code from!

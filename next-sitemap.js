@@ -9,7 +9,7 @@ module.exports = {
   priority: 0.7,
   sitemapSize: 5000,
   generateRobotsTxt: true,
-  exclude: ['/protected-page', '/awesome/secret-page'],
+  exclude: ['/server-sitemap.xml', '/awesome/secret-page'],
   // Default transformation function
   transform: (config, path) => {
     return {
@@ -35,9 +35,7 @@ module.exports = {
       },
     ],
     additionalSitemaps: [
-      'https://example.com/my-custom-sitemap-1.xml',
-      'https://example.com/my-custom-sitemap-2.xml',
-      'https://example.com/my-custom-sitemap-3.xml',
+      'https://example.com/server-sitemap.xml',
     ],
   },
 }
