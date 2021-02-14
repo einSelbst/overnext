@@ -3,7 +3,8 @@
   "version": "1.0.1",
   "description": "Opinionated next.js boilerplate",
   "keywords": [
-    "next.js, cypress"
+    "next.js, cypress",
+    "i18n"
   ],
   "homepage": "https://feehikel-git-main.einselbst.vercel.app",
   "bugs": "https://github.com/einSelbst/feehikel/issues",
@@ -15,9 +16,12 @@
     "?dev": "echo Start next app in dev mode",
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "build:ssr": "NODE_ENV=production next build",
     "build:analyze": "ANALYZE=true next build",
     "start": "next start",
+    "?serve": "echo Build app and start server",
+    "serve": "pnpm build && next start",
     "?cz": "Make new commit",
     "cz": "git-cz",
     "?release": "Prepare a new release",
@@ -39,7 +43,7 @@
     "?e2e": "echo Start test server and run cypress",
     "e2e": "start-test 'pnpm dev' 3000 'pnpm test:cy'",
     "pree2e": "rm -rf .nyc_output coverage .next || true",
-    "?validate": "echo Format & lint & type-check & test the app",
+    "?validate": "echo Format, lint, type-check & test the app",
     "validate": "pnpm format && pnpm lint && pnpm type-check && pnpm test"
   },
   "config": {
@@ -94,6 +98,7 @@
     "jest-watch-typeahead": "0.6.1",
     "lint-staged": "10.5.4",
     "next-compose-plugins": "2.2.1",
+    "next-sitemap": "1.4.17",
     "next-unused": "0.0.3",
     "npm-scripts-info": "0.3.9",
     "prettier-standard": "16.3.0",

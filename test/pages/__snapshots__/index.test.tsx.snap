@@ -3,111 +3,128 @@
 exports[`home page matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="jsx-1799183244 container"
+    class="jsx-3296980036 container"
   >
     <main
-      class="jsx-1799183244"
+      class="jsx-3296980036"
     >
       <a
-        class="jsx-1799183244"
+        class="jsx-3296980036"
         href="fr/legal"
       >
         To /fr/legal
       </a>
+      <div
+        class="jsx-3296980036"
+      >
+        <h1
+          class="jsx-3296980036"
+        >
+          Hello, world!
+        </h1>
+        <p
+          class="jsx-3296980036"
+        >
+          Welcome to your internationalised page!
+        </p>
+        <br
+          class="jsx-3296980036"
+        />
+      </div>
       <h1
-        class="jsx-1799183244 title"
+        class="jsx-3296980036 title"
       >
         Welcome to 
         <a
-          class="jsx-1799183244"
+          class="jsx-3296980036"
           href="https://nextjs.org"
         >
           Next.js!
         </a>
       </h1>
       <p
-        class="jsx-1799183244 description"
+        class="jsx-3296980036 description"
       >
         Get started by editing 
         <code
-          class="jsx-1799183244"
+          class="jsx-3296980036"
         >
           pages/index.tsx
         </code>
       </p>
       <div
-        class="jsx-1799183244 py-20"
+        class="jsx-3296980036 py-20"
       >
         <h2
-          class="jsx-1799183244 text-3xl text-center text-gray-700 dark:text-gray-100"
+          class="jsx-3296980036 text-3xl text-center text-gray-700 dark:text-gray-100"
         >
           Next.js + Tailwind CSS 2.0
         </h2>
       </div>
       <button
-        class="jsx-1799183244"
+        class="jsx-3296980036"
       >
         Test Button
       </button>
       <div
-        class="jsx-1799183244 grid"
+        class="jsx-3296980036 grid"
       >
         <a
-          class="jsx-1799183244 card"
+          class="jsx-3296980036 card"
           href="https://nextjs.org/docs"
         >
           <h3
-            class="jsx-1799183244"
+            class="jsx-3296980036"
           >
             Documentation →
           </h3>
           <p
-            class="jsx-1799183244"
+            class="jsx-3296980036"
           >
             Find in-depth information about Next.js features and API.
           </p>
         </a>
         <a
-          class="jsx-1799183244 card"
+          class="jsx-3296980036 card"
           href="https://nextjs.org/learn"
         >
           <h3
-            class="jsx-1799183244"
+            class="jsx-3296980036"
           >
             Learn →
           </h3>
           <p
-            class="jsx-1799183244"
+            class="jsx-3296980036"
           >
             Learn about Next.js in an interactive course with quizzes!
           </p>
         </a>
         <a
-          class="jsx-1799183244 card"
+          class="jsx-3296980036 card"
           href="https://github.com/vercel/next.js/tree/master/examples"
         >
           <h3
-            class="jsx-1799183244"
+            class="jsx-3296980036"
           >
             Examples →
           </h3>
           <p
-            class="jsx-1799183244"
+            class="jsx-3296980036"
           >
             Discover and deploy boilerplate example Next.js projects.
           </p>
         </a>
         <a
-          class="jsx-1799183244 card"
+          class="jsx-3296980036 card"
           href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
         >
           <h3
-            class="jsx-1799183244"
+            class="jsx-3296980036"
           >
             Deploy →
           </h3>
           <p
-            class="jsx-1799183244"
+            class="jsx-3296980036"
           >
             Instantly deploy your Next.js site to a public URL with Vercel.
           </p>
@@ -115,10 +132,10 @@ exports[`home page matches snapshot 1`] = `
       </div>
     </main>
     <footer
-      class="jsx-1799183244"
+      class="jsx-3296980036"
     >
       <a
-        class="jsx-1799183244"
+        class="jsx-3296980036"
         href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
         rel="noopener noreferrer"
         target="_blank"
@@ -126,7 +143,7 @@ exports[`home page matches snapshot 1`] = `
         Powered by 
         <img
           alt="Vercel Logo"
-          class="jsx-1799183244 logo"
+          class="jsx-3296980036 logo"
           height="16px"
           src="/vercel.svg"
           width="71px"
