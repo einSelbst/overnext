@@ -18,7 +18,7 @@ devDependencies:
   '@next/eslint-plugin-next': 10.0.6
   '@testing-library/react': 11.2.5_react-dom@17.0.1+react@17.0.1
   '@types/jest': 26.0.20
-  '@types/node': 13.13.41
+  '@types/node': 13.13.42
   '@types/prop-types': 15.7.3
   '@types/react': 17.0.2
   '@types/react-dom': 17.0.1
@@ -1940,10 +1940,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-ctzZJ+XsmHQwe3xp07gFUq4JxBaRSYzKHPgblR76//UanGST7vfFNF0+ty5eEbgTqsENopzoDK090xlha9dccQ==
-  /@types/node/13.13.41:
+  /@types/node/13.13.42:
     dev: true
     resolution:
-      integrity: sha512-qLT9IvHiXJfdrje9VmsLzun7cQ65obsBTmtU3EOnCSLFOoSHx1hpiRHoBnpdbyFqnzqdUUIv81JcEJQCB8un9g==
+      integrity: sha512-g+w2QgbW7k2CWLOXzQXbO37a7v5P9ObPvYahKphdBLV5aqpbVZRhTpWCT0SMRqX1i30Aig791ZmIM2fJGL2S8A==
   /@types/normalize-package-data/2.4.0:
     dev: true
     resolution:
@@ -12947,7 +12947,7 @@ specifiers:
   '@next/eslint-plugin-next': 10.0.6
   '@testing-library/react': 11.2.5
   '@types/jest': 26.0.20
-  '@types/node': 13.13.41
+  '@types/node': 13.13.42
   '@types/prop-types': 15.7.3
   '@types/react': 17.0.2
   '@types/react-dom': 17.0.1
