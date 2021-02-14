@@ -3,7 +3,8 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 export const Home = (): JSX.Element => {
-  const router = useRouter()
+  // TODO: make jest play nice with router object
+  //const router = useRouter()
   //const { locale, locales, defaultLocale } = router
 
   return (
