@@ -1,6 +1,8 @@
 module.exports = {
   darkMode: 'class', // or 'media' or false
   future: {
+    removeDeprecatedGapUtilities: true,
+    standardFontWeights: true,
     purgeLayersByDefault: true,
     applyComplexClasses: true,
   },
