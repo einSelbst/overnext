@@ -2,6 +2,7 @@ import { AppProps /*, App, AppContext */ } from 'next/app'
 import Head from 'next/head'
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
+import { ThemeProvider } from 'next-themes'
 import '@styles/main.css'
 
 /**
@@ -65,14 +66,14 @@ if (!isServerRendered() && process.env.NODE_ENV !== 'production') {
 
 function _app ({ Component, pageProps }: AppProps): JSX.Element {
   return (
-    <>
+    <ThemeProvider defaultTheme="system" attribute="class">
       <Head>
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
         {/* <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86" /> see https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag */}
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Component {...pageProps} />
-    </>
+    </ThemeProvider>
   )
 }
 

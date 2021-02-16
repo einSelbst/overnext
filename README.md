@@ -103,6 +103,7 @@
 ## Helper
 
 - [next-sitemap](https://github.com/iamvishnusankar/next-sitemap)
+- [next-themes](https://github.com/pacocoursey/next-themes)
 - [next-unused](https://github.com/pacocoursey/next-unused)
 
 ## Scripts
@@ -187,4 +188,4 @@ pnpm validate      - run tsc, prettier, eslint and the tests
 
 # Credits
 
-...where credits due, thanks to [@bahmutov](https://github.com/bahmutov), [@elliottsj](https://github.com/elliottsj), [@ferlopezm94](https://github.com/ferlopezm94),[@iamvishnusankar](https://github.com/iamvishnusankar), [@thomaseizinger](https://github.com/thomaseizinger) and all the others whom I copied code from!
+...where credits due, thanks to [@bahmutov](https://github.com/bahmutov), [@elliottsj](https://github.com/elliottsj), [@ferlopezm94](https://github.com/ferlopezm94),[@iamvishnusankar](https://github.com/iamvishnusankar), [@pacocoursey](https://github.com/pacocoursey), [@thomaseizinger](https://github.com/thomaseizinger) and all the others whom I copied code from!
