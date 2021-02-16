@@ -14,7 +14,7 @@ devDependencies:
   '@babel/runtime': 7.12.13
   '@commitlint/cli': 11.0.0
   '@commitlint/config-conventional': 11.0.0
-  '@cypress/code-coverage': 3.9.2_cypress@6.4.0
+  '@cypress/code-coverage': 3.9.2_cypress@6.5.0
   '@next/bundle-analyzer': 10.0.7
   '@next/eslint-plugin-next': 10.0.7
   '@testing-library/react': 11.2.5_react-dom@17.0.1+react@17.0.1
@@ -27,10 +27,10 @@ devDependencies:
   '@typescript-eslint/parser': 4.15.1_eslint@7.20.0+typescript@4.1.5
   babel-jest: 26.6.3_@babel+core@7.12.16
   commitizen: 4.2.3
-  cypress: 6.4.0
+  cypress: 6.5.0
   dependency-version-badge: 1.9.1
   eslint: 7.20.0
-  eslint-import-resolver-typescript: 2.3.0_be0c44e8b9ebd8c4c0e8e6022445aa98
+  eslint-import-resolver-typescript: 2.4.0_be0c44e8b9ebd8c4c0e8e6022445aa98
   eslint-plugin-cypress: 2.11.2_eslint@7.20.0
   eslint-plugin-import: 2.22.1_eslint@7.20.0
   eslint-plugin-jest: 24.1.3_eslint@7.20.0+typescript@4.1.5
@@ -1224,10 +1224,10 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-sErmFSEr5287bLMRl0POGnyFtJCs/lSk5yxrUIJUIHZ8eDvtTEr0V93xRgLjJVG54gJU4MbpHy1mRPA9VZbtQA==
-  /@cypress/code-coverage/3.9.2_cypress@6.4.0:
+  /@cypress/code-coverage/3.9.2_cypress@6.5.0:
     dependencies:
       '@cypress/browserify-preprocessor': 3.0.1
-      cypress: 6.4.0
+      cypress: 6.5.0
       debug: 4.3.1
       execa: 4.1.0
       globby: 11.0.2
@@ -1800,6 +1800,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-fZQQafSREFyuZcdWFAExYjBiCL7AUCdgsk80iO0q4yihYYdcIiH28CcuPTGFgLOCC8RlW49GSQxdHwZP+I7CNg==
+  /@types/node/12.12.50:
+    dev: true
+    resolution:
+      integrity: sha512-5ImO01Fb8YsEOYpV+aeyGYztcYcjGsBvN4D7G5r1ef2cuQOpymjWNQi5V0rKHE6PC2ru3HkoUr/Br2/8GUA84w==
   /@types/node/13.13.42:
     dev: true
     resolution:
@@ -2203,7 +2207,6 @@ packages:
     resolution:
       integrity: sha1-w7M6te42DYbg5ijwRorn7yfWVN8=
   /ansi-regex/3.0.0:
-    dev: true
     engines:
       node: '>=4'
     resolution:
@@ -2701,7 +2704,7 @@ packages:
       integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==
   /bl/4.1.0:
     dependencies:
-      buffer: 5.6.0
+      buffer: 5.7.1
       inherits: 2.0.4
       readable-stream: 3.6.0
     resolution:
@@ -2944,13 +2947,13 @@ packages:
     dependencies:
       base64-js: 1.5.1
       ieee754: 1.2.1
+    dev: false
     resolution:
       integrity: sha512-/gDYp/UtU0eA1ys8bOs9J6a+E/KWIY+DZ+Q2WESNUA0jFRsJOc0SNUO6xJ5SGA1xueg3NL65W6s+NY5l9cunuw==
   /buffer/5.7.1:
     dependencies:
       base64-js: 1.5.1
       ieee754: 1.2.1
-    dev: true
     resolution:
       integrity: sha512-EHcyIPBQ4BSGlvjB16k5KgAJ27CIsHY/2JBmCRReo48y9rQ3MaUzWX3KVlBa4U7MyX02HdVj0K7C3WaB3ju7FQ==
   /builtin-status-codes/3.0.0:
@@ -3938,11 +3941,12 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-mI3zP+qxke95mmE2nddsF635V+o=
-  /cypress/6.4.0:
+  /cypress/6.5.0:
     dependencies:
       '@cypress/listr-verbose-renderer': 0.4.1
       '@cypress/request': 2.88.5
       '@cypress/xvfb': 1.2.4
+      '@types/node': 12.12.50
       '@types/sinonjs__fake-timers': 6.0.2
       '@types/sizzle': 2.3.2
       arch: 2.2.0
@@ -3955,7 +3959,7 @@ packages:
       commander: 5.1.0
       common-tags: 1.8.0
       dayjs: 1.10.4
-      debug: 4.3.1_supports-color@7.2.0
+      debug: 4.3.2_supports-color@7.2.0
       eventemitter2: 6.4.3
       execa: 4.1.0
       executable: 4.1.1
@@ -3985,7 +3989,7 @@ packages:
     hasBin: true
     requiresBuild: true
     resolution:
-      integrity: sha512-SrsPsZ4IBterudkoFYBvkQmXOVxclh1/+ytbzpV8AH/D2FA+s2Qy5ISsaRzOFsbQa4KZWoi3AKwREmF1HucYkg==
+      integrity: sha512-ol/yTAqHrQQpYBjxLlRSvZf4DOb9AhaQNVlwdOZgJcBHZOOa52/p/6/p3PPcvzjWGOMG6Yq0z4G+jrbWyk/9Dg==
   /cz-conventional-changelog/3.2.0:
     dependencies:
       chalk: 2.4.2
@@ -4097,7 +4101,7 @@ packages:
         optional: true
     resolution:
       integrity: sha512-doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ==
-  /debug/4.3.1_supports-color@7.2.0:
+  /debug/4.3.2_supports-color@7.2.0:
     dependencies:
       ms: 2.1.2
       supports-color: 7.2.0
@@ -4110,7 +4114,7 @@ packages:
       supports-color:
         optional: true
     resolution:
-      integrity: sha512-doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ==
+      integrity: sha512-mOp8wKcvj7XxC78zLgw/ZA+6TSgkoE2C/ienthhRD298T7UNwAg9diBpLRxC0mOezLl4B0xV7M0cCO6P/O0Xhw==
   /decamelize-keys/1.1.0:
     dependencies:
       decamelize: 1.2.0
@@ -4720,7 +4724,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-ogtf+5AB/O+nM6DIeBUNr2fuT7ot9Qg/1harBfBtaP13ekEWFQEEMP94BCB7zaNW3gyY+8SHYF00rnqYwXKWOA==
-  /eslint-import-resolver-typescript/2.3.0_be0c44e8b9ebd8c4c0e8e6022445aa98:
+  /eslint-import-resolver-typescript/2.4.0_be0c44e8b9ebd8c4c0e8e6022445aa98:
     dependencies:
       debug: 4.3.1
       eslint: 7.20.0
@@ -4736,7 +4740,7 @@ packages:
       eslint: '*'
       eslint-plugin-import: '*'
     resolution:
-      integrity: sha512-MHSXvmj5e0SGOOBhBbt7C+fWj1bJbtSYFAD85Xeg8nvUtuooTod2HQb8bfhE9f5QyyNxEfgzqOYFCvmdDIcCuw==
+      integrity: sha512-useJKURidCcldRLCNKWemr1fFQL1SzB3G4a0li6lFGvlc5xGe1hY343bvG07cbpCzPuM/lK19FIJB3XGFSkplA==
   /eslint-module-utils/2.6.0:
     dependencies:
       debug: 2.6.9
@@ -6697,7 +6701,6 @@ packages:
     resolution:
       integrity: sha1-754xOG8DGn8NZDr4L95QxFfvAMs=
   /is-fullwidth-code-point/2.0.0:
-    dev: true
     engines:
       node: '>=4'
     resolution:
@@ -11315,7 +11318,6 @@ packages:
     dependencies:
       is-fullwidth-code-point: 2.0.0
       strip-ansi: 4.0.0
-    dev: true
     engines:
       node: '>=4'
     resolution:
@@ -11400,7 +11402,6 @@ packages:
   /strip-ansi/4.0.0:
     dependencies:
       ansi-regex: 3.0.0
-    dev: true
     engines:
       node: '>=4'
     resolution:
@@ -12574,7 +12575,7 @@ packages:
       integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==
   /wide-align/1.1.3:
     dependencies:
-      string-width: 1.0.2
+      string-width: 2.1.1
     dev: false
     optional: true
     resolution:
@@ -12769,10 +12770,10 @@ specifiers:
   autoprefixer: 10.2.4
   babel-jest: 26.6.3
   commitizen: 4.2.3
-  cypress: 6.4.0
+  cypress: 6.5.0
   dependency-version-badge: 1.9.1
   eslint: 7.20.0
-  eslint-import-resolver-typescript: 2.3.0
+  eslint-import-resolver-typescript: 2.4.0
   eslint-plugin-cypress: 2.11.2
   eslint-plugin-import: 2.22.1
   eslint-plugin-jest: 24.1.3
