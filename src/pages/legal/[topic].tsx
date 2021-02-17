@@ -1,3 +1,4 @@
+import { NextSeo } from 'next-seo'
 import { useTheme } from 'next-themes'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
@@ -32,11 +33,31 @@ const _Topic = (): JSX.Element => {
   const router = useRouter()
   const { topic, locale } = router.query
   return (
-    <div className="bg-white dark:bg-black">
-      <h2>Legal - {topic}</h2>
-      <span>You speak {locale}</span>
-      <ThemeChanger />
-    </div>
+    <>
+      <NextSeo
+        title={topic}
+        description='A legal topic'
+        openGraph={{
+          type: 'website',
+          title: topic,
+          description: 'A legal topic',
+          images: [
+            {
+              url:
+                'https://via.placeholder.com/728x90.png?text=Visit+WhoIsHostingThis.com+Buyers+Guide',
+              width: 800,
+              height: 600,
+              alt: topic,
+            },
+          ],
+        }}
+      />
+      <div className='bg-white dark:bg-black'>
+        <h2>Legal - {topic}</h2>
+        <span>You speak {locale}</span>
+        <ThemeChanger />
+      </div>
+    </>
   )
 }
 
