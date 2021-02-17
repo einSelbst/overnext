@@ -34,8 +34,6 @@ module.exports = {
         disallow: ['/sub-path-1', '/path-2'],
       },
     ],
-    additionalSitemaps: [
-      'https://example.com/server-sitemap.xml',
-    ],
+    additionalSitemaps: ['https://example.com/server-sitemap.xml'],
   },
 }
