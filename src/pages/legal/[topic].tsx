@@ -32,14 +32,18 @@ const ThemeChanger = () => {
 const _Topic = (): JSX.Element => {
   const router = useRouter()
   const { topic, locale } = router.query
+  // NextSeo doesn't want a string array, which 'topic' might be
+  const firstTopic: string | undefined = Array.isArray(topic) ? topic[0] : topic
+
   return (
     <>
       <NextSeo
-        title={topic}
-        description='A legal topic'
+        title={firstTopic}
+        description="A legal topic."
+        canonical="https://www.canonical.ie/"
         openGraph={{
           type: 'website',
-          title: topic,
+          title: firstTopic,
           description: 'A legal topic',
           images: [
             {
@@ -47,7 +51,7 @@ const _Topic = (): JSX.Element => {
                 'https://via.placeholder.com/728x90.png?text=Visit+WhoIsHostingThis.com+Buyers+Guide',
               width: 800,
               height: 600,
-              alt: topic,
+              alt: firstTopic,
             },
           ],
         }}
