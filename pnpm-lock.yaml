@@ -39,7 +39,7 @@ devDependencies:
   eslint-plugin-promise: 4.3.1
   eslint-plugin-react: 7.22.0_eslint@7.20.0
   eslint-plugin-react-hooks: 4.2.0_eslint@7.20.0
-  husky: 5.0.9
+  husky: 5.1.0
   identity-obj-proxy: 3.0.0
   jest: 26.6.3
   jest-watch-typeahead: 0.6.1_jest@26.6.3
@@ -6405,13 +6405,13 @@ packages:
       node: '>=8.12.0'
     resolution:
       integrity: sha512-SEQu7vl8KjNL2eoGBLF3+wAjpsNfA9XMlXAYj/3EdaNfAlxKthD1xjEQfGOUhllCGGJVNY34bRr6lPINhNjyZw==
-  /husky/5.0.9:
+  /husky/5.1.0:
     dev: true
     engines:
       node: '>= 10'
     hasBin: true
     resolution:
-      integrity: sha512-0SjcaY21a+IRdx7p7r/X33Vc09UR2m8SbP8yfkhUX2/jAmwcz+GR7i9jXkp2pP3GfX23JhMkVP6SWwXB18uXtg==
+      integrity: sha512-Os0EY2haOO+59YZSwMiUDsHY43RFwBVIRStHcnnT8/kvA+sFfaA/YS4uLFRiymXYgQl6E6TQTt3y4v/Z2ctEtw==
   /iconv-lite/0.4.24:
     dependencies:
       safer-buffer: 2.1.2
@@ -12754,7 +12754,7 @@ specifiers:
   eslint-plugin-react: 7.22.0
   eslint-plugin-react-hooks: 4.2.0
   fsevents: 2.3.2
-  husky: 5.0.9
+  husky: 5.1.0
   identity-obj-proxy: 3.0.0
   jest: 26.6.3
   jest-watch-typeahead: 0.6.1
