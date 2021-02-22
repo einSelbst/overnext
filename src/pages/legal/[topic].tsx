@@ -42,10 +42,10 @@ const _Topic = (): JSX.Element => {
         title={firstTopic}
         description='A legal topic.'
         canonical='https://feehikel.vercel.app'
-        languageAlternates={locales?.map((locale: string) => {
+        languageAlternates={locales?.map((loc: string) => {
           return {
-            hrefLang: locale,
-            href: `https://feehikel.vercel.app/${locale}/legal/${firstTopic ||
+            hrefLang: loc,
+            href: `https://feehikel.vercel.app/${loc}/legal/${firstTopic ||
               ''}`,
           }
         })}
