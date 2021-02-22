@@ -103,7 +103,8 @@
 ## Helper
 
 - [next-sitemap](https://github.com/iamvishnusankar/next-sitemap)
-- [next-themes](https://github.com/pacocoursey/next-themes)
+- [next-seo](https://github.com/garmeeh/next-seo), for MetaTags, OpenGraph & JsonLD
+- [next-themes](https://github.com/pacocoursey/next-themes), for dark-mode
 - [next-unused](https://github.com/pacocoursey/next-unused)
 
 ## Scripts
@@ -112,6 +113,7 @@
 pnpm dev           - start dev server
 pnpm build         - build project
 pnpm build:analyze - build project and visualize chunks
+pnpm serve         - build and start project
 pnpm cz            - make new commit
 pnpm release       - make new release
 pnpm docs          - generate source code documentation
