@@ -27,7 +27,7 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   //const res = await fetch(`https://.../posts?locale=${locale}`)
   //const posts = await res.json()
 
-  const res = await new Promise(resolve => resolve('Hello'))
+  const res = await Promise.resolve('Hello')
 
   return {
     props: {
@@ -46,7 +46,7 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
  * combine paths with locales so that all pages can be pre-rendered
  */
 export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
-  await new Promise(resolve => resolve('async needs await'))
+  await Promise.resolve('async needs await')
   // the paths would come from an api, but to have something to work with:
   let paths = Array.from({ length: 10 }, (_, index) => ({
     params: {
