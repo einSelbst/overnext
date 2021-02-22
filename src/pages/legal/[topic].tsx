@@ -31,7 +31,8 @@ const ThemeChanger = () => {
 
 const _Topic = (): JSX.Element => {
   const router = useRouter()
-  const { topic, locale } = router.query
+  const { locale, locales } = router
+  const { topic } = router.query
   // NextSeo doesn't want a string array, which 'topic' might be
   const firstTopic: string | undefined = Array.isArray(topic) ? topic[0] : topic
 
@@ -39,8 +40,15 @@ const _Topic = (): JSX.Element => {
     <>
       <NextSeo
         title={firstTopic}
-        description="A legal topic."
-        canonical="https://www.canonical.ie/"
+        description='A legal topic.'
+        canonical='https://feehikel.vercel.app'
+        languageAlternates={locales?.map((locale: string) => {
+          return {
+            hrefLang: locale,
+            href: `https://feehikel.vercel.app/${locale}/legal/${firstTopic ||
+              ''}`,
+          }
+        })}
         openGraph={{
           type: 'website',
           title: firstTopic,
@@ -56,11 +64,12 @@ const _Topic = (): JSX.Element => {
           ],
         }}
       />
-      <div className='bg-white dark:bg-black'>
-        <h2>Legal - {topic}</h2>
+      <main className='bg-white dark:bg-black'>
+        <h1>Legal - {topic}</h1>
         <span>You speak {locale}</span>
+        <p>This page is also available in the following languages: {locales}</p>
         <ThemeChanger />
-      </div>
+      </main>
     </>
   )
 }
