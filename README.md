@@ -1,8 +1,30 @@
-# NextJS Opinionated Typescript Boilerplate
+# Overnext - Very Opinionated Next.js Typescript Boilerplate
 
-![next version](https://img.shields.io/badge/next-latest-brightgreen) ![react version](https://img.shields.io/badge/react-17.0.1-brightgreen) ![typescript version](https://img.shields.io/badge/typescript-4.1.3-brightgreen) ![cypress version](https://img.shields.io/badge/cypress-6.2.1-brightgreen) ![jest version](https://img.shields.io/badge/jest-26.6.3-brightgreen) ![eslint version](https://img.shields.io/badge/eslint-7.17.0-brightgreen) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/einselbst/feehikel/Continuous%20integration?style=flat-square)
 
+<details>
+  <summary>
+    Tooling
+  </summary>
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square 'Standard.js')](https://standardjs.com)
+[![Prettier](https://img.shields.io/badge/code_style-Prettier-ff69b4.svg?logo=Prettier&logoColor=white&style=flat-square 'Prettier')](https://github.com/prettier/prettier)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square 'Commitizen')](http://commitizen.github.io/cz-cli/)
+[![Renovate](https://img.shields.io/badge/renovate-enabled-brightgreen.svg?logo=dependabot&style=flat-square 'Renovate')](https://renovateapp.com/)
+</details>
+
+<details>
+  <summary>
+    Versions
+  </summary>
+![next version](https://img.shields.io/badge/next-latest-brightgreen) ![react version](https://img.shields.io/badge/react-17.0.1-brightgreen) ![typescript version](https://img.shields.io/badge/typescript-4.1.3-brightgreen) ![cypress version](https://img.shields.io/badge/cypress-6.2.1-brightgreen) ![jest version](https://img.shields.io/badge/jest-26.6.3-brightgreen) ![eslint version](https://img.shields.io/badge/eslint-7.17.0-brightgreen)
+</details>
+
+<details>
+  <summary>
+    Metrics
+  </summary>
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=bugs)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel) [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=code_smells)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel) [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=ncloc)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=alert_status)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel) [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=security_rating)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel) [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=sqale_index)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel) [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel)
+</details>
 
 # DX
 
@@ -44,33 +66,36 @@
 - [Prettier-Standard](https://github.com/sheerun/prettier-standard)
   - [prettierx](https://github.com/brodybits/prettierx/)
 - [ESLint](https://eslint.org/)
+
   - [eslint-plugin-next](https://github.com/vercel/next.js/tree/canary/packages/eslint-plugin-next)
   - [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint)
-  - [eslint-plugin-cypress]()
+  - [eslint-plugin-cypress](https://github.com/cypress-io/eslint-plugin-cypress)
   - [eslint-plugin-import](https://github.com/benmosher/eslint-plugin-import)
   - [eslint-plugin-jest](https://github.com/jest-community/eslint-plugin-jest)
   - [eslint-plugin-jest-dom](https://github.com/testing-library/eslint-plugin-jest-dom)
-  - [eslint-plugin-jsx-a11y]()
+  - [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y)
   - <details>
-    <summary>
-      [eslint-plugin-promise](https://github.com/xjamundx/eslint-plugin-promise)
-    </summary>
-    
-      - "promise/always-return": "error"
-      - "promise/no-return-wrap": "error"
-      - "promise/param-names": "error"
-      - "promise/catch-or-return": "error"
-      - "promise/no-native": "off"
-      - "promise/no-nesting": "warn"
-      - "promise/no-promise-in-callback": "warn"
-      - "promise/no-callback-in-promise": "warn"
-      - "promise/avoid-new": "warn"
-      - "promise/no-new-statics": "error"
-      - "promise/no-return-in-finally": "warn"
-      - "promise/valid-params": "warn"
+      <summary>
+        <a href="https://github.com/xjamundx/eslint-plugin-promise">eslint-plugin-promise</a>
+      </summary>
+
+    - "promise/always-return": "error"
+    - "promise/no-return-wrap": "error"
+    - "promise/param-names": "error"
+    - "promise/catch-or-return": "error"
+    - "promise/no-native": "off"
+    - "promise/no-nesting": "warn"
+    - "promise/no-promise-in-callback": "warn"
+    - "promise/no-callback-in-promise": "warn"
+    - "promise/avoid-new": "warn"
+    - "promise/no-new-statics": "error"
+    - "promise/no-return-in-finally": "warn"
+    - "promise/valid-params": "warn"
       </details>
-  - [eslint-plugin-react]()
-  - [eslint-plugin-react-hooks]()
+
+  - [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react)
+  - [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)
+
 - [`husky`](https://github.com/typicode/husky) for hooks
   - [lint-staged](https://github.com/okonet/lint-staged)
 - [axe-core/react](https://github.com/dequelabs/axe-core-npm)
@@ -129,6 +154,15 @@ pnpm test          - run jest
 pnpm test:cy       - open cypress test runner
 pnpm validate      - run tsc, prettier, eslint and the tests
 ```
+
+## Styling
+
+...all still unclear atm...
+
+- [Tailwind CSS](https://tailwindcss.com/) - really unsure about it, esp. after reading [this](https://dev.to/jaredcwhite/why-tailwind-isn-t-for-me-5c90), also looking at:
+  - [shoelace](https://shoelace.style/)
+  - [em dash](https://github.com/jfbrennan/m-)
+- ToDo: https://github.com/postcss/autoprefixer
 
 # CI
 
