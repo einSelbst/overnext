@@ -65,8 +65,8 @@
 
 - [Prettier-Standard](https://github.com/sheerun/prettier-standard)
   - [prettierx](https://github.com/brodybits/prettierx/)
-- [ESLint](https://eslint.org/)
 
+- [ESLint](https://eslint.org/)
   - [eslint-plugin-next](https://github.com/vercel/next.js/tree/canary/packages/eslint-plugin-next)
   - [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint)
   - [eslint-plugin-cypress](https://github.com/cypress-io/eslint-plugin-cypress)
@@ -78,26 +78,25 @@
       <summary>
         <a href="https://github.com/xjamundx/eslint-plugin-promise">eslint-plugin-promise</a>
       </summary>
-
-    - "promise/always-return": "error"
-    - "promise/no-return-wrap": "error"
-    - "promise/param-names": "error"
-    - "promise/catch-or-return": "error"
-    - "promise/no-native": "off"
-    - "promise/no-nesting": "warn"
-    - "promise/no-promise-in-callback": "warn"
-    - "promise/no-callback-in-promise": "warn"
-    - "promise/avoid-new": "warn"
-    - "promise/no-new-statics": "error"
-    - "promise/no-return-in-finally": "warn"
-    - "promise/valid-params": "warn"
-      </details>
-
+      - "promise/always-return": "error" 
+      - "promise/no-return-wrap": "error" 
+      - "promise/param-names": "error" 
+      - "promise/catch-or-return": "error" 
+      - "promise/no-native": "off" 
+      - "promise/no-nesting": "warn" 
+      - "promise/no-promise-in-callback": "warn" 
+      - "promise/no-callback-in-promise": "warn" 
+      - "promise/avoid-new": "warn" 
+      - "promise/no-new-statics": "error" 
+      - "promise/no-return-in-finally": "warn" 
+      - "promise/valid-params": "warn"
+    </details>
   - [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react)
   - [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)
 
 - [`husky`](https://github.com/typicode/husky) for hooks
   - [lint-staged](https://github.com/okonet/lint-staged)
+
 - [axe-core/react](https://github.com/dequelabs/axe-core-npm)
 
 # Testing
