@@ -40,7 +40,7 @@
   - [Commitizen](https://github.com/commitizen/cz-cli) helper
     <details>
       <summary>Show commit types</summary>
-      
+  
        - feat: A new feature
        - fix: A bug fix
        - docs: Documentation only changes
@@ -78,6 +78,7 @@
       <summary>
         <a href="https://github.com/xjamundx/eslint-plugin-promise">eslint-plugin-promise</a>
       </summary>
+  
       - "promise/always-return": "error" 
       - "promise/no-return-wrap": "error" 
       - "promise/param-names": "error" 
