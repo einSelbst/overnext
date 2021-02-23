@@ -65,8 +65,8 @@
   },
   "devDependencies": {
     "@axe-core/react": "4.1.1",
-    "@babel/core": "7.12.17",
-    "@babel/runtime": "7.12.18",
+    "@babel/core": "7.13.0",
+    "@babel/runtime": "7.13.0",
     "@commitlint/cli": "11.0.0",
     "@commitlint/config-conventional": "11.0.0",
     "@cypress/code-coverage": "3.9.2",
