@@ -1,4 +1,4 @@
-# NextJS Opinionated Typescript Boilerplate
+# Overnext - Very Opinionated Next.js Typescript Boilerplate
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/einselbst/feehikel/Continuous%20integration?style=flat-square)
 

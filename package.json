@@ -1,10 +1,10 @@
 {
-  "name": "feehikel",
+  "name": "overnext",
   "version": "1.0.1",
-  "description": "Opinionated next.js boilerplate",
+  "description": "Very opinionated next.js typescript boilerplate",
   "keywords": [
     "next.js, cypress",
-    "i18n"
+    "i18n", "typescript"
   ],
   "homepage": "https://feehikel-git-main.einselbst.vercel.app",
   "bugs": "https://github.com/einSelbst/feehikel/issues",
