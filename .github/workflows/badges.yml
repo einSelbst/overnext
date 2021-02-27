@@ -18,13 +18,34 @@ jobs:
     steps:
       - name: Checkout 🛎
         uses: actions/checkout@v2
-
-      - name: Install all dependencies 📦
-        uses: cypress-io/github-action@v2
         with:
-          # just perform install
-          runTests: false
-          install-command: pnpm i
+          ref: ${{ github.event.client_payload.ref }}
+
+      - name: install pnpm
+        run: |
+          npm install pnpm@next -g
+          pnpm --version
+
+      - name: Cache pnpm directory
+        id: cache-pnpm-dir
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: ${{ runner.os }}-pnpm-
+
+      - name: Install all dependencies
+        if: steps.cache-pnpm-dir.outputs.cache-hit != 'true'
+        run: pnpm install --prefer-frozen-lockfile
+
+      # - name: Install all dependencies 📦
+      #   uses: cypress-io/github-action@v2
+      #   with:
+      #     # just perform install
+      #     runTests: false
+      #     install-command: pnpm i
 
       - name: Update version badges 🏷
         # run: npm run update:badges
