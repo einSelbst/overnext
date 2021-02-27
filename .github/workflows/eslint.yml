@@ -28,7 +28,7 @@ jobs:
 
       - name: install pnpm
         run: |
-          npm install pnpm@next -g
+          npm install pnpm@next
           pnpm --version
 
       - name: pnpm install
