@@ -11,6 +11,7 @@
 [![Prettier](https://img.shields.io/badge/code_style-Prettier-ff69b4.svg?logo=Prettier&logoColor=white&style=flat-square 'Prettier')](https://github.com/prettier/prettier)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square 'Commitizen')](http://commitizen.github.io/cz-cli/)
 [![Renovate](https://img.shields.io/badge/renovate-enabled-brightgreen.svg?logo=dependabot&style=flat-square 'Renovate')](https://renovateapp.com/)
+
 </details>
 
 <details>
@@ -19,6 +20,7 @@
   </summary>
 
 ![next version](https://img.shields.io/badge/next-latest-brightgreen) ![react version](https://img.shields.io/badge/react-17.0.1-brightgreen) ![typescript version](https://img.shields.io/badge/typescript-4.1.3-brightgreen) ![cypress version](https://img.shields.io/badge/cypress-6.2.1-brightgreen) ![jest version](https://img.shields.io/badge/jest-26.6.3-brightgreen) ![eslint version](https://img.shields.io/badge/eslint-7.17.0-brightgreen)
+
 </details>
 
 <details>
@@ -27,6 +29,7 @@
   </summary>
 
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=bugs)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel) [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=code_smells)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel) [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=ncloc)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=alert_status)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel) [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=security_rating)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel) [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=sqale_index)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel) [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel)
+
 </details>
 
 # DX
@@ -40,21 +43,22 @@
 ## Commit Style
 
 - [Conventional Commits convention](https://www.conventionalcommits.org/)
+
   - [Commitizen](https://github.com/commitizen/cz-cli) helper
     <details>
       <summary>Show commit types</summary>
-  
-       - feat: A new feature
-       - fix: A bug fix
-       - docs: Documentation only changes
-       - style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-       - refactor: A code change that neither fixes a bug nor adds a feature
-       - perf: A code change that improves performance
-       - test: Adding missing tests or correcting existing tests
-       - build: Changes that affect the build system or external dependencies (example scopes: webpack, typescript, pnpm)
-       - ci: Changes to our CI configuration files and scripts (example scopes: Github Actions, BrowserStack, SauceLabs)
-       - chore: Other changes that don't modify src or test files
-       - revert: Reverts a previous commit
+
+    - feat: A new feature
+    - fix: A bug fix
+    - docs: Documentation only changes
+    - style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+    - refactor: A code change that neither fixes a bug nor adds a feature
+    - perf: A code change that improves performance
+    - test: Adding missing tests or correcting existing tests
+    - build: Changes that affect the build system or external dependencies (example scopes: webpack, typescript, pnpm)
+    - ci: Changes to our CI configuration files and scripts (example scopes: Github Actions, BrowserStack, SauceLabs)
+    - chore: Other changes that don't modify src or test files
+    - revert: Reverts a previous commit
     </details>
 
 # Code Style
@@ -67,9 +71,11 @@
 ## Linter
 
 - [Prettier-Standard](https://github.com/sheerun/prettier-standard)
+
   - [prettierx](https://github.com/brodybits/prettierx/)
 
 - [ESLint](https://eslint.org/)
+
   - [eslint-plugin-next](https://github.com/vercel/next.js/tree/canary/packages/eslint-plugin-next)
   - [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint)
   - [eslint-plugin-cypress](https://github.com/cypress-io/eslint-plugin-cypress)
@@ -81,24 +87,26 @@
       <summary>
         <a href="https://github.com/xjamundx/eslint-plugin-promise">eslint-plugin-promise</a>
       </summary>
-  
-      - "promise/always-return": "error" 
-      - "promise/no-return-wrap": "error" 
-      - "promise/param-names": "error" 
-      - "promise/catch-or-return": "error" 
-      - "promise/no-native": "off" 
-      - "promise/no-nesting": "warn" 
-      - "promise/no-promise-in-callback": "warn" 
-      - "promise/no-callback-in-promise": "warn" 
-      - "promise/avoid-new": "warn" 
-      - "promise/no-new-statics": "error" 
-      - "promise/no-return-in-finally": "warn" 
-      - "promise/valid-params": "warn"
+
+    - "promise/always-return": "error"
+    - "promise/no-return-wrap": "error"
+    - "promise/param-names": "error"
+    - "promise/catch-or-return": "error"
+    - "promise/no-native": "off"
+    - "promise/no-nesting": "warn"
+    - "promise/no-promise-in-callback": "warn"
+    - "promise/no-callback-in-promise": "warn"
+    - "promise/avoid-new": "warn"
+    - "promise/no-new-statics": "error"
+    - "promise/no-return-in-finally": "warn"
+    - "promise/valid-params": "warn"
     </details>
+
   - [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react)
   - [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)
 
 - [`husky`](https://github.com/typicode/husky) for hooks
+
   - [lint-staged](https://github.com/okonet/lint-staged)
 
 - [axe-core/react](https://github.com/dequelabs/axe-core-npm)

@@ -4,7 +4,8 @@
   "description": "Very opinionated next.js typescript boilerplate",
   "keywords": [
     "next.js, cypress",
-    "i18n", "typescript"
+    "i18n",
+    "typescript"
   ],
   "homepage": "https://feehikel-git-main.einselbst.vercel.app",
   "bugs": "https://github.com/einSelbst/feehikel/issues",
@@ -118,7 +119,8 @@
   },
   "pnpm": {
     "overrides": {
-      "fsevents": "^2.3.1"
+      "fsevents": "2.3.2",
+      "prettierx": "0.17"
     }
   },
   "browserslist": [
