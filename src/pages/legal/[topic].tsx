@@ -45,8 +45,9 @@ const _Topic = (): JSX.Element => {
         languageAlternates={locales?.map((loc: string) => {
           return {
             hrefLang: loc,
-            href: `https://feehikel.vercel.app/${loc}/legal/${firstTopic ||
-              ''}`,
+            href: `https://feehikel.vercel.app/${loc}/legal/${
+              firstTopic || ''
+            }`,
           }
         })}
         openGraph={{
