@@ -51,13 +51,13 @@ jobs:
             ${{ runner.os }}-
 
       - name: Install pnpm
-        if: steps.cache-pnpm-dir.outputs.cache-hit != 'true'
+        # if: steps.cache-pnpm-dir.outputs.cache-hit != 'true'
         run: |
           npm i pnpm@next -g
           pnpm --version
 
       - name: Install dependencies
-        if: steps.cache-pnpm-dir.outputs.cache-hit != 'true'
+        # if: steps.cache-pnpm-dir.outputs.cache-hit != 'true'
         run: pnpm install --prefer-frozen-lockfile
 
       - name: Run Eslint
