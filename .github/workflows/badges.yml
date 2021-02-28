@@ -1,4 +1,4 @@
-name: badges
+name: Update Badges
 on:
   push:
     # update README badge only if the README, package.lock,
@@ -60,7 +60,7 @@ jobs:
 
       - name: Update version badges 🏷
         # run: npm run update:badges
-        run: npx update-badge react typescript cypress jest eslint
+        run: npx update-badge react typescript cypress jest eslint tailwindcss
 
       # commit any changed files
       # https://github.com/mikeal/publish-to-github-action
