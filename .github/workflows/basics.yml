@@ -36,7 +36,10 @@ jobs:
         env:
           cache-name: cache-pnpm-store
         with:
-          path: ~/.pnpm-store
+          path: |
+            ~/.pnpm-store
+            node_modules
+            */*/node_modules
           key: ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-
@@ -49,7 +52,7 @@ jobs:
           pnpm --version
 
       - name: Install dependencies
-        # if: steps.cache-pnpm-dir.outputs.cache-hit != 'true'
+        if: steps.cache-pnpm-dir.outputs.cache-hit != 'true'
         run: pnpm install --prefer-frozen-lockfile
 
       - name: Run prettier
