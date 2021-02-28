@@ -15,26 +15,37 @@ jobs:
   build:
     name: Badges
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout 🛎
-        uses: actions/checkout@v2
+      - name: Checkout Repo
+        uses: actions/checkout@main
         with:
           ref: ${{ github.event.client_payload.ref }}
 
-      - name: install pnpm
-        run: |
-          npm install pnpm@next -g
-          pnpm --version
-
-      - name: Cache pnpm directory
-        id: cache-pnpm-dir
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules
+      - name: Use Node.js ${{ matrix.node-version }}.x
+        uses: actions/setup-node@main
         with:
-          path: node_modules
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: ${{ runner.os }}-pnpm-
+          node-version: ${{ matrix.node-version }}
+          check-latest: true
+
+      - name: Cache ~/.pnpm-store
+        id: cache-pnpm-dir
+        uses: actions/cache@main
+        env:
+          cache-name: cache-pnpm-store
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-${{ matrix.node-version }}-build-
+            ${{ runner.os }}-
+
+      - name: Install pnpm
+        if: steps.cache-pnpm-dir.outputs.cache-hit != 'true'
+        run: |
+          npm i pnpm@next -g
+          pnpm --version
 
       - name: Install all dependencies
         if: steps.cache-pnpm-dir.outputs.cache-hit != 'true'
