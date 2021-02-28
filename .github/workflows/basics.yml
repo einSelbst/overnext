@@ -44,7 +44,6 @@ jobs:
             ${{ runner.os }}-
 
       - name: Install pnpm
-        if: steps.cache-pnpm-dir.outputs.cache-hit != 'true'
         run: |
           npm i pnpm@next -g
           pnpm --version
@@ -58,6 +57,9 @@ jobs:
 
       - name: Run eslint
         run: pnpm lint
+
+      - name: Run type-check
+        run: pnpm type-check
 
       - name: Run tests
         run: pnpm test
