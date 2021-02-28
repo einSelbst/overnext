@@ -23,7 +23,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 15.x]
+        node-version: [14.x]
 
     steps:
       - name: Checkout Repo
@@ -31,7 +31,7 @@ jobs:
         with:
           ref: ${{ github.event.client_payload.ref }}
 
-      - name: Use Node.js ${{ matrix.node-version }}.x
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@main
         with:
           node-version: ${{ matrix.node-version }}
