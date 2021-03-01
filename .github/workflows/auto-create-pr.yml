@@ -52,7 +52,7 @@ jobs:
           echo "CI_ACTION=$CI_ACTION"
 
       - id: get-id
-        uses: actions/github-script@0.9.0
+        uses: actions/github-script@v2.0.1
         with:
           script: |
             # const id = context.payload.client_payload.value.split('-')[1]
