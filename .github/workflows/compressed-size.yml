@@ -3,7 +3,7 @@ name: Audits
 
 on:
   pull_request:
-    types: [assigned, opened, synchronize, reopened]
+    types: [ready_for_review]
 
 jobs:
   Compressed-Size:
