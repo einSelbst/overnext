@@ -75,6 +75,25 @@
     - revert: Reverts a previous commit
     </details>
 
+## Scripts
+
+```bash
+pnpm dev           - start dev server
+pnpm build         - build project
+pnpm build:analyze - build project and visualize chunks
+pnpm serve         - build and start project
+pnpm cz            - make new commit
+pnpm release       - make new release
+pnpm docs          - generate source code documentation
+pnpm find:unused   - find unused files
+pnpm type-check    - run typescript compiler
+pnpm lint          - run eslint
+pnpm format        - run prettier
+pnpm test          - run jest
+pnpm test:cy       - open cypress test runner
+pnpm validate      - run tsc, prettier, eslint and the tests
+```
+
 # Code Style
 
 - [Typescript](https://www.typescriptlang.org/) with [tslib](https://www.npmjs.com/package/tslib), [prop-types](https://www.npmjs.com/package/prop-types)
@@ -160,25 +179,6 @@
 - [next-seo](https://github.com/garmeeh/next-seo), for MetaTags, OpenGraph & JsonLD
 - [next-themes](https://github.com/pacocoursey/next-themes), for dark-mode
 - [next-unused](https://github.com/pacocoursey/next-unused)
-
-## Scripts
-
-```bash
-pnpm dev           - start dev server
-pnpm build         - build project
-pnpm build:analyze - build project and visualize chunks
-pnpm serve         - build and start project
-pnpm cz            - make new commit
-pnpm release       - make new release
-pnpm docs          - generate source code documentation
-pnpm find:unused   - find unused files
-pnpm type-check    - run typescript compiler
-pnpm lint          - run eslint
-pnpm format        - run prettier
-pnpm test          - run jest
-pnpm test:cy       - open cypress test runner
-pnpm validate      - run tsc, prettier, eslint and the tests
-```
 
 ## Styling
 
