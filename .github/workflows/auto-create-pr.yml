@@ -51,13 +51,23 @@ jobs:
           echo "CI_WORKFLOW=$CI_WORKFLOW"
           echo "CI_ACTION=$CI_ACTION"
 
+      - id: get-id
+        uses: actions/github-script@0.9.0
+        with:
+          script: |
+            # const id = context.payload.client_payload.value.split('-')[1]
+            const title = join(steps.extract_branch.outputs.branch.split('-'), ' ')
+            core.setOutput('id', title)
+
       - name: Create pull request to main
         uses: thomaseizinger/create-pull-request@master
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           head: ${{ github.ref }}
           base: main
-          title: ${{ steps.extract_branch.outputs.branch }}
+          draft: true
+          title: ${{ steps.get-id.outputs.title }}
+          # title: ${{ steps.extract_branch.outputs.branch }}
           body: |
             Hi!
             This PR was created in response to a new branch.
