@@ -46,7 +46,7 @@ devDependencies:
   jest-watch-typeahead: 0.6.1_jest@26.6.3
   lint-staged: 10.5.4
   next-compose-plugins: 2.2.1
-  next-sitemap: 1.5.8_next@10.0.8-canary.9
+  next-sitemap: 1.5.10_next@10.0.8-canary.9
   next-unused: 0.0.3_typescript@4.2.2
   npm-scripts-info: 0.3.9
   prettier-standard: 16.3.0_typescript@4.2.2
@@ -8064,14 +8064,14 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-5+/fKgMv2hARmMW7DOpykr2iLhl0NgjyELk5yn92iE7z8Se1IS9n3UsFm86hFXIkvMBmVxki8+ckcpjBeyo/hw==
-  /matcher/3.0.0:
+  /matcher/4.0.0:
     dependencies:
       escape-string-regexp: 4.0.0
     dev: true
     engines:
       node: '>=10'
     resolution:
-      integrity: sha512-OkeDaAZ/bQCxeFAozM55PKcKU0yJMPGifLwV4Qgjitu+5MoAfSQN4lsLJeXZ1b8w0x+/Emda6MZgXS1jvsapng==
+      integrity: sha512-S6x5wmcDmsDRRU/c2dkccDwQPXoFczc5+HpQ2lON8pnvHlnvHAHj5WlLVvw6n6vNyHuVugYrFohYxbS+pvFpKQ==
   /md5.js/1.3.5:
     dependencies:
       hash-base: 3.1.0
@@ -8451,10 +8451,10 @@ packages:
       react-dom: ^16.0.0 || ^17.0.0
     resolution:
       integrity: sha512-N3NIISxOV+6XatPdZWRt8L/PkdxX4qpl6s2uQVMYTkteo8hgpHDgs6XZkDzuHaPi10neSZoqQiytsxohTCyEvw==
-  /next-sitemap/1.5.8_next@10.0.8-canary.9:
+  /next-sitemap/1.5.10_next@10.0.8-canary.9:
     dependencies:
       '@corex/deepmerge': 2.5.3
-      matcher: 3.0.0
+      matcher: 4.0.0
       minimist: 1.2.5
       next: 10.0.8-canary.9_24b12e544cf6ca996debdbfad8b93c93
     dev: true
@@ -8462,7 +8462,7 @@ packages:
     peerDependencies:
       next: '*'
     resolution:
-      integrity: sha512-udsvyH+QnD6MYMYtOYIhkeGo9umOmU+jIqf9980OLDofwhJgLDryPcRXaEiw065ajgNWK0pdnQMB5o+gT1e4xw==
+      integrity: sha512-3ytBjg5c0tnLe/kItOovrdFaTqG3RVFSFZx0CcF7gK9eHNhoYrqUP2duylgI7vq0l978uZZWQIfGF6zwKckLjw==
   /next-themes/0.0.12_e413e283167b84be3a0095b2a38428ab:
     dependencies:
       next: 10.0.8-canary.9_24b12e544cf6ca996debdbfad8b93c93
@@ -12527,7 +12527,7 @@ specifiers:
   next: canary
   next-compose-plugins: 2.2.1
   next-seo: 4.20.0
-  next-sitemap: 1.5.8
+  next-sitemap: 1.5.10
   next-themes: 0.0.12
   next-unused: 0.0.3
   npm-scripts-info: 0.3.9
