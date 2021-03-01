@@ -77,4 +77,4 @@ jobs:
         uses: bradennapier/eslint-plus-action@v3.4.2
         with:
           reportIgnoredFiles: true
-          configFile: .eslintrc.json
+          issueSummaryType: full
