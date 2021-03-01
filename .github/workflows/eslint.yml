@@ -45,8 +45,6 @@ jobs:
         with:
           path: |
             ~/.pnpm-store
-            node_modules
-            */*/node_modules
             ${{ github.workspace }}/node_modules
           key: ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
