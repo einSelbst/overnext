@@ -16,36 +16,40 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x]
+        node-version: [14.x, 15.x]
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - name: Checkout Repo
+        uses: actions/checkout@main
         with:
           ref: ${{ github.event.client_payload.ref }}
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@main
         with:
           node-version: ${{ matrix.node-version }}
+          check-latest: true
 
-      - name: install pnpm
-        run: |
-          npm install pnpm@next -g
-          pnpm --version
-
-      - name: pnpm install
-        run: pnpm install
-
-      - name: Cache pnpm directory
+      - name: Cache some stuff
         id: cache-pnpm-dir
-        uses: actions/cache@v2
+        uses: actions/cache@main
         env:
-          cache-name: cache-node-modules
+          cache-name: cache-pnpm-store
         with:
-          path: node_modules
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: ${{ runner.os }}-pnpm-
+          path: |
+            ~/.pnpm-store
+            ${{ github.workspace }}/node_modules
+            ${{ github.workspace }}/.next/cache
+          key: ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-${{ matrix.node-version }}-build-
+            ${{ runner.os }}-
+
+      - name: Install pnpm
+        run: |
+          npm i pnpm@next -g
+          pnpm --version
 
       - name: Install dependencies
         if: steps.cache-pnpm-dir.outputs.cache-hit != 'true'
@@ -56,6 +60,9 @@ jobs:
 
       - name: Run eslint
         run: pnpm lint
+
+      - name: Run type-check
+        run: pnpm type-check
 
       - name: Run tests
         run: pnpm test
