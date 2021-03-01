@@ -81,10 +81,12 @@
 pnpm dev           - start dev server
 pnpm build         - build project
 pnpm build:analyze - build project and visualize chunks
+pnpm start         - kickstart the application
 pnpm serve         - build and start project
 pnpm cz            - make new commit
 pnpm release       - make new release
 pnpm docs          - generate source code documentation
+pnpm info          - display info about scripts
 pnpm find:unused   - find unused files
 pnpm type-check    - run typescript compiler
 pnpm lint          - run eslint
