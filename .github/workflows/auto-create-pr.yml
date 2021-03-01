@@ -56,7 +56,7 @@ jobs:
         with:
           script: |
             # const id = context.payload.client_payload.value.split('-')[1]
-            const title = join(steps.extract_branch.outputs.branch.split('-'), ' ')
+            const title = steps.extract_branch.outputs.branch.split('-')
             core.setOutput('id', title)
 
       - name: Create pull request to main
@@ -66,7 +66,7 @@ jobs:
           head: ${{ github.ref }}
           base: main
           draft: true
-          title: ${{ steps.get-id.outputs.title }}
+          title: ${{ join(steps.get-id.outputs.title, ' ') }}
           # title: ${{ steps.extract_branch.outputs.branch }}
           body: |
             Hi!
