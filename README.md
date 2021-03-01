@@ -1,4 +1,4 @@
-# Overnext - Very Opinionated Next.js Boilerplate
+# Overnext - Very Opinionated Next.js Boilerplate ![tailwindcss version](https://img.shields.io/badge/tailwindcss-2.0.3-brightgreen)
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/einselbst/feehikel/Continuous%20integration?style=flat-square)
 
@@ -19,7 +19,7 @@
     Versions
   </summary>
 
-![next version](https://img.shields.io/badge/next-latest-brightgreen) ![react version](https://img.shields.io/badge/react-17.0.1-brightgreen) ![typescript version](https://img.shields.io/badge/typescript-4.1.3-brightgreen) ![cypress version](https://img.shields.io/badge/cypress-6.2.1-brightgreen) ![jest version](https://img.shields.io/badge/jest-26.6.3-brightgreen) ![eslint version](https://img.shields.io/badge/eslint-7.17.0-brightgreen)
+![next version](https://img.shields.io/badge/next-latest-brightgreen) ![react version](https://img.shields.io/badge/react-17.0.1-brightgreen) ![typescript version](https://img.shields.io/badge/typescript-4.2.2-brightgreen) ![cypress version](https://img.shields.io/badge/cypress-6.5.0-brightgreen) ![jest version](https://img.shields.io/badge/jest-26.6.3-brightgreen) ![eslint version](https://img.shields.io/badge/eslint-7.21.0-brightgreen)
 
 </details>
 
