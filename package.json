@@ -13,7 +13,7 @@
   "private": true,
   "repository": "https://github.com/einSelbst/feehikel",
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
+    "skip-for-now-preinstall": "npx only-allow pnpm",
     "?dev": "echo Start next app in dev mode",
     "dev": "next dev",
     "build": "next build",
