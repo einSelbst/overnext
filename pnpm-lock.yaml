@@ -12,7 +12,7 @@ dependencies:
 devDependencies:
   '@axe-core/react': 4.1.1
   '@babel/core': 7.13.8
-  '@babel/runtime': 7.13.8
+  '@babel/runtime': 7.13.9
   '@commitlint/cli': 12.0.1
   '@commitlint/config-conventional': 12.0.1
   '@cypress/code-coverage': 3.9.2_cypress@6.6.0
@@ -1018,6 +1018,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-CwQljpw6qSayc0fRG1soxHAKs1CnQMOChm4mlQP6My0kf9upVGizj/KhlTTgyUnETmHpcUXjaluNAkteRFuafg==
+  /@babel/runtime/7.13.9:
+    dependencies:
+      regenerator-runtime: 0.13.7
+    dev: true
+    resolution:
+      integrity: sha512-aY2kU+xgJ3dJ1eU6FMB9EH8dIe8dmusF1xEku52joLvw6eAFN0AI+WxCLDnpev2LEejWBAy2sBvBOBAjI3zmvA==
   /@babel/runtime/7.3.1:
     dependencies:
       regenerator-runtime: 0.12.1
@@ -12550,7 +12556,7 @@ packages:
 specifiers:
   '@axe-core/react': 4.1.1
   '@babel/core': 7.13.8
-  '@babel/runtime': 7.13.8
+  '@babel/runtime': 7.13.9
   '@commitlint/cli': 12.0.1
   '@commitlint/config-conventional': 12.0.1
   '@cypress/code-coverage': 3.9.2
