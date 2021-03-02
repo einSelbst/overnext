@@ -1,6 +1,6 @@
 export const config = { amp: true }
 
-function About () {
+function About (): JSX.Element {
   return <h3>My AMP About Page!</h3>
 }
 
