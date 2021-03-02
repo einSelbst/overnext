@@ -70,6 +70,7 @@ if (!isServerRendered() && process.env.NODE_ENV !== 'production') {
 function _app ({ Component, pageProps }: AppProps): JSX.Element {
   const isAmp = useAmp()
 
+  // amp pages doesn't work well with the theme so I had to split it
   return isAmp ? (
     <>
       <DefaultSeo {...SEO} />
