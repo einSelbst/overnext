@@ -70,7 +70,39 @@ if (!isServerRendered() && process.env.NODE_ENV !== 'production') {
 function _app ({ Component, pageProps }: AppProps): JSX.Element {
   const isAmp = useAmp()
 
-  return (
+  return isAmp ? (
+    <>
+      <DefaultSeo {...SEO} />
+      <Head>
+        {!isAmp && (
+          <meta
+            name='viewport'
+            content='initial-scale=1.0, width=device-width'
+          />
+        )}
+        {/* <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86" /> see https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag */}
+        {/* Browsers use this in some areas to help your brand feel more embedded */}
+        <meta name='theme-color' content='#ffffff' />
+        {/* Windows uses these to help your brand feel more embedded */}
+        <meta name='msapplication-TileColor' content='#ffffff' />
+        <meta
+          name='msapplication-TileImage'
+          content='path/to/ms-icon-144x144.png'
+        />
+        {/* Browsers use these as tab and app icons */}
+        <link
+          rel='apple-touch-icon'
+          sizes='180x180'
+          href='path/to/apple-icon-180x180.png'
+        />
+        <link rel='icon' type='image/png' sizes='192x192' href='/favicon.png' />
+        <link rel='icon' href='/favicon.ico' />
+        {/* for PWA: */}
+        {/* <link rel="manifest" href="path/to/manifest.json" crossorigin="use-credentials" /> */}
+      </Head>
+      <Component {...pageProps} />
+    </>
+  ) : (
     <ThemeProvider defaultTheme='system' attribute='class'>
       <DefaultSeo {...SEO} />
       <Head>
