@@ -75,13 +75,6 @@ function _app ({ Component, pageProps }: AppProps): JSX.Element {
     <>
       <DefaultSeo {...SEO} />
       <Head>
-        {!isAmp && (
-          <meta
-            name='viewport'
-            content='initial-scale=1.0, width=device-width'
-          />
-        )}
-        {/* <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86" /> see https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag */}
         {/* Browsers use this in some areas to help your brand feel more embedded */}
         <meta name='theme-color' content='#ffffff' />
         {/* Windows uses these to help your brand feel more embedded */}
@@ -107,12 +100,7 @@ function _app ({ Component, pageProps }: AppProps): JSX.Element {
     <ThemeProvider defaultTheme='system' attribute='class'>
       <DefaultSeo {...SEO} />
       <Head>
-        {!isAmp && (
-          <meta
-            name='viewport'
-            content='initial-scale=1.0, width=device-width'
-          />
-        )}
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
         {/* <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86" /> see https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag */}
         {/* Browsers use this in some areas to help your brand feel more embedded */}
         <meta name='theme-color' content='#ffffff' />

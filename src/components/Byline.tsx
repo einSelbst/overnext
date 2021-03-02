@@ -1,4 +1,4 @@
-const Byline = ({author}:{author: string}): JSX.Element => {
+const Byline = ({ author }: { author: string }): JSX.Element => {
   return (
     <>
       <div className='byline'>By {author}</div>
@@ -7,9 +7,9 @@ const Byline = ({author}:{author: string}): JSX.Element => {
           color: green;
           font-weight: bolder;
         }
-        `}</style>
+      `}</style>
     </>
   )
 }
 
-export default Byline;
+export default Byline

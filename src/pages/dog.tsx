@@ -93,5 +93,4 @@ const Dog = (): JSX.Element => {
   )
 }
 
-
-export default Dog;
+export default Dog
