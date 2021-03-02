@@ -7,6 +7,10 @@ import {
 } from 'next'
 import React from 'react'
 
+export const config = {
+  amp: 'hybrid',
+}
+
 const DynamicPage = (
   props: InferGetStaticPropsType<typeof getStaticProps>
 ): JSX.Element => {

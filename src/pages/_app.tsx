@@ -1,5 +1,6 @@
 import { DefaultSeo } from 'next-seo'
 import { ThemeProvider } from 'next-themes'
+import { useAmp } from 'next/amp'
 import { AppProps /*, App, AppContext */ } from 'next/app'
 import Head from 'next/head'
 import * as React from 'react'
@@ -67,7 +68,35 @@ if (!isServerRendered() && process.env.NODE_ENV !== 'production') {
 }
 
 function _app ({ Component, pageProps }: AppProps): JSX.Element {
-  return (
+  const isAmp = useAmp()
+
+  // amp pages doesn't work well with the theme so I had to split it
+  return isAmp ? (
+    <>
+      <DefaultSeo {...SEO} />
+      <Head>
+        {/* Browsers use this in some areas to help your brand feel more embedded */}
+        <meta name='theme-color' content='#ffffff' />
+        {/* Windows uses these to help your brand feel more embedded */}
+        <meta name='msapplication-TileColor' content='#ffffff' />
+        <meta
+          name='msapplication-TileImage'
+          content='path/to/ms-icon-144x144.png'
+        />
+        {/* Browsers use these as tab and app icons */}
+        <link
+          rel='apple-touch-icon'
+          sizes='180x180'
+          href='path/to/apple-icon-180x180.png'
+        />
+        <link rel='icon' type='image/png' sizes='192x192' href='/favicon.png' />
+        <link rel='icon' href='/favicon.ico' />
+        {/* for PWA: */}
+        {/* <link rel="manifest" href="path/to/manifest.json" crossorigin="use-credentials" /> */}
+      </Head>
+      <Component {...pageProps} />
+    </>
+  ) : (
     <ThemeProvider defaultTheme='system' attribute='class'>
       <DefaultSeo {...SEO} />
       <Head>

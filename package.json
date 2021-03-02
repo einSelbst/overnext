@@ -23,6 +23,8 @@
     "start": "next start",
     "?serve": "echo Build app and start server",
     "serve": "pnpm build && next start",
+    "?servex": "echo Build & run app on public URL",
+    "servex": "pnpm serve & npx localtunnel --port 3000",
     "?cz": "Make new commit",
     "cz": "git-cz",
     "?release": "Prepare a new release",

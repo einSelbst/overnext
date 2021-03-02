@@ -83,6 +83,7 @@ pnpm build         - build project
 pnpm build:analyze - build project and visualize chunks
 pnpm start         - kickstart the application
 pnpm serve         - build and start project
+pnpm servex        - build and start project on public URL
 pnpm cz            - make new commit
 pnpm release       - make new release
 pnpm docs          - generate source code documentation
