@@ -154,21 +154,16 @@ pnpm validate      - run tsc, prettier, eslint and the tests
 - [Cypress](https://www.cypress.io/)
   - [Code Coverage](https://docs.cypress.io/guides/tooling/code-coverage.html)
 
-# Audits
-
-- [Lighthouse](https://github.com/GoogleChrome/lighthouse/)
-- [sonarcloud](https://sonarcloud.io/)
-- [Web Vitals](https://web.dev/vitals/) via [Quickmetrics](https://www.freecodecamp.org/news/how-to-measure-next-js-web-vitals-using-quickmetrics/)
-
 # Next.js Configuration
 
 ## Features
 
 - ['src' Directory](https://nextjs.org/docs/advanced-features/src-directory)
 - [Custom 'App'](https://nextjs.org/docs/advanced-features/custom-app)
-- [Custom 'Document](https://nextjs.org/docs/advanced-features/custom-document)
+- [Custom 'Document'](https://nextjs.org/docs/advanced-features/custom-document)
 - [Custom Error Pages](https://nextjs.org/docs/advanced-features/custom-error-page)
 - [Internationalized Routing](https://nextjs.org/docs/advanced-features/i18n-routing)
+- [AMP Support](https://nextjs.org/docs/advanced-features/amp-support/introduction)
 - [Measuring performance](https://nextjs.org/docs/advanced-features/measuring-performance)
 
 ## Plugins
@@ -203,6 +198,12 @@ pnpm validate      - run tsc, prettier, eslint and the tests
 - Lighthouse on Vercel: Runs a Lighthouse Audit on the Vercel Preview URL
 - Labeler: adds labels to PR's based on the changed files
 - Badges: update badges in README
+
+## Audits
+
+- [Lighthouse](https://github.com/GoogleChrome/lighthouse/)
+- [sonarcloud](https://sonarcloud.io/)
+- [Web Vitals](https://web.dev/vitals/) via [Quickmetrics](https://www.freecodecamp.org/news/how-to-measure-next-js-web-vitals-using-quickmetrics/)
 
 # Deployment
 
