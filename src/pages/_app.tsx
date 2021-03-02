@@ -1,5 +1,6 @@
 import { DefaultSeo } from 'next-seo'
 import { ThemeProvider } from 'next-themes'
+import { useAmp } from 'next/amp'
 import { AppProps /*, App, AppContext */ } from 'next/app'
 import Head from 'next/head'
 import * as React from 'react'
@@ -67,11 +68,18 @@ if (!isServerRendered() && process.env.NODE_ENV !== 'production') {
 }
 
 function _app ({ Component, pageProps }: AppProps): JSX.Element {
+  const isAmp = useAmp()
+
   return (
     <ThemeProvider defaultTheme='system' attribute='class'>
       <DefaultSeo {...SEO} />
       <Head>
-        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+        {!isAmp && (
+          <meta
+            name='viewport'
+            content='initial-scale=1.0, width=device-width'
+          />
+        )}
         {/* <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86" /> see https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag */}
         {/* Browsers use this in some areas to help your brand feel more embedded */}
         <meta name='theme-color' content='#ffffff' />
