@@ -21,7 +21,7 @@
 
 ![next version](https://img.shields.io/badge/next-latest-brightgreen)
 ![react version](https://img.shields.io/badge/react-17.0.1-brightgreen)
-![typescript version](https://img.shields.io/badge/typescript-4.2.2-brightgreen)
+![typescript version](https://img.shields.io/badge/typescript-4.2.3-brightgreen)
 ![cypress version](https://img.shields.io/badge/cypress-6.6.0-brightgreen)
 ![jest version](https://img.shields.io/badge/jest-26.6.3-brightgreen)
 ![eslint version](https://img.shields.io/badge/eslint-7.21.0-brightgreen)
