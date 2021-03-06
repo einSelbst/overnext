@@ -1,6 +1,6 @@
 import { useAmp } from 'next/amp'
 import Head from 'next/head'
-import Byline from '../components/Byline'
+import Byline from 'components/Byline'
 
 export const config = {
   amp: 'hybrid',
