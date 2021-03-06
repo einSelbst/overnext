@@ -1,3 +1,5 @@
+import { ENVIRONMENT } from 'config'
+
 export default {
   title: 'Overnext | Powered by Next.js',
   titleTemplate: '%s - Nice stuff',
@@ -5,7 +7,7 @@ export default {
   openGraph: {
     type: 'website',
     locale: 'en_IE',
-    url: 'https://overnext.vercel.app',
+    url: ENVIRONMENT.SITE_URL,
     site_name: 'Overnext',
   },
   twitter: {
