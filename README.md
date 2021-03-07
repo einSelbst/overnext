@@ -79,6 +79,7 @@
 
 ```bash
 pnpm dev           - start dev server
+pnpm debug         - start dev server and node debugger
 pnpm build         - build project
 pnpm build:analyze - build project and visualize chunks
 pnpm start         - kickstart the application
