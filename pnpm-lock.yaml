@@ -34,7 +34,7 @@ devDependencies:
   eslint-import-resolver-typescript: 2.4.0_7c15dd0cfa14fe651ab374dc3d7ac180
   eslint-plugin-cypress: 2.11.2_eslint@7.21.0
   eslint-plugin-import: 2.22.1_eslint@7.21.0
-  eslint-plugin-jest: 24.1.7_eslint@7.21.0+typescript@4.2.3
+  eslint-plugin-jest: 24.1.8_eslint@7.21.0+typescript@4.2.3
   eslint-plugin-jest-dom: 3.6.5_eslint@7.21.0
   eslint-plugin-jsx-a11y: 6.4.1_eslint@7.21.0
   eslint-plugin-promise: 4.3.1
@@ -4733,7 +4733,7 @@ packages:
       eslint: '>=6.8'
     resolution:
       integrity: sha512-iaJ5aSQghp9u2ciLAseWIVu7X5tW+WwNJwMBDToK4GBfwGXXQJDLt5IBNtm6fHvC3FRzCGwvyNMIG1g5gF+icQ==
-  /eslint-plugin-jest/24.1.7_eslint@7.21.0+typescript@4.2.3:
+  /eslint-plugin-jest/24.1.8_eslint@7.21.0+typescript@4.2.3:
     dependencies:
       '@typescript-eslint/experimental-utils': 4.16.1_eslint@7.21.0+typescript@4.2.3
       eslint: 7.21.0
@@ -4744,7 +4744,7 @@ packages:
       eslint: '>=5'
       typescript: '*'
     resolution:
-      integrity: sha512-p5Dk/Rgiv+ThxguYl96dj7Hqkow09dwSH1G5ALKdREM4pHO1V1xP0N6/myzoquD3z4h+1YPYHzM+g7Fd0xyaXg==
+      integrity: sha512-0ZU0d4ohDF/ibC1RT/VJQY4orrFw0tyaGBWET09yB/V7ilnjKENSPFSGaLp3u0KHGiNDhZZKe+ZbWSAwy2Sffg==
   /eslint-plugin-jsx-a11y/6.4.1_eslint@7.21.0:
     dependencies:
       '@babel/runtime': 7.13.8
@@ -12540,7 +12540,7 @@ specifiers:
   eslint-import-resolver-typescript: 2.4.0
   eslint-plugin-cypress: 2.11.2
   eslint-plugin-import: 2.22.1
-  eslint-plugin-jest: 24.1.7
+  eslint-plugin-jest: 24.1.8
   eslint-plugin-jest-dom: 3.6.5
   eslint-plugin-jsx-a11y: 6.4.1
   eslint-plugin-promise: 4.3.1
