@@ -15,7 +15,9 @@
   "scripts": {
     "skip-for-now-preinstall": "npx only-allow pnpm",
     "?dev": "echo Start next app in dev mode",
-    "dev": "next dev",
+    "dev": "next",
+    "?debug": "echo Start node debugger",
+    "debug": "NODE_OPTIONS='--inspect' next",
     "build": "next build",
     "postbuild": "next-sitemap",
     "build:ssr": "NODE_ENV=production next build",
