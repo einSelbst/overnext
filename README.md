@@ -162,10 +162,10 @@ pnpm validate      - run tsc, prettier, eslint and the tests
 - [Custom 'App'](https://nextjs.org/docs/advanced-features/custom-app)
 - [Custom 'Document'](https://nextjs.org/docs/advanced-features/custom-document)
 - [Custom Error Pages](https://nextjs.org/docs/advanced-features/custom-error-page)
+- [module path aliases](https://nextjs.org/docs/advanced-features/module-path-aliases)
 - [Internationalized Routing](https://nextjs.org/docs/advanced-features/i18n-routing)
 - [AMP Support](https://nextjs.org/docs/advanced-features/amp-support/introduction)
 - [Measuring performance](https://nextjs.org/docs/advanced-features/measuring-performance)
-- not using [module path aliases](https://nextjs.org/docs/advanced-features/module-path-aliases) in favor of [link protocol](https://yarnpkg.com/features/protocols#why-is-the-link-protocol-recommended-over-aliases-for-path-mapping)
 
 ## Plugins
 

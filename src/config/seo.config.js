@@ -1,4 +1,4 @@
-import { ENVIRONMENT } from 'config'
+import { ENVIRONMENT } from './'
 
 export default {
   title: 'Overnext | Powered by Next.js',

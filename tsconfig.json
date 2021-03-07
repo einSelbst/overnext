@@ -11,7 +11,7 @@
     "moduleResolution": "node",
     "noEmit": true,
     "paths": {
-      "config/": ["config/"],
+      "config": ["config/"],
       "components/*": ["components/*"],
       "styles/*": ["styles/*"],
       "utils/*": ["utils/*"]
