@@ -55,10 +55,6 @@
     }
   },
   "dependencies": {
-    "config": "link:./src/config",
-    "components": "link:./src/components",
-    "styles": "link:./src/styles",
-    "utils": "link:./src/utils",
     "autoprefixer": "10.2.5",
     "next": "canary",
     "next-seo": "4.20.0",
