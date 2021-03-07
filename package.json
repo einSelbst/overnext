@@ -7,11 +7,11 @@
     "i18n",
     "typescript"
   ],
-  "homepage": "https://feehikel-git-main.einselbst.vercel.app",
-  "bugs": "https://github.com/einSelbst/feehikel/issues",
+  "homepage": "https://overnext.vercel.app",
+  "bugs": "https://github.com/einSelbst/overnext/issues",
   "author": "einSelbst",
   "private": true,
-  "repository": "https://github.com/einSelbst/feehikel",
+  "repository": "https://github.com/einSelbst/overnext",
   "scripts": {
     "skip-for-now-preinstall": "npx only-allow pnpm",
     "?dev": "echo Start next app in dev mode",
@@ -116,7 +116,7 @@
     "fsevents": "2.3.2"
   },
   "engines": {
-    "node": ">=12",
+    "node": ">=14",
     "pnpm": ">=5"
   },
   "pnpm": {

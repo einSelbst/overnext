@@ -1,6 +1,6 @@
 # Overnext - Very Opinionated Next.js Boilerplate
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/einselbst/feehikel/Continuous%20integration?style=flat-square)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/einselbst/overnext/Continuous%20integration?style=flat-square)
 
 <details>
   <summary>
@@ -34,15 +34,15 @@
     Metrics
   </summary>
 
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=bugs)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel)
-[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=code_smells)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel)
-[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=ncloc)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=alert_status)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel)
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=security_rating)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel)
-[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=sqale_index)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel)
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_overnext&metric=bugs)](https://sonarcloud.io/dashboard?id=einSelbst_overnext)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_overnext&metric=code_smells)](https://sonarcloud.io/dashboard?id=einSelbst_overnext)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_overnext&metric=ncloc)](https://sonarcloud.io/dashboard?id=einSelbst_overnext)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_overnext&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=einSelbst_overnext)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_overnext&metric=alert_status)](https://sonarcloud.io/dashboard?id=einSelbst_overnext)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_overnext&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=einSelbst_overnext)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_overnext&metric=security_rating)](https://sonarcloud.io/dashboard?id=einSelbst_overnext)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_overnext&metric=sqale_index)](https://sonarcloud.io/dashboard?id=einSelbst_overnext)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_overnext&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=einSelbst_overnext)
 
 </details>
 
@@ -162,6 +162,7 @@ pnpm validate      - run tsc, prettier, eslint and the tests
 - [Custom 'App'](https://nextjs.org/docs/advanced-features/custom-app)
 - [Custom 'Document'](https://nextjs.org/docs/advanced-features/custom-document)
 - [Custom Error Pages](https://nextjs.org/docs/advanced-features/custom-error-page)
+- [module path aliases](https://nextjs.org/docs/advanced-features/module-path-aliases)
 - [Internationalized Routing](https://nextjs.org/docs/advanced-features/i18n-routing)
 - [AMP Support](https://nextjs.org/docs/advanced-features/amp-support/introduction)
 - [Measuring performance](https://nextjs.org/docs/advanced-features/measuring-performance)
@@ -247,11 +248,9 @@ pnpm validate      - run tsc, prettier, eslint and the tests
 
 # ToDo
 
-- [ ] fix running of checks on pr create
 - [ ] cypress watch mode
 - [ ] cypress a11y plugin
 - [ ] [wdyr](https://github.com/welldone-software/why-did-you-render/issues/113) vs preact [1](https://github.com/preactjs/preact/issues/2760)
-- [ ] https://github.com/vercel/next.js/tree/canary/examples/with-env-from-next-config-js
 - [ ] automate typedoc generation
 - [ ] maybe [apiDoc](https://apidocjs.com/)
 

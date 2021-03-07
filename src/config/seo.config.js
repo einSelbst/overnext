@@ -1,16 +1,18 @@
+import { ENVIRONMENT } from './'
+
 export default {
-  title: 'Feehikel | Powered by Next.js',
-  titleTemplate: '%s - Nice feehicles',
+  title: 'Overnext | Powered by Next.js',
+  titleTemplate: '%s - Nice stuff',
   description: 'Basically nothing but DX',
   openGraph: {
     type: 'website',
     locale: 'en_IE',
-    url: 'https://feehikel.vercel.org',
-    site_name: 'Feehikel',
+    url: ENVIRONMENT.SITE_URL,
+    site_name: 'Overnext',
   },
   twitter: {
-    handle: '@feehikel',
-    site: '@feehikel',
+    handle: '@overnext',
+    site: '@overnext',
     cardType: 'summary_large_image',
   },
 }

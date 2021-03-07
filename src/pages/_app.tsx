@@ -5,8 +5,8 @@ import { AppProps /*, App, AppContext */ } from 'next/app'
 import Head from 'next/head'
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import '@styles/main.css'
-import SEO from '@config/seo.config'
+import 'styles/main.css'
+import { SEO } from 'config'
 
 /**
  * Web Vitals

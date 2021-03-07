@@ -1,6 +1,7 @@
 import { useAmp } from 'next/amp'
 import Head from 'next/head'
-import Byline from '../components/Byline'
+import Link from 'next/link'
+import Byline from 'components/Byline'
 
 export const config = {
   amp: 'hybrid',
@@ -10,18 +11,24 @@ const Dog = (): JSX.Element => {
   const isAmp = useAmp()
 
   return (
-    <div>
+    <main>
       <Head>
         <title>The Dog</title>
       </Head>
       <h1>The Dog (Hybrid AMP Page)</h1>
       <Byline author='Meow Meow Fuzzyface' />
       <p>
-        <a href={isAmp ? '/dog' : '/dog?amp=1'}>
-          {isAmp ? 'View Non-AMP' : 'View AMP'} Version
-        </a>
+        <Link href={isAmp ? '/dog' : '/dog?amp=1'}>
+          <a href={isAmp ? '/dog' : '/dog?amp=1'}>
+            {isAmp ? 'View Non-AMP' : 'View AMP'} Version
+          </a>
+        </Link>
       </p>
       <p className='caption'>Woooooooooooof</p>
+      <p>
+        The redirect from the non-amp version to the amp version is not working
+        when using LINK but without using LINK I don&apos;t get it localized...
+      </p>
       <p>
         Wafer donut candy soufflé{' '}
         <a href={isAmp ? '/?amp=1' : '/'}>lemon drops</a> icing. Marzipan gummi
@@ -89,7 +96,7 @@ const Dog = (): JSX.Element => {
         dragée ice cream biscuit. Pie candy canes muffin candy canes ice cream
         tiramisu.
       </p>
-    </div>
+    </main>
   )
 }
 
