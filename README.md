@@ -248,11 +248,9 @@ pnpm validate      - run tsc, prettier, eslint and the tests
 
 # ToDo
 
-- [ ] fix running of checks on pr create
 - [ ] cypress watch mode
 - [ ] cypress a11y plugin
 - [ ] [wdyr](https://github.com/welldone-software/why-did-you-render/issues/113) vs preact [1](https://github.com/preactjs/preact/issues/2760)
-- [ ] https://github.com/vercel/next.js/tree/canary/examples/with-env-from-next-config-js
 - [ ] automate typedoc generation
 - [ ] maybe [apiDoc](https://apidocjs.com/)
 
