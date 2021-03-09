@@ -14,10 +14,12 @@ export const config = {
 const DynamicPage = (
   props: InferGetStaticPropsType<typeof getStaticProps>
 ): JSX.Element => {
+  /* const locale = props.locale ?? 'unspecified' */
+
   return (
     <div>
       <h1>DynamicPage Component {props.dynamic}</h1>
-      <h2>Locale: {props.locale}</h2>
+      {/* <h2>Locale: {props.locale}</h2> */}
     </div>
   )
 }
@@ -31,6 +33,7 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   //const res = await fetch(`https://.../posts?locale=${locale}`)
   //const posts = await res.json()
 
+  console.log("locale is " + locale);
   const res = await Promise.resolve('Hello')
 
   return {
@@ -50,6 +53,10 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
  * combine paths with locales so that all pages can be pre-rendered
  */
 export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
+
+  /* console.log(locale) */
+  console.log(locales)
+
   await Promise.resolve('async needs await')
   // the paths would come from an api, but to have something to work with:
   let paths = Array.from({ length: 10 }, (_, index) => ({
@@ -68,12 +75,13 @@ export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
   }
 
   return {
-    paths: paths,
-    /* paths: [
-     *   { params: { dynamic: 'page-1' } },
-     *   { params: { dynamic: 'page-1' }, locale: 'en' },
-     *   { params: { dynamic: 'page-1' }, locale: 'fr' },
-     * ], */
+    /* paths: paths, */
+    paths: [
+      { params: { dynamic: 'page-11' } },
+      ...paths
+      /* { params: { dynamic: 'page-1' }, locale: 'en' }, */
+      /* { params: { dynamic: 'page-1' }, locale: 'fr' }, */
+    ],
     // Fallback shouldn't be enabled here or otherwise this route
     // will catch every page, even 404s, and we don't want that
     fallback: false,
