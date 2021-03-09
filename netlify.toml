@@ -1,6 +1,18 @@
 [build]
-  command   = "npm run build"
-  publish   = ".next"
+  command = "pnpm run build"
+  # command = "pnpm run build || ( npm install pnpm && pnpm run build )"
+  publish = ".next"
+
+[build.environment]
+  NPM_FLAGS="--prefix=/dev/null"
+
+[context.production.environment]
+  NEXT_SERVERLESS = "true"
+  NODE_ENV = "production"
+
+[context.server.environment]
+  NEXT_SERVERLESS = "false"
+  NODE_ENV = "production"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
@@ -8,7 +20,6 @@
 # pa11y config
 [[plugins]]
   package = "netlify-plugin-a11y"
-
 
   # all inputs are optional, we just show you the defaults below
   [plugins.inputs]
@@ -38,11 +49,3 @@
 
   [[plugins.inputs.audits]]
   path = "/"
-
-[context.production.environment]
-NEXT_SERVERLESS = "true"
-NODE_ENV = "production"
-
-[context.server.environment]
-NEXT_SERVERLESS = "false"
-NODE_ENV = "production"
