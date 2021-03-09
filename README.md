@@ -35,15 +35,15 @@
     Metrics
   </summary>
 
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_overnext&metric=bugs)](https://sonarcloud.io/dashboard?id=einSelbst_overnext)
-[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_overnext&metric=code_smells)](https://sonarcloud.io/dashboard?id=einSelbst_overnext)
-[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_overnext&metric=ncloc)](https://sonarcloud.io/dashboard?id=einSelbst_overnext)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_overnext&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=einSelbst_overnext)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_overnext&metric=alert_status)](https://sonarcloud.io/dashboard?id=einSelbst_overnext)
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_overnext&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=einSelbst_overnext)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_overnext&metric=security_rating)](https://sonarcloud.io/dashboard?id=einSelbst_overnext)
-[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_overnext&metric=sqale_index)](https://sonarcloud.io/dashboard?id=einSelbst_overnext)
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_overnext&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=einSelbst_overnext)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=bugs)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=code_smells)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=ncloc)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=alert_status)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=security_rating)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=sqale_index)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel)
 
 </details>
 
@@ -214,7 +214,9 @@ pnpm validate      - run tsc, prettier, eslint and the tests
 - [Vercel](https://vercel.com/import?filter=next.js)
   - override "Install Command": `rm -rf node_modules && npx pnpm i` (if pnpm should be used)
   - override "Build Command": `next build && npx pnpm run postbuild` (optional)
-- ## [Netlify](https://www.netlify.com/blog/2020/11/30/how-to-deploy-next.js-sites-to-netlify/)
+- [Netlify](https://www.netlify.com/blog/2020/11/30/how-to-deploy-next.js-sites-to-netlify/)
+  - `netlify.toml`
+  - netlify plugins
 
 ## Project Automation / Labeling Ideas
 
