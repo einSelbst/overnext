@@ -1,8 +1,8 @@
 dependencies:
   autoprefixer: 10.2.5_postcss@8.2.7
-  next: 10.0.9-canary.2_5347ba9dae72bc17e95cc7756ff465f1
-  next-seo: 4.20.0_76229c127561f7a8c37870d0a3a7284b
-  next-themes: 0.0.12_76229c127561f7a8c37870d0a3a7284b
+  next: 10.0.9-canary.3_5347ba9dae72bc17e95cc7756ff465f1
+  next-seo: 4.20.0_9a207e3235657fac80c6b109c256c217
+  next-themes: 0.0.12_9a207e3235657fac80c6b109c256c217
   postcss: 8.2.7
   prop-types: 15.7.2
   react: 17.0.1
@@ -46,7 +46,7 @@ devDependencies:
   jest-watch-typeahead: 0.6.1_jest@26.6.3
   lint-staged: 10.5.4
   next-compose-plugins: 2.2.1
-  next-sitemap: 1.5.16_next@10.0.9-canary.2
+  next-sitemap: 1.5.16_next@10.0.9-canary.3
   next-unused: 0.0.3_typescript@4.2.3
   npm-scripts-info: 0.3.9
   prettier-standard: 16.3.0_typescript@4.2.3
@@ -78,12 +78,12 @@ packages:
       integrity: sha512-XwhMezqRw5/pEXMW4P19RCA/jx4ZBD4ZLdOoU6i9GWX1i0UlWF2apUZiiE6IrbIx9U4NppsiWij8O1Wu6TU5wQ==
   /@babel/code-frame/7.12.11:
     dependencies:
-      '@babel/highlight': 7.13.8
+      '@babel/highlight': 7.13.10
     resolution:
       integrity: sha512-Zt1yodBx1UcyiePMSkWnU4hPqhwq7hGi2nFL1LeA3EUl+q2LQx16MISgJ0+z7dnmgvP9QtIleuETGOiOH1RcIw==
   /@babel/code-frame/7.12.13:
     dependencies:
-      '@babel/highlight': 7.13.8
+      '@babel/highlight': 7.13.10
     dev: true
     resolution:
       integrity: sha512-HV1Cm0Q3ZrpCR93tkWOYiuYIgLxZXZFVG2VgK+MBWjUqZTundupbfx2aXarXuw5Ko5aMcjtJgbSs4vUGBS5v6g==
@@ -368,13 +368,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-4VO883+MWPDUVRF3PhiLBUFHoX/bsLTGFpFK/HqvvfBZz2D57u9XzPVNFVBTc0PW/CWR9BXTOKt8NF4DInUHcQ==
-  /@babel/highlight/7.13.8:
+  /@babel/highlight/7.13.10:
     dependencies:
       '@babel/helper-validator-identifier': 7.12.11
       chalk: 2.4.2
       js-tokens: 4.0.0
     resolution:
-      integrity: sha512-4vrIhfJyfNf+lCtXC2ck1rKSzDwciqF7IWFhXXrSOUC2O5DrVp+w4c6ed4AllTxhTkUP5x2tYj41VaxdVMMRDw==
+      integrity: sha512-5aPpe5XQPzflQrFwL1/QoeHkP2MsA4JCntcXHRhEsdsfPVkvPi2w7Qix4iV7t5S/oC9OodGrggd8aco1g3SZFg==
   /@babel/parser/7.12.11:
     dev: true
     engines:
@@ -1765,19 +1765,19 @@ packages:
     dev: true
     resolution:
       integrity: sha512-FXm7FnkUzn8d67SNVBnp5kcX7H2jlxYfl6PJl8jw13kDXKSnYLDC699sxw3kAPilj/A6qG8kYeoJKcSr3D7sGw==
-  /@next/env/10.0.9-canary.2:
+  /@next/env/10.0.9-canary.3:
     dev: false
     resolution:
-      integrity: sha512-H6w7kJY+aQisKmghz6godMRGDon8VxzhsbLa6jUMSGcQdmrd9XcnixOI1/5C4myKK+KNfRHMalh2PREy5jkBNA==
+      integrity: sha512-cnKmrE3qM7nWCb1cFzG/NtUP+sfZ9KhwGYgGPA0kLF3nE4g8ozQ1k83daI4Dx27OfjNoMt/gD5pVoFbx5KVaRw==
   /@next/eslint-plugin-next/10.0.8:
     dev: true
     resolution:
       integrity: sha512-9tT7Owzs+9oOEtDpo4pyggA49TME9hD4CYLk8hr0ebXUyT6EVuW4UjIWNrqe99Wzt1+Gh9DwflC4/xKBfz6u5A==
-  /@next/polyfill-module/10.0.9-canary.2:
+  /@next/polyfill-module/10.0.9-canary.3:
     dev: false
     resolution:
-      integrity: sha512-MnOyjPvzJ4g94RIUB3HnZqLOrkTdVvDeVrh8/XJ1Iih+J0I7p+1Pz6lMop7DCcf4OZPn0cgCD0Pq2iIxatVS1w==
-  /@next/react-dev-overlay/10.0.9-canary.2_react-dom@17.0.1+react@17.0.1:
+      integrity: sha512-8pb4RTUewyygjgSkTSixE1wHHsc+7bbohKwj7dt29hk1tZt79cZHSKFRBsGlhb+K/GtrnxsAY47aKz3UOTrhCQ==
+  /@next/react-dev-overlay/10.0.9-canary.3_react-dom@17.0.1+react@17.0.1:
     dependencies:
       '@babel/code-frame': 7.12.11
       anser: 1.4.9
@@ -1797,8 +1797,8 @@ packages:
       react: ^16.9.0 || ^17
       react-dom: ^16.9.0 || ^17
     resolution:
-      integrity: sha512-ARAiOORau6bMswgt8yw0kki+hDuZedofVQfctOSL8+jMUXfLswdbauw/1LZMaA+c316qsn7pL3OEG7Lg4v5fNg==
-  /@next/react-refresh-utils/10.0.9-canary.2_react-refresh@0.8.3:
+      integrity: sha512-prummKRuNiIxg0oKkyS/BgsZYlHLNclqUZ/tVpIEjssaaI8HjHlgvoRxyXGs3d8MBD3CLkCePN3zNkc9hyHP5Q==
+  /@next/react-refresh-utils/10.0.9-canary.3_react-refresh@0.8.3:
     dependencies:
       react-refresh: 0.8.3
     dev: false
@@ -1809,7 +1809,7 @@ packages:
       webpack:
         optional: true
     resolution:
-      integrity: sha512-yGKeW6VKIsJQe7ZiDONOcMvc0FK+FcqABfICY35ssEuAY+2djFVQwN6lcuAlUxdaMaO99jPUGuiuEGycDKRfBw==
+      integrity: sha512-1O+NLINhnIy+ajw3sTAxacFOIlMpQkpP+R2AS8ynggIRQp4Rt4NDailmRQvDljz0Q/1e+zx0qRAVyoRTALXKvw==
   /@nodelib/fs.scandir/2.1.4:
     dependencies:
       '@nodelib/fs.stat': 2.0.4
@@ -3090,7 +3090,7 @@ packages:
     dependencies:
       caniuse-lite: 1.0.30001197
       colorette: 1.2.2
-      electron-to-chromium: 1.3.682
+      electron-to-chromium: 1.3.683
       escalade: 3.1.1
       node-releases: 1.1.71
     dev: false
@@ -3103,7 +3103,7 @@ packages:
     dependencies:
       caniuse-lite: 1.0.30001197
       colorette: 1.2.2
-      electron-to-chromium: 1.3.682
+      electron-to-chromium: 1.3.683
       escalade: 3.1.1
       node-releases: 1.1.71
     engines:
@@ -4696,9 +4696,9 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-M9wIMFx96vq0R4F+gRpY3o2exzb8hEj/n9S8unZtHSvYjibBp/iMufSzvmOcV/laG0ZtuTVGtiJggPOSW2r93g==
-  /electron-to-chromium/1.3.682:
+  /electron-to-chromium/1.3.683:
     resolution:
-      integrity: sha512-zok2y37qR00U14uM6qBz/3iIjWHom2eRfC2S1StA0RslP7x34jX+j4mxv80t8OEOHLJPVG54ZPeaFxEI7gPrwg==
+      integrity: sha512-8mFfiAesXdEdE0DhkMKO7W9U6VU/9T3VTWwZ+4g84/YMP4kgwgFtQgUxuu7FUMcvSeKSNhFQNU+WZ68BQTLT5A==
   /elegant-spinner/1.0.1:
     dev: true
     engines:
@@ -8690,9 +8690,9 @@ packages:
     dev: true
     resolution:
       integrity: sha512-OjJ+fV15FXO2uQXQagLD4C0abYErBjyjE0I0FHpOEIB8upw0hg1ldFP6cqHTJBH1cZqy96OeR3u1dJ+Ez2D4Bg==
-  /next-seo/4.20.0_76229c127561f7a8c37870d0a3a7284b:
+  /next-seo/4.20.0_9a207e3235657fac80c6b109c256c217:
     dependencies:
-      next: 10.0.9-canary.2_5347ba9dae72bc17e95cc7756ff465f1
+      next: 10.0.9-canary.3_5347ba9dae72bc17e95cc7756ff465f1
       react: 17.0.1
       react-dom: 17.0.1_react@17.0.1
     dev: false
@@ -8702,21 +8702,21 @@ packages:
       react-dom: ^16.0.0 || ^17.0.0
     resolution:
       integrity: sha512-N3NIISxOV+6XatPdZWRt8L/PkdxX4qpl6s2uQVMYTkteo8hgpHDgs6XZkDzuHaPi10neSZoqQiytsxohTCyEvw==
-  /next-sitemap/1.5.16_next@10.0.9-canary.2:
+  /next-sitemap/1.5.16_next@10.0.9-canary.3:
     dependencies:
       '@corex/deepmerge': 2.5.3
       matcher: 4.0.0
       minimist: 1.2.5
-      next: 10.0.9-canary.2_5347ba9dae72bc17e95cc7756ff465f1
+      next: 10.0.9-canary.3_5347ba9dae72bc17e95cc7756ff465f1
     dev: true
     hasBin: true
     peerDependencies:
       next: '*'
     resolution:
       integrity: sha512-MQ527OpEV5Jg7dH8gdyYJd4JN/VajeMzjmbOFis6UX7EIuJ067JgIrGoo/pwNlKTIsQ76eekPxaO9ThBIa1llA==
-  /next-themes/0.0.12_76229c127561f7a8c37870d0a3a7284b:
+  /next-themes/0.0.12_9a207e3235657fac80c6b109c256c217:
     dependencies:
-      next: 10.0.9-canary.2_5347ba9dae72bc17e95cc7756ff465f1
+      next: 10.0.9-canary.3_5347ba9dae72bc17e95cc7756ff465f1
       react: 17.0.1
       react-dom: 17.0.1_react@17.0.1
     dev: false
@@ -8736,14 +8736,14 @@ packages:
       typescript: '*'
     resolution:
       integrity: sha512-LrjyGL6gq3v7eOL2KNkmciDZCpJjt9QjEftQEr4oZ8o5zwoEvLqfn7mgv+9Qv+i39fDrEYlF436zfwpBHp7ahg==
-  /next/10.0.9-canary.2_5347ba9dae72bc17e95cc7756ff465f1:
+  /next/10.0.9-canary.3_5347ba9dae72bc17e95cc7756ff465f1:
     dependencies:
       '@babel/runtime': 7.12.5
       '@hapi/accept': 5.0.1
-      '@next/env': 10.0.9-canary.2
-      '@next/polyfill-module': 10.0.9-canary.2
-      '@next/react-dev-overlay': 10.0.9-canary.2_react-dom@17.0.1+react@17.0.1
-      '@next/react-refresh-utils': 10.0.9-canary.2_react-refresh@0.8.3
+      '@next/env': 10.0.9-canary.3
+      '@next/polyfill-module': 10.0.9-canary.3
+      '@next/react-dev-overlay': 10.0.9-canary.3_react-dom@17.0.1+react@17.0.1
+      '@next/react-refresh-utils': 10.0.9-canary.3_react-refresh@0.8.3
       '@opentelemetry/api': 0.14.0
       ast-types: 0.13.2
       browserslist: 4.16.1
@@ -8796,7 +8796,7 @@ packages:
       sass:
         optional: true
     resolution:
-      integrity: sha512-XwGvLfAzjTh8lN5l4P5c0jSqqDpfn7pCs3HnatiZM2OikPFBHm6LMkmm6ANIqY/0K3aTzUej5aFJo8KLV1wE3w==
+      integrity: sha512-N5yzb8x16Bl6ZIkV95reIdLaqOOGoMQxhnQj5pdADQnB5D5mTUseYMnjeHgnj06FcoSawCA3i5QlEy7ZCrms7g==
   /nice-try/1.0.5:
     dev: true
     resolution:
@@ -12794,7 +12794,7 @@ specifiers:
   jest: 26.6.3
   jest-watch-typeahead: 0.6.1
   lint-staged: 10.5.4
-  next: canary
+  next: 10.0.9-canary.3
   next-compose-plugins: 2.2.1
   next-seo: 4.20.0
   next-sitemap: 1.5.16
