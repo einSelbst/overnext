@@ -15,7 +15,9 @@
   "scripts": {
     "skip-for-now-preinstall": "npx only-allow pnpm",
     "?dev": "echo Start next app in dev mode",
-    "dev": "next dev",
+    "dev": "next",
+    "?debug": "echo Start node debugger",
+    "debug": "NODE_OPTIONS='--inspect' next",
     "build": "next build",
     "postbuild": "next-sitemap",
     "build:ssr": "NODE_ENV=production next build",
@@ -56,7 +58,7 @@
   },
   "dependencies": {
     "autoprefixer": "10.2.5",
-    "next": "canary",
+    "next": "10.0.9-canary.3",
     "next-seo": "4.20.0",
     "next-themes": "0.0.12",
     "postcss": "8.2.7",

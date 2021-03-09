@@ -6,7 +6,6 @@ on:
 
 jobs:
   lighthouse:
-    if: false
     timeout-minutes: 30
     runs-on: ubuntu-latest
     steps:

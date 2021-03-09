@@ -1,6 +1,7 @@
 # Overnext - Very Opinionated Next.js Boilerplate
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/einselbst/overnext/Continuous%20integration?style=flat-square)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/df1fbbbc-8ce1-48ab-8ad4-5ce0f308aa13/deploy-status)](https://app.netlify.com/sites/overnext/deploys)
 
 <details>
   <summary>
@@ -79,6 +80,7 @@
 
 ```bash
 pnpm dev           - start dev server
+pnpm debug         - start dev server and node debugger
 pnpm build         - build project
 pnpm build:analyze - build project and visualize chunks
 pnpm start         - kickstart the application
@@ -212,7 +214,7 @@ pnpm validate      - run tsc, prettier, eslint and the tests
 - [Vercel](https://vercel.com/import?filter=next.js)
   - override "Install Command": `rm -rf node_modules && npx pnpm i` (if pnpm should be used)
   - override "Build Command": `next build && npx pnpm run postbuild` (optional)
-- ToDo: Netlify
+- ## [Netlify](https://www.netlify.com/blog/2020/11/30/how-to-deploy-next.js-sites-to-netlify/)
 
 ## Project Automation / Labeling Ideas
 
