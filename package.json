@@ -20,6 +20,8 @@
     "debug": "NODE_OPTIONS='--inspect' next",
     "prebuild": "test \"$CI\" = true && npx pnpm install -r --store=node_modules/.pnpm-store || echo skiping pnpm install",
     "build": "next build",
+    "prebuild:netlify": "npx pnpm i",
+    "build:netlify": "npx pnpm build",
     "postbuild": "next-sitemap",
     "build:ssr": "NODE_ENV=production next build",
     "build:analyze": "ANALYZE=true next build",
