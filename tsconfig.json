@@ -13,6 +13,7 @@
     "paths": {
       "config": ["config/"],
       "components/*": ["components/*"],
+      "layouts/*": ["layouts/*"],
       "styles/*": ["styles/*"],
       "utils/*": ["utils/*"]
     },

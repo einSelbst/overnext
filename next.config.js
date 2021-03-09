@@ -11,6 +11,7 @@ const { withPlugins, optional } = require('next-compose-plugins')
 const nextConfiguration = {
   poweredByHeader: false,
   reactStrictMode: true,
+  target: 'serverless',
   i18n: {
     locales: ['en', 'de', 'es', 'fr', 'it'],
     defaultLocale: 'en',
@@ -20,7 +21,6 @@ const nextConfiguration = {
     // modify the `config` here
     return config
   },
-  target: 'serverless',
 }
 
 const plugins = [[optional(() => withBundleAnalyzer)]]

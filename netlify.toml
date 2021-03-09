@@ -1,14 +1,52 @@
 [build]
-    command   = "npm run build"
-    publish   = ".next"
+  command = "npm run build:netlify"
+  # command = "pnpm run build || ( npm install pnpm && pnpm run build )"
+  publish = ".next"
+
+[build.environment]
+  NPM_FLAGS="--prefix=/dev/null"
+
+[context.production.environment]
+  NEXT_SERVERLESS = "true"
+  NODE_ENV = "production"
+
+[context.server.environment]
+  NEXT_SERVERLESS = "false"
+  NODE_ENV = "production"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-[context.production.environment]
-NEXT_SERVERLESS = "true"
-NODE_ENV = "production"
+[[plugins]]
+  package = "netlify-plugin-cache-nextjs"
 
-[context.server.environment]
-NEXT_SERVERLESS = "false"
-NODE_ENV = "production"
+# pa11y config
+[[plugins]]
+  package = "netlify-plugin-a11y"
+
+  # all inputs are optional, we just show you the defaults below
+  [plugins.inputs]
+
+  # required config
+  checkPaths = [
+    '/',
+  ]
+
+  # # optional config
+  # ignoreDirectories = ['/admin']  # explicitly ignore these directories
+
+  # resultMode = "warn" # is "error" by default
+
+# lighthouse config
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+
+# optional, fails build when a category is below a threshold
+  [plugins.inputs.thresholds]
+    performance = 0.9
+    accessibility = 0.9
+    best-practices = 0.9
+    seo = 0.8
+
+  [[plugins.inputs.audits]]
+  path = "/"

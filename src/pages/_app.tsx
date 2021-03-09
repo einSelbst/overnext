@@ -6,7 +6,7 @@ import Head from 'next/head'
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import 'styles/main.css'
-import { SEO } from 'config'
+import { SEO, ENV } from 'config'
 
 /**
  * Web Vitals
@@ -45,14 +45,6 @@ const sendMetric = async ({
 }
 
 /**
- * Determines if we are running on server or in the client.
- * @return {boolean} true if running on server
- */
-function isServerRendered (): boolean {
-  return typeof window === 'undefined'
-}
-
-/**
  * Conditionally inject axe into the page.
  * This only happens outside of production and in a browser (not SSR).
  * @see https://github.com/dequelabs/axe-core-npm/tree/develop/packages/react/examples/next.js
@@ -60,7 +52,9 @@ function isServerRendered (): boolean {
  * TODO: why not use next.js dynamic import?
  */
 // if (typeof window !== 'undefined' && process.env.NODE_ENV !== 'production') {
-if (!isServerRendered() && process.env.NODE_ENV !== 'production') {
+if (!ENV.SERVER_RENDERED && !ENV.PRODUCTION) {
+  // eslint-disable-next-line no-console
+  console.log('loding axe')
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-var-requires
   const axe = require('@axe-core/react')
   // eslint-disable-next-line @typescript-eslint/no-unsafe-call
