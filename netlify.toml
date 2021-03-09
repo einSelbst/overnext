@@ -1,9 +1,48 @@
 [build]
-    command   = "npm run build"
-    publish   = ".next"
+  command   = "npm run build"
+  publish   = ".next"
 
+# [[plugins]]
+  # package = "@netlify/plugin-nextjs"
+
+# pa11y config
 [[plugins]]
-  package = "@netlify/plugin-nextjs"
+  package = "netlify-plugin-a11y"
+
+
+  # all inputs are optional, we just show you the defaults below
+  [plugins.inputs]
+
+  # required config
+  checkPaths = [
+    '/fr/legal/privacy',
+    '/',
+    '/en/dog',
+  ]
+
+  # # optional config
+  # ignoreDirectories = ['/admin']  # explicitly ignore these directories
+
+  # resultMode = "warn" # is "error" by default
+
+# lighthouse config
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+
+# optional, fails build when a category is below a threshold
+  [plugins.inputs.thresholds]
+    performance = 0.9
+    accessibility = 0.9
+    best-practices = 0.9
+    seo = 0.8
+    pwa = 0.5
+
+  [[plugins.inputs.audits]]
+  path = "dog"
+  [[plugins.inputs.audits]]
+  path = "it/legal/privacy"
+  [[plugins.inputs.audits]]
+  path = ""
 
 [context.production.environment]
 NEXT_SERVERLESS = "true"
