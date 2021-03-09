@@ -44,8 +44,6 @@ const sendMetric = async ({
   return true
 }
 
-}
-
 /**
  * Conditionally inject axe into the page.
  * This only happens outside of production and in a browser (not SSR).
