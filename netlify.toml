@@ -35,14 +35,13 @@
     accessibility = 0.9
     best-practices = 0.9
     seo = 0.8
-    pwa = 0.5
 
   [[plugins.inputs.audits]]
-  path = "dog"
+  path = "/dog"
   [[plugins.inputs.audits]]
-  path = "it/legal/privacy"
+  path = "/it/legal/privacy"
   [[plugins.inputs.audits]]
-  path = ""
+  path = "/"
 
 [context.production.environment]
 NEXT_SERVERLESS = "true"
