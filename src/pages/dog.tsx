@@ -2,6 +2,7 @@ import { useAmp } from 'next/amp'
 import Head from 'next/head'
 import Link from 'next/link'
 import Byline from 'components/Byline'
+import DefaultLayout from 'layouts/default.layout'
 
 export const config = {
   amp: 'hybrid',
@@ -11,7 +12,7 @@ const Dog = (): JSX.Element => {
   const isAmp = useAmp()
 
   return (
-    <main>
+    <>
       <Head>
         <title>The Dog</title>
       </Head>
@@ -96,8 +97,10 @@ const Dog = (): JSX.Element => {
         dragée ice cream biscuit. Pie candy canes muffin candy canes ice cream
         tiramisu.
       </p>
-    </main>
+    </>
   )
 }
+
+Dog.Layout = DefaultLayout
 
 export default Dog
