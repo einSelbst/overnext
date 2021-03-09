@@ -2,8 +2,8 @@
   command   = "npm run build"
   publish   = ".next"
 
-# [[plugins]]
-  # package = "@netlify/plugin-nextjs"
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
 # pa11y config
 [[plugins]]
@@ -36,10 +36,6 @@
     best-practices = 0.9
     seo = 0.8
 
-  [[plugins.inputs.audits]]
-  path = "/dog"
-  [[plugins.inputs.audits]]
-  path = "/it/legal/privacy"
   [[plugins.inputs.audits]]
   path = "/"
 
