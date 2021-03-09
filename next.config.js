@@ -20,6 +20,7 @@ const nextConfiguration = {
     // modify the `config` here
     return config
   },
+  target: 'serverless',
 }
 
 const plugins = [[optional(() => withBundleAnalyzer)]]
