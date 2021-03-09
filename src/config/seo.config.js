@@ -1,4 +1,4 @@
-import { ENVIRONMENT } from './'
+import { ENV } from './'
 
 export default {
   title: 'Overnext | Powered by Next.js',
@@ -7,7 +7,7 @@ export default {
   openGraph: {
     type: 'website',
     locale: 'en_IE',
-    url: ENVIRONMENT.SITE_URL,
+    url: ENV.SITE_URL,
     site_name: 'Overnext',
   },
   twitter: {
