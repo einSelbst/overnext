@@ -26,6 +26,6 @@ const plugins = [[optional(() => withBundleAnalyzer)]]
 
 /* module.exports = withPlugins(plugins, nextConfiguration) */
 module.exports = {
-  ...withPlugins(plugins, nextConfiguration)
+  ...withPlugins(plugins, nextConfiguration),
   target: 'serverless'
 }
