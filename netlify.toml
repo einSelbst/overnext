@@ -29,9 +29,7 @@
 
   # required config
   checkPaths = [
-    '/fr/legal/privacy',
     '/',
-    '/en/dog',
   ]
 
   # # optional config
