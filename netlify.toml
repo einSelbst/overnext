@@ -1,6 +1,5 @@
 [build]
   command = "npm run build"
-  # command = "npm run build:netlify"
   # command = "pnpm run build || ( npm install pnpm && pnpm run build )"
   publish = ".next"
 
