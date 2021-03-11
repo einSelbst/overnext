@@ -17,8 +17,8 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-[[plugins]]
-  package = "netlify-plugin-cache-nextjs"
+# [[plugins]]
+  # package = "netlify-plugin-cache-nextjs"
 
 # pa11y config
 [[plugins]]
