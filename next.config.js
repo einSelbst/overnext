@@ -7,6 +7,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
 const { withPlugins, optional } = require('next-compose-plugins')
+const withPWA = require('next-pwa')
 
 const nextConfiguration = {
   poweredByHeader: false,
@@ -23,6 +24,15 @@ const nextConfiguration = {
   },
 }
 
-const plugins = [[optional(() => withBundleAnalyzer)]]
+const plugins = [
+  [optional(() => withBundleAnalyzer)],
+  [
+    withPWA({
+      pwa: {
+        dest: 'public',
+      },
+    }),
+  ],
+]
 
 module.exports = withPlugins(plugins, nextConfiguration)
