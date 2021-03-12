@@ -54,6 +54,7 @@
 - conformity, inspirations https://github.com/dustinspecker/awesome-eslint
 - recommended repo files via [cgx](https://github.com/jeroenouw/cgx)
 - React [Strict Mode](https://reactjs.org/docs/strict-mode.html) enabled in [development](https://nextjs.org/docs/api-reference/next.config.js/react-strict-mode)
+- [husky](https://github.com/typicode/husky) pinned at v4, v5 is [open-source/sponsors only](https://dev.to/typicode/what-s-new-in-husky-5-32g5)
 
 ## Commit Style
 
