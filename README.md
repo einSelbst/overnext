@@ -1,4 +1,4 @@
-# Overnext - Very Opinionated Next.js Boilerplate
+# Overnext - Overly Opinionated Next.js Boilerplate
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/einselbst/overnext/Continuous%20integration?style=flat-square)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/df1fbbbc-8ce1-48ab-8ad4-5ce0f308aa13/deploy-status)](https://app.netlify.com/sites/overnext/deploys)
