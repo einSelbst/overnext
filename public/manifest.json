@@ -5,7 +5,7 @@
   "theme_color": "#FFFFFF",
   "background_color": "#FFFFFF",
   "splash_pages": null,
-  "start_url": "/",
+  "start_url": "/en",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait",
