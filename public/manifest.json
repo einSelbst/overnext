@@ -1,6 +1,7 @@
 {
   "name": "Overnext App",
   "short_name": "ONA",
+  "description": "Overly opinionated next.js app",
   "theme_color": "#FFFFFF",
   "background_color": "#FFFFFF",
   "start_url": "/",

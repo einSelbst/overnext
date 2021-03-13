@@ -87,6 +87,7 @@ function _app ({ Component, pageProps }: AppProps): JSX.Element {
         <link rel='icon' href='/favicon.ico' />
         {/* for PWA: */}
         {/* <link rel="manifest" href="path/to/manifest.json" crossorigin="use-credentials" /> */}
+        <link rel='manifest' href='/manifest.json' />
       </Head>
       <Component {...pageProps} />
     </>
