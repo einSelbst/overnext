@@ -93,5 +93,5 @@ public/robots.txt
 public/sitemap.xml
 
 # next-pwa
-public/workbox-*.js
-public/sw.js
+public/workbox-*.js*
+public/sw.js*
