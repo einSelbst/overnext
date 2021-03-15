@@ -2347,7 +2347,7 @@ packages:
     dependencies:
       '@types/istanbul-lib-coverage': 2.0.3
       '@types/istanbul-reports': 3.0.0
-      '@types/node': 13.13.45
+      '@types/node': 13.13.47
       '@types/yargs': 15.0.13
       chalk: 4.1.0
     dev: true
