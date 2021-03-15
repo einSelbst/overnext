@@ -47,7 +47,7 @@ devDependencies:
   jest-watch-typeahead: 0.6.1_jest@26.6.3
   lint-staged: 10.5.4
   next-compose-plugins: 2.2.1
-  next-sitemap: 1.5.16_next@10.0.9-canary.7
+  next-sitemap: 1.5.18_next@10.0.9-canary.7
   next-unused: 0.0.3_typescript@4.2.3
   npm-scripts-info: 0.3.9
   prettier-standard: 16.3.0_typescript@4.2.3
@@ -8752,7 +8752,7 @@ packages:
       react-dom: ^16.0.0 || ^17.0.0
     resolution:
       integrity: sha512-N3NIISxOV+6XatPdZWRt8L/PkdxX4qpl6s2uQVMYTkteo8hgpHDgs6XZkDzuHaPi10neSZoqQiytsxohTCyEvw==
-  /next-sitemap/1.5.16_next@10.0.9-canary.7:
+  /next-sitemap/1.5.18_next@10.0.9-canary.7:
     dependencies:
       '@corex/deepmerge': 2.5.3
       matcher: 4.0.0
@@ -8763,7 +8763,7 @@ packages:
     peerDependencies:
       next: '*'
     resolution:
-      integrity: sha512-MQ527OpEV5Jg7dH8gdyYJd4JN/VajeMzjmbOFis6UX7EIuJ067JgIrGoo/pwNlKTIsQ76eekPxaO9ThBIa1llA==
+      integrity: sha512-YLLd2cfmO2fvLmoeA2KHBkHwhw5Oc/ybf2MS6pa1M+YJSPNvTla26TMRhVLvbNbyGAyS1eHNguEK/uGWxQ5x3A==
   /next-themes/0.0.12_edc77261b2e6d4ff48516ce6d35b8bcb:
     dependencies:
       next: 10.0.9-canary.7_5347ba9dae72bc17e95cc7756ff465f1
@@ -12887,7 +12887,7 @@ specifiers:
   next: 10.0.9-canary.7
   next-compose-plugins: 2.2.1
   next-seo: 4.20.0
-  next-sitemap: 1.5.16
+  next-sitemap: 1.5.18
   next-themes: 0.0.12
   next-unused: 0.0.3
   npm-scripts-info: 0.3.9
