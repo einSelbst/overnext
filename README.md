@@ -102,12 +102,13 @@ pnpm validate      - run tsc, prettier, eslint and the tests
 
 # Code Style
 
-- [Typescript](https://www.typescriptlang.org/) with [tslib](https://www.npmjs.com/package/tslib), [prop-types](https://www.npmjs.com/package/prop-types)
+- [Typescript](https://www.typescriptlang.org/) (for compile time type checking) with [tslib](https://www.npmjs.com/package/tslib)
+- [prop-types](https://www.npmjs.com/package/prop-types) (for run-time type checking), more [info](https://stackoverflow.com/a/54690878/531439)
 - [Standard](https://github.com/standard/standard)
 - [EditorConfig](https://editorconfig.org/)
 - [typedoc](https://github.com/TypeStrong/typedoc)
 
-## Linter
+## Linter / A11y
 
 - [Prettier-Standard](https://github.com/sheerun/prettier-standard)
 
@@ -174,6 +175,7 @@ pnpm validate      - run tsc, prettier, eslint and the tests
 
 - [compose plugins](https://github.com/cyrilwanner/next-compose-plugins)
 - webpack [bundle analyzer](https://github.com/vercel/next.js/tree/canary/packages/next-bundle-analyzer)
+- [PWA](https://web.dev/progressive-web-apps/) support via [next-pwa](https://github.com/shadowwalker/next-pwa) / [workbox](https://developers.google.com/web/tools/workbox)
 
 ## Helper
 
@@ -216,7 +218,7 @@ pnpm validate      - run tsc, prettier, eslint and the tests
   - override "Install Command": `rm -rf node_modules && npx pnpm i` (if pnpm should be used)
   - override "Build Command": `next build && npx pnpm run postbuild` (optional)
 - [Netlify](https://www.netlify.com/blog/2020/11/30/how-to-deploy-next.js-sites-to-netlify/)
-  - `netlify.toml`
+  - [`netlify.toml`](https://github.com/netlify/netlify-plugin-nextjs)
   - netlify plugins
 
 ## Project Automation / Labeling Ideas
@@ -258,6 +260,7 @@ pnpm validate      - run tsc, prettier, eslint and the tests
 - [ ] [wdyr](https://github.com/welldone-software/why-did-you-render/issues/113) vs preact [1](https://github.com/preactjs/preact/issues/2760)
 - [ ] automate typedoc generation
 - [ ] maybe [apiDoc](https://apidocjs.com/)
+- [ ] use ISR - Incremental Static Regeneration ? [opinion](https://www.netlify.com/blog/2021/03/08/incremental-static-regeneration-its-benefits-and-its-flaws/)
 
 # Credits
 

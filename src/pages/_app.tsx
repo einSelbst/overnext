@@ -87,6 +87,7 @@ function _app ({ Component, pageProps }: AppProps): JSX.Element {
         <link rel='icon' href='/favicon.ico' />
         {/* for PWA: */}
         {/* <link rel="manifest" href="path/to/manifest.json" crossorigin="use-credentials" /> */}
+        <link rel='manifest' href='/manifest.json' />
       </Head>
       <Component {...pageProps} />
     </>
@@ -99,21 +100,45 @@ function _app ({ Component, pageProps }: AppProps): JSX.Element {
         {/* Browsers use this in some areas to help your brand feel more embedded */}
         <meta name='theme-color' content='#ffffff' />
         {/* Windows uses these to help your brand feel more embedded */}
-        <meta name='msapplication-TileColor' content='#ffffff' />
+        <meta name='msapplication-TileColor' content='#da532c' />
         <meta
           name='msapplication-TileImage'
-          content='path/to/ms-icon-144x144.png'
+          content='/icons/ms-icon-144x144.png'
         />
         {/* Browsers use these as tab and app icons */}
+        <link rel='icon' href='/favicon.ico' />
+        <link
+          rel='icon'
+          type='image/png'
+          sizes='192x192'
+          href='/icons/icon-192x192.png'
+        />
+        <link
+          rel='icon'
+          type='image/png'
+          sizes='32x32'
+          href='/icons/icon-32x32.png'
+        />
+        <link
+          rel='icon'
+          type='image/png'
+          sizes='16x16'
+          href='/icons/icon-16x16.png'
+        />
         <link
           rel='apple-touch-icon'
           sizes='180x180'
-          href='path/to/apple-icon-180x180.png'
+          href='/icons/apple-touch-icon.png'
         />
-        <link rel='icon' type='image/png' sizes='192x192' href='/favicon.png' />
-        <link rel='icon' href='/favicon.ico' />
+        <link
+          rel='mask-icon'
+          href='/icons/safari-pinned-tab.svg'
+          color='#5bbad5'
+        />
+
         {/* for PWA: */}
         {/* <link rel="manifest" href="path/to/manifest.json" crossorigin="use-credentials" /> */}
+        <link rel='manifest' href='/manifest.json' />
       </Head>
       <Component {...pageProps} />
     </ThemeProvider>
