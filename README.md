@@ -175,6 +175,7 @@ pnpm validate      - run tsc, prettier, eslint and the tests
 
 - [compose plugins](https://github.com/cyrilwanner/next-compose-plugins)
 - webpack [bundle analyzer](https://github.com/vercel/next.js/tree/canary/packages/next-bundle-analyzer)
+- [PWA](https://web.dev/progressive-web-apps/) support via [next-pwa](https://github.com/shadowwalker/next-pwa) / [workbox](https://developers.google.com/web/tools/workbox)
 
 ## Helper
 

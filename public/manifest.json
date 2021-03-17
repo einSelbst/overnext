@@ -9,6 +9,7 @@
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait",
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "/icons/icon-512x512.png",
