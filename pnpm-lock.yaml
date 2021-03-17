@@ -19,7 +19,7 @@ devDependencies:
   '@next/bundle-analyzer': 10.0.9
   '@next/eslint-plugin-next': 10.0.9
   '@testing-library/react': 11.2.5_react-dom@17.0.1+react@17.0.1
-  '@types/jest': 26.0.20
+  '@types/jest': 26.0.21
   '@types/node': 13.13.47
   '@types/prop-types': 15.7.3
   '@types/react': 17.0.3
@@ -48,7 +48,7 @@ devDependencies:
   lint-staged: 10.5.4
   next-compose-plugins: 2.2.1
   next-sitemap: 1.5.18_next@10.0.9
-  next-unused: 0.0.4_typescript@4.2.3
+  next-unused: 0.0.5_typescript@4.2.3
   npm-scripts-info: 0.3.9
   prettier-standard: 16.3.0_typescript@4.2.3
   standard-version: 9.1.1
@@ -1991,13 +1991,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-nwKNbvnwJ2/mndE9ItP/zc2TCzw6uuodnF4EHYWD+gCQDVBuRQL5UzbZD0/ezy1iKsFU2ZQiDqg4M9dN4+wZgA==
-  /@types/jest/26.0.20:
+  /@types/jest/26.0.21:
     dependencies:
       jest-diff: 26.6.2
       pretty-format: 26.6.2
     dev: true
     resolution:
-      integrity: sha512-9zi2Y+5USJRxd0FsahERhBwlcvFh6D2GLQnY2FH2BzK8J9s9omvNHIbvABwIluXa0fD8XVKMLTO0aOEuUfACAA==
+      integrity: sha512-ab9TyM/69yg7eew9eOwKMUmvIZAKEGZYlq/dhe5/0IMUd/QLJv5ldRMdddSn+u22N13FP3s5jYyktxuBwY0kDA==
   /@types/json-schema/7.0.7:
     dev: true
     resolution:
@@ -8773,7 +8773,7 @@ packages:
       react-dom: '*'
     resolution:
       integrity: sha512-127ZeerlF/GC17TMVkZkarj3f01weI03b+Ne1xHmmaRs9ouYXVkgyAd60GHRzUnCFVo1NKLcZe0Pr8OnTzrxwQ==
-  /next-unused/0.0.4_typescript@4.2.3:
+  /next-unused/0.0.5_typescript@4.2.3:
     dependencies:
       madge: 4.0.2
       ts-loader: 7.0.5_typescript@4.2.3
@@ -8782,7 +8782,7 @@ packages:
     peerDependencies:
       typescript: '*'
     resolution:
-      integrity: sha512-CA/xi60i12Bg4qPmeWueioxesi1Lu6q7xo8Kitx8TaIuaheHcPjKuVsslxbMCwyuL47ztC17uwwnaozvg48lnA==
+      integrity: sha512-nACD5lMCZ3oSPvxPcVyOKI3ag1rMhoA3lvSatoVNC44fhNALnuWLCUFB8+bqMNADxH5H0fVdwGhWYI9zlr2hUg==
   /next/10.0.9_5347ba9dae72bc17e95cc7756ff465f1:
     dependencies:
       '@babel/runtime': 7.12.5
@@ -12836,7 +12836,7 @@ specifiers:
   '@next/bundle-analyzer': 10.0.9
   '@next/eslint-plugin-next': 10.0.9
   '@testing-library/react': 11.2.5
-  '@types/jest': 26.0.20
+  '@types/jest': 26.0.21
   '@types/node': 13.13.47
   '@types/prop-types': 15.7.3
   '@types/react': 17.0.3
@@ -12870,7 +12870,7 @@ specifiers:
   next-seo: 4.20.0
   next-sitemap: 1.5.18
   next-themes: 0.0.12
-  next-unused: 0.0.4
+  next-unused: 0.0.5
   npm-scripts-info: 0.3.9
   postcss: 8.2.8
   prettier-standard: 16.3.0
