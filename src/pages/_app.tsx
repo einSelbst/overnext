@@ -101,33 +101,40 @@ function _app ({ Component, pageProps }: AppProps): JSX.Element {
         <meta name='theme-color' content='#ffffff' />
         {/* Windows uses these to help your brand feel more embedded */}
         <meta name='msapplication-TileColor' content='#da532c' />
-        <meta name='msapplication-TileImage' content='/ms-icon-144x144.png' />
+        <meta
+          name='msapplication-TileImage'
+          content='/icons/ms-icon-144x144.png'
+        />
         {/* Browsers use these as tab and app icons */}
         <link rel='icon' href='/favicon.ico' />
         <link
           rel='icon'
           type='image/png'
           sizes='192x192'
-          href='/icon-192x192.png'
+          href='/icons/icon-192x192.png'
         />
         <link
           rel='icon'
           type='image/png'
           sizes='32x32'
-          href='/icon-32x32.png'
+          href='/icons/icon-32x32.png'
         />
         <link
           rel='icon'
           type='image/png'
           sizes='16x16'
-          href='/icon-16x16.png'
+          href='/icons/icon-16x16.png'
         />
         <link
           rel='apple-touch-icon'
           sizes='180x180'
-          href='/apple-touch-icon.png'
+          href='/icons/apple-touch-icon.png'
         />
-        <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#5bbad5' />
+        <link
+          rel='mask-icon'
+          href='/icons/safari-pinned-tab.svg'
+          color='#5bbad5'
+        />
 
         {/* for PWA: */}
         {/* <link rel="manifest" href="path/to/manifest.json" crossorigin="use-credentials" /> */}
