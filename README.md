@@ -157,6 +157,8 @@ pnpm validate      - run tsc, prettier, eslint and the tests
   - [`react-testing-library`](https://testing-library.com/docs/react-testing-library/intro)
 - [Cypress](https://www.cypress.io/)
   - [Code Coverage](https://docs.cypress.io/guides/tooling/code-coverage.html)
+  - [Dashboard](https://dashboard.cypress.io/)
+  - [Github Integration](https://docs.cypress.io/guides/dashboard/github-integration.html#Install-the-Cypress-GitHub-app)
 
 # Next.js Configuration
 
