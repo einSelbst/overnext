@@ -220,6 +220,7 @@ pnpm validate      - run tsc, prettier, eslint and the tests
 - [Netlify](https://www.netlify.com/blog/2020/11/30/how-to-deploy-next.js-sites-to-netlify/)
   - [`netlify.toml`](https://github.com/netlify/netlify-plugin-nextjs)
   - netlify plugins
+    - [cypress](https://github.com/cypress-io/netlify-plugin-cypress)
 
 ## Project Automation / Labeling Ideas
 
