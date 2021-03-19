@@ -15,7 +15,7 @@ export const Home = (): JSX.Element => {
       </Head>
 
       <main>
-        <Link href='/legal' locale='fr'>
+        <Link href='/legal' locale='fr' data-cy='fr-legal'>
           <a href='fr/legal'>To /fr/legal</a>
         </Link>
         <div>
@@ -43,6 +43,7 @@ export const Home = (): JSX.Element => {
         </div>
 
         <button
+          data-cy='test-button'
           onClick={() => {
             window.alert('With typescript and Jest')
           }}
