@@ -28,7 +28,7 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 4.18.0_ef0f217f6395606fd8bbe7b0291eff7e
   '@typescript-eslint/parser': 4.18.0_eslint@7.22.0+typescript@4.2.3
   babel-jest: 26.6.3_@babel+core@7.13.10
-  caniuse-lite: 1.0.30001202
+  caniuse-lite: 1.0.30001203
   commitizen: 4.2.3
   cypress: 6.8.0
   dependency-version-badge: 1.9.1
@@ -53,7 +53,7 @@ devDependencies:
   npm-scripts-info: 0.3.9
   prettier-standard: 16.3.0_typescript@4.2.3
   standard-version: 9.1.1
-  start-server-and-test: 1.12.0
+  start-server-and-test: 1.12.1
   typedoc: 0.20.32_typescript@4.2.3
   typescript: 4.2.3
 lockfileVersion: 5.2
@@ -4064,8 +4064,13 @@ packages:
     resolution:
       integrity: sha512-ifbK2eChUCFUwGhlEzIoVwzFt1+iriSjyKKFYNfv6hN34483wyWpLLavYQXhnR036LhkdUYaSDpHg1El++VgHQ==
   /caniuse-lite/1.0.30001202:
+    dev: false
     resolution:
       integrity: sha512-ZcijQNqrcF8JNLjzvEiXqX4JUYxoZa7Pvcsd9UD8Kz4TvhTonOSNRsK+qtvpVL4l6+T1Rh4LFtLfnNWg6BGWCQ==
+  /caniuse-lite/1.0.30001203:
+    dev: true
+    resolution:
+      integrity: sha512-/I9tvnzU/PHMH7wBPrfDMSuecDeUKerjCPX7D0xBbaJZPxoT9m+yYxt0zCTkcijCkjTdim3H56Zm0i5Adxch4w==
   /capture-exit/2.0.0:
     dependencies:
       rsvp: 4.8.5
@@ -12093,7 +12098,7 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-PF9JnRauBwH7DAkmefYu1mB2Kx0MVG13udqDTFmDUiogbyikBAHBdMrVuauxtAb2YIkyZ3FMYCNv0hqUKMOPww==
-  /start-server-and-test/1.12.0:
+  /start-server-and-test/1.12.1:
     dependencies:
       bluebird: 3.7.2
       check-more-types: 2.24.0
@@ -12101,13 +12106,13 @@ packages:
       execa: 3.4.0
       lazy-ass: 1.6.0
       ps-tree: 1.2.0
-      wait-on: 5.2.1_debug@4.3.1
+      wait-on: 5.3.0_debug@4.3.1
     dev: true
     engines:
       node: '>=6'
     hasBin: true
     resolution:
-      integrity: sha512-y3M/PLUPkPBsgKoengMIMQeceT8uOnOc4bkdor/RSCK9Ih/j8z4WthSCrAboXLjgtJJWOporAiEQsnYox+THXg==
+      integrity: sha512-qGQ2HQiF2yDIfyaHsXkHfoE5UOl4zJUbJ/gx2xOkfX7iPMXW9qHmoFyaMfIDJVLNkxCK7RxSrvWEI9hNVKQluw==
   /state-toggle/1.0.3:
     dev: true
     resolution:
@@ -13371,7 +13376,7 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-4tzD0mF8iSiMiNs30BiLO3EpfGLZUT2MSX/G+o7ZywDzliWQ3OPtTZ0PTC3B3ca1UAf4cJMHB+2Bf56EriJuRA==
-  /wait-on/5.2.1_debug@4.3.1:
+  /wait-on/5.3.0_debug@4.3.1:
     dependencies:
       axios: 0.21.1_debug@4.3.1
       joi: 17.4.0
@@ -13385,7 +13390,7 @@ packages:
     peerDependencies:
       debug: '*'
     resolution:
-      integrity: sha512-H2F986kNWMU9hKlI9l/ppO6tN8ZSJd35yBljMLa1/vjzWP++Qh6aXyt77/u7ySJFZQqBtQxnvm/xgG48AObXcw==
+      integrity: sha512-DwrHrnTK+/0QFaB9a8Ol5Lna3k7WvUR4jzSKmz0YaPBpuN2sACyiPVKVfj6ejnjcajAcvn3wlbTyMIn9AZouOg==
   /walkdir/0.4.1:
     dev: true
     engines:
@@ -13886,7 +13891,7 @@ specifiers:
   '@typescript-eslint/parser': 4.18.0
   autoprefixer: 10.2.5
   babel-jest: 26.6.3
-  caniuse-lite: 1.0.30001202
+  caniuse-lite: 1.0.30001203
   commitizen: 4.2.3
   cypress: 6.8.0
   dependency-version-badge: 1.9.1
@@ -13920,7 +13925,7 @@ specifiers:
   react: 17.0.1
   react-dom: 17.0.1
   standard-version: 9.1.1
-  start-server-and-test: 1.12.0
+  start-server-and-test: 1.12.1
   tailwindcss: 2.0.4
   tslib: 2.1.0
   typedoc: 0.20.32
