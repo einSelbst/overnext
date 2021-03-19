@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('Cypress.Commands', () => {
+xcontext('Cypress.Commands', () => {
   beforeEach(() => {
     cy.visit('https://example.cypress.io/cypress-api')
   })
@@ -40,7 +40,7 @@ context('Cypress.Commands', () => {
   })
 })
 
-context('Cypress.Cookies', () => {
+xcontext('Cypress.Cookies', () => {
   beforeEach(() => {
     cy.visit('https://example.cypress.io/cypress-api')
   })
@@ -77,7 +77,7 @@ context('Cypress.Cookies', () => {
   })
 })
 
-context('Cypress.arch', () => {
+xcontext('Cypress.arch', () => {
   beforeEach(() => {
     cy.visit('https://example.cypress.io/cypress-api')
   })
@@ -88,7 +88,7 @@ context('Cypress.arch', () => {
   })
 })
 
-context('Cypress.config()', () => {
+xcontext('Cypress.config()', () => {
   beforeEach(() => {
     cy.visit('https://example.cypress.io/cypress-api')
   })
@@ -119,7 +119,7 @@ context('Cypress.config()', () => {
   })
 })
 
-context('Cypress.dom', () => {
+xcontext('Cypress.dom', () => {
   beforeEach(() => {
     cy.visit('https://example.cypress.io/cypress-api')
   })
@@ -135,7 +135,7 @@ context('Cypress.dom', () => {
   })
 })
 
-context('Cypress.env()', () => {
+xcontext('Cypress.env()', () => {
   beforeEach(() => {
     cy.visit('https://example.cypress.io/cypress-api')
   })
@@ -167,7 +167,7 @@ context('Cypress.env()', () => {
   })
 })
 
-context('Cypress.log', () => {
+xcontext('Cypress.log', () => {
   beforeEach(() => {
     cy.visit('https://example.cypress.io/cypress-api')
   })
@@ -177,7 +177,7 @@ context('Cypress.log', () => {
   })
 })
 
-context('Cypress.platform', () => {
+xcontext('Cypress.platform', () => {
   beforeEach(() => {
     cy.visit('https://example.cypress.io/cypress-api')
   })
@@ -188,7 +188,7 @@ context('Cypress.platform', () => {
   })
 })
 
-context('Cypress.version', () => {
+xcontext('Cypress.version', () => {
   beforeEach(() => {
     cy.visit('https://example.cypress.io/cypress-api')
   })
@@ -199,7 +199,7 @@ context('Cypress.version', () => {
   })
 })
 
-context('Cypress.spec', () => {
+xcontext('Cypress.spec', () => {
   beforeEach(() => {
     cy.visit('https://example.cypress.io/cypress-api')
   })

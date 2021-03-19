@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('Navigation', () => {
+xcontext('Navigation', () => {
   beforeEach(() => {
     cy.visit('https://example.cypress.io')
     cy.get('.navbar-nav')
