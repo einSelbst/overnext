@@ -3,7 +3,7 @@ dependencies:
   next: 10.0.9_5347ba9dae72bc17e95cc7756ff465f1
   next-pwa: 5.0.6_@babel+core@7.13.10+next@10.0.9
   next-seo: 4.22.0_7c14c7063c1c54dc338f2a6c0f88903f
-  next-themes: 0.0.12_7c14c7063c1c54dc338f2a6c0f88903f
+  next-themes: 0.0.14_7c14c7063c1c54dc338f2a6c0f88903f
   postcss: 8.2.8
   prop-types: 15.7.2
   react: 17.0.1
@@ -9574,7 +9574,7 @@ packages:
       next: '*'
     resolution:
       integrity: sha512-pnJyKXyQVPR4BeRCZNzoLRWYsUDcDcY/TSF+C5nSfl+gS38v+i14qSnHMWNER5mC1TWGeDn3i83vKwYEn37xfw==
-  /next-themes/0.0.12_7c14c7063c1c54dc338f2a6c0f88903f:
+  /next-themes/0.0.14_7c14c7063c1c54dc338f2a6c0f88903f:
     dependencies:
       next: 10.0.9_5347ba9dae72bc17e95cc7756ff465f1
       react: 17.0.1
@@ -9585,7 +9585,7 @@ packages:
       react: '*'
       react-dom: '*'
     resolution:
-      integrity: sha512-127ZeerlF/GC17TMVkZkarj3f01weI03b+Ne1xHmmaRs9ouYXVkgyAd60GHRzUnCFVo1NKLcZe0Pr8OnTzrxwQ==
+      integrity: sha512-x09OaM+wg3SIlEjOv8B21aw/E36jxTtfW3Dm/DPwMsSMluGt7twe1LigA6nc+mXP1u0qu9MxBaIrPPH6UTiKnA==
   /next-unused/0.0.6:
     dependencies:
       madge: 4.0.2
@@ -13916,7 +13916,7 @@ specifiers:
   next-pwa: 5.0.6
   next-seo: 4.22.0
   next-sitemap: 1.6.3
-  next-themes: 0.0.12
+  next-themes: 0.0.14
   next-unused: 0.0.6
   npm-scripts-info: 0.3.9
   postcss: 8.2.8
