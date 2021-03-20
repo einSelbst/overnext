@@ -1,5 +1,5 @@
 const baseUrl = () => {
-  if (process.env.VERCEL === '1') return process.env.VERCEL_URL
+  if (process.env.VERCEL === '1') return `https://${process.env.VERCEL_URL}`
   return false
 }
 
