@@ -8,7 +8,7 @@ import {
 import React from 'react'
 
 export const config = {
-  amp: 'hybrid'
+  amp: 'hybrid',
 }
 
 const DynamicPage = (

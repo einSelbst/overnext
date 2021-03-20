@@ -24,7 +24,7 @@ context('Visits', () => {
 
     // clicking in the center of the element is the default
     /* cy.get('a[href]').click() */
-    cy.get('fr-legal').click()
+    cy.get('[data-cy=fr-legal]').click()
     cy.location('pathname').should('include', 'legal')
   })
 })

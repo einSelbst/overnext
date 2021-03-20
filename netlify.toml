@@ -32,7 +32,7 @@
 
   [plugins.inputs]
     record = true
-    spec = "cypress/integration/smoke*.js"
+    spec = "cypress/integration/smoke/*.js"
 
 # pa11y config
 [[plugins]]
