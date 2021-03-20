@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('Assertions', () => {
+xcontext('Assertions', () => {
   beforeEach(() => {
     cy.visit('https://example.cypress.io/commands/assertions')
   })

@@ -157,6 +157,8 @@ pnpm validate      - run tsc, prettier, eslint and the tests
   - [`react-testing-library`](https://testing-library.com/docs/react-testing-library/intro)
 - [Cypress](https://www.cypress.io/)
   - [Code Coverage](https://docs.cypress.io/guides/tooling/code-coverage.html)
+  - [Dashboard](https://dashboard.cypress.io/)
+  - [Github Integration](https://docs.cypress.io/guides/dashboard/github-integration.html#Install-the-Cypress-GitHub-app)
 
 # Next.js Configuration
 
@@ -220,6 +222,7 @@ pnpm validate      - run tsc, prettier, eslint and the tests
 - [Netlify](https://www.netlify.com/blog/2020/11/30/how-to-deploy-next.js-sites-to-netlify/)
   - [`netlify.toml`](https://github.com/netlify/netlify-plugin-nextjs)
   - netlify plugins
+    - [cypress](https://github.com/cypress-io/netlify-plugin-cypress)
 
 ## Project Automation / Labeling Ideas
 

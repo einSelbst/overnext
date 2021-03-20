@@ -16,7 +16,9 @@ export const Home = (): JSX.Element => {
 
       <main>
         <Link href='/legal' locale='fr'>
-          <a href='fr/legal'>To /fr/legal</a>
+          <a href='fr/legal' data-cy='fr-legal'>
+            To /fr/legal
+          </a>
         </Link>
         <div>
           <h1>Hello, world!</h1>
@@ -24,9 +26,9 @@ export const Home = (): JSX.Element => {
           <br />
           {/* <p>Current locale: {router.locale}</p> */
           /*{' '}
-          <p>Default locale: {router.defaultLocale}</p> */
+             <p>Default locale: {router.defaultLocale}</p> */
           /*{' '}
-          <p>Configured locales: {JSON.stringify(router.locales)}</p> */}
+             <p>Configured locales: {JSON.stringify(router.locales)}</p> */}
         </div>
         <h1 className='title'>
           Welcome to <a href='https://nextjs.org'>Next.js!</a>
@@ -43,6 +45,7 @@ export const Home = (): JSX.Element => {
         </div>
 
         <button
+          data-cy='test-button'
           onClick={() => {
             window.alert('With typescript and Jest')
           }}

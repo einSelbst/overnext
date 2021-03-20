@@ -2,6 +2,16 @@
   command = "npm run build"
   publish = ".next"
 
+  [build.environment]
+    # DEBUG=netlify-plugin-cypress
+    # DEBUG=netlify-plugin-cypress,netlify-plugin-cypress:verbose
+    CI = "1"
+    # cache Cypress binary in local "node_modules" folder
+    # so Netlify caches it
+    CYPRESS_CACHE_FOLDER = "./node_modules/CypressBinary"
+    # set TERM variable for terminal output
+    TERM = "xterm"
+
 [context.production.environment]
   NEXT_SERVERLESS = "true"
   NODE_ENV = "production"
@@ -16,28 +26,35 @@
 [[plugins]]
   package = "netlify-plugin-cache-nextjs"
 
+[[plugins]]
+  # runs Cypress tests against the deployed URL
+  package = "netlify-plugin-cypress"
+
+  [plugins.inputs]
+    record = true
+    spec = "cypress/integration/smoke/*.js"
+
 # pa11y config
 [[plugins]]
   package = "netlify-plugin-a11y"
 
   # all inputs are optional, we just show you the defaults below
   [plugins.inputs]
+    # required config
+    checkPaths = [
+      '/',
+    ]
 
-  # required config
-  checkPaths = [
-    '/',
-  ]
+    # optional config
+    # ignoreDirectories = ['/admin']  # explicitly ignore these directories
 
-  # # optional config
-  # ignoreDirectories = ['/admin']  # explicitly ignore these directories
-
-  # resultMode = "warn" # is "error" by default
+    # resultMode = "warn" # is "error" by default
 
 # lighthouse config
 [[plugins]]
   package = "@netlify/plugin-lighthouse"
 
-# optional, fails build when a category is below a threshold
+  # optional, fails build when a category is below a threshold
   [plugins.inputs.thresholds]
     performance = 0.9
     accessibility = 0.9
@@ -45,4 +62,4 @@
     seo = 0.8
 
   [[plugins.inputs.audits]]
-  path = "/"
+    path = "/"

@@ -15,10 +15,10 @@ const DynamicPage = (
   props: InferGetStaticPropsType<typeof getStaticProps>
 ): JSX.Element => {
   return (
-    <div>
+    <main>
       <h1>DynamicPage Component {props.dynamic}</h1>
       <h2>Locale: {props.locale}</h2>
-    </div>
+    </main>
   )
 }
 
