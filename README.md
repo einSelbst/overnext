@@ -207,11 +207,13 @@ pnpm validate      - run tsc, prettier, eslint and the tests
 - Labeler: adds labels to PR's based on the changed files
 - Badges: update badges in README
 
-## Audits
+## Audits & Service Dashboards
 
 - [Lighthouse](https://github.com/GoogleChrome/lighthouse/)
 - [sonarcloud](https://sonarcloud.io/)
 - [Web Vitals](https://web.dev/vitals/) via [Quickmetrics](https://www.freecodecamp.org/news/how-to-measure-next-js-web-vitals-using-quickmetrics/)
+- [Renovate](https://app.renovatebot.com/dashboard#github/einSelbst/overnext)
+- [Cypress](https://dashboard.cypress.io/projects/esdwok/runs)
 
 # Deployment
 
@@ -224,8 +226,19 @@ pnpm validate      - run tsc, prettier, eslint and the tests
   - netlify plugins
     - [cypress](https://github.com/cypress-io/netlify-plugin-cypress)
 
-## Project Automation / Labeling Ideas
+# ToDo
 
+- [ ] cypress watch mode
+- [ ] cypress a11y plugin
+- [ ] [wdyr](https://github.com/welldone-software/why-did-you-render/issues/113) vs preact [1](https://github.com/preactjs/preact/issues/2760)
+- [ ] automate typedoc generation
+- [ ] maybe [apiDoc](https://apidocjs.com/)
+- [ ] use ISR - Incremental Static Regeneration ? [opinion](https://www.netlify.com/blog/2021/03/08/incremental-static-regeneration-its-benefits-and-its-flaws/)
+
+<details>
+  <summary>
+    ## Project Automation / Labeling Ideas
+  </summary>
 ### Issues
 
 - ToDo: https://github.com/coblox/zenhub-link-pr-to-issue
@@ -255,15 +268,7 @@ pnpm validate      - run tsc, prettier, eslint and the tests
 - ToDo: https://github.com/Decathlon/pull-request-labeler-action
 - ToDo: https://github.com/jpmcb/prow-github-actions
 - ToDo: https://github.com/kentaro-m/task-completed-checker-action
-
-# ToDo
-
-- [ ] cypress watch mode
-- [ ] cypress a11y plugin
-- [ ] [wdyr](https://github.com/welldone-software/why-did-you-render/issues/113) vs preact [1](https://github.com/preactjs/preact/issues/2760)
-- [ ] automate typedoc generation
-- [ ] maybe [apiDoc](https://apidocjs.com/)
-- [ ] use ISR - Incremental Static Regeneration ? [opinion](https://www.netlify.com/blog/2021/03/08/incremental-static-regeneration-its-benefits-and-its-flaws/)
+</details>
 
 # Credits
 
