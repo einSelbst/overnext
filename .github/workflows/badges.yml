@@ -25,54 +25,8 @@ jobs:
         with:
           ref: ${{ github.event.client_payload.ref }}
 
-      # - name: Use Node.js ${{ matrix.node-version }}
-      #   uses: actions/setup-node@main
-      #   with:
-      #     node-version: ${{ matrix.node-version }}
-      #     check-latest: true
-
-      # - name: Cache ~/.pnpm-store
-      #   id: cache-pnpm-dir
-      #   uses: actions/cache@main
-      #   env:
-      #     cache-name: cache-pnpm-store
-      #   with:
-      #     path: ~/.pnpm-store
-      #     key: ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
-      #     restore-keys: |
-      #       ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-
-      #       ${{ runner.os }}-${{ matrix.node-version }}-build-
-      #       ${{ runner.os }}-
-
-      # - name: Install pnpm
-      #   if: steps.cache-pnpm-dir.outputs.cache-hit != 'true'
-      #   run: |
-      #     npm i pnpm@next -g
-      #     pnpm --version
-
-      # - name: Install all dependencies
-      #   if: steps.cache-pnpm-dir.outputs.cache-hit != 'true'
-      #   run: pnpm install --prefer-frozen-lockfile
-
-      # - name: Install all dependencies 📦
-      #   uses: cypress-io/github-action@v2
-      #   with:
-      #     # just perform install
-      #     runTests: false
-      #     install-command: pnpm i
-
       - name: Update version badges 🏷
-        # run: npm run update:badges
-        # run: npx update-badge react typescript cypress jest eslint tailwindcss
         run: npx -p dependency-version-badge update-badge next react typescript cypress jest eslint tailwindcss
-
-      # commit any changed files
-      # https://github.com/mikeal/publish-to-github-action
-      # - name: Push any changes to repo 📤
-      #   uses: mikeal/publish-to-github-action@master
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #     BRANCH_NAME: 'main'
 
       - name: Commit any changed files 💾
         uses: stefanzweifel/git-auto-commit-action@v4
