@@ -159,6 +159,7 @@ pnpm validate      - run tsc, prettier, eslint and the tests
   - [Code Coverage](https://docs.cypress.io/guides/tooling/code-coverage.html)
   - [Dashboard](https://dashboard.cypress.io/)
   - [Github Integration](https://docs.cypress.io/guides/dashboard/github-integration.html#Install-the-Cypress-GitHub-app)
+  - [cypress-watch-and-reload](https://github.com/bahmutov/cypress-watch-and-reload)
 
 # Next.js Configuration
 

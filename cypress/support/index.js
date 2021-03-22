@@ -19,3 +19,4 @@
 // Alternatively you can use CommonJS syntax:
 require('./commands')
 require('@cypress/code-coverage/support')
+require('cypress-watch-and-reload/support')
