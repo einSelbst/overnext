@@ -30,7 +30,6 @@ const plugins = [
     withPWA({
       pwa: {
         disable: process.env.NODE_ENV === 'development',
-        /* disable: prod ? false : true, */
         dest: 'public',
       },
     }),
