@@ -33,10 +33,7 @@ package = "netlify-plugin-cypress"
   [plugins.inputs]
   record = true
   spec = "cypress/integration/smoke/*.js"
-
-    # let's run tests against the built site
-    [plugins.inputs.postBuild]
-    enable = false
+  enable = false
 
 # pa11y config
 [[plugins]]
