@@ -36,7 +36,9 @@ package = "netlify-plugin-cypress"
 
     # let's run tests against the built site
     [plugins.inputs.postBuild]
-    enable = false
+    enable = true
+    start = 'npx netlify dev'
+    wait-on = 'http://localhost:3000'
 
 # pa11y config
 [[plugins]]
