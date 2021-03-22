@@ -24,6 +24,9 @@ module.exports = (on, config) => {
   // include any other plugin code...
   require('cypress-watch-and-reload/plugins')
 
+  // ignore the examples
+  config.ignoreTestFiles = '**/examples/*.spec.js'
+
   // It's IMPORTANT to return the config object
   // with any changed environment variables
   return config
