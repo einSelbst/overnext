@@ -5,7 +5,7 @@
 // @ts-ignore
 const requiredExample = require('../../fixtures/example')
 
-xcontext('Files', () => {
+context('Files', () => {
   beforeEach(() => {
     cy.visit('https://example.cypress.io/commands/files')
   })

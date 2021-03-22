@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-xcontext('Utilities', () => {
+context('Utilities', () => {
   beforeEach(() => {
     cy.visit('https://example.cypress.io/utilities')
   })
