@@ -160,6 +160,7 @@ pnpm validate      - run tsc, prettier, eslint and the tests
   - [Dashboard](https://dashboard.cypress.io/)
   - [Github Integration](https://docs.cypress.io/guides/dashboard/github-integration.html#Install-the-Cypress-GitHub-app)
   - [cypress-watch-and-reload](https://github.com/bahmutov/cypress-watch-and-reload)
+  - ToDo: if I want to run [headless cypress in watch mode](https://github.com/cypress-io/cypress/issues/3665#issuecomment-665866436)
 
 # Next.js Configuration
 
@@ -174,14 +175,13 @@ pnpm validate      - run tsc, prettier, eslint and the tests
 - [AMP Support](https://nextjs.org/docs/advanced-features/amp-support/introduction)
 - [Measuring performance](https://nextjs.org/docs/advanced-features/measuring-performance)
 
-## Plugins
+## Plugins & Helper
 
 - [compose plugins](https://github.com/cyrilwanner/next-compose-plugins)
 - webpack [bundle analyzer](https://github.com/vercel/next.js/tree/canary/packages/next-bundle-analyzer)
-- [PWA](https://web.dev/progressive-web-apps/) support via [next-pwa](https://github.com/shadowwalker/next-pwa) / [workbox](https://developers.google.com/web/tools/workbox)
-
-## Helper
-
+- [next-pwa](https://github.com/shadowwalker/next-pwa)
+  - for [PWA](https://web.dev/progressive-web-apps/) support via [workbox](https://developers.google.com/web/tools/workbox)
+  - see [documentation](https://www.npmjs.com/package/next-pwa?activeTab=readme#configuration)
 - [next-sitemap](https://github.com/iamvishnusankar/next-sitemap)
 - [next-seo](https://github.com/garmeeh/next-seo), for MetaTags, OpenGraph & JsonLD
 - [next-themes](https://github.com/pacocoursey/next-themes), for dark-mode
