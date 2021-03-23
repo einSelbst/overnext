@@ -54,7 +54,6 @@
 - conformity, inspirations https://github.com/dustinspecker/awesome-eslint
 - recommended repo files via [cgx](https://github.com/jeroenouw/cgx)
 - React [Strict Mode](https://reactjs.org/docs/strict-mode.html) enabled in [development](https://nextjs.org/docs/api-reference/next.config.js/react-strict-mode)
-- [husky](https://github.com/typicode/husky) pinned at v4, v5 is [open-source/sponsors only](https://dev.to/typicode/what-s-new-in-husky-5-32g5)
 
 ## Commit Style
 
@@ -64,17 +63,17 @@
     <details>
       <summary>Show commit types</summary>
 
-    - feat: A new feature
-    - fix: A bug fix
-    - docs: Documentation only changes
-    - style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-    - refactor: A code change that neither fixes a bug nor adds a feature
-    - perf: A code change that improves performance
-    - test: Adding missing tests or correcting existing tests
-    - build: Changes that affect the build system or external dependencies (example scopes: webpack, typescript, pnpm)
-    - ci: Changes to our CI configuration files and scripts (example scopes: Github Actions, BrowserStack, SauceLabs)
-    - chore: Other changes that don't modify src or test files
-    - revert: Reverts a previous commit
+    - `feat`: A new feature
+    - `fix`: A bug fix
+    - `docs`: Documentation only changes
+    - `style`: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+    - `refactor`: A code change that neither fixes a bug nor adds a feature
+    - `perf`: A code change that improves performance
+    - `test`: Adding missing tests or correcting existing tests
+    - `build`: Changes that affect the build system or external dependencies (example scopes: webpack, typescript, pnpm)
+    - `ci`: Changes to our CI configuration files and scripts (example scopes: Github Actions, BrowserStack, SauceLabs)
+    - `chore`: Other changes that don't modify src or test files
+    - `revert`: Reverts a previous commit
     </details>
 
 ## Scripts
@@ -147,6 +146,7 @@ pnpm validate      - run tsc, prettier, eslint and the tests
 
 - [`husky`](https://github.com/typicode/husky) for hooks
 
+  - pinned at v4, v5 is [open-source/sponsors only](https://dev.to/typicode/what-s-new-in-husky-5-32g5)
   - [lint-staged](https://github.com/okonet/lint-staged)
 
 - [axe-core/react](https://github.com/dequelabs/axe-core-npm)
