@@ -21,7 +21,7 @@
   </summary>
 
 ![next version](https://img.shields.io/badge/next-10.0.9-brightgreen)
-![react version](https://img.shields.io/badge/react-17.0.1-brightgreen)
+![react version](https://img.shields.io/badge/react-17.0.2-brightgreen)
 ![typescript version](https://img.shields.io/badge/typescript-4.2.3-brightgreen)
 ![cypress version](https://img.shields.io/badge/cypress-6.8.0-brightgreen)
 ![jest version](https://img.shields.io/badge/jest-26.6.3-brightgreen)
