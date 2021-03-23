@@ -10,7 +10,7 @@ const DefaultLayout = ({
       <header style={{ background: 'lightblue' }}>
         <nav>
           <Link href='/'>
-            <a href='/'>Home</a>
+            <a>Home</a>
           </Link>{' '}
           |
           <Link href='/about'>

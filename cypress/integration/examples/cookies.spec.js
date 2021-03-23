@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-xcontext('Cookies', () => {
+context('Cookies', () => {
   beforeEach(() => {
     Cypress.Cookies.debug(true)
 

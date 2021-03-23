@@ -31,6 +31,7 @@ devDependencies:
   caniuse-lite: 1.0.30001203
   commitizen: 4.2.3
   cypress: 6.8.0
+  cypress-watch-and-reload: 1.3.6
   dependency-version-badge: 1.9.1
   eslint: 7.22.0
   eslint-import-resolver-typescript: 2.4.0_23c541aea0503b6154366e35dc4fb8b3
@@ -3451,6 +3452,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-z/WhQ5FPySLdvREByI2vZiTWwCnF0moMJ1hK9YQwDTHKh6I7/uSckMetoRGb5UBZPC1z0jlw+n/XCgjeH7y1AQ==
+  /async-wait-until/1.2.6:
+    dev: true
+    engines:
+      node: '>= 4'
+      npm: '>= 2'
+    resolution:
+      integrity: sha512-7I1zd0bnMEo7WfLfDoLZp+iPYKv/dl7kcW8wphazZn+BAElTGvtkDuQuonr480JzkS7f42VcGyP90mk3+3IfWA==
   /async/3.2.0:
     dev: true
     resolution:
@@ -3759,7 +3767,6 @@ packages:
     resolution:
       integrity: sha512-Un7MIEDdUC5gNpcGDV97op1Ywk748MpHcFTHoYs6qnj1Z3j7I53VG3nwZhKzoBZmbdRNnb6WRdFlwl7tSDuZGw==
   /binary-extensions/2.2.0:
-    dev: false
     engines:
       node: '>=8'
     resolution:
@@ -4334,7 +4341,6 @@ packages:
       is-glob: 4.0.1
       normalize-path: 3.0.0
       readdirp: 3.5.0
-    dev: false
     engines:
       node: '>= 8.10.0'
     optionalDependencies:
@@ -5150,6 +5156,14 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-mI3zP+qxke95mmE2nddsF635V+o=
+  /cypress-watch-and-reload/1.3.6:
+    dependencies:
+      async-wait-until: 1.2.6
+      chokidar: 3.5.1
+      ws: 7.4.4
+    dev: true
+    resolution:
+      integrity: sha512-tG4JiwXXMLTN67A7J4zWba0cz1wwDeuRptpiYgTZrUvW9Pb8+56keQqMH4weGRNBHCWjLxgZhAm2qXgKY/CFzw==
   /cypress/6.8.0:
     dependencies:
       '@cypress/listr-verbose-renderer': 0.4.1
@@ -7930,7 +7944,6 @@ packages:
   /is-binary-path/2.1.0:
     dependencies:
       binary-extensions: 2.2.0
-    dev: false
     engines:
       node: '>=8'
     resolution:
@@ -12068,7 +12081,6 @@ packages:
   /readdirp/3.5.0:
     dependencies:
       picomatch: 2.2.2
-    dev: false
     engines:
       node: '>=8.10.0'
     resolution:
@@ -15042,6 +15054,7 @@ specifiers:
   caniuse-lite: 1.0.30001203
   commitizen: 4.2.3
   cypress: 6.8.0
+  cypress-watch-and-reload: 1.3.6
   dependency-version-badge: 1.9.1
   eslint: 7.22.0
   eslint-import-resolver-typescript: 2.4.0
