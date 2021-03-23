@@ -1,4 +1,4 @@
-# Overnext - Overly Opinionated Next.js Boilerplate ![next version](https://img.shields.io/badge/next-10.0.9-brightgreen)
+# Overnext - Overly Opinionated Next.js Boilerplate
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/einselbst/overnext/Continuous%20integration?style=flat-square)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/df1fbbbc-8ce1-48ab-8ad4-5ce0f308aa13/deploy-status)](https://app.netlify.com/sites/overnext/deploys)
@@ -20,7 +20,7 @@
     Versions
   </summary>
 
-![next version](https://img.shields.io/badge/next-latest-brightgreen)
+![next version](https://img.shields.io/badge/next-10.0.9-brightgreen)
 ![react version](https://img.shields.io/badge/react-17.0.1-brightgreen)
 ![typescript version](https://img.shields.io/badge/typescript-4.2.3-brightgreen)
 ![cypress version](https://img.shields.io/badge/cypress-6.8.0-brightgreen)
