@@ -3,8 +3,6 @@ command = "npm run build"
 publish = ".next"
 
   [build.environment]
-  # DEBUG=netlify-plugin-cypress
-  # DEBUG=netlify-plugin-cypress,netlify-plugin-cypress:verbose
   CI = "1"
   # cache Cypress binary in local "node_modules" folder
   # so Netlify caches it
@@ -60,4 +58,4 @@ package = "@netlify/plugin-lighthouse"
   seo = 0.8
 
   [[plugins.inputs.audits]]
-  path = "/"
+  path = "/en"
