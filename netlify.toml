@@ -58,12 +58,12 @@ package = "@netlify/plugin-lighthouse"
   seo = 0.8
 
   [[plugins.inputs.audits]]
-  path = "en"
+  path = "page-1"
   [[plugins.inputs.audits]]
-  path = "route1"
+  path = "dog"
   [[plugins.inputs.audits]]
-  path = "route2"
+  path = "de/legal"
   [[plugins.inputs.audits]]
-  path = ""
+  path = "de/first-amp"
     [plugins.inputs.audits.thresholds]
     performance = 0.8
