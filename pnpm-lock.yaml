@@ -2,6 +2,7 @@ dependencies:
   '@next/bundle-analyzer': 10.0.9
   autoprefixer: 10.2.5_postcss@8.2.8
   next: 10.0.9_19437c2f9b137c4ee9c416360487a7aa
+  next-compose-plugins: 2.2.1
   next-pwa: 5.0.6_@babel+core@7.13.10+next@10.0.9
   next-seo: 4.22.0_f82b92d9993e77d3ba80af2545664498
   next-themes: 0.0.14_f82b92d9993e77d3ba80af2545664498
@@ -49,7 +50,6 @@ devDependencies:
   jest-watch-typeahead: 0.6.1_jest@26.6.3
   lint-staged: 10.5.4
   netlify-plugin-cypress: 2.1.0
-  next-compose-plugins: 2.2.1
   next-sitemap: 1.6.9_next@10.0.9
   next-unused: 0.0.6
   npm-scripts-info: 0.3.9
@@ -2452,6 +2452,7 @@ packages:
     resolution:
       integrity: sha512-sDOAZcYwynHFTbLo6n8kIbLiVF3a3BLkrmehJUyEbT9F+Smbi47kLGS2gG2g0fjBLR/Lr1InPD7kXL7FaTqEkw==
   /@polka/url/1.0.0-next.11:
+    dev: false
     resolution:
       integrity: sha512-3NsZsJIA/22P3QUyrEDNA2D133H4j224twJrdipXN38dpnIOzAbUDtOwkcJ5pXmn75w7LSQDjA4tO9dm1XlqlA==
   /@rollup/plugin-babel/5.3.0_2403cf0b5b7c907b593a7f52a7337d31:
@@ -3105,6 +3106,7 @@ packages:
     resolution:
       integrity: sha512-OPdCF6GsMIP+Az+aWfAAOEt2/+iVDKE7oy6lJ098aoe59oAmK76qV6Gw60SbZ8jHuG2wH058GF4pLFbYamYrVA==
   /acorn-walk/8.0.2:
+    dev: false
     engines:
       node: '>=0.4.0'
     resolution:
@@ -7428,6 +7430,7 @@ packages:
   /gzip-size/6.0.0:
     dependencies:
       duplexer: 0.1.2
+    dev: false
     engines:
       node: '>=10'
     resolution:
@@ -10158,6 +10161,7 @@ packages:
     resolution:
       integrity: sha512-Y/jMt/S5sR9OaqteJtslsFZKWOIIqMACsJSiHghlCAyhf7jfVYjKBmLiX8OgpWeW+fjJ2b+Az69aPFPkUOY6xQ==
   /mime/2.5.2:
+    dev: false
     engines:
       node: '>=4.0.0'
     hasBin: true
@@ -10433,7 +10437,7 @@ packages:
     resolution:
       integrity: sha512-DLD811EeDraZjQaLo9j3j+cTwrQchsLICWvjdkQf2bit0EiW4A9QekssSUPR8G+6B++7Ehxf0OTAzp1aK6sHZg==
   /next-compose-plugins/2.2.1:
-    dev: true
+    dev: false
     resolution:
       integrity: sha512-OjJ+fV15FXO2uQXQagLD4C0abYErBjyjE0I0FHpOEIB8upw0hg1ldFP6cqHTJBH1cZqy96OeR3u1dJ+Ez2D4Bg==
   /next-pwa/5.0.6_@babel+core@7.13.10+next@10.0.9:
@@ -10950,6 +10954,7 @@ packages:
     resolution:
       integrity: sha512-8AV/sCtuzUeTo8gQK5qDZzARrulB3egtLzFgteqB2tcT4Mw7B8Kt7JcDHmltjz6FOAHsvTevk70gZEbhM4ZS9Q==
   /opener/1.5.2:
+    dev: false
     hasBin: true
     resolution:
       integrity: sha512-ur5UIdyw5Y7yEj9wLzhqXiy6GZ3Mwx0yGI+5sMn2r0N0v3cKJvUmFH5yPP+WXh9e0xfyzyJX95D8l088DNFj7A==
@@ -12906,6 +12911,7 @@ packages:
       '@polka/url': 1.0.0-next.11
       mime: 2.5.2
       totalist: 1.1.0
+    dev: false
     engines:
       node: '>= 10'
     resolution:
@@ -13905,6 +13911,7 @@ packages:
     resolution:
       integrity: sha512-yaOH/Pk/VEhBWWTlhI+qXxDFXlejDGcQipMlyxda9nthulaxLZUNcUqFxokp0vcYnvteJln5FNQDRrxj3YcbVw==
   /totalist/1.1.0:
+    dev: false
     engines:
       node: '>=6'
     resolution:
@@ -14663,6 +14670,7 @@ packages:
       opener: 1.5.2
       sirv: 1.0.11
       ws: 7.4.4
+    dev: false
     engines:
       node: '>= 10.13.0'
     hasBin: true
