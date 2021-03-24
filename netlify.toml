@@ -21,8 +21,8 @@ NODE_ENV = "production"
 [[plugins]]
 package = "@netlify/plugin-nextjs"
 
-# [[plugins]]
-# package = "netlify-plugin-cache-nextjs"
+[[plugins]]
+package = "netlify-plugin-cache-nextjs"
 
 [[plugins]]
 # runs Cypress tests against the deployed URL
@@ -58,4 +58,12 @@ package = "@netlify/plugin-lighthouse"
   seo = 0.8
 
   [[plugins.inputs.audits]]
-  path = "/en"
+  path = "en"
+  [[plugins.inputs.audits]]
+  path = "route1"
+  [[plugins.inputs.audits]]
+  path = "route2"
+  [[plugins.inputs.audits]]
+  path = ""
+    [plugins.inputs.audits.thresholds]
+    performance = 0.8
