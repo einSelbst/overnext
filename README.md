@@ -60,7 +60,7 @@
 # Guiding Principles
 
 - automate it
-- catch errors early
+- catch bugs early
 - do it cheap
 
 # DX
