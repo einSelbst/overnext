@@ -47,13 +47,28 @@
 
 </details>
 
+# Approach
+
+- DX first
+- Integration second
+  - db/cms
+  - 3rd party services
+- all screen third
+  - app should work from watch to wide screen, not just mobile
+- features last
+
+# Guiding Principles
+
+- automate it
+- catch errors early
+- do it cheap
+
 # DX
 
 - [pnpm](https://pnpm.js.org/en/) package manager
 - automation, inspirations https://github.com/sdras/awesome-actions
 - conformity, inspirations https://github.com/dustinspecker/awesome-eslint
 - recommended repo files via [cgx](https://github.com/jeroenouw/cgx)
-- React [Strict Mode](https://reactjs.org/docs/strict-mode.html) enabled in [development](https://nextjs.org/docs/api-reference/next.config.js/react-strict-mode)
 
 ## Commit Style
 
@@ -101,6 +116,7 @@ pnpm validate      - run tsc, prettier, eslint and the tests
 
 # Code Style
 
+- React [Strict Mode](https://reactjs.org/docs/strict-mode.html) enabled in [development](https://nextjs.org/docs/api-reference/next.config.js/react-strict-mode)
 - [Typescript](https://www.typescriptlang.org/) (for compile time type checking) with [tslib](https://www.npmjs.com/package/tslib)
 - [prop-types](https://www.npmjs.com/package/prop-types) (for run-time type checking), more [info](https://stackoverflow.com/a/54690878/531439)
 - [Standard](https://github.com/standard/standard)
