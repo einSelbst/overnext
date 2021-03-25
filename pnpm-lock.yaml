@@ -8,7 +8,7 @@ dependencies:
   '@next/bundle-analyzer': 10.0.9
   '@next/eslint-plugin-next': 10.0.9
   '@testing-library/react': 11.2.5_react-dom@17.0.2+react@17.0.2
-  '@types/jest': 26.0.21
+  '@types/jest': 26.0.22
   '@types/node': 13.13.47
   '@types/prop-types': 15.7.3
   '@types/react': 17.0.3
@@ -30,7 +30,7 @@ dependencies:
   eslint-plugin-jest-dom: 3.6.5_eslint@7.22.0
   eslint-plugin-jsx-a11y: 6.4.1_eslint@7.22.0
   eslint-plugin-promise: 4.3.1
-  eslint-plugin-react: 7.23.0_eslint@7.22.0
+  eslint-plugin-react: 7.23.1_eslint@7.22.0
   eslint-plugin-react-hooks: 4.2.0_eslint@7.22.0
   husky: 4.3.8
   identity-obj-proxy: 3.0.0
@@ -41,7 +41,7 @@ dependencies:
   next: 10.0.9_19437c2f9b137c4ee9c416360487a7aa
   next-compose-plugins: 2.2.1
   next-pwa: 5.0.6_@babel+core@7.13.10+next@10.0.9
-  next-seo: 4.22.0_f82b92d9993e77d3ba80af2545664498
+  next-seo: 4.23.0_f82b92d9993e77d3ba80af2545664498
   next-sitemap: 1.6.9_next@10.0.9
   next-themes: 0.0.14_f82b92d9993e77d3ba80af2545664498
   next-unused: 0.0.6
@@ -55,7 +55,7 @@ dependencies:
   start-server-and-test: 1.12.1
   tailwindcss: 2.0.4_caf414ac65a978d0d57907a0ec9fb41e
   tslib: 2.1.0
-  typedoc: 0.20.33_typescript@4.2.3
+  typedoc: 0.20.34_typescript@4.2.3
   typescript: 4.2.3
 devDependencies:
   html-validate: 4.7.1
@@ -2767,13 +2767,13 @@ packages:
     dev: false
     resolution:
       integrity: sha512-nwKNbvnwJ2/mndE9ItP/zc2TCzw6uuodnF4EHYWD+gCQDVBuRQL5UzbZD0/ezy1iKsFU2ZQiDqg4M9dN4+wZgA==
-  /@types/jest/26.0.21:
+  /@types/jest/26.0.22:
     dependencies:
       jest-diff: 26.6.2
       pretty-format: 26.6.2
     dev: false
     resolution:
-      integrity: sha512-ab9TyM/69yg7eew9eOwKMUmvIZAKEGZYlq/dhe5/0IMUd/QLJv5ldRMdddSn+u22N13FP3s5jYyktxuBwY0kDA==
+      integrity: sha512-eeWwWjlqxvBxc4oQdkueW5OF/gtfSceKk4OnOAGlUSwS/liBRtZppbJuz1YkgbrbfGOoeBHun9fOvXnjNwrSOw==
   /@types/json-schema/7.0.7:
     dev: false
     resolution:
@@ -6388,7 +6388,7 @@ packages:
       eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
     resolution:
       integrity: sha512-623WEiZJqxR7VdxFCKLI6d6LLpwJkGPYKODnkH3D7WpOG5KM8yWueBd8TLsNAetEJNF5iJmolaAKO3F8yzyVBQ==
-  /eslint-plugin-react/7.23.0_eslint@7.22.0:
+  /eslint-plugin-react/7.23.1_eslint@7.22.0:
     dependencies:
       array-includes: 3.1.3
       array.prototype.flatmap: 1.2.4
@@ -6409,7 +6409,7 @@ packages:
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7
     resolution:
-      integrity: sha512-5rfsRiHKIAdhxv3NxrzE+dBC7BFsNhuErL+Fy940oD1cau55JVTnuL25sqXqD7XY0OkYCRsKEqxZVwezE5ol5w==
+      integrity: sha512-MvFGhZjI8Z4HusajmSw0ougGrq3Gs4vT/0WgwksZgf5RrLrRa2oYAw56okU4tZJl8+j7IYNuTM+2RnFEuTSdRQ==
   /eslint-scope/5.1.1:
     dependencies:
       esrecurse: 4.3.0
@@ -10782,7 +10782,7 @@ packages:
       webpack: '>=4.0.0 <5.0.0'
     resolution:
       integrity: sha512-3IgjJr4iD0Fis1cplsY8nZo5BgHIdhJ9I5YpRU/3VBOpGQEkzb+B/+M0eNVjjebv9+WoqnvMkSjNDOs4KT7bBA==
-  /next-seo/4.22.0_f82b92d9993e77d3ba80af2545664498:
+  /next-seo/4.23.0_f82b92d9993e77d3ba80af2545664498:
     dependencies:
       next: 10.0.9_19437c2f9b137c4ee9c416360487a7aa
       react: 17.0.2
@@ -10793,7 +10793,7 @@ packages:
       react: ^16.0.0 || ^17.0.0
       react-dom: ^16.0.0 || ^17.0.0
     resolution:
-      integrity: sha512-W4WBkSGIHRPHqIjfUy72Xv8Zx4q38LJLIcxkXlJecLSruQhtPGx8z2H3ct00D9uLbk9Bj2HbYVS5fewqx8ki2g==
+      integrity: sha512-/yTeeUT+zFTsrpP8iigwiwsj+HyT+ks1G27mgfnkKQBrFz9uph6Bot4nDrwfICgjvdLt2Zdve6okAgRUmhm+/g==
   /next-sitemap/1.6.9_next@10.0.9:
     dependencies:
       '@corex/deepmerge': 2.5.6
@@ -14575,7 +14575,7 @@ packages:
       node: '>= 8'
     resolution:
       integrity: sha512-Jd5fYTiqzinZdoIY382W7tQXTwAzWRdg8KbHfaxmb78m1/3jL9riXtk23oBOKwhi8GFVykCOdPzEJKY87/D0LQ==
-  /typedoc/0.20.33_typescript@4.2.3:
+  /typedoc/0.20.34_typescript@4.2.3:
     dependencies:
       colors: 1.4.0
       fs-extra: 9.1.0
@@ -14596,7 +14596,7 @@ packages:
     peerDependencies:
       typescript: 3.9.x || 4.0.x || 4.1.x || 4.2.x
     resolution:
-      integrity: sha512-jzNdHmjZRQKwguhpXjIPuIjz+TpdgG2AVY8ta+qpAukv+3rBhTs4AAVd+mkonrHVYlC0EAbuAJ4urkfnn42Hwg==
+      integrity: sha512-es+N/KyGPcHl9cAuYh1Z5m7HzwcmfNLghkmb2pzGz7HRDS5GS2uA3hu/c2cv4gCxDsw8pPUPCOvww+Hzf48Kug==
   /typescript/3.9.9:
     dev: false
     engines:
@@ -15548,7 +15548,7 @@ specifiers:
   '@next/bundle-analyzer': 10.0.9
   '@next/eslint-plugin-next': 10.0.9
   '@testing-library/react': 11.2.5
-  '@types/jest': 26.0.21
+  '@types/jest': 26.0.22
   '@types/node': 13.13.47
   '@types/prop-types': 15.7.3
   '@types/react': 17.0.3
@@ -15570,7 +15570,7 @@ specifiers:
   eslint-plugin-jest-dom: 3.6.5
   eslint-plugin-jsx-a11y: 6.4.1
   eslint-plugin-promise: 4.3.1
-  eslint-plugin-react: 7.23.0
+  eslint-plugin-react: 7.23.1
   eslint-plugin-react-hooks: 4.2.0
   fsevents: 2.3.2
   html-validate: 4.7.1
@@ -15583,7 +15583,7 @@ specifiers:
   next: 10.0.9
   next-compose-plugins: 2.2.1
   next-pwa: 5.0.6
-  next-seo: 4.22.0
+  next-seo: 4.23.0
   next-sitemap: 1.6.9
   next-themes: 0.0.14
   next-unused: 0.0.6
@@ -15597,5 +15597,5 @@ specifiers:
   start-server-and-test: 1.12.1
   tailwindcss: 2.0.4
   tslib: 2.1.0
-  typedoc: 0.20.33
+  typedoc: 0.20.34
   typescript: 4.2.3
