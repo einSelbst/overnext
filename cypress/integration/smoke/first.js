@@ -19,7 +19,12 @@ describe('Homepage', () => {
         .and('be.not.empty')
     })
 
-    it('navigates directly', () => {
+    it('navigates directly to localized path', () => {
+      cy.visit('/de/legal/imprint')
+      cy.contains('h1', 'imprint').should('be.visible')
+    })
+
+    it('navigates directly to base path', () => {
       cy.visit('/legal/about')
       cy.contains('h1', 'about').should('be.visible')
     })

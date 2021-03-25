@@ -224,6 +224,8 @@ pnpm validate      - run tsc, prettier, eslint and the tests
   - override "Build Command": `next build && npx pnpm run postbuild` (optional)
 - [Netlify](https://www.netlify.com/blog/2020/11/30/how-to-deploy-next.js-sites-to-netlify/)
   - [`netlify.toml`](https://github.com/netlify/netlify-plugin-nextjs)
+  - [assets](https://docs.netlify.com/configure-builds/file-based-configuration/#post-processing)
+  - "Redirects and rewrites using next.config.js aren’t currently supported for Next.js sites on Netlify."
   - netlify plugins
     - [cypress](https://github.com/cypress-io/netlify-plugin-cypress)
 

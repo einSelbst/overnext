@@ -65,6 +65,7 @@ exports[`home page matches snapshot 1`] = `
       <button
         class="jsx-3296980036"
         data-cy="test-button"
+        type="button"
       >
         Test Button
       </button>

@@ -10,6 +10,20 @@ publish = ".next"
   # set TERM variable for terminal output
   TERM = "xterm"
 
+# If skip_processing = true, all other settings are ignored
+  [build.processing]
+  skip_processing = false
+  [build.processing.css]
+  bundle = true
+  minify = false
+  [build.processing.js]
+  bundle = true
+  minify = false
+  [build.processing.html]
+  pretty_urls = true
+  [build.processing.images]
+  compress = true
+
 [context.production.environment]
 NEXT_SERVERLESS = "true"
 NODE_ENV = "production"
@@ -58,12 +72,8 @@ package = "@netlify/plugin-lighthouse"
   seo = 0.8
 
   [[plugins.inputs.audits]]
-  path = "en"
+  path = "de/legal"
   [[plugins.inputs.audits]]
-  path = "route1"
-  [[plugins.inputs.audits]]
-  path = "route2"
-  [[plugins.inputs.audits]]
-  path = ""
+  path = "first-amp"
     [plugins.inputs.audits.thresholds]
     performance = 0.8

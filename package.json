@@ -37,8 +37,12 @@
     "?find:unused": "echo Find unused files",
     "find:unused": "next-unused",
     "type-check": "tsc --pretty --noEmit",
+    "?format": "echo Format source code and fix issues",
     "format": "prettier-standard --format --lint",
+    "?lint": "echo Lint source code and fix issues",
     "lint": "eslint . --fix",
+    "?lint:html": "Run html-validate on generated static output files",
+    "lint:html": "html-validate '.next/**/*.html'",
     "?test": "echo Run unit and integration tests once",
     "test": "jest && pnpm e2e",
     "?test:jest": "echo Run jest tests and update screenshots",
@@ -50,8 +54,12 @@
     "?e2e": "echo Build & serve app, then run cypress once",
     "e2e": "start-test 'pnpm serve' 3000 'cypress run'",
     "pree2e": "rm -rf .nyc_output coverage .next || true",
-    "?validate": "echo Format, lint, type-check & test the app",
-    "validate": "pnpm format && pnpm lint && pnpm type-check && pnpm test"
+    "?validate": "echo Validate source code and output files",
+    "validate": "pnpm validate:src && pnpm validate:out",
+    "?validate:src": "echo Format, lint, type-check & unit test the app",
+    "validate:src": "pnpm format && pnpm lint && pnpm type-check && jest",
+    "?validate:out": "echo Build app, run integration tests & validate generated html",
+    "validate:out": "pnpm e2e && pnpm lint:html"
   },
   "config": {
     "commitizen": {
@@ -117,6 +125,9 @@
     "tslib": "2.1.0",
     "typedoc": "0.20.33",
     "typescript": "4.2.3"
+  },
+  "devDependencies": {
+    "html-validate": "4.7.1"
   },
   "optionalDependencies": {
     "fsevents": "2.3.2"

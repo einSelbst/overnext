@@ -46,6 +46,7 @@ export const Home = (): JSX.Element => {
 
         <button
           data-cy='test-button'
+          type='button'
           onClick={() => {
             window.alert('With typescript and Jest')
           }}
