@@ -21,12 +21,19 @@ describe('Homepage', () => {
 
     it('navigates directly to localized path', () => {
       cy.visit('/de/legal/imprint')
-      cy.contains('h1', 'imprint').should('be.visible')
+      cy.contains('h1', 'Legal').should('be.visible')
     })
 
     it('navigates directly to base path', () => {
       cy.visit('/legal/about')
-      cy.contains('h1', 'about').should('be.visible')
+      cy.contains('h1', 'Legal').should('be.visible')
+    })
+
+    it('navigates via links', () => {
+      cy.visit('/de/legal')
+      cy.get('[data-cy=privacy-link]').click()
+      cy.location('pathname').should('include', '/privacy')
+      cy.contains('h1', 'privacy').should('be.visible')
     })
 
     xit('navigates via links', () => {

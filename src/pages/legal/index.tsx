@@ -7,17 +7,17 @@ const Legal = (): JSX.Element => {
       <ul>
         <li>
           <Link href='/legal/privacy'>
-            <a href='legal/privacy'>Privacy</a>
+            <a data-cy='privacy-link'>Privacy</a>
           </Link>
         </li>
         <li>
           <Link href='/legal/imprint'>
-            <a href='legal/imprint'>Imprint</a>
+            <a data-cy='imprint-link'>Imprint</a>
           </Link>
         </li>
         <li>
-          <Link href='/about'>
-            <a href='about'>About</a>
+          <Link href='/legal/about'>
+            <a data-cy='about-link'>About</a>
           </Link>
         </li>
       </ul>

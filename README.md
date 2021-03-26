@@ -47,13 +47,28 @@
 
 </details>
 
+# Approach
+
+- DX first
+- Integration second
+  - db/cms
+  - 3rd party services
+- all screen third
+  - from watch to wide screen, not just mobile/desktop
+- features & content last
+
+# Guiding Principles
+
+- automate it
+- catch bugs early
+- do it cheap
+
 # DX
 
 - [pnpm](https://pnpm.js.org/en/) package manager
 - automation, inspirations https://github.com/sdras/awesome-actions
 - conformity, inspirations https://github.com/dustinspecker/awesome-eslint
 - recommended repo files via [cgx](https://github.com/jeroenouw/cgx)
-- React [Strict Mode](https://reactjs.org/docs/strict-mode.html) enabled in [development](https://nextjs.org/docs/api-reference/next.config.js/react-strict-mode)
 
 ## Commit Style
 
@@ -78,29 +93,58 @@
 
 ## Scripts
 
+To print a description of the scripts run `pnpm run info`
+
 ```bash
-pnpm dev           - start dev server
-pnpm debug         - start dev server and node debugger
-pnpm build         - build project
-pnpm build:analyze - build project and visualize chunks
-pnpm start         - kickstart the application
-pnpm serve         - build and start project
-pnpm servex        - build and start project on public URL
-pnpm cz            - make new commit
-pnpm release       - make new release
-pnpm docs          - generate source code documentation
-pnpm info          - display info about scripts
-pnpm find:unused   - find unused files
-pnpm type-check    - run typescript compiler
-pnpm lint          - run eslint
-pnpm format        - run prettier
-pnpm test          - run jest
-pnpm test:cy       - open cypress test runner
-pnpm validate      - run tsc, prettier, eslint and the tests
+dev:
+  Start next app in dev mode
+debug:
+  Start node debugger
+build:
+  Build the app
+start:
+  Start server to serve the local app build
+serve:
+  Build app and start server
+servex:
+  Build & run app on public URL
+cz:
+  Make new commit
+release:
+  Prepare a new release
+docs:
+  Generate typedoc docs
+info:
+  Display info about the scripts
+find:unused:
+  Find unused files
+format:
+  Format source code and fix issues
+lint:
+  Lint source code and fix issues
+lint:html:
+  Run html-validate on generated static output files
+test:
+  Run unit and integration tests once
+test:jest:
+  Run jest tests and update screenshots
+test:cy:
+  Open cypress test runner (needs a running app server)
+e2e:watch:
+  Start dev server, open cypress and watch
+e2e:
+  Build & serve app, then run cypress once
+validate:
+  Validate source code and output files
+validate:src:
+  Format, lint, type-check & unit test the app
+validate:out:
+  Build app, run integration tests & validate generated html
 ```
 
 # Code Style
 
+- React [Strict Mode](https://reactjs.org/docs/strict-mode.html) enabled in [development](https://nextjs.org/docs/api-reference/next.config.js/react-strict-mode)
 - [Typescript](https://www.typescriptlang.org/) (for compile time type checking) with [tslib](https://www.npmjs.com/package/tslib)
 - [prop-types](https://www.npmjs.com/package/prop-types) (for run-time type checking), more [info](https://stackoverflow.com/a/54690878/531439)
 - [Standard](https://github.com/standard/standard)
