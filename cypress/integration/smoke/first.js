@@ -21,7 +21,7 @@ describe('Homepage', () => {
 
     it('navigates directly to localized path', () => {
       cy.visit('/de/legal/imprint')
-      if (process.env.NETLIFY === true) {
+      if (process.env.NETLIFY) {
         cy.contains('h1', 'Legal').should('be.visible')
       } else {
         cy.contains('h1', 'imprint').should('be.visible')
@@ -30,7 +30,7 @@ describe('Homepage', () => {
 
     it('navigates directly to base path', () => {
       cy.visit('/legal/about')
-      if (process.env.NETLIFY === true) {
+      if (process.env.NETLIFY) {
         cy.contains('h1', 'Legal').should('be.visible')
       } else {
         cy.contains('h1', 'about').should('be.visible')
