@@ -93,25 +93,53 @@
 
 ## Scripts
 
+To print a description of the scripts run `pnpm run info`
+
 ```bash
-pnpm dev           - start dev server
-pnpm debug         - start dev server and node debugger
-pnpm build         - build project
-pnpm build:analyze - build project and visualize chunks
-pnpm start         - kickstart the application
-pnpm serve         - build and start project
-pnpm servex        - build and start project on public URL
-pnpm cz            - make new commit
-pnpm release       - make new release
-pnpm docs          - generate source code documentation
-pnpm info          - display info about scripts
-pnpm find:unused   - find unused files
-pnpm type-check    - run typescript compiler
-pnpm lint          - run eslint
-pnpm format        - run prettier
-pnpm test          - run jest
-pnpm test:cy       - open cypress test runner
-pnpm validate      - run tsc, prettier, eslint and the tests
+dev:
+  Start next app in dev mode
+debug:
+  Start node debugger
+build:
+  Build the app
+start:
+  Start server to serve the local app build
+serve:
+  Build app and start server
+servex:
+  Build & run app on public URL
+cz:
+  Make new commit
+release:
+  Prepare a new release
+docs:
+  Generate typedoc docs
+info:
+  Display info about the scripts
+find:unused:
+  Find unused files
+format:
+  Format source code and fix issues
+lint:
+  Lint source code and fix issues
+lint:html:
+  Run html-validate on generated static output files
+test:
+  Run unit and integration tests once
+test:jest:
+  Run jest tests and update screenshots
+test:cy:
+  Open cypress test runner (needs a running app server)
+e2e:watch:
+  Start dev server, open cypress and watch
+e2e:
+  Build & serve app, then run cypress once
+validate:
+  Validate source code and output files
+validate:src:
+  Format, lint, type-check & unit test the app
+validate:out:
+  Build app, run integration tests & validate generated html
 ```
 
 # Code Style
