@@ -95,51 +95,29 @@
 
 To print a description of the scripts run `pnpm run info`
 
-```bash
-dev:
-  Start next app in dev mode
-debug:
-  Start node debugger
-build:
-  Build the app
-start:
-  Start server to serve the local app build
-serve:
-  Build app and start server
-servex:
-  Build & run app on public URL
-cz:
-  Make new commit
-release:
-  Prepare a new release
-docs:
-  Generate typedoc docs
-info:
-  Display info about the scripts
-find:unused:
-  Find unused files
-format:
-  Format source code and fix issues
-lint:
-  Lint source code and fix issues
-lint:html:
-  Run html-validate on generated static output files
-test:
-  Run unit and integration tests once
-test:jest:
-  Run jest tests and update screenshots
-test:cy:
-  Open cypress test runner (needs a running app server)
-e2e:watch:
-  Start dev server, open cypress and watch
-e2e:
-  Build & serve app, then run cypress once
-validate:
-  Validate source code and output files
-validate:src:
-  Format, lint, type-check & unit test the app
-validate:out:
-  Build app, run integration tests & validate generated html
+```yaml
+dev: Start next app in dev mode
+debug: Start node debugger
+build: Build the app
+start: Start server to serve the local app build
+serve: Build app and start server
+servex: Build & run app on public URL
+cz: Make new commit
+release: Prepare a new release
+docs: Generate typedoc docs
+info: Display info about the scripts
+find:unused: Find unused files
+format: Format source code and fix issues
+lint: Lint source code and fix issues
+lint:html: Run html-validate on generated static output files
+test: Run unit and integration tests once
+test:jest: Run jest tests and update screenshots
+test:cy: Open cypress test runner (needs a running app server)
+e2e:watch: Start dev server, open cypress and watch
+e2e: Build & serve app, then run cypress once
+validate: Validate source code and output files
+validate:src: Format, lint, type-check & unit test the app
+validate:out: Build app, run integration tests & validate generated html
 ```
 
 ## Code Style
@@ -291,33 +269,33 @@ validate:out:
 
 ### Issues
 
-- ToDo: https://github.com/coblox/zenhub-link-pr-to-issue
-- ToDo: https://github.com/damccorm/tag-ur-it
-- ToDo: https://github.com/Renato66/auto-label
-- ToDo: https://github.com/Naturalclar/issue-action
-- ToDo: https://github.com/nwtgck/actions-comment-run
+- ToDo: [zenhub link pr to issue](https://github.com/coblox/zenhub-link-pr-to-issue)
+- ToDo: [tag ur it](https://github.com/damccorm/tag-ur-it)
+- ToDo: [auto label](https://github.com/Renato66/auto-label)
+- ToDo: [issue action](https://github.com/Naturalclar/issue-action)
+- ToDo: [actions comment run](https://github.com/nwtgck/actions-comment-run)
 
 ### Projects
 
-- ToDo: https://github.com/technote-space/auto-card-labeler
-- ToDo: https://github.com/alex-page/github-project-automation-plus
-- ToDo: https://github.com/marketplace/actions/move-labeled-or-milestoned-issue-to-a-specific-project-column
-- ToDo: https://github.com/philschatz/project-bot
-- ToDo: https://github.com/takanabe/github-actions-automate-projects
+- ToDo: [auto card labeler](https://github.com/technote-space/auto-card-labeler)
+- ToDo: [project automation plus](https://github.com/alex-page/github-project-automation-plus)
+- ToDo: [move issue to project column](https://github.com/marketplace/actions/move-labeled-or-milestoned-issue-to-a-specific-project-column)
+- ToDo: [project bot](https://github.com/philschatz/project-bot)
+- ToDo: [automate projects](https://github.com/takanabe/github-actions-automate-projects)
 
 ### Milestones
 
-- ToDo: https://github.com/WyriHaximus/github-action-create-milestone
+- ToDo: [create milestone](https://github.com/WyriHaximus/github-action-create-milestone)
 
 ### Branches
 
-- ToDo: https://github.com/robvanderleek/create-issue-branch
+- ToDo: [create-issue-branch](https://github.com/robvanderleek/create-issue-branch)
 
 ### Pull Requests
 
-- ToDo: https://github.com/Decathlon/pull-request-labeler-action
-- ToDo: https://github.com/jpmcb/prow-github-actions
-- ToDo: https://github.com/kentaro-m/task-completed-checker-action
+- ToDo: [PR Labeler](https://github.com/Decathlon/pull-request-labeler-action)
+- ToDo: [prow github action](https://github.com/jpmcb/prow-github-actions)
+- ToDo: [task completed checker action](https://github.com/kentaro-m/task-completed-checker-action)
 </details>
 
 ## Credits
