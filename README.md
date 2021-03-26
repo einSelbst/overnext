@@ -66,8 +66,8 @@
 ## DX
 
 - [pnpm](https://pnpm.js.org/en/) package manager
-- automation, inspirations https://github.com/sdras/awesome-actions
-- conformity, inspirations https://github.com/dustinspecker/awesome-eslint
+- automation, [inspirations](https://github.com/sdras/awesome-actions)
+- conformity, [inspirations](https://github.com/dustinspecker/awesome-eslint)
 - recommended repo files via [cgx](https://github.com/jeroenouw/cgx)
 
 ### Commit Style
@@ -216,7 +216,7 @@ validate:out: Build app, run integration tests & validate generated html
 - [Tailwind CSS](https://tailwindcss.com/) - really unsure about it, esp. after reading [this](https://dev.to/jaredcwhite/why-tailwind-isn-t-for-me-5c90), also looking at:
   - [shoelace](https://shoelace.style/)
   - [em dash](https://github.com/jfbrennan/m-)
-- ToDo: https://github.com/postcss/autoprefixer
+- ToDo: [autoprefixer](https://github.com/postcss/autoprefixer)
 
 ## CI
 
