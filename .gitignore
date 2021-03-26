@@ -95,3 +95,6 @@ public/sitemap.xml
 # next-pwa
 public/workbox-*.js*
 public/sw.js*
+
+# docs
+docs
