@@ -54,8 +54,8 @@
   - db/cms
   - 3rd party services
 - all screen third
-  - app should work from watch to wide screen, not just mobile
-- features last
+  - from watch to wide screen, not just mobile/desktop
+- features & content last
 
 # Guiding Principles
 
