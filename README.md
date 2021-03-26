@@ -47,7 +47,7 @@
 
 </details>
 
-# Approach
+## Approach
 
 - DX first
 - Integration second
@@ -57,20 +57,20 @@
   - from watch to wide screen, not just mobile/desktop
 - features & content last
 
-# Guiding Principles
+## Guiding Principles
 
 - automate it
 - catch bugs early
 - do it cheap
 
-# DX
+## DX
 
 - [pnpm](https://pnpm.js.org/en/) package manager
 - automation, inspirations https://github.com/sdras/awesome-actions
 - conformity, inspirations https://github.com/dustinspecker/awesome-eslint
 - recommended repo files via [cgx](https://github.com/jeroenouw/cgx)
 
-## Commit Style
+### Commit Style
 
 - [Conventional Commits convention](https://www.conventionalcommits.org/)
 
@@ -91,7 +91,7 @@
     - `revert`: Reverts a previous commit
     </details>
 
-## Scripts
+### Scripts
 
 To print a description of the scripts run `pnpm run info`
 
@@ -142,7 +142,7 @@ validate:out:
   Build app, run integration tests & validate generated html
 ```
 
-# Code Style
+## Code Style
 
 - React [Strict Mode](https://reactjs.org/docs/strict-mode.html) enabled in [development](https://nextjs.org/docs/api-reference/next.config.js/react-strict-mode)
 - [Typescript](https://www.typescriptlang.org/) (for compile time type checking) with [tslib](https://www.npmjs.com/package/tslib)
@@ -151,7 +151,7 @@ validate:out:
 - [EditorConfig](https://editorconfig.org/)
 - [typedoc](https://github.com/TypeStrong/typedoc)
 
-## Linter / A11y
+### Linter / A11y
 
 - [Prettier-Standard](https://github.com/sheerun/prettier-standard)
 
@@ -195,7 +195,7 @@ validate:out:
 
 - [axe-core/react](https://github.com/dequelabs/axe-core-npm)
 
-# Testing
+## Testing
 
 - [Jest](https://jestjs.io/)
   - [`react-testing-library`](https://testing-library.com/docs/react-testing-library/intro)
@@ -206,9 +206,9 @@ validate:out:
   - [cypress-watch-and-reload](https://github.com/bahmutov/cypress-watch-and-reload)
   - ToDo: if I want to run [headless cypress in watch mode](https://github.com/cypress-io/cypress/issues/3665#issuecomment-665866436)
 
-# Next.js Configuration
+## Next.js Configuration
 
-## Features
+### Features
 
 - ['src' Directory](https://nextjs.org/docs/advanced-features/src-directory)
 - [Custom 'App'](https://nextjs.org/docs/advanced-features/custom-app)
@@ -219,7 +219,7 @@ validate:out:
 - [AMP Support](https://nextjs.org/docs/advanced-features/amp-support/introduction)
 - [Measuring performance](https://nextjs.org/docs/advanced-features/measuring-performance)
 
-## Plugins & Helper
+### Plugins & Helper
 
 - [compose plugins](https://github.com/cyrilwanner/next-compose-plugins)
 - webpack [bundle analyzer](https://github.com/vercel/next.js/tree/canary/packages/next-bundle-analyzer)
@@ -231,7 +231,7 @@ validate:out:
 - [next-themes](https://github.com/pacocoursey/next-themes), for dark-mode
 - [next-unused](https://github.com/pacocoursey/next-unused)
 
-## Styling
+### Styling
 
 ...all still unclear atm...
 
@@ -240,9 +240,9 @@ validate:out:
   - [em dash](https://github.com/jfbrennan/m-)
 - ToDo: https://github.com/postcss/autoprefixer
 
-# CI
+## CI
 
-## Github Actions
+### Github Actions
 
 - basic: runs linter, tests and build for different node versions
 - auto-create-pr: creates Pull Requests for new branches
@@ -254,7 +254,7 @@ validate:out:
 - [Super-Linter](https://github.com/github/super-linter)
 - [detect-secrets-action](https://github.com/RobertFischer/detect-secrets-action)
 
-## Audits & Service Dashboards
+### Audits & Service Dashboards
 
 - [Lighthouse](https://github.com/GoogleChrome/lighthouse/)
 - [sonarcloud](https://sonarcloud.io/)
@@ -262,7 +262,7 @@ validate:out:
 - [Renovate](https://app.renovatebot.com/dashboard#github/einSelbst/overnext)
 - [Cypress](https://dashboard.cypress.io/projects/esdwok/runs)
 
-# Deployment
+## Deployment
 
 - [Documentation](https://nextjs.org/docs/deployment)
 - [Vercel](https://vercel.com/import?filter=next.js)
@@ -275,7 +275,7 @@ validate:out:
   - netlify plugins
     - [cypress](https://github.com/cypress-io/netlify-plugin-cypress)
 
-# ToDo
+## ToDo
 
 - [ ] cypress watch mode
 - [ ] cypress a11y plugin
@@ -286,8 +286,9 @@ validate:out:
 
 <details>
   <summary>
-    ## Project Automation / Labeling Ideas
+    Project Automation / Labeling Ideas
   </summary>
+
 ### Issues
 
 - ToDo: https://github.com/coblox/zenhub-link-pr-to-issue
@@ -319,6 +320,6 @@ validate:out:
 - ToDo: https://github.com/kentaro-m/task-completed-checker-action
 </details>
 
-# Credits
+## Credits
 
 ...where credits due, thanks to [@bahmutov](https://github.com/bahmutov), [@elliottsj](https://github.com/elliottsj), [@ferlopezm94](https://github.com/ferlopezm94),[@iamvishnusankar](https://github.com/iamvishnusankar), [@pacocoursey](https://github.com/pacocoursey), [@thomaseizinger](https://github.com/thomaseizinger) and all the others whom I copied code from!
