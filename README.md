@@ -2,6 +2,7 @@
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/einselbst/overnext/Continuous%20integration?style=flat-square)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/df1fbbbc-8ce1-48ab-8ad4-5ce0f308aa13/deploy-status)](https://app.netlify.com/sites/overnext/deploys)
+[![GitHub Super-Linter](https://github.com/einselbst/overnext/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 
 <details>
   <summary>
@@ -47,7 +48,7 @@
 
 </details>
 
-# Approach
+## Approach
 
 - DX first
 - Integration second
@@ -57,20 +58,20 @@
   - from watch to wide screen, not just mobile/desktop
 - features & content last
 
-# Guiding Principles
+## Guiding Principles
 
 - automate it
 - catch bugs early
 - do it cheap
 
-# DX
+## DX
 
 - [pnpm](https://pnpm.js.org/en/) package manager
-- automation, inspirations https://github.com/sdras/awesome-actions
-- conformity, inspirations https://github.com/dustinspecker/awesome-eslint
+- automation, [inspirations](https://github.com/sdras/awesome-actions)
+- conformity, [inspirations](https://github.com/dustinspecker/awesome-eslint)
 - recommended repo files via [cgx](https://github.com/jeroenouw/cgx)
 
-## Commit Style
+### Commit Style
 
 - [Conventional Commits convention](https://www.conventionalcommits.org/)
 
@@ -91,58 +92,36 @@
     - `revert`: Reverts a previous commit
     </details>
 
-## Scripts
+### Scripts
 
 To print a description of the scripts run `pnpm run info`
 
-```bash
-dev:
-  Start next app in dev mode
-debug:
-  Start node debugger
-build:
-  Build the app
-start:
-  Start server to serve the local app build
-serve:
-  Build app and start server
-servex:
-  Build & run app on public URL
-cz:
-  Make new commit
-release:
-  Prepare a new release
-docs:
-  Generate typedoc docs
-info:
-  Display info about the scripts
-find:unused:
-  Find unused files
-format:
-  Format source code and fix issues
-lint:
-  Lint source code and fix issues
-lint:html:
-  Run html-validate on generated static output files
-test:
-  Run unit and integration tests once
-test:jest:
-  Run jest tests and update screenshots
-test:cy:
-  Open cypress test runner (needs a running app server)
-e2e:watch:
-  Start dev server, open cypress and watch
-e2e:
-  Build & serve app, then run cypress once
-validate:
-  Validate source code and output files
-validate:src:
-  Format, lint, type-check & unit test the app
-validate:out:
-  Build app, run integration tests & validate generated html
+```yaml
+dev: Start next app in dev mode
+debug: Start node debugger
+build: Build the app
+start: Start server to serve the local app build
+serve: Build app and start server
+servex: Build & run app on public URL
+cz: Make new commit
+release: Prepare a new release
+docs: Generate typedoc docs
+info: Display info about the scripts
+find:unused: Find unused files
+format: Format source code and fix issues
+lint: Lint source code and fix issues
+lint:html: Run html-validate on generated static output files
+test: Run unit and integration tests once
+test:jest: Run jest tests and update screenshots
+test:cy: Open cypress test runner (needs a running app server)
+e2e:watch: Start dev server, open cypress and watch
+e2e: Build & serve app, then run cypress once
+validate: Validate source code and output files
+validate:src: Format, lint, type-check & unit test the app
+validate:out: Build app, run integration tests & validate generated html
 ```
 
-# Code Style
+## Code Style
 
 - React [Strict Mode](https://reactjs.org/docs/strict-mode.html) enabled in [development](https://nextjs.org/docs/api-reference/next.config.js/react-strict-mode)
 - [Typescript](https://www.typescriptlang.org/) (for compile time type checking) with [tslib](https://www.npmjs.com/package/tslib)
@@ -151,7 +130,7 @@ validate:out:
 - [EditorConfig](https://editorconfig.org/)
 - [typedoc](https://github.com/TypeStrong/typedoc)
 
-## Linter / A11y
+### Linter / A11y
 
 - [Prettier-Standard](https://github.com/sheerun/prettier-standard)
 
@@ -195,7 +174,7 @@ validate:out:
 
 - [axe-core/react](https://github.com/dequelabs/axe-core-npm)
 
-# Testing
+## Testing
 
 - [Jest](https://jestjs.io/)
   - [`react-testing-library`](https://testing-library.com/docs/react-testing-library/intro)
@@ -206,9 +185,9 @@ validate:out:
   - [cypress-watch-and-reload](https://github.com/bahmutov/cypress-watch-and-reload)
   - ToDo: if I want to run [headless cypress in watch mode](https://github.com/cypress-io/cypress/issues/3665#issuecomment-665866436)
 
-# Next.js Configuration
+## Next.js Configuration
 
-## Features
+### Features
 
 - ['src' Directory](https://nextjs.org/docs/advanced-features/src-directory)
 - [Custom 'App'](https://nextjs.org/docs/advanced-features/custom-app)
@@ -219,7 +198,7 @@ validate:out:
 - [AMP Support](https://nextjs.org/docs/advanced-features/amp-support/introduction)
 - [Measuring performance](https://nextjs.org/docs/advanced-features/measuring-performance)
 
-## Plugins & Helper
+### Plugins & Helper
 
 - [compose plugins](https://github.com/cyrilwanner/next-compose-plugins)
 - webpack [bundle analyzer](https://github.com/vercel/next.js/tree/canary/packages/next-bundle-analyzer)
@@ -231,18 +210,18 @@ validate:out:
 - [next-themes](https://github.com/pacocoursey/next-themes), for dark-mode
 - [next-unused](https://github.com/pacocoursey/next-unused)
 
-## Styling
+### Styling
 
 ...all still unclear atm...
 
 - [Tailwind CSS](https://tailwindcss.com/) - really unsure about it, esp. after reading [this](https://dev.to/jaredcwhite/why-tailwind-isn-t-for-me-5c90), also looking at:
   - [shoelace](https://shoelace.style/)
   - [em dash](https://github.com/jfbrennan/m-)
-- ToDo: https://github.com/postcss/autoprefixer
+- ToDo: [autoprefixer](https://github.com/postcss/autoprefixer)
 
-# CI
+## CI
 
-## Github Actions
+### Github Actions
 
 - basic: runs linter, tests and build for different node versions
 - auto-create-pr: creates Pull Requests for new branches
@@ -251,8 +230,10 @@ validate:out:
 - Lighthouse on Vercel: Runs a Lighthouse Audit on the Vercel Preview URL
 - Labeler: adds labels to PR's based on the changed files
 - Badges: update badges in README
+- [Super-Linter](https://github.com/github/super-linter)
+- [detect-secrets-action](https://github.com/RobertFischer/detect-secrets-action)
 
-## Audits & Service Dashboards
+### Audits & Service Dashboards
 
 - [Lighthouse](https://github.com/GoogleChrome/lighthouse/)
 - [sonarcloud](https://sonarcloud.io/)
@@ -260,7 +241,7 @@ validate:out:
 - [Renovate](https://app.renovatebot.com/dashboard#github/einSelbst/overnext)
 - [Cypress](https://dashboard.cypress.io/projects/esdwok/runs)
 
-# Deployment
+## Deployment
 
 - [Documentation](https://nextjs.org/docs/deployment)
 - [Vercel](https://vercel.com/import?filter=next.js)
@@ -273,7 +254,7 @@ validate:out:
   - netlify plugins
     - [cypress](https://github.com/cypress-io/netlify-plugin-cypress)
 
-# ToDo
+## ToDo
 
 - [ ] cypress watch mode
 - [ ] cypress a11y plugin
@@ -284,39 +265,40 @@ validate:out:
 
 <details>
   <summary>
-    ## Project Automation / Labeling Ideas
+    Project Automation / Labeling Ideas
   </summary>
+
 ### Issues
 
-- ToDo: https://github.com/coblox/zenhub-link-pr-to-issue
-- ToDo: https://github.com/damccorm/tag-ur-it
-- ToDo: https://github.com/Renato66/auto-label
-- ToDo: https://github.com/Naturalclar/issue-action
-- ToDo: https://github.com/nwtgck/actions-comment-run
+- ToDo: [zenhub link pr to issue](https://github.com/coblox/zenhub-link-pr-to-issue)
+- ToDo: [tag ur it](https://github.com/damccorm/tag-ur-it)
+- ToDo: [auto label](https://github.com/Renato66/auto-label)
+- ToDo: [issue action](https://github.com/Naturalclar/issue-action)
+- ToDo: [actions comment run](https://github.com/nwtgck/actions-comment-run)
 
 ### Projects
 
-- ToDo: https://github.com/technote-space/auto-card-labeler
-- ToDo: https://github.com/alex-page/github-project-automation-plus
-- ToDo: https://github.com/marketplace/actions/move-labeled-or-milestoned-issue-to-a-specific-project-column
-- ToDo: https://github.com/philschatz/project-bot
-- ToDo: https://github.com/takanabe/github-actions-automate-projects
+- ToDo: [auto card labeler](https://github.com/technote-space/auto-card-labeler)
+- ToDo: [project automation plus](https://github.com/alex-page/github-project-automation-plus)
+- ToDo: [move issue to project column](https://github.com/marketplace/actions/move-labeled-or-milestoned-issue-to-a-specific-project-column)
+- ToDo: [project bot](https://github.com/philschatz/project-bot)
+- ToDo: [automate projects](https://github.com/takanabe/github-actions-automate-projects)
 
 ### Milestones
 
-- ToDo: https://github.com/WyriHaximus/github-action-create-milestone
+- ToDo: [create milestone](https://github.com/WyriHaximus/github-action-create-milestone)
 
 ### Branches
 
-- ToDo: https://github.com/robvanderleek/create-issue-branch
+- ToDo: [create-issue-branch](https://github.com/robvanderleek/create-issue-branch)
 
 ### Pull Requests
 
-- ToDo: https://github.com/Decathlon/pull-request-labeler-action
-- ToDo: https://github.com/jpmcb/prow-github-actions
-- ToDo: https://github.com/kentaro-m/task-completed-checker-action
+- ToDo: [PR Labeler](https://github.com/Decathlon/pull-request-labeler-action)
+- ToDo: [prow github action](https://github.com/jpmcb/prow-github-actions)
+- ToDo: [task completed checker action](https://github.com/kentaro-m/task-completed-checker-action)
 </details>
 
-# Credits
+## Credits
 
 ...where credits due, thanks to [@bahmutov](https://github.com/bahmutov), [@elliottsj](https://github.com/elliottsj), [@ferlopezm94](https://github.com/ferlopezm94),[@iamvishnusankar](https://github.com/iamvishnusankar), [@pacocoursey](https://github.com/pacocoursey), [@thomaseizinger](https://github.com/thomaseizinger) and all the others whom I copied code from!
