@@ -21,12 +21,20 @@ describe('Homepage', () => {
 
     it('navigates directly to localized path', () => {
       cy.visit('/de/legal/imprint')
-      cy.contains('h1', 'imprint').should('be.visible')
+      if (process.env.NETLIFY === true) {
+        cy.contains('h1', 'Legal').should('be.visible')
+      } else {
+        cy.contains('h1', 'imprint').should('be.visible')
+      }
     })
 
     it('navigates directly to base path', () => {
       cy.visit('/legal/about')
-      cy.contains('h1', 'about').should('be.visible')
+      if (process.env.NETLIFY === true) {
+        cy.contains('h1', 'Legal').should('be.visible')
+      } else {
+        cy.contains('h1', 'about').should('be.visible')
+      }
     })
 
     xit('navigates via links', () => {
