@@ -251,6 +251,7 @@ validate:out:
 - Lighthouse on Vercel: Runs a Lighthouse Audit on the Vercel Preview URL
 - Labeler: adds labels to PR's based on the changed files
 - Badges: update badges in README
+- [Super-Linter](https://github.com/github/super-linter)
 - [detect-secrets-action](https://github.com/RobertFischer/detect-secrets-action)
 
 ## Audits & Service Dashboards
