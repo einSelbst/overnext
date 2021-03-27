@@ -50,13 +50,13 @@
 
 ## Approach
 
-- DX first
-- Integration second
+- DX _first_
+- Integrations _second_
   - db/cms
   - 3rd party services
-- all screen third
-  - from watch to wide screen, not just mobile/desktop
-- features & content last
+- all screens _third_
+  - from watch-face to wide screen, not just mobile/desktop
+- features & content _last_
 
 ## Guiding Principles
 
@@ -195,7 +195,7 @@ validate:out: Build app, run integration tests & validate generated html
 - [Custom Error Pages](https://nextjs.org/docs/advanced-features/custom-error-page)
 - [module path aliases](https://nextjs.org/docs/advanced-features/module-path-aliases)
 - [Internationalized Routing](https://nextjs.org/docs/advanced-features/i18n-routing)
-- [AMP Support](https://nextjs.org/docs/advanced-features/amp-support/introduction)
+- [AMP Support](https://nextjs.org/docs/advanced-features/amp-support/introduction), but [not for long](https://www.lafoo.com/the-end-of-amp/)
 - [Measuring performance](https://nextjs.org/docs/advanced-features/measuring-performance)
 
 ### Plugins & Helper
@@ -264,9 +264,7 @@ validate:out: Build app, run integration tests & validate generated html
 - [ ] use ISR - Incremental Static Regeneration ? [opinion](https://www.netlify.com/blog/2021/03/08/incremental-static-regeneration-its-benefits-and-its-flaws/)
 
 <details>
-  <summary>
-    Project Automation / Labeling Ideas
-  </summary>
+  <summary>Project Automation / Labeling Ideas</summary>
 
 ### Issues
 
