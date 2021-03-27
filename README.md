@@ -46,6 +46,9 @@
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=sqale_index)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel)
 
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/einSelbst/overnext.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/einSelbst/overnext/alerts/)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/einSelbst/overnext.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/einSelbst/overnext/context:javascript)
+
 </details>
 
 ## Approach
@@ -238,10 +241,12 @@ validate:out: Build app, run integration tests & validate generated html
 ### Audits & Service Dashboards
 
 - [Lighthouse](https://github.com/GoogleChrome/lighthouse/)
-- [sonarcloud](https://sonarcloud.io/)
 - [Web Vitals](https://web.dev/vitals/) via [Quickmetrics](https://www.freecodecamp.org/news/how-to-measure-next-js-web-vitals-using-quickmetrics/)
-- [Renovate](https://app.renovatebot.com/dashboard#github/einSelbst/overnext)
-- [Cypress](https://dashboard.cypress.io/projects/esdwok/runs)
+- [Sonarcloud Dashboard](https://sonarcloud.io/dashboard?id=einSelbst_feehikel)
+- [LGTM Dashboard](https://lgtm.com/projects/g/einSelbst/overnext/?mode=list)
+- [Cypress Dashboard](https://dashboard.cypress.io/projects/esdwok/runs)
+- [Fossa Dashboard](https://app.fossa.com/projects)
+- [Renovate Dashboard](https://app.renovatebot.com/dashboard#github/einSelbst/overnext)
 
 ## Deployment
 
