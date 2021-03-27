@@ -231,17 +231,19 @@ validate:out: Build app, run integration tests & validate generated html
 - `basic`: runs linter, tests and build for different node versions
 - `auto-create-pr`: creates Pull Requests for new branches
 - `compressed-size`: checks the size of the bundled files and adds a comment in the PR
-- ESLint: another action that runs eslint and prints a summary in the PR
+- [`eslint-plus-action`](https://github.com/bradennapier/eslint-plus-action), runs eslint and prints a summary in the PR
 - Lighthouse on Vercel: Runs a Lighthouse Audit on the Vercel Preview URL
 - Labeler: adds labels to PR's based on the changed files
 - Badges: update badges in README
 - [Super-Linter](https://github.com/github/super-linter)
-- [`detect-secrets-action`](https://github.com/RobertFischer/detect-secrets-action)
+- [`detect-secrets-action`](https://github.com/RobertFischer/detect-secrets-action), uses Yelp's [detect-secrets](https://github.com/Yelp/detect-secrets)
 
 ### Audits & Service Dashboards
 
-- [Lighthouse](https://github.com/GoogleChrome/lighthouse/)
-- [Web Vitals](https://web.dev/vitals/) via [Quickmetrics](https://www.freecodecamp.org/news/how-to-measure-next-js-web-vitals-using-quickmetrics/)
+- [Lighthouse](https://github.com/GoogleChrome/lighthouse/) on vercel
+- [Quickmetrics Dashboard](https://app.quickmetrics.io/dashboards)
+  - to track [Web Vitals](https://web.dev/vitals/)
+  - [how-to](https://www.freecodecamp.org/news/how-to-measure-next-js-web-vitals-using-quickmetrics/)
 - [Sonarcloud Dashboard](https://sonarcloud.io/dashboard?id=einSelbst_feehikel)
 - [LGTM Dashboard](https://lgtm.com/projects/g/einSelbst/overnext/?mode=list)
 - [Cypress Dashboard](https://dashboard.cypress.io/projects/esdwok/runs)
