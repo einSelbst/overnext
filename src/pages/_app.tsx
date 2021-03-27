@@ -62,11 +62,11 @@ if (!ENV.SERVER_RENDERED && !ENV.PRODUCTION) {
 }
 
 const HeadIcons = (): JSX.Element => {
-  const isAmp = useAmp()
+  const isNotAmp = !useAmp()
 
   return (
     <Head>
-      {isAmp && (
+      {isNotAmp && (
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
       )}
       {/* <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86" /> see https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag */}

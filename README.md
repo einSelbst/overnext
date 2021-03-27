@@ -254,6 +254,7 @@ validate:out: Build app, run integration tests & validate generated html
 - [Fossa Dashboard](https://app.fossa.com/projects)
   - needs `FOSSA_API_KEY` env var in Github
 - [Renovate Dashboard](https://app.renovatebot.com/dashboard#github/einSelbst/overnext)
+- [Vercel Dashboard](https://vercel.com/einselbst/overnext)
 
 ## Deployment
 
