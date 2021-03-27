@@ -65,9 +65,9 @@
 
 ## Guiding Principles
 
-- automate it(tm)
-- catch bugs early(tm)
-- do it cheap(tm)
+- automate it &trade;
+- catch bugs early
+- do it cheap
 
 ## DX
 
@@ -222,6 +222,7 @@ validate:out: Build app, run integration tests & validate generated html
 - [Tailwind CSS](https://tailwindcss.com/) - really unsure about it, esp. after reading [this](https://dev.to/jaredcwhite/why-tailwind-isn-t-for-me-5c90), also looking at:
   - [`shoelace`](https://shoelace.style/)
   - [`em dash`](https://github.com/jfbrennan/m-)
+  - [`newcss`](https://newcss.net/)
 - ToDo: [`autoprefixer`](https://github.com/postcss/autoprefixer)
 
 ## CI
@@ -229,12 +230,12 @@ validate:out: Build app, run integration tests & validate generated html
 ### Github Actions
 
 - `basic`: runs linter, tests and build for different node versions
-- `auto-create-pr`: creates Pull Requests for new branches
+- [`create-pull-request`](https://github.com/thomaseizinger/create-pull-request), creates PR's for new branches
 - `compressed-size`: checks the size of the bundled files and adds a comment in the PR
 - [`eslint-plus-action`](https://github.com/bradennapier/eslint-plus-action), runs eslint and prints a summary in the PR
 - Lighthouse on Vercel: Runs a Lighthouse Audit on the Vercel Preview URL
 - Labeler: adds labels to PR's based on the changed files
-- Badges: update badges in README
+- Badges: update version badges in README
 - [Super-Linter](https://github.com/github/super-linter)
 - [`detect-secrets-action`](https://github.com/RobertFischer/detect-secrets-action), uses Yelp's [detect-secrets](https://github.com/Yelp/detect-secrets)
 
