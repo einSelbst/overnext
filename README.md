@@ -1,8 +1,10 @@
 # Overnext - Overly Opinionated Next.js Boilerplate
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/einselbst/overnext/Continuous%20integration?style=flat-square)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/einselbst/overnext/Continuous%20integration)
+[![Continuous integration](https://github.com/einSelbst/overnext/actions/workflows/basics.yml/badge.svg)](https://github.com/einSelbst/overnext/actions/workflows/basics.yml)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/df1fbbbc-8ce1-48ab-8ad4-5ce0f308aa13/deploy-status)](https://app.netlify.com/sites/overnext/deploys)
 [![GitHub Super-Linter](https://github.com/einselbst/overnext/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
+[![FOSSA Status](https://app.fossa.com/api/projects/custom%2B13111%2Fgit%40github.com%3AeinSelbst%2Fovernext.git.svg?type=shield)](https://app.fossa.com/projects/custom%2B13111%2Fgit%40github.com%3AeinSelbst%2Fovernext.git?ref=badge_shield)
 
 <details>
   <summary>
@@ -246,10 +248,13 @@ validate:out: Build app, run integration tests & validate generated html
   - to track [Web Vitals](https://web.dev/vitals/)
   - [how-to](https://www.freecodecamp.org/news/how-to-measure-next-js-web-vitals-using-quickmetrics/)
 - [Sonarcloud Dashboard](https://sonarcloud.io/dashboard?id=einSelbst_feehikel)
+  - needs `SONAR_TOKEN` env var in Github
 - [LGTM Dashboard](https://lgtm.com/projects/g/einSelbst/overnext/?mode=list)
 - [Cypress Dashboard](https://dashboard.cypress.io/projects/esdwok/runs)
 - [Fossa Dashboard](https://app.fossa.com/projects)
+  - needs `FOSSA_API_KEY` env var in Github
 - [Renovate Dashboard](https://app.renovatebot.com/dashboard#github/einSelbst/overnext)
+- [Vercel Dashboard](https://vercel.com/einselbst/overnext)
 
 ## Deployment
 
@@ -309,3 +314,7 @@ validate:out: Build app, run integration tests & validate generated html
 ## Credits
 
 ...where credits due, thanks to [@bahmutov](https://github.com/bahmutov), [@elliottsj](https://github.com/elliottsj), [@ferlopezm94](https://github.com/ferlopezm94),[@iamvishnusankar](https://github.com/iamvishnusankar), [@pacocoursey](https://github.com/pacocoursey), [@thomaseizinger](https://github.com/thomaseizinger) and all the others whom I copied code from!
+
+## Licenses
+
+[![FOSSA Status](https://app.fossa.com/api/projects/custom%2B13111%2Fgit%40github.com%3AeinSelbst%2Fovernext.git.svg?type=large)](https://app.fossa.com/projects/custom%2B13111%2Fgit%40github.com%3AeinSelbst%2Fovernext.git?ref=badge_large)
