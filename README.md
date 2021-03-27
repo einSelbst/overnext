@@ -138,13 +138,13 @@ validate:out: Build app, run integration tests & validate generated html
 
 - [ESLint](https://eslint.org/)
 
-  - [eslint-plugin-next](https://github.com/vercel/next.js/tree/canary/packages/eslint-plugin-next)
-  - [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint)
-  - [eslint-plugin-cypress](https://github.com/cypress-io/eslint-plugin-cypress)
-  - [eslint-plugin-import](https://github.com/benmosher/eslint-plugin-import)
-  - [eslint-plugin-jest](https://github.com/jest-community/eslint-plugin-jest)
-  - [eslint-plugin-jest-dom](https://github.com/testing-library/eslint-plugin-jest-dom)
-  - [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y)
+  - [`eslint-plugin-next`](https://github.com/vercel/next.js/tree/canary/packages/eslint-plugin-next)
+  - [`typescript-eslint`](https://github.com/typescript-eslint/typescript-eslint)
+  - [`eslint-plugin-cypress`](https://github.com/cypress-io/eslint-plugin-cypress)
+  - [`eslint-plugin-import`](https://github.com/benmosher/eslint-plugin-import)
+  - [`eslint-plugin-jest`](https://github.com/jest-community/eslint-plugin-jest)
+  - [`eslint-plugin-jest-dom`](https://github.com/testing-library/eslint-plugin-jest-dom)
+  - [`eslint-plugin-jsx-a11y`](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y)
   - <details>
       <summary>
         <a href="https://github.com/xjamundx/eslint-plugin-promise">eslint-plugin-promise</a>
@@ -189,9 +189,9 @@ validate:out: Build app, run integration tests & validate generated html
 
 ### Features
 
-- ['src' Directory](https://nextjs.org/docs/advanced-features/src-directory)
-- [Custom 'App'](https://nextjs.org/docs/advanced-features/custom-app)
-- [Custom 'Document'](https://nextjs.org/docs/advanced-features/custom-document)
+- [`src` Directory](https://nextjs.org/docs/advanced-features/src-directory)
+- [Custom `App`](https://nextjs.org/docs/advanced-features/custom-app)
+- [Custom `Document`](https://nextjs.org/docs/advanced-features/custom-document)
 - [Custom Error Pages](https://nextjs.org/docs/advanced-features/custom-error-page)
 - [module path aliases](https://nextjs.org/docs/advanced-features/module-path-aliases)
 - [Internationalized Routing](https://nextjs.org/docs/advanced-features/i18n-routing)
@@ -200,38 +200,38 @@ validate:out: Build app, run integration tests & validate generated html
 
 ### Plugins & Helper
 
-- [compose plugins](https://github.com/cyrilwanner/next-compose-plugins)
-- webpack [bundle analyzer](https://github.com/vercel/next.js/tree/canary/packages/next-bundle-analyzer)
-- [next-pwa](https://github.com/shadowwalker/next-pwa)
+- [`compose plugins`](https://github.com/cyrilwanner/next-compose-plugins)
+- webpack [`bundle analyzer`](https://github.com/vercel/next.js/tree/canary/packages/next-bundle-analyzer)
+- [`next-pwa`](https://github.com/shadowwalker/next-pwa)
   - for [PWA](https://web.dev/progressive-web-apps/) support via [workbox](https://developers.google.com/web/tools/workbox)
   - see [documentation](https://www.npmjs.com/package/next-pwa?activeTab=readme#configuration)
-- [next-sitemap](https://github.com/iamvishnusankar/next-sitemap)
-- [next-seo](https://github.com/garmeeh/next-seo), for MetaTags, OpenGraph & JsonLD
-- [next-themes](https://github.com/pacocoursey/next-themes), for dark-mode
-- [next-unused](https://github.com/pacocoursey/next-unused)
+- [`next-sitemap`](https://github.com/iamvishnusankar/next-sitemap)
+- [`next-seo`](https://github.com/garmeeh/next-seo), for MetaTags, OpenGraph & JsonLD
+- [`next-themes`](https://github.com/pacocoursey/next-themes), for dark-mode
+- [`next-unused`](https://github.com/pacocoursey/next-unused)
 
 ### Styling
 
 ...all still unclear atm...
 
 - [Tailwind CSS](https://tailwindcss.com/) - really unsure about it, esp. after reading [this](https://dev.to/jaredcwhite/why-tailwind-isn-t-for-me-5c90), also looking at:
-  - [shoelace](https://shoelace.style/)
-  - [em dash](https://github.com/jfbrennan/m-)
+  - [`shoelace`](https://shoelace.style/)
+  - [`em dash`](https://github.com/jfbrennan/m-)
 - ToDo: [autoprefixer](https://github.com/postcss/autoprefixer)
 
 ## CI
 
 ### Github Actions
 
-- basic: runs linter, tests and build for different node versions
-- auto-create-pr: creates Pull Requests for new branches
-- compressed-size: checks the size of the bundled files and adds a comment in the PR
+- `basic`: runs linter, tests and build for different node versions
+- `auto-create-pr`: creates Pull Requests for new branches
+- `compressed-size`: checks the size of the bundled files and adds a comment in the PR
 - ESLint: another action that runs eslint and prints a summary in the PR
 - Lighthouse on Vercel: Runs a Lighthouse Audit on the Vercel Preview URL
 - Labeler: adds labels to PR's based on the changed files
 - Badges: update badges in README
 - [Super-Linter](https://github.com/github/super-linter)
-- [detect-secrets-action](https://github.com/RobertFischer/detect-secrets-action)
+- [`detect-secrets-action`](https://github.com/RobertFischer/detect-secrets-action)
 
 ### Audits & Service Dashboards
 
@@ -256,7 +256,6 @@ validate:out: Build app, run integration tests & validate generated html
 
 ## ToDo
 
-- [ ] cypress watch mode
 - [ ] cypress a11y plugin
 - [ ] [wdyr](https://github.com/welldone-software/why-did-you-render/issues/113) vs preact [1](https://github.com/preactjs/preact/issues/2760)
 - [ ] automate typedoc generation
