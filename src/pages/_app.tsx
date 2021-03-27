@@ -61,6 +61,97 @@ if (!ENV.SERVER_RENDERED && !ENV.PRODUCTION) {
   axe(React, ReactDOM, 1000, {})
 }
 
+const HeadIcons = (): JSX.Element => {
+  const isAmp = useAmp()
+
+  return (
+    <Head>
+      {isAmp && (
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+      )}
+      {/* <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86" /> see https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag */}
+      {/* Browsers use this in some areas to help your brand feel more embedded */}
+      <meta name='theme-color' content='#ffffff' />
+      {/* Windows uses these to help your brand feel more embedded */}
+      <meta name='msapplication-TileColor' content='#da532c' />
+      <meta
+        name='msapplication-TileImage'
+        content='/icons/mstile-150x150.png'
+      />
+      {/* Browsers use these as tab and app icons */}
+      <link rel='icon' href='/favicon.ico' />
+      <link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' />
+      <link rel='apple-touch-icon' href='/icons/apple-touch-icon.png' />
+      <link
+        rel='icon'
+        type='image/png'
+        sizes='192x192'
+        href='/icons/icon-192x192.png'
+      />
+      <link
+        rel='icon'
+        type='image/png'
+        sizes='32x32'
+        href='/icons/icon-32x32.png'
+      />
+      <link
+        rel='icon'
+        type='image/png'
+        sizes='16x16'
+        href='/icons/icon-16x16.png'
+      />
+      <link
+        rel='apple-touch-icon'
+        sizes='57x57'
+        href='/icons/apple-touch-icon-57x57.png'
+      />
+      <link
+        rel='apple-touch-icon'
+        sizes='72x72'
+        href='/icons/apple-touch-icon-72x72.png'
+      />
+      <link
+        rel='apple-touch-icon'
+        sizes='76x76'
+        href='/icons/apple-touch-icon-76x76.png'
+      />
+      <link
+        rel='apple-touch-icon'
+        sizes='114x114'
+        href='/icons/apple-touch-icon-114x114.png'
+      />
+      <link
+        rel='apple-touch-icon'
+        sizes='120x120'
+        href='/icons/apple-touch-icon-120x120.png'
+      />
+      <link
+        rel='apple-touch-icon'
+        sizes='144x144'
+        href='/icons/apple-touch-icon-144x144.png'
+      />
+      <link
+        rel='apple-touch-icon'
+        sizes='152x152'
+        href='/icons/apple-touch-icon-152x152.png'
+      />
+      <link
+        rel='apple-touch-icon'
+        sizes='180x180'
+        href='/icons/apple-touch-icon.png'
+      />
+      <link
+        rel='mask-icon'
+        href='/icons/safari-pinned-tab.svg'
+        color='#5bbad5'
+      />
+      {/* for PWA: */}
+      {/* <link rel="manifest" href="path/to/manifest.json" crossorigin="use-credentials" /> */}
+      <link rel='manifest' href='/manifest.json' />
+    </Head>
+  )
+}
+
 function _app ({ Component, pageProps }: AppProps): JSX.Element {
   const isAmp = useAmp()
 
@@ -68,175 +159,13 @@ function _app ({ Component, pageProps }: AppProps): JSX.Element {
   return isAmp ? (
     <>
       <DefaultSeo {...SEO} />
-      <Head>
-        {/* Browsers use this in some areas to help your brand feel more embedded */}
-        <meta name='theme-color' content='#ffffff' />
-        {/* Windows uses these to help your brand feel more embedded */}
-        <meta name='msapplication-TileColor' content='#ffffff' />
-        <meta
-          name='msapplication-TileImage'
-          content='/icons/mstile-150x150.png'
-        />
-        {/* Browsers use these as tab and app icons */}
-        <link rel='icon' href='/favicon.ico' />
-        <link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' />
-        <link rel='apple-touch-icon' href='/icons/apple-touch-icon.png' />
-        <link
-          rel='icon'
-          type='image/png'
-          sizes='192x192'
-          href='/icons/icon-192x192.png'
-        />
-        <link
-          rel='icon'
-          type='image/png'
-          sizes='32x32'
-          href='/icons/icon-32x32.png'
-        />
-        <link
-          rel='icon'
-          type='image/png'
-          sizes='16x16'
-          href='/icons/icon-16x16.png'
-        />
-        <link
-          rel='apple-touch-icon'
-          sizes='57x57'
-          href='/icons/apple-touch-icon-57x57.png'
-        />
-        <link
-          rel='apple-touch-icon'
-          sizes='72x72'
-          href='/icons/apple-touch-icon-72x72.png'
-        />
-        <link
-          rel='apple-touch-icon'
-          sizes='76x76'
-          href='/icons/apple-touch-icon-76x76.png'
-        />
-        <link
-          rel='apple-touch-icon'
-          sizes='114x114'
-          href='/icons/apple-touch-icon-114x114.png'
-        />
-        <link
-          rel='apple-touch-icon'
-          sizes='120x120'
-          href='/icons/apple-touch-icon-120x120.png'
-        />
-        <link
-          rel='apple-touch-icon'
-          sizes='144x144'
-          href='/icons/apple-touch-icon-144x144.png'
-        />
-        <link
-          rel='apple-touch-icon'
-          sizes='152x152'
-          href='/icons/apple-touch-icon-152x152.png'
-        />
-
-        <link
-          rel='apple-touch-icon'
-          sizes='180x180'
-          href='/icons/apple-touch-icon.png'
-        />
-        <link
-          rel='mask-icon'
-          href='/icons/safari-pinned-tab.svg'
-          color='#5bbad5'
-        />
-        {/* for PWA: */}
-        {/* <link rel="manifest" href="path/to/manifest.json" crossorigin="use-credentials" /> */}
-        <link rel='manifest' href='/manifest.json' />
-      </Head>
+      <HeadIcons />
       <Component {...pageProps} />
     </>
   ) : (
     <ThemeProvider defaultTheme='system' attribute='class'>
       <DefaultSeo {...SEO} />
-      <Head>
-        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-        {/* <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86" /> see https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag */}
-        {/* Browsers use this in some areas to help your brand feel more embedded */}
-        <meta name='theme-color' content='#ffffff' />
-        {/* Windows uses these to help your brand feel more embedded */}
-        <meta name='msapplication-TileColor' content='#da532c' />
-        <meta
-          name='msapplication-TileImage'
-          content='/icons/mstile-150x150.png'
-        />
-        {/* Browsers use these as tab and app icons */}
-        <link rel='icon' href='/favicon.ico' />
-        <link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' />
-        <link rel='apple-touch-icon' href='/icons/apple-touch-icon.png' />
-        <link
-          rel='icon'
-          type='image/png'
-          sizes='192x192'
-          href='/icons/icon-192x192.png'
-        />
-        <link
-          rel='icon'
-          type='image/png'
-          sizes='32x32'
-          href='/icons/icon-32x32.png'
-        />
-        <link
-          rel='icon'
-          type='image/png'
-          sizes='16x16'
-          href='/icons/icon-16x16.png'
-        />
-        <link
-          rel='apple-touch-icon'
-          sizes='57x57'
-          href='/icons/apple-touch-icon-57x57.png'
-        />
-        <link
-          rel='apple-touch-icon'
-          sizes='72x72'
-          href='/icons/apple-touch-icon-72x72.png'
-        />
-        <link
-          rel='apple-touch-icon'
-          sizes='76x76'
-          href='/icons/apple-touch-icon-76x76.png'
-        />
-        <link
-          rel='apple-touch-icon'
-          sizes='114x114'
-          href='/icons/apple-touch-icon-114x114.png'
-        />
-        <link
-          rel='apple-touch-icon'
-          sizes='120x120'
-          href='/icons/apple-touch-icon-120x120.png'
-        />
-        <link
-          rel='apple-touch-icon'
-          sizes='144x144'
-          href='/icons/apple-touch-icon-144x144.png'
-        />
-        <link
-          rel='apple-touch-icon'
-          sizes='152x152'
-          href='/icons/apple-touch-icon-152x152.png'
-        />
-
-        <link
-          rel='apple-touch-icon'
-          sizes='180x180'
-          href='/icons/apple-touch-icon.png'
-        />
-        <link
-          rel='mask-icon'
-          href='/icons/safari-pinned-tab.svg'
-          color='#5bbad5'
-        />
-        {/* for PWA: */}
-        {/* <link rel="manifest" href="path/to/manifest.json" crossorigin="use-credentials" /> */}
-        <link rel='manifest' href='/manifest.json' />
-      </Head>
+      <HeadIcons />
       <Component {...pageProps} />
     </ThemeProvider>
   )
