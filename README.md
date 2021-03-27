@@ -46,27 +46,32 @@
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=sqale_index)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=einSelbst_feehikel&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=einSelbst_feehikel)
 
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/einSelbst/overnext.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/einSelbst/overnext/alerts/)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/einSelbst/overnext.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/einSelbst/overnext/context:javascript)
+
 </details>
 
 ## Approach
 
 - DX _first_
+  - the foundation
 - Integrations _second_
   - db/cms
   - 3rd party services
-- all screens _third_
-  - from watch-face to wide screen, not just mobile/desktop
-- features & content _last_
+- UI _third_
+  - all screens: from watch-face to wide screen, not just mobile/desktop
+- UX _last_
+  - features & content
 
 ## Guiding Principles
 
-- automate it
+- automate it &trade;
 - catch bugs early
 - do it cheap
 
 ## DX
 
-- [pnpm](https://pnpm.js.org/en/) package manager
+- [`pnpm`](https://pnpm.js.org/en/) package manager
 - automation, [inspirations](https://github.com/sdras/awesome-actions)
 - conformity, [inspirations](https://github.com/dustinspecker/awesome-eslint)
 - recommended repo files via [cgx](https://github.com/jeroenouw/cgx)
@@ -124,30 +129,30 @@ validate:out: Build app, run integration tests & validate generated html
 ## Code Style
 
 - React [Strict Mode](https://reactjs.org/docs/strict-mode.html) enabled in [development](https://nextjs.org/docs/api-reference/next.config.js/react-strict-mode)
-- [Typescript](https://www.typescriptlang.org/) (for compile time type checking) with [tslib](https://www.npmjs.com/package/tslib)
-- [prop-types](https://www.npmjs.com/package/prop-types) (for run-time type checking), more [info](https://stackoverflow.com/a/54690878/531439)
+- [Typescript](https://www.typescriptlang.org/) (for compile time type checking) with [`tslib`](https://www.npmjs.com/package/tslib)
+- [`prop-types`](https://www.npmjs.com/package/prop-types) (for run-time type checking), more [info](https://stackoverflow.com/a/54690878/531439)
 - [Standard](https://github.com/standard/standard)
 - [EditorConfig](https://editorconfig.org/)
-- [typedoc](https://github.com/TypeStrong/typedoc)
+- [`typedoc`](https://github.com/TypeStrong/typedoc)
 
 ### Linter / A11y
 
 - [Prettier-Standard](https://github.com/sheerun/prettier-standard)
 
-  - [prettierx](https://github.com/brodybits/prettierx/)
+  - [`prettierx`](https://github.com/brodybits/prettierx/)
 
 - [ESLint](https://eslint.org/)
 
-  - [eslint-plugin-next](https://github.com/vercel/next.js/tree/canary/packages/eslint-plugin-next)
-  - [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint)
-  - [eslint-plugin-cypress](https://github.com/cypress-io/eslint-plugin-cypress)
-  - [eslint-plugin-import](https://github.com/benmosher/eslint-plugin-import)
-  - [eslint-plugin-jest](https://github.com/jest-community/eslint-plugin-jest)
-  - [eslint-plugin-jest-dom](https://github.com/testing-library/eslint-plugin-jest-dom)
-  - [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y)
+  - [`eslint-plugin-next`](https://github.com/vercel/next.js/tree/canary/packages/eslint-plugin-next)
+  - [`typescript-eslint`](https://github.com/typescript-eslint/typescript-eslint)
+  - [`eslint-plugin-cypress`](https://github.com/cypress-io/eslint-plugin-cypress)
+  - [`eslint-plugin-import`](https://github.com/benmosher/eslint-plugin-import)
+  - [`eslint-plugin-jest`](https://github.com/jest-community/eslint-plugin-jest)
+  - [`eslint-plugin-jest-dom`](https://github.com/testing-library/eslint-plugin-jest-dom)
+  - [`eslint-plugin-jsx-a11y`](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y)
   - <details>
       <summary>
-        <a href="https://github.com/xjamundx/eslint-plugin-promise">eslint-plugin-promise</a>
+        <a href="https://github.com/xjamundx/eslint-plugin-promise">`eslint-plugin-promise`</a>
       </summary>
 
     - "promise/always-return": "error"
@@ -164,15 +169,15 @@ validate:out: Build app, run integration tests & validate generated html
     - "promise/valid-params": "warn"
     </details>
 
-  - [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react)
-  - [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)
+  - [`eslint-plugin-react`](https://github.com/yannickcr/eslint-plugin-react)
+  - [`eslint-plugin-react-hooks`](https://www.npmjs.com/package/eslint-plugin-react-hooks)
 
 - [`husky`](https://github.com/typicode/husky) for hooks
 
   - pinned at v4, v5 is [open-source/sponsors only](https://dev.to/typicode/what-s-new-in-husky-5-32g5)
-  - [lint-staged](https://github.com/okonet/lint-staged)
+  - [`lint-staged`](https://github.com/okonet/lint-staged)
 
-- [axe-core/react](https://github.com/dequelabs/axe-core-npm)
+- [`axe-core/react`](https://github.com/dequelabs/axe-core-npm)
 
 ## Testing
 
@@ -189,9 +194,9 @@ validate:out: Build app, run integration tests & validate generated html
 
 ### Features
 
-- ['src' Directory](https://nextjs.org/docs/advanced-features/src-directory)
-- [Custom 'App'](https://nextjs.org/docs/advanced-features/custom-app)
-- [Custom 'Document'](https://nextjs.org/docs/advanced-features/custom-document)
+- [`src` Directory](https://nextjs.org/docs/advanced-features/src-directory)
+- [Custom `App`](https://nextjs.org/docs/advanced-features/custom-app)
+- [Custom `Document`](https://nextjs.org/docs/advanced-features/custom-document)
 - [Custom Error Pages](https://nextjs.org/docs/advanced-features/custom-error-page)
 - [module path aliases](https://nextjs.org/docs/advanced-features/module-path-aliases)
 - [Internationalized Routing](https://nextjs.org/docs/advanced-features/i18n-routing)
@@ -200,46 +205,51 @@ validate:out: Build app, run integration tests & validate generated html
 
 ### Plugins & Helper
 
-- [compose plugins](https://github.com/cyrilwanner/next-compose-plugins)
-- webpack [bundle analyzer](https://github.com/vercel/next.js/tree/canary/packages/next-bundle-analyzer)
-- [next-pwa](https://github.com/shadowwalker/next-pwa)
-  - for [PWA](https://web.dev/progressive-web-apps/) support via [workbox](https://developers.google.com/web/tools/workbox)
+- [`compose plugins`](https://github.com/cyrilwanner/next-compose-plugins)
+- webpack [`bundle analyzer`](https://github.com/vercel/next.js/tree/canary/packages/next-bundle-analyzer)
+- [`next-pwa`](https://github.com/shadowwalker/next-pwa)
+  - for [PWA](https://web.dev/progressive-web-apps/) support via [`workbox`](https://developers.google.com/web/tools/workbox)
   - see [documentation](https://www.npmjs.com/package/next-pwa?activeTab=readme#configuration)
-- [next-sitemap](https://github.com/iamvishnusankar/next-sitemap)
-- [next-seo](https://github.com/garmeeh/next-seo), for MetaTags, OpenGraph & JsonLD
-- [next-themes](https://github.com/pacocoursey/next-themes), for dark-mode
-- [next-unused](https://github.com/pacocoursey/next-unused)
+- [`next-sitemap`](https://github.com/iamvishnusankar/next-sitemap)
+- [`next-seo`](https://github.com/garmeeh/next-seo), for MetaTags, OpenGraph & JsonLD
+- [`next-themes`](https://github.com/pacocoursey/next-themes), for dark-mode
+- [`next-unused`](https://github.com/pacocoursey/next-unused)
 
 ### Styling
 
 ...all still unclear atm...
 
 - [Tailwind CSS](https://tailwindcss.com/) - really unsure about it, esp. after reading [this](https://dev.to/jaredcwhite/why-tailwind-isn-t-for-me-5c90), also looking at:
-  - [shoelace](https://shoelace.style/)
-  - [em dash](https://github.com/jfbrennan/m-)
-- ToDo: [autoprefixer](https://github.com/postcss/autoprefixer)
+  - [`shoelace`](https://shoelace.style/)
+  - [`em dash`](https://github.com/jfbrennan/m-)
+  - [`newcss`](https://newcss.net/)
+- ToDo: [`autoprefixer`](https://github.com/postcss/autoprefixer)
 
 ## CI
 
 ### Github Actions
 
-- basic: runs linter, tests and build for different node versions
-- auto-create-pr: creates Pull Requests for new branches
-- compressed-size: checks the size of the bundled files and adds a comment in the PR
-- ESLint: another action that runs eslint and prints a summary in the PR
+- `basic`: runs linter, tests and build for different node versions
+- [`create-pull-request`](https://github.com/thomaseizinger/create-pull-request), creates PR's for new branches
+- `compressed-size`: checks the size of the bundled files and adds a comment in the PR
+- [`eslint-plus-action`](https://github.com/bradennapier/eslint-plus-action), runs eslint and prints a summary in the PR
 - Lighthouse on Vercel: Runs a Lighthouse Audit on the Vercel Preview URL
 - Labeler: adds labels to PR's based on the changed files
-- Badges: update badges in README
+- Badges: update version badges in README
 - [Super-Linter](https://github.com/github/super-linter)
-- [detect-secrets-action](https://github.com/RobertFischer/detect-secrets-action)
+- [`detect-secrets-action`](https://github.com/RobertFischer/detect-secrets-action), uses Yelp's [detect-secrets](https://github.com/Yelp/detect-secrets)
 
 ### Audits & Service Dashboards
 
-- [Lighthouse](https://github.com/GoogleChrome/lighthouse/)
-- [sonarcloud](https://sonarcloud.io/)
-- [Web Vitals](https://web.dev/vitals/) via [Quickmetrics](https://www.freecodecamp.org/news/how-to-measure-next-js-web-vitals-using-quickmetrics/)
-- [Renovate](https://app.renovatebot.com/dashboard#github/einSelbst/overnext)
-- [Cypress](https://dashboard.cypress.io/projects/esdwok/runs)
+- [Lighthouse](https://github.com/GoogleChrome/lighthouse/) on vercel
+- [Quickmetrics Dashboard](https://app.quickmetrics.io/dashboards)
+  - to track [Web Vitals](https://web.dev/vitals/)
+  - [how-to](https://www.freecodecamp.org/news/how-to-measure-next-js-web-vitals-using-quickmetrics/)
+- [Sonarcloud Dashboard](https://sonarcloud.io/dashboard?id=einSelbst_feehikel)
+- [LGTM Dashboard](https://lgtm.com/projects/g/einSelbst/overnext/?mode=list)
+- [Cypress Dashboard](https://dashboard.cypress.io/projects/esdwok/runs)
+- [Fossa Dashboard](https://app.fossa.com/projects)
+- [Renovate Dashboard](https://app.renovatebot.com/dashboard#github/einSelbst/overnext)
 
 ## Deployment
 
@@ -256,7 +266,6 @@ validate:out: Build app, run integration tests & validate generated html
 
 ## ToDo
 
-- [ ] cypress watch mode
 - [ ] cypress a11y plugin
 - [ ] [wdyr](https://github.com/welldone-software/why-did-you-render/issues/113) vs preact [1](https://github.com/preactjs/preact/issues/2760)
 - [ ] automate typedoc generation
