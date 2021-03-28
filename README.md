@@ -267,7 +267,11 @@ validate:out: Build app, run integration tests & validate generated html
   - [assets](https://docs.netlify.com/configure-builds/file-based-configuration/#post-processing)
   - "Redirects and rewrites using next.config.js aren’t currently supported for Next.js sites on Netlify."
   - netlify plugins
-    - [cypress](https://github.com/cypress-io/netlify-plugin-cypress)
+
+    - [netlify-plugin-cypress](https://github.com/cypress-io/netlify-plugin-cypress)
+    - [netlify-plugin-html-validate](https://github.com/oliverroick/netlify-plugin-html-validate), uses [html-validate](https://html-validate.org/)
+    - [netlify-plugin-check-links](https://github.com/munter/netlify-plugin-checklinks), uses [hyperlink](https://github.com/Munter/hyperlink)
+    - [netlify-plugin-a11y](https://github.com/netlify-labs/netlify-plugin-a11y), uses [pa11y](https://github.com/pa11y/pa11y)
 
 ## ToDo
 

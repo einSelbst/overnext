@@ -1,12 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
-//import { useRouter } from 'next/router'
 
 export const Home = (): JSX.Element => {
-  // TODO: make jest play nice with router object
-  //const router = useRouter()
-  //const { locale, locales, defaultLocale } = router
-
   return (
     <div className='container'>
       <Head>
@@ -24,11 +19,6 @@ export const Home = (): JSX.Element => {
           <h1>Hello, world!</h1>
           <p>Welcome to your internationalised page!</p>
           <br />
-          {/* <p>Current locale: {router.locale}</p> */
-          /*{' '}
-             <p>Default locale: {router.defaultLocale}</p> */
-          /*{' '}
-             <p>Configured locales: {JSON.stringify(router.locales)}</p> */}
         </div>
         <h1 className='title'>
           Welcome to <a href='https://nextjs.org'>Next.js!</a>
@@ -60,7 +50,7 @@ export const Home = (): JSX.Element => {
             <p>Find in-depth information about Next.js features and API.</p>
           </a>
 
-          <a href='https://nextjs.org/learn' className='card'>
+          <a href='https://nextjs.org/docs/getting-started' className='card'>
             <h3>Learn &rarr;</h3>
             <p>Learn about Next.js in an interactive course with quizzes!</p>
           </a>
