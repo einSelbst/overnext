@@ -89,7 +89,7 @@ exports[`home page matches snapshot 1`] = `
         </a>
         <a
           class="jsx-3296980036 card"
-          href="https://nextjs.org/learn"
+          href="https://nextjs.org/docs/getting-started"
         >
           <h3
             class="jsx-3296980036"
