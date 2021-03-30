@@ -23,7 +23,7 @@
     Versions
   </summary>
 
-![next version](https://img.shields.io/badge/next-10.0.9-brightgreen)
+![next version](https://img.shields.io/badge/next-10.1.2-brightgreen)
 ![react version](https://img.shields.io/badge/react-17.0.2-brightgreen)
 ![typescript version](https://img.shields.io/badge/typescript-4.2.3-brightgreen)
 ![cypress version](https://img.shields.io/badge/cypress-6.8.0-brightgreen)
