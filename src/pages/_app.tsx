@@ -7,6 +7,7 @@ import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import 'styles/main.css'
 import { SEO, ENV } from 'config'
+import DefaultLayout from 'layouts/default.layout'
 
 /**
  * Web Vitals
@@ -155,6 +156,9 @@ const HeadIcons = (): JSX.Element => {
 function _app ({ Component, pageProps }: AppProps): JSX.Element {
   const isAmp = useAmp()
 
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+  const Layout = Component.Layout || DefaultLayout
+
   // amp pages doesn't work well with the theme so I had to split it
   return isAmp ? (
     <>
@@ -166,7 +170,9 @@ function _app ({ Component, pageProps }: AppProps): JSX.Element {
     <ThemeProvider defaultTheme='system' attribute='class'>
       <DefaultSeo {...SEO} />
       <HeadIcons />
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </ThemeProvider>
   )
 }
