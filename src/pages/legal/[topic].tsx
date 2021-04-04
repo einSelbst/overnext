@@ -72,7 +72,6 @@ const _Topic = (): JSX.Element => {
         <header>
           <h1>Legal - {topic}</h1>
         </header>
-
         <section aria-label='quick summary'>
           Summary Text. Visit this for more info:
           https://www.smashingmagazine.com/2020/01/html5-article-section/

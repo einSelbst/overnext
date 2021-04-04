@@ -16,8 +16,27 @@ const DynamicPage = (
 ): JSX.Element => {
   return (
     <main>
-      <h1>DynamicPage Component {properties.dynamic}</h1>
-      <h2>Locale: {properties.locale}</h2>
+      <header>
+        <h1>DynamicPage Component {properties.dynamic}</h1>
+        <h2>Locale: {properties.locale}</h2>
+      </header>
+
+      <section aria-label='quick summary'>
+        Summary Text. Visit this for more info:
+        https://www.smashingmagazine.com/2020/01/html5-article-section/
+      </section>
+
+      <article>
+        <header>
+          <p>The Header of the article</p>
+        </header>
+        <section className='introduction'>intro</section>
+        <section className='content'>content</section>
+        <section className='summary'>summary</section>
+        <footer>
+          <p>The footer of the article</p>
+        </footer>
+      </article>
     </main>
   )
 }
