@@ -30,6 +30,9 @@ const sendMetric = async ({
 }): Promise<boolean> => {
   if (!process.env.NEXT_PUBLIC_QUICK_METRICS_API_KEY) return false
 
+  // eslint-disable-next-line no-console
+  console.log('sending metrics to quickmetrics...')
+
   // values must be integers
   const valueInt: number = Math.round(
     name === 'CLS' ? Number.parseFloat(value) * 1000 : Number.parseFloat(value)
