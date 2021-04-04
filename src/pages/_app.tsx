@@ -71,7 +71,32 @@ const HeadIcons = (): JSX.Element => {
   return (
     <Head>
       {isNotAmp && (
-        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+        <>
+          <meta
+            name='viewport'
+            content='initial-scale=1.0, width=device-width'
+          />
+
+          {/* newcss */}
+          <link
+            rel='preload'
+            href='https://fonts.xz.style/serve/inter.css'
+            as='style'
+          />
+          <link
+            rel='stylesheet'
+            href='https://fonts.xz.style/serve/inter.css'
+          />
+          <link
+            rel='preload'
+            href='https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css'
+            as='style'
+          />
+          <link
+            rel='stylesheet'
+            href='https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css'
+          />
+        </>
       )}
       {/* <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86" /> see https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag */}
       {/* Browsers use this in some areas to help your brand feel more embedded */}
