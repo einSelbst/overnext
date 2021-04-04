@@ -1,7 +1,8 @@
 import { DefaultSeo } from 'next-seo'
 import { ThemeProvider } from 'next-themes'
 import { useAmp } from 'next/amp'
-import { AppProps /*, App, AppContext */ } from 'next/app'
+// import { AppProps /*, App, AppContext */ } from 'next/app'
+import type { AppLayoutProps } from 'next/app'
 import Head from 'next/head'
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
@@ -181,7 +182,7 @@ const HeadIcons = (): JSX.Element => {
   )
 }
 
-function _app ({ Component, pageProps }: AppProps): JSX.Element {
+function _app ({ Component, pageProps }: AppLayoutProps): JSX.Element {
   const isAmp = useAmp()
 
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
