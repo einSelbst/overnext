@@ -30,3 +30,9 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+          # Super-Linter is using standard style for linting
+          # the linter itself cannot be configured and
+          # complains about my trailing commas...
+          # I actually use `prettier-standard`
+          JAVASCRIPT_DEFAULT_STYLE: 'prettier'
