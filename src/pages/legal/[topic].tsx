@@ -2,6 +2,7 @@ import { NextSeo } from 'next-seo'
 import { useTheme } from 'next-themes'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
+import LegalLayout from 'layouts/legal.layout'
 
 const ThemeChanger = () => {
   const [mounted, setMounted] = useState(false)
@@ -68,7 +69,26 @@ const _Topic = (): JSX.Element => {
         }}
       />
       <main className='bg-white dark:bg-black'>
-        <h1>Legal - {topic}</h1>
+        <header>
+          <h1>Legal - {topic}</h1>
+        </header>
+
+        <section aria-label='quick summary'>
+          Summary Text. Visit this for more info:
+          https://www.smashingmagazine.com/2020/01/html5-article-section/
+        </section>
+
+        <article>
+          <header>
+            <p>The Header of the article</p>
+          </header>
+          <section className='introduction'></section>
+          <section className='content'>Content goes here</section>
+          <section className='summary'></section>
+          <footer>
+            <p>The footer of the article</p>
+          </footer>
+        </article>
         <span>You speak {locale}</span>
         <p>This page is also available in the following languages: {locales}</p>
         <ThemeChanger />
@@ -76,5 +96,7 @@ const _Topic = (): JSX.Element => {
     </>
   )
 }
+
+_Topic.Layout = LegalLayout
 
 export default _Topic
