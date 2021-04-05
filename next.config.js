@@ -22,6 +22,9 @@ const nextConfiguration = {
     // modify the `config` here
     return config
   },
+  future: {
+    webpack5: true,
+  },
 }
 
 const plugins = [
