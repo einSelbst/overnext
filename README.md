@@ -154,7 +154,7 @@ validate:out: Build app, run integration tests & validate generated html
   - [`eslint-plugin-jsx-a11y`](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y)
   - <details>
       <summary>
-        <a href="https://github.com/xjamundx/eslint-plugin-promise">`eslint-plugin-promise`</a>
+        <a href="https://github.com/xjamundx/eslint-plugin-promise"><code>eslint-plugin-promise</code></a>
       </summary>
 
     - "promise/always-return": "error"
@@ -263,6 +263,7 @@ validate:out: Build app, run integration tests & validate generated html
   - override "Install Command": `rm -rf node_modules && npx pnpm i` (if pnpm should be used)
   - override "Build Command": `next build && npx pnpm run postbuild` (optional)
 - [Netlify](https://www.netlify.com/blog/2020/11/30/how-to-deploy-next.js-sites-to-netlify/)
+
   - [`netlify.toml`](https://github.com/netlify/netlify-plugin-nextjs)
   - [assets](https://docs.netlify.com/configure-builds/file-based-configuration/#post-processing)
   - "Redirects and rewrites using next.config.js aren’t currently supported for Next.js sites on Netlify."
