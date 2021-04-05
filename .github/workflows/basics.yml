@@ -67,11 +67,11 @@ jobs:
       - name: Run type-check
         run: pnpm type-check
 
-        # TODO: would be better to run this once a day or so
-      - name: Run audit
-        run: pnpm audit
-
       - name: Run tests
         run: pnpm test
         env:
           CI: true
+
+        # TODO: would be better to run this once a day or so
+      - name: Run audit
+        run: pnpm audit
