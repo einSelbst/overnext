@@ -132,7 +132,7 @@
   },
   "devDependencies": {
     "html-validate": "4.9.0",
-    "terser-webpack-plugin": "^5.1.1"
+    "terser-webpack-plugin": "5.1.1"
   },
   "optionalDependencies": {
     "fsevents": "2.3.2"
