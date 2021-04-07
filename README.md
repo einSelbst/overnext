@@ -278,9 +278,12 @@ validate:out: Build app, run integration tests & validate generated html
 
 - [ ] cypress a11y plugin
 - [ ] [wdyr](https://github.com/welldone-software/why-did-you-render/issues/113) vs preact [1](https://github.com/preactjs/preact/issues/2760)
-- [ ] automate typedoc generation
-- [ ] maybe [apiDoc](https://apidocjs.com/)
 - [ ] use ISR - Incremental Static Regeneration ? [opinion](https://www.netlify.com/blog/2021/03/08/incremental-static-regeneration-its-benefits-and-its-flaws/)
+
+### Documentation ToDo's
+- [ ] add [eslint-plugin-tsdoc](https://www.npmjs.com/package/eslint-plugin-tsdoc)
+- [ ] automate typedoc generation
+- [ ] maybe [apiDoc](https://apidocjs.com/)?, [ts-docs-gen](https://github.com/SimplrJS/ts-docs-gen)?, [DocFX](https://dotnet.github.io/docfx/)?
 
 <details>
   <summary>Project Automation / Labeling Ideas</summary>
