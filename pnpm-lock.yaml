@@ -37,6 +37,7 @@ specifiers:
   eslint-plugin-promise: 4.3.1
   eslint-plugin-react: 7.23.1
   eslint-plugin-react-hooks: 4.2.0
+  eslint-plugin-tsdoc: 0.2.11
   fsevents: 2.3.2
   html-validate: 4.9.0
   husky: 4.3.8
@@ -130,6 +131,7 @@ devDependencies:
   eslint-plugin-promise: 4.3.1
   eslint-plugin-react: 7.23.1_eslint@7.23.0
   eslint-plugin-react-hooks: 4.2.0_eslint@7.23.0
+  eslint-plugin-tsdoc: 0.2.11
   html-validate: 4.9.0
 
 packages:
@@ -2642,6 +2644,19 @@ packages:
     dependencies:
       vary: 1.1.2
     dev: false
+
+  /@microsoft/tsdoc-config/0.14.0:
+    resolution: {integrity: sha512-KSj15FwyaxMCGJkC320rvNXxuJNCOVO02pNqIEdf5cbLakvHK8afoHTmcjdBEWl0cfBFZlMu/1DhL4VCzZq0rQ==}
+    dependencies:
+      '@microsoft/tsdoc': 0.13.0
+      ajv: 6.12.6
+      jju: 1.4.0
+      resolve: 1.19.0
+    dev: true
+
+  /@microsoft/tsdoc/0.13.0:
+    resolution: {integrity: sha512-/8J+4DdvexBH1Qh1yR8VZ6bPay2DL/TDdmSIypAa3dAghJzsdaiZG8COvzpYIML6HV2UVN0g4qbuqzjG4YKgWg==}
+    dev: true
 
   /@next/bundle-analyzer/10.1.3:
     resolution: {integrity: sha512-25/I1+f83jJOryarNNGQ0cAlYdGfz5HFyQXmal4skKXhMKyWEBSKOu88tIZzsWktlhOEB8QC7O9KVgAlXPqTyw==}
@@ -6414,6 +6429,13 @@ packages:
       string.prototype.matchall: 4.0.4
     dev: true
 
+  /eslint-plugin-tsdoc/0.2.11:
+    resolution: {integrity: sha512-vEjGANpmBfrvpKj9rwePGhA+gIe1mp+dhDZsrkxlHqPVOZvzVdFSV9fxu/o3eppmxhybI8brD88jOrLEAIB9Gw==}
+    dependencies:
+      '@microsoft/tsdoc': 0.13.0
+      '@microsoft/tsdoc-config': 0.14.0
+    dev: true
+
   /eslint-scope/5.1.1:
     resolution: {integrity: sha512-2NxwbF/hZ0KpepYN0cNbo+FN6XoK7GaHlQhgx/hIZl6Va0bF45RQOOwhLIy8lQDbuCiadSLCBnH2CFYquit5bw==}
     engines: {node: '>=8.0.0'}
@@ -9068,6 +9090,10 @@ packages:
       - ts-node
       - utf-8-validate
     dev: false
+
+  /jju/1.4.0:
+    resolution: {integrity: sha1-o6vicYryQaKykE+EpiWXDzia4yo=}
+    dev: true
 
   /joi/17.4.0:
     resolution: {integrity: sha512-F4WiW2xaV6wc1jxete70Rw4V/VuMd6IN+a5ilZsxG4uYtUXWu2kq9W5P2dz30e7Gmw8RCbY/u/uk+dMPma9tAg==}
@@ -12517,7 +12543,6 @@ packages:
     dependencies:
       is-core-module: 2.2.0
       path-parse: 1.0.6
-    dev: false
 
   /resolve/1.20.0:
     resolution: {integrity: sha512-wENBPt4ySzg4ybFQW2TT1zMQucPK95HSh/nq2CFTZVOGut2+pQvSsgtda4d26YrYcr067wjbmzOG8byDPBX63A==}
