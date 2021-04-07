@@ -18,7 +18,7 @@ All notable changes to this project will be documented in this file. See [standa
 - add just another button for theme switching ([2d17474](https://github.com/einSelbst/overnext/commit/2d1747473c55ceeec1e7acd699f3009e866f08f1))
 - add main page for legal content ([2b0d9ba](https://github.com/einSelbst/overnext/commit/2b0d9ba9547f6d1e04fb31237c591f30a3d018df))
 - add meta tags 'description' and 'viewport' ([b5cd5a6](https://github.com/einSelbst/overnext/commit/b5cd5a6476fd5693ef1e7705ab510b9c2837aec7))
-- add meta tags as per https://m-docs.org/head-tags ([ff00fea](https://github.com/einSelbst/overnext/commit/ff00fea5449fa8927927c5a35e920523122c6f47))
+- add meta tags as per [m-docs](https://m-docs.org/head-tags) ([ff00fea](https://github.com/einSelbst/overnext/commit/ff00fea5449fa8927927c5a35e920523122c6f47))
 - add netlify deploy config ([7f92264](https://github.com/einSelbst/overnext/commit/7f922644b96e672b64070707b0d4f0f372075cdc))
 - add next-themes to app ([2c42fc3](https://github.com/einSelbst/overnext/commit/2c42fc3c3ec6f7ac221e3ac154b0a19fa2c4aa69))
 - add next.js custom document ([6053c77](https://github.com/einSelbst/overnext/commit/6053c77db2ba1a3dbaf819541e3bdd926dda775e))

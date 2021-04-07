@@ -16,6 +16,34 @@ jobs:
           # Full git history is needed to get a proper list of changed files within `super-linter`
           fetch-depth: 0
 
+      - name: Cache some stuff
+        id: cache-pnpm-dir
+        uses: actions/cache@main
+        env:
+          cache-name: cache-pnpm-store
+        with:
+          path: |
+            ~/.pnpm-store
+            ${{ github.workspace }}/node_modules
+            ${{ github.workspace }}/.next/cache
+            ~/.cache/Cypress
+          key: |
+            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-${{ matrix.node-version }}-build-
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@master
+        with:
+          version: next
+
+      - name: Install dependencies
+        if: steps.cache-pnpm-dir.outputs.cache-hit != 'true'
+        run: |
+          pnpm --version
+          pnpm install --prefer-frozen-lockfile
+
       - name: Lint Code Base
         uses: github/super-linter@v3
         env:
@@ -23,8 +51,9 @@ jobs:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-          # Super-Linter is using standard style for linting
-          # the linter itself cannot be configured and
-          # complains about my trailing commas...
-          # I actually use `prettier-standard`
-          JAVASCRIPT_DEFAULT_STYLE: 'prettier'
+          LINTER_RULES_PATH: /
+          JAVASCRIPT_ES_CONFIG_FILE: .eslintrc.json
+          JAVASCRIPT_DEFAULT_STYLE: prettier
+          # disable standard js linter to allow trailing commas
+          VALIDATE_JAVASCRIPT_STANDARD: false
+          VALIDATE_TYPESCRIPT_STANDARD: false

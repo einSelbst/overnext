@@ -93,7 +93,13 @@
         ], // Specify it only for TypeScript files
         "tsconfigRootDir": "."
       },
-      "plugins": ["react", "@typescript-eslint", "import", "jsx-a11y"],
+      "plugins": [
+        "react",
+        "@typescript-eslint",
+        "import",
+        "eslint-plugin-tsdoc",
+        "jsx-a11y"
+      ],
       "extends": [
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking"
@@ -102,6 +108,9 @@
         "import/resolver": {
           "typescript": {}
         }
+      },
+      "rules": {
+        "tsdoc/syntax": "warn"
       }
     },
     {

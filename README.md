@@ -63,7 +63,10 @@
 - UI _third_
   - all screens: from watch-face to wide screen, not just mobile/desktop
 - UX _last_
+
   - features & content
+
+This is more about priorities than about a temporal order.
 
 ## Guiding Principles
 
@@ -135,7 +138,7 @@ validate:out: Build app, run integration tests & validate generated html
 - [`prop-types`](https://www.npmjs.com/package/prop-types) (for run-time type checking), more [info](https://stackoverflow.com/a/54690878/531439)
 - [Standard](https://github.com/standard/standard)
 - [EditorConfig](https://editorconfig.org/)
-- [`typedoc`](https://github.com/TypeStrong/typedoc)
+- [TSDoc](https://tsdoc.org/) docstrings to generate [`typedoc`](https://github.com/TypeStrong/typedoc) documentation
 
 ### Linter / A11y
 
@@ -173,6 +176,7 @@ validate:out: Build app, run integration tests & validate generated html
 
   - [`eslint-plugin-react`](https://github.com/yannickcr/eslint-plugin-react)
   - [`eslint-plugin-react-hooks`](https://www.npmjs.com/package/eslint-plugin-react-hooks)
+  - [`eslint-plugin-tsdoc`](https://github.com/microsoft/tsdoc/tree/master/eslint-plugin)
 
 - [`husky`](https://github.com/typicode/husky) for hooks
 
@@ -281,7 +285,7 @@ validate:out: Build app, run integration tests & validate generated html
 - [ ] use ISR - Incremental Static Regeneration ? [opinion](https://www.netlify.com/blog/2021/03/08/incremental-static-regeneration-its-benefits-and-its-flaws/)
 
 ### Documentation ToDo's
-- [ ] add [eslint-plugin-tsdoc](https://www.npmjs.com/package/eslint-plugin-tsdoc)
+
 - [ ] automate typedoc generation
 - [ ] maybe [apiDoc](https://apidocjs.com/)?, [ts-docs-gen](https://github.com/SimplrJS/ts-docs-gen)?, [DocFX](https://dotnet.github.io/docfx/)?
 
