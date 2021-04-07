@@ -2,19 +2,20 @@
   "root": true,
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 2018,
+    "ecmaVersion": 2021,
     "ecmaFeatures": {
       "jsx": true
     }
   },
   "reportUnusedDisableDirectives": true,
-  "plugins": ["react", "import", "jsx-a11y"],
+  "plugins": ["react", "import", "unicorn", "jsx-a11y"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:import/typescript",
+    "plugin:unicorn/recommended",
     "plugin:jsx-a11y/strict",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
@@ -56,6 +57,31 @@
         "alphabetize": {
           "order": "asc", // sort in ascending order. Options: ['ignore', 'asc', 'desc']
           "caseInsensitive": true // ignore case. Options: [true, false]
+        }
+      }
+    ],
+    "unicorn/consistent-function-scoping": [
+      "error",
+      {
+        "checkArrowFunctions": false
+      }
+    ],
+    "unicorn/filename-case": [
+      "error",
+      {
+        "case": "kebabCase",
+        "ignore": ["^__coverage__.ts$"]
+      }
+    ],
+    "unicorn/prevent-abbreviations": [
+      "error",
+      {
+        "whitelist": {
+          // TODO [eslint-plugin-unicorn@<27]: Change "whitelist" to "allowList"
+          "getInitialProps": true,
+          "getStaticProps": true,
+          "getServerSideProps": true,
+          "env": true
         }
       }
     ],
