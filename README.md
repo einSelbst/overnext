@@ -63,7 +63,10 @@
 - UI _third_
   - all screens: from watch-face to wide screen, not just mobile/desktop
 - UX _last_
+
   - features & content
+
+This is more about priorities than about a temporal order.
 
 ## Guiding Principles
 
