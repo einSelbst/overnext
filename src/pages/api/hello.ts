@@ -2,9 +2,9 @@
 
 import { NextApiRequest, NextApiResponse } from 'next'
 
-const hello = (req: NextApiRequest, res: NextApiResponse): void => {
-  res.statusCode = 200
-  res.json({ name: 'John Doe' })
+const hello = (request: NextApiRequest, response: NextApiResponse): void => {
+  response.statusCode = 200
+  response.json({ name: 'John Doe' })
 }
 
 export default hello

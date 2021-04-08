@@ -10,6 +10,8 @@ const ThemeChanger = () => {
   // When mounted on client, now we can show the UI
   useEffect(() => setMounted(true), [])
 
+  // TODO [>1.2]: refactor to use nextjs default way of rendering only on client
+  // eslint-disable-next-line unicorn/no-null
   if (!mounted) return null
 
   return (
@@ -31,8 +33,8 @@ const ThemeChanger = () => {
 
 const _Topic = (): JSX.Element => {
   const router = useRouter()
-  const { locale, locales } = router
-  const { topic } = router.query
+  const { locale, locales, query } = router
+  const { topic } = query
   // NextSeo doesn't want a string array, which 'topic' might be
   const firstTopic: string | undefined = Array.isArray(topic) ? topic[0] : topic
 

@@ -98,9 +98,9 @@ context('Utilities', () => {
     const start = Cypress.moment('3:00 PM', 'LT')
     const end = Cypress.moment('5:00 PM', 'LT')
 
-    cy.get('.utility-moment .badge').should($el => {
+    cy.get('.utility-moment .badge').should($element => {
       // parse American time like "3:38 PM"
-      const m = Cypress.moment($el.text().trim(), 'LT')
+      const m = Cypress.moment($element.text().trim(), 'LT')
 
       // display hours + minutes + AM|PM
       const f = 'h:mm A'
@@ -139,8 +139,8 @@ context('Utilities', () => {
       // return a promise to cy.then() that
       // is awaited until it resolves
       // @ ts-ignore TS7006
-      return waitOneSecond().then(str => {
-        expect(str).to.eq('foo')
+      return waitOneSecond().then(string => {
+        expect(string).to.eq('foo')
         expect(waited).to.be.true
       })
     })

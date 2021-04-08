@@ -31,7 +31,7 @@ const sendMetric = async ({
 
   // values must be integers
   const valueInt: number = Math.round(
-    name === 'CLS' ? parseFloat(value) * 1000 : parseFloat(value)
+    name === 'CLS' ? Number.parseFloat(value) * 1000 : Number.parseFloat(value)
   )
   const url = `https://qckm.io?m=${name}&v=${valueInt}&k=${process.env.NEXT_PUBLIC_QUICK_METRICS_API_KEY}`
 

@@ -12,12 +12,12 @@ export const config = {
 }
 
 const DynamicPage = (
-  props: InferGetStaticPropsType<typeof getStaticProps>
+  properties: InferGetStaticPropsType<typeof getStaticProps>
 ): JSX.Element => {
   return (
     <main>
-      <h1>DynamicPage Component {props.dynamic}</h1>
-      <h2>Locale: {props.locale}</h2>
+      <h1>DynamicPage Component {properties.dynamic}</h1>
+      <h2>Locale: {properties.locale}</h2>
     </main>
   )
 }
@@ -31,11 +31,11 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   //const res = await fetch(`https://.../posts?locale=${locale}`)
   //const posts = await res.json()
 
-  const res = await Promise.resolve('Hello')
+  const response = await Promise.resolve('Hello')
 
   return {
     props: {
-      dynamic: res,
+      dynamic: response,
       locale: locale,
     },
     // Next.js will attempt to re-generate the page:
@@ -64,7 +64,9 @@ export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
         return { params: path.params, locale: locale }
       })
     })
-    paths = pathsI18n.reduce((a, v) => a.concat(v), paths)
+    // not sure how to rewrite this so for now...
+    // eslint-disable-next-line unicorn/no-array-reduce
+    paths = pathsI18n.reduce((a, v) => [...a, ...v], paths)
   }
 
   return {

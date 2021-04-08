@@ -5,12 +5,15 @@ type Data = {
   coverage: string
 }
 
-const coverage = (req: NextApiRequest, res: NextApiResponse<Data>): void => {
-  res.statusCode = 200
-  res.json({
+const coverage = (
+  request: NextApiRequest,
+  response: NextApiResponse<Data>
+): void => {
+  response.statusCode = 200
+  response.json({
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore TS2339
-    coverage: global.__coverage__ || null, // eslint-disable-line @typescript-eslint/no-unsafe-assignment
+    coverage: global.__coverage__ || undefined, // eslint-disable-line @typescript-eslint/no-unsafe-assignment
   })
 }
 
