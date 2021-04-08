@@ -11,7 +11,7 @@ context('Cypress.Commands', () => {
     Cypress.Commands.add(
       'console',
       {
-        prevSubject: true,
+        prevSubject: true, // eslint-disable-line unicorn/prevent-abbreviations
       },
       (subject, method = 'log') => {
         // the previous subject is automatically received
