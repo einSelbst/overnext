@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Footer from 'components/layout/footer'
 
 const LegalLayout = ({
   children,
@@ -33,9 +34,7 @@ const LegalLayout = ({
         <p>Something which is supposed to be on the side</p>
       </aside>
 
-      <footer>
-        <p>©Copyright 2050 by nobody. All rights reversed.</p>
-      </footer>
+      <Footer />
     </>
   )
 }
