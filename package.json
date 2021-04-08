@@ -73,7 +73,7 @@
   },
   "dependencies": {
     "@axe-core/react": "4.1.1",
-    "@babel/core": "7.13.14",
+    "@babel/core": "7.13.15",
     "@babel/runtime": "7.13.10",
     "@cypress/code-coverage": "3.9.4",
     "@next/bundle-analyzer": "10.1.3",
