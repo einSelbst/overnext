@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import LegalLayout from 'layouts/legal.layout'
 
 const Legal = (): JSX.Element => {
   return (
@@ -24,5 +25,7 @@ const Legal = (): JSX.Element => {
     </>
   )
 }
+
+Legal.Layout = LegalLayout
 
 export default Legal

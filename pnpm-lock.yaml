@@ -63,7 +63,6 @@ specifiers:
   standard-version: 9.2.0
   start-server-and-test: 1.12.1
   tailwindcss: 2.1.1
-  terser-webpack-plugin: 5.1.1
   tslib: 2.2.0
   typedoc: 0.20.35
   typescript: 4.2.4
@@ -102,7 +101,6 @@ dependencies:
   react-dom: 17.0.2_react@17.0.2
   start-server-and-test: 1.12.1
   tailwindcss: 2.1.1_0bca15301caac8bc71ea0ad94045571f
-  terser-webpack-plugin: 5.1.1_webpack@5.31.0
   tslib: 2.2.0
   typedoc: 0.20.35_typescript@4.2.4
   typescript: 4.2.4

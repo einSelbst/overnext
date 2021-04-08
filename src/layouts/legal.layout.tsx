@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Footer from 'components/layout/footer'
 
-const DefaultLayout = ({
+const LegalLayout = ({
   children,
 }: {
   children: React.ReactNode
@@ -39,4 +39,4 @@ const DefaultLayout = ({
   )
 }
 
-export default DefaultLayout
+export default LegalLayout

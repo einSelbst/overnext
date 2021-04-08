@@ -41,7 +41,6 @@
     }
   },
   "rules": {
-    "no-warning-comments": "warn",
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-var-requires": "off",
@@ -68,7 +67,7 @@
       }
     ],
     "unicorn/expiring-todo-comments": [
-      "error",
+      "warn",
       {
         "allowWarningComments": false,
         "ignoreDatesOnPullRequests": true
@@ -84,12 +83,19 @@
     "unicorn/prevent-abbreviations": [
       "error",
       {
+        "checkProperties": true,
+        "replacements": {
+          "props": {
+            "properties": false
+          }
+        },
         "whitelist": {
           // TODO [eslint-plugin-unicorn@<27]: Change "whitelist" to "allowList"
-          "getInitialProps": true,
-          "getStaticProps": true,
-          "getServerSideProps": true,
-          "env": true
+          "dest": true,
+          "env": true,
+          "i18n": true,
+          "params": true,
+          "src": true
         }
       }
     ],

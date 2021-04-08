@@ -1,12 +1,14 @@
 import { DefaultSeo } from 'next-seo'
 import { ThemeProvider } from 'next-themes'
 import { useAmp } from 'next/amp'
-import { AppProps /*, App, AppContext */ } from 'next/app'
+// import { AppProps /*, App, AppContext */ } from 'next/app'
+import type { AppLayoutProps } from 'next/app'
 import Head from 'next/head'
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import 'styles/main.css'
 import { SEO, ENV } from 'config'
+import DefaultLayout from 'layouts/default.layout'
 
 /**
  * Web Vitals
@@ -28,6 +30,9 @@ const sendMetric = async ({
   value: string
 }): Promise<boolean> => {
   if (!process.env.NEXT_PUBLIC_QUICK_METRICS_API_KEY) return false
+
+  // eslint-disable-next-line no-console
+  console.log('sending metrics to quickmetrics...')
 
   // values must be integers
   const valueInt: number = Math.round(
@@ -67,7 +72,12 @@ const HeadIcons = (): JSX.Element => {
   return (
     <Head>
       {isNotAmp && (
-        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+        <>
+          <meta
+            name='viewport'
+            content='initial-scale=1.0, width=device-width'
+          />
+        </>
       )}
       {/* <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86" /> see https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag */}
       {/* Browsers use this in some areas to help your brand feel more embedded */}
@@ -152,8 +162,11 @@ const HeadIcons = (): JSX.Element => {
   )
 }
 
-function _app ({ Component, pageProps }: AppProps): JSX.Element {
+function _app ({ Component, pageProps }: AppLayoutProps): JSX.Element {
   const isAmp = useAmp()
+
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+  const Layout = Component.Layout || DefaultLayout
 
   // amp pages doesn't work well with the theme so I had to split it
   return isAmp ? (
@@ -166,7 +179,9 @@ function _app ({ Component, pageProps }: AppProps): JSX.Element {
     <ThemeProvider defaultTheme='system' attribute='class'>
       <DefaultSeo {...SEO} />
       <HeadIcons />
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </ThemeProvider>
   )
 }
