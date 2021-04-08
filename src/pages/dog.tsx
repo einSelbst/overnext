@@ -1,7 +1,7 @@
-import Byline from 'components/byline'
 import { useAmp } from 'next/amp'
 import Head from 'next/head'
 import Link from 'next/link'
+import Byline from 'components/byline'
 import DefaultLayout from 'layouts/default.layout'
 
 export const config = {
