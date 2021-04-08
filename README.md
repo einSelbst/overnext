@@ -80,6 +80,17 @@ This is more about priorities than about a temporal order.
 - automation, [inspirations](https://github.com/sdras/awesome-actions)
 - conformity, [inspirations](https://github.com/dustinspecker/awesome-eslint)
 - recommended repo files via [cgx](https://github.com/jeroenouw/cgx)
+- <details>
+    <summary>
+      <a href="https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/expiring-todo-comments.md">expiring ToDo's</a>
+    </summary>
+
+  - Expire after a specific date: `[YYYY-MM-DD]` to define a UTC due date in the ISO 8601 format
+  - Expire when your package (`package.json`) reaches a specific version: `[>1]` or `[>=2]`. No whitespace.
+  - Expire when a package.json engines property reaches a specific version: `[engine:node@>8]` or `[engine:node@>=8]`, only `node` engine is supported. No whitespace.
+  - Expire when you install/uninstall a specific package: use `[+package]` or `[-package]` to expire. No whitespace.
+  - Expire when a package reaches a specific version: use `[package@>1]` or `[package@>=2]`. No whitespace.
+  </details>
 
 ### Commit Style
 

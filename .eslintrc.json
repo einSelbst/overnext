@@ -41,6 +41,7 @@
     }
   },
   "rules": {
+    "no-warning-comments": "warn",
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-var-requires": "off",
@@ -64,6 +65,13 @@
       "error",
       {
         "checkArrowFunctions": false
+      }
+    ],
+    "unicorn/expiring-todo-comments": [
+      "error",
+      {
+        "allowWarningComments": false,
+        "ignoreDatesOnPullRequests": true
       }
     ],
     "unicorn/filename-case": [
@@ -95,13 +103,13 @@
     ],
     "jsx-a11y/label-has-associated-control": "error",
     "no-unused-vars": [
-      2,
+      "error",
       {
         "argsIgnorePattern": "^_"
       }
     ],
     "no-console": [
-      2,
+      "error",
       {
         "allow": ["warn", "error"]
       }
