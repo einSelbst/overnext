@@ -11,9 +11,11 @@ const _error = ({ statusCode, title }: ErrorProps): JSX.Element => (
 /**
  * Add logger
  */
-_error.getInitialProps = async (ctx: NextPageContext): Promise<ErrorProps> => {
-  const props = NextError.getInitialProps(ctx)
-  const { err } = ctx
+_error.getInitialProps = async (
+  context: NextPageContext
+): Promise<ErrorProps> => {
+  const properties = NextError.getInitialProps(context)
+  const { err } = context
 
   if (err) {
     /* Sentry.captureException(err) */
@@ -24,7 +26,7 @@ _error.getInitialProps = async (ctx: NextPageContext): Promise<ErrorProps> => {
     /* }) */
   }
 
-  return props
+  return properties
 }
 
 export default _error
