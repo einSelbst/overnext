@@ -80,6 +80,7 @@ This is more about priorities than about a temporal order.
 - automation, [inspirations](https://github.com/sdras/awesome-actions)
 - conformity, [inspirations](https://github.com/dustinspecker/awesome-eslint)
 - recommended repo files via [cgx](https://github.com/jeroenouw/cgx)
+- [expiring ToDo's](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/expiring-todo-comments.md)
 
 ### Commit Style
 
