@@ -208,5 +208,9 @@
     "exclude": [
       "src/pages/api/__coverage__.js"
     ]
+  },
+  "volta": {
+    "node": "14.16.1",
+    "npm": "7.9.0"
   }
 }
