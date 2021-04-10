@@ -63,7 +63,6 @@
 - UI _third_
   - all screens: from watch-face to wide screen, not just mobile/desktop
 - UX _last_
-
   - features & content
 
 This is more about priorities than about a temporal order.
@@ -76,6 +75,7 @@ This is more about priorities than about a temporal order.
 
 ## DX
 
+- [volta](https://github.com/volta-cli/volta), for toolchain management (hoping for [pnpm support](https://github.com/volta-cli/volta/issues/737)), usage: [install guide](./CONTRIBUTING.md)
 - [`pnpm`](https://pnpm.js.org/en/) package manager
 - automation, [inspirations](https://github.com/sdras/awesome-actions)
 - conformity, [inspirations](https://github.com/dustinspecker/awesome-eslint)

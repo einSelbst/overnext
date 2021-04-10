@@ -1,12 +1,24 @@
 # Contributing
 
+## prerequisites
+
+You can use [volta](https://volta.sh) installed on your system. It's used to set up everything else.
+
+`curl https://get.volta.sh | bash`
+
+If you don't like volta you could just use `nvm i`
+
 ## fork this project
 
 - `git clone <your-forked-repo>`
-- `nvm install` # install node
-- `pnpm i` # install deps
-
 - `git checkout -b my-fix`
+
+## setup
+
+- `volta install` to install toolchain (`node`, `npm`, unfortunately not `pnpm` yet)
+- `npm i -g pnpm` to install `pnpm`
+- `pnpm i` # to install deps
+- `pnpm validate` # make sure everything works
 
 ## start project locally in dev mode
 
