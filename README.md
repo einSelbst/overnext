@@ -124,22 +124,24 @@ build: Build the app
 start: Start server to serve the local app build
 serve: Build app and start server
 servex: Build & run app on public URL
-cz: Make new commit
-release: Prepare a new release
-docs: Generate typedoc docs
-info: Display info about the scripts
-find:unused: Find unused files
-format: Format source code and fix issues
-lint: Lint source code and fix issues
-lint:html: Run html-validate on generated static output files
 test: Run unit and integration tests once
+test:ci: Run jest tests on CI, will re-add cypress later again
 test:jest: Run jest tests and update screenshots
 test:cy: Open cypress test runner (needs a running app server)
 e2e:watch: Start dev server, open cypress and watch
 e2e: Build & serve app, then run cypress once
+format: Format source code and fix issues
+lint: Lint source code and fix issues
+lint:html: Run html-validate on generated static output files
 validate: Validate source code and output files
 validate:src: Format, lint, type-check & unit test the app
 validate:out: Build app, run integration tests & validate generated html
+build:analyze: Build app and output bundle analyzer diagrams
+cz: Make new commit
+docs: Generate typedoc docs
+find:unused:files: Find unused files
+info: Display info about the scripts
+release: Prepare a new release
 ```
 
 ## Code Style
@@ -294,6 +296,7 @@ validate:out: Build app, run integration tests & validate generated html
 - [ ] cypress a11y plugin
 - [ ] [wdyr](https://github.com/welldone-software/why-did-you-render/issues/113) vs preact [1](https://github.com/preactjs/preact/issues/2760)
 - [ ] use ISR - Incremental Static Regeneration ? [opinion](https://www.netlify.com/blog/2021/03/08/incremental-static-regeneration-its-benefits-and-its-flaws/)
+- [ ] enable [unused ESLint rules](https://github.com/alexilyaev/stylelint-find-rules)
 
 ### Documentation ToDo's
 
