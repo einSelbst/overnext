@@ -1,6 +1,7 @@
 [build]
 command = "printenv && npm run build"
 publish = ".next"
+ignore = "git diff --quiet HEAD^ HEAD src/"
 
   [build.environment]
   # CI = "1"
