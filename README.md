@@ -284,6 +284,7 @@ release: Prepare a new release
   - [`netlify.toml`](https://github.com/netlify/netlify-plugin-nextjs)
   - [assets](https://docs.netlify.com/configure-builds/file-based-configuration/#post-processing)
   - "Redirects and rewrites using next.config.js aren’t currently supported for Next.js sites on Netlify."
+  - [skip](https://docs.netlify.com/configure-builds/file-based-configuration/#ignore-builds) deployments without [relevant changes](https://answers.netlify.com/t/issues-with-build-ignore-command-not-ignoring-as-required/23428/13?u=einselbst)
   - netlify plugins
 
     - [netlify-plugin-cypress](https://github.com/cypress-io/netlify-plugin-cypress)
