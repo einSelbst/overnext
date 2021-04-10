@@ -93,9 +93,9 @@
     "netlify-plugin-cypress": "2.2.0",
     "next": "10.1.3",
     "next-compose-plugins": "2.2.1",
-    "next-pwa": "5.2.3",
+    "next-pwa": "5.2.9",
     "next-seo": "4.23.0",
-    "next-sitemap": "1.6.20",
+    "next-sitemap": "1.6.25",
     "next-themes": "0.0.14",
     "next-unused": "0.0.6",
     "postcss": "8.2.9",
@@ -107,7 +107,7 @@
     "tslib": "2.2.0",
     "typedoc": "0.20.35",
     "typescript": "4.2.4",
-    "webpack": "5.31.0"
+    "webpack": "5.31.2"
   },
   "devDependencies": {
     "@commitlint/cli": "12.1.1",
@@ -117,7 +117,7 @@
     "@typescript-eslint/parser": "4.21.0",
     "commitizen": "4.2.3",
     "dependency-version-badge": "1.9.1",
-    "eslint": "7.23.0",
+    "eslint": "7.24.0",
     "eslint-import-resolver-typescript": "2.4.0",
     "eslint-plugin-cypress": "2.11.2",
     "eslint-plugin-import": "2.22.1",
@@ -125,7 +125,7 @@
     "eslint-plugin-jest-dom": "3.7.0",
     "eslint-plugin-jsx-a11y": "6.4.1",
     "eslint-plugin-promise": "4.3.1",
-    "eslint-plugin-react": "7.23.1",
+    "eslint-plugin-react": "7.23.2",
     "eslint-plugin-react-hooks": "4.2.0",
     "eslint-plugin-tsdoc": "0.2.11",
     "eslint-plugin-unicorn": "29.0.0",
