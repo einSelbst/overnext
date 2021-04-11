@@ -190,6 +190,7 @@ release: Prepare a new release
   - [`eslint-plugin-react`](https://github.com/yannickcr/eslint-plugin-react)
   - [`eslint-plugin-react-hooks`](https://www.npmjs.com/package/eslint-plugin-react-hooks)
   - [`eslint-plugin-tsdoc`](https://github.com/microsoft/tsdoc/tree/master/eslint-plugin)
+  - [`eslint-plugin-compat`](https://github.com/amilajack/eslint-plugin-compat), works with browserslist
 
 - [`husky`](https://github.com/typicode/husky) for hooks
 
@@ -233,16 +234,17 @@ release: Prepare a new release
 - [`next-seo`](https://github.com/garmeeh/next-seo), for MetaTags, OpenGraph & JsonLD
 - [`next-themes`](https://github.com/pacocoursey/next-themes), for dark-mode
 - [`next-unused`](https://github.com/pacocoursey/next-unused)
+- integrate [`@babel/preset-env`](https://babeljs.io/docs/en/babel-preset-env) with [browserslist](https://github.com/browserslist/browserslist) currently [not possible](https://github.com/vercel/next.js/discussions/12826), can only use [`targets`](https://babeljs.io/docs/en/babel-preset-env#targets) option to set targeted browser
 
 ### Styling
 
 ...all still unclear atm...
 
-- [Tailwind CSS](https://tailwindcss.com/) - really unsure about it, esp. after reading [this](https://dev.to/jaredcwhite/why-tailwind-isn-t-for-me-5c90), also looking at:
+- [Tailwind CSS](https://tailwindcss.com/) - really unsure about it, esp. after reading [this](https://dev.to/jaredcwhite/why-tailwind-isn-t-for-me-5c90)
+- first, find some nice [`minimal/classless CSS framework`](https://github.com/dohliam/dropin-minimal-css)
   - [`shoelace`](https://shoelace.style/)
   - [`em dash`](https://github.com/jfbrennan/m-)
-  - [`newcss`](https://newcss.net/)
-- ToDo: [`autoprefixer`](https://github.com/postcss/autoprefixer)
+- ToDo: [`autoprefixer`](https://github.com/postcss/autoprefixer), [issue](https://github.com/vercel/next.js/issues/23658) on next.js side
 
 ## CI
 
@@ -272,6 +274,7 @@ release: Prepare a new release
   - needs `FOSSA_API_KEY` env var in Github
 - [Renovate Dashboard](https://app.renovatebot.com/dashboard#github/einSelbst/overnext)
 - [Vercel Dashboard](https://vercel.com/einselbst/overnext)
+- [Netlify Dashboard](https://app.netlify.com/sites/overnext/overview)
 
 ## Deployment
 

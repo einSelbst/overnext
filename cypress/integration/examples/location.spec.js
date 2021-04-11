@@ -18,6 +18,7 @@ context('Location', () => {
         'https://example.cypress.io/commands/location'
       )
       expect(location.host).to.eq('example.cypress.io')
+      // eslint-disable-next-line compat/compat
       expect(location.hostname).to.eq('example.cypress.io')
       expect(location.origin).to.eq('https://example.cypress.io')
       expect(location.pathname).to.eq('/commands/location')
