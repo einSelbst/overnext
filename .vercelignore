@@ -1,18 +1,18 @@
 # https://vercel.com/guides/prevent-uploading-sourcepaths-with-vercelignore
 # Ignore everything (folders and files) on root only
-*
+/*
 
 # Re-add some folders
-!src
-!public
+!/src
+!/public
 
 # Re-add some files
-!vercel.json
-!next-env.d.ts
-!next-sitemap.js
-!next.config.js
-!package.json
-!pnpm-lock.yaml
-!postcss.config.js
-!tailwind.config.js
-!tsconfig.json
+!/vercel.json
+!/next-env.d.ts
+!/next-sitemap.js
+!/next.config.js
+!/package.json
+!/pnpm-lock.yaml
+!/postcss.config.js
+!/tailwind.config.js
+!/tsconfig.json
