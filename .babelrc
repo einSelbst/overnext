@@ -1,4 +1,14 @@
 {
-  "presets": ["next/babel"],
+  "presets": [
+    ["next/babel", {
+      "preset-env": {
+        "targets": "defaults",
+        "useBuiltIns": "entry",
+        // must be kept in sync with package.json
+        // maybe automate with https://docs.renovatebot.com/configuration-options/#postupdateoptions
+        "corejs": "3.10.1"
+      }
+    }]
+  ],
   "plugins": []
 }
