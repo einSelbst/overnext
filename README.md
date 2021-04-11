@@ -277,8 +277,9 @@ release: Prepare a new release
 
 - [Documentation](https://nextjs.org/docs/deployment)
 - [Vercel](https://vercel.com/import?filter=next.js)
-  - override "Install Command": `rm -rf node_modules && npx pnpm i` (if pnpm should be used)
-  - override "Build Command": `next build && npx pnpm run postbuild` (optional)
+  - override "Install Command": `npx pnpm i -P` (if pnpm should be used), skips dev dependencies
+  - override "Build Command": `next build && npx pnpm run postbuild` (vercel will use yarn otherwise)
+  - use [`vercelignore](https://vercel.com/guides/prevent-uploading-sourcepaths-with-vercelignore) to only upload neccessary files
 - [Netlify](https://www.netlify.com/blog/2020/11/30/how-to-deploy-next.js-sites-to-netlify/)
 
   - [`netlify.toml`](https://github.com/netlify/netlify-plugin-nextjs)
