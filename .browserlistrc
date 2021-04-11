@@ -1,0 +1,13 @@
+# Browsers that we support
+[production]
+> 1%
+last 2 versions
+ie 10
+
+# unused
+[modern]
+last 1 chrome version
+last 1 firefox version
+
+[ssr]
+node 14

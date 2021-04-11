@@ -21,7 +21,7 @@
     "?build": "echo Build the app",
     "build": "next build",
     "postbuild": "next-sitemap",
-    "build:ssr": "NODE_ENV=production next build",
+    "build:ssr": "NODE_ENV=production BROWSERSLIST_ENV=ssr next build",
     "?start": "echo Start server to serve the local app build",
     "start": "next start",
     "?serve": "echo Build app and start server",
@@ -166,11 +166,6 @@
       "prettierx": "0.17"
     }
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ],
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
