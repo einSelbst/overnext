@@ -31,6 +31,7 @@ specifiers:
   dependency-version-badge: 1.9.1
   eslint: 7.24.0
   eslint-import-resolver-typescript: 2.4.0
+  eslint-plugin-compat: ^3.9.0
   eslint-plugin-cypress: 2.11.2
   eslint-plugin-import: 2.22.1
   eslint-plugin-jest: 24.3.5
@@ -122,6 +123,7 @@ devDependencies:
   dependency-version-badge: 1.9.1
   eslint: 7.24.0
   eslint-import-resolver-typescript: 2.4.0_dc9d9d711f9715ea38ced5881f20889e
+  eslint-plugin-compat: 3.9.0_eslint@7.24.0
   eslint-plugin-cypress: 2.11.2_eslint@7.24.0
   eslint-plugin-import: 2.22.1_eslint@7.24.0
   eslint-plugin-jest: 24.3.5_53c23ebd1e4a7a813a71449c0eb059df
@@ -2699,6 +2701,13 @@ packages:
       vary: 1.1.2
     dev: false
 
+  /@mdn/browser-compat-data/2.0.7:
+    resolution: {integrity: sha512-GeeM827DlzFFidn1eKkMBiqXFD2oLsnZbaiGhByPl0vcapsRzUL+t9hDoov1swc9rB2jw64R+ihtzC8qOE9wXw==}
+    engines: {node: '>=10.0.0'}
+    dependencies:
+      extend: 3.0.2
+    dev: true
+
   /@microsoft/tsdoc-config/0.14.0:
     resolution: {integrity: sha512-KSj15FwyaxMCGJkC320rvNXxuJNCOVO02pNqIEdf5cbLakvHK8afoHTmcjdBEWl0cfBFZlMu/1DhL4VCzZq0rQ==}
     dependencies:
@@ -3864,6 +3873,10 @@ packages:
   /assign-symbols/1.0.0:
     resolution: {integrity: sha1-WWZ/QfrdTyDMvCu5a41Pf3jsA2c=}
     engines: {node: '>=0.10.0'}
+
+  /ast-metadata-inferer/0.4.0:
+    resolution: {integrity: sha512-tKHdBe8N/Vq2nLAm4YPBVREVZjMux6KrqyPfNQgIbDl0t7HaNSmy8w4OyVHYg/cvyn5BW7o7pVwpjPte89Zhcg==}
+    dev: true
 
   /ast-module-types/2.7.1:
     resolution: {integrity: sha512-Rnnx/4Dus6fn7fTqdeLEAn5vUll5w7/vts0RN608yFa6si/rDOUonlIIiwugHBFWjylHjxm9owoSZn71KwG4gw==}
@@ -5355,6 +5368,11 @@ packages:
     resolution: {integrity: sha512-laz3Zx0avrw9a4QEIdmIblnVuJz8W51leY9iLThatCsFawWxC3sE4guASC78JbCin+DkwMpCdp1AVAuzL/GN7A==}
     requiresBuild: true
 
+  /core-js/3.10.1:
+    resolution: {integrity: sha512-pwCxEXnj27XG47mu7SXAwhLP3L5CrlvCB91ANUkIz40P27kUcvNfSdvyZJ9CLHiVoKSp+TTChMQMSKQEH/IQxA==}
+    requiresBuild: true
+    dev: true
+
   /core-util-is/1.0.2:
     resolution: {integrity: sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=}
 
@@ -6383,6 +6401,23 @@ packages:
     dependencies:
       debug: 2.6.9
       pkg-dir: 2.0.0
+    dev: true
+
+  /eslint-plugin-compat/3.9.0_eslint@7.24.0:
+    resolution: {integrity: sha512-lt3l5PHFHVEYSZ5zijcoYvtQJPsBifRiH5N0Et57KwVu7l/yxmHhSG6VJiLMa/lXrg93Qu8049RNQOMn0+yJBg==}
+    engines: {node: '>=9.x'}
+    peerDependencies:
+      eslint: ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
+    dependencies:
+      '@mdn/browser-compat-data': 2.0.7
+      ast-metadata-inferer: 0.4.0
+      browserslist: 4.16.3
+      caniuse-lite: 1.0.30001208
+      core-js: 3.10.1
+      eslint: 7.24.0
+      find-up: 4.1.0
+      lodash.memoize: 4.1.2
+      semver: 7.3.2
     dev: true
 
   /eslint-plugin-cypress/2.11.2_eslint@7.24.0:
@@ -9843,6 +9878,10 @@ packages:
   /lodash.memoize/3.0.4:
     resolution: {integrity: sha1-LcvSwofLwKVcxCMovQxzYVDVPj8=}
     dev: false
+
+  /lodash.memoize/4.1.2:
+    resolution: {integrity: sha1-vMbEmkKihA7Zl/Mj6tpezRguC/4=}
+    dev: true
 
   /lodash.once/4.1.1:
     resolution: {integrity: sha1-DdOXEhPHxW34gJd9UEyI+0cal6w=}

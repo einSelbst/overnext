@@ -124,6 +124,7 @@
     "dependency-version-badge": "1.9.1",
     "eslint": "7.24.0",
     "eslint-import-resolver-typescript": "2.4.0",
+    "eslint-plugin-compat": "^3.9.0",
     "eslint-plugin-cypress": "2.11.2",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-jest": "24.3.5",
