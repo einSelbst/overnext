@@ -160,6 +160,8 @@
   },
   "pnpm": {
     "overrides": {
+      "browserslist": "latest",
+      "caniuse-lite": "latest",
       "fsevents": "2.3.2",
       "prettierx": "0.17"
     }

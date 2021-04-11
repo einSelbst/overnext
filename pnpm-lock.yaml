@@ -1,6 +1,8 @@
 lockfileVersion: 5.3
 
 overrides:
+  browserslist: latest
+  caniuse-lite: latest
   fsevents: 2.3.2
   prettierx: '0.17'
 
@@ -3934,7 +3936,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.16.3
-      caniuse-lite: 1.0.30001197
+      caniuse-lite: 1.0.30001208
       colorette: 1.2.2
       fraction.js: 4.0.13
       normalize-range: 0.1.2
@@ -4418,26 +4420,14 @@ packages:
       xtend: 4.0.2
     dev: false
 
-  /browserslist/4.16.1:
-    resolution: {integrity: sha512-UXhDrwqsNcpTYJBTZsbGATDxZbiVDsx6UjpmRUmtnP10pr8wAYr5LgFoEFw9ixriQH2mv/NX2SfGzE/o8GndLA==}
-    engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
-    hasBin: true
-    dependencies:
-      caniuse-lite: 1.0.30001204
-      colorette: 1.2.2
-      electron-to-chromium: 1.3.701
-      escalade: 3.1.1
-      node-releases: 1.1.71
-    dev: false
-
   /browserslist/4.16.3:
     resolution: {integrity: sha512-vIyhWmIkULaq04Gt93txdh+j02yX/JzlyhLYbV3YQCn/zvES3JnY7TifHHvvr1w5hTDluNKMkV05cs4vy8Q7sw==}
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001207
+      caniuse-lite: 1.0.30001208
       colorette: 1.2.2
-      electron-to-chromium: 1.3.709
+      electron-to-chromium: 1.3.712
       escalade: 3.1.1
       node-releases: 1.1.71
 
@@ -4643,16 +4633,8 @@ packages:
     resolution: {integrity: sha512-c7wVvbw3f37nuobQNtgsgG9POC9qMbNuMQmTCqZv23b6MIz0fcYpBiOlv9gEN/hdLdnZTDQhg6e9Dq5M1vKvfg==}
     engines: {node: '>=10'}
 
-  /caniuse-lite/1.0.30001197:
-    resolution: {integrity: sha512-8aE+sqBqtXz4G8g35Eg/XEaFr2N7rd/VQ6eABGBmNtcB8cN6qNJhMi6oSFy4UWWZgqgL3filHT8Nha4meu3tsw==}
-    dev: false
-
-  /caniuse-lite/1.0.30001204:
-    resolution: {integrity: sha512-JUdjWpcxfJ9IPamy2f5JaRDCaqJOxDzOSKtbdx4rH9VivMd1vIzoPumsJa9LoMIi4Fx2BV2KZOxWhNkBjaYivQ==}
-    dev: false
-
-  /caniuse-lite/1.0.30001207:
-    resolution: {integrity: sha512-UPQZdmAsyp2qfCTiMU/zqGSWOYaY9F9LL61V8f+8MrubsaDGpaHD9HRV/EWZGULZn0Hxu48SKzI5DgFwTvHuYw==}
+  /caniuse-lite/1.0.30001208:
+    resolution: {integrity: sha512-OE5UE4+nBOro8Dyvv0lfx+SRtfVIOM9uhKqFmJeUbGriqhhStgp1A0OyBpgy3OUF8AhYCT+PVwPC1gMl2ZcQMA==}
 
   /capture-exit/2.0.0:
     resolution: {integrity: sha512-PiT/hQmTonHhl/HFGN+Lx3JJUznrVYJ3+AQsnthneZbvW7x+f08Tk7yLJTLEOUvBTbduLeeBkxEaYXUOUrRq6g==}
@@ -5493,7 +5475,7 @@ packages:
   /cssnano-preset-simple/1.2.2:
     resolution: {integrity: sha512-gtvrcRSGtP3hA/wS8mFVinFnQdEsEpm3v4I/s/KmNjpdWaThV/4E5EojAzFXxyT5OCSRPLlHR9iQexAqKHlhGQ==}
     dependencies:
-      caniuse-lite: 1.0.30001204
+      caniuse-lite: 1.0.30001208
       postcss: 7.0.35
     dev: false
 
@@ -6174,12 +6156,8 @@ packages:
     requiresBuild: true
     dev: false
 
-  /electron-to-chromium/1.3.701:
-    resolution: {integrity: sha512-Zd9ofdIMYHYhG1gvnejQDvC/kqSeXQvtXF0yRURGxgwGqDZm9F9Fm3dYFnm5gyuA7xpXfBlzVLN1sz0FjxpKfw==}
-    dev: false
-
-  /electron-to-chromium/1.3.709:
-    resolution: {integrity: sha512-LolItk2/ikSGQ7SN8UkuKVNMBZp3RG7Itgaxj1npsHRzQobj9JjMneZOZfLhtwlYBe5fCJ75k+cVCiDFUs23oA==}
+  /electron-to-chromium/1.3.712:
+    resolution: {integrity: sha512-3kRVibBeCM4vsgoHHGKHmPocLqtFAGTrebXxxtgKs87hNUzXrX2NuS3jnBys7IozCnw7viQlozxKkmty2KNfrw==}
 
   /elegant-spinner/1.0.1:
     resolution: {integrity: sha1-2wQ1IcldfjA/2PNFvtwzSc+wcp4=}
@@ -10736,9 +10714,9 @@ packages:
       assert: 2.0.0
       ast-types: 0.13.2
       browserify-zlib: 0.2.0
-      browserslist: 4.16.1
+      browserslist: 4.16.3
       buffer: 5.6.0
-      caniuse-lite: 1.0.30001204
+      caniuse-lite: 1.0.30001208
       chalk: 2.4.2
       chokidar: 3.5.1
       constants-browserify: 1.0.0
