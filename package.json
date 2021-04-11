@@ -70,8 +70,7 @@
     "release": "standard-version",
     "type-check": "tsc --pretty --noEmit",
     " --------------------------- WIP --------------------------- ": "",
-    "skip-for-now-preinstall": "npx only-allow pnpm",
-    "find:unused:eslint-rules": "eslint-find-rules -u ./.eslintrc.json --ext .json"
+    "skip-for-now-preinstall": "npx only-allow pnpm"
   },
   "config": {
     "commitizen": {
