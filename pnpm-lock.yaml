@@ -56,6 +56,7 @@ specifiers:
   next-themes: 0.0.14
   next-unused: 0.0.6
   npm-scripts-info: 0.3.9
+  pnpm: latest
   postcss: 8.2.9
   prettier-standard: 16.3.0
   prop-types: 15.7.2
@@ -108,6 +109,7 @@ dependencies:
 
 optionalDependencies:
   fsevents: 2.3.2
+  pnpm: 6.0.1
 
 devDependencies:
   '@commitlint/cli': 12.1.1
@@ -11782,6 +11784,13 @@ packages:
     transitivePeerDependencies:
       - typescript
     dev: false
+
+  /pnpm/6.0.1:
+    resolution: {integrity: sha512-DUhTyD1jczFlzz3zIlYAWHrktuWcrhJVMisvMqvZ1ktPCfvDcBW8yw0AytrlHdvPqoV2IiZK4Grzb1blFsxfyw==}
+    engines: {node: '>=12.17'}
+    hasBin: true
+    dev: false
+    optional: true
 
   /posix-character-classes/0.1.1:
     resolution: {integrity: sha1-AerA/jta9xoqbAL+q7jB/vfgDqs=}

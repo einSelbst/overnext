@@ -145,7 +145,8 @@
     "standard-version": "9.2.0"
   },
   "optionalDependencies": {
-    "fsevents": "2.3.2"
+    "fsevents": "2.3.2",
+    "pnpm": "latest"
   },
   "packageRules": [
     {
