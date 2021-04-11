@@ -190,6 +190,7 @@ release: Prepare a new release
   - [`eslint-plugin-react`](https://github.com/yannickcr/eslint-plugin-react)
   - [`eslint-plugin-react-hooks`](https://www.npmjs.com/package/eslint-plugin-react-hooks)
   - [`eslint-plugin-tsdoc`](https://github.com/microsoft/tsdoc/tree/master/eslint-plugin)
+  - [`eslint-plugin-compat`](https://github.com/amilajack/eslint-plugin-compat), works with browserslist
 
 - [`husky`](https://github.com/typicode/husky) for hooks
 

@@ -16,6 +16,7 @@
     "plugin:import/warnings",
     "plugin:import/typescript",
     "plugin:unicorn/recommended",
+    "plugin:compat/recommended",
     "plugin:jsx-a11y/strict",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
