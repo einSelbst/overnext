@@ -245,6 +245,7 @@ release: Prepare a new release
   - [`shoelace`](https://shoelace.style/)
   - [`em dash`](https://github.com/jfbrennan/m-)
 - ToDo: [`autoprefixer`](https://github.com/postcss/autoprefixer), [issue](https://github.com/vercel/next.js/issues/23658) on next.js side
+- ToDo: integrate [PostCSS Preset Env](https://github.com/csstools/postcss-preset-env) with [next.js PostCss Config](https://nextjs.org/docs/advanced-features/customizing-postcss-config)
 
 ## CI
 
