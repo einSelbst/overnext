@@ -5,14 +5,13 @@ import { useAmp } from 'next/amp'
 import type { AppLayoutProps } from 'next/app'
 import Head from 'next/head'
 import * as React from 'react'
-import * as ReactDOM from 'react-dom'
 import 'styles/main.css'
 import { SEO, ENV } from 'config'
 import DefaultLayout from 'layouts/default.layout'
 
 /**
  * Web Vitals
- * @see https://www.freecodecamp.org/news/how-to-measure-next-js-web-vitals-using-quickmetrics/
+ * @see {@link https://www.freecodecamp.org/news/how-to-measure-next-js-web-vitals-using-quickmetrics/}
  */
 const reportWebVitals = (metric: { name: string; value: string }): void => {
   // I can only send 5 metrics to free quickmetrics account
@@ -52,18 +51,17 @@ const sendMetric = async ({
 /**
  * Conditionally inject axe into the page.
  * This only happens outside of production and in a browser (not SSR).
- * @see https://github.com/dequelabs/axe-core-npm/tree/develop/packages/react/examples/next.js
+ * @see {@link https://github.com/dequelabs/axe-core-npm/tree/develop/packages/react/examples/next.js}
  *
  * TODO: why not use next.js dynamic import?
  */
-// if (typeof window !== 'undefined' && process.env.NODE_ENV !== 'production') {
 if (!ENV.SERVER_RENDERED && !ENV.PRODUCTION) {
-  // eslint-disable-next-line no-console
-  console.log('loding axe')
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-var-requires
-  const axe = require('@axe-core/react')
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-call
-  axe(React, ReactDOM, 1000, {})
+  void (async () => {
+    const { default: React } = await import('react')
+    const { default: ReactDOM } = await import('react-dom')
+    const { default: axe } = await import('@axe-core/react')
+    void axe(React, ReactDOM, 1000, {})
+  })()
 }
 
 const HeadIcons = (): JSX.Element => {
