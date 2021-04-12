@@ -57,6 +57,8 @@
     " ------------------------- Helpers ------------------------- ": "",
     "?build:analyze": "echo Build app and output bundle analyzer diagrams",
     "build:analyze": "ANALYZE=true next build",
+    "?build:ssr": "echo used on CI for compressed size` action",
+    "build:ssr": "NODE_ENV=production BROWSERSLIST_ENV=ssr next build",
     "?cz": "Make new commit",
     "cz": "git-cz",
     "?docs": "Generate typedoc docs",
