@@ -111,7 +111,7 @@
     "tslib": "2.2.0",
     "typedoc": "0.20.35",
     "typescript": "4.2.4",
-    "webpack": "5.31.2"
+    "webpack": "5.32.0"
   },
   "devDependencies": {
     "@babel/preset-env": "7.13.15",
@@ -119,10 +119,10 @@
     "@commitlint/config-conventional": "12.1.1",
     "@cypress/code-coverage": "3.9.4",
     "@next/eslint-plugin-next": "10.1.3",
-    "@typescript-eslint/eslint-plugin": "4.21.0",
-    "@typescript-eslint/parser": "4.21.0",
+    "@typescript-eslint/eslint-plugin": "4.22.0",
+    "@typescript-eslint/parser": "4.22.0",
     "commitizen": "4.2.3",
-    "cypress": "7.0.1",
+    "cypress": "7.1.0",
     "cypress-watch-and-reload": "1.3.6",
     "dependency-version-badge": "1.9.1",
     "eslint": "7.24.0",
