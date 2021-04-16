@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 15.x]
+        node-version: [14.x]
 
     steps:
       - name: Checkout Repo
@@ -67,7 +67,7 @@ jobs:
       - name: Run type-check
         run: pnpm type-check
 
-      - name: 'Run tests (ToDo: re-enable cypress)'
+      - name: 'Run tests'
         run: pnpm test
         env:
           CI: true
