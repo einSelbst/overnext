@@ -68,7 +68,7 @@ jobs:
         run: pnpm type-check
 
       - name: 'Run tests (ToDo: re-enable cypress)'
-        run: pnpm test:ci
+        run: pnpm test
         env:
           CI: true
 
