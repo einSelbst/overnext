@@ -21,6 +21,9 @@ if (process.env.APP_ENV === 'test') {
   // eslint-disable-next-line no-console
   console.log('Loading coverage instrumentation')
   plugins.push('istanbul')
+} else {
+  // eslint-disable-next-line no-console
+  console.log('NOT Loading coverage instrumentation')
 }
 
 module.exports = { presets, plugins }
