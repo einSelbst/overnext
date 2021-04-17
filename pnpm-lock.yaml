@@ -26,7 +26,7 @@ specifiers:
   '@typescript-eslint/parser': 4.22.0
   autoprefixer: 10.2.5
   babel-jest: 26.6.3
-  babel-plugin-istanbul: ^6.0.0
+  babel-plugin-istanbul: 6.0.0
   commitizen: 4.2.3
   core-js: 3.10.1
   cypress: 7.1.0
@@ -4163,10 +4163,6 @@ packages:
     resolution: {integrity: sha512-c7wVvbw3f37nuobQNtgsgG9POC9qMbNuMQmTCqZv23b6MIz0fcYpBiOlv9gEN/hdLdnZTDQhg6e9Dq5M1vKvfg==}
     engines: {node: '>=10'}
 
-  /caniuse-lite/1.0.30001208:
-    resolution: {integrity: sha512-OE5UE4+nBOro8Dyvv0lfx+SRtfVIOM9uhKqFmJeUbGriqhhStgp1A0OyBpgy3OUF8AhYCT+PVwPC1gMl2ZcQMA==}
-    dev: false
-
   /caniuse-lite/1.0.30001209:
     resolution: {integrity: sha512-2Ktt4OeRM7EM/JaOZjuLzPYAIqmbwQMNnYbgooT+icoRGrKOyAxA1xhlnotBD1KArRSPsuJp3TdYcZYrL7qNxA==}
 
@@ -5002,7 +4998,7 @@ packages:
   /cssnano-preset-simple/1.2.2:
     resolution: {integrity: sha512-gtvrcRSGtP3hA/wS8mFVinFnQdEsEpm3v4I/s/KmNjpdWaThV/4E5EojAzFXxyT5OCSRPLlHR9iQexAqKHlhGQ==}
     dependencies:
-      caniuse-lite: 1.0.30001208
+      caniuse-lite: 1.0.30001209
       postcss: 7.0.35
     dev: false
 
