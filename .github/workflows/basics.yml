@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 15.x]
+        node-version: [14.x]
 
     steps:
       - name: Checkout Repo
@@ -67,11 +67,17 @@ jobs:
       - name: Run type-check
         run: pnpm type-check
 
-      - name: 'Run tests (ToDo: re-enable cypress)'
-        run: pnpm test:ci
+      - name: 'Run tests'
+        run: pnpm test
         env:
           CI: true
 
-        # TODO: would be better to run this once a day or so
+      - name: Report Test Coverage
+        uses: romeovs/lcov-reporter-action@v0.2.16
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          lcov-file: ./coverage/lcov.info
+
+      # TODO: would be better to run this once a day or so
       - name: Run audit
         run: pnpm audit

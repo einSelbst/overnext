@@ -51,6 +51,9 @@
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/einSelbst/overnext.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/einSelbst/overnext/alerts/)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/einSelbst/overnext.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/einSelbst/overnext/context:javascript)
 
+[![Code Grade](https://www.code-inspector.com/project/21436/score/svg)
+[![Code Grade](https://www.code-inspector.com/project/21436/score/svg?service=github)](https://frontend.code-inspector.com/project/21436/dashboard)
+
 </details>
 
 ## Approach
@@ -270,12 +273,14 @@ release: Prepare a new release
 - [Sonarcloud Dashboard](https://sonarcloud.io/dashboard?id=einSelbst_feehikel)
   - needs `SONAR_TOKEN` env var in Github
 - [LGTM Dashboard](https://lgtm.com/projects/g/einSelbst/overnext/?mode=list)
+- [Code Inspector](https://frontend.code-inspector.com/project/21436/dashboard)
 - [Cypress Dashboard](https://dashboard.cypress.io/projects/esdwok/runs)
 - [Fossa Dashboard](https://app.fossa.com/projects)
   - needs `FOSSA_API_KEY` env var in Github
 - [Renovate Dashboard](https://app.renovatebot.com/dashboard#github/einSelbst/overnext)
 - [Vercel Dashboard](https://vercel.com/einselbst/overnext)
 - [Netlify Dashboard](https://app.netlify.com/sites/overnext/overview)
+- [Project Wallace](https://www.projectwallace.com/~einselbst/overnext) for CSS monitoring
 
 ## Deployment
 
@@ -283,15 +288,13 @@ release: Prepare a new release
 - [Vercel](https://vercel.com/import?filter=next.js)
   - override "Install Command": `npx pnpm i -P` (if pnpm should be used), skips dev dependencies
   - override "Build Command": `next build && npx pnpm run postbuild` (vercel will use yarn otherwise)
-  - use [`vercelignore](https://vercel.com/guides/prevent-uploading-sourcepaths-with-vercelignore) to only upload neccessary files
+  - use [`vercelignore`](https://vercel.com/guides/prevent-uploading-sourcepaths-with-vercelignore) to only upload neccessary files
 - [Netlify](https://www.netlify.com/blog/2020/11/30/how-to-deploy-next.js-sites-to-netlify/)
-
   - [`netlify.toml`](https://github.com/netlify/netlify-plugin-nextjs)
   - [assets](https://docs.netlify.com/configure-builds/file-based-configuration/#post-processing)
   - "Redirects and rewrites using next.config.js aren’t currently supported for Next.js sites on Netlify."
   - [skip](https://docs.netlify.com/configure-builds/file-based-configuration/#ignore-builds) deployments without [relevant changes](https://answers.netlify.com/t/issues-with-build-ignore-command-not-ignoring-as-required/23428/13?u=einselbst)
   - netlify plugins
-
     - [netlify-plugin-cypress](https://github.com/cypress-io/netlify-plugin-cypress)
     - [netlify-plugin-html-validate](https://github.com/oliverroick/netlify-plugin-html-validate), uses [html-validate](https://html-validate.org/)
     - [netlify-plugin-check-links](https://github.com/munter/netlify-plugin-checklinks), uses [hyperlink](https://github.com/Munter/hyperlink)

@@ -7,6 +7,7 @@ import {
 } from 'next'
 import React from 'react'
 
+/* istanbul ignore next */
 export const config = {
   amp: 'hybrid',
 }

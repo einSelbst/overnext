@@ -19,4 +19,13 @@
 // Alternatively you can use CommonJS syntax:
 require('./commands')
 require('@cypress/code-coverage/support')
-require('cypress-watch-and-reload/support')
+
+console.log('cypress')
+
+if (process.env.CY_WATCH) {
+  console.log(process.env.CY_WATCH)
+  console.log('enable test watching')
+  require('cypress-watch-and-reload/support')
+} else {
+  console.log('----> test watching NOT enabled')
+}

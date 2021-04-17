@@ -11,6 +11,6 @@
     "openMode": 0
   },
   "cypress-watch-and-reload": {
-    "watch": ["src/*", "styles/*"]
+    "watch": ["src/**/*"]
   }
 }

@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Byline from 'components/byline'
 import DefaultLayout from 'layouts/default.layout'
 
+/* istanbul ignore next */
 export const config = {
   amp: 'hybrid',
 }

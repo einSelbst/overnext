@@ -1,3 +1,4 @@
+/* istanbul ignore next */
 export const config = { amp: true }
 
 function About (): JSX.Element {
