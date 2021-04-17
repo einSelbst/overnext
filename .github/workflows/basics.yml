@@ -78,6 +78,6 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           lcov-file: ./coverage/lcov.info
 
-        # TODO: would be better to run this once a day or so
+      # TODO: would be better to run this once a day or so
       - name: Run audit
         run: pnpm audit
