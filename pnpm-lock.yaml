@@ -42,7 +42,7 @@ specifiers:
   eslint-plugin-promise: 5.1.0
   eslint-plugin-react: 7.23.2
   eslint-plugin-react-hooks: 4.2.0
-  eslint-plugin-tsdoc: 0.2.11
+  eslint-plugin-tsdoc: 0.2.12
   eslint-plugin-unicorn: 29.0.0
   fsevents: 2.3.2
   html-validate: 4.9.0
@@ -55,7 +55,7 @@ specifiers:
   next: 10.1.3
   next-compose-plugins: 2.2.1
   next-pwa: 5.2.9
-  next-seo: 4.23.0
+  next-seo: 4.24.0
   next-sitemap: 1.6.25
   next-themes: 0.0.14
   next-unused: 0.0.6
@@ -95,7 +95,7 @@ dependencies:
   next: 10.1.3_04d960c46cc20b8fbe5d9e149598e089
   next-compose-plugins: 2.2.1
   next-pwa: 5.2.9_fbe97f784c81c7ba90a3042ba816929e
-  next-seo: 4.23.0_48e3045a6331e5073a98e4f5ff9da4f5
+  next-seo: 4.24.0_48e3045a6331e5073a98e4f5ff9da4f5
   next-sitemap: 1.6.25_next@10.1.3
   next-themes: 0.0.14_48e3045a6331e5073a98e4f5ff9da4f5
   postcss: 8.2.10
@@ -136,7 +136,7 @@ devDependencies:
   eslint-plugin-promise: 5.1.0_eslint@7.24.0
   eslint-plugin-react: 7.23.2_eslint@7.24.0
   eslint-plugin-react-hooks: 4.2.0_eslint@7.24.0
-  eslint-plugin-tsdoc: 0.2.11
+  eslint-plugin-tsdoc: 0.2.12
   eslint-plugin-unicorn: 29.0.0_eslint@7.24.0
   html-validate: 4.9.0
   husky: 4.3.8
@@ -2315,8 +2315,8 @@ packages:
       extend: 3.0.2
     dev: true
 
-  /@microsoft/tsdoc-config/0.14.0:
-    resolution: {integrity: sha512-KSj15FwyaxMCGJkC320rvNXxuJNCOVO02pNqIEdf5cbLakvHK8afoHTmcjdBEWl0cfBFZlMu/1DhL4VCzZq0rQ==}
+  /@microsoft/tsdoc-config/0.15.0:
+    resolution: {integrity: sha512-bd8CLWwB61cfXO3f5Vm6mlt/9pBVWaYWc5EV+jKRf332DhWv6QVqJ48sIatjqeQEyYEYhM0XMHFrO2Rj/n+NHw==}
     dependencies:
       '@microsoft/tsdoc': 0.13.0
       ajv: 6.12.6
@@ -3535,7 +3535,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.16.4
-      caniuse-lite: 1.0.30001208
+      caniuse-lite: 1.0.30001209
       colorette: 1.2.2
       fraction.js: 4.0.13
       normalize-range: 0.1.2
@@ -3957,7 +3957,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001208
+      caniuse-lite: 1.0.30001209
       colorette: 1.2.2
       electron-to-chromium: 1.3.712
       escalade: 3.1.1
@@ -4162,8 +4162,8 @@ packages:
     resolution: {integrity: sha512-c7wVvbw3f37nuobQNtgsgG9POC9qMbNuMQmTCqZv23b6MIz0fcYpBiOlv9gEN/hdLdnZTDQhg6e9Dq5M1vKvfg==}
     engines: {node: '>=10'}
 
-  /caniuse-lite/1.0.30001208:
-    resolution: {integrity: sha512-OE5UE4+nBOro8Dyvv0lfx+SRtfVIOM9uhKqFmJeUbGriqhhStgp1A0OyBpgy3OUF8AhYCT+PVwPC1gMl2ZcQMA==}
+  /caniuse-lite/1.0.30001209:
+    resolution: {integrity: sha512-2Ktt4OeRM7EM/JaOZjuLzPYAIqmbwQMNnYbgooT+icoRGrKOyAxA1xhlnotBD1KArRSPsuJp3TdYcZYrL7qNxA==}
 
   /capture-exit/2.0.0:
     resolution: {integrity: sha512-PiT/hQmTonHhl/HFGN+Lx3JJUznrVYJ3+AQsnthneZbvW7x+f08Tk7yLJTLEOUvBTbduLeeBkxEaYXUOUrRq6g==}
@@ -4997,7 +4997,7 @@ packages:
   /cssnano-preset-simple/1.2.2:
     resolution: {integrity: sha512-gtvrcRSGtP3hA/wS8mFVinFnQdEsEpm3v4I/s/KmNjpdWaThV/4E5EojAzFXxyT5OCSRPLlHR9iQexAqKHlhGQ==}
     dependencies:
-      caniuse-lite: 1.0.30001208
+      caniuse-lite: 1.0.30001209
       postcss: 7.0.35
     dev: false
 
@@ -5894,7 +5894,7 @@ packages:
       '@mdn/browser-compat-data': 2.0.7
       ast-metadata-inferer: 0.4.0
       browserslist: 4.16.4
-      caniuse-lite: 1.0.30001208
+      caniuse-lite: 1.0.30001209
       core-js: 3.10.1
       eslint: 7.24.0
       find-up: 4.1.0
@@ -6022,11 +6022,11 @@ packages:
       string.prototype.matchall: 4.0.4
     dev: true
 
-  /eslint-plugin-tsdoc/0.2.11:
-    resolution: {integrity: sha512-vEjGANpmBfrvpKj9rwePGhA+gIe1mp+dhDZsrkxlHqPVOZvzVdFSV9fxu/o3eppmxhybI8brD88jOrLEAIB9Gw==}
+  /eslint-plugin-tsdoc/0.2.12:
+    resolution: {integrity: sha512-1oob6SWnXKBUC/Qi7uw1PWfhy1zGfWj12PP6Cl3tzyvxQcXh6XsAdyMTJ7NY1j1Y7XfVX6in8xobqlik+Iy0HQ==}
     dependencies:
       '@microsoft/tsdoc': 0.13.0
-      '@microsoft/tsdoc-config': 0.14.0
+      '@microsoft/tsdoc-config': 0.15.0
     dev: true
 
   /eslint-plugin-unicorn/29.0.0_eslint@7.24.0:
@@ -10110,8 +10110,8 @@ packages:
       - webpack
     dev: false
 
-  /next-seo/4.23.0_48e3045a6331e5073a98e4f5ff9da4f5:
-    resolution: {integrity: sha512-/yTeeUT+zFTsrpP8iigwiwsj+HyT+ks1G27mgfnkKQBrFz9uph6Bot4nDrwfICgjvdLt2Zdve6okAgRUmhm+/g==}
+  /next-seo/4.24.0_48e3045a6331e5073a98e4f5ff9da4f5:
+    resolution: {integrity: sha512-9VQXfXAelhE+hAWzJ4azigQaW3FPX0kU0eYKFQXKsQjgY7AWtukjRGXls0oSIk8khhDJwmCt46EwsO9n5DDW6Q==}
     peerDependencies:
       next: ^8.1.1-canary.54 || ^9.0.0 || ^10.0.0
       react: ^16.0.0 || ^17.0.0
@@ -10187,7 +10187,7 @@ packages:
       browserify-zlib: 0.2.0
       browserslist: 4.16.4
       buffer: 5.6.0
-      caniuse-lite: 1.0.30001208
+      caniuse-lite: 1.0.30001209
       chalk: 2.4.2
       chokidar: 3.5.1
       constants-browserify: 1.0.0
