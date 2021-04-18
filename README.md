@@ -243,6 +243,11 @@ release: Prepare a new release
 
 ...all still unclear atm...
 
+- Stage 1: site should be useable without any CSS
+- Stage 2: site should look ok with only [classless CSS](https://github.com/dohliam/dropin-minimal-css)
+- Stage 3: some kind of CSS framework, no css-in-js
+
+- keep it [simple](https://1linelayouts.glitch.me/)
 - [Tailwind CSS](https://tailwindcss.com/) - really unsure about it, esp. after reading [this](https://dev.to/jaredcwhite/why-tailwind-isn-t-for-me-5c90)
 - first, find some nice [`minimal/classless CSS framework`](https://github.com/dohliam/dropin-minimal-css)
   - [`shoelace`](https://shoelace.style/)
@@ -303,6 +308,7 @@ release: Prepare a new release
 ## ToDo
 
 - [ ] cypress a11y plugin
+- [ ] make use of [Project Wallace](https://www.projectwallace.com/)
 - [ ] [wdyr](https://github.com/welldone-software/why-did-you-render/issues/113) vs preact [1](https://github.com/preactjs/preact/issues/2760)
 - [ ] use ISR - Incremental Static Regeneration ? [opinion](https://www.netlify.com/blog/2021/03/08/incremental-static-regeneration-its-benefits-and-its-flaws/)
 - [ ] enable [unused ESLint rules](https://github.com/alexilyaev/stylelint-find-rules)
