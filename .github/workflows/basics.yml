@@ -81,3 +81,9 @@ jobs:
       # TODO: would be better to run this once a day or so
       - name: Run audit
         run: pnpm audit
+
+      - name: Project Wallace Diff
+        uses: einSelbst/css-diff-action@einSelbst-import-path
+        with:
+          project-wallace-token: ${{ secrets.PROJECT_WALLACE_TOKEN }}
+          css-path: .next/static/css/
