@@ -233,6 +233,21 @@ jobs:
             ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-${{ matrix.node-version }}-build-
 
+      - name: Cache Build Dir
+        id: cache-next-dir
+        uses: actions/cache@main
+        env:
+          cache-name: cache-app-build
+        with:
+          path: |
+            ls -la
+            ${{ github.workspace }}/.next/
+            ~/.next
+          key: |
+            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-
+
       - name: Install pnpm
         uses: pnpm/action-setup@master
         with:

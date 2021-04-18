@@ -31,7 +31,7 @@
     "?test": "echo Run unit and integration tests once",
     "test": "jest && pnpm e2e",
     "?test:ci": "echo Run jest tests on CI when app build is available",
-    "test:ci": "jest && start-test `pnpm start` 3000 `cypress run`",
+    "test:ci": "jest && APP_ENV=test start-test `pnpm start` 3000 `cypress run`",
     "?test:jest": "echo Run jest tests and update screenshots",
     "test:jest": "jest -u",
     "?test:cy": "echo Open cypress test runner (needs a running app server)",
