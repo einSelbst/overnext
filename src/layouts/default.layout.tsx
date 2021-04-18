@@ -1,5 +1,4 @@
-import Link from 'next/link'
-import Footer from 'components/layout/footer'
+import { Navigation, Footer } from 'components/layout'
 
 const DefaultLayout = ({
   children,
@@ -9,23 +8,7 @@ const DefaultLayout = ({
   return (
     <>
       <header>
-        <nav>
-          <Link href='/'>
-            <a>Home</a>
-          </Link>{' '}
-          |{' '}
-          <Link href='/legal/about'>
-            <a>About</a>
-          </Link>{' '}
-          |{' '}
-          <Link href='/legal/privacy'>
-            <a>Privacy</a>
-          </Link>{' '}
-          |{' '}
-          <Link href='/legal/contact'>
-            <a>Contact</a>
-          </Link>
-        </nav>
+        <Navigation />
       </header>
 
       {children}

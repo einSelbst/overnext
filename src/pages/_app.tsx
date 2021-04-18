@@ -57,7 +57,6 @@ const sendMetric = async ({
  */
 if (!ENV.SERVER_RENDERED && !ENV.PRODUCTION) {
   void (async () => {
-    const { default: React } = await import('react')
     const { default: ReactDOM } = await import('react-dom')
     const { default: axe } = await import('@axe-core/react')
     void axe(React, ReactDOM, 1000, {})
@@ -183,18 +182,6 @@ function _app ({ Component, pageProps }: AppLayoutProps): JSX.Element {
     </ThemeProvider>
   )
 }
-
-// Only uncomment this method if you have blocking data requirements for
-// every single page in your application. This disables the ability to
-// perform automatic static optimization, causing every page in your app to
-// be server-side rendered.
-//
-// _app.getInitialProps = async (appContext: AppContext) => {
-//   // calls page's `getInitialProps` and fills `appProps.pageProps`
-//   const appProps = await App.getInitialProps(appContext);
-
-//   return { ...appProps }
-// }
 
 export { reportWebVitals }
 export default _app
