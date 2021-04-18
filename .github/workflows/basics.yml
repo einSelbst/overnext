@@ -58,6 +58,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Cache some stuff
+        id: cache-pnpm-dir
+        uses: actions/cache@main
+        env:
+          cache-name: cache-pnpm-store
+        with:
+          path: |
+            ~/.pnpm-store
+            ${{ github.workspace }}/node_modules
+            ${{ github.workspace }}/.next/cache
+            ~/.cache/Cypress
+          key: |
+            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-${{ matrix.node-version }}-build-
+
       - name: Install pnpm
         uses: pnpm/action-setup@master
         with:
@@ -76,6 +93,23 @@ jobs:
         node-version: [14.x]
 
     steps:
+      - name: Cache some stuff
+        id: cache-pnpm-dir
+        uses: actions/cache@main
+        env:
+          cache-name: cache-pnpm-store
+        with:
+          path: |
+            ~/.pnpm-store
+            ${{ github.workspace }}/node_modules
+            ${{ github.workspace }}/.next/cache
+            ~/.cache/Cypress
+          key: |
+            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-${{ matrix.node-version }}-build-
+
       - name: Install pnpm
         uses: pnpm/action-setup@master
         with:
@@ -99,6 +133,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Cache some stuff
+        id: cache-pnpm-dir
+        uses: actions/cache@main
+        env:
+          cache-name: cache-pnpm-store
+        with:
+          path: |
+            ~/.pnpm-store
+            ${{ github.workspace }}/node_modules
+            ${{ github.workspace }}/.next/cache
+            ~/.cache/Cypress
+          key: |
+            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-${{ matrix.node-version }}-build-
+
       - name: Install pnpm
         uses: pnpm/action-setup@master
         with:
@@ -120,6 +171,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Cache some stuff
+        id: cache-pnpm-dir
+        uses: actions/cache@main
+        env:
+          cache-name: cache-pnpm-store
+        with:
+          path: |
+            ~/.pnpm-store
+            ${{ github.workspace }}/node_modules
+            ${{ github.workspace }}/.next/cache
+            ~/.cache/Cypress
+          key: |
+            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-${{ matrix.node-version }}-build-
+
       - name: Install pnpm
         uses: pnpm/action-setup@master
         with:
