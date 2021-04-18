@@ -57,7 +57,6 @@ const sendMetric = async ({
  */
 if (!ENV.SERVER_RENDERED && !ENV.PRODUCTION) {
   void (async () => {
-    const { default: React } = await import('react')
     const { default: ReactDOM } = await import('react-dom')
     const { default: axe } = await import('@axe-core/react')
     void axe(React, ReactDOM, 1000, {})
