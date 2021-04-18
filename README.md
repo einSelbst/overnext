@@ -263,6 +263,7 @@ release: Prepare a new release
 - Badges: update version badges in README
 - [Super-Linter](https://github.com/github/super-linter)
 - [`detect-secrets-action`](https://github.com/RobertFischer/detect-secrets-action), uses Yelp's [detect-secrets](https://github.com/Yelp/detect-secrets)
+- [`auto-push-css`](https://github.com/projectwallace/push-css-action), needs `PROJECT_WALLACE_TOKEN` set in Repo Env Secrets
 
 ### Audits & Service Dashboards
 
