@@ -91,6 +91,8 @@ jobs:
 
       - name: Build app
         run: pnpm build
+        env:
+          APP_ENV: test
 
       - name: Cache Build Dir
         id: cache-next-dir
@@ -216,22 +218,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Cache some stuff
-        id: cache-pnpm-dir
-        uses: actions/cache@main
-        env:
-          cache-name: cache-pnpm-store
+      - name: Checkout Repo
+        uses: actions/checkout@main
         with:
-          path: |
-            ~/.pnpm-store
-            ${{ github.workspace }}/node_modules
-            ${{ github.workspace }}/.next/cache
-            ~/.cache/Cypress
-          key: |
-            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-${{ matrix.node-version }}-build-
+          ref: ${{ github.event.client_payload.ref }}
 
       - name: Cache Build Dir
         id: cache-next-dir
@@ -248,13 +238,40 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@master
-        with:
-          version: next
-
       - name: Project Wallace Diff
         uses: einSelbst/css-diff-action@einSelbst-import-path
         with:
           project-wallace-token: ${{ secrets.PROJECT_WALLACE_TOKEN }}
           css-path: .next/static/css/
+
+  analyze-css-2:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@main
+        with:
+          ref: ${{ github.event.client_payload.ref }}
+
+      - name: Cache Build Dir
+        id: cache-next-dir
+        uses: actions/cache@main
+        env:
+          cache-name: cache-app-build
+        with:
+          path: |
+            ls -la
+            ${{ github.workspace }}/.next/
+            ~/.next
+          key: |
+            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-
+
+      - name: Project Wallace Diff
+        uses: einSelbst/css-diff-action@einSelbst-import-path
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          project-wallace-token: ${{ secrets.PROJECT_WALLACE_TOKEN }}
+          css-path: .next/static/css
