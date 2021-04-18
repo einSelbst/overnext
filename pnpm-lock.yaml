@@ -55,7 +55,7 @@ specifiers:
   netlify-plugin-cypress: 2.2.0
   next: 10.1.3
   next-compose-plugins: 2.2.1
-  next-pwa: 5.2.10
+  next-pwa: 5.2.12
   next-seo: 4.24.0
   next-sitemap: 1.6.25
   next-themes: 0.0.14
@@ -95,7 +95,7 @@ dependencies:
   netlify-plugin-cypress: 2.2.0
   next: 10.1.3_04d960c46cc20b8fbe5d9e149598e089
   next-compose-plugins: 2.2.1
-  next-pwa: 5.2.10_fbe97f784c81c7ba90a3042ba816929e
+  next-pwa: 5.2.12_fbe97f784c81c7ba90a3042ba816929e
   next-seo: 4.24.0_48e3045a6331e5073a98e4f5ff9da4f5
   next-sitemap: 1.6.25_next@10.1.3
   next-themes: 0.0.14_48e3045a6331e5073a98e4f5ff9da4f5
@@ -10092,8 +10092,8 @@ packages:
     resolution: {integrity: sha512-OjJ+fV15FXO2uQXQagLD4C0abYErBjyjE0I0FHpOEIB8upw0hg1ldFP6cqHTJBH1cZqy96OeR3u1dJ+Ez2D4Bg==}
     dev: false
 
-  /next-pwa/5.2.10_fbe97f784c81c7ba90a3042ba816929e:
-    resolution: {integrity: sha512-0WIEIEqAy9q5YGA/gYwXVWHStGtoIqJRAZusO3PlRHo3HDr5CWs1RCJ/2faCL/UIyZ9msrUxl0+GR9oxlest0A==}
+  /next-pwa/5.2.12_fbe97f784c81c7ba90a3042ba816929e:
+    resolution: {integrity: sha512-MWVpV5sq0eQnJnp79o0DQlMOIpmEoBLpeakKqrAXlhyLLKRF+94UmeLaBLtWvj2yadBGfpa59EbiTTGv+cfySw==}
     peerDependencies:
       next: '>=7.0.0'
     dependencies:
