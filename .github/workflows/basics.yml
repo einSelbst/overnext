@@ -92,6 +92,21 @@ jobs:
       - name: Build app
         run: pnpm build
 
+      - name: Cache Build Dir
+        id: cache-next-dir
+        uses: actions/cache@main
+        env:
+          cache-name: cache-app-build
+        with:
+          path: |
+            ls -la
+            ${{ github.workspace }}/.next/
+            ~/.next
+          key: |
+            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-
+
   lint:
     needs: setup
     name: Validate
@@ -143,7 +158,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Cache some stuff
+      - name: Checkout Repo
+        uses: actions/checkout@main
+        with:
+          ref: ${{ github.event.client_payload.ref }}
+
+      - name: Restore Dependencies from Cache
         id: cache-pnpm-dir
         uses: actions/cache@main
         env:
@@ -159,6 +179,21 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-${{ matrix.node-version }}-build-
+
+      - name: Cache Build Dir
+        id: cache-next-dir
+        uses: actions/cache@main
+        env:
+          cache-name: cache-app-build
+        with:
+          path: |
+            ls -la
+            ${{ github.workspace }}/.next/
+            ~/.next
+          key: |
+            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-
 
       - name: Install pnpm
         uses: pnpm/action-setup@master
