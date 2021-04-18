@@ -10,13 +10,8 @@ on:
       - ci-checks
 
 jobs:
-  ci:
-    name: Validate
+  setup:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [14.x]
 
     steps:
       - name: Checkout Repo
@@ -58,6 +53,24 @@ jobs:
           pnpm --version
           pnpm install --prefer-frozen-lockfile
 
+  build:
+    needs: setup
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Build app
+        run: pnpm build
+
+  lint:
+    needs: setup
+    name: Validate
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
       - name: Run prettier
         run: pnpm format
 
@@ -67,6 +80,15 @@ jobs:
       - name: Run type-check
         run: pnpm type-check
 
+      # TODO: would be better to run this once a day or so
+      - name: Run audit
+        run: pnpm audit
+
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
       - name: 'Run tests'
         run: pnpm test:ci
         env:
@@ -78,10 +100,11 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           lcov-file: ./coverage/lcov.info
 
-      # TODO: would be better to run this once a day or so
-      - name: Run audit
-        run: pnpm audit
+  analyze-css:
+    needs: build
+    runs-on: ubuntu-latest
 
+    steps:
       - name: Project Wallace Diff
         uses: einSelbst/css-diff-action@einSelbst-import-path
         with:
