@@ -173,7 +173,7 @@ jobs:
 
       - name: Project Wallace Diff
         # uses: einSelbst/css-diff-action@master2
-        uses: einSelbst/css-diff-action@einSelbst-patch-3
+        uses: einSelbst/css-diff-action@einSelbst-patch-4
         with:
           project-wallace-token: ${{ secrets.PROJECT_WALLACE_TOKEN }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
