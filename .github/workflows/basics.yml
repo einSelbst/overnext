@@ -154,7 +154,6 @@ jobs:
         with:
           project-wallace-token: ${{ secrets.PROJECT_WALLACE_TOKEN }}
           css-path: .next/static/css/
-
       # - name: Cache Build Dir
       #   id: cache-next-dir
       #   uses: actions/cache@main
@@ -169,35 +168,3 @@ jobs:
       #       ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
       #     restore-keys: |
       #       ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-
-
-  analyze-css-2:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@main
-        with:
-          ref: ${{ github.event.client_payload.ref }}
-
-      - name: Cache Build Dir
-        id: cache-next-dir
-        uses: actions/cache@main
-        env:
-          cache-name: cache-app-build
-        with:
-          path: |
-            ls -la
-            ${{ github.workspace }}/.next/
-            ~/.next
-          key: |
-            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-
-
-      - name: Project Wallace Diff
-        uses: einSelbst/css-diff-action@einSelbst-import-path
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          project-wallace-token: ${{ secrets.PROJECT_WALLACE_TOKEN }}
-          css-path: .next/static/css
