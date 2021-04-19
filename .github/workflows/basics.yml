@@ -171,12 +171,13 @@ jobs:
           css-path: ./.next/static/css/202c2f7e1742e4bfd4b4.css
 
       - name: Project Wallace Diff
-        # uses: einSelbst/css-diff-action@einSelbst-import-path
-        uses: einSelbst/css-diff-action@3891cf4a3908d249d272cce11a8fac9ce42a752c
+        uses: einSelbst/css-diff-action@master
+        # uses: einSelbst/css-diff-action@3891cf4a3908d249d272cce11a8fac9ce42a752c
         with:
           project-wallace-token: ${{ secrets.PROJECT_WALLACE_TOKEN }}
-          css-path: ./.next/static/css/
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          css-path: ./.next/static/css/202c2f7e1742e4bfd4b4.css
+          # css-path: ./.next/static/css/
       # - name: Cache Build Dir
       #   id: cache-next-dir
       #   uses: actions/cache@main
