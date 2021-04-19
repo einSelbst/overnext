@@ -110,6 +110,7 @@ jobs:
 
   test:
     needs: setup
+    name: Validate Application
     runs-on: ubuntu-latest
 
     steps:
@@ -153,8 +154,12 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           lcov-file: ./coverage/lcov.info
 
+      - name: Print dir
+        run: 'ls -la'
+
       - name: Project Wallace Diff
-        uses: einSelbst/css-diff-action@einSelbst-import-path
+        # uses: einSelbst/css-diff-action@einSelbst-import-path
+        uses: einSelbst/css-diff-action@d0635fef5fa209d70cc9de03c3b6f97aee0e57a0
         with:
           project-wallace-token: ${{ secrets.PROJECT_WALLACE_TOKEN }}
           css-path: .next/static/css/
