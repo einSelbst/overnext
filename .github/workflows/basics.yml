@@ -57,58 +57,7 @@ jobs:
           pnpm --version
           pnpm install --prefer-frozen-lockfile
 
-  build:
-    needs: setup
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@main
-        with:
-          ref: ${{ github.event.client_payload.ref }}
-
-      - name: Cache some stuff
-        id: cache-pnpm-dir
-        uses: actions/cache@main
-        env:
-          cache-name: cache-pnpm-store
-        with:
-          path: |
-            ~/.pnpm-store
-            ${{ github.workspace }}/node_modules
-            ${{ github.workspace }}/.next/cache
-            ~/.cache/Cypress
-          key: |
-            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-${{ matrix.node-version }}-build-
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@master
-        with:
-          version: next
-
-      - name: Build app
-        run: pnpm build
-        env:
-          APP_ENV: test
-
-      - name: Cache Build Dir
-        id: cache-next-dir
-        uses: actions/cache@main
-        env:
-          cache-name: cache-app-build
-        with:
-          path: |
-            ls -la
-            ${{ github.workspace }}/.next/
-            ~/.next
-          key: |
-            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-
-
+  # works without built
   lint:
     needs: setup
     name: Validate
@@ -182,20 +131,27 @@ jobs:
             ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-${{ matrix.node-version }}-build-
 
-      - name: Cache Build Dir
-        id: cache-next-dir
+      - name: Checkout Repo
+        uses: actions/checkout@main
+        with:
+          ref: ${{ github.event.client_payload.ref }}
+
+      - name: Cache some stuff
+        id: cache-pnpm-dir
         uses: actions/cache@main
         env:
-          cache-name: cache-app-build
+          cache-name: cache-pnpm-store
         with:
           path: |
-            ls -la
-            ${{ github.workspace }}/.next/
-            ~/.next
+            ~/.pnpm-store
+            ${{ github.workspace }}/node_modules
+            ${{ github.workspace }}/.next/cache
+            ~/.cache/Cypress
           key: |
             ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-${{ matrix.node-version }}-build-
 
       - name: Install pnpm
         uses: pnpm/action-setup@master
@@ -203,9 +159,11 @@ jobs:
           version: next
 
       - name: 'Run tests'
-        run: pnpm test:ci
+        # run: pnpm test:ci
+        run: pnpm e2e
         env:
           CI: true
+          APP_ENV: test
 
       - name: Report Test Coverage
         uses: romeovs/lcov-reporter-action@v0.2.21
@@ -213,36 +171,26 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           lcov-file: ./coverage/lcov.info
 
-  analyze-css:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@main
-        with:
-          ref: ${{ github.event.client_payload.ref }}
-
-      - name: Cache Build Dir
-        id: cache-next-dir
-        uses: actions/cache@main
-        env:
-          cache-name: cache-app-build
-        with:
-          path: |
-            ls -la
-            ${{ github.workspace }}/.next/
-            ~/.next
-          key: |
-            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-
-
       - name: Project Wallace Diff
         uses: einSelbst/css-diff-action@einSelbst-import-path
         with:
           project-wallace-token: ${{ secrets.PROJECT_WALLACE_TOKEN }}
           css-path: .next/static/css/
+
+      # - name: Cache Build Dir
+      #   id: cache-next-dir
+      #   uses: actions/cache@main
+      #   env:
+      #     cache-name: cache-app-build
+      #   with:
+      #     path: |
+      #       ls -la
+      #       ${{ github.workspace }}/.next/
+      #       ~/.next
+      #     key: |
+      #       ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-
 
   analyze-css-2:
     needs: build
