@@ -169,6 +169,7 @@ jobs:
         with:
           project-wallace-token: ${{ secrets.PROJECT_WALLACE_TOKEN }}
           css-path: .next/static/css/
+          github-token: ${{ secrets.GITHUB_TOKEN }}
       # - name: Cache Build Dir
       #   id: cache-next-dir
       #   uses: actions/cache@main
