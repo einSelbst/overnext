@@ -11,6 +11,7 @@ on:
 
 jobs:
   setup:
+    name: Install Dependencies
     runs-on: ubuntu-latest
 
     strategy:
@@ -60,7 +61,7 @@ jobs:
   # works without built
   lint:
     needs: setup
-    name: Validate
+    name: Validate Source
     runs-on: ubuntu-latest
 
     steps:
@@ -99,6 +100,9 @@ jobs:
 
       - name: Run type-check
         run: pnpm type-check
+
+      - name: Run Jest
+        run: pnpm test:jest
 
       # TODO: would be better to run this once a day or so
       - name: Run audit
