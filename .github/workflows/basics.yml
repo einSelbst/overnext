@@ -131,28 +131,6 @@ jobs:
             ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-${{ matrix.node-version }}-build-
 
-      - name: Checkout Repo
-        uses: actions/checkout@main
-        with:
-          ref: ${{ github.event.client_payload.ref }}
-
-      - name: Cache some stuff
-        id: cache-pnpm-dir
-        uses: actions/cache@main
-        env:
-          cache-name: cache-pnpm-store
-        with:
-          path: |
-            ~/.pnpm-store
-            ${{ github.workspace }}/node_modules
-            ${{ github.workspace }}/.next/cache
-            ~/.cache/Cypress
-          key: |
-            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-${{ matrix.node-version }}-build-
-
       - name: Install pnpm
         uses: pnpm/action-setup@master
         with:
