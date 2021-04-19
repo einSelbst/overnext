@@ -155,7 +155,13 @@ jobs:
           lcov-file: ./coverage/lcov.info
 
       - name: Print dir
-        run: 'ls -la'
+        run: |
+          cd ./.next
+          ls -la
+          cd ./static
+          ls -la
+          cd ./css
+          ls -la
 
       - name: Project Wallace Diff
         # uses: einSelbst/css-diff-action@einSelbst-import-path
