@@ -177,4 +177,3 @@ jobs:
         with:
           project-wallace-token: ${{ secrets.PROJECT_WALLACE_TOKEN }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          css-path: ./.next/static/css/unusedfile.css
