@@ -159,7 +159,7 @@ jobs:
 
       - name: Project Wallace Diff
         # uses: einSelbst/css-diff-action@einSelbst-import-path
-        uses: einSelbst/css-diff-action@d0635fef5fa209d70cc9de03c3b6f97aee0e57a0
+        uses: einSelbst/css-diff-action@6ab7316e2fdeb156470a25955fd688020af81c95
         with:
           project-wallace-token: ${{ secrets.PROJECT_WALLACE_TOKEN }}
           css-path: .next/static/css/
