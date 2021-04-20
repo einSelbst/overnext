@@ -11,7 +11,7 @@ on:
     types:
       - opened
       - synchronize
-      # - closed
+      - ready_for_review
   repository_dispatch:
     types:
       - ci-checks
