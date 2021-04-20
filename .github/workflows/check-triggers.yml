@@ -3,6 +3,7 @@ on:
   pull_request:
   push:
   check_run:
+  repository_dispatch:
 
 jobs:
   debug-action:
@@ -15,7 +16,7 @@ jobs:
         run: |
           echo ${{ toJson(github) }}
           echo ${{ toJson(github.event_name) }}
-          echo "${{ github.event.action }}"
+          # echo "${{ github.event.action }}"
 
       - uses: JasonEtco/smee-action@v2
         with:
