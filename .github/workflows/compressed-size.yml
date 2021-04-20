@@ -37,7 +37,7 @@ jobs:
         uses: preactjs/compressed-size-action@v2
         with:
           repo-token: '${{ secrets.GITHUB_TOKEN }}'
-          build-script: 'build:ssr'
+          build-script: 'build'
           # Any JS files anywhere within a dist directory:
           # pattern: ".next/static/**/*.js"
           pattern: '.next/**/*.{css,js,json,html}'
