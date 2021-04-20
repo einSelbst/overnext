@@ -1,0 +1,24 @@
+name: Debug
+on:
+  pull_request:
+  push:
+  check_run:
+  repository_dispatch:
+
+jobs:
+  debug-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print info
+        uses: hmarr/debug-action@master
+
+      - uses: JasonEtco/smee-action@v2
+        with:
+          channel: grW1TqGJMKSq2S
+
+      - name: Print GitHub event action
+        if: false
+        run: |
+          echo "${{ github.event.action }}"
+          echo "${{ toJson(github) }}"
+          echo "${{ toJson(github.event_name) }}"
