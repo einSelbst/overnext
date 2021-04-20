@@ -18,12 +18,15 @@ jobs:
           header: Lighthouse Audit Vercel
           message: |
             Running Lighthouse audit...
+
       - name: Capture Vercel preview URL
         id: vercel_preview_url
         uses: aaron-binary/vercel-preview-url-action@v0.0.3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - uses: actions/checkout@v2
+
       - name: Audit preview URL with Lighthouse
         id: lighthouse_audit
         uses: treosh/lighthouse-ci-action@v7
@@ -32,6 +35,7 @@ jobs:
             ${{ steps.vercel_preview_url.outputs.vercel_preview_url }}
           uploadArtifacts: true
           temporaryPublicStorage: true
+
       - name: Format lighthouse score
         id: format_lighthouse_score
         uses: actions/github-script@v3
@@ -56,6 +60,7 @@ jobs:
                 `*Lighthouse ran on [${Object.keys(links)[0]}](${Object.keys(links)[0]})*`
             ].join('\n')
             core.setOutput("comment", comment);
+
       - name: Add comment to PR
         id: comment_to_pr
         uses: marocchino/sticky-pull-request-comment@v2

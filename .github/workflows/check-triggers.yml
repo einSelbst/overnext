@@ -17,5 +17,8 @@ jobs:
           channel: grW1TqGJMKSq2S
 
       - name: Print GitHub event action
+        if: false
         run: |
-          echo ${{ toJson(github) }}
+          echo "${{ github.event.action }}"
+          echo "${{ toJson(github) }}"
+          echo "${{ toJson(github.event_name) }}"
