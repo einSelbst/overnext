@@ -53,6 +53,7 @@ jobs:
           minimum-change-threshold: 100
 
       - name: Bundle Size
+        if: ${{ steps.skip_check.outputs.should_skip != 'true' }}
         uses: andresz1/size-limit-action@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
