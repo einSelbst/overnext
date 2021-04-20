@@ -2,12 +2,9 @@ name: Continuous integration
 
 on:
   pull_request:
-    branches:
-      - main
-      - pure
+    types: [synchronize]
   repository_dispatch:
-    types:
-      - ci-checks
+    types: [ci-checks]
 
 jobs:
   ci:

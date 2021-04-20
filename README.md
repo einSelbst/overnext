@@ -259,6 +259,7 @@ release: Prepare a new release
 
 ### Github Actions
 
+- skip unneccessary action runs
 - `basic`: runs linter, tests and build for different node versions
 - [`create-pull-request`](https://github.com/thomaseizinger/create-pull-request), creates PR's for new branches
 - `compressed-size`: checks the size of the bundled files and adds a comment in the PR
@@ -267,7 +268,12 @@ release: Prepare a new release
 - Labeler: adds labels to PR's based on the changed files
 - Badges: update version badges in README
 - [Super-Linter](https://github.com/github/super-linter)
-- [`detect-secrets-action`](https://github.com/RobertFischer/detect-secrets-action), uses Yelp's [detect-secrets](https://github.com/Yelp/detect-secrets)
+
+#### WIP Security Audits
+
+- [ShiftLeft Code Scanning](https://slscan.io/en/latest/integrations/code-scan/)
+- [`CorrelatedLabs/detect-secrets-action`](https://github.com/CorrelatedLabs/detect-secrets-action)
+- [`RobertFischer/detect-secrets-action`](https://github.com/RobertFischer/detect-secrets-action), uses Yelp's [detect-secrets](https://github.com/Yelp/detect-secrets)
 
 ### Audits & Service Dashboards
 

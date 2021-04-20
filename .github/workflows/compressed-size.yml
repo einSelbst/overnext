@@ -19,6 +19,7 @@ jobs:
           paths: '["src/**"]'
 
       - name: Check out the application's source code
+        if: ${{ steps.skip_check.outputs.should_skip != 'true' }}
         uses: actions/checkout@v2-beta
         with:
           fetch-depth: 1
