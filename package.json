@@ -210,6 +210,12 @@
       "src"
     ]
   },
+  "size-limit": [
+    {
+      "path": ".next/static/chunks/pages/index.js",
+      "limit": "4500 ms"
+    }
+  ],
   "nyc": {
     "exclude": [
       "src/pages/api/__coverage__.js"
