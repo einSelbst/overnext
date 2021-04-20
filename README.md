@@ -271,7 +271,7 @@ release: Prepare a new release
 
 #### WIP Security Audits
 
-- []() using [SCAN](https://slscan.io/en/latest/)
+- [ShiftLeft Code Scanning](https://slscan.io/en/latest/integrations/code-scan/)
 - [`CorrelatedLabs/detect-secrets-action`](https://github.com/CorrelatedLabs/detect-secrets-action)
 - [`RobertFischer/detect-secrets-action`](https://github.com/RobertFischer/detect-secrets-action), uses Yelp's [detect-secrets](https://github.com/Yelp/detect-secrets)
 
