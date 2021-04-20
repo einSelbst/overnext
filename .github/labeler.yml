@@ -12,8 +12,11 @@ Core:
 
 # Add 'frontend` label to any change to *.js files as long as the `main.js` hasn't changed
 Frontend:
-  - any: ['src/**/*.js']
-    all: ['!src/main.js']
+  - any: ['src/**/*.ts']
+    all: ['!src/index.ts']
+
+Style:
+  - any: ['src/**/*.css']
 
 API:
   - any: ['src/pages/api/*']
