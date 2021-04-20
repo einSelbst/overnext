@@ -92,8 +92,7 @@
             "properties": false
           }
         },
-        "whitelist": {
-          // TODO [eslint-plugin-unicorn@<27]: Change "whitelist" to "allowList"
+        "allowList": {
           "dest": true,
           "env": true,
           "i18n": true,
