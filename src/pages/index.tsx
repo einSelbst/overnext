@@ -74,23 +74,6 @@ export const Home = (): JSX.Element => {
           </a>
         </div>
       </main>
-
-      <footer>
-        <a
-          href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Powered by{' '}
-          <img
-            src='/vercel.svg'
-            alt='Vercel Logo'
-            width='71px'
-            height='16px'
-            className='logo'
-          />
-        </a>
-      </footer>
     </div>
   )
 }
