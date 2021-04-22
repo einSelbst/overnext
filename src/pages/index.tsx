@@ -5,33 +5,32 @@ export const Home = (): JSX.Element => {
   return (
     <div className='container'>
       <Head>
-        <title>Create Next App</title>
-        <meta name='description' content='A page about a fee called hikel' />
+        <title>The Egg</title>
+        <meta name='description' content='A page about life on earth' />
       </Head>
 
       <main>
-        <Link href='/legal' locale='fr'>
-          <a href='fr/legal' data-cy='fr-legal'>
-            To /fr/legal
-          </a>
-        </Link>
-        <div>
-          <h1>Hello, world!</h1>
-          <p>Welcome to your internationalised page!</p>
-          <br />
-        </div>
-        <h1 className='title'>
-          Welcome to <a href='https://nextjs.org'>Next.js!</a>
+        <h1>
+          Welcome to <a href='https://nextjs.org'>Overnext!</a>
         </h1>
 
         <p className='description'>
-          Get started by editing <code>pages/index.tsx</code>
+          An overly opinonated starter for <code>next.js</code>
         </p>
 
         <div className='py-20'>
           <h2 className='text-3xl text-center text-gray-700 dark:text-gray-100'>
-            Next.js + Tailwind CSS 2.0
+            A short story
           </h2>
+          <iframe
+            width='560'
+            height='315'
+            src='https://www.youtube-nocookie.com/embed/h6fcK_fRYaI'
+            title='YouTube video player'
+            frameBorder='0'
+            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+            allowFullScreen
+          ></iframe>
         </div>
 
         <button
@@ -55,18 +54,14 @@ export const Home = (): JSX.Element => {
             <p>Learn about Next.js in an interactive course with quizzes!</p>
           </a>
 
-          <a
-            href='https://github.com/vercel/next.js/tree/master/examples'
-            className='card'
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+          <Link href='/legal' locale='fr'>
+            <a href='fr/legal' data-cy='fr-legal' className='card'>
+              <h3>Legal &rarr;</h3>
+              <p>Discover and enjoy the depths of legal issues.</p>
+            </a>
+          </Link>
 
-          <a
-            href='https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-            className='card'
-          >
+          <a href='https://vercel.com/import?filter=next.js' className='card'>
             <h3>Deploy &rarr;</h3>
             <p>
               Instantly deploy your Next.js site to a public URL with Vercel.
