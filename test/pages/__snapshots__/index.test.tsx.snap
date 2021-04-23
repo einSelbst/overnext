@@ -3,94 +3,118 @@
 exports[`home page matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="container"
+    class="jsx-978659433 container"
   >
-    <main>
-      <h1>
+    <main
+      class="jsx-978659433"
+    >
+      <h1
+        class="jsx-978659433"
+      >
         Welcome to 
         <a
+          class="jsx-978659433"
           href="https://nextjs.org"
         >
           Overnext!
         </a>
       </h1>
       <p
-        class="description"
+        class="jsx-978659433 description"
       >
         An overly opinonated starter for 
-        <code>
+        <code
+          class="jsx-978659433"
+        >
           next.js
         </code>
       </p>
       <div
-        class="py-20"
+        class="jsx-978659433 py-20"
       >
         <h2
-          class="text-3xl text-center text-gray-700 dark:text-gray-100"
+          class="jsx-978659433 text-3xl text-center text-gray-700 dark:text-gray-100"
         >
           A short story
         </h2>
         <iframe
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen=""
+          class="jsx-978659433"
           height="315"
           src="https://www.youtube-nocookie.com/embed/h6fcK_fRYaI"
-          style="border: 0px;"
           title="YouTube video player"
           width="560"
         />
       </div>
       <button
+        class="jsx-978659433"
         data-cy="test-button"
         type="button"
       >
         Test Button
       </button>
       <div
-        class="grid"
+        class="jsx-978659433 grid"
       >
         <a
-          class="card"
+          class="jsx-978659433 card"
           href="https://nextjs.org/docs"
         >
-          <h3>
+          <h3
+            class="jsx-978659433"
+          >
             Documentation →
           </h3>
-          <p>
+          <p
+            class="jsx-978659433"
+          >
             Find in-depth information about Next.js features and API.
           </p>
         </a>
         <a
-          class="card"
+          class="jsx-978659433 card"
           href="https://nextjs.org/docs/getting-started"
         >
-          <h3>
+          <h3
+            class="jsx-978659433"
+          >
             Learn →
           </h3>
-          <p>
+          <p
+            class="jsx-978659433"
+          >
             Learn about Next.js in an interactive course with quizzes!
           </p>
         </a>
         <a
-          class="card"
+          class="jsx-978659433 card"
           data-cy="fr-legal"
           href="fr/legal"
         >
-          <h3>
+          <h3
+            class="jsx-978659433"
+          >
             Legal →
           </h3>
-          <p>
+          <p
+            class="jsx-978659433"
+          >
             Discover and enjoy the depths of legal issues.
           </p>
         </a>
         <a
-          class="card"
+          class="jsx-978659433 card"
           href="https://vercel.com/import?filter=next.js"
         >
-          <h3>
+          <h3
+            class="jsx-978659433"
+          >
             Deploy →
           </h3>
-          <p>
+          <p
+            class="jsx-978659433"
+          >
             Instantly deploy your Next.js site to a public URL with Vercel.
           </p>
         </a>

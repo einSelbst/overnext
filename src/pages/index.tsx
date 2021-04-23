@@ -27,7 +27,6 @@ export const Home = (): JSX.Element => {
             height='315'
             src='https://www.youtube-nocookie.com/embed/h6fcK_fRYaI'
             title='YouTube video player'
-            style={{ border: 0 }}
             allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
             allowFullScreen
           ></iframe>
@@ -69,6 +68,32 @@ export const Home = (): JSX.Element => {
           </a>
         </div>
       </main>
+      <style jsx>{`
+        button {
+          background: #0072ed;
+        }
+      `}</style>
+      <style jsx global>{`
+        html,
+        body {
+          color: #000;
+          background: #fff;
+        }
+
+        [data-theme='dark'],
+        [data-theme='dark'] body {
+          color: #fff;
+          background: #000;
+        }
+
+        a {
+          color: #0072ed;
+        }
+
+        iframe {
+          border: 0;
+        }
+      `}</style>
     </div>
   )
 }
