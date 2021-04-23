@@ -70,3 +70,11 @@ jobs:
           header: Lighthouse Scores on Vercel
           message: |
             ${{ steps.format_lighthouse_score.outputs.comment }}
+
+      - name: Remove initial comment
+        id: loading_comment_to_pr
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          number: ${{ github.event.issue.number }}
+          header: Lighthouse Audit Vercel
+          delete: true
