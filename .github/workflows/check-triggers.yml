@@ -2,7 +2,6 @@ name: Debug
 on:
   pull_request:
   push:
-  check_run:
   repository_dispatch:
 
 jobs:
