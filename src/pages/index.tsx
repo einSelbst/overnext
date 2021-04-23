@@ -29,13 +29,7 @@ export const Home = (): JSX.Element => {
             title='YouTube video player'
             allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
             allowFullScreen
-          >
-            <style jsx>{`
-              iframe {
-                border: 0;
-              }
-            `}</style>
-          </iframe>
+          ></iframe>
         </div>
 
         <button
@@ -74,6 +68,23 @@ export const Home = (): JSX.Element => {
           </a>
         </div>
       </main>
+      <style jsx>{`
+        iframe {
+          border: 0;
+        }
+      `}</style>
+      <style jsx global>{`
+        :root {
+          /* Your default theme */
+          --background: 0072ed;
+          --foreground: black;
+        }
+
+        [data-theme='dark'] {
+          --background: black;
+          --foreground: white;
+        }
+      `}</style>
     </div>
   )
 }
