@@ -4,7 +4,7 @@ on:
   pull_request:
     types: [synchronize, ready_for_review]
   repository_dispatch:
-    types: [ci-checks]
+    types: [new-pull-request]
 
 jobs:
   # @see https://github.com/marketplace/actions/skip-duplicate-actions
