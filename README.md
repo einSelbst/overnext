@@ -73,8 +73,8 @@ This is more about priorities than about a temporal order.
 ## Guiding Principles
 
 - automate it &trade;
-- catch bugs early
-- do it cheap
+- optimize it, aka do it cheap
+- test'n lint it, aka catch bugs early
 
 ## DX
 
