@@ -69,20 +69,25 @@ export const Home = (): JSX.Element => {
         </div>
       </main>
       <style jsx>{`
-        iframe {
-          border: 0;
+        button {
+          background: #0072ed;
         }
       `}</style>
       <style jsx global>{`
-        :root {
-          /* Your default theme */
-          --background: 0072ed;
-          --foreground: black;
+        html,
+        body {
+          color: #000;
+          background: #fff;
         }
 
-        [data-theme='dark'] {
-          --background: black;
-          --foreground: white;
+        [data-theme='dark'],
+        [data-theme='dark'] body {
+          color: #fff;
+          background: #000;
+        }
+
+        iframe {
+          border: 0;
         }
       `}</style>
     </div>
