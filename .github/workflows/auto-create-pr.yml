@@ -61,7 +61,12 @@ jobs:
           title: ${{ steps.extract_branch.outputs.branch }}
           body: |
             Hi!
-            This PR was created in response to a new branch.
+            This PR was created in response to a new branch pushed from ${github.actor}.
+            I will to the following things for you:
+              - deploy to vercel
+              - deploy to netlify
+              - run lighthouse check on vercel and add the results
+              - ...wip
 
       # GitHub Action does not allow recursion so the CI checks are
       # not triggered when the branch is pushed
@@ -69,5 +74,10 @@ jobs:
         uses: peter-evans/repository-dispatch@v1
         with:
           token: ${{ secrets.ACTION_TOKEN }}
-          client-payload: '{"branch": "${{steps.extract_branch.outputs.branch }}"}'
           event-type: new-pull-request
+          client-payload: |
+            {
+            "branch-name": "${{steps.extract_branch.outputs.branch }}"}
+            "ref": "${{ github.ref }}",
+            "sha": "${{ github.sha }}"
+            }
