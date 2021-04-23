@@ -8,13 +8,9 @@ on:
   # schedule:
   # - cron: '*/15 * * * *'
   pull_request:
-    types:
-      - opened
-      - synchronize
-      - ready_for_review
+    types: [opened, synchronize, ready_for_review]
   repository_dispatch:
-    types:
-      - ci-checks
+    types: [ci-checks]
 
 jobs:
   # @see https://github.com/marketplace/actions/skip-duplicate-actions
