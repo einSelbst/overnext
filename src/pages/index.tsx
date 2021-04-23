@@ -86,6 +86,10 @@ export const Home = (): JSX.Element => {
           background: #000;
         }
 
+        a {
+          color: #0072ed;
+        }
+
         iframe {
           border: 0;
         }
