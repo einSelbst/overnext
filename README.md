@@ -313,7 +313,9 @@ release: Prepare a new release
 
 ## ToDo
 
+- [ ] add [SRI](https://github.com/vercel/next.js/discussions/23951)
 - [ ] cypress a11y plugin
+- [ ] [cypress-html-validate](https://html-validate.org/usage/cypress.html) plugin
 - [ ] make use of [Project Wallace](https://www.projectwallace.com/)
 - [ ] [wdyr](https://github.com/welldone-software/why-did-you-render/issues/113) vs preact [1](https://github.com/preactjs/preact/issues/2760)
 - [ ] use ISR - Incremental Static Regeneration ? [opinion](https://www.netlify.com/blog/2021/03/08/incremental-static-regeneration-its-benefits-and-its-flaws/)

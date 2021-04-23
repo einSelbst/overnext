@@ -1,10 +1,11 @@
 {
   "root": true,
-  "extends": ["html-validate:recommended"],
+  "extends": ["html-validate:recommended", "html-validate:document"],
   "rules": {
     "attribute-boolean-style": "off",
     "attr-case": ["error", { "style": ["lowercase", "camelcase"] }],
-    "void-style": "off"
+    "void-style": "off",
+    "require-sri": "off"
   },
   "plugins": []
 }
