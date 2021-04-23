@@ -61,12 +61,14 @@ jobs:
           title: ${{ steps.extract_branch.outputs.branch }}
           body: |
             Hi!
-            This PR was created in response to a new branch pushed from ${github.actor}.
+            This PR was created in response to a new branch pushed from "${{ github.actor }}".
             I will to the following things for you:
               - deploy to vercel
               - deploy to netlify
               - run lighthouse check on vercel and add the results
               - ...wip
+            Initally this PR is a draft. When you are done coding, set it to 'Ready for Review'
+            and a few more checks will be performed. You can also set the branch to 'auto-merge' then.
 
       # GitHub Action does not allow recursion so the CI checks are
       # not triggered when the branch is pushed
@@ -77,7 +79,7 @@ jobs:
           event-type: new-pull-request
           client-payload: |
             {
-            "branch-name": "${{steps.extract_branch.outputs.branch }}"}
+            "branch-name": "${{ steps.extract_branch.outputs.branch }}",
             "ref": "${{ github.ref }}",
             "sha": "${{ github.sha }}"
             }
