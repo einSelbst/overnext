@@ -1,0 +1,18 @@
+on:
+  pull_request_target:
+    types: [opened]
+
+jobs:
+  createCard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create or Update Project Card
+        id: card-creation
+        uses: peter-evans/create-or-update-project-card@v1
+        with:
+          project-name: Main Project
+          column-name: In progress
+          issue-number: ${{ github.event.number }}
+
+      - name: Check output
+        run: echo ${{ steps.card-creation.outputs.card-id }}
