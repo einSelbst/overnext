@@ -1,6 +1,7 @@
 import { useAmp } from 'next/amp'
 import Head from 'next/head'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import Byline from 'components/byline'
 import DefaultLayout from 'layouts/default.layout'
 
@@ -11,25 +12,33 @@ export const config = {
 
 const Dog = (): JSX.Element => {
   const isAmp = useAmp()
+  const router = useRouter()
+  const { locale } = router
 
   return (
-    <>
+    <main>
       <Head>
         <title>The Dog</title>
       </Head>
       <h1>The Dog (Hybrid AMP Page)</h1>
       <Byline author='Meow Meow Fuzzyface' />
       <p>
-        <Link href={isAmp ? '/dog' : '/dog?amp=1'}>
-          <a href={isAmp ? '/dog' : '/dog?amp=1'}>
-            {isAmp ? 'View Non-AMP' : 'View AMP'} Version
+        {isAmp ? (
+          <Link href='/dog'>
+            <a>View Non-AMP Version</a>
+          </Link>
+        ) : (
+          <a href={locale ? `/${locale}/dog?amp=1` : '/dog/?amp=1'}>
+            view {locale} amp version
           </a>
-        </Link>
+        )}
       </p>
       <p className='caption'>Woooooooooooof</p>
       <p>
         The redirect from the non-amp version to the amp version is not working
-        when using LINK but without using LINK I don&apos;t get it localized...
+        when using LINK but without using LINK I don&apos;t get it localized. I
+        think the reason is that link is doing a local/frontend redirect which
+        is not able to load the amp stuff.
       </p>
       <p>
         Wafer donut candy soufflé{' '}
@@ -98,7 +107,7 @@ const Dog = (): JSX.Element => {
         dragée ice cream biscuit. Pie candy canes muffin candy canes ice cream
         tiramisu.
       </p>
-    </>
+    </main>
   )
 }
 

@@ -5,7 +5,7 @@ import { useAmp } from 'next/amp'
 import type { AppLayoutProps } from 'next/app'
 import Head from 'next/head'
 import * as React from 'react'
-import 'styles/main.css'
+/* import 'styles/main.css' // tailwind */
 import { SEO, ENV } from 'config'
 import DefaultLayout from 'layouts/default.layout'
 
@@ -73,6 +73,17 @@ const HeadIcons = (): JSX.Element => {
           <meta
             name='viewport'
             content='initial-scale=1.0, width=device-width'
+          />
+          <link
+            rel='preload'
+            href='https://unpkg.com/marx-css/css/marx.min.css'
+            as='style'
+            type='text/css'
+          />
+          <link
+            rel='stylesheet'
+            href='https://unpkg.com/marx-css/css/marx.min.css'
+            type='text/css'
           />
         </>
       )}

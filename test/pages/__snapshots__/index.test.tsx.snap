@@ -3,156 +3,99 @@
 exports[`home page matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="jsx-732179467 container"
+    class="container"
   >
-    <main
-      class="jsx-732179467"
-    >
-      <a
-        class="jsx-732179467"
-        data-cy="fr-legal"
-        href="fr/legal"
-      >
-        To /fr/legal
-      </a>
-      <div
-        class="jsx-732179467"
-      >
-        <h1
-          class="jsx-732179467"
-        >
-          Hello, world!
-        </h1>
-        <p
-          class="jsx-732179467"
-        >
-          Welcome to your internationalised page!
-        </p>
-        <br
-          class="jsx-732179467"
-        />
-      </div>
-      <h1
-        class="jsx-732179467 title"
-      >
+    <main>
+      <h1>
         Welcome to 
         <a
-          class="jsx-732179467"
           href="https://nextjs.org"
         >
-          Next.js!
+          Overnext!
         </a>
       </h1>
       <p
-        class="jsx-732179467 description"
+        class="description"
       >
-        Get started by editing 
-        <code
-          class="jsx-732179467"
-        >
-          pages/index.tsx
+        An overly opinonated starter for 
+        <code>
+          next.js
         </code>
       </p>
       <div
-        class="jsx-732179467 py-20"
+        class="py-20"
       >
         <h2
-          class="jsx-732179467 text-3xl text-center text-gray-700 dark:text-gray-100"
+          class="text-3xl text-center text-gray-700 dark:text-gray-100"
         >
-          Next.js + Tailwind CSS 2.0
+          A short story
         </h2>
+        <iframe
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen=""
+          frameborder="0"
+          height="315"
+          src="https://www.youtube-nocookie.com/embed/h6fcK_fRYaI"
+          title="YouTube video player"
+          width="560"
+        />
       </div>
       <button
-        class="jsx-732179467"
         data-cy="test-button"
         type="button"
       >
         Test Button
       </button>
       <div
-        class="jsx-732179467 grid"
+        class="grid"
       >
         <a
-          class="jsx-732179467 card"
+          class="card"
           href="https://nextjs.org/docs"
         >
-          <h3
-            class="jsx-732179467"
-          >
+          <h3>
             Documentation →
           </h3>
-          <p
-            class="jsx-732179467"
-          >
+          <p>
             Find in-depth information about Next.js features and API.
           </p>
         </a>
         <a
-          class="jsx-732179467 card"
+          class="card"
           href="https://nextjs.org/docs/getting-started"
         >
-          <h3
-            class="jsx-732179467"
-          >
+          <h3>
             Learn →
           </h3>
-          <p
-            class="jsx-732179467"
-          >
+          <p>
             Learn about Next.js in an interactive course with quizzes!
           </p>
         </a>
         <a
-          class="jsx-732179467 card"
-          href="https://github.com/vercel/next.js/tree/master/examples"
+          class="card"
+          data-cy="fr-legal"
+          href="fr/legal"
         >
-          <h3
-            class="jsx-732179467"
-          >
-            Examples →
+          <h3>
+            Legal →
           </h3>
-          <p
-            class="jsx-732179467"
-          >
-            Discover and deploy boilerplate example Next.js projects.
+          <p>
+            Discover and enjoy the depths of legal issues.
           </p>
         </a>
         <a
-          class="jsx-732179467 card"
-          href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          class="card"
+          href="https://vercel.com/import?filter=next.js"
         >
-          <h3
-            class="jsx-732179467"
-          >
+          <h3>
             Deploy →
           </h3>
-          <p
-            class="jsx-732179467"
-          >
+          <p>
             Instantly deploy your Next.js site to a public URL with Vercel.
           </p>
         </a>
       </div>
     </main>
-    <footer
-      class="jsx-732179467"
-    >
-      <a
-        class="jsx-732179467"
-        href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        Powered by 
-        <img
-          alt="Vercel Logo"
-          class="jsx-732179467 logo"
-          height="16px"
-          src="/vercel.svg"
-          width="71px"
-        />
-      </a>
-    </footer>
   </div>
 </DocumentFragment>
 `;

@@ -28,4 +28,5 @@ jobs:
       - name: Upload dependencies
         run: fossa analyze --debug
         env:
-          FOSSA_API_KEY: ${{ secrets.FOSSA_API_KEY }} # scan:ignore
+          # scan ignore
+          FOSSA_API_KEY: ${{ secrets.FOSSA_API_KEY }} # nosec
