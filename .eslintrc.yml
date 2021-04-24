@@ -124,6 +124,8 @@ overrides:
       import/resolver:
         typescript: {}
     rules:
+      '@typescript-eslint/no-namespace':
+        ['error', { 'allowDeclarations': true }]
       tsdoc/syntax: warn
   # Config for Cypress Linting
   - files:
