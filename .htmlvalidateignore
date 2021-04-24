@@ -1,0 +1,3 @@
+# amp pages have inline styles, so we ignore them from html validaten
+# using amp validation would be more appropriate anyway
+/.next/**/*.amp.html
