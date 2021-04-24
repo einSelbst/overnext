@@ -22,10 +22,32 @@ jobs:
         with:
           channel: grW1TqGJMKSq2S
 
-      - name: Extract branch name
+      - name: Generate branch name
+        uses: actions/github-script@v3
+        id: set-branch-name
+        with:
+          script: |
+            const capitalize = (name) => name.charAt(0).toUpperCase() + name.slice(1);
+            const emoji = context.payload.ref.startsWith("refs/heads/feature")
+              ? "✨ "
+              : context.payload.ref.startsWith("refs/heads/hotfix")
+              ? "� "
+              : "";
+            return `${emoji}${capitalize(
+              context.payload.ref
+                .replace("refs/heads/", "")
+                .replace(/-/g, " ")
+                .replace("feature ", "")
+                .replace("hotfix ", "")
+            )}`;
+          result-encoding: string
+
+      - name: Set branch name
         id: extract_branch
         shell: bash
-        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        run: |
+          echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+          # echo "PULL_REQUEST_TITLE=${{steps.set-branch-name.outputs.result}}" >> $GITHUB_ENV
 
       - uses: FranzDiebold/github-env-vars-action@v2
       - name: Print environment variables

@@ -14,14 +14,22 @@ const Dog = (): JSX.Element => {
   const isAmp = useAmp()
   const router = useRouter()
   const { locale } = router
+  const imageUrl = 'https://picsum.photos/id/237/800/450'
 
   return (
     <main>
       <Head>
         <title>The Dog</title>
+        {/* preload only the LCP image */}
+        <link rel='preload' href={imageUrl} as='image' />
       </Head>
       <h1>The Dog (Hybrid AMP Page)</h1>
       <Byline author='Meow Meow Fuzzyface' />
+      {isAmp ? (
+        <amp-img width='800' height='450' src={imageUrl} alt='a cute pups' />
+      ) : (
+        <img width='800' height='450' src={imageUrl} alt='a cute pups' />
+      )}
       <p>
         {isAmp ? (
           <Link href='/dog'>

@@ -73,8 +73,8 @@ This is more about priorities than about a temporal order.
 ## Guiding Principles
 
 - automate it &trade;
-- catch bugs early
-- do it cheap
+- optimize it, aka do it cheap
+- test'n lint it, aka catch bugs early
 
 ## DX
 
@@ -140,9 +140,11 @@ validate: Validate source code and output files
 validate:src: Format, lint, type-check & unit test the app
 validate:out: Build app, run integration tests & validate generated html
 build:analyze: Build app and output bundle analyzer diagrams
+build:ssr: used on CI for compressed size` action
 cz: Make new commit
 docs: Generate typedoc docs
-find:unused:files: Find unused files
+find:unused: Find unused files
+size: build app and measure loading performance
 info: Display info about the scripts
 release: Prepare a new release
 ```
@@ -254,6 +256,7 @@ release: Prepare a new release
   - [`em dash`](https://github.com/jfbrennan/m-)
 - ToDo: [`autoprefixer`](https://github.com/postcss/autoprefixer), [issue](https://github.com/vercel/next.js/issues/23658) on next.js side
 - ToDo: integrate [PostCSS Preset Env](https://github.com/csstools/postcss-preset-env) with [next.js PostCss Config](https://nextjs.org/docs/advanced-features/customizing-postcss-config)
+- ToDo: integrate [lazysizes](https://github.com/aFarkas/lazysizes), with [native loading](https://github.com/aFarkas/lazysizes/tree/gh-pages/plugins/native-loading)
 
 ## CI
 
@@ -268,6 +271,7 @@ release: Prepare a new release
 - Labeler: adds labels to PR's based on the changed files
 - Badges: update version badges in README
 - [Super-Linter](https://github.com/github/super-linter)
+- [size-limit](https://github.com/andresz1/size-limit-action) for load time performance tracking
 
 #### WIP Security Audits
 

@@ -48,6 +48,7 @@
     "lint": "eslint . --fix",
     "?lint:html": "Run html-validate on generated static output files",
     "lint:html": "html-validate '.next/**/*.html'",
+    "type-check": "tsc --pretty --noEmit",
     "?validate": "echo Validate source code and output files",
     "validate": "pnpm validate:src && pnpm validate:out",
     "?validate:src": "echo Format, lint, type-check & unit test the app",
@@ -63,13 +64,15 @@
     "cz": "git-cz",
     "?docs": "Generate typedoc docs",
     "docs": "typedoc",
-    "?find:unused:files": "echo Find unused files",
-    "find:unused:files": "next-unused",
+    "?find:unused": "echo Find unused files",
+    "find:unused": "next-unused",
+    "?size": "echo build app and measure loading performance",
+    "size": "pnpm build && size-limit",
+    "size:fast": "size-limit",
     "?info": "echo Display info about the scripts",
     "info": "npm-scripts-info",
     "?release": "Prepare a new release",
     "release": "standard-version",
-    "type-check": "tsc --pretty --noEmit",
     " --------------------------- WIP --------------------------- ": "",
     "skip-for-now-preinstall": "npx only-allow pnpm"
   },
@@ -212,12 +215,6 @@
       "src"
     ]
   },
-  "size-limit": [
-    {
-      "path": ".next/static/chunks/pages/index.js",
-      "limit": "4500 ms"
-    }
-  ],
   "nyc": {
     "exclude": [
       "src/pages/api/__coverage__.js"
