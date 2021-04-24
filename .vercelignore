@@ -8,6 +8,7 @@
 
 # Re-add some files
 !/vercel.json
+!/global.d.ts
 !/next-env.d.ts
 !/next-sitemap.js
 !/next.config.js
