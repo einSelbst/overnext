@@ -1,9 +1,13 @@
 on:
   pull_request_target:
     types: [opened]
+  issue_comment:
+    types: [edited]
 
 jobs:
   createCard:
+    name: Create Card for PR
+    if: ${{ github.event.issue.pull_request }}
     runs-on: ubuntu-latest
     steps:
       - name: Create or Update Project Card
