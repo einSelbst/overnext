@@ -1,4 +1,6 @@
-module.exports = {
+// Sync object
+const config: Config.InitialOptions = {
+  verbose: true,
   roots: ['<rootDir>'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json', 'jsx'],
   testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(test).[jt]s?(x)'],
@@ -16,3 +18,12 @@ module.exports = {
     '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/test/__mocks__/fileMock.js',
   },
 }
+
+export default config
+
+// Or async function
+// export default async (): Promise<Config.InitialOptions> => {
+// return {
+// verbose: true,
+// };
+// };
