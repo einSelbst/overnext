@@ -47,6 +47,7 @@ jobs:
 
   Compressed-Size-Action:
     - name: Check and report changes in the application's package size
+      needs: Setup
       if: ${{ needs.pre_job.outputs.should_skip != 'true' }}
       runs-on: ubuntu-latest
       steps:
@@ -70,6 +71,7 @@ jobs:
 
   Load-Time-Cost:
     - name: Load time cost
+      needs: Setup
       if: ${{ needs.pre_job.outputs.should_skip != 'true' }}
       runs-on: ubuntu-latest
       steps:
