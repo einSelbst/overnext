@@ -26,38 +26,35 @@ jobs:
           # paths_ignore: '["**/README.md", "**/docs/**"]'
           # paths: '[]'
           # do_not_skip: '["pull_request", "workflow_dispatch", "schedule"]' # default ["workflow_dispatch", "schedule"]
-  Setup:
-    name: Checkout Code
-    needs: pre_job
-    if: ${{ needs.pre_job.outputs.should_skip != 'true' }}
+
+  Compressed-Size:
+    name: Compare compressed file sizes
     runs-on: ubuntu-latest
 
     steps:
+      - name: Check for changes
+        id: skip_check
+        uses: fkirc/skip-duplicate-actions@master
+        with:
+          cancel_others: 'false'
+          paths: '["src/**"]'
+
       - name: Check out the application's source code
+        if: ${{ steps.skip_check.outputs.should_skip != 'true' }}
         uses: actions/checkout@v2-beta
         with:
           fetch-depth: 1
 
-      # improve caching here
       - uses: actions/cache@v2
+        if: ${{ steps.skip_check.outputs.should_skip != 'true' }}
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-
-  Compressed-Size-Action:
-    name: Check and report changes in the application's package size
-    needs: Setup
-    if: ${{ needs.pre_job.outputs.should_skip != 'true' }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out the application's source code
-        uses: actions/checkout@v2-beta
-        with:
-          fetch-depth: 1
-
-      - uses: preactjs/compressed-size-action@v2
+      - name: Check and report changes in the application's package size
+        if: ${{ steps.skip_check.outputs.should_skip != 'true' }}
+        uses: preactjs/compressed-size-action@v2
         with:
           repo-token: '${{ secrets.GITHUB_TOKEN }}'
           build-script: 'build'
@@ -75,18 +72,9 @@ jobs:
           # Ignore changes of less than 100 bytes
           minimum-change-threshold: 100
 
-  Load-Time-Cost:
-    name: Load time cost
-    needs: Setup
-    if: ${{ needs.pre_job.outputs.should_skip != 'true' }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out the application's source code
-        uses: actions/checkout@v2-beta
-        with:
-          fetch-depth: 1
-
-      - uses: andresz1/size-limit-action@v1
+      - name: Load time cost
+        if: ${{ steps.skip_check.outputs.should_skip != 'true' }}
+        uses: andresz1/size-limit-action@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           skip_step: build

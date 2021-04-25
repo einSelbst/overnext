@@ -4,6 +4,7 @@
     "baseUrl": "src",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -20,11 +21,10 @@
     "removeComments": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "strict": true,
-    "importHelpers": true,
     "sourceMap": true,
+    "strict": true,
     "target": "es5"
   },
-  "exclude": ["node_modules", ".next", "out", "src/*.test.js"],
-  "include": ["next-env.d.ts", "global.d.ts", "src"]
+  "include": ["next-env.d.ts", "global.d.ts", "src"],
+  "exclude": ["src/**/*.test.js"]
 }
