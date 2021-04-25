@@ -45,6 +45,13 @@ jobs:
         with:
           fetch-depth: 1
 
+      - uses: actions/cache@v2
+        if: ${{ steps.skip_check.outputs.should_skip != 'true' }}
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
       - name: Check and report changes in the application's package size
         if: ${{ steps.skip_check.outputs.should_skip != 'true' }}
         uses: preactjs/compressed-size-action@v2
@@ -64,24 +71,6 @@ jobs:
           strip-hash: "[\\/\\.-]([\\w-]{20,21})[\\.\\/]"
           # Ignore changes of less than 100 bytes
           minimum-change-threshold: 100
-
-  Check-Load-Time:
-    name: Measure load time
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Check for changes
-        id: skip_check
-        uses: fkirc/skip-duplicate-actions@master
-        with:
-          cancel_others: 'false'
-          paths: '["src/**"]'
-
-      - name: Check out the application's source code
-        if: ${{ steps.skip_check.outputs.should_skip != 'true' }}
-        uses: actions/checkout@v2-beta
-        with:
-          fetch-depth: 1
 
       - name: Load time cost
         if: ${{ steps.skip_check.outputs.should_skip != 'true' }}
