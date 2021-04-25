@@ -14,9 +14,3 @@ jobs:
       - uses: JasonEtco/smee-action@v2
         with:
           channel: grW1TqGJMKSq2S
-
-      - name: Print GitHub event action
-        run: |
-          echo "${{ github.event.action }}"
-          echo "${{ toJson(github) }}"
-          echo "${{ toJson(github.event_name) }}"

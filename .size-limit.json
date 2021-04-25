@@ -10,16 +10,6 @@
     "path": [".next/**/*.html"]
   },
   {
-    "name": "load time server rendered pages (legal)",
-    "limit": "3 s",
-    "path": [".next/server/pages/legal.js"]
-  },
-  {
-    "name": "load time server rendered dynamic pages (legal)",
-    "limit": "3 s",
-    "path": [".next/server/pages/legal/*.js"]
-  },
-  {
     "name": "load time static rendered index page",
     "limit": "250 ms",
     "path": ".next/serverless/pages/de.html"
@@ -38,10 +28,5 @@
     "name": "load time static rendered dog amp page",
     "limit": "250 ms",
     "path": ".next/serverless/pages/fr/dog.amp.html"
-  },
-  {
-    "name": "static chunks",
-    "limit": "6000 ms",
-    "path": ".next/static/chunks/pages/dog.js"
   }
 ]

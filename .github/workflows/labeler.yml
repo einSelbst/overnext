@@ -6,7 +6,7 @@ on:
     types: [edited]
 
 jobs:
-  Find PR:
+  Find-PR:
     name: PR finder
     runs-on: ubuntu-latest
     if: ${{ github.event.issue.pull_request }}
