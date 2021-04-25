@@ -2,8 +2,8 @@
 name: 'Pull Request Labeler'
 
 on:
-  issue_comment:
-    types: [edited]
+  pull_request:
+    types: [synchronize, ready_for_review]
 
 jobs:
   Find-PR:
