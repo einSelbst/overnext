@@ -90,7 +90,8 @@ jobs:
               - deploy to netlify
               - run lighthouse check on vercel and add the results
               - ...wip
-            Initally this PR is a draft. When you are done coding, set it to 'Ready for Review'
+
+            Initially this PR is a draft. When you are done coding, set it to 'Ready for Review'
             and a few more checks will be performed. You can also set the branch to 'auto-merge' then.
 
       # GitHub Action does not allow recursion so the CI checks are
