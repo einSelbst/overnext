@@ -2,6 +2,9 @@
     "build_break_rules": {
         "default": { "max_critical": 0, "max_high": 2, "max_medium": 5 }
     },
+    "ignore_directories": [
+        ".next"
+    ],
     "ignore_files": [
         "pnpm-lock.yaml", "fossa.yml"
     ]
