@@ -52,6 +52,11 @@ jobs:
     if: ${{ needs.pre_job.outputs.should_skip != 'true' }}
     runs-on: ubuntu-latest
     steps:
+      - name: Check out the application's source code
+        uses: actions/checkout@v2-beta
+        with:
+          fetch-depth: 1
+
       - uses: preactjs/compressed-size-action@v2
         with:
           repo-token: '${{ secrets.GITHUB_TOKEN }}'
@@ -76,6 +81,11 @@ jobs:
     if: ${{ needs.pre_job.outputs.should_skip != 'true' }}
     runs-on: ubuntu-latest
     steps:
+      - name: Check out the application's source code
+        uses: actions/checkout@v2-beta
+        with:
+          fetch-depth: 1
+
       - uses: andresz1/size-limit-action@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
