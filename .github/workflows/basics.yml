@@ -1,12 +1,10 @@
 name: Continuous integration
 
 on:
+  issue_comment:
+    types: [edited]
   pull_request:
     types: [synchronize, ready_for_review]
-  repository_dispatch:
-    types: [new-pull-request]
-  workflow_run:
-    workflows: ['Create PR']
 
 jobs:
   # @see https://github.com/marketplace/actions/skip-duplicate-actions

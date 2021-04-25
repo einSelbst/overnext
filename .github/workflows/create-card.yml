@@ -1,6 +1,6 @@
 on:
   pull_request_target:
-    types: [synchronize]
+    types: [synchronize, ready_for_review]
 
 jobs:
   createCard:
