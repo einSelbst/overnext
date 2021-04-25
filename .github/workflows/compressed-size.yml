@@ -4,36 +4,52 @@ name: Audits
 on:
   pull_request:
     types: [ready_for_review]
+  pull_request_target:
+    types: [review_requested]
 
 jobs:
-  Compressed-Size:
-    name: Compare compressed file sizes
+  # @see https://github.com/marketplace/actions/skip-duplicate-actions
+  pre_job:
+    # continue-on-error: true # Uncomment once integration is finished
+    runs-on: ubuntu-latest
+    # Map a step output to a job output
+    outputs:
+      should_skip: ${{ steps.skip_check.outputs.should_skip }}
+    steps:
+      - id: skip_check
+        uses: fkirc/skip-duplicate-actions@master
+        with:
+          # All of these options are optional, so you can remove them if you are happy with the defaults
+          concurrent_skipping: 'never' # is the default [never, same_content, outdated_runs, always]
+          skip_after_successful_duplicate: 'true' # is the default [true, false]
+          cancel_others: true # default false
+          # paths_ignore: '["**/README.md", "**/docs/**"]'
+          # paths: '[]'
+          # do_not_skip: '["pull_request", "workflow_dispatch", "schedule"]' # default ["workflow_dispatch", "schedule"]
+  Setup:
+    name: Checkout Code
+    needs: pre_job
+    if: ${{ needs.pre_job.outputs.should_skip != 'true' }}
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check for changes
-        id: skip_check
-        uses: fkirc/skip-duplicate-actions@master
-        with:
-          cancel_others: 'false'
-          paths: '["src/**"]'
-
       - name: Check out the application's source code
-        if: ${{ steps.skip_check.outputs.should_skip != 'true' }}
         uses: actions/checkout@v2-beta
         with:
           fetch-depth: 1
 
       - uses: actions/cache@v2
-        if: ${{ steps.skip_check.outputs.should_skip != 'true' }}
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - name: Check and report changes in the application's package size
-        if: ${{ steps.skip_check.outputs.should_skip != 'true' }}
+  Compressed-Size-Action:
+    - name: Check and report changes in the application's package size
+      if: ${{ needs.pre_job.outputs.should_skip != 'true' }}
+      runs-on: ubuntu-latest
+      steps:
         uses: preactjs/compressed-size-action@v2
         with:
           repo-token: '${{ secrets.GITHUB_TOKEN }}'
@@ -52,8 +68,11 @@ jobs:
           # Ignore changes of less than 100 bytes
           minimum-change-threshold: 100
 
-      - name: Load time cost
-        if: ${{ steps.skip_check.outputs.should_skip != 'true' }}
+  Load-Time-Cost:
+    - name: Load time cost
+      if: ${{ needs.pre_job.outputs.should_skip != 'true' }}
+      runs-on: ubuntu-latest
+      steps:
         uses: andresz1/size-limit-action@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
