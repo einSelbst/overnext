@@ -317,6 +317,7 @@ release: Prepare a new release
 
 ## ToDo
 
+- [ ] integrate with [README.so template](https://readme.so/editor)
 - [ ] add [SRI](https://github.com/vercel/next.js/discussions/23951)
 - [ ] cypress a11y plugin
 - [ ] [cypress-html-validate](https://html-validate.org/usage/cypress.html) plugin
