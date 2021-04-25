@@ -1,11 +1,6 @@
 on:
   pull_request_target:
-    types: [opened]
-  issue_comment:
-    types: [edited]
-  workflow_run:
-    workflows: ['Create PR']
-    types: [completed]
+    types: [synchronize]
 
 jobs:
   createCard:
