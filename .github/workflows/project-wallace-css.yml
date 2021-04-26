@@ -10,6 +10,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+
+      - run: |
+          ls -la
+          cd .next
+          ls -la
+
       - name: Project Wallace Diff
         # uses: einSelbst/css-diff-action@einSelbst-import-path
         uses: projectwallace/push-css-action@master
