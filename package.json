@@ -73,6 +73,8 @@
     "info": "npm-scripts-info",
     "?release": "Prepare a new release",
     "release": "standard-version",
+    "lint-staged": "lint-staged",
+    "commitlint": "commitlint",
     " --------------------------- WIP --------------------------- ": "",
     "skip-for-now-preinstall": "npx only-allow pnpm"
   },
@@ -174,13 +176,6 @@
       "caniuse-lite": "latest",
       "fsevents": "2.3.2",
       "prettierx": "0.17"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-push": "pnpm type-check"
     }
   },
   "lint-staged": {
