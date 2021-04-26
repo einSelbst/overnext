@@ -1,0 +1,18 @@
+name: Auto-update CSS at projectwallace.com
+
+on:
+  push:
+
+jobs:
+  analyze-css:
+    name: CSS Analyzer
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Project Wallace Diff
+        # uses: einSelbst/css-diff-action@einSelbst-import-path
+        uses: projectwallace/push-css-action@master
+        with:
+          project-wallace-token: ${{ secrets.PROJECT_WALLACE_TOKEN }}
+          css-path: .next/static/css/
