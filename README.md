@@ -263,7 +263,7 @@ release: Prepare a new release
 ### Github Actions
 
 - skip unneccessary action runs
-- `basic`: runs linter, tests and build for different node versions
+- `basic`: runs linters, tests and build
 - [`create-pull-request`](https://github.com/thomaseizinger/create-pull-request), creates PR's for new branches
 - `compressed-size`: checks the size of the bundled files and adds a comment in the PR
 - [`eslint-plus-action`](https://github.com/bradennapier/eslint-plus-action), runs eslint and prints a summary in the PR
@@ -271,7 +271,8 @@ release: Prepare a new release
 - Labeler: adds labels to PR's based on the changed files
 - Badges: update version badges in README
 - [Super-Linter](https://github.com/github/super-linter)
-- [size-limit](https://github.com/andresz1/size-limit-action) for load time performance tracking
+- [`size-limit`](https://github.com/andresz1/size-limit-action) for load time performance tracking
+- [`auto-push-css`](https://github.com/projectwallace/push-css-action), needs `PROJECT_WALLACE_TOKEN` set in Repo Env Secrets
 
 #### WIP Security Audits
 
@@ -295,6 +296,7 @@ release: Prepare a new release
 - [Renovate Dashboard](https://app.renovatebot.com/dashboard#github/einSelbst/overnext)
 - [Vercel Dashboard](https://vercel.com/einselbst/overnext)
 - [Netlify Dashboard](https://app.netlify.com/sites/overnext/overview)
+- [Dareboost](https://www.dareboost.com/en/dashboard)
 - [Project Wallace](https://www.projectwallace.com/~einselbst/overnext) for CSS monitoring
 
 ## Deployment
