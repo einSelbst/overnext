@@ -26,8 +26,8 @@ jobs:
           # paths: '[]'
           # do_not_skip: '["pull_request", "workflow_dispatch", "schedule"]' # default ["workflow_dispatch", "schedule"]
 
-  ci:
-    name: Validate Code
+  Source-Checks:
+    name: Validate Source Code
     needs: pre_job
     if: ${{ needs.pre_job.outputs.should_skip != 'true' }}
     runs-on: ubuntu-latest
@@ -85,6 +85,60 @@ jobs:
       - name: Run type-check
         run: pnpm type-check
 
+      # TODO: would be better to run this once a day or so
+      - name: Run audit
+        run: pnpm audit
+
+  Build-Checks:
+    name: Validate App Code
+    needs: pre_job
+    if: ${{ needs.pre_job.outputs.should_skip != 'true' }}
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@main
+        with:
+          ref: ${{ github.event.client_payload.ref }}
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@main
+        with:
+          node-version: ${{ matrix.node-version }}
+          check-latest: true
+
+      - name: Cache some stuff
+        id: cache-pnpm-dir
+        uses: actions/cache@main
+        env:
+          cache-name: cache-pnpm-store
+        with:
+          path: |
+            ~/.pnpm-store
+            ${{ github.workspace }}/node_modules
+            ${{ github.workspace }}/.next/cache
+            ~/.cache/Cypress
+          key: |
+            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-${{ matrix.node-version }}-build-
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@master
+        with:
+          version: next
+
+      - name: Install dependencies
+        if: steps.cache-pnpm-dir.outputs.cache-hit != 'true'
+        run: |
+          pnpm --version
+          pnpm install --prefer-frozen-lockfile
+
       - name: 'Run tests'
         run: pnpm test
         env:
@@ -95,7 +149,3 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           lcov-file: ./coverage/lcov.info
-
-      # TODO: would be better to run this once a day or so
-      - name: Run audit
-        run: pnpm audit
