@@ -52,6 +52,7 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
+
       - name: Check and report changes in the application's package size
         if: ${{ steps.skip_check.outputs.should_skip != 'true' }}
         uses: preactjs/compressed-size-action@v2

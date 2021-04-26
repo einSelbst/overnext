@@ -9,8 +9,11 @@ on:
   # - cron: '*/15 * * * *'
   pull_request:
     types: [opened, synchronize, ready_for_review]
-  repository_dispatch:
-    types: [new-pull-request]
+  issue_comment:
+    types: [edited]
+  # dispatch triggered actions don't run in the context of the PR unfortunately
+  # repository_dispatch:
+  # types: [new-pull-request]
 
 jobs:
   # @see https://github.com/marketplace/actions/skip-duplicate-actions
