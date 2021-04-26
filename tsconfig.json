@@ -21,7 +21,7 @@
     "plugins": [
       {
         "name": "typescript-eslint-language-service",
-        "watchDir": ["src"]
+        "watchDirs": ["src"]
       }
     ],
     "removeComments": true,
