@@ -154,7 +154,8 @@
     "npm-scripts-info": "0.3.9",
     "prettier-standard": "16.3.0",
     "size-limit": "^4.10.2",
-    "standard-version": "9.2.0"
+    "standard-version": "9.2.0",
+    "typescript-eslint-language-service": "^4.1.4"
   },
   "optionalDependencies": {
     "fsevents": "2.3.2",

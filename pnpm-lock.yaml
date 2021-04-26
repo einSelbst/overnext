@@ -77,6 +77,7 @@ specifiers:
   tslib: 2.2.0
   typedoc: 0.20.36
   typescript: 4.2.4
+  typescript-eslint-language-service: ^4.1.4
   webpack: 5.35.1
 
 dependencies:
@@ -154,6 +155,7 @@ devDependencies:
   prettier-standard: 16.3.0_typescript@4.2.4
   size-limit: 4.10.2
   standard-version: 9.2.0
+  typescript-eslint-language-service: 4.1.4_e3b52a83531895e7febd6ecd5ba813eb
 
 packages:
 
@@ -13877,6 +13879,19 @@ packages:
       typedoc-default-themes: 0.12.10
       typescript: 4.2.4
     dev: false
+
+  /typescript-eslint-language-service/4.1.4_e3b52a83531895e7febd6ecd5ba813eb:
+    resolution: {integrity: sha512-iQZ05hQK0ETQgm044q3XRJ+fNt0TgyVrLiqT3D1/ZCvwuZrjUPWW3wG1Dt8e3PjHZadBlpTAI1B1jhvMP5PLaQ==}
+    peerDependencies:
+      '@typescript-eslint/parser': '>= 4.0.0'
+      eslint: '>= 6.7.0 <= 6.8.x || >= 7.0.0'
+      typescript: '>= 3.0.0 || >= 4.0.0'
+    dependencies:
+      '@typescript-eslint/parser': 4.22.0_eslint@7.25.0+typescript@4.2.4
+      eslint: 7.25.0
+      read-pkg-up: 7.0.1
+      typescript: 4.2.4
+    dev: true
 
   /typescript/3.9.9:
     resolution: {integrity: sha512-kdMjTiekY+z/ubJCATUPlRDl39vXYiMV9iyeMuEuXZh2we6zz80uovNN2WlAxmmdE/Z/YQe+EbOEXB5RHEED3w==}
