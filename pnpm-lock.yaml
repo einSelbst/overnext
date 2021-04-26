@@ -26,6 +26,7 @@ specifiers:
   '@types/react-dom': 17.0.3
   '@typescript-eslint/eslint-plugin': 4.22.0
   '@typescript-eslint/parser': 4.22.0
+  '@typescript-eslint/typescript-estree': ^4.22.0
   autoprefixer: 10.2.5
   babel-jest: 26.6.3
   babel-plugin-istanbul: 6.0.0
@@ -128,6 +129,7 @@ devDependencies:
   '@size-limit/preset-app': 4.10.2_size-limit@4.10.2
   '@typescript-eslint/eslint-plugin': 4.22.0_e3b52a83531895e7febd6ecd5ba813eb
   '@typescript-eslint/parser': 4.22.0_eslint@7.25.0+typescript@4.2.4
+  '@typescript-eslint/typescript-estree': 4.22.0_typescript@4.2.4
   babel-plugin-istanbul: 6.0.0
   ci-info: 3.1.1
   commitizen: 4.2.3
