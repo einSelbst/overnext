@@ -199,7 +199,6 @@ release: Prepare a new release
 
 - [`husky`](https://github.com/typicode/husky) for hooks
 
-  - pinned at v4, v5 is [open-source/sponsors only](https://dev.to/typicode/what-s-new-in-husky-5-32g5)
   - [`lint-staged`](https://github.com/okonet/lint-staged)
 
 - [`axe-core/react`](https://github.com/dequelabs/axe-core-npm)
