@@ -1,6 +1,7 @@
 {
   "projectId": "esdwok",
   "baseUrl": "http://localhost:3000",
+  "videoUploadOnPasses": false,
   "env": {
     "codeCoverage": {
       "url": "/api/__coverage__"
