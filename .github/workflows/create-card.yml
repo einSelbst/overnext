@@ -1,3 +1,5 @@
+name: Create Card
+
 on:
   pull_request_target:
     types: [synchronize, ready_for_review]
