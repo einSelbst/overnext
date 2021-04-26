@@ -7,10 +7,13 @@ on:
   # under 10 minutes and run every 10 minutes anyway.
   # schedule:
   # - cron: '*/15 * * * *'
+  # dispatch triggered actions don't run in the context of the PR unfortunately
+  # repository_dispatch:
+  #   types: [new-pull-request]
   pull_request:
     types: [opened, synchronize, ready_for_review]
-  repository_dispatch:
-    types: [new-pull-request]
+  issue_comment:
+    types: [edited]
 
 jobs:
   # @see https://github.com/marketplace/actions/skip-duplicate-actions
