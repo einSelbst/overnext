@@ -26,11 +26,12 @@ jobs:
           ref: ${{ github.event.client_payload.ref }}
 
       - name: Update version badges 🏷
-        run: npx -p dependency-version-badge update-badge next react typescript cypress jest eslint tailwindcss
+        run: npx -p dependency-version-badge update-badge next react webpack @babel/core typescript cypress jest eslint tailwindcss
 
       - name: Commit any changed files 💾
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Updated badges
+          commit_message: Updated badges and [skip-actions]
+          commit_user_name: Big Bad Badger
           branch: main
           file_pattern: README.md
