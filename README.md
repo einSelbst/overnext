@@ -51,7 +51,6 @@
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/einSelbst/overnext.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/einSelbst/overnext/alerts/)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/einSelbst/overnext.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/einSelbst/overnext/context:javascript)
 
-[![Code Grade](https://www.code-inspector.com/project/21436/score/svg)
 [![Code Grade](https://www.code-inspector.com/project/21436/score/svg?service=github)](https://frontend.code-inspector.com/project/21436/dashboard)
 
 </details>
@@ -168,6 +167,90 @@ release: Prepare a new release
 
   - [`eslint-plugin-next`](https://github.com/vercel/next.js/tree/canary/packages/eslint-plugin-next)
   - [`typescript-eslint`](https://github.com/typescript-eslint/typescript-eslint)
+  - <details>
+      <summary>
+        <a href="https://github.com/sindresorhus/eslint-plugin-unicorn"><code>eslint-plugin-unicorn</code></a>
+      </summary>
+
+    - "unicorn/better-regex": "error",
+    - "unicorn/catch-error-name": "error",
+    - "unicorn/consistent-destructuring": "error",
+    - "unicorn/consistent-function-scoping": "error",
+    - "unicorn/custom-error-definition": "off",
+    - "unicorn/empty-brace-spaces": "error",
+    - "unicorn/error-message": "error",
+    - "unicorn/escape-case": "error",
+    - "unicorn/expiring-todo-comments": "error",
+    - "unicorn/explicit-length-check": "error",
+    - "unicorn/filename-case": "error",
+    - "unicorn/import-index": "off",
+    - "unicorn/import-style": "error",
+    - "unicorn/new-for-builtins": "error",
+    - "unicorn/no-abusive-eslint-disable": "error",
+    - "unicorn/no-array-callback-reference": "error",
+    - "unicorn/no-array-for-each": "error",
+    - "unicorn/no-array-push-push": "error",
+    - "unicorn/no-array-reduce": "error",
+    - "unicorn/no-console-spaces": "error",
+    - "unicorn/no-for-loop": "error",
+    - "unicorn/no-hex-escape": "error",
+    - "unicorn/no-instanceof-array": "error",
+    - "unicorn/no-keyword-prefix": "off",
+    - "unicorn/no-lonely-if": "error",
+    - "no-nested-ternary": "off",
+    - "unicorn/no-nested-ternary": "error",
+    - "unicorn/no-new-array": "error",
+    - "unicorn/no-new-buffer": "error",
+    - "unicorn/no-null": "error",
+    - "unicorn/no-object-as-default-parameter": "error",
+    - "unicorn/no-process-exit": "error",
+    - "unicorn/no-static-only-class": "error",
+    - "unicorn/no-this-assignment": "error",
+    - "unicorn/no-unreadable-array-destructuring": "error",
+    - "unicorn/no-unsafe-regex": "off",
+    - "unicorn/no-unused-properties": "off",
+    - "unicorn/no-useless-undefined": "error",
+    - "unicorn/no-zero-fractions": "error",
+    - "unicorn/number-literal-case": "error",
+    - "unicorn/numeric-separators-style": "error",
+    - "unicorn/prefer-add-event-listener": "error",
+    - "unicorn/prefer-array-find": "error",
+    - "unicorn/prefer-array-flat": "error",
+    - "unicorn/prefer-array-flat-map": "error",
+    - "unicorn/prefer-array-index-of": "error",
+    - "unicorn/prefer-array-some": "error",
+    - "unicorn/prefer-date-now": "error",
+    - "unicorn/prefer-default-parameters": "error",
+    - "unicorn/prefer-dom-node-append": "error",
+    - "unicorn/prefer-dom-node-dataset": "error",
+    - "unicorn/prefer-dom-node-remove": "error",
+    - "unicorn/prefer-dom-node-text-content": "error",
+    - "unicorn/prefer-includes": "error",
+    - "unicorn/prefer-keyboard-event-key": "error",
+    - "unicorn/prefer-math-trunc": "error",
+    - "unicorn/prefer-modern-dom-apis": "error",
+    - "unicorn/prefer-module": "error",
+    - "unicorn/prefer-negative-index": "error",
+    - "unicorn/prefer-node-protocol": "error",
+    - "unicorn/prefer-number-properties": "error",
+    - "unicorn/prefer-optional-catch-binding": "error",
+    - "unicorn/prefer-query-selector": "error",
+    - "unicorn/prefer-reflect-apply": "error",
+    - "unicorn/prefer-regexp-test": "error",
+    - "unicorn/prefer-set-has": "error",
+    - "unicorn/prefer-spread": "error",
+    - "unicorn/prefer-string-replace-all": "off",
+    - "unicorn/prefer-string-slice": "error",
+    - "unicorn/prefer-string-starts-ends-with": "error",
+    - "unicorn/prefer-string-trim-start-end": "error",
+    - "unicorn/prefer-switch": "error",
+    - "unicorn/prefer-ternary": "error",
+    - "unicorn/prefer-type-error": "error",
+    - "unicorn/prevent-abbreviations": "error",
+    - "unicorn/string-content": "off",
+    - "unicorn/throw-new-error": "error"
+    </details>
+
   - [`eslint-plugin-cypress`](https://github.com/cypress-io/eslint-plugin-cypress)
   - [`eslint-plugin-import`](https://github.com/benmosher/eslint-plugin-import)
   - [`eslint-plugin-jest`](https://github.com/jest-community/eslint-plugin-jest)
@@ -196,6 +279,7 @@ release: Prepare a new release
   - [`eslint-plugin-react-hooks`](https://www.npmjs.com/package/eslint-plugin-react-hooks)
   - [`eslint-plugin-tsdoc`](https://github.com/microsoft/tsdoc/tree/master/eslint-plugin)
   - [`eslint-plugin-compat`](https://github.com/amilajack/eslint-plugin-compat), works with browserslist
+  - [`typescript-eslint-language-service`](https://github.com/Quramy/typescript-eslint-language-service), not exactly sure what this does...
 
 - [`husky`](https://github.com/typicode/husky) for hooks
 
