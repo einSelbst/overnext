@@ -20,7 +20,8 @@
     },
     "plugins": [
       {
-        "name": "typescript-eslint-language-service"
+        "name": "typescript-eslint-language-service",
+        "watchDir": ["src"]
       }
     ],
     "removeComments": true,
