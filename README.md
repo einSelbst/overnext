@@ -98,22 +98,28 @@ This is more about priorities than about a temporal order.
 
 - [Conventional Commits convention](https://www.conventionalcommits.org/)
 
-  - [Commitizen](https://github.com/commitizen/cz-cli) helper
+  - [Commitizen](https://github.com/commitizen/cz-cli) CLI helper
     <details>
       <summary>Show commit types</summary>
 
     - `feat`: A new feature
     - `fix`: A bug fix
+    - `look`: CSS and layout
     - `docs`: Documentation only changes
     - `style`: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
     - `refactor`: A code change that neither fixes a bug nor adds a feature
     - `perf`: A code change that improves performance
     - `test`: Adding missing tests or correcting existing tests
-    - `build`: Changes that affect the build system or external dependencies (example scopes: webpack, typescript, pnpm)
-    - `ci`: Changes to our CI configuration files and scripts (example scopes: Github Actions, BrowserStack, SauceLabs)
+    - `build`: Changes that affect the build system (example scopes: webpack, typescript, babel, pnpm)
+    - `deps`: Managing dependencies
+    - `ci`: Changes to the CI configuration files and scripts (example scopes: Github Actions, BrowserStack)
+    - `dx`: All things about improving developer experience
     - `chore`: Other changes that don't modify src or test files
     - `revert`: Reverts a previous commit
     </details>
+
+  - [`semantic-pull-requests`](https://github.com/zeke/semantic-pull-requests) Github app
+  - [`standard-version`](https://github.com/conventional-changelog/standard-version) for release versioning and changlog creation
 
 ### Scripts
 
