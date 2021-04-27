@@ -1,9 +1,3 @@
-if (typeof window !== 'undefined') {
-  console.log('in the browser')
-} else {
-  console.log('on the server')
-}
-
 export default {
   PRODUCTION: process.env.NODE_ENV === 'production',
 
