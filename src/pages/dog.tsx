@@ -1,3 +1,4 @@
+import { GetStaticPropsResult, GetStaticProps } from 'next'
 import { useAmp } from 'next/amp'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -5,12 +6,42 @@ import { useRouter } from 'next/router'
 import Byline from 'components/byline'
 import DefaultLayout from 'layouts/default.layout'
 
+interface HomeProps {
+  host: string | undefined
+}
+
+export async function getStaticProps (
+  context: any
+): Promise<GetStaticPropsResult<HomeProps>> {
+  console.log('now in getstaticprops')
+
+  console.log(process.env.URL)
+  console.log(process.env.URL)
+  console.log('process.env.URL')
+  console.log(process.env.URL)
+
+  console.log('process.env.SITE_URL')
+  console.log(process.env.SITE_URL)
+
+  let url: string = 'http://localhost:3000'
+  if (process.env.URL) url = process.env.URL
+  else if (process.env.SITE_URL) url = process.env.SITE_URL
+
+  console.log(url)
+
+  return {
+    props: {
+      host: url,
+    },
+  }
+}
+
 /* istanbul ignore next */
 export const config = {
   amp: 'hybrid',
 }
 
-const Dog = (): JSX.Element => {
+const Dog = (props: HomeProps): JSX.Element => {
   const isAmp = useAmp()
   const router = useRouter()
   const { locale } = router
@@ -24,6 +55,9 @@ const Dog = (): JSX.Element => {
         <link rel='preload' href={imageUrl} as='image' />
       </Head>
       <h1>The Dog (Hybrid AMP Page)</h1>
+      <h2>
+        Find out more <a href={props.host}>here</a>
+      </h2>
       <Byline author='Meow Meow Fuzzyface' />
       {isAmp ? (
         <amp-img width='800' height='450' src={imageUrl} alt='a cute pups' />
