@@ -181,7 +181,7 @@
       "caniuse-lite": "latest",
       "chokidar": "3",
       "fsevents": "2.3.2",
-      "prettierx": "0.17"
+      "prettierx": "0.18"
     }
   },
   "lint-staged": {
