@@ -1,8 +1,8 @@
 import { NextSeo } from 'next-seo'
 import { useRouter } from 'next/router'
 import ThemeChanger from 'components/layout/theme-changer'
-import LegalLayout from 'layouts/legal.layout'
 import { ENV } from 'config'
+import LegalLayout from 'layouts/legal.layout'
 
 const _Topic = (): JSX.Element => {
   const router = useRouter()

@@ -6,13 +6,23 @@ import { useRouter } from 'next/router'
 import Byline from 'components/byline'
 import DefaultLayout from 'layouts/default.layout'
 
+/* istanbul ignore next */
+export const config = {
+  amp: 'hybrid',
+}
+
 interface HomeProps {
   host: string | undefined
 }
 
-export async function getStaticProps (
+export const getStaticProps: GetStaticProps<HomeProps> = async (
   context: any
-): Promise<GetStaticPropsResult<HomeProps>> {
+) => {
+  /* export async function getStaticProps (
+   *  context: any
+   *    ): Promise<GetStaticPropsResult<HomeProps>> {
+   */
+
   console.log('now in getstaticprops')
 
   console.log(process.env.URL)
@@ -23,22 +33,15 @@ export async function getStaticProps (
   console.log('process.env.SITE_URL')
   console.log(process.env.SITE_URL)
 
-  let url: string = 'http://localhost:3000'
+  let url = 'https://overnext.vercel.app'
   if (process.env.URL) url = process.env.URL
-  else if (process.env.SITE_URL) url = process.env.SITE_URL
 
   console.log(url)
-
   return {
     props: {
       host: url,
     },
   }
-}
-
-/* istanbul ignore next */
-export const config = {
-  amp: 'hybrid',
 }
 
 const Dog = (props: HomeProps): JSX.Element => {
