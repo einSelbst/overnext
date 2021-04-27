@@ -1,3 +1,9 @@
+if (typeof window !== 'undefined') {
+  console.log('in the browser')
+} else {
+  console.log('on the server')
+}
+
 export default {
   PRODUCTION: process.env.NODE_ENV === 'production',
 
@@ -15,6 +21,5 @@ export default {
    * Regarding the `??`:
    * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_Coalescing_Operator | Nullish Coalescing Operator}
    */
-  SITE_URL: process.env.SITE_URL ?? 'https://overnext.vercel.app',
-  FAKE_TOKEN: 'aslk^jf8&238476j&s322@#', // does secrets detect action recognize this?
+  SITE_URL: process.env.URL ?? 'https://overnext.vercel.app',
 }
