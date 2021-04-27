@@ -15,7 +15,7 @@ export const Home = (): JSX.Element => {
         </h1>
 
         <p className='description'>
-          An overly opinonated starter for <code>next.js</code>
+          An overly opinionated starter for <code>next.js</code>
         </p>
 
         <div className='py-20'>
