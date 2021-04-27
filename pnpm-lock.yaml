@@ -110,6 +110,7 @@ dependencies:
   prop-types: 15.7.2
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
+  sass: 1.32.11
   start-server-and-test: 1.12.1
   tailwindcss: 2.1.2_d887a42ede92218908fd5c3cc0b71177
   tslib: 2.2.0
@@ -156,7 +157,6 @@ devDependencies:
   next-unused: 0.0.6
   npm-scripts-info: 0.3.9
   prettier-standard: 16.3.0_typescript@4.2.4
-  sass: 1.32.11
   size-limit: 4.10.2
   standard-version: 9.2.0
   typescript-eslint-language-service: 4.1.4_e3b52a83531895e7febd6ecd5ba813eb
@@ -12196,7 +12196,7 @@ packages:
     hasBin: true
     dependencies:
       chokidar: 3.5.1
-    dev: true
+    dev: false
 
   /saxes/5.0.1:
     resolution: {integrity: sha512-5LBh1Tls8c9xgGjw3QrMwETmTMVk0oFgvrFSvWx62llR2hcEInrKNZ2GZCCuuy2lvWrdl5jhbpeqc5hRYKFOcw==}
