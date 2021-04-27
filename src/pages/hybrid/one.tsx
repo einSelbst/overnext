@@ -1,6 +1,6 @@
 import { useAmp } from 'next/amp'
-import { useRouter } from 'next/router'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 export const config = {
   amp: 'hybrid',
