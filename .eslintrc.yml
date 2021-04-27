@@ -71,7 +71,7 @@ rules:
       ignore:
         - '^__coverage__.ts$'
   unicorn/prefer-module:
-    - warn # ToDo: figure out how to fix this
+    - off # ToDo: figure out how to fix this
   unicorn/prevent-abbreviations:
     - error
     - checkProperties: true
