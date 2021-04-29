@@ -25,6 +25,24 @@ const nextConfiguration = {
   future: {
     webpack5: true,
   },
+  // example taken from
+  // https://nextjs.org/blog/next-10-2#header-cookie-and-query-matching-for-rewrites-and-redirects
+  async redirects () {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'header',
+            key: 'x-vercel-ip-country',
+            value: 'GB',
+          },
+        ],
+        destination: '/:path*/uk',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 const plugins = [
