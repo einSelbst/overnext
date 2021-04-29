@@ -1,5 +1,11 @@
-import { GetStaticProps, GetStaticPropsContext } from 'next'
-/* import { GetStaticProps, GetStaticPropsContext, NextPage } from 'next' */
+/* import { GetStaticProps, GetStaticPropsContext } from 'next' */
+import {
+  GetStaticProps,
+  GetStaticPropsContext,
+  GetStaticPropsResult,
+  InferGetStaticPropsType,
+  NextLayoutPage,
+} from 'next'
 import { useAmp } from 'next/amp'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -13,20 +19,20 @@ export const config = {
 }
 
 interface HomeProps {
-  host: string | undefined
+  /* host: string | undefined */
+  host: string
 }
 
-export const getStaticProps: GetStaticProps<HomeProps> = async (
+/* export const getStaticProps: GetStaticProps<HomeProps> = async ( */
+export const getStaticProps: GetStaticProps = async (
   _context: GetStaticPropsContext
-) => {
+): Promise<GetStaticPropsResult<HomeProps>> => {
   await Promise.resolve(
     'This is just a placeholder to make my typescript linter happy'
   )
 
   console.log('now in getstaticprops')
 
-  console.log(process.env.URL)
-  console.log(process.env.URL)
   console.log('process.env.URL')
   console.log(process.env.URL)
 
@@ -45,7 +51,14 @@ export const getStaticProps: GetStaticProps<HomeProps> = async (
 }
 
 /* const Dog:NextPage<HomeProps> = (props: HomeProps): JSX.Element => { */
-const Dog = (props: HomeProps): JSX.Element => {
+/* const Dog: NextPage = (props: HomeProps): JSX.Element => { */
+/* const Dog: NextPage = (props: HomeProps) => { */
+/* const Dog: NextPage = () => { */
+const Dog: NextLayoutPage = (
+  /* props: InferGetStaticPropsType<typeof getStaticProps> */
+  { host }: InferGetStaticPropsType<typeof getStaticProps>
+) => {
+  /* const Dog = (props: HomeProps): JSX.Element => { */
   const isAmp = useAmp()
   const router = useRouter()
   const { locale } = router
@@ -60,7 +73,7 @@ const Dog = (props: HomeProps): JSX.Element => {
       </Head>
       <h1>The Dog (Hybrid AMP Page)</h1>
       <h2>
-        Find out more <a href={props.host}>here</a>
+        Find out more <a href={host as string}>here</a>
       </h2>
       <Byline author='Meow Meow Fuzzyface' />
       {isAmp ? (
