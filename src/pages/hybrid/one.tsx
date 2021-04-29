@@ -6,6 +6,9 @@ export const config = {
   amp: 'hybrid',
 }
 
+/**
+ * HTML entities should be escaped
+ */
 const One = (): JSX.Element => {
   const isAmp = useAmp()
   const router = useRouter()
@@ -14,7 +17,8 @@ const One = (): JSX.Element => {
   return (
     <main>
       <h1>One</h1>
-      {isAmp && <p>I'm AMP!</p>}
+      <p>I&apos;m maybe AMP!</p>
+      {isAmp && <p>I am AMP! (escaping entity is difficult here)</p>}
       <p>
         {isAmp ? (
           <Link href='/hybrid/one'>

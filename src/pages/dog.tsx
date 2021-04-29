@@ -1,4 +1,5 @@
-import { GetStaticPropsResult, GetStaticProps } from 'next'
+import { GetStaticProps, GetStaticPropsContext } from 'next'
+/* import { GetStaticProps, GetStaticPropsContext, NextPage } from 'next' */
 import { useAmp } from 'next/amp'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -16,12 +17,11 @@ interface HomeProps {
 }
 
 export const getStaticProps: GetStaticProps<HomeProps> = async (
-  context: any
+  _context: GetStaticPropsContext
 ) => {
-  /* export async function getStaticProps (
-   *  context: any
-   *    ): Promise<GetStaticPropsResult<HomeProps>> {
-   */
+  await Promise.resolve(
+    'This is just a placeholder to make my typescript linter happy'
+  )
 
   console.log('now in getstaticprops')
 
@@ -44,6 +44,7 @@ export const getStaticProps: GetStaticProps<HomeProps> = async (
   }
 }
 
+/* const Dog:NextPage<HomeProps> = (props: HomeProps): JSX.Element => { */
 const Dog = (props: HomeProps): JSX.Element => {
   const isAmp = useAmp()
   const router = useRouter()

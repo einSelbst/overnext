@@ -1,8 +1,25 @@
+import {
+  GetStaticPaths,
+  GetStaticProps,
+  GetStaticPathsContext,
+  GetStaticPropsContext,
+  GetStaticPropsResult,
+  InferGetStaticPropsType,
+} from 'next'
+
 export const config = {
   amp: 'hybrid',
 }
 
-export const getStaticPaths = async () => {
+interface FragmentsProps {
+  fragments: string | string[]
+}
+
+export const getStaticPaths: GetStaticPaths = async (
+  _context: GetStaticPathsContext
+) => {
+  await Promise.resolve('async needs await')
+
   return {
     fallback: false,
     paths: [
@@ -15,20 +32,27 @@ export const getStaticPaths = async () => {
   }
 }
 
-export const getStaticProps = async ({ params }: any) => {
-  console.log(params)
+export const getStaticProps: GetStaticProps = async ({
+  params,
+}: GetStaticPropsContext): Promise<GetStaticPropsResult<FragmentsProps>> => {
+  await Promise.resolve('async needs await')
 
+  console.log(params)
+  const frags = params!.fragments!
   return {
     props: {
-      fragments: params.fragments,
+      fragments: frags,
     },
   }
 }
 
-function Fragme () {
+function Fragme ({
+  fragments,
+}: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element {
   return (
     <div>
       <h1>My AMP Fragments Page!</h1>
+      <p>Fragments: {fragments}</p>
     </div>
   )
 }
