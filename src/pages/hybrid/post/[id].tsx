@@ -1,9 +1,8 @@
 /**
  * This page uses functions instead of const for
  * `getStaticProps` and `getStaticPaths`
- *
  */
-/* eslint-disable unicorn/prefer-node-protocol */
+// eslint-disable-next-line unicorn/prefer-node-protocol
 import { ParsedUrlQuery } from 'querystring'
 import {
   GetStaticPathsContext,
@@ -12,7 +11,6 @@ import {
   GetStaticPropsResult,
   InferGetStaticPropsType,
 } from 'next'
-/* eslint-enable unicorn/prefer-node-protocol */
 
 export const config = {
   amp: 'hybrid',
@@ -28,8 +26,8 @@ export async function getStaticPaths (
   await Promise.resolve('async needs await')
   return {
     /* https://github.com/vercel/next.js/issues/14256#issuecomment-671573442 */
+    /* was fallback: true , but for hybrid AMP it must be 'blocking */
     fallback: 'blocking',
-    /* fallback: true, */
     paths: [
       {
         params: {
@@ -44,22 +42,20 @@ interface PostProps {
   id: string | string[] | undefined
 }
 
-// export async function getStaticProps (context: GetStaticPropsContext): Promise<GetStaticPropsResult<PostProps>> {
-export async function getStaticProps ({
-  params,
-}: GetStaticPropsContext): Promise<GetStaticPropsResult<PostProps>> {
+/* export async function getStaticProps ({ */
+/* params, */
+/* }: GetStaticPropsContext): Promise<GetStaticPropsResult<PostProps>> { */
+export async function getStaticProps (
+  context: GetStaticPropsContext
+): Promise<GetStaticPropsResult<PostProps>> {
   await Promise.resolve('async needs await')
   return {
     props: {
-      id: params!.id,
+      id: context.params?.id,
     },
   }
 }
 
-//function Blog (params: InferGetStaticPropsType<typeof getStaticProps>) {
-//function Blog ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
-// will resolve posts to type Post[]
-//}
 function Post ({
   id,
 }: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element {
