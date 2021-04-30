@@ -1,4 +1,4 @@
-# Overnext - Overly Opinionated Next.js Boilerplate ![webpack version](https://img.shields.io/badge/webpack-5.35.1-brightgreen) ![@babel/core version](https://img.shields.io/badge/@babel/core-7.13.16-brightgreen)
+# Overnext - Overly Opinionated Next.js Boilerplate
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/einselbst/overnext/Continuous%20integration)
 [![Continuous integration](https://github.com/einSelbst/overnext/actions/workflows/basics.yml/badge.svg)](https://github.com/einSelbst/overnext/actions/workflows/basics.yml)
@@ -25,6 +25,8 @@
 
 ![next version](https://img.shields.io/badge/next-10.2.0-brightgreen)
 ![react version](https://img.shields.io/badge/react-17.0.2-brightgreen)
+![webpack version](https://img.shields.io/badge/webpack-5.35.1-brightgreen)
+![@babel/core version](https://img.shields.io/badge/@babel/core-7.13.16-brightgreen)
 ![typescript version](https://img.shields.io/badge/typescript-4.2.4-brightgreen)
 ![cypress version](https://img.shields.io/badge/cypress-7.1.0-brightgreen)
 ![jest version](https://img.shields.io/badge/jest-26.6.3-brightgreen)
@@ -455,6 +457,15 @@ info: Display info about the scripts
 - ToDo: [prow github action](https://github.com/jpmcb/prow-github-actions)
 - ToDo: [task completed checker action](https://github.com/kentaro-m/task-completed-checker-action)
 </details>
+
+## Learnings
+
+### Deployment
+
+There are a few differences between Vercel & Netlify.
+
+- `sass` module can be a `devDependency` on Netlify, but must be a (production) `dependency` on Vercel
+- i18n routing: on Vercel the user is redirected to the browser detected language by default, but not on Netlify
 
 ## Credits
 
