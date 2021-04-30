@@ -14,6 +14,7 @@ class _document extends Document {
     return Document.getInitialProps(context)
   }
 
+  // I would prefer putting the font declarations in _app.jsx as they wouldn't push down the other meta tags
   render (): JSX.Element {
     return (
       <Html>
