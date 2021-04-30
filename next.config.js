@@ -13,11 +13,14 @@ const nextConfiguration = {
   poweredByHeader: false,
   reactStrictMode: true,
   target: 'serverless',
+  env: {
+    customKey: 'my-value',
+    platform: process.env.VERCEL === '1' ? 'Vercel' : 'Netlify', // just a test
+  },
   i18n: {
     locales: ['en', 'de', 'es', 'fr', 'it'],
     defaultLocale: 'en',
   },
-
   webpack: (config, _options) => {
     // modify the `config` here
     return config

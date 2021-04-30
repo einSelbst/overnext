@@ -1,3 +1,14 @@
+const baseUrl2 = (): string => {
+  // eslint-disable-next-line no-console
+  console.log('evaluating base URL in env config')
+
+  if (process.env.VERCEL === '1')
+    return `https://${process.env.VERCEL_URL as string}`
+  if (process.env.NETLIFY === 'true')
+    return `https://${process.env.DEPLOY_PRIME_URL as string}`
+  return 'example.com'
+}
+
 export default {
   PRODUCTION: process.env.NODE_ENV === 'production',
 
@@ -16,4 +27,5 @@ export default {
    * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_Coalescing_Operator | Nullish Coalescing Operator}
    */
   SITE_URL: process.env.URL ?? 'https://overnext.vercel.app',
+  SITE_URL2: baseUrl2(),
 }

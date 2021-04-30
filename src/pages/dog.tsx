@@ -19,18 +19,16 @@ export const config = {
 }
 
 interface HomeProps {
-  /* host: string | undefined */
   host: string
 }
 
-/* export const getStaticProps: GetStaticProps<HomeProps> = async ( */
 export const getStaticProps: GetStaticProps = async (
   _context: GetStaticPropsContext
 ): Promise<GetStaticPropsResult<HomeProps>> => {
   await Promise.resolve(
     'This is just a placeholder to make my typescript linter happy'
   )
-
+  /* eslint-disable no-console */
   console.log('now in getstaticprops')
 
   console.log('process.env.URL')
@@ -43,6 +41,8 @@ export const getStaticProps: GetStaticProps = async (
   if (process.env.URL) url = process.env.URL
 
   console.log(url)
+  /* eslint-enable no-console */
+
   return {
     props: {
       host: url,
@@ -76,6 +76,8 @@ const Dog: NextLayoutPage = (
         Find out more <a href={host as string}>here</a>
       </h2>
       <Byline author='Meow Meow Fuzzyface' />
+      The value of platform is: {process.env.platform}
+      The value of customKey is: {process.env.customKey}
       {isAmp ? (
         <amp-img width='800' height='450' src={imageUrl} alt='a cute pups' />
       ) : (

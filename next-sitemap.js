@@ -1,4 +1,7 @@
 const baseUrl = () => {
+  // eslint-disable-next-line no-console
+  console.log('evaluating base URL in sitemap config')
+
   if (process.env.VERCEL === '1') return `https://${process.env.VERCEL_URL}`
   if (process.env.NETLIFY === true)
     return `https://${process.env.DEPLOY_PRIME_URL}`
