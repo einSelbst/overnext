@@ -7,5 +7,13 @@
     "void-style": "off",
     "require-sri": "off"
   },
-  "plugins": []
+  "plugins": [],
+  "elements": [
+    "html5",
+    {
+      "link": {
+        "requiredAttributes": ["rel"]
+      }
+    }
+  ]
 }
