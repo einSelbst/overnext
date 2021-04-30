@@ -20,6 +20,11 @@ class _document extends Document {
         <Head>
           <link rel='preconnect' href='https://fonts.gstatic.com' />
           <link
+            rel='preload'
+            href='https://fonts.googleapis.com/css2?family=Inter&family=Sansita+Swashed&display=swap'
+            as='style'
+          />
+          <link
             href='https://fonts.googleapis.com/css2?family=Inter&family=Sansita+Swashed&display=swap'
             rel='stylesheet'
           />
