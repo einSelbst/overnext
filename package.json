@@ -225,6 +225,14 @@
   },
   "nyc": {
     "extends": "@istanbuljs/nyc-config-typescript",
+    "reporter": [
+      "clover",
+      "json",
+      "json-summary",
+      "text",
+      "text-summary",
+      "lcov"
+    ],
     "exclude": [
       "src/pages/api/__coverage__.js"
     ]
