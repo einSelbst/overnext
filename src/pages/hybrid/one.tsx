@@ -2,6 +2,7 @@ import { useAmp } from 'next/amp'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
+/* istanbul ignore next */
 export const config = {
   amp: 'hybrid',
 }
