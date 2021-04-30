@@ -14,6 +14,7 @@ import {
   InferGetStaticPropsType,
 } from 'next'
 
+/* istanbul ignore next */
 export const config = {
   amp: 'hybrid',
 }
