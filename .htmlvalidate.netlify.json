@@ -1,6 +1,0 @@
-{
-  "extends": [".htmlvalidate.json"],
-  "rules": {
-    "no-inline-style": "off"
-  }
-}
