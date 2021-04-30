@@ -25,8 +25,10 @@ const One = (): JSX.Element => {
           <Link href='/hybrid/one'>
             <a>View Non-AMP Version</a>
           </Link>
+        ) : process.env.PRODUCTION ? (
+          <Link href='/hybrid/one.amp'>view server amp version via Link</Link>
         ) : (
-          <Link href='/hybrid/one?amp=1'>view amp version via Link</Link>
+          <Link href='/hybrid/one?amp=1'>view local amp version via Link</Link>
         )}
       </p>
       <p>
