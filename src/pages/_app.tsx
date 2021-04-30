@@ -6,6 +6,7 @@ import type { AppLayoutProps } from 'next/app'
 import Head from 'next/head'
 import * as React from 'react'
 /* import 'styles/main.css' // tailwind */
+import 'styles/global.scss' // global styles
 import { SEO, ENV } from 'config'
 import DefaultLayout from 'layouts/default.layout'
 
@@ -78,6 +79,20 @@ const HeadIcons = (): JSX.Element => {
       )}
       {/* <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86" /> see https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag */}
       {/* Browsers use this in some areas to help your brand feel more embedded */}
+
+      {/* <link
+          rel='preload'
+          href='https://unpkg.com/marx-css/css/marx.min.css'
+          as='style'
+          type='text/css'
+          />
+          <link
+          rel='stylesheet'
+          href='https://unpkg.com/marx-css/css/marx.min.css'
+          type='text/css'
+          />
+          <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css" />
+        */}
       <meta name='theme-color' content='#ffffff' />
       {/* Windows uses these to help your brand feel more embedded */}
       <meta name='msapplication-TileColor' content='#da532c' />
@@ -159,7 +174,8 @@ const HeadIcons = (): JSX.Element => {
   )
 }
 
-function _app ({ Component, pageProps }: AppLayoutProps): JSX.Element {
+/* function _app ({ Component, pageProps }: AppLayoutProps): JSX.Element { */
+function _app ({ Component, pageProps }: AppLayoutProps): React.ReactElement {
   const isAmp = useAmp()
 
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment

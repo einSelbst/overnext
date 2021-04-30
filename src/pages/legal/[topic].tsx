@@ -1,6 +1,7 @@
 import { NextSeo } from 'next-seo'
 import { useRouter } from 'next/router'
 import ThemeChanger from 'components/layout/theme-changer'
+import { ENV } from 'config'
 import LegalLayout from 'layouts/legal.layout'
 
 const _Topic = (): JSX.Element => {
@@ -15,11 +16,11 @@ const _Topic = (): JSX.Element => {
       <NextSeo
         title={firstTopic}
         description='A legal topic.'
-        canonical='https://feehikel.vercel.app'
+        canonical='https://overnext.vercel.app'
         languageAlternates={locales?.map((loc: string) => {
           return {
             hrefLang: loc,
-            href: `https://feehikel.vercel.app/${loc}/legal/${
+            href: `https://overnext.vercel.app/${loc}/legal/${
               firstTopic || ''
             }`,
           }
@@ -51,6 +52,7 @@ const _Topic = (): JSX.Element => {
         <article>
           <header>
             <p>The Header of the article</p>
+            <p>Main URL for this deployment is {ENV.SITE_URL}</p>
           </header>
           <section className='introduction'></section>
           <section className='content'>Content goes here</section>

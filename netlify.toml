@@ -1,7 +1,7 @@
 [build]
 command = "ls -la && printenv && npm run build"
 publish = ".next"
-ignore = "git diff --quiet \"${CACHED_COMMIT_REF}\" \"${COMMIT_REF}\" .src/* .public/* netlify.toml next-env.d.ts global.d.ts next-sitemap.js next.config.js package.json pnpm-lock.yaml postcss.config.js tailwind.config.js tsconfig.json"
+ignore = "git diff --quiet \"${CACHED_COMMIT_REF}\" \"${COMMIT_REF}\" src/**/* public/* netlify.toml next-env.d.ts global.d.ts next-sitemap.js next.config.js package.json pnpm-lock.yaml postcss.config.js tailwind.config.js tsconfig.json"
 
   [build.environment]
   # CI = "1"
@@ -37,9 +37,6 @@ NODE_ENV = "production"
 
 [[plugins]]
 package = "@netlify/plugin-nextjs"
-
-[[plugins]]
-package = "netlify-plugin-cache-nextjs"
 
 [[plugins]]
 # runs Cypress tests against the deployed URL
@@ -88,7 +85,7 @@ package = "netlify-plugin-checklinks"
   # You can mark some check as skipped, which will block checklinks
   # from ever attempting to execute them.
   # skipPatterns is an array of strings you can match against failing reports
-  skipPatterns = ["index.html", "legal"]
+  skipPatterns = ["index.html", "legal", "page-", "dog"]
 
   # You can mark some check as todo, which will execute the check, but allow failures.
   # todoPatterns is an array of strings you can match against failing reports

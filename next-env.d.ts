@@ -7,7 +7,7 @@ import type {
 import type { AppProps } from 'next/app'
 
 declare module 'next' {
-  type NextLayoutComponentType<P = unknown> = NextComponentType<
+  type NextLayoutComponentType<P = Record<string, unknown>> = NextComponentType<
     NextPageContext,
     unknown,
     P
@@ -15,7 +15,7 @@ declare module 'next' {
     Layout?: ReactNode
   }
 
-  type NextLayoutPage<P = unknown, IP = P> = NextComponentType<
+  type NextLayoutPage<P = Record<string, unknown>, IP = P> = NextComponentType<
     NextPageContext,
     IP,
     P

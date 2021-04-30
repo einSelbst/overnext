@@ -1,3 +1,11 @@
+/* import { GetStaticProps, GetStaticPropsContext } from 'next' */
+import {
+  GetStaticProps,
+  GetStaticPropsContext,
+  GetStaticPropsResult,
+  InferGetStaticPropsType,
+  NextLayoutPage,
+} from 'next'
 import { useAmp } from 'next/amp'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -10,7 +18,47 @@ export const config = {
   amp: 'hybrid',
 }
 
-const Dog = (): JSX.Element => {
+interface HomeProps {
+  host: string
+}
+
+export const getStaticProps: GetStaticProps = async (
+  _context: GetStaticPropsContext
+): Promise<GetStaticPropsResult<HomeProps>> => {
+  await Promise.resolve(
+    'This is just a placeholder to make my typescript linter happy'
+  )
+  /* eslint-disable no-console */
+  console.log('now in getstaticprops')
+
+  console.log('process.env.URL')
+  console.log(process.env.URL)
+
+  console.log('process.env.SITE_URL')
+  console.log(process.env.SITE_URL)
+
+  let url = 'https://overnext.vercel.app'
+  if (process.env.URL) url = process.env.URL
+
+  console.log(url)
+  /* eslint-enable no-console */
+
+  return {
+    props: {
+      host: url,
+    },
+  }
+}
+
+/* const Dog:NextPage<HomeProps> = (props: HomeProps): JSX.Element => { */
+/* const Dog: NextPage = (props: HomeProps): JSX.Element => { */
+/* const Dog: NextPage = (props: HomeProps) => { */
+/* const Dog: NextPage = () => { */
+const Dog: NextLayoutPage = (
+  /* props: InferGetStaticPropsType<typeof getStaticProps> */
+  { host }: InferGetStaticPropsType<typeof getStaticProps>
+) => {
+  /* const Dog = (props: HomeProps): JSX.Element => { */
   const isAmp = useAmp()
   const router = useRouter()
   const { locale } = router
@@ -24,7 +72,12 @@ const Dog = (): JSX.Element => {
         <link rel='preload' href={imageUrl} as='image' />
       </Head>
       <h1>The Dog (Hybrid AMP Page)</h1>
+      <h2>
+        Find out more <a href={host as string}>here</a>
+      </h2>
       <Byline author='Meow Meow Fuzzyface' />
+      The value of platform is: {process.env.platform}
+      The value of customKey is: {process.env.customKey}
       {isAmp ? (
         <amp-img width='800' height='450' src={imageUrl} alt='a cute pups' />
       ) : (

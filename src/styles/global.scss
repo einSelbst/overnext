@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+}
+
+#__next {
+  display: grid;
+  height: 100vh;
+  grid-template: auto 1fr auto / auto 1fr auto;
+  font-family: system-ui, sans-serif;
+}
+
+header {
+  background: lightpink;
+  padding: 2rem;
+  grid-column: 1 / 4;
+}
+
+.left {
+  background: lightblue;
+  grid-column: 1 / 2;
+}
+
+.container {
+  background-color: lightgoldenrodyellow;
+  grid-column: 2 / 3;
+}
+
+main {
+  padding: 2rem;
+  display: grid;
+  background: lavender;
+  place-items: center;
+}
+
+.right {
+  background: yellow;
+  grid-column: 3 / 4;
+}
+
+footer {
+  background: wheat;
+  padding: 2rem;
+  text-align: center;
+  grid-column: 1 / 4;
+}
+
+aside {
+  padding: 1rem;
+  writing-mode: vertical-lr;
+}

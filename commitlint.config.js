@@ -20,6 +20,7 @@ module.exports = {
         'revert',
         'style', // this means 'code' style
         'test',
+        'wip',
       ],
     ],
   },

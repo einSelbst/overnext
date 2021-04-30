@@ -145,13 +145,13 @@ validate: Validate source code and output files
 validate:src: Format, lint, type-check & unit test the app
 validate:out: Build app, run integration tests & validate generated html
 build:analyze: Build app and output bundle analyzer diagrams
-build:ssr: used on CI for compressed size` action
-cz: Make new commit
-docs: Generate typedoc docs
+build:size: build app and measure loading performance
 find:unused: Find unused files
-size: build app and measure loading performance
-info: Display info about the scripts
+build:ssr: used on CI for 'compressed size' action
+cz: Make new commit
 release: Prepare a new release
+docs: Generate typedoc docs
+info: Display info about the scripts
 ```
 
 ## Code Style

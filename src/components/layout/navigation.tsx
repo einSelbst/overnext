@@ -7,6 +7,14 @@ export const Navigation = (): JSX.Element => {
         <a>Home</a>
       </Link>{' '}
       |{' '}
+      <Link href='/dog'>
+        <a>Dog</a>
+      </Link>{' '}
+      |{' '}
+      <Link href='/page-1'>
+        <a>Page 1</a>
+      </Link>{' '}
+      |{' '}
       <Link href='/legal/about'>
         <a>About</a>
       </Link>{' '}
