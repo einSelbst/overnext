@@ -1,3 +1,4 @@
+// https://github.com/raceychan/lepro_bi/blob/master/superset/superset-frontend/babel.config.js
 const presets = [
   [
     'next/babel',
@@ -26,7 +27,13 @@ if (process.env.APP_ENV === 'test') {
   console.log('NOT Loading coverage instrumentation')
 }
 
-module.exports = { presets, plugins }
+module.exports = {
+  /* sourceMaps: true, */
+  /* sourceType: 'module', */
+  /* retainLines: true, */
+  presets,
+  plugins,
+}
 /* module.exports = function(api) {
  *   return {presets, plugins};
  * }; */
