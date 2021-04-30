@@ -1,12 +1,6 @@
 {
-  "root": true,
-  "extends": ["html-validate:recommended", "html-validate:document"],
+  "extends": ["./.htmlvalidate.json"],
   "rules": {
-    "attribute-boolean-style": "off",
-    "attr-case": ["error", { "style": ["lowercase", "camelcase"] }],
-    "no-inline-style": "off",
-    "void-style": "off",
-    "require-sri": "off"
-  },
-  "plugins": []
+    "no-inline-style": "off"
+  }
 }
