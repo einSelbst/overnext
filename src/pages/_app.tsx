@@ -8,7 +8,9 @@ import * as React from 'react'
 /* import 'styles/main.css' // tailwind */
 import 'styles/global.scss' // global styles
 import { SEO, ENV } from 'config'
+/* import AccountSettingsLayout from 'layouts/account-settings.layout' */
 import DefaultLayout from 'layouts/default.layout'
+import SiteLayout from 'layouts/site.layout'
 
 /**
  * Web Vitals
@@ -181,19 +183,33 @@ function _app ({ Component, pageProps }: AppLayoutProps): React.ReactElement {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const Layout = Component.Layout || DefaultLayout
 
+  // temporary test
+  /* const { Component, pageProps, router } = this.props */
+  /* const getLayout = Component.getLayout || (page => <SiteLayout children={page} />) */
+  const foo = (page: any) => {
+    return <SiteLayout>{page}</SiteLayout>
+  }
+  const getLayout: React.ReactNode =
+    (Component.getLayout as React.ReactNode) ||
+    ((foo as unknown) as React.ReactNode)
+
+  /* return getLayout(<Component {...pageProps} />) */
+
   // amp pages doesn't work well with the theme so I had to split it
   return isAmp ? (
     <>
       <DefaultSeo {...SEO} />
       <HeadIcons />
-      <Component {...pageProps} />
+      {getLayout(<Component {...pageProps} />)}
+      {/* <Component {...pageProps} /> */}
     </>
   ) : (
     <ThemeProvider defaultTheme='system' attribute='class'>
       <DefaultSeo {...SEO} />
       <HeadIcons />
       <Layout>
-        <Component {...pageProps} />
+        {getLayout(<Component {...pageProps} />)}
+        {/* <Component {...pageProps} /> */}
       </Layout>
     </ThemeProvider>
   )
