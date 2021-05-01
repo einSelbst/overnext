@@ -1,5 +1,6 @@
 /**
- * This page uses const instead of function for
+ * This page uses function expressions / const instead of
+ * function declaration for
  * `getStaticProps` and `getStaticPaths`
  */
 // eslint-disable-next-line unicorn/prefer-node-protocol
@@ -40,7 +41,16 @@ export const getStaticPaths: GetStaticPaths = async (
   }
 }
 
-interface FragmentsProps {
+/**
+ * When it comes to types or interfaces, we suggest following
+ * the guidelines presented by the react-typescript-cheatsheet community:
+ *
+ *  - “always use interface for public API’s definition when authoring
+ *     a library or 3rd-party ambient type definitions.”
+ *  - “consider using type for your React Component Props and State,
+ *     because it is more constrained.”
+ */
+type FragmentsProps = {
   fragments: string | string[]
 }
 
