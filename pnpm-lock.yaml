@@ -15,11 +15,11 @@ specifiers:
   '@commitlint/cli': 12.1.1
   '@commitlint/config-conventional': 12.1.1
   '@cypress/code-coverage': 3.9.4
-  '@istanbuljs/nyc-config-typescript': ^1.0.1
-  '@netlify/plugin-nextjs': ^3.2.0
+  '@istanbuljs/nyc-config-typescript': 1.0.1
+  '@netlify/plugin-nextjs': 3.2.0
   '@next/bundle-analyzer': 10.1.3
   '@next/eslint-plugin-next': 10.1.3
-  '@size-limit/preset-app': ^4.10.2
+  '@size-limit/preset-app': 4.10.2
   '@testing-library/react': 11.2.6
   '@types/jest': 26.0.22
   '@types/node': 13.13.50
@@ -28,7 +28,7 @@ specifiers:
   '@types/react-dom': 17.0.3
   '@typescript-eslint/eslint-plugin': 4.22.0
   '@typescript-eslint/parser': 4.22.0
-  '@typescript-eslint/typescript-estree': ^4.22.0
+  '@typescript-eslint/typescript-estree': 4.22.0
   autoprefixer: 10.2.5
   babel-jest: 26.6.3
   babel-plugin-istanbul: 6.0.0
@@ -54,11 +54,11 @@ specifiers:
   html-validate: 4.10.0
   husky: 6.0.0
   identity-obj-proxy: 3.0.0
-  is-ci: ^3.0.0
+  is-ci: 3.0.0
   jest: 26.6.3
   jest-watch-typeahead: 0.6.3
   lint-staged: 10.5.4
-  netlify-plugin-a11y: ^0.0.12
+  netlify-plugin-a11y: 0.0.12
   netlify-plugin-cypress: 2.2.0
   next: 10.2.0
   next-compose-plugins: 2.2.1
@@ -68,25 +68,25 @@ specifiers:
   next-themes: 0.0.14
   next-unused: 0.0.6
   npm-scripts-info: 0.3.9
-  nyc: ^15.1.0
-  pnpm: ^6.2.3
+  nyc: 15.1.0
+  pnpm: 6.2.3
   postcss: 8.2.12
   prettier-standard: 16.3.0
   prop-types: 15.7.2
-  querystring: ^0.2.1
+  querystring: 0.2.1
   react: 17.0.2
   react-dom: 17.0.2
-  sass: ^1.32.11
-  size-limit: ^4.10.2
-  source-map-support: ^0.5.19
+  sass: 1.32.12
+  size-limit: 4.10.2
+  source-map-support: 0.5.19
   standard-version: 9.2.0
   start-server-and-test: 1.12.1
   tailwindcss: 2.1.2
-  ts-node: ^9.1.1
+  ts-node: 9.1.1
   tslib: 2.2.0
   typedoc: 0.20.36
   typescript: 4.2.4
-  typescript-eslint-language-service: ^4.1.4
+  typescript-eslint-language-service: 4.1.4
   webpack: 5.35.1
 
 dependencies:
@@ -107,7 +107,7 @@ dependencies:
   jest: 26.6.3_ts-node@9.1.1
   jest-watch-typeahead: 0.6.3_jest@26.6.3
   netlify-plugin-cypress: 2.2.0
-  next: 10.2.0_7dac5c5159229600287b612662ec8ee0
+  next: 10.2.0_817545cb9d625d766e9ba89f71568d29
   next-compose-plugins: 2.2.1
   next-pwa: 5.2.15_b8d06666e5fae788980cd91bf950668b
   next-seo: 4.24.0_3a7f9b0847035abd95643f9e1809652e
@@ -118,7 +118,7 @@ dependencies:
   querystring: 0.2.1
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
-  sass: 1.32.11
+  sass: 1.32.12
   start-server-and-test: 1.12.1
   tailwindcss: 2.1.2_d887a42ede92218908fd5c3cc0b71177
   tslib: 2.2.0
@@ -923,7 +923,7 @@ packages:
       '@babel/compat-data': 7.13.15
       '@babel/core': 7.13.16
       '@babel/helper-validator-option': 7.12.17
-      browserslist: 4.16.5
+      browserslist: 4.16.6
       semver: 6.3.0
 
   /@babel/helper-compilation-targets/7.13.16_@babel+core@7.4.5:
@@ -934,7 +934,7 @@ packages:
       '@babel/compat-data': 7.13.15
       '@babel/core': 7.4.5
       '@babel/helper-validator-option': 7.12.17
-      browserslist: 4.16.5
+      browserslist: 4.16.6
       semver: 6.3.0
     dev: true
 
@@ -2304,7 +2304,7 @@ packages:
       '@babel/plugin-transform-typeof-symbol': 7.12.13_@babel+core@7.4.5
       '@babel/plugin-transform-unicode-regex': 7.12.13_@babel+core@7.4.5
       '@babel/types': 7.13.17
-      browserslist: 4.16.5
+      browserslist: 4.16.6
       core-js-compat: 3.11.0
       invariant: 2.2.4
       js-levenshtein: 1.1.6
@@ -4771,7 +4771,7 @@ packages:
     peerDependencies:
       postcss: ^8.1.0
     dependencies:
-      browserslist: 4.16.5
+      browserslist: 4.16.6
       caniuse-lite: 1.0.30001219
       colorette: 1.2.2
       fraction.js: 4.0.13
@@ -5207,8 +5207,8 @@ packages:
       xtend: 4.0.2
     dev: true
 
-  /browserslist/4.16.5:
-    resolution: {integrity: sha512-C2HAjrM1AI/djrpAUU/tr4pml1DqLIzJKSLDBXBrNErl9ZCCTXdhwxdJjYc16953+mBWf7Lw+uUJgpgb8cN71A==}
+  /browserslist/4.16.6:
+    resolution: {integrity: sha512-Wspk/PqO+4W9qp5iUTJsa1B/QrYn1keNCcEP5OvP7WBwT4KaDly0uONYmC6Xa3Z5IqnUgS0KcgLYu1l74x0ZXQ==}
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
@@ -6157,7 +6157,7 @@ packages:
   /core-js-compat/3.11.0:
     resolution: {integrity: sha512-3wsN9YZJohOSDCjVB0GequOyHax8zFiogSX3XWLE28M1Ew7dTU57tgHjIylSBKSIouwmLBp3g61sKMz/q3xEGA==}
     dependencies:
-      browserslist: 4.16.5
+      browserslist: 4.16.6
       semver: 7.0.0
 
   /core-js-pure/3.11.0:
@@ -7229,7 +7229,7 @@ packages:
     dependencies:
       '@mdn/browser-compat-data': 2.0.7
       ast-metadata-inferer: 0.4.0
-      browserslist: 4.16.5
+      browserslist: 4.16.6
       caniuse-lite: 1.0.30001219
       core-js: 3.11.0
       eslint: 7.25.0
@@ -11650,7 +11650,7 @@ packages:
       babel-loader: 8.2.2_d9b7ef4533e3d3c004af78c89a0b0034
       clean-webpack-plugin: 3.0.0_webpack@5.35.1
       globby: 11.0.3
-      next: 10.2.0_7dac5c5159229600287b612662ec8ee0
+      next: 10.2.0_817545cb9d625d766e9ba89f71568d29
       terser-webpack-plugin: 5.1.1_webpack@5.35.1
       workbox-webpack-plugin: 6.1.5_webpack@5.35.1
       workbox-window: 6.1.5
@@ -11668,7 +11668,7 @@ packages:
       react: ^16.0.0 || ^17.0.0
       react-dom: ^16.0.0 || ^17.0.0
     dependencies:
-      next: 10.2.0_7dac5c5159229600287b612662ec8ee0
+      next: 10.2.0_817545cb9d625d766e9ba89f71568d29
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
     dev: false
@@ -11682,7 +11682,7 @@ packages:
       '@corex/deepmerge': 2.5.6
       matcher: 4.0.0
       minimist: 1.2.5
-      next: 10.2.0_7dac5c5159229600287b612662ec8ee0
+      next: 10.2.0_817545cb9d625d766e9ba89f71568d29
     dev: false
 
   /next-themes/0.0.14_3a7f9b0847035abd95643f9e1809652e:
@@ -11692,7 +11692,7 @@ packages:
       react: '*'
       react-dom: '*'
     dependencies:
-      next: 10.2.0_7dac5c5159229600287b612662ec8ee0
+      next: 10.2.0_817545cb9d625d766e9ba89f71568d29
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
     dev: false
@@ -11708,7 +11708,7 @@ packages:
       - supports-color
     dev: true
 
-  /next/10.2.0_7dac5c5159229600287b612662ec8ee0:
+  /next/10.2.0_817545cb9d625d766e9ba89f71568d29:
     resolution: {integrity: sha512-PKDKCSF7s82xudu3kQhOEaokxggpbLEWouEUtzP6OqV0YqKYHF+Ff+BFLycEem8ixtTM2M6ElN0VRJcskJfxPQ==}
     engines: {node: '>=10.13.0'}
     hasBin: true
@@ -11736,7 +11736,7 @@ packages:
       assert: 2.0.0
       ast-types: 0.13.2
       browserify-zlib: 0.2.0
-      browserslist: 4.16.5
+      browserslist: 4.16.6
       buffer: 5.6.0
       caniuse-lite: 1.0.30001219
       chalk: 2.4.2
@@ -11768,7 +11768,7 @@ packages:
       react-dom: 17.0.2_react@17.0.2
       react-is: 16.13.1
       react-refresh: 0.8.3
-      sass: 1.32.11
+      sass: 1.32.12
       stream-browserify: 3.0.0
       stream-http: 3.1.1
       string_decoder: 1.3.0
@@ -13943,8 +13943,8 @@ packages:
       commander: 2.20.3
     dev: true
 
-  /sass/1.32.11:
-    resolution: {integrity: sha512-O9tRcob/fegUVSIV1ihLLZcftIOh0AF1VpKgusUfLqnb2jQ0GLDwI5ivv1FYWivGv8eZ/AwntTyTzjcHu0c/qw==}
+  /sass/1.32.12:
+    resolution: {integrity: sha512-zmXn03k3hN0KaiVTjohgkg98C3UowhL1/VSGdj4/VAAiMKGQOE80PFPxFP2Kyq0OUskPKcY5lImkhBKEHlypJA==}
     engines: {node: '>=8.9.0'}
     hasBin: true
     dependencies:
@@ -15906,7 +15906,7 @@ packages:
       '@webassemblyjs/wasm-edit': 1.11.0
       '@webassemblyjs/wasm-parser': 1.11.0
       acorn: 8.2.1
-      browserslist: 4.16.5
+      browserslist: 4.16.6
       chrome-trace-event: 1.0.3
       enhanced-resolve: 5.8.0
       es-module-lexer: 0.4.1
@@ -16001,7 +16001,7 @@ packages:
   /wide-align/1.1.3:
     resolution: {integrity: sha512-QGkOQc8XL6Bt5PwnsExKBPuMKBxnGxWWW3fU55Xt4feHozMUhdUMaBCk290qpm/wG5u/RSKzwdAC4i51YigihA==}
     dependencies:
-      string-width: 1.0.2
+      string-width: 2.1.1
     dev: true
 
   /word-wrap/1.2.3:
