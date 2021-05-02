@@ -186,12 +186,10 @@ function _app ({ Component, pageProps }: AppLayoutProps): React.ReactElement {
   // temporary test
   /* const { Component, pageProps, router } = this.props */
   /* const getLayout = Component.getLayout || (page => <SiteLayout children={page} />) */
-  const foo = (page: any) => {
+  const foo = (page: React.ReactNode) => {
     return <SiteLayout>{page}</SiteLayout>
   }
-  const getLayout: React.ReactNode =
-    (Component.getLayout as React.ReactNode) ||
-    ((foo as unknown) as React.ReactNode)
+  const getLayout = Component.getLayout || foo
 
   /* return getLayout(<Component {...pageProps} />) */
 
@@ -200,7 +198,7 @@ function _app ({ Component, pageProps }: AppLayoutProps): React.ReactElement {
     <>
       <DefaultSeo {...SEO} />
       <HeadIcons />
-      {getLayout(<Component {...pageProps} />)}
+      {getLayout && getLayout(<Component {...pageProps} />)}
       {/* <Component {...pageProps} /> */}
     </>
   ) : (
@@ -208,7 +206,7 @@ function _app ({ Component, pageProps }: AppLayoutProps): React.ReactElement {
       <DefaultSeo {...SEO} />
       <HeadIcons />
       <Layout>
-        {getLayout(<Component {...pageProps} />)}
+        {getLayout && getLayout(<Component {...pageProps} />)}
         {/* <Component {...pageProps} /> */}
       </Layout>
     </ThemeProvider>
