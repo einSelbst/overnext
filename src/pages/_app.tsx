@@ -198,8 +198,8 @@ function _app ({ Component, pageProps }: AppLayoutProps): React.ReactElement {
     <>
       <DefaultSeo {...SEO} />
       <HeadIcons />
-      {getLayout && getLayout(<Component {...pageProps} />)}
-      {/* <Component {...pageProps} /> */}
+      {/* {getLayout && getLayout(<Component {...pageProps} />)} */}
+      <Component {...pageProps} />
     </>
   ) : (
     <ThemeProvider defaultTheme='system' attribute='class'>
