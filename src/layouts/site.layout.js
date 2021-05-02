@@ -8,7 +8,11 @@ const SiteLayout = ({ children }) => (
         <div className='max-w-xl mx-auto px-8'>
           <nav>
             <div className='py-4 flex-shrink-0 flex items-center'>
-              <img className='h-8 w-8' src='/logo.svg' alt='' />
+              <img
+                className='h-8 w-8'
+                src='/icons/safari-pinned-tab.svg'
+                alt='Logo Icon'
+              />
               <Link href='/'>
                 <a className='ml-8 font-medium text-gray-900'>Home</a>
               </Link>
