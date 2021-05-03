@@ -41,6 +41,7 @@
     "e2e:watch": "CY_WATCH=true start-test 'pnpm dev' 3000 'pnpm test:cy'",
     "?e2e": "echo Build & serve app, then run cypress once",
     "e2e": "APP_ENV=test start-test 'pnpm serve' 3000 'cypress run'",
+    "e2e:cy": "APP_ENV=test start-test 'pnpm start' 3000 'cypress run'",
     "pree2e": "rm -rf .nyc_output coverage .next || true",
     " ------------------------- Linting ------------------------- ": "",
     "?format": "echo Format source code and fix issues",
@@ -230,8 +231,7 @@
       "json",
       "json-summary",
       "text",
-      "text-summary",
-      "lcov"
+      "text-summary"
     ],
     "exclude": [
       "src/pages/api/__coverage__.js"
