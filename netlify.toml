@@ -59,7 +59,7 @@ package = "netlify-plugin-a11y"
   # resultMode = "warn" # is "error" by default
 
 [[plugins]]
-  package = "netlify-plugin-html-validate"
+package = "netlify-plugin-html-validate"
 
 [[plugins]]
 package = "netlify-plugin-checklinks"

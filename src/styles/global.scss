@@ -1,7 +1,9 @@
 // import tailwind
 // @see https://tailwindcss.com/docs/guides/nextjs
 @tailwind base;
+@import './base.css';
 @tailwind components;
+@import './components.css';
 @tailwind utilities;
 
 body {
