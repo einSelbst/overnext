@@ -1,7 +1,6 @@
 import { DefaultSeo } from 'next-seo'
 import { ThemeProvider } from 'next-themes'
 import { useAmp } from 'next/amp'
-// import { AppProps /*, App, AppContext */ } from 'next/app'
 import type { AppLayoutProps } from 'next/app'
 import Head from 'next/head'
 import * as React from 'react'
@@ -9,6 +8,7 @@ import * as React from 'react'
 import 'styles/global.scss' // global styles
 import { SEO, ENV } from 'config'
 import DefaultLayout from 'layouts/default.layout'
+import SiteLayout from 'layouts/site.layout'
 
 /**
  * Web Vitals
@@ -74,6 +74,17 @@ const HeadIcons = (): JSX.Element => {
           <meta
             name='viewport'
             content='initial-scale=1.0, width=device-width'
+          />
+          <link rel='preconnect' href='https://fonts.gstatic.com' />
+          {/* the preload is automatically added by next.js or one of my linter rules */}
+          <link
+            rel='preload'
+            href='https://fonts.googleapis.com/css2?family=Inter&family=Sansita+Swashed&display=swap'
+            as='style'
+          />
+          <link
+            href='https://fonts.googleapis.com/css2?family=Inter&family=Sansita+Swashed&display=swap'
+            rel='stylesheet'
           />
         </>
       )}
@@ -174,12 +185,21 @@ const HeadIcons = (): JSX.Element => {
   )
 }
 
-/* function _app ({ Component, pageProps }: AppLayoutProps): JSX.Element { */
+/**
+ * Now here I do mix 2 different ways for adding a Layout, the simpler version
+ * where a page has a property `Layout` and the slightly more advanced version
+ * where a page has a function `getLayout`. I will keep both for the moment.
+ */
 function _app ({ Component, pageProps }: AppLayoutProps): React.ReactElement {
   const isAmp = useAmp()
 
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const Layout = Component.Layout || DefaultLayout
+
+  const withSiteLayout = (page: React.ReactNode) => {
+    return <SiteLayout>{page}</SiteLayout>
+  }
+  const getLayout = Component.getLayout || withSiteLayout
 
   // amp pages doesn't work well with the theme so I had to split it
   return isAmp ? (
@@ -192,9 +212,7 @@ function _app ({ Component, pageProps }: AppLayoutProps): React.ReactElement {
     <ThemeProvider defaultTheme='system' attribute='class'>
       <DefaultSeo {...SEO} />
       <HeadIcons />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <Layout>{getLayout && getLayout(<Component {...pageProps} />)}</Layout>
     </ThemeProvider>
   )
 }

@@ -13,6 +13,8 @@ declare module 'next' {
     P
   > & {
     Layout?: ReactNode
+    // eslint-disable-next-line @typescript-eslint/ban-types
+    getLayout?: () => {}
   }
 
   type NextLayoutPage<P = Record<string, unknown>, IP = P> = NextComponentType<
