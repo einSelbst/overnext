@@ -71,6 +71,10 @@ package = "netlify-plugin-checklinks"
     "*.html",
   ]
 
+  # URI root where the project being built will be deployed.
+  # Canonical URLs in local sources will be resolved to local URLs
+  canonicalroot = ${DEPLOY_PRIME_URL}
+
   # Recurse through all the links and asset references on your page, starting
   # at the entrypoints
   recursive = true
