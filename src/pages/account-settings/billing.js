@@ -10,26 +10,23 @@ const AccountSettingsBilling = () => (
             <span className='block font-medium text-sm text-gray-900 leading-tight'>
               Credit card number
             </span>
-            <div className='mt-2'>
-              <input
-                id='credit-card'
-                type='email'
-                className='block w-full border border-gray-300 rounded-lg bg-gray-100 px-3 py-2 leading-tight focus:outline-none focus:border-gray-600 focus:bg-white'
-                placeholder='4242 4242 4242 4242'
-              />
-            </div>
+            <input
+              id='credit-card'
+              type='email'
+              className='block w-full border border-gray-300 rounded-lg bg-gray-100 px-3 py-2 leading-tight focus:outline-none focus:border-gray-600 focus:bg-white mt-2'
+              placeholder='4242 4242 4242 4242'
+            />
           </label>
           <label htmlFor='billing-address' className='block mt-5'>
             <span className='block font-medium text-sm text-gray-900 leading-tight'>
               Billing address
             </span>
-            <div className='mt-2'>
-              <input
-                id='billing-address'
-                className='block w-full border border-gray-300 rounded-lg bg-gray-100 px-3 py-2 leading-tight focus:outline-none focus:border-gray-600 focus:bg-white'
-                placeholder='555 Party Drive'
-              />
-            </div>
+            <input
+              id='billing-address'
+              type='text'
+              className='block w-full border border-gray-300 rounded-lg bg-gray-100 px-3 py-2 leading-tight focus:outline-none focus:border-gray-600 focus:bg-white mt-2'
+              placeholder='555 Party Drive'
+            />
           </label>
         </div>
       </div>

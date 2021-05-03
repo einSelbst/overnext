@@ -12,14 +12,12 @@ const AccountSettingsProfile = () => (
             <span className='block fon2t-medium text-sm text-gray-900 leading-tight'>
               Display name
             </span>
-            <div className='mt-2'>
-              <input
-                id='display-name'
-                type='email'
-                className='block w-full border border-gray-300 rounded-lg bg-gray-100 px-3 py-2 leading-tight focus:outline-none focus:border-gray-600 focus:bg-white'
-                placeholder='John Doe'
-              />
-            </div>
+            <input
+              id='display-name'
+              type='email'
+              className='block w-full border border-gray-300 rounded-lg bg-gray-100 px-3 py-2 leading-tight focus:outline-none focus:border-gray-600 focus:bg-white mt-2'
+              placeholder='John Doe'
+            />
           </label>
         </div>
       </div>
