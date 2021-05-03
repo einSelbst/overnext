@@ -329,6 +329,7 @@ info: Display info about the scripts
 - [`next-sitemap`](https://github.com/iamvishnusankar/next-sitemap)
 - [`next-seo`](https://github.com/garmeeh/next-seo), for MetaTags, OpenGraph & JsonLD
 - [`next-themes`](https://github.com/pacocoursey/next-themes), for dark-mode
+- [persistend layout](https://adamwathan.me/2019/10/17/persistent-layout-patterns-in-nextjs/)
 - [`next-unused`](https://github.com/pacocoursey/next-unused)
 - integrate [`@babel/preset-env`](https://babeljs.io/docs/en/babel-preset-env) with [browserslist](https://github.com/browserslist/browserslist) currently [not possible](https://github.com/vercel/next.js/discussions/12826), can only use [`targets`](https://babeljs.io/docs/en/babel-preset-env#targets) option to set targeted browser
 
