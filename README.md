@@ -342,7 +342,7 @@ info: Display info about the scripts
 - Stage 3: some kind of CSS framework, no css-in-js
 
 - keep it [simple](https://1linelayouts.glitch.me/)
-- make use of [modern-normalize](https://github.com/sindresorhus/modern-normalize) ?
+- make use of [modern-normalize](https://github.com/sindresorhus/modern-normalize) -> is part of [tailwind](https://tailwindcss.com/docs/adding-base-styles)
 - [Tailwind CSS](https://tailwindcss.com/) - really unsure about it, esp. after reading [this](https://dev.to/jaredcwhite/why-tailwind-isn-t-for-me-5c90)
 - first, find some nice [`minimal/classless CSS framework`](https://github.com/dohliam/dropin-minimal-css)
   - [`shoelace`](https://shoelace.style/)

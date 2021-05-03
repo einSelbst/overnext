@@ -5,7 +5,7 @@ import { useAmp } from 'next/amp'
 import type { AppLayoutProps } from 'next/app'
 import Head from 'next/head'
 import * as React from 'react'
-import 'styles/main.css' // tailwind
+/* import 'styles/main.css' // tailwind */
 import 'styles/global.scss' // global styles
 import { SEO, ENV } from 'config'
 /* import AccountSettingsLayout from 'layouts/account-settings.layout' */

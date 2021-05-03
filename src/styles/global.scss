@@ -1,3 +1,9 @@
+// import tailwind
+// @see https://tailwindcss.com/docs/guides/nextjs
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
 }
