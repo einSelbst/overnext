@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import * as PropTypes from 'prop-types'
 import * as React from 'react'
 
 const SiteLayout = ({ children }) => (
@@ -43,8 +44,10 @@ const SiteLayout = ({ children }) => (
 )
 
 SiteLayout.propTypes = {
-  /* type SiteLayoutProps = { */
-  children: React.ReactNode,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 }
 
 SiteLayout.defaultProps = {

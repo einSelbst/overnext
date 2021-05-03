@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import * as PropTypes from 'prop-types'
 import * as React from 'react'
 import { getLayout as getSiteLayout } from './site.layout.js'
 
@@ -21,7 +22,10 @@ const ActiveLink = ({ children, href, className }) => {
 }
 
 ActiveLink.propTypes = {
-  children: React.ReactNode,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
   href: String,
   className: String,
 }
@@ -66,7 +70,10 @@ const AccountSettingsLayout = ({ children }) => {
 }
 
 AccountSettingsLayout.propTypes = {
-  children: React.ReactNode,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 }
 
 export const getLayout = page =>
