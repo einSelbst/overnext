@@ -26,8 +26,8 @@ ActiveLink.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
-  href: String,
-  className: String,
+  href: PropTypes.string,
+  className: PropTypes.string,
 }
 
 const AccountSettingsLayout = ({ children }) => {
