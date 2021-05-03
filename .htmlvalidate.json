@@ -4,6 +4,8 @@
   "rules": {
     "attribute-boolean-style": "off",
     "attr-case": ["error", { "style": ["lowercase", "camelcase"] }],
+    "no-inline-style": "off",
+    "no-redundant-for": "off",
     "void-style": "off",
     "require-sri": "off"
   },
