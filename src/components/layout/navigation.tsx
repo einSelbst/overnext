@@ -29,12 +29,18 @@ export const Navigation = (): JSX.Element => {
         </Link>
       </nav>
       <div className='mt-2'>
-        {/* ToDo: localize title */}
-        <input
-          title='Search on Overnext'
-          className='block w-full border border-gray-300 rounded-lg bg-gray-100 px-3 py-2 leading-tight focus:outline-none focus:border-gray-600 focus:bg-white'
-          placeholder='Search...'
-        />
+        <label htmlFor='search-global'>
+          <span>Discover Vehicles</span>
+          {/* ToDo: localize title */}
+          <input
+            title='Search on Overnext'
+            type='search'
+            id='search-global'
+            name='Search Bar'
+            className='block w-full border border-gray-300 rounded-lg bg-gray-100 px-3 py-2 leading-tight focus:outline-none focus:border-gray-600 focus:bg-white'
+            placeholder='Search...'
+          />
+        </label>
       </div>
     </>
   )
