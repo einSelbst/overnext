@@ -77,6 +77,16 @@ const HeadIcons = (): JSX.Element => {
             name='viewport'
             content='initial-scale=1.0, width=device-width'
           />
+          <link rel='preconnect' href='https://fonts.gstatic.com' />
+          <link
+            rel='preload'
+            href='https://fonts.googleapis.com/css2?family=Inter&family=Sansita+Swashed&display=swap'
+            as='style'
+          />
+          <link
+            href='https://fonts.googleapis.com/css2?family=Inter&family=Sansita+Swashed&display=swap'
+            rel='stylesheet'
+          />
         </>
       )}
       {/* <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86" /> see https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag */}

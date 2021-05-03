@@ -18,18 +18,7 @@ class _document extends Document {
   render (): JSX.Element {
     return (
       <Html>
-        <Head>
-          <link rel='preconnect' href='https://fonts.gstatic.com' />
-          <link
-            rel='preload'
-            href='https://fonts.googleapis.com/css2?family=Inter&family=Sansita+Swashed&display=swap'
-            as='style'
-          />
-          <link
-            href='https://fonts.googleapis.com/css2?family=Inter&family=Sansita+Swashed&display=swap'
-            rel='stylesheet'
-          />
-        </Head>
+        <Head />
         <body>
           <Main />
           <NextScript />
