@@ -462,7 +462,7 @@ info: Display info about the scripts
 
 ## Learnings
 
-### Deployment
+### Hosting
 
 There are a few differences between Vercel & Netlify.
 
