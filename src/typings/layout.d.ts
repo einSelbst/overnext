@@ -24,17 +24,6 @@ declare module 'next' {
   > & {
     Layout: ReactNode
   }
-
-  type NextLayoutComponentTypeUnused<
-    C extends BaseContext = NextPageContext,
-    IP = unknown,
-    P = unknown
-  > = ComponentType<P> & {
-    getInitialProps?(context: C): IP | Promise<IP>
-    // eslint-disable-next-line @typescript-eslint/ban-types
-    getLayout?: () => {}
-    Layout?: ReactNode
-  }
 }
 
 declare module 'next/app' {
