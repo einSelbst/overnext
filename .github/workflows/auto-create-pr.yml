@@ -23,7 +23,7 @@ jobs:
           channel: grW1TqGJMKSq2S
 
       - name: Generate branch name
-        uses: actions/github-script@v3
+        uses: actions/github-script@v4
         id: set-branch-name
         with:
           script: |
