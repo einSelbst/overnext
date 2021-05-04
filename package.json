@@ -15,7 +15,7 @@
   "scripts": {
     "prepare": "is-ci || husky install",
     "preinstall": "is-ci || npx only-allow pnpm",
-    "postinstall": "typesync",
+    "postinstall": "is-ci || typesync",
     " ----------------------- Development ----------------------- ": "",
     "?dev": "echo Start next app in dev mode",
     "dev": "next",
