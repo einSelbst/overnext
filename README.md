@@ -357,17 +357,17 @@ info: Display info about the scripts
 
 ### Github Actions
 
-- skip unneccessary action runs
-- `basic`: runs linters, tests and build
+- [Skip Duplicate Actions](https://github.com/marketplace/actions/skip-duplicate-actions)
 - [`create-pull-request`](https://github.com/thomaseizinger/create-pull-request), creates PR's for new branches
-- `compressed-size`: checks the size of the bundled files and adds a comment in the PR
-- [`eslint-plus-action`](https://github.com/bradennapier/eslint-plus-action), runs eslint and prints a summary in the PR
-- Lighthouse on Vercel: Runs a Lighthouse Audit on the Vercel Preview URL
-- Labeler: adds labels to PR's based on the changed files
-- Badges: update version badges in README
-- [Super-Linter](https://github.com/github/super-linter)
+- [Labeler](https://github.com/actions/labeler): adds labels to PR's based on the changed files
+- [`dependency-version-badge`](https://github.com/bahmutov/dependency-version-badge): update version badges in README
+- `basic`: runs linters, tests and build
+- [`compressed-size`](https://github.com/preactjs/compressed-size-action): checks the size of the bundled files and adds a comment in the PR
 - [`size-limit`](https://github.com/andresz1/size-limit-action) for load time performance tracking
-- [`auto-push-css`](https://github.com/projectwallace/push-css-action), needs `PROJECT_WALLACE_TOKEN` set in Repo Env Secrets
+- [`eslint-plus-action`](https://github.com/bradennapier/eslint-plus-action), runs eslint and prints a summary in the PR
+- [Super-Linter](https://github.com/github/super-linter)
+- Lighthouse on Vercel: Runs a Lighthouse Audit on the Vercel Preview URL
+- WIP: [`auto-push-css`](https://github.com/projectwallace/push-css-action), needs `PROJECT_WALLACE_TOKEN` set in Repo Env Secrets
 
 #### WIP Security Audits
 
@@ -388,7 +388,7 @@ info: Display info about the scripts
 - [Cypress Dashboard](https://dashboard.cypress.io/projects/esdwok/runs)
 - [Fossa Dashboard](https://app.fossa.com/projects)
   - needs `FOSSA_API_KEY` env var in Github
-- [Renovate Dashboard](https://app.renovatebot.com/dashboard#github/einSelbst/overnext)
+- [Renovate Dashboard](https://app.renovatebot.com/dashboard#github/einSelbst/overnext) for dependency management
 - [Vercel Dashboard](https://vercel.com/einselbst/overnext)
 - [Netlify Dashboard](https://app.netlify.com/sites/overnext/overview)
 - [Dareboost](https://www.dareboost.com/en/dashboard)
@@ -398,13 +398,13 @@ info: Display info about the scripts
 
 - [Documentation](https://nextjs.org/docs/deployment)
 - [Vercel](https://vercel.com/import?filter=next.js)
-  - override "Install Command": `npx pnpm i -P` (if pnpm should be used), skips dev dependencies
+  - for pnpm: override "Install Command" with: `npx pnpm i -P`, this skips dev dependencies
   - override "Build Command": `next build && npx pnpm run postbuild` (vercel will use yarn otherwise)
-  - use [`vercelignore`](https://vercel.com/guides/prevent-uploading-sourcepaths-with-vercelignore) to only upload neccessary files
+  - [`vercelignore`](https://vercel.com/guides/prevent-uploading-sourcepaths-with-vercelignore) to only upload neccessary files
 - [Netlify](https://www.netlify.com/blog/2020/11/30/how-to-deploy-next.js-sites-to-netlify/)
-  - [`netlify.toml`](https://github.com/netlify/netlify-plugin-nextjs)
-  - [assets](https://docs.netlify.com/configure-builds/file-based-configuration/#post-processing)
   - "Redirects and rewrites using next.config.js aren’t currently supported for Next.js sites on Netlify."
+  - [`netlify.toml`](https://github.com/netlify/netlify-plugin-nextjs)
+  - asset [post processing](https://docs.netlify.com/configure-builds/file-based-configuration/#post-processing)
   - [skip](https://docs.netlify.com/configure-builds/file-based-configuration/#ignore-builds) deployments without [relevant changes](https://answers.netlify.com/t/issues-with-build-ignore-command-not-ignoring-as-required/23428/13?u=einselbst)
   - netlify plugins
     - [netlify-plugin-cypress](https://github.com/cypress-io/netlify-plugin-cypress)
