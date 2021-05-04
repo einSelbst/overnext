@@ -162,7 +162,7 @@ info: Display info about the scripts
   - [`prop-types`](https://www.npmjs.com/package/prop-types) (for run-time type checking), more [info](https://stackoverflow.com/a/54690878/531439)
 - [Typescript](https://www.typescriptlang.org/) (for compile time type checking)
   - with [`tslib`](https://www.npmjs.com/package/tslib) for imports optimization
-  - [`typesync`]() for find dependency typings
+  - [`typesync`](https://github.com/jeffijoe/typesync) for find dependency typings
   - [TSDoc](https://tsdoc.org/) docstrings to generate [`typedoc`](https://github.com/TypeStrong/typedoc) documentation
 - [Standard](https://github.com/standard/standard)
 - [EditorConfig](https://editorconfig.org/)
