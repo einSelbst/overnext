@@ -14,6 +14,7 @@
   "repository": "https://github.com/einSelbst/overnext",
   "scripts": {
     "prepare": "is-ci || husky install",
+    "preinstall": "is-ci || npx only-allow pnpm",
     "postinstall": "typesync",
     " ----------------------- Development ----------------------- ": "",
     "?dev": "echo Start next app in dev mode",
@@ -77,9 +78,7 @@
     "?info": "echo Display info about the scripts",
     "info": "npm-scripts-info",
     "lint-staged": "lint-staged",
-    "commitlint": "commitlint",
-    " --------------------------- WIP --------------------------- ": "",
-    "skip-for-now-preinstall": "npx only-allow pnpm"
+    "commitlint": "commitlint"
   },
   "config": {
     "commitizen": {
