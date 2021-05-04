@@ -11,7 +11,7 @@ on:
   # repository_dispatch:
   #   types: [new-pull-request]
   pull_request:
-    types: [opened, synchronize, ready_for_review]
+    types: [opened, synchronize, ready_for_review, review_requested]
   issue_comment:
     types: [edited]
 
