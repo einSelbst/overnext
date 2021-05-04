@@ -5,8 +5,6 @@
  * @see {@link https://stackoverflow.com/a/42257742/531439}
  *
  */
-// Type errors when I declare this...
-// declare module 'next-themes'
 
 // for amp, which doesn't have type definitions
 // keep it simple and use any
