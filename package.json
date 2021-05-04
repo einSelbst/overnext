@@ -14,6 +14,7 @@
   "repository": "https://github.com/einSelbst/overnext",
   "scripts": {
     "prepare": "is-ci || husky install",
+    "postinstall": "typesync",
     " ----------------------- Development ----------------------- ": "",
     "?dev": "echo Start next app in dev mode",
     "dev": "next",
@@ -173,7 +174,8 @@
     "source-map-support": "0.5.19",
     "standard-version": "9.2.0",
     "ts-node": "9.1.1",
-    "typescript-eslint-language-service": "4.1.4"
+    "typescript-eslint-language-service": "4.1.4",
+    "typesync": "^0.8.0"
   },
   "optionalDependencies": {
     "fsevents": "2.3.2",
