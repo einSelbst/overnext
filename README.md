@@ -300,7 +300,7 @@ info: Display info about the scripts
 - [Jest](https://jestjs.io/)
   - [`react-testing-library`](https://testing-library.com/docs/react-testing-library/intro)
 - [Cypress](https://www.cypress.io/)
-  - [Code Coverage](https://docs.cypress.io/guides/tooling/code-coverage.html)
+  - [Code Coverage](https://docs.cypress.io/guides/tooling/code-coverage.html) via [istanbul](https://istanbul.js.org/) and [nyc](https://github.com/istanbuljs/nyc), bon voyage
   - [Dashboard](https://dashboard.cypress.io/)
   - [Github Integration](https://docs.cypress.io/guides/dashboard/github-integration.html#Install-the-Cypress-GitHub-app)
   - [cypress-watch-and-reload](https://github.com/bahmutov/cypress-watch-and-reload)
