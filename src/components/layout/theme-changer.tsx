@@ -1,19 +1,12 @@
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
 
-/* const ThemeChanger = (): JSX.Element | null => { */
 const ThemeChanger = (): ComponentReturnType => {
+  type ThemeType = ReturnType<typeof useTheme>
+
+  const { theme, setTheme }: ThemeType = useTheme()
   const [mounted, setMounted] = useState(false)
 
-  type ThemeType = ReturnType<typeof useTheme>
-  const { theme, setTheme }: ThemeType = useTheme()
-  /* type SetThemeType = (theme: string) => void */
-  /* const {
-   *   theme,
-   *   setTheme,
-   * }: { theme?: string | undefined; setTheme: SetThemeType } = useTheme()
-   */
-  // When mounted on client, now we can show the UI
   useEffect(() => setMounted(true), [])
 
   // ToDo [>1.2]: refactor to use nextjs default way of rendering only on client
