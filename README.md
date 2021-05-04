@@ -159,11 +159,13 @@ info: Display info about the scripts
 ## Code Style
 
 - React [Strict Mode](https://reactjs.org/docs/strict-mode.html) enabled in [development](https://nextjs.org/docs/api-reference/next.config.js/react-strict-mode)
-- [Typescript](https://www.typescriptlang.org/) (for compile time type checking) with [`tslib`](https://www.npmjs.com/package/tslib)
-- [`prop-types`](https://www.npmjs.com/package/prop-types) (for run-time type checking), more [info](https://stackoverflow.com/a/54690878/531439)
+  - [`prop-types`](https://www.npmjs.com/package/prop-types) (for run-time type checking), more [info](https://stackoverflow.com/a/54690878/531439)
+- [Typescript](https://www.typescriptlang.org/) (for compile time type checking)
+  - with [`tslib`](https://www.npmjs.com/package/tslib) for imports optimization
+  - [`typesync`]() for find dependency typings
+  - [TSDoc](https://tsdoc.org/) docstrings to generate [`typedoc`](https://github.com/TypeStrong/typedoc) documentation
 - [Standard](https://github.com/standard/standard)
 - [EditorConfig](https://editorconfig.org/)
-- [TSDoc](https://tsdoc.org/) docstrings to generate [`typedoc`](https://github.com/TypeStrong/typedoc) documentation
 
 ### Linter / A11y
 
