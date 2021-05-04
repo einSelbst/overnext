@@ -207,19 +207,25 @@
   },
   "next-unused": {
     "alias": {
-      "@lib/*": [
+      "lib/*": [
         "lib/*"
       ],
-      "@assets/*": [
+      "assets/*": [
         "assets/*"
       ],
-      "@config/*": [
-        "config/*"
+      "config": [
+        "config/"
       ],
-      "@components/*": [
+      "components/*": [
         "components/*"
       ],
-      "@utils/*": [
+      "layouts/*": [
+        "layouts/*"
+      ],
+      "styles/*": [
+        "styles/*"
+      ],
+      "utils/*": [
         "utils/*"
       ]
     },
