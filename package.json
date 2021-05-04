@@ -89,7 +89,6 @@
     "@axe-core/react": "4.1.1",
     "@babel/core": "7.14.0",
     "@babel/runtime": "7.14.0",
-    "@moxy/next-layout": "^2.2.3",
     "@next/bundle-analyzer": "10.2.0",
     "@types/babel__core": "7.1.14",
     "@types/node": "13.13.51",
