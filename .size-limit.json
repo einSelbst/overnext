@@ -1,12 +1,12 @@
 [
   {
     "name": "load time for all",
-    "limit": "8 s",
+    "limit": "12 s",
     "path": [".next/**/*.html"]
   },
   {
     "name": "size of all",
-    "limit": "400 kB",
+    "limit": "600 kB",
     "path": [".next/**/*.html"]
   },
   {
