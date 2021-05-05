@@ -8,7 +8,7 @@ const DefaultLayout = ({
   return (
     <>
       <header>
-        <Navigation success={true} error={false} />
+        <Navigation />
       </header>
 
       <aside className='left'>

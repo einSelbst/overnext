@@ -6,13 +6,11 @@ const SiteLayout = ({ children }) => (
   <div className='bg-white antialiased'>
     <div>
       <div>
-        <div className='safe max-w-xl mx-auto px-8'>
+        <div className='max-w-xl mx-auto px-8'>
           <nav>
             <div className='py-4 flex-shrink-0 flex items-center'>
               <img
-                width='10'
-                height='10'
-                className='safe h-7 w-7'
+                className='h-8 w-8'
                 src='/icons/safari-pinned-tab.svg'
                 alt='Logo Icon'
               />

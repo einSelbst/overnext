@@ -1,17 +1,6 @@
 import Link from 'next/link'
-import * as React from 'react'
 
-type Props = {
-  success: boolean
-  error: boolean
-}
-
-/**
- * Usage of prop-types
- * @see {@link https://fettblog.eu/typescript-react/prop-types/}
- */
-/* export const Navigation: React.ReactComponent = (props: InferProps<typeof Navigation.propTypes>): JSX.Element => { */
-export const Navigation = (props: Props): JSX.Element => {
+export const Navigation = (): JSX.Element => {
   return (
     <>
       <nav>
@@ -38,19 +27,6 @@ export const Navigation = (props: Props): JSX.Element => {
         <Link href='/legal/contact'>
           <a>Contact</a>
         </Link>
-        {/* @see https://github.com/sindresorhus/react-extras#choose */}
-        <div>
-          {(() => {
-            if (props.success) {
-              return <span>{props.success}</span>
-            }
-
-            if (props.error) {
-              return <span>{props.error}</span>
-            }
-            return <span>�</span>
-          })()}
-        </div>
       </nav>
       <div className='mt-2'>
         <label htmlFor='search-global'>
