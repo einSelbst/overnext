@@ -11,6 +11,7 @@ const baseUrl2 = (): string => {
 
 export default {
   PRODUCTION: process.env.NODE_ENV === 'production',
+  DEVELOPMENT: process.env.NODE_ENV === 'development',
 
   /**
    * Determines if we are running on server or in the client.
