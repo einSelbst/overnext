@@ -1,6 +1,6 @@
 {
   "projectId": "esdwok",
-  "baseUrl": "http://localhost:3000",
+  "baseUrl": "http://localhost:3004",
   "videoUploadOnPasses": false,
   "env": {
     "codeCoverage": {
