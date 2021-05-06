@@ -88,7 +88,6 @@
     }
   },
   "dependencies": {
-    "@axe-core/react": "4.1.1",
     "@babel/core": "7.14.0",
     "@babel/runtime": "7.14.0",
     "@moxy/next-layout": "^2.2.3",
@@ -121,6 +120,7 @@
     "webpack": "5.36.2"
   },
   "devDependencies": {
+    "@axe-core/react": "4.1.1",
     "@babel/preset-env": "7.14.1",
     "@commitlint/cli": "12.1.1",
     "@commitlint/config-conventional": "12.1.1",
@@ -181,6 +181,9 @@
   "optionalDependencies": {
     "fsevents": "2.3.2",
     "pnpm": "6.2.5"
+  },
+  "browser": {
+    "@axe-core/react": false
   },
   "packageRules": [
     {

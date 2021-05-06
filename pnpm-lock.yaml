@@ -101,7 +101,6 @@ specifiers:
   webpack: 5.36.2
 
 dependencies:
-  '@axe-core/react': 4.1.1
   '@babel/core': 7.14.0
   '@babel/runtime': 7.14.0
   '@moxy/next-layout': 2.2.3_react@17.0.2
@@ -138,6 +137,7 @@ optionalDependencies:
   pnpm: 6.2.5
 
 devDependencies:
+  '@axe-core/react': 4.1.1
   '@babel/preset-env': 7.14.1_@babel+core@7.14.0
   '@commitlint/cli': 12.1.1
   '@commitlint/config-conventional': 12.1.1
@@ -210,7 +210,7 @@ packages:
     dependencies:
       axe-core: 4.2.0
       requestidlecallback: 0.3.0
-    dev: false
+    dev: true
 
   /@babel/code-frame/7.12.11:
     resolution: {integrity: sha512-Zt1yodBx1UcyiePMSkWnU4hPqhwq7hGi2nFL1LeA3EUl+q2LQx16MISgJ0+z7dnmgvP9QtIleuETGOiOH1RcIw==}
@@ -4116,6 +4116,7 @@ packages:
   /axe-core/4.2.0:
     resolution: {integrity: sha512-1uIESzroqpaTzt9uX48HO+6gfnKu3RwvWdCcWSrX4csMInJfCo1yvKPNXCwXFRpJqRW25tiASb6No0YH57PXqg==}
     engines: {node: '>=4'}
+    dev: true
 
   /axios/0.21.1:
     resolution: {integrity: sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==}
@@ -12919,7 +12920,7 @@ packages:
 
   /requestidlecallback/0.3.0:
     resolution: {integrity: sha1-b7dOBzP5DfP6pIOPn2oqX5t0KsU=}
-    dev: false
+    dev: true
 
   /require-directory/2.1.1:
     resolution: {integrity: sha1-jGStX9MNqxyXbiNE/+f3kqam30I=}
@@ -15299,7 +15300,7 @@ packages:
       workbox-core: 6.1.5
     dev: false
 
-  /workbox-build/6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14:
+  /workbox-build/6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14:
     resolution: {integrity: sha512-P+fakR5QFVqJN9l9xHVXtmafga72gh9I+jM3A9HiB/6UNRmOAejXnDgD+RMegOHgQHPwnB44TalMToFaXKWIyA==}
     engines: {node: '>=10.0.0'}
     dependencies:
@@ -15436,7 +15437,7 @@ packages:
       upath: 1.2.0
       webpack: 5.36.2
       webpack-sources: 1.4.3
-      workbox-build: 6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14
+      workbox-build: 6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
