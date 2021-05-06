@@ -85,7 +85,9 @@ jobs:
 
       # TODO: would be better to run this once a day or so
       - name: Run audit
-        run: pnpm audit
+        run: |
+          pnpm audit --production
+          pnpm audit --audit-level=critical
 
   Build-Checks:
     name: Validate App Code
