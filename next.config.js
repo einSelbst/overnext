@@ -3,11 +3,9 @@
  * @param [plugin: function, configuration?: object, phases?: array]
  * @see: https://github.com/cyrilwanner/next-compose-plugins
  */
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-})
 const { withPlugins, optional } = require('next-compose-plugins')
 const withPWA = require('next-pwa')
+const { PHASE_DEVELOPMENT_SERVER } = require('next/constants')
 
 const nextConfiguration = {
   poweredByHeader: false,
@@ -31,7 +29,17 @@ const nextConfiguration = {
 }
 
 const plugins = [
-  [optional(() => withBundleAnalyzer)],
+  [
+    optional(() =>
+      require('@next/bundle-analyzer')({
+        enabled: process.env.ANALYZE === 'true',
+      })
+    ),
+    {
+      /* optional configuration */
+    },
+    ['!', PHASE_DEVELOPMENT_SERVER],
+  ],
   [
     withPWA,
     {
