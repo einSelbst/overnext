@@ -41,7 +41,7 @@
     "?test:cy": "echo Open cypress test runner (needs a running app server)",
     "test:cy": "cypress open",
     "?e2e:watch": "echo Start dev server, open cypress and watch",
-    "e2e:watch": "CY_WATCH=true start-test 'pnpm dev' 3000 'pnpm test:cy'",
+    "e2e:watch": "CY_WATCH=true start-test 'next dev -p 3004' 3004 'pnpm test:cy'",
     "?e2e": "echo Build & serve app, then run cypress once",
     "e2e": "CYPRESS_BASE_URL=http://localhost:3003 APP_ENV=test start-test 'pnpm serve:3003' 3003 'cypress run'",
     "e2e:cy": "APP_ENV=test start-test 'pnpm start' 3000 'cypress run'",
