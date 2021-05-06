@@ -20,6 +20,7 @@ const nextConfiguration = {
     defaultLocale: 'en',
   },
   webpack: (config, _options) => {
+    /* { buildId, dev, isServer, defaultLoaders, webpack } = _options */
     // modify the `config` here
     return config
   },
@@ -28,27 +29,43 @@ const nextConfiguration = {
   },
 }
 
-const plugins = [
-  [
-    optional(() =>
-      require('@next/bundle-analyzer')({
-        enabled: process.env.ANALYZE === 'true',
-      })
-    ),
-    {
-      /* optional configuration */
-    },
-    ['!', PHASE_DEVELOPMENT_SERVER],
-  ],
-  [
-    withPWA,
-    {
-      pwa: {
-        disable: process.env.NODE_ENV === 'development',
-        dest: 'public',
-      },
-    },
-  ],
-]
+/**
+ * I don't want to have 'bundle-analyzer' loaded in production at all
+ * so I added this check for an env var
+ */
+const plugins = () => {
+  return process.env.ANALYZE === 'true'
+    ? [
+        [
+          optional(() =>
+            require('@next/bundle-analyzer')({
+              enabled: process.env.ANALYZE === 'true',
+            })
+          ),
+          {
+            /* optional configuration */
+          },
+          ['!', PHASE_DEVELOPMENT_SERVER],
+        ],
+        [
+          withPWA,
+          {
+            pwa: {
+              disable: process.env.NODE_ENV === 'development',
+              dest: 'public',
+            },
+          },
+        ],
+      ]
+    : [
+        withPWA,
+        {
+          pwa: {
+            disable: process.env.NODE_ENV === 'development',
+            dest: 'public',
+          },
+        },
+      ]
+}
 
-module.exports = withPlugins(plugins, nextConfiguration)
+module.exports = withPlugins(plugins(), nextConfiguration)
