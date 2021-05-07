@@ -1,11 +1,12 @@
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
 
-const ThemeChanger = (): JSX.Element | null => {
-  const [mounted, setMounted] = useState(false)
-  const { theme, setTheme } = useTheme()
+const ThemeChanger = (): ComponentReturnType => {
+  type ThemeType = ReturnType<typeof useTheme>
 
-  // When mounted on client, now we can show the UI
+  const { theme, setTheme }: ThemeType = useTheme()
+  const [mounted, setMounted] = useState(false)
+
   useEffect(() => setMounted(true), [])
 
   // ToDo [>1.2]: refactor to use nextjs default way of rendering only on client
@@ -16,8 +17,11 @@ const ThemeChanger = (): JSX.Element | null => {
   return (
     <div>
       The current theme is: {theme}
+      <br />
       <button onClick={() => setTheme('light')}>Light Mode</button>
+      <br />
       <button onClick={() => setTheme('dark')}>Dark Mode</button>
+      <br />
       <button
         className='mt-16 px-4 py-2 text-white dark:text-black bg-black dark:bg-white font-semibold rounded-md'
         onClick={() => {

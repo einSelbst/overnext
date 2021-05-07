@@ -4,11 +4,11 @@ const LegalLayout = ({
   children,
 }: {
   children: React.ReactNode
-}): JSX.Element => {
+}): React.ReactNode => {
   return (
     <>
       <header>
-        <Navigation />
+        <Navigation success={true} error={false} />
       </header>
 
       {children}

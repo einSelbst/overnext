@@ -1,7 +1,9 @@
+/* import { LayoutTree } from '@moxy/next-layout' */
 import { DefaultSeo } from 'next-seo'
 import { ThemeProvider } from 'next-themes'
 import { useAmp } from 'next/amp'
 import type { AppLayoutProps } from 'next/app'
+import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import * as React from 'react'
 /* import 'styles/main.css' // tailwind */
@@ -54,15 +56,10 @@ const sendMetric = async ({
  * This only happens outside of production and in a browser (not SSR).
  * @see {@link https://github.com/dequelabs/axe-core-npm/tree/develop/packages/react/examples/next.js}
  *
- * TODO: why not use next.js dynamic import?
+ * Regarding next.js dynamic
+ * @see {@link https://github.com/vercel/next.js/blob/0af3b526408bae26d6b3f8cab75c4229998bf7cb/examples/with-dynamic-import/pages/index.js }
  */
-if (!ENV.SERVER_RENDERED && !ENV.PRODUCTION) {
-  void (async () => {
-    const { default: ReactDOM } = await import('react-dom')
-    const { default: axe } = await import('@axe-core/react')
-    void axe(React, ReactDOM, 1000, {})
-  })()
-}
+const A11yLinter = dynamic(import('components/helper/axe'), { ssr: false })
 
 const HeadIcons = (): JSX.Element => {
   const isNotAmp = !useAmp()
@@ -213,6 +210,16 @@ function _app ({ Component, pageProps }: AppLayoutProps): React.ReactElement {
       <DefaultSeo {...SEO} />
       <HeadIcons />
       <Layout>{getLayout && getLayout(<Component {...pageProps} />)}</Layout>
+
+      {/* <Layout>
+          <Component {...pageProps} />
+          </Layout>
+        */}
+      {/* <LayoutTree
+          Component={Component}
+          pageProps={pageProps} /> */}
+
+      {process.browser && ENV.DEVELOPMENT && <A11yLinter />}
     </ThemeProvider>
   )
 }

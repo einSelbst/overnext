@@ -2,11 +2,12 @@
 
 describe('Homepage', () => {
   context('Visits', () => {
-    beforeEach(() => {
-      cy.visit('/')
-    })
-
+    /* beforeEach(() => {
+     *   cy.visit('/')
+     * })
+     */
     it('loads', () => {
+      cy.visit('/')
       cy.contains('h1', 'Welcome').should('be.visible')
     })
 
@@ -54,6 +55,7 @@ describe('Homepage', () => {
     })
 
     it('navigates to legal page', () => {
+      cy.visit('/')
       // https://on.cypress.io/click
       cy.get('button').click()
 
