@@ -182,9 +182,6 @@
     "fsevents": "2.3.2",
     "pnpm": "6.2.5"
   },
-  "browser": {
-    "@axe-core/react": false
-  },
   "packageRules": [
     {
       "matchPackageNames": [
