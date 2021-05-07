@@ -29,6 +29,7 @@ export const Home = (): JSX.Element => {
             title='YouTube video player'
             allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
             allowFullScreen
+            loading='lazy'
           ></iframe>
         </div>
 
@@ -54,7 +55,7 @@ export const Home = (): JSX.Element => {
           </a>
 
           <Link href='/legal' locale='fr'>
-            <a href='fr/legal' data-cy='fr-legal' className='card'>
+            <a data-cy='fr-legal' className='card'>
               <h3>Legal &rarr;</h3>
               <p>Discover and enjoy the depths of legal issues.</p>
             </a>

@@ -42,6 +42,7 @@ exports[`home page matches snapshot 1`] = `
           allowfullscreen=""
           class="jsx-978659433"
           height="315"
+          loading="lazy"
           src="https://www.youtube-nocookie.com/embed/h6fcK_fRYaI"
           title="YouTube video player"
           width="560"
@@ -90,7 +91,7 @@ exports[`home page matches snapshot 1`] = `
         <a
           class="jsx-978659433 card"
           data-cy="fr-legal"
-          href="fr/legal"
+          href="/legal"
         >
           <h3
             class="jsx-978659433"
