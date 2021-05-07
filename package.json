@@ -90,7 +90,6 @@
   "dependencies": {
     "@babel/core": "7.14.0",
     "@babel/runtime": "7.14.0",
-    "@moxy/next-layout": "^2.2.3",
     "@types/babel__core": "7.1.14",
     "@types/node": "13.13.51",
     "@types/prop-types": "15.7.3",

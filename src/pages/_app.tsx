@@ -1,3 +1,4 @@
+/* import { LayoutTree } from '@moxy/next-layout' */
 import { DefaultSeo } from 'next-seo'
 import { ThemeProvider } from 'next-themes'
 import { useAmp } from 'next/amp'
@@ -209,6 +210,14 @@ function _app ({ Component, pageProps }: AppLayoutProps): React.ReactElement {
       <DefaultSeo {...SEO} />
       <HeadIcons />
       <Layout>{getLayout && getLayout(<Component {...pageProps} />)}</Layout>
+
+      {/* <Layout>
+          <Component {...pageProps} />
+          </Layout>
+        */}
+      {/* <LayoutTree
+          Component={Component}
+          pageProps={pageProps} /> */}
 
       {process.browser && ENV.DEVELOPMENT && <A11yLinter />}
     </ThemeProvider>

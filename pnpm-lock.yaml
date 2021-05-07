@@ -18,7 +18,6 @@ specifiers:
   '@commitlint/config-conventional': 12.1.1
   '@cypress/code-coverage': 3.9.5
   '@istanbuljs/nyc-config-typescript': 1.0.1
-  '@moxy/next-layout': ^2.2.3
   '@next/bundle-analyzer': 10.2.0
   '@next/eslint-plugin-next': 10.2.0
   '@size-limit/preset-app': 4.10.2
@@ -103,7 +102,6 @@ specifiers:
 dependencies:
   '@babel/core': 7.14.0
   '@babel/runtime': 7.14.0
-  '@moxy/next-layout': 2.2.3_react@17.0.2
   '@types/babel__core': 7.1.14
   '@types/node': 13.13.51
   '@types/prop-types': 15.7.3
@@ -2690,17 +2688,6 @@ packages:
   /@microsoft/tsdoc/0.13.2:
     resolution: {integrity: sha512-WrHvO8PDL8wd8T2+zBGKrMwVL5IyzR3ryWUsl0PXgEV0QHup4mTLi0QcATefGI6Gx9Anu7vthPyyyLpY0EpiQg==}
     dev: true
-
-  /@moxy/next-layout/2.2.3_react@17.0.2:
-    resolution: {integrity: sha512-oh8Y3GZjcw1ONwY1AY2y5NFP8GFfoEiXTv3S01QpP77ncZgugd0LDZ89vKPvHst7e0/+aVMAS7N52zzCg0L2uw==}
-    peerDependencies:
-      react: '>= 16.8.0 < 18'
-    dependencies:
-      hoist-non-react-statics: 3.3.2
-      memoize-one: 5.2.1
-      prop-types: 15.7.2
-      react: 17.0.2
-    dev: false
 
   /@next/bundle-analyzer/10.2.0:
     resolution: {integrity: sha512-vJI5zer6fp9vtDal/IxwyT3rigu/+nACdKIJHyzls+fz1joyHAKU15Xxz0rsak3cwvE6MozFjoJTrawDV8eQDQ==}
@@ -8071,12 +8058,6 @@ packages:
       minimalistic-assert: 1.0.1
       minimalistic-crypto-utils: 1.0.1
 
-  /hoist-non-react-statics/3.3.2:
-    resolution: {integrity: sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==}
-    dependencies:
-      react-is: 16.13.1
-    dev: false
-
   /homedir-polyfill/1.0.3:
     resolution: {integrity: sha512-eSmmWE5bZTK2Nou4g0AI3zZ9rswp7GRKoKXS1BLUkvPviOqs4YTN1djQIqrXy9k5gEtdLPy86JjRwsNM9tnDcA==}
     engines: {node: '>=0.10.0'}
@@ -10569,10 +10550,6 @@ packages:
       mimic-fn: 3.1.0
     dev: true
 
-  /memoize-one/5.2.1:
-    resolution: {integrity: sha512-zYiwtZUcYyXKo/np96AGZAckk+FWWsUdJ3cHGGmld7+AhvcWmQyGCYUh1hc4Q/pkOhb65dQR/pqCyK0cOaHz4Q==}
-    dev: false
-
   /memory-fs/0.5.0:
     resolution: {integrity: sha512-jA0rdU5KoQMC0e6ppoNRtpp6vjFq6+NY7r8hywnC7V+1Xj/MtHwGIbB1QaK/dunyjWteJzmkpd7ooeWg10T7GA==}
     engines: {node: '>=4.3.0 <5.0.0 || >=5.10'}
@@ -12920,6 +12897,7 @@ packages:
 
   /requestidlecallback/0.3.0:
     resolution: {integrity: sha1-b7dOBzP5DfP6pIOPn2oqX5t0KsU=}
+    dev: false
     optional: true
 
   /require-directory/2.1.1:
@@ -15300,7 +15278,7 @@ packages:
       workbox-core: 6.1.5
     dev: false
 
-  /workbox-build/6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14:
+  /workbox-build/6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14:
     resolution: {integrity: sha512-P+fakR5QFVqJN9l9xHVXtmafga72gh9I+jM3A9HiB/6UNRmOAejXnDgD+RMegOHgQHPwnB44TalMToFaXKWIyA==}
     engines: {node: '>=10.0.0'}
     dependencies:
@@ -15437,7 +15415,7 @@ packages:
       upath: 1.2.0
       webpack: 5.36.2
       webpack-sources: 1.4.3
-      workbox-build: 6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14
+      workbox-build: 6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color

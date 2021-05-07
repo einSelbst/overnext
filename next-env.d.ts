@@ -1,6 +1,6 @@
 /// <reference types="next" />
 /// <reference types="next/types/global" />
-declare module '@moxy/next-layout'
+// declare module '@moxy/next-layout'
 
 type ComponentReturnType =
   | ReactElement
