@@ -66,7 +66,7 @@ specifiers:
   is-ci: 3.0.0
   jest: 26.6.3
   jest-watch-typeahead: 0.6.3
-  lint-staged: 10.5.4
+  lint-staged: 11.0.0
   netlify-plugin-a11y: 0.0.12
   netlify-plugin-cypress: 2.2.0
   next: 10.2.0
@@ -179,7 +179,7 @@ devDependencies:
   is-ci: 3.0.0
   jest: 26.6.3_ts-node@9.1.1
   jest-watch-typeahead: 0.6.3_jest@26.6.3
-  lint-staged: 10.5.4
+  lint-staged: 11.0.0
   netlify-plugin-a11y: 0.0.12
   next-unused: 0.0.6
   npm-scripts-info: 0.3.9
@@ -5211,6 +5211,11 @@ packages:
     resolution: {integrity: sha512-U7VdrJFnJgo4xjrHpTzu0yrHPGImdsmD95ZlgYSEajAn2JKzDhDTPG9kBTefmObL2w/ngeZnilk+OV9CG3d7UA==}
     engines: {node: '>= 6'}
 
+  /commander/7.2.0:
+    resolution: {integrity: sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==}
+    engines: {node: '>= 10'}
+    dev: true
+
   /commitizen/4.2.3:
     resolution: {integrity: sha512-pYlYEng7XMV2TW4xtjDKBGqeJ0Teq2zyRSx2S3Ml1XAplHSlJZK8vm1KdGclpMEZuGafbS5TeHXIVnHk8RWIzQ==}
     engines: {node: '>= 10'}
@@ -7063,6 +7068,21 @@ packages:
       strip-final-newline: 2.0.0
     dev: true
 
+  /execa/5.0.0:
+    resolution: {integrity: sha512-ov6w/2LCiuyO4RLYGdpFGjkcs0wMTgGE8PrkTHikeUy5iJekXyPIKUjifk5CsE0pt7sMCrMZ3YNqoCj6idQOnQ==}
+    engines: {node: '>=10'}
+    dependencies:
+      cross-spawn: 7.0.3
+      get-stream: 6.0.0
+      human-signals: 2.1.0
+      is-stream: 2.0.0
+      merge-stream: 2.0.0
+      npm-run-path: 4.0.1
+      onetime: 5.1.2
+      signal-exit: 3.0.3
+      strip-final-newline: 2.0.0
+    dev: true
+
   /executable/4.1.1:
     resolution: {integrity: sha512-8iA79xD3uAch729dUG8xaaBBFGaEa0wdD2VkYLFHwlqosEj/jT66AzcreRDSgV7ehnNLBW2WR5jIXwGKjVdTLg==}
     engines: {node: '>=4'}
@@ -8232,6 +8252,11 @@ packages:
   /human-signals/1.1.1:
     resolution: {integrity: sha512-SEQu7vl8KjNL2eoGBLF3+wAjpsNfA9XMlXAYj/3EdaNfAlxKthD1xjEQfGOUhllCGGJVNY34bRr6lPINhNjyZw==}
     engines: {node: '>=8.12.0'}
+
+  /human-signals/2.1.0:
+    resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
+    engines: {node: '>=10.17.0'}
+    dev: true
 
   /husky/6.0.0:
     resolution: {integrity: sha512-SQS2gDTB7tBN486QSoKPKQItZw97BMOd+Kdb6ghfpBc0yXyzrddI0oDV5MkDAbuB4X2mO3/nj60TRMcYxwzZeQ==}
@@ -9878,19 +9903,19 @@ packages:
     resolution: {integrity: sha512-Uqt94P4iAznscZtccnNE1IBi105U+fmQKEUlDJv54JDdFZDInomkepEIRpZLOQcPyGdcNu3JO9Tvo5wpQVbfKw==}
     dev: true
 
-  /lint-staged/10.5.4:
-    resolution: {integrity: sha512-EechC3DdFic/TdOPgj/RB3FicqE6932LTHCUm0Y2fsD9KGlLB+RwJl2q1IYBIvEsKzDOgn0D4gll+YxG5RsrKg==}
+  /lint-staged/11.0.0:
+    resolution: {integrity: sha512-3rsRIoyaE8IphSUtO1RVTFl1e0SLBtxxUOPBtHxQgBHS5/i6nqvjcUfNioMa4BU9yGnPzbO+xkfLtXtxBpCzjw==}
     hasBin: true
     dependencies:
       chalk: 4.1.1
       cli-truncate: 2.1.0
-      commander: 6.2.1
+      commander: 7.2.0
       cosmiconfig: 7.0.0
       debug: 4.3.1
       dedent: 0.7.0
       enquirer: 2.3.6
-      execa: 4.1.0
-      listr2: 3.8.1_enquirer@2.3.6
+      execa: 5.0.0
+      listr2: 3.8.2_enquirer@2.3.6
       log-symbols: 4.1.0
       micromatch: 4.0.4
       normalize-path: 3.0.0
@@ -9973,8 +9998,8 @@ packages:
       - zen-observable
     dev: true
 
-  /listr2/3.8.1_enquirer@2.3.6:
-    resolution: {integrity: sha512-75vMLokDIEoZIXp3FE3P7U4yi7BRroZb7Az9+XBq+wGGnvq70QPT+BX41aSrROUMLuVan9l3aAjdeXWgaFyFEw==}
+  /listr2/3.8.2_enquirer@2.3.6:
+    resolution: {integrity: sha512-E28Fw7Zd3HQlCJKzb9a8C8M0HtFWQeucE+S8YrSrqZObuCLPRHMRrR8gNmYt65cU9orXYHwvN5agXC36lYt7VQ==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       enquirer: '>= 2.3.0 < 3'
@@ -15278,7 +15303,7 @@ packages:
       workbox-core: 6.1.5
     dev: false
 
-  /workbox-build/6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14:
+  /workbox-build/6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14:
     resolution: {integrity: sha512-P+fakR5QFVqJN9l9xHVXtmafga72gh9I+jM3A9HiB/6UNRmOAejXnDgD+RMegOHgQHPwnB44TalMToFaXKWIyA==}
     engines: {node: '>=10.0.0'}
     dependencies:
@@ -15415,7 +15440,7 @@ packages:
       upath: 1.2.0
       webpack: 5.36.2
       webpack-sources: 1.4.3
-      workbox-build: 6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14
+      workbox-build: 6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
