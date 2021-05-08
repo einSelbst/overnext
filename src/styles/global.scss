@@ -18,7 +18,7 @@ body {
 }
 
 header {
-  background: lightpink;
+  background: khaki;
   padding: 2rem;
   grid-column: 1 / 4;
 }
@@ -36,9 +36,18 @@ header {
 main {
   padding: 2rem;
   display: grid;
-  background: lavender;
+  background: mintcream;
   place-items: center;
   font-family: Inter, system-ui, sans-serif;
+}
+
+.dark main {
+  background-color: darkslategray;
+  color: wheat;
+}
+
+.dark main a {
+  color: lightcoral;
 }
 
 .right {
@@ -47,7 +56,7 @@ main {
 }
 
 footer {
-  background: wheat;
+  background: linear-gradient(165deg, teal, linen);
   padding: 2rem;
   text-align: center;
   grid-column: 1 / 4;
