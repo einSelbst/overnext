@@ -76,11 +76,11 @@ const HeadIcons = (): JSX.Element => {
           {/* the preload is automatically added by next.js or one of my linter rules */}
           <link
             rel='preload'
-            href='https://fonts.googleapis.com/css2?family=Inter&family=Sansita+Swashed&display=swap'
+            href='https://fonts.googleapis.com/css2?family=Inter&family=Sansita&display=swap'
             as='style'
           />
           <link
-            href='https://fonts.googleapis.com/css2?family=Inter&family=Sansita+Swashed&display=swap'
+            href='https://fonts.googleapis.com/css2?family=Inter&family=Sansita&display=swap'
             rel='stylesheet'
           />
         </>

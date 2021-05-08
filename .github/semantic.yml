@@ -1,0 +1,35 @@
+# I have to repeat the types from commitlint config here
+# this is used for the ci check
+types:
+  - feat
+  - fix
+  - docs
+  - style
+  - refactor
+  - perf
+  - test
+  - build
+  - ci
+  - chore
+  - revert
+  - ui
+  - ux
+  - wip
+  - dx
+  - deps
+
+# Always validate all commits, and ignore the PR title
+commitsOnly: true
+
+# Require at least one commit to be valid
+# this is only relevant when using commitsOnly: true or titleAndCommits: true,
+# which validate all commits by default
+# anyCommit: true
+
+# Allow use of Merge commits (eg on github: "Merge branch 'master' into feature/ride-unicorns")
+# this is only relevant when using commitsOnly: true (or titleAndCommits: true)
+allowMergeCommits: true
+
+# Allow use of Revert commits (eg on github: "Revert "feat: ride unicorns"")
+# this is only relevant when using commitsOnly: true (or titleAndCommits: true)
+allowRevertCommits: true
