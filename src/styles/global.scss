@@ -18,7 +18,6 @@ body {
 }
 
 header {
-  font-family: 'Sanista';
   background: lightpink;
   padding: 2rem;
   grid-column: 1 / 4;
@@ -39,6 +38,7 @@ main {
   display: grid;
   background: lavender;
   place-items: center;
+  font-family: Inter, system-ui, sans-serif;
 }
 
 .right {
@@ -56,4 +56,10 @@ footer {
 aside {
   padding: 1rem;
   writing-mode: vertical-lr;
+}
+
+h1 {
+  font-family: Sansita, cursive, serif;
+  font-size: revert;
+  font-weight: revert;
 }
