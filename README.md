@@ -106,7 +106,8 @@ This is more about priorities than about a temporal order.
 
     - `feat`: A new feature
     - `fix`: A bug fix
-    - `look`: CSS and layout
+    - `ui`: CSS and layout
+    - `ux`: User Experience
     - `docs`: Documentation only changes
     - `style`: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
     - `refactor`: A code change that neither fixes a bug nor adds a feature
@@ -118,6 +119,7 @@ This is more about priorities than about a temporal order.
     - `dx`: All things about improving developer experience
     - `chore`: Other changes that don't modify src or test files
     - `revert`: Reverts a previous commit
+    - `wip`: work in progress
     </details>
 
   - [`semantic-pull-requests`](https://github.com/zeke/semantic-pull-requests) Github app

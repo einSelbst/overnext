@@ -14,12 +14,13 @@ module.exports = {
         'dx', // all things dev experience
         'feat',
         'fix',
-        'look', // CSS, etc
         'perf',
         'refactor',
         'revert',
         'style', // this means 'code' style
         'test',
+        'ui', // CSS, etc
+        'ux',
         'wip',
       ],
     ],
