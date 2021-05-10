@@ -4,7 +4,7 @@
 
 An overly opinonated next.js starter template.
 
-## Badges
+## Badges ok
 
 Add badges from somewhere like: [shields.io](https://shields.io/)
 
@@ -12,20 +12,20 @@ Add badges from somewhere like: [shields.io](https://shields.io/)
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 [![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
 
-## Tech Stack
+## Tech Stack ok
 
 **Client:** React, Redux, TailwindCSS
 
 **Server:** Node, Express
 
-## Features
+## Features ok
 
 - Light/dark mode toggle
 - Live previews
 - Fullscreen mode
 - Cross platform
 
-## Installation
+## Installation ok
 
 Install my-project with npm
 
@@ -90,7 +90,7 @@ To run tests, run the following command
   npm run test
 ```
 
-## Deployment
+## Deployment ok
 
 To deploy this project run
 
@@ -98,11 +98,11 @@ To deploy this project run
   npm run deploy
 ```
 
-## Demo
+## Demo ok
 
 Insert gif or link to demo
 
-## Lessons Learned
+## Lessons Learned ok
 
 What did you learn while building this project? What challenges did you face and how did you overcome them?
 
@@ -118,7 +118,7 @@ See `contributing.md` for ways to get started.
 
 Please adhere to this project's `code of conduct`.
 
-## API Reference
+## API Reference ok
 
 #### Get all items
 
@@ -148,13 +148,13 @@ Takes two numbers and returns the sum.
 
 ![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
-## Roadmap
+## Roadmap ok
 
 - Additional browser support
 
 - Add more integrations
 
-## Optimizations
+## Optimizations ok
 
 What optimizations did you make in your code? E.g. refactors, performance improvements, accessibility
 
@@ -162,7 +162,7 @@ What optimizations did you make in your code? E.g. refactors, performance improv
 
 - [@katherinepeterson](https://www.github.com/katherinepeterson)
 
-## Acknowledgements
+## Acknowledgements ok as Credits
 
 - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
 - [Awesome README](https://github.com/matiassingers/awesome-readme)
@@ -172,12 +172,12 @@ What optimizations did you make in your code? E.g. refactors, performance improv
 
 Any additional information goes here
 
-## Related
+## Related ok
 
 Here are some related projects
 
 [Awesome README](https://github.com/matiassingers/awesome-readme)
 
-## License
+## License ok
 
 [MIT](https://choosealicense.com/licenses/mit/)
