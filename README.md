@@ -459,6 +459,8 @@ ToDo link to API Docs
 
 ## Related
 
+- [Next Right Now](https://unlyed.github.io/next-right-now/)
+  - [`next-right-now`](https://github.com/UnlyEd/next-right-now), flexible production-grade boilerplate with Next.js
 - [Next.js with Moxy](https://next-with.moxy.tech/), a better version of this here
   - [`next-with-moxy`](https://github.com/moxystudio/next-with-moxy)
 
