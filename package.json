@@ -174,7 +174,7 @@
     "ts-node": "9.1.1",
     "typedoc": "0.20.36",
     "typescript-eslint-language-service": "4.1.4",
-    "typesync": "^0.8.0"
+    "typesync": "0.8.0"
   },
   "optionalDependencies": {
     "@axe-core/react": "4.1.1",
