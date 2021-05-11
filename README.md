@@ -299,16 +299,10 @@ info: Display info about the scripts
 
 - [`axe-core/react`](https://github.com/dequelabs/axe-core-npm)
 
-## Testing
+## Tech Stack
 
-- [Jest](https://jestjs.io/)
-  - [`react-testing-library`](https://testing-library.com/docs/react-testing-library/intro)
-- [Cypress](https://www.cypress.io/)
-  - [Code Coverage](https://docs.cypress.io/guides/tooling/code-coverage.html) via [istanbul](https://istanbul.js.org/) and [nyc](https://github.com/istanbuljs/nyc), bon voyage
-  - [Dashboard](https://dashboard.cypress.io/)
-  - [Github Integration](https://docs.cypress.io/guides/dashboard/github-integration.html#Install-the-Cypress-GitHub-app)
-  - [cypress-watch-and-reload](https://github.com/bahmutov/cypress-watch-and-reload)
-  - ToDo: if I want to run [headless cypress in watch mode](https://github.com/cypress-io/cypress/issues/3665#issuecomment-665866436)
+- next.js
+- ToDo: sanity
 
 ## Next.js Configuration
 
@@ -355,6 +349,17 @@ info: Display info about the scripts
 - ToDo: integrate [PostCSS Preset Env](https://github.com/csstools/postcss-preset-env) with [next.js PostCss Config](https://nextjs.org/docs/advanced-features/customizing-postcss-config)
 - ToDo: integrate [lazysizes](https://github.com/aFarkas/lazysizes), with [native loading](https://github.com/aFarkas/lazysizes/tree/gh-pages/plugins/native-loading)
 
+## Testing
+
+- [Jest](https://jestjs.io/)
+  - [`react-testing-library`](https://testing-library.com/docs/react-testing-library/intro)
+- [Cypress](https://www.cypress.io/)
+  - [Code Coverage](https://docs.cypress.io/guides/tooling/code-coverage.html) via [istanbul](https://istanbul.js.org/) and [nyc](https://github.com/istanbuljs/nyc), bon voyage
+  - [Dashboard](https://dashboard.cypress.io/)
+  - [Github Integration](https://docs.cypress.io/guides/dashboard/github-integration.html#Install-the-Cypress-GitHub-app)
+  - [cypress-watch-and-reload](https://github.com/bahmutov/cypress-watch-and-reload)
+  - ToDo: if I want to run [headless cypress in watch mode](https://github.com/cypress-io/cypress/issues/3665#issuecomment-665866436)
+
 ## CI
 
 ### Github Actions
@@ -396,6 +401,10 @@ info: Display info about the scripts
 - [Dareboost](https://www.dareboost.com/en/dashboard)
 - [Project Wallace](https://www.projectwallace.com/~einselbst/overnext) for CSS monitoring
 
+## Installation
+
+see [CONTRIBUTING](./CONTRIBUTING.md)
+
 ## Deployment
 
 - [Documentation](https://nextjs.org/docs/deployment)
@@ -414,7 +423,50 @@ info: Display info about the scripts
     - [netlify-plugin-check-links](https://github.com/munter/netlify-plugin-checklinks), uses [hyperlink](https://github.com/Munter/hyperlink)
     - [netlify-plugin-a11y](https://github.com/netlify-labs/netlify-plugin-a11y), uses [pa11y](https://github.com/pa11y/pa11y)
 
+## Demo
+
+- [Vercel](https://overnext.vercel.app)
+- [Netlify](https://overnext.netlify.app)
+
+## Documentation
+
+ToDo [Documentation](https://linktodocumentation)
+
+## Learnings
+
+### Hosting
+
+There are a few differences between Vercel & Netlify.
+
+- `sass` module can be a `devDependency` on Netlify, but must be a (production) `dependency` on Vercel
+- i18n routing: on Vercel the user is redirected to the browser detected language by default, but not on Netlify
+
+## API Reference
+
+ToDo link to API Docs
+
+## Roadmap
+
+- Additional browser support
+
+- Add more integrations
+
+## Optimizations
+
+## Credits
+
+...where credits due, thanks to [@bahmutov](https://github.com/bahmutov), [@elliottsj](https://github.com/elliottsj), [@ferlopezm94](https://github.com/ferlopezm94),[@iamvishnusankar](https://github.com/iamvishnusankar), [@pacocoursey](https://github.com/pacocoursey), [@thomaseizinger](https://github.com/thomaseizinger) and all the others whom I copied code from!
+
+## Related
+
+- [Next Right Now](https://unlyed.github.io/next-right-now/)
+  - [`next-right-now`](https://github.com/UnlyEd/next-right-now), flexible production-grade boilerplate with Next.js
+- [Next.js with Moxy](https://next-with.moxy.tech/), a better version of this here
+  - [`next-with-moxy`](https://github.com/moxystudio/next-with-moxy)
+
 ## ToDo
+
+I should use Github Issues for this but hey.
 
 - [ ] integrate with [README.so template](https://readme.so/editor)
 - [ ] add [SRI](https://github.com/vercel/next.js/discussions/23951)
@@ -463,19 +515,6 @@ info: Display info about the scripts
 - ToDo: [prow github action](https://github.com/jpmcb/prow-github-actions)
 - ToDo: [task completed checker action](https://github.com/kentaro-m/task-completed-checker-action)
 </details>
-
-## Learnings
-
-### Hosting
-
-There are a few differences between Vercel & Netlify.
-
-- `sass` module can be a `devDependency` on Netlify, but must be a (production) `dependency` on Vercel
-- i18n routing: on Vercel the user is redirected to the browser detected language by default, but not on Netlify
-
-## Credits
-
-...where credits due, thanks to [@bahmutov](https://github.com/bahmutov), [@elliottsj](https://github.com/elliottsj), [@ferlopezm94](https://github.com/ferlopezm94),[@iamvishnusankar](https://github.com/iamvishnusankar), [@pacocoursey](https://github.com/pacocoursey), [@thomaseizinger](https://github.com/thomaseizinger) and all the others whom I copied code from!
 
 ## Licenses
 
