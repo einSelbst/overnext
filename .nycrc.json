@@ -2,5 +2,7 @@
   "all": true,
   "extends": "@istanbuljs/nyc-config-typescript",
   "reporter": ["clover", "json", "json-summary", "text", "text-summary"],
-  "exclude": ["src/pages/api/__coverage__.js"]
+  "extension": [".js", ".jsx", ".ts", ".tsx"],
+  "include": ["src/**"],
+  "exclude": ["**/*.spec.js", "**/*css"]
 }
