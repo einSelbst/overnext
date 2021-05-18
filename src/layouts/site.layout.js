@@ -7,7 +7,7 @@ const SiteLayout = ({ children }) => (
     <div>
       <div>
         <div className='max-w-xl mx-auto px-8'>
-          <nav>
+          <nav title='Main Navigation'>
             <div className='py-4 flex-shrink-0 flex items-center'>
               <img
                 className='h-8 w-8'
