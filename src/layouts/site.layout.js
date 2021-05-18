@@ -13,6 +13,8 @@ const SiteLayout = ({ children }) => (
                 className='h-8 w-8'
                 src='/icons/safari-pinned-tab.svg'
                 alt='Logo Icon'
+                width='32'
+                height='32'
               />
               <Link href='/'>
                 <a className='ml-8 font-medium text-gray-900'>Home</a>
