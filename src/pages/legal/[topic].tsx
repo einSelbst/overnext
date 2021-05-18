@@ -16,7 +16,7 @@ const _Topic = (): JSX.Element => {
       <NextSeo
         title={firstTopic}
         description='A legal topic.'
-        canonical='https://overnext.vercel.app'
+        canonical={`https://overnext.vercel.app/legal/${firstTopic}`}
         languageAlternates={locales?.map((loc: string) => {
           return {
             hrefLang: loc,
