@@ -19,9 +19,19 @@ const nextConfiguration = {
     locales: ['en', 'de', 'es', 'fr', 'it'],
     defaultLocale: 'en',
   },
-  webpack: (config, _options) => {
+  webpack: (config, options) => {
     /* { buildId, dev, isServer, defaultLoaders, webpack } = _options */
-    // modify the `config` here
+    const { dev, isServer } = options
+
+    /**
+     * RelativeCi Agent Webpack configuration
+     * @see {@link https://relative-ci.com/documentation/setup/webpack-plugin}
+     */
+    if (!dev && !isServer && !process.env.VERCEL) {
+      const { RelativeCiAgentWebpackPlugin } = require('@relative-ci/agent')
+      config.plugins.push(new RelativeCiAgentWebpackPlugin())
+    }
+
     return config
   },
   future: {
