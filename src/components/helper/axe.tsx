@@ -2,7 +2,8 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 
-const Axe = (): JSX.Element => {
+/* const Axe = (): JSX.Element => { */
+const Axe = (): null => {
   /* void axe(React, ReactDOM, 1000, {}) */
 
   if (process.env.NODE_ENV === 'development') {
@@ -17,9 +18,8 @@ const Axe = (): JSX.Element => {
       }
     })()
   }
-
-  console.log('Im here')
-  return <span>Yeah, AXE is watching for A11Y issues, check your console</span>
+  // eslint-disable-next-line unicorn/no-null
+  return null
 }
 
 export default Axe
