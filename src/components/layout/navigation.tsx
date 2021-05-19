@@ -14,7 +14,7 @@ type Props = {
 export const Navigation = (props: Props): JSX.Element => {
   return (
     <>
-      <nav>
+      <nav title='Site Navigation'>
         <Link href='/'>
           <a>Home</a>
         </Link>{' '}
