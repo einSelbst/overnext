@@ -9,7 +9,7 @@ const _Topic = (): JSX.Element => {
   const { locale, locales, query } = router
   const { topic } = query
   // NextSeo doesn't want a string array, which 'topic' might be
-  const firstTopic: string | undefined = Array.isArray(topic) ? topic[0] : topic
+  const firstTopic: string = Array.isArray(topic) ? topic[0] : topic ?? ''
 
   return (
     <>
@@ -20,9 +20,7 @@ const _Topic = (): JSX.Element => {
         languageAlternates={locales?.map((loc: string) => {
           return {
             hrefLang: loc,
-            href: `https://overnext.vercel.app/${loc}/legal/${
-              firstTopic || ''
-            }`,
+            href: `https://overnext.vercel.app/${loc}/legal/${firstTopic}`,
           }
         })}
         openGraph={{
