@@ -93,7 +93,7 @@ context('Spies, Stubs, and Clock', () => {
       .click()
       .should('have.text', '1489449600')
 
-    cy.tick(10000) // 10 seconds passed
+    cy.tick(10_000) // 10 seconds passed
     cy.get('#tick-div')
       .click()
       .should('have.text', '1489449610')
