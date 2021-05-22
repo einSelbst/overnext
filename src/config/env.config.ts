@@ -2,10 +2,12 @@ const baseUrl2 = (): string => {
   // eslint-disable-next-line no-console
   console.log('evaluating base URL in env config')
 
-  if (process.env.VERCEL === '1')
+  if (process.env.VERCEL === '1') {
     return `https://${process.env.VERCEL_URL as string}`
-  if (process.env.NETLIFY === 'true')
+  }
+  if (process.env.NETLIFY === 'true') {
     return `https://${process.env.DEPLOY_PRIME_URL as string}`
+  }
   return 'example.com'
 }
 

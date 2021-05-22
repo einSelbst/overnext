@@ -7,10 +7,10 @@
 import { ParsedUrlQuery } from 'querystring'
 import {
   GetStaticPaths,
-  GetStaticProps,
   GetStaticPathsContext,
-  GetStaticPropsContext,
   GetStaticPathsResult,
+  GetStaticProps,
+  GetStaticPropsContext,
   GetStaticPropsResult,
   InferGetStaticPropsType,
 } from 'next'

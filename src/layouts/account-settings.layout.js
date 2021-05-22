@@ -30,44 +30,42 @@ ActiveLink.propTypes = {
   className: PropTypes.string,
 }
 
-const AccountSettingsLayout = ({ children }) => {
-  return (
-    <div className='max-w-xl mx-auto px-8'>
-      <h1 className='text-2xl text-gray-900 font-semibold'>Account Settings</h1>
+const AccountSettingsLayout = ({ children }) => (
+  <div className='max-w-xl mx-auto px-8'>
+    <h1 className='text-2xl text-gray-900 font-semibold'>Account Settings</h1>
 
-      <div
-        className='mt-6 flex overflow-x-auto scrollbar-none'
-        style={{ boxShadow: 'inset 0 -2px 0 #edf2f7' }}
-      >
-        <ActiveLink href='/account-settings/basic-information'>
-          Basic Information
-        </ActiveLink>
+    <div
+      className='mt-6 flex overflow-x-auto scrollbar-none'
+      style={{ boxShadow: 'inset 0 -2px 0 #edf2f7' }}
+    >
+      <ActiveLink href='/account-settings/basic-information'>
+        Basic Information
+      </ActiveLink>
 
-        <ActiveLink href='/account-settings/profile' className='ml-10'>
-          Profile
-        </ActiveLink>
+      <ActiveLink href='/account-settings/profile' className='ml-10'>
+        Profile
+      </ActiveLink>
 
-        <ActiveLink href='/account-settings/team-settings' className='ml-10'>
-          Team Settings
-        </ActiveLink>
+      <ActiveLink href='/account-settings/team-settings' className='ml-10'>
+        Team Settings
+      </ActiveLink>
 
-        <ActiveLink href='/account-settings/billing' className='ml-10'>
-          Billing
-        </ActiveLink>
+      <ActiveLink href='/account-settings/billing' className='ml-10'>
+        Billing
+      </ActiveLink>
 
-        <ActiveLink href='/account-settings/notifications' className='ml-10'>
-          Notifications
-        </ActiveLink>
+      <ActiveLink href='/account-settings/notifications' className='ml-10'>
+        Notifications
+      </ActiveLink>
 
-        <ActiveLink href='/account-settings/security' className='ml-10'>
-          Security
-        </ActiveLink>
-      </div>
-
-      <div>{children}</div>
+      <ActiveLink href='/account-settings/security' className='ml-10'>
+        Security
+      </ActiveLink>
     </div>
-  )
-}
+
+    <div>{children}</div>
+  </div>
+)
 
 AccountSettingsLayout.propTypes = {
   children: PropTypes.oneOfType([
