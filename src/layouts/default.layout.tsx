@@ -1,30 +1,28 @@
-import { Navigation, Footer } from 'components/layout'
+import { Footer, Navigation } from 'components/layout'
 
 const DefaultLayout = ({
   children,
 }: {
   children: React.ReactNode
-}): JSX.Element => {
-  return (
-    <>
-      <header>
-        <Navigation success={true} error={false} />
-      </header>
+}): JSX.Element => (
+  <>
+    <header>
+      <Navigation success={true} error={false} />
+    </header>
 
-      <aside className='left'>
-        <p>Something which is supposed to be on the left side</p>
-        <p>Some more text</p>
-      </aside>
+    <aside className='left'>
+      <p>Something which is supposed to be on the left side</p>
+      <p>Some more text</p>
+    </aside>
 
-      {children}
+    {children}
 
-      <aside className='right'>
-        <p>Something which is supposed to be on the right side</p>
-      </aside>
+    <aside className='right'>
+      <p>Something which is supposed to be on the right side</p>
+    </aside>
 
-      <Footer />
-    </>
-  )
-}
+    <Footer />
+  </>
+)
 
 export default DefaultLayout

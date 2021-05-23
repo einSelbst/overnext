@@ -14,33 +14,31 @@ export const config = {
 
 const DynamicPage = (
   properties: InferGetStaticPropsType<typeof getStaticProps>
-): JSX.Element => {
-  return (
-    <main>
+): JSX.Element => (
+  <main>
+    <header>
+      <h1>DynamicPage Component {properties.dynamic}</h1>
+      <h2>Locale: {properties.locale}</h2>
+    </header>
+
+    <section aria-label='quick summary'>
+      Summary Text. Visit this for more info:
+      https://www.smashingmagazine.com/2020/01/html5-article-section/
+    </section>
+
+    <article>
       <header>
-        <h1>DynamicPage Component {properties.dynamic}</h1>
-        <h2>Locale: {properties.locale}</h2>
+        <p>The Header of the article</p>
       </header>
-
-      <section aria-label='quick summary'>
-        Summary Text. Visit this for more info:
-        https://www.smashingmagazine.com/2020/01/html5-article-section/
-      </section>
-
-      <article>
-        <header>
-          <p>The Header of the article</p>
-        </header>
-        <section className='introduction'>intro</section>
-        <section className='content'>content</section>
-        <section className='summary'>summary</section>
-        <footer>
-          <p>The footer of the article</p>
-        </footer>
-      </article>
-    </main>
-  )
-}
+      <section className='introduction'>intro</section>
+      <section className='content'>content</section>
+      <section className='summary'>summary</section>
+      <footer>
+        <p>The footer of the article</p>
+      </footer>
+    </article>
+  </main>
+)
 
 // This function gets called at build time on server-side.
 // It may be called again, on a serverless function, if
@@ -48,20 +46,20 @@ const DynamicPage = (
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   // Call an external API endpoint to get posts.
   // You can use any data fetching library
-  //const res = await fetch(`https://.../posts?locale=${locale}`)
-  //const posts = await res.json()
+  // const res = await fetch(`https://.../posts?locale=${locale}`)
+  // const posts = await res.json()
 
   const response = await Promise.resolve('Hello')
 
   return {
     props: {
       dynamic: response,
-      locale: locale,
+      locale,
     },
     // Next.js will attempt to re-generate the page:
     // - When a request comes in
     // - At most once every second
-    //revalidate: 1, // In seconds
+    // revalidate: 1, // In seconds
   }
 }
 
@@ -79,18 +77,16 @@ export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
   }))
 
   if (locales) {
-    const pathsI18n = paths.map(path => {
-      return locales.map(locale => {
-        return { params: path.params, locale: locale }
-      })
-    })
+    const pathsI18n = paths.map(path =>
+      locales.map(locale => ({ params: path.params, locale }))
+    )
     // not sure how to rewrite this so for now...
     // eslint-disable-next-line unicorn/no-array-reduce
     paths = pathsI18n.reduce((a, v) => [...a, ...v], paths)
   }
 
   return {
-    paths: paths,
+    paths,
     /* paths: [
      *   { params: { dynamic: 'page-1' } },
      *   { params: { dynamic: 'page-1' }, locale: 'en' },

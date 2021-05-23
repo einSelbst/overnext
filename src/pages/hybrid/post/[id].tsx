@@ -6,8 +6,8 @@
 import { ParsedUrlQuery } from 'querystring'
 import {
   GetStaticPathsContext,
-  GetStaticPropsContext,
   GetStaticPathsResult,
+  GetStaticPropsContext,
   GetStaticPropsResult,
   InferGetStaticPropsType,
 } from 'next'

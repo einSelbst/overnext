@@ -43,8 +43,8 @@ const nextConfiguration = {
  * I don't want to have 'bundle-analyzer' loaded in production at all
  * so I added this check for an env var
  */
-const plugins = () => {
-  return process.env.ANALYZE === 'true'
+const plugins = () =>
+  process.env.ANALYZE === 'true'
     ? [
         [
           optional(() =>
@@ -76,6 +76,5 @@ const plugins = () => {
           },
         },
       ]
-}
 
 module.exports = withPlugins(plugins(), nextConfiguration)

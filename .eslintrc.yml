@@ -7,11 +7,13 @@ parserOptions:
     jsx: true
 reportUnusedDisableDirectives: true
 plugins:
+  # - prettier
   - react
   - import
   - unicorn
   - jsx-a11y
 extends:
+  # - eslint:all
   - eslint:recommended
   - plugin:@typescript-eslint/recommended
   - plugin:import/errors
@@ -23,6 +25,8 @@ extends:
   - plugin:react/recommended
   - plugin:react-hooks/recommended
   - plugin:@next/next/recommended
+  # - plugin:prettier/recommended
+  # - prettier
 env:
   es6: true
   browser: true
@@ -98,9 +102,26 @@ rules:
         - invalidHref
         - preferButton
   jsx-a11y/label-has-associated-control: error
+  # capitalized-comments: off
+  # multiline-comment-style: off
+  # lines-around-comment: off
+  # no-magic-numbers: off
+  # sort-keys: off
+  # sort-vars: off
+  # sort-imports: off
+
+  # # these rules don't match my code style/prettier config
+  # max-len: off
+  # function-call-argument-newline: off
+  # indent: off
+  # no-ternary: off
+  # multiline-ternary: off
+  # one-var: off
+  # comma-dangle: off
   no-unused-vars:
     - error
     - argsIgnorePattern: '^_'
+      varsIgnorePattern: '^_'
   no-console:
     - warn
     - allow:
