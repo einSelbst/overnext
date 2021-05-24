@@ -1,12 +1,16 @@
+// @ts-check
 /**
  * Next.js Configuration
- * @param [plugin: function, configuration?: object, phases?: array]
- * @see: https://github.com/cyrilwanner/next-compose-plugins
+ * @param [plugin]: function, configuration?: object, phases?: array]
+ * @see {@link https://github.com/cyrilwanner/next-compose-plugins}
  */
 const { withPlugins, optional } = require('next-compose-plugins')
 const withPWA = require('next-pwa')
 const { PHASE_DEVELOPMENT_SERVER } = require('next/constants')
 
+/**
+ * @type {import('next/dist/next-server/server/config').NextConfig}
+ */
 const nextConfiguration = {
   poweredByHeader: false,
   reactStrictMode: true,
@@ -19,8 +23,11 @@ const nextConfiguration = {
     locales: ['en', 'de', 'es', 'fr', 'it'],
     defaultLocale: 'en',
   },
-  webpack: (config, options) => {
-    /* { buildId, dev, isServer, defaultLoaders, webpack } = _options */
+  webpack: (
+    /** @type {{ plugins: any[]; }} */ config,
+    /** @type {{ dev: any; isServer: any; }} */ options
+  ) => {
+    /* { buildId, dev, isServer, defaultLoaders, webpack } = options */
     const { dev, isServer } = options
 
     /**
@@ -29,13 +36,41 @@ const nextConfiguration = {
      */
     if (!dev && !isServer && !process.env.VERCEL) {
       const { RelativeCiAgentWebpackPlugin } = require('@relative-ci/agent')
-      config.plugins.push(new RelativeCiAgentWebpackPlugin())
+      config.plugins.push(new RelativeCiAgentWebpackPlugin({ enabled: true }))
     }
 
     return config
   },
   future: {
     webpack5: true,
+  },
+  experimental: {
+    cpus: 2,
+    // plugins?: boolean;
+    profiling: true,
+    // sprFlushToDisk?: boolean;
+    // reactMode?: 'legacy' | 'concurrent' | 'blocking';
+    // workerThreads?: boolean;
+    // pageEnv?: boolean;
+    // optimizeImages?: boolean;
+    // optimizeCss: true,
+    // scrollRestoration?: boolean;
+    // scriptLoader?: boolean;
+    stats: true,
+    // externalDir?: boolean;
+    // serialWebpackBuild?: boolean;
+    // conformance?: boolean;
+    amp: {
+      // optimizer: any;
+      // validator?: string;
+      // skipValidation?: boolean;
+    },
+    // turboMode?: boolean;
+    // eslint?: boolean;
+    // reactRoot?: boolean;
+    // enableBlurryPlaceholder?: boolean;
+    // disableOptimizedLoading?: boolean;
+    // gzipSize?: boolean;
   },
 }
 
