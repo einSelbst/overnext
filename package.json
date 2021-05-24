@@ -136,9 +136,9 @@
     "@types/jest": "26.0.23",
     "@types/source-map-support": "0.5.3",
     "@types/standard-version": "7.0.0",
-    "@typescript-eslint/eslint-plugin": "4.24.0",
-    "@typescript-eslint/parser": "4.24.0",
-    "@typescript-eslint/typescript-estree": "4.24.0",
+    "@typescript-eslint/eslint-plugin": "4.25.0",
+    "@typescript-eslint/parser": "4.25.0",
+    "@typescript-eslint/typescript-estree": "4.25.0",
     "babel-jest": "26.6.3",
     "babel-plugin-istanbul": "6.0.0",
     "commitizen": "4.2.4",
@@ -178,7 +178,7 @@
     "typesync": "0.8.0"
   },
   "optionalDependencies": {
-    "@axe-core/react": "4.2.0",
+    "@axe-core/react": "4.2.1",
     "fsevents": "2.3.2",
     "pnpm": "6.4.0"
   },
