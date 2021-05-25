@@ -3,7 +3,7 @@ name: Audits
 
 on:
   pull_request:
-    types: [opened, ready_for_review, review_requested]
+    types: [opened, synchronize, ready_for_review, review_requested]
 
 jobs:
   # @see https://github.com/marketplace/actions/skip-duplicate-actions
