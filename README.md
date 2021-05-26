@@ -66,7 +66,7 @@
   - 3rd party services
 - UI _third_
   - all screens: from watch-face to wide screen, not just mobile/desktop
-  - [the new responsive](https://www.youtube.com/watch?v=jUQ2-C5ZNRc)
+  - the [new responsive](https://www.youtube.com/watch?v=jUQ2-C5ZNRc)
 - UX _last_
   - features & content
 
