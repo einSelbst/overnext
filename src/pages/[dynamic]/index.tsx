@@ -5,7 +5,7 @@ import {
   /* GetStaticPropsContext, */
   InferGetStaticPropsType,
 } from 'next'
-import React from 'react'
+import * as React from 'react'
 
 /* istanbul ignore next */
 export const config = {
