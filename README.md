@@ -66,6 +66,7 @@
   - 3rd party services
 - UI _third_
   - all screens: from watch-face to wide screen, not just mobile/desktop
+  - the [new responsive](https://www.youtube.com/watch?v=jUQ2-C5ZNRc)
 - UX _last_
   - features & content
 
@@ -409,8 +410,14 @@ see [CONTRIBUTING](./CONTRIBUTING.md)
 
 - [Documentation](https://nextjs.org/docs/deployment)
 - [Vercel](https://vercel.com/import?filter=next.js)
-  - for pnpm: override "Install Command" with: `npx pnpm i -P`, this skips dev dependencies
-  - override "Build Command": `next build && npx pnpm run postbuild` (vercel will use yarn otherwise)
+  - for pnpm:
+    - override "Install Command":
+      - `npx pnpm i -P` (skips dev dependencies) -> this has [issues](https://github.com/vercel/next.js/issues/16471)
+      - `rm -rf node_modules && npx pnpm i -P`
+      - `npx pnpm i -P --shamefully-hoist`
+      - `npx pnpm i -P --store=node_modules/.pnpm-store --shamefully-hoist`
+    - override "Build Command":
+      - `pnpm run build` (vercel will use yarn otherwise)
   - [`vercelignore`](https://vercel.com/guides/prevent-uploading-sourcepaths-with-vercelignore) to only upload neccessary files
 - [Netlify](https://www.netlify.com/blog/2020/11/30/how-to-deploy-next.js-sites-to-netlify/)
   - "Redirects and rewrites using next.config.js aren’t currently supported for Next.js sites on Netlify."
