@@ -2,7 +2,7 @@
 import { DefaultSeo } from 'next-seo'
 import { ThemeProvider } from 'next-themes'
 import { useAmp } from 'next/amp'
-import type { AppLayoutProps } from 'next/app'
+import { AppLayoutProps } from 'next/app'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import * as React from 'react'
