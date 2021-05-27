@@ -1,8 +1,8 @@
 // @ts-check
 /**
  * Next.js Configuration
- * @param [plugin]: function, configuration?: object, phases?: array]
- * @see {@link https://github.com/cyrilwanner/next-compose-plugins}
+ *
+ * @see https://github.com/cyrilwanner/next-compose-plugins
  */
 const { withPlugins, optional } = require('next-compose-plugins')
 const withPWA = require('next-pwa')
@@ -64,6 +64,9 @@ const nextConfiguration = {
 }
 
 /**
+ * Plugins go here
+ * params: function, configuration?: object, phases?: array
+ *
  * I don't want to have 'bundle-analyzer' loaded in production at all
  * so I added this check for an env var
  */
