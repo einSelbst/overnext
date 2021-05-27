@@ -4,6 +4,7 @@
  * @param [plugin]: function, configuration?: object, phases?: array]
  * @see {@link https://github.com/cyrilwanner/next-compose-plugins}
  */
+const { RelativeCiAgentWebpackPlugin } = require('@relative-ci/agent')
 const { withPlugins, optional } = require('next-compose-plugins')
 const withPWA = require('next-pwa')
 const { PHASE_DEVELOPMENT_SERVER } = require('next/constants')
@@ -35,7 +36,7 @@ const nextConfiguration = {
      * @see {@link https://relative-ci.com/documentation/setup/webpack-plugin}
      */
     if (!dev && !isServer && !process.env.VERCEL) {
-      const { RelativeCiAgentWebpackPlugin } = require('@relative-ci/agent')
+      //     const { RelativeCiAgentWebpackPlugin } = require('@relative-ci/agent')
       config.plugins.push(new RelativeCiAgentWebpackPlugin({ enabled: true }))
     }
 
