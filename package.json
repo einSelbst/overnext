@@ -131,7 +131,7 @@
     "@testing-library/react": "11.2.7",
     "@types/babel__preset-env": "7.9.1",
     "@types/core-js": "2.5.4",
-    "@types/eslint": "7.2.11",
+    "@types/eslint": "7.2.12",
     "@types/is-ci": "3.0.0",
     "@types/jest": "26.0.23",
     "@types/source-map-support": "0.5.3",
