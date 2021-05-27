@@ -1,4 +1,7 @@
 import Link from 'next/link'
+import { FaBeer, FaDog } from 'react-icons/fa'
+import { FcAbout, FcPrivacy } from 'react-icons/fc'
+import { GrContact } from 'react-icons/gr'
 
 type Props = {
   readonly success: boolean
@@ -10,27 +13,42 @@ const Navigation = (props: Props): ComponentReturnType => (
   <>
     <nav title='Site Navigation'>
       <Link href='/'>
-        <a>Home</a>
-      </Link>{' '}
-      |{' '}
+        <a>
+          <FaBeer />
+          Home
+        </a>
+      </Link>
+      &nbsp;&bull;&nbsp;
       <Link href='/dog'>
-        <a>Dog</a>
-      </Link>{' '}
-      |{' '}
+        <a>
+          <FaDog />
+          Dog
+        </a>
+      </Link>
+      &nbsp;&bull;&nbsp;
       <Link href='/page-1'>
         <a>Page 1</a>
-      </Link>{' '}
-      |{' '}
+      </Link>
+      &nbsp;&bull;&nbsp;
       <Link href='/legal/about'>
-        <a>About</a>
-      </Link>{' '}
-      |{' '}
+        <a>
+          <FcAbout />
+          About
+        </a>
+      </Link>
+      &nbsp;&bull;&nbsp;
       <Link href='/legal/privacy'>
-        <a>Privacy</a>
-      </Link>{' '}
-      |{' '}
+        <a>
+          <FcPrivacy />
+          Privacy
+        </a>
+      </Link>
+      &nbsp;&bull;&nbsp;
       <Link href='/legal/contact'>
-        <a>Contact</a>
+        <a>
+          <GrContact />
+          Contact
+        </a>
       </Link>
       {/* @see https://github.com/sindresorhus/react-extras#choose */}
       <div>
