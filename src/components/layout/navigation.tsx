@@ -1,7 +1,8 @@
 import Link from 'next/link'
-import { FaBeer, FaDog } from 'react-icons/fa'
+import { FaBeer, FaCarrot, FaDog } from 'react-icons/fa'
 import { FcAbout, FcPrivacy } from 'react-icons/fc'
 import { GrContact } from 'react-icons/gr'
+import MenuItem from './menu-item'
 
 type Props = {
   readonly success: boolean
@@ -12,44 +13,12 @@ type Props = {
 const Navigation = (props: Props): ComponentReturnType => (
   <>
     <nav title='Site Navigation'>
-      <Link href='/'>
-        <a>
-          <FaBeer />
-          Home
-        </a>
-      </Link>
-      &nbsp;&bull;&nbsp;
-      <Link href='/dog'>
-        <a>
-          <FaDog />
-          Dog
-        </a>
-      </Link>
-      &nbsp;&bull;&nbsp;
-      <Link href='/page-1'>
-        <a>Page 1</a>
-      </Link>
-      &nbsp;&bull;&nbsp;
-      <Link href='/legal/about'>
-        <a>
-          <FcAbout />
-          About
-        </a>
-      </Link>
-      &nbsp;&bull;&nbsp;
-      <Link href='/legal/privacy'>
-        <a>
-          <FcPrivacy />
-          Privacy
-        </a>
-      </Link>
-      &nbsp;&bull;&nbsp;
-      <Link href='/legal/contact'>
-        <a>
-          <GrContact />
-          Contact
-        </a>
-      </Link>
+      <MenuItem title='Home' path='/' icon={FaBeer} />
+      <MenuItem title='Dog' path='/dog' icon={FaDog} />
+      <MenuItem title='Page 1' path='/page-1' icon={FaCarrot} />
+      <MenuItem title='About' path='/legal/about' icon={FcAbout} />
+      <MenuItem title='Privacy' path='/legal/privacy' icon={FcPrivacy} />
+      <MenuItem title='Contact' path='/legal/contact' icon={GrContact} />
       {/* @see https://github.com/sindresorhus/react-extras#choose */}
       <div>
         {(() => {
