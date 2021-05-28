@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import * as PropTypes from 'prop-types'
 import * as React from 'react'
-import { FaCarrot } from 'react-icons/fa'
+/* import { FaCarrot } from 'react-icons/fa' */
 
 /**
  * @see {@link https://gist.github.com/busypeoples/6ac09e8dd63a12f78603fd76aa9cf580}
@@ -23,12 +23,12 @@ type InferPropertyTypes<
 const MenuItem: React.FC<MenuItemProps> = (
   props: MenuItemProps
 ): React.ReactElement => {
-  const myIcon = React.createElement(props.icon)
+  /* const myIcon = React.createElement(props.icon) */
   return (
     <>
       <Link href={props.path}>
         <a>
-          {myIcon}
+          {/* {myIcon} */}
           {props.title}
         </a>
       </Link>
@@ -40,11 +40,11 @@ const MenuItem: React.FC<MenuItemProps> = (
 const menuItemPropertyTypes = {
   title: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
-  icon: PropTypes.func.isRequired,
+  /* icon: PropTypes.func.isRequired, */
 }
 
 const menuItemDefaultProps = {
-  icon: FaCarrot,
+  /* icon: FaCarrot, */
 }
 
 type MenuItemProps = InferPropertyTypes<
@@ -53,6 +53,7 @@ type MenuItemProps = InferPropertyTypes<
 >
 
 MenuItem.propTypes = menuItemPropertyTypes
+
 MenuItem.defaultProps = menuItemDefaultProps
 
 export default MenuItem

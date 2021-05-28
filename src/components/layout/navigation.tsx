@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import { FaBeer, FaCarrot, FaDog } from 'react-icons/fa'
-import { FcAbout, FcPrivacy } from 'react-icons/fc'
-import { GrContact } from 'react-icons/gr'
+/* import { FaBeer, FaCarrot, FaDog } from 'react-icons/fa' */
+/* import { FcAbout, FcPrivacy } from 'react-icons/fc' */
+/* import { GrContact } from 'react-icons/gr' */
 import MenuItem from './menu-item'
 
 type Props = {
@@ -13,12 +13,18 @@ type Props = {
 const Navigation = (props: Props): ComponentReturnType => (
   <>
     <nav title='Site Navigation'>
-      <MenuItem title='Home' path='/' icon={FaBeer} />
-      <MenuItem title='Dog' path='/dog' icon={FaDog} />
-      <MenuItem title='Page 1' path='/page-1' icon={FaCarrot} />
-      <MenuItem title='About' path='/legal/about' icon={FcAbout} />
-      <MenuItem title='Privacy' path='/legal/privacy' icon={FcPrivacy} />
-      <MenuItem title='Contact' path='/legal/contact' icon={GrContact} />
+      {/* <MenuItem title='Home' path='/' icon={FaBeer} /> */}
+      <MenuItem title='Home' path='/' />
+      {/* <MenuItem title='Dog' path='/dog' icon={FaDog} /> */}
+      <MenuItem title='Dog' path='/dog' />
+      {/* <MenuItem title='Page 1' path='/page-1' icon={FaCarrot} /> */}
+      <MenuItem title='Page 1' path='/page-1' />
+      {/* <MenuItem title='About' path='/legal/about' icon={FcAbout} /> */}
+      <MenuItem title='About' path='/legal/about' />
+      {/* <MenuItem title='Privacy' path='/legal/privacy' icon={FcPrivacy} /> */}
+      <MenuItem title='Privacy' path='/legal/privacy' />
+      {/* <MenuItem title='Contact' path='/legal/contact' icon={GrContact} /> */}
+      <MenuItem title='Contact' path='/legal/contact' />
       {/* @see https://github.com/sindresorhus/react-extras#choose */}
       <div>
         {(() => {
