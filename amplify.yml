@@ -4,12 +4,12 @@ frontend:
     preBuild:
       commands:
         - rm -rf node_modules
-        - nvm install 14
+        # - nvm install 14
         - npm i -g pnpm
         - pnpm i -P
     build:
       commands:
-        - nvm use $VERSION_NODE_14
+        # - nvm use $VERSION_NODE_14
         - pnpm run build
   artifacts:
     baseDirectory: .next
@@ -18,3 +18,4 @@ frontend:
   cache:
     paths:
       - .next
+appRoot: dynamic-routing
