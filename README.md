@@ -429,6 +429,7 @@ see [CONTRIBUTING](./CONTRIBUTING.md)
     - [netlify-plugin-html-validate](https://github.com/oliverroick/netlify-plugin-html-validate), uses [html-validate](https://html-validate.org/)
     - [netlify-plugin-check-links](https://github.com/munter/netlify-plugin-checklinks), uses [hyperlink](https://github.com/Munter/hyperlink)
     - [netlify-plugin-a11y](https://github.com/netlify-labs/netlify-plugin-a11y), uses [pa11y](https://github.com/pa11y/pa11y)
+- [AWS Amplify](https://docs.amplify.aws/guides/hosting/nextjs/q/platform/js)
 
 ## Demo
 

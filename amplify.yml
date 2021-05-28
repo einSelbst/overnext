@@ -1,0 +1,20 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - rm -rf node_modules
+        - nvm install 14
+        - npm i -g pnpm
+        - pnpm i -P
+    build:
+      commands:
+        - nvm use $VERSION_NODE_14
+        - pnpm run build
+  artifacts:
+    baseDirectory: .next
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - .next
