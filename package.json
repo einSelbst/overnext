@@ -190,8 +190,7 @@
     }
   ],
   "engines": {
-    "node": ">=14",
-    "pnpm": ">=5"
+    "pnpm": ">=6"
   },
   "pnpm": {
     "overrides": {
