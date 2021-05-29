@@ -60,7 +60,7 @@ specifiers:
   eslint-plugin-tsdoc: 0.2.14
   eslint-plugin-unicorn: 32.0.1
   fsevents: 2.3.2
-  html-validate: 4.13.0
+  html-validate: 4.13.1
   husky: 6.0.0
   identity-obj-proxy: 3.0.0
   is-ci: 3.0.0
@@ -175,7 +175,7 @@ devDependencies:
   eslint-plugin-react-hooks: 4.2.0_eslint@7.27.0
   eslint-plugin-tsdoc: 0.2.14
   eslint-plugin-unicorn: 32.0.1_eslint@7.27.0
-  html-validate: 4.13.0_jest@26.6.3
+  html-validate: 4.13.1_jest@26.6.3
   husky: 6.0.0
   jest: 26.6.3_ts-node@10.0.0
   jest-watch-typeahead: 0.6.4_jest@26.6.3
@@ -9107,8 +9107,8 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
-  /html-validate/4.13.0_jest@26.6.3:
-    resolution: {integrity: sha512-hbjYDsr/abJ4BTIryNsSWZblUx41xmv27smdmHhyhFRQ5v7cvXZ9WfElVABD7PnnsRkCmQIYvaJwV/39nvxCzQ==}
+  /html-validate/4.13.1_jest@26.6.3:
+    resolution: {integrity: sha512-HCx9saspLiI9uL1XHpqEpV+yc/td5A4HR9HHNffuody4WNDuLDpLe4Sx6PXoBMIjdgozoiBrFSJqKMa3vwprBg==}
     engines: {node: '>= 10.0'}
     hasBin: true
     peerDependencies:
@@ -16349,7 +16349,7 @@ packages:
       workbox-core: 6.1.5
     dev: false
 
-  /workbox-build/6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14:
+  /workbox-build/6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14:
     resolution: {integrity: sha512-P+fakR5QFVqJN9l9xHVXtmafga72gh9I+jM3A9HiB/6UNRmOAejXnDgD+RMegOHgQHPwnB44TalMToFaXKWIyA==}
     engines: {node: '>=10.0.0'}
     dependencies:
@@ -16486,7 +16486,7 @@ packages:
       upath: 1.2.0
       webpack: 5.38.1
       webpack-sources: 1.4.3
-      workbox-build: 6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14
+      workbox-build: 6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
