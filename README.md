@@ -80,7 +80,6 @@ This is more about priorities than about a temporal order.
 
 ## DX
 
-- [volta](https://github.com/volta-cli/volta), for toolchain management (hoping for [pnpm support](https://github.com/volta-cli/volta/issues/737)), usage: [install guide](./CONTRIBUTING.md)
 - [`pnpm`](https://pnpm.js.org/en/) package manager
 - automation, [inspirations](https://github.com/sdras/awesome-actions)
 - conformity, [inspirations](https://github.com/dustinspecker/awesome-eslint)
@@ -96,6 +95,11 @@ This is more about priorities than about a temporal order.
   - Expire when you install/uninstall a specific package: use `[+package]` or `[-package]` to expire. No whitespace.
   - Expire when a package reaches a specific version: use `[package@>1]` or `[package@>=2]`. No whitespace.
   </details>
+
+### Tips
+
+- use [volta](https://github.com/volta-cli/volta) for toolchain management (hoping for [pnpm support](https://github.com/volta-cli/volta/issues/737)), usage: [install guide](./CONTRIBUTING.md)
+- use [pnpm completion](https://medium.com/pnpm/pnpm-v4-9-comes-with-command-completion-a411715260b4) via `pnpm install-completion`
 
 ### Commit Style
 
@@ -452,6 +456,23 @@ There are a few differences between Vercel & Netlify.
 
 - `sass` module can be a `devDependency` on Netlify, but must be a (production) `dependency` on Vercel
 - i18n routing: on Vercel the user is redirected to the browser detected language by default, but not on Netlify
+
+### Setup
+
+- on MacOS BigSur, with iterm2 I had the strange effect that my terminal windows just vanished, the syslogs just said
+
+```sh
+login[55941]: DEAD_PROCESS: 55941 ttys000
+```
+
+I noticed that running scripts with multiple sub-invocations (eg. `pnpm validate`) not only start `zsh` processes, which I use and which is also the default in BigSur,
+but also a `bash` process. You can use the following command to check what pnpm will use as a script shell (in my case it was 'null', which seem to mean `bash`)
+
+```sh
+ % pnpm config get script-shell
+```
+
+So I set it to `zsh` by running `% pnpm config get script-shell zsh`
 
 ## API Reference
 

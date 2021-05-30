@@ -2,7 +2,7 @@
 
 ## prerequisites
 
-You can use [volta](https://volta.sh) installed on your system. It's used to set up everything else.
+- \*Optional: install [volta](https://volta.sh) on your system. It provides something like a sandbox global env for the project.
 
 `curl https://get.volta.sh | bash`
 
