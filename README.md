@@ -502,6 +502,12 @@ ToDo link to API Docs
 I should use Github Issues for this but hey.
 
 - [ ] integrate with [README.so template](https://readme.so/editor)
+
+- [ ] I have node version defined in several places, maybe I can consolidate this
+  - `.nvmrc`
+  - `.npmrc` because pnpm
+  - ~package.json > engine~, removed because annoying warning in vercel
+  - package.json > volta, for volta
 - [ ] add [SRI](https://github.com/vercel/next.js/discussions/23951)
 - [ ] cypress a11y plugin
 - [ ] [cypress-html-validate](https://html-validate.org/usage/cypress.html) plugin
