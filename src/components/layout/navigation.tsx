@@ -3,6 +3,7 @@ import Link from 'next/link'
 /* import { FcAbout, FcPrivacy } from 'react-icons/fc' */
 /* import { GrContact } from 'react-icons/gr' */
 import MenuItem from './menu-item'
+import HeartIcon from 'components/icons/HeartIcon'
 
 type Props = {
   readonly success: boolean
@@ -37,6 +38,9 @@ const Navigation = (props: Props): ComponentReturnType => (
           return <span>�</span>
         })()}
       </div>
+      <HeartIcon className='text-red-700' width='48px' height='16px' />
+      <HeartIcon className='text-purple-700' width='48px' height='32px' />
+      <HeartIcon className='text-pink-700' width='48px' height='48px' />
     </nav>
     <div className='mt-2'>
       <form role='search'>
