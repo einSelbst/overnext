@@ -6,21 +6,24 @@ module.exports = {
       2,
       'always',
       [
+        'a11y', // accessibility
         'build',
         'chore',
-        'ci',
+        'ci', // continuous integration
+        'cx', // customer experience
         'deps', // dependencies
         'docs',
         'dx', // all things dev experience
         'feat',
         'fix',
+        'i18n', // internationalization
         'perf',
         'refactor',
         'revert',
         'style', // this means 'code' style
         'test',
         'ui', // CSS, etc
-        'ux',
+        'ux', // user experience
         'wip',
       ],
     ],

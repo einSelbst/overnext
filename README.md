@@ -80,7 +80,6 @@ This is more about priorities than about a temporal order.
 
 ## DX
 
-- [volta](https://github.com/volta-cli/volta), for toolchain management (hoping for [pnpm support](https://github.com/volta-cli/volta/issues/737)), usage: [install guide](./CONTRIBUTING.md)
 - [`pnpm`](https://pnpm.js.org/en/) package manager
 - automation, [inspirations](https://github.com/sdras/awesome-actions)
 - conformity, [inspirations](https://github.com/dustinspecker/awesome-eslint)
@@ -97,6 +96,11 @@ This is more about priorities than about a temporal order.
   - Expire when a package reaches a specific version: use `[package@>1]` or `[package@>=2]`. No whitespace.
   </details>
 
+### Tips
+
+- use [volta](https://github.com/volta-cli/volta) for toolchain management (hoping for [pnpm support](https://github.com/volta-cli/volta/issues/737)), see: [install guide](./CONTRIBUTING.md)
+- use [pnpm completion](https://medium.com/pnpm/pnpm-v4-9-comes-with-command-completion-a411715260b4) via `pnpm install-completion`
+
 ### Commit Style
 
 - [Conventional Commits convention](https://www.conventionalcommits.org/)
@@ -105,21 +109,24 @@ This is more about priorities than about a temporal order.
     <details>
       <summary>Show commit types</summary>
 
+    - `a11y`: Accessibility
+    - `build`: Changes that affect the build system (example scopes: webpack, typescript, babel, pnpm)
+    - `chore`: Other changes that don't modify src or test files
+    - `ci`: Changes to the CI configuration files and scripts (example scopes: Github Actions, BrowserStack)
+    - `cx`: Customer Experience
+    - `deps`: Managing dependencies
+    - `docs`: Documentation only changes
+    - `dx`: All things about improving developer experience
     - `feat`: A new feature
     - `fix`: A bug fix
+    - `i18n`: Internationalization
+    - `perf`: A code change that improves performance
+    - `refactor`: A code change that neither fixes a bug nor adds a feature
+    - `revert`: Reverts a previous commit
+    - `style`: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+    - `test`: Adding missing tests or correcting existing tests
     - `ui`: CSS and layout
     - `ux`: User Experience
-    - `docs`: Documentation only changes
-    - `style`: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-    - `refactor`: A code change that neither fixes a bug nor adds a feature
-    - `perf`: A code change that improves performance
-    - `test`: Adding missing tests or correcting existing tests
-    - `build`: Changes that affect the build system (example scopes: webpack, typescript, babel, pnpm)
-    - `deps`: Managing dependencies
-    - `ci`: Changes to the CI configuration files and scripts (example scopes: Github Actions, BrowserStack)
-    - `dx`: All things about improving developer experience
-    - `chore`: Other changes that don't modify src or test files
-    - `revert`: Reverts a previous commit
     - `wip`: work in progress
     </details>
 
@@ -453,6 +460,23 @@ There are a few differences between Vercel & Netlify.
 - `sass` module can be a `devDependency` on Netlify, but must be a (production) `dependency` on Vercel
 - i18n routing: on Vercel the user is redirected to the browser detected language by default, but not on Netlify
 
+### Setup
+
+- on MacOS BigSur, with iterm2 I have a strange problem that my terminal windows just vanish, the syslogs just say
+
+```sh
+login[55941]: DEAD_PROCESS: 55941 ttys000
+```
+
+I noticed that running scripts with multiple sub-invocations (eg. `pnpm validate`) not only start `zsh` processes, which I use and which is also the default in BigSur,
+but also a `bash` process. You can use the following command to check what pnpm will use as a script shell (in my case it was 'null', which seem to mean `bash`)
+
+```sh
+ % pnpm config get script-shell
+```
+
+So I set it to `zsh` by running `% pnpm config set script-shell zsh` but it doesn't solve the issue, keeping notes here anyway...
+
 ## API Reference
 
 ToDo link to API Docs
@@ -481,6 +505,12 @@ ToDo link to API Docs
 I should use Github Issues for this but hey.
 
 - [ ] integrate with [README.so template](https://readme.so/editor)
+
+- [ ] I have node version defined in several places, maybe I can consolidate this
+  - `.nvmrc`
+  - `.npmrc` because pnpm
+  - ~package.json > engine~, removed because annoying warning in vercel
+  - package.json > volta, for volta
 - [ ] add [SRI](https://github.com/vercel/next.js/discussions/23951)
 - [ ] cypress a11y plugin
 - [ ] [cypress-html-validate](https://html-validate.org/usage/cypress.html) plugin
