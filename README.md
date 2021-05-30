@@ -109,21 +109,24 @@ This is more about priorities than about a temporal order.
     <details>
       <summary>Show commit types</summary>
 
+    - `a11y`: Accessibility
+    - `build`: Changes that affect the build system (example scopes: webpack, typescript, babel, pnpm)
+    - `chore`: Other changes that don't modify src or test files
+    - `ci`: Changes to the CI configuration files and scripts (example scopes: Github Actions, BrowserStack)
+    - `cx`: Customer Experience
+    - `deps`: Managing dependencies
+    - `docs`: Documentation only changes
+    - `dx`: All things about improving developer experience
     - `feat`: A new feature
     - `fix`: A bug fix
+    - `i18n`: Internationalization
+    - `perf`: A code change that improves performance
+    - `refactor`: A code change that neither fixes a bug nor adds a feature
+    - `revert`: Reverts a previous commit
+    - `style`: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+    - `test`: Adding missing tests or correcting existing tests
     - `ui`: CSS and layout
     - `ux`: User Experience
-    - `docs`: Documentation only changes
-    - `style`: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-    - `refactor`: A code change that neither fixes a bug nor adds a feature
-    - `perf`: A code change that improves performance
-    - `test`: Adding missing tests or correcting existing tests
-    - `build`: Changes that affect the build system (example scopes: webpack, typescript, babel, pnpm)
-    - `deps`: Managing dependencies
-    - `ci`: Changes to the CI configuration files and scripts (example scopes: Github Actions, BrowserStack)
-    - `dx`: All things about improving developer experience
-    - `chore`: Other changes that don't modify src or test files
-    - `revert`: Reverts a previous commit
     - `wip`: work in progress
     </details>
 
