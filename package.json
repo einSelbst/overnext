@@ -181,14 +181,6 @@
     "fsevents": "2.3.2",
     "pnpm": "6.6.1"
   },
-  "packageRules": [
-    {
-      "matchPackageNames": [
-        "husky"
-      ],
-      "alowedVersions": "<=4"
-    }
-  ],
   "engines": {
     "pnpm": ">=6"
   },
