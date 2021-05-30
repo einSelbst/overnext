@@ -98,7 +98,7 @@ This is more about priorities than about a temporal order.
 
 ### Tips
 
-- use [volta](https://github.com/volta-cli/volta) for toolchain management (hoping for [pnpm support](https://github.com/volta-cli/volta/issues/737)), usage: [install guide](./CONTRIBUTING.md)
+- use [volta](https://github.com/volta-cli/volta) for toolchain management (hoping for [pnpm support](https://github.com/volta-cli/volta/issues/737)), see: [install guide](./CONTRIBUTING.md)
 - use [pnpm completion](https://medium.com/pnpm/pnpm-v4-9-comes-with-command-completion-a411715260b4) via `pnpm install-completion`
 
 ### Commit Style
@@ -459,7 +459,7 @@ There are a few differences between Vercel & Netlify.
 
 ### Setup
 
-- on MacOS BigSur, with iterm2 I had the strange effect that my terminal windows just vanished, the syslogs just said
+- on MacOS BigSur, with iterm2 I have a strange problem that my terminal windows just vanish, the syslogs just say
 
 ```sh
 login[55941]: DEAD_PROCESS: 55941 ttys000
@@ -472,7 +472,7 @@ but also a `bash` process. You can use the following command to check what pnpm 
  % pnpm config get script-shell
 ```
 
-So I set it to `zsh` by running `% pnpm config get script-shell zsh`
+So I set it to `zsh` by running `% pnpm config set script-shell zsh` but it doesn't solve the issue, keeping notes here anyway...
 
 ## API Reference
 

@@ -1,12 +1,28 @@
 # Contributing
 
+## optional
+
+- macos: homebrew, to install all the other stuff
+- volta `curl https://get.volta.sh | bash`, for js toolchain management
+
 ## prerequisites
 
-- \*Optional: install [volta](https://volta.sh) on your system. It provides something like a sandbox global env for the project.
+### node.js
 
-`curl https://get.volta.sh | bash`
+- if you have volta installed _node_ should be installed automatically when you open the project
+- if you have `nvm` installed use `nvm i`
+- I need to test this but I think `pnpm` will install _node.js_ automatically because I have set `use-node-version` in `.npmrc`
 
-If you don't like volta you could just use `nvm i`
+### npm
+
+- if you have volta installed _npm_ should be installed automatically when you open the project
+
+### pnpm
+
+- `curl -f https://get.pnpm.io/v6.js | node - add --global pnpm`
+- `npm i -g pnpm`
+- optional: `pnpm install-completion`
+- optional: `pnpm config set script-shell zsh`
 
 ## fork this project
 
@@ -15,8 +31,6 @@ If you don't like volta you could just use `nvm i`
 
 ## setup
 
-- `volta install` to install toolchain (`node`, `npm`, unfortunately not `pnpm` yet)
-- `npm i -g pnpm` to install `pnpm`
 - `pnpm i` # to install deps
 - `pnpm validate` # make sure everything works
 
@@ -26,6 +40,7 @@ If you don't like volta you could just use `nvm i`
 
 ## fix some code
 
+- ... write some code...
 - `pnpm validate` # make sure everything still works
 - `pnpm cz` # commit new code
 - `git push origin my-fix`
