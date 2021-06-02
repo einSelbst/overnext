@@ -192,7 +192,8 @@
       "debug": "latest",
       "fsevents": "2.3.2",
       "prettierx": "0.18",
-      "source-map-resolve": "latest"
+      "source-map-resolve": "latest",
+      "ws": "7.4.6"
     }
   },
   "lint-staged": {
