@@ -31,7 +31,7 @@
 ![cypress version](https://img.shields.io/badge/cypress-7.4.0-brightgreen)
 ![jest version](https://img.shields.io/badge/jest-27.0.3-brightgreen)
 ![eslint version](https://img.shields.io/badge/eslint-7.27.0-brightgreen)
-![tailwindcss version](https://img.shields.io/badge/tailwindcss-2.1.2-brightgreen)
+![tailwindcss version](https://img.shields.io/badge/tailwindcss-2.1.4-brightgreen)
 
 </details>
 
