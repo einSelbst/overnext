@@ -1,8 +1,11 @@
 import Link from 'next/link'
-import * as PropTypes from 'prop-types'
 import * as React from 'react'
 
-const SiteLayout = ({ children }) => (
+interface Props {
+  children: React.ReactNode
+}
+
+const SiteLayout = ({ children }: Props) => (
   <div className='bg-white antialiased'>
     <div>
       <div>
@@ -45,17 +48,8 @@ const SiteLayout = ({ children }) => (
   </div>
 )
 
-SiteLayout.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
-}
-
-SiteLayout.defaultProps = {
-  children: undefined,
-}
-
-export const getLayout = page => <SiteLayout>{page}</SiteLayout>
+export const getLayout = (page: React.ReactNode) => (
+  <SiteLayout>{page}</SiteLayout>
+)
 
 export default SiteLayout
