@@ -29,7 +29,6 @@ specifiers:
   '@types/is-ci': 3.0.0
   '@types/jest': 26.0.23
   '@types/node': 14.17.2
-  '@types/prop-types': 15.7.3
   '@types/react': 17.0.9
   '@types/react-dom': 17.0.6
   '@types/sass': 1.16.0
@@ -80,7 +79,6 @@ specifiers:
   pnpm: 6.6.2
   postcss: 8.3.0
   prettier-standard: 16.3.0
-  prop-types: 15.7.2
   react: 17.0.2
   react-dom: 17.0.2
   sass: 1.34.1
@@ -100,7 +98,6 @@ specifiers:
 dependencies:
   '@babel/core': 7.14.3
   '@types/node': 14.17.2
-  '@types/prop-types': 15.7.3
   '@types/react': 17.0.9
   '@types/react-dom': 17.0.6
   autoprefixer: 10.2.6_postcss@8.3.0
@@ -113,7 +110,6 @@ dependencies:
   next-sitemap: 1.6.99_next@10.2.3
   next-themes: 0.0.14_cdb07c42721266739ffbd3ea8e818efe
   postcss: 8.3.0
-  prop-types: 15.7.2
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   sass: 1.34.1

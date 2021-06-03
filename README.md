@@ -169,7 +169,7 @@ info: Display info about the scripts
 ## Code Style
 
 - React [Strict Mode](https://reactjs.org/docs/strict-mode.html) enabled in [development](https://nextjs.org/docs/api-reference/next.config.js/react-strict-mode)
-  - [`prop-types`](https://www.npmjs.com/package/prop-types) (for run-time type checking), more [info](https://stackoverflow.com/a/54690878/531439)
+  - ~~[`prop-types`](https://www.npmjs.com/package/prop-types) (for run-time type checking)~~ -> discarded, see [reasons](#prop-types)
 - [Typescript](https://www.typescriptlang.org/) (for compile time type checking)
   - with [`tslib`](https://www.npmjs.com/package/tslib) for imports optimization
   - [`typesync`](https://github.com/jeffijoe/typesync) for find dependency typings
@@ -452,6 +452,23 @@ see [CONTRIBUTING](./CONTRIBUTING.md)
 ToDo [Documentation](https://linktodocumentation)
 
 ## Learnings
+
+### prop-types
+
+Intially I wanted to use [prop-types](https://github.com/facebook/prop-types) because of the reasons given in those articles:
+
+- [TypeScript and React: Prop Types](https://fettblog.eu/typescript-react/prop-types/) - Blogpost by Stefan Baumgartner
+- [PropTypes in a TypeScript React Application](https://stackoverflow.com/a/54690878/531439) - Anwer on StackOverflow
+- [Notes on TypeScript: Inferring React PropTypes](https://dev.to/busypeoples/notes-on-typescript-inferring-react-proptypes-1g88) - Guide on `dev.to`
+
+When I actually started using them I had some problems:
+
+- to be able to extend the function object I had to use `React.FC` because otherwise TypeScript prevents this, but:
+- I don't want to use `React.FC` for [these reasons](https://fettblog.eu/typescript-react-why-i-dont-use-react-fc/),
+  - especially I dont want to close the door for [going Preact](https://fettblog.eu/go-preact/)
+- also `prop-types` itself seem to have an [unclear](https://github.com/facebook/prop-types/issues/337#issuecomment-791013311) [future](https://github.com/facebook/prop-types/issues/249)
+
+I might still use prop-types in case I encounter a situation where I get much benefit from the runtime type checking, but then I would only use it for this specific case.
 
 ### Hosting
 

@@ -1,10 +1,16 @@
+import { NextPage } from 'next'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import * as PropTypes from 'prop-types'
 import * as React from 'react'
-import { getLayout as getSiteLayout } from './site.layout.js'
+import { getLayout as getSiteLayout } from './site.layout'
 
-const ActiveLink = ({ children, href, className }) => {
+type ActiveLinkProps = {
+  children: React.ReactNode
+  href: string
+  className?: string
+}
+
+const ActiveLink = ({ children, href, className = '' }: ActiveLinkProps) => {
   const router = useRouter()
   return (
     <Link href={href} scroll={false}>
@@ -20,17 +26,7 @@ const ActiveLink = ({ children, href, className }) => {
     </Link>
   )
 }
-
-ActiveLink.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
-  href: PropTypes.string,
-  className: PropTypes.string,
-}
-
-const AccountSettingsLayout = ({ children }) => (
+const AccountSettingsLayout = ({ children }: { children: React.ReactNode }) => (
   <div className='max-w-xl mx-auto px-8'>
     <h1 className='text-2xl text-gray-900 font-semibold'>Account Settings</h1>
 
@@ -67,14 +63,8 @@ const AccountSettingsLayout = ({ children }) => (
   </div>
 )
 
-AccountSettingsLayout.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
-}
-
-export const getLayout = page =>
+/* export const getLayout = (page: React.ReactNode) => */
+export const getLayout = (page: NextPage) =>
   getSiteLayout(<AccountSettingsLayout>{page}</AccountSettingsLayout>)
 
 export default AccountSettingsLayout
