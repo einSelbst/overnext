@@ -13,7 +13,6 @@ jobs:
       contains(github.ref, 'dependabot') == false &&
       contains(github.ref, 'renovate') == false
     runs-on: ubuntu-20.04
-
     steps:
       - name: Checkout
         uses: actions/checkout@v2

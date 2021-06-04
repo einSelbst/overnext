@@ -1,4 +1,4 @@
-export default function SimpleLayout ({
+export default function SimpleLayout({
   children,
 }: {
   children: React.ReactNode
