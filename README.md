@@ -305,8 +305,6 @@ info: Display info about the scripts
 
 - [`husky`](https://github.com/typicode/husky) for hooks
 
-  - [`lint-staged`](https://github.com/okonet/lint-staged)
-
 - [`axe-core/react`](https://github.com/dequelabs/axe-core-npm)
 
 ## Tech Stack

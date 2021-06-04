@@ -155,7 +155,6 @@
     "husky": "6.0.0",
     "jest": "27.0.4",
     "jest-watch-typeahead": "0.6.4",
-    "lint-staged": "11.0.0",
     "netlify-plugin-a11y": "0.0.12",
     "netlify-plugin-cypress": "2.2.0",
     "next-unused": "0.0.6",
@@ -190,11 +189,6 @@
       "source-map-resolve": "latest",
       "ws": "7.4.6"
     }
-  },
-  "lint-staged": {
-    "*": [
-      "prettier-standard --lint"
-    ]
   },
   "next-unused": {
     "alias": {
