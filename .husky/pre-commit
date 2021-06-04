@@ -2,4 +2,4 @@
 # shellcheck source=/dev/null
 . "$(dirname "$0")/_/husky.sh"
 
-pnpm lint-staged
+pnpm git-format-staged -f 'prettier --ignore-unknown --stdin --stdin-filepath "{}"' .

@@ -8,10 +8,7 @@ context('Utilities', () => {
   it('cypress._ - call a lodash method', () => {
     // https://on.cypress.io/_
     cy.request('https://jsonplaceholder.cypress.io/users').then(response => {
-      const ids = Cypress._.chain(response.body)
-        .map('id')
-        .take(3)
-        .value()
+      const ids = Cypress._.chain(response.body).map('id').take(3).value()
 
       expect(ids).to.deep.eq([1, 2, 3])
     })
@@ -45,9 +42,7 @@ context('Utilities', () => {
         // append the image
         $div.append(img)
 
-        cy.get('.utility-blob img')
-          .click()
-          .should('have.attr', 'src', dataUrl)
+        cy.get('.utility-blob img').click().should('have.attr', 'src', dataUrl)
       })
     })
   })
@@ -90,9 +85,7 @@ context('Utilities', () => {
 
     expect(time).to.be.a('string')
 
-    cy.get('.utility-moment')
-      .contains('3:38 PM')
-      .should('have.class', 'badge')
+    cy.get('.utility-moment').contains('3:38 PM').should('have.class', 'badge')
 
     // the time in the element should be between 3pm and 5pm
     const start = Cypress.moment('3:00 PM', 'LT')
@@ -121,7 +114,7 @@ context('Utilities', () => {
     /**
      * @return Bluebird<string>
      */
-    function waitOneSecond () {
+    function waitOneSecond() {
       // return a promise that resolves after 1 second
       // @ts-ignore TS2351 (new Cypress.Promise)
       return new Cypress.Promise((resolve, _reject) => {

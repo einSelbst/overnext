@@ -67,7 +67,7 @@ export const getStaticProps: GetStaticProps = async ({
   }
 }
 
-function Fragments ({
+function Fragments({
   fragments,
 }: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element {
   return (

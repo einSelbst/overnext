@@ -12,9 +12,7 @@ context('Misc', () => {
     // and force Cypress to re-query from the root element
     cy.get('.misc-table').within(() => {
       // ends the current chain and yields null
-      cy.contains('Cheryl')
-        .click()
-        .end()
+      cy.contains('Cheryl').click().end()
 
       // queries the entire table again
       cy.contains('Charles').click()
@@ -54,35 +52,23 @@ context('Misc', () => {
       return
     }
 
-    cy.exec('echo Jane Lane')
-      .its('stdout')
-      .should('contain', 'Jane Lane')
+    cy.exec('echo Jane Lane').its('stdout').should('contain', 'Jane Lane')
 
     if (Cypress.platform === 'win32') {
-      cy.exec('print cypress.json')
-        .its('stderr')
-        .should('be.empty')
+      cy.exec('print cypress.json').its('stderr').should('be.empty')
     } else {
-      cy.exec('cat cypress.json')
-        .its('stderr')
-        .should('be.empty')
+      cy.exec('cat cypress.json').its('stderr').should('be.empty')
 
-      cy.exec('pwd')
-        .its('code')
-        .should('eq', 0)
+      cy.exec('pwd').its('code').should('eq', 0)
     }
   })
 
   it('cy.focused() - get the DOM element that has focus', () => {
     // https://on.cypress.io/focused
-    cy.get('.misc-form')
-      .find('#name')
-      .click()
+    cy.get('.misc-form').find('#name').click()
     cy.focused().should('have.id', 'name')
 
-    cy.get('.misc-form')
-      .find('#description')
-      .click()
+    cy.get('.misc-form').find('#description').click()
     cy.focused().should('have.id', 'description')
   })
 
@@ -100,16 +86,14 @@ context('Misc', () => {
         scale: false,
         disableTimersAndAnimations: true,
         screenshotOnRunFailure: true,
-        onBeforeScreenshot () {},
-        onAfterScreenshot () {},
+        onBeforeScreenshot() {},
+        onAfterScreenshot() {},
       })
     })
   })
 
   it('cy.wrap() - wrap an object', () => {
     // https://on.cypress.io/wrap
-    cy.wrap({ foo: 'bar' })
-      .should('have.property', 'foo')
-      .and('include', 'bar')
+    cy.wrap({ foo: 'bar' }).should('have.property', 'foo').and('include', 'bar')
   })
 })

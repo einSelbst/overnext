@@ -26,9 +26,7 @@ context('Network Requests', () => {
   it('cy.request() - verify response using BDD syntax', () => {
     cy.request('https://jsonplaceholder.cypress.io/comments').then(response => {
       // https://on.cypress.io/assertions
-      expect(response)
-        .property('status')
-        .to.equal(200)
+      expect(response).property('status').to.equal(200)
       expect(response)
         .property('body')
         .to.have.property('length')
@@ -66,41 +64,29 @@ context('Network Requests', () => {
       // can be written as its('body.0')
       // if you do not care about TypeScript checks
       .then(user => {
-        expect(user)
-          .property('id')
-          .to.be.a('number')
+        expect(user).property('id').to.be.a('number')
         // make a new post on behalf of the user
         cy.request('POST', 'https://jsonplaceholder.cypress.io/posts', {
           userId: user.id,
           title: 'Cypress It Runner',
-          body:
-            'Fast, easy and reliable iting for anything that runs in a browser.',
+          body: 'Fast, easy and reliable iting for anything that runs in a browser.',
         })
       })
       // note that the value here is the returned value of the 2nd request
       // which is the new post object
       .then(response => {
-        expect(response)
-          .property('status')
-          .to.equal(201) // new entity created
-        expect(response)
-          .property('body')
-          .to.contain({
-            title: 'Cypress It Runner',
-          })
+        expect(response).property('status').to.equal(201) // new entity created
+        expect(response).property('body').to.contain({
+          title: 'Cypress It Runner',
+        })
 
         // we don't know the exact post id - only that it will be > 100
         // since JSONPlaceholder has built-in 100 posts
-        expect(response.body)
-          .property('id')
-          .to.be.a('number')
-          .and.to.be.gt(100)
+        expect(response.body).property('id').to.be.a('number').and.to.be.gt(100)
 
         // we don't know the user id here - since it was in above closure
         // so in this it just confirm that the property is there
-        expect(response.body)
-          .property('userId')
-          .to.be.a('number')
+        expect(response.body).property('userId').to.be.a('number')
       })
   })
 
@@ -120,8 +106,7 @@ context('Network Requests', () => {
         cy.request('POST', 'https://jsonplaceholder.cypress.io/posts', {
           userId: this.user.id,
           title: 'Cypress It Runner',
-          body:
-            'Fast, easy and reliable iting for anything that runs in a browser.',
+          body: 'Fast, easy and reliable iting for anything that runs in a browser.',
         })
           .its('body')
           .as('post') // save the new post from the response

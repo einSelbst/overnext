@@ -29,8 +29,7 @@ const _Topic = (): JSX.Element => {
           description: 'A legal topic',
           images: [
             {
-              url:
-                'https://via.placeholder.com/728x90.png?text=Visit+WhoIsHostingThis.com+Buyers+Guide',
+              url: 'https://via.placeholder.com/728x90.png?text=Visit+WhoIsHostingThis.com+Buyers+Guide',
               width: 800,
               height: 600,
               alt: firstTopic,

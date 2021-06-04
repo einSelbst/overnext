@@ -188,7 +188,7 @@ const reportWebVitals = (metric: { name: string; value: string }): void => {
  * where a page has a property `Layout` and the slightly more advanced version
  * where a page has a function `getLayout`. I will keep both for the moment.
  */
-function _app ({ Component, pageProps }: AppLayoutProps): React.ReactElement {
+function _app({ Component, pageProps }: AppLayoutProps): React.ReactElement {
   const isAmp = useAmp(),
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     Layout = Component.Layout || DefaultLayout,

@@ -21,7 +21,7 @@ interface StaticPathParameters extends ParsedUrlQuery {
   id: string
 }
 
-export async function getStaticPaths (
+export async function getStaticPaths(
   _context: GetStaticPathsContext
 ): Promise<GetStaticPathsResult<StaticPathParameters>> {
   await Promise.resolve('async needs await')
@@ -46,7 +46,7 @@ interface PostProps {
 /* export async function getStaticProps ({ */
 /* params, */
 /* }: GetStaticPropsContext): Promise<GetStaticPropsResult<PostProps>> { */
-export async function getStaticProps (
+export async function getStaticProps(
   context: GetStaticPropsContext
 ): Promise<GetStaticPropsResult<PostProps>> {
   await Promise.resolve('async needs await')
@@ -57,7 +57,7 @@ export async function getStaticProps (
   }
 }
 
-function Post ({
+function Post({
   id,
 }: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element {
   // function Post ( props: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element {

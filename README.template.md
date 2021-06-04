@@ -30,8 +30,8 @@ Add badges from somewhere like: [shields.io](https://shields.io/)
 Install my-project with npm
 
 ```bash
-  npm install my-project
-  cd my-project
+npm install my-project
+cd my-project
 ```
 
 ## Environment Variables
@@ -51,7 +51,7 @@ To run this project, you will need to add the following environment variables to
 ```javascript
 import Component from 'my-project'
 
-function App () {
+function App() {
   return <Component />
 }
 ```
@@ -61,25 +61,25 @@ function App () {
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+git clone https://link-to-project
 ```
 
 Go to the project directory
 
 ```bash
-  cd my-project
+cd my-project
 ```
 
 Install dependencies
 
 ```bash
-  npm install
+npm install
 ```
 
 Start the server
 
 ```bash
-  npm run start
+npm run start
 ```
 
 ## Running Tests
@@ -87,7 +87,7 @@ Start the server
 To run tests, run the following command
 
 ```bash
-  npm run test
+npm run test
 ```
 
 ## Deployment ok
@@ -95,7 +95,7 @@ To run tests, run the following command
 To deploy this project run
 
 ```bash
-  npm run deploy
+npm run deploy
 ```
 
 ## Demo ok

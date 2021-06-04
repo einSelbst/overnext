@@ -48,7 +48,7 @@
     "pree2e": "rm -rf .nyc_output coverage .next || true",
     " ------------------------- Linting ------------------------- ": "",
     "?format": "echo Format source code and fix issues",
-    "format": "prettier-standard --format --lint",
+    "format": "prettier --write . --plugin=prettier-plugin-sh --plugin=prettier-plugin-toml",
     "?lint": "echo Lint source code and fix issues",
     "lint": "eslint . --fix",
     "?lint:html": "Run html-validate on generated static output files",
@@ -126,6 +126,7 @@
     "@types/eslint": "7.2.13",
     "@types/is-ci": "3.0.0",
     "@types/jest": "26.0.23",
+    "@types/prettier": "2.2.3",
     "@types/sass": "1.16.0",
     "@types/source-map-support": "0.5.3",
     "@types/standard-version": "7.0.0",
@@ -151,17 +152,19 @@
     "eslint-plugin-react-hooks": "4.2.0",
     "eslint-plugin-tsdoc": "0.2.14",
     "eslint-plugin-unicorn": "33.0.1",
+    "git-format-staged": "latest",
     "html-validate": "4.13.1",
     "husky": "6.0.0",
     "jest": "27.0.4",
     "jest-watch-typeahead": "0.6.4",
-    "lint-staged": "11.0.0",
     "netlify-plugin-a11y": "0.0.12",
     "netlify-plugin-cypress": "2.2.0",
     "next-unused": "0.0.6",
     "npm-scripts-info": "0.3.9",
     "nyc": "15.1.0",
-    "prettier-standard": "16.3.0",
+    "prettier": "2.3.0",
+    "prettier-plugin-sh": "0.6.1",
+    "prettier-plugin-toml": "latest",
     "size-limit": "4.11.0",
     "source-map-support": "0.5.19",
     "standard-version": "9.3.0",
@@ -186,15 +189,9 @@
       "chokidar": "3",
       "debug": "latest",
       "fsevents": "2.3.2",
-      "prettierx": "0.18",
       "source-map-resolve": "latest",
       "ws": "7.4.6"
     }
-  },
-  "lint-staged": {
-    "*": [
-      "prettier-standard --lint"
-    ]
   },
   "next-unused": {
     "alias": {
