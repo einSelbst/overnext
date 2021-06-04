@@ -181,10 +181,6 @@ info: Display info about the scripts
 
 ### Linter / A11y
 
-- [Prettier-Standard](https://github.com/sheerun/prettier-standard)
-
-  - [`prettierx`](https://github.com/brodybits/prettierx/)
-
 - [ESLint](https://eslint.org/)
 
   - [`eslint-plugin-next`](https://github.com/vercel/next.js/tree/canary/packages/eslint-plugin-next)
@@ -303,6 +299,7 @@ info: Display info about the scripts
   - [`eslint-plugin-compat`](https://github.com/amilajack/eslint-plugin-compat), works with browserslist
   - [`typescript-eslint-language-service`](https://github.com/Quramy/typescript-eslint-language-service), not exactly sure what this does...
 
+- [Prettier](https://prettier.io/) for code formatting
 - [`husky`](https://github.com/typicode/husky) for hooks
 - [`git-format-staged`](https://github.com/hallettj/git-format-staged), to format staged files (surprise), [reasons](https://www.olioapps.com/blog/automatic-code-formatting/)
 - [`axe-core/react`](https://github.com/dequelabs/axe-core-npm)
