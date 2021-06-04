@@ -304,7 +304,7 @@ info: Display info about the scripts
   - [`typescript-eslint-language-service`](https://github.com/Quramy/typescript-eslint-language-service), not exactly sure what this does...
 
 - [`husky`](https://github.com/typicode/husky) for hooks
-
+- [`git-format-staged`](https://github.com/hallettj/git-format-staged), to format staged files (surprise)
 - [`axe-core/react`](https://github.com/dequelabs/axe-core-npm)
 
 ## Tech Stack

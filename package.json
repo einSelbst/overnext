@@ -151,6 +151,7 @@
     "eslint-plugin-react-hooks": "4.2.0",
     "eslint-plugin-tsdoc": "0.2.14",
     "eslint-plugin-unicorn": "33.0.1",
+    "git-format-staged": "latest",
     "html-validate": "4.13.1",
     "husky": "6.0.0",
     "jest": "27.0.4",
