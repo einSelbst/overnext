@@ -102,22 +102,31 @@ rules:
         - invalidHref
         - preferButton
   jsx-a11y/label-has-associated-control: error
-  # capitalized-comments: off
+  capitalized-comments: off
   # multiline-comment-style: off
   # lines-around-comment: off
-  # no-magic-numbers: off
+
   # sort-keys: off
   # sort-vars: off
   # sort-imports: off
 
   # # these rules don't match my code style/prettier config
-  # max-len: off
+  max-len: off
   # function-call-argument-newline: off
   # indent: off
+  indent:
+    - error
+    - 2
+  # no-magic-numbers: off
+  no-magic-numbers:
+    - error
+    - ignoreArrayIndexes: true
+      ignoreDefaultValues: true
+      detectObjects: true
   # no-ternary: off
   # multiline-ternary: off
-  # one-var: off
-  # comma-dangle: off
+  one-var: off
+  comma-dangle: off
   no-unused-vars:
     - error
     - argsIgnorePattern: '^_'
