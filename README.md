@@ -486,7 +486,7 @@ I noticed that running scripts with multiple sub-invocations (eg. `pnpm validate
 but also a `bash` process. You can use the following command to check what pnpm will use as a script shell (in my case it was 'null', which seem to mean `bash`)
 
 ```sh
- % pnpm config get script-shell
+% pnpm config get script-shell
 ```
 
 So I set it to `zsh` by running `% pnpm config set script-shell zsh` but it doesn't solve the issue, keeping notes here anyway...

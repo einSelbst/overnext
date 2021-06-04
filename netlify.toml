@@ -3,29 +3,33 @@ command = "ls -la && printenv && npm run build"
 publish = ".next"
 ignore = "git diff --quiet \"${CACHED_COMMIT_REF}\" \"${COMMIT_REF}\" src/**/* public/* netlify.toml next-env.d.ts next-sitemap.js next.config.js package.json pnpm-lock.yaml postcss.config.js tailwind.config.js tsconfig.json"
 
-  [build.environment]
-  # CI = "1"
-  # cache Cypress binary in local "node_modules" folder
-  # so Netlify caches it
-  # CYPRESS_CACHE_FOLDER = "./node_modules/CypressBinary"
-  # set TERM variable for terminal output
-  TERM = "xterm"
-  # suppress browserslist notice
-  BROWSERSLIST_IGNORE_OLD_DATA = "true"
+[build.environment]
+# CI = "1"
+# cache Cypress binary in local "node_modules" folder
+# so Netlify caches it
+# CYPRESS_CACHE_FOLDER = "./node_modules/CypressBinary"
+# set TERM variable for terminal output
+TERM = "xterm"
+# suppress browserslist notice
+BROWSERSLIST_IGNORE_OLD_DATA = "true"
 
 # If skip_processing = true, all other settings are ignored
-  [build.processing]
-  skip_processing = false
-  [build.processing.css]
-  bundle = true
-  minify = false
-  [build.processing.js]
-  bundle = true
-  minify = false
-  [build.processing.html]
-  pretty_urls = true
-  [build.processing.images]
-  compress = true
+[build.processing]
+skip_processing = false
+
+[build.processing.css]
+bundle = true
+minify = false
+
+[build.processing.js]
+bundle = true
+minify = false
+
+[build.processing.html]
+pretty_urls = true
+
+[build.processing.images]
+compress = true
 
 [context.production.environment]
 NEXT_SERVERLESS = "true"
@@ -42,73 +46,66 @@ package = "@netlify/plugin-nextjs"
 # runs Cypress tests against the deployed URL
 package = "netlify-plugin-cypress"
 
-  [plugins.inputs]
-  record = true
-  spec = "cypress/integration/smoke/*.js"
+[plugins.inputs]
+record = true
+spec = "cypress/integration/smoke/*.js"
 
 # pa11y config
 [[plugins]]
 package = "netlify-plugin-a11y"
 
-  [plugins.inputs]
-  checkPaths = ['/',]
+[plugins.inputs]
+checkPaths = ['/']
 
-  # optional config
-  # ignoreDirectories = ['/admin']  # explicitly ignore these directories
-
-  # resultMode = "warn" # is "error" by default
-
+# optional config
+# ignoreDirectories = ['/admin']  # explicitly ignore these directories
+# resultMode = "warn" # is "error" by default
 [[plugins]]
 package = "netlify-plugin-html-validate"
 
 [[plugins]]
 package = "netlify-plugin-checklinks"
 
-  [plugins.inputs]
-  # An array of glob patterns for pages on your site
-  # Recursive traversal will start from these
-  entryPoints = [
-    "*.html",
-  ]
-
-  # Recurse through all the links and asset references on your page, starting
-  # at the entrypoints
-  recursive = true
-
-  # Checklinks outputs TAP (https://testanything.org/tap-version-13-specification.html)
-  # by default. Enabling pretty mode makes the output easier on the eyes.
-  pretty = true
-
-  # You can mark some check as skipped, which will block checklinks
-  # from ever attempting to execute them.
-  # skipPatterns is an array of strings you can match against failing reports
-  skipPatterns = ["index.html", "legal", "page-", "dog", "fonts.gstatic.com", "account-settings"]
-
-  # You can mark some check as todo, which will execute the check, but allow failures.
-  # todoPatterns is an array of strings you can match against failing reports
-  todoPatterns = []
-
-  # Report on all broken links to external pages.
-  # Enabling this will make your tests more brittle, since you can't control
-  # external pages.
-  checkExternal = true
-
-  # Enable to check references to source maps, source map sources etc.
-  # Many build tools don't emit working references, so this is disabled by default
-  followSourceMaps = true
-
-
+[plugins.inputs]
+# An array of glob patterns for pages on your site
+# Recursive traversal will start from these
+entryPoints = ["*.html"]
+# Recurse through all the links and asset references on your page, starting
+# at the entrypoints
+recursive = true
+# Checklinks outputs TAP (https://testanything.org/tap-version-13-specification.html)
+# by default. Enabling pretty mode makes the output easier on the eyes.
+pretty = true
+# You can mark some check as skipped, which will block checklinks
+# from ever attempting to execute them.
+# skipPatterns is an array of strings you can match against failing reports
+skipPatterns = [
+  "index.html",
+  "legal",
+  "page-",
+  "dog",
+  "fonts.gstatic.com",
+  "account-settings"
+]
+# You can mark some check as todo, which will execute the check, but allow failures.
+# todoPatterns is an array of strings you can match against failing reports
+todoPatterns = []
+# Report on all broken links to external pages.
+# Enabling this will make your tests more brittle, since you can't control
+# external pages.
+checkExternal = true
+# Enable to check references to source maps, source map sources etc.
+# Many build tools don't emit working references, so this is disabled by default
+followSourceMaps = true
 # # lighthouse config
 # [[plugins]]
 # package = "@netlify/plugin-lighthouse"
-
 #   # optional, fails build when a category is below a threshold
 #   [plugins.inputs.thresholds]
 #   performance = 0.9
 #   accessibility = 0.9
 #   best-practices = 0.9
 #   seo = 0.8
-
 #   [[plugins.inputs.audits]]
 #   path = "de/legal"
 #   [[plugins.inputs.audits]]
