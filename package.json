@@ -79,7 +79,6 @@
     "docs": "typedoc",
     "?info": "echo Display info about the scripts",
     "info": "npm-scripts-info",
-    "lint-staged": "lint-staged",
     "commitlint": "commitlint"
   },
   "config": {
