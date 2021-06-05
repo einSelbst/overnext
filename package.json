@@ -162,7 +162,7 @@
     "next-unused": "0.0.6",
     "npm-scripts-info": "0.3.9",
     "nyc": "15.1.0",
-    "prettier": "2.3.0",
+    "prettier": "2.3.1",
     "prettier-plugin-sh": "0.6.1",
     "prettier-plugin-toml": "latest",
     "size-limit": "4.11.0",
