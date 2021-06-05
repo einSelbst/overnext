@@ -78,6 +78,7 @@ This is more about priorities than about a temporal order.
 
 - automate it &trade;
 - optimize it, aka do it cheap
+- go vanilla until good reasons to not
 - test'n lint it, aka catch bugs early
 
 ## DX
@@ -85,10 +86,11 @@ This is more about priorities than about a temporal order.
 - [`pnpm`](https://pnpm.js.org/en/) package manager
 - automation, [inspirations](https://github.com/sdras/awesome-actions)
 - conformity, [inspirations](https://github.com/dustinspecker/awesome-eslint)
-- recommended repo files via [cgx](https://github.com/jeroenouw/cgx)
+- [`standard-version`](https://github.com/conventional-changelog/standard-version) for release versioning and changlog creation
+
 - <details>
     <summary>
-      <a href="https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/expiring-todo-comments.md">expiring ToDo's</a>
+      <a href="https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/expiring-todo-comments.md">enable expiring ToDo's (`eslint-plugin-unicorn`)</a>
     </summary>
 
   - Expire after a specific date: `[YYYY-MM-DD]` to define a UTC due date in the ISO 8601 format
@@ -102,6 +104,8 @@ This is more about priorities than about a temporal order.
 
 - use [volta](https://github.com/volta-cli/volta) for toolchain management (hoping for [pnpm support](https://github.com/volta-cli/volta/issues/737)), see: [install guide](./CONTRIBUTING.md)
 - use [pnpm completion](https://medium.com/pnpm/pnpm-v4-9-comes-with-command-completion-a411715260b4) via `pnpm install-completion`
+- create recommended repo files via [cgx](https://github.com/jeroenouw/cgx)
+- create `README.md` integrate via [README.so template](https://readme.so/editor)
 
 ### Commit Style
 
@@ -133,7 +137,6 @@ This is more about priorities than about a temporal order.
     </details>
 
   - [`semantic-pull-requests`](https://github.com/zeke/semantic-pull-requests) Github app
-  - [`standard-version`](https://github.com/conventional-changelog/standard-version) for release versioning and changlog creation
 
 ### Scripts
 
@@ -307,7 +310,7 @@ info: Display info about the scripts
 ## Tech Stack
 
 - next.js
-- ToDo: sanity
+- WIP: sanity
 
 ## Next.js Configuration
 
@@ -403,7 +406,7 @@ info: Display info about the scripts
 - [Renovate Dashboard](https://app.renovatebot.com/dashboard#github/einSelbst/overnext) for dependency management
 - [Vercel Dashboard](https://vercel.com/einselbst/overnext)
 - [Netlify Dashboard](https://app.netlify.com/sites/overnext/overview)
-- [Dareboost](https://www.dareboost.com/en/dashboard)
+- [Dareboost](https://www.dareboost.com/en/dashboard), free version has 5 analyses per month
 - [Project Wallace](https://www.projectwallace.com/~einselbst/overnext) for CSS monitoring
 
 ## Installation
@@ -431,7 +434,7 @@ see [CONTRIBUTING](./CONTRIBUTING.md)
   - netlify plugins
     - [netlify-plugin-cypress](https://github.com/cypress-io/netlify-plugin-cypress)
     - [netlify-plugin-html-validate](https://github.com/oliverroick/netlify-plugin-html-validate), uses [html-validate](https://html-validate.org/)
-    - [netlify-plugin-check-links](https://github.com/munter/netlify-plugin-checklinks), uses [hyperlink](https://github.com/Munter/hyperlink)
+    - [netlify-plugin-checklinks](https://github.com/munter/netlify-plugin-checklinks), uses [hyperlink](https://github.com/Munter/hyperlink)
     - [netlify-plugin-a11y](https://github.com/netlify-labs/netlify-plugin-a11y), uses [pa11y](https://github.com/pa11y/pa11y)
 - [AWS Amplify](https://docs.amplify.aws/guides/hosting/nextjs/q/platform/js)
 
@@ -505,20 +508,18 @@ ToDo link to API Docs
 
 ## Credits
 
-...where credits due, thanks to [@bahmutov](https://github.com/bahmutov), [@elliottsj](https://github.com/elliottsj), [@ferlopezm94](https://github.com/ferlopezm94),[@iamvishnusankar](https://github.com/iamvishnusankar), [@pacocoursey](https://github.com/pacocoursey), [@thomaseizinger](https://github.com/thomaseizinger) and all the others whom I copied code from!
+...where credits due, thanks to [@bahmutov](https://github.com/bahmutov), [@elliottsj](https://github.com/elliottsj), [Stefan Baumgartner](https://twitter.com/ddprrt), [@ferlopezm94](https://github.com/ferlopezm94),[@iamvishnusankar](https://github.com/iamvishnusankar), [@pacocoursey](https://github.com/pacocoursey), [@thomaseizinger](https://github.com/thomaseizinger), [@sindresorhus](https://github.com/sindresorhus) and all the others whom I copied code from!
 
 ## Related
 
 - [Next Right Now](https://unlyed.github.io/next-right-now/)
   - [`next-right-now`](https://github.com/UnlyEd/next-right-now), flexible production-grade boilerplate with Next.js
-- [Next.js with Moxy](https://next-with.moxy.tech/), a better version of this here
+- [Next.js with Moxy](https://next-with.moxy.tech/), a better version of this project
   - [`next-with-moxy`](https://github.com/moxystudio/next-with-moxy)
 
 ## ToDo
 
 I should use Github Issues for this but hey.
-
-- [ ] integrate with [README.so template](https://readme.so/editor)
 
 - [ ] I have node version defined in several places, maybe I can consolidate this
   - `.nvmrc`
@@ -528,10 +529,10 @@ I should use Github Issues for this but hey.
 - [ ] add [SRI](https://github.com/vercel/next.js/discussions/23951)
 - [ ] cypress a11y plugin
 - [ ] [cypress-html-validate](https://html-validate.org/usage/cypress.html) plugin
-- [ ] make use of [Project Wallace](https://www.projectwallace.com/)
+- [ ] make use of [Project Wallace](https://www.projectwallace.com/), still wip
 - [ ] [wdyr](https://github.com/welldone-software/why-did-you-render/issues/113) vs preact [1](https://github.com/preactjs/preact/issues/2760)
 - [ ] use ISR - Incremental Static Regeneration ? [opinion](https://www.netlify.com/blog/2021/03/08/incremental-static-regeneration-its-benefits-and-its-flaws/)
-- [ ] enable [unused ESLint rules](https://github.com/alexilyaev/stylelint-find-rules)
+- [ ] wip: enable [unused ESLint rules](https://github.com/alexilyaev/stylelint-find-rules)
 
 ### Documentation ToDo's
 
