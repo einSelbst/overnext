@@ -50,7 +50,8 @@
     "?format": "echo Format source code and fix issues",
     "format": "prettier --write . --plugin=prettier-plugin-sh --plugin=prettier-plugin-toml",
     "?lint": "echo Lint source code and fix issues",
-    "lint": "eslint . --fix",
+    "lint1": "eslint . --fix",
+    "lint": "eslint .",
     "?lint:html": "Run html-validate on generated static output files",
     "lint:html": "html-validate '.next/**/*.html'",
     "type-check": "tsc --pretty --noEmit",
@@ -79,6 +80,10 @@
     "docs": "typedoc",
     "?info": "echo Display info about the scripts",
     "info": "npm-scripts-info",
+    "eslint-find-unused-plugin-rules": "eslint-find-rules -un .eslintrc.yml --no-core --ext .tsx",
+    "eslint-find-unused-rules": "eslint-find-rules -un .eslintrc.yml --ext .tsx",
+    "eslint-find-current-rules": "eslint-find-rules -cnp .eslintrc.yml",
+    "eslint-find-rules": "eslint-find-rules --option -dunp .eslintrc.yml",
     "commitlint": "commitlint"
   },
   "config": {

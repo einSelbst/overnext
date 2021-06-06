@@ -3,7 +3,6 @@
  * function declaration for
  * `getStaticProps` and `getStaticPaths`
  */
-// eslint-disable-next-line unicorn/prefer-node-protocol
 import { ParsedUrlQuery } from 'querystring'
 import {
   GetStaticPaths,

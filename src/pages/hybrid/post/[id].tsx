@@ -2,7 +2,6 @@
  * This page uses functions instead of const for
  * `getStaticProps` and `getStaticPaths`
  */
-// eslint-disable-next-line unicorn/prefer-node-protocol
 import { ParsedUrlQuery } from 'querystring'
 import {
   GetStaticPathsContext,

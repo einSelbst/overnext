@@ -14,7 +14,7 @@ const presets = [
   ],
 ]
 const plugins = [
-  /* ["istanbul"] */
+  // ["istanbul"]
 ]
 
 if (process.env.APP_ENV === 'test') {
@@ -28,9 +28,9 @@ if (process.env.APP_ENV === 'test') {
 }
 
 module.exports = {
-  /* sourceMaps: true, */
-  /* sourceType: 'module', */
-  /* retainLines: true, */
+  // sourceMaps: true,
+  // sourceType: 'module',
+  // retainLines: true,
   presets,
   plugins,
 }
