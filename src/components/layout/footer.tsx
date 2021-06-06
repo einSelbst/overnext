@@ -1,12 +1,12 @@
 const Vercel = () => (
-    <a href='https://vercel.com' target='_blank' rel='noopener noreferrer'>
+    <a href='https://vercel.com' rel='noopener noreferrer' target='_blank'>
       Powered by{' '}
       <img
-        src='/vercel.svg'
         alt='Vercel Logo'
-        width='71px'
-        height='16px'
         className='logo'
+        height='16px'
+        src='/vercel.svg'
+        width='71px'
       />
     </a>
   )
@@ -15,26 +15,26 @@ const Netlify = () => (
     <>
       <a href='https://www.netlify.com'>
         <img
+          alt='Deploys by Netlify'
+          height='51'
           src='https://www.netlify.com/img/global/badges/netlify-color-accent.svg'
-          alt='Deploys by Netlify'
           width='114'
-          height='51'
         />
       </a>
       <a href='https://www.netlify.com'>
         <img
+          alt='Deploys by Netlify'
+          height='51'
           src='https://www.netlify.com/img/global/badges/netlify-color-bg.svg'
-          alt='Deploys by Netlify'
           width='114'
-          height='51'
         />
       </a>
       <a href='https://www.netlify.com'>
         <img
-          src='https://www.netlify.com/img/global/badges/netlify-light.svg'
           alt='Deploys by Netlify'
-          width='114'
           height='51'
+          src='https://www.netlify.com/img/global/badges/netlify-light.svg'
+          width='114'
         />
       </a>
     </>

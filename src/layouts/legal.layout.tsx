@@ -7,7 +7,7 @@ const LegalLayout = ({
 }): React.ReactNode => (
   <>
     <header>
-      <Navigation success={true} error={false} />
+      <Navigation error={false} success={true} />
     </header>
 
     {children}

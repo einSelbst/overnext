@@ -38,23 +38,23 @@ const AccountSettingsLayout = ({ children }: { children: React.ReactNode }) => (
         Basic Information
       </ActiveLink>
 
-      <ActiveLink href='/account-settings/profile' className='ml-10'>
+      <ActiveLink className='ml-10' href='/account-settings/profile'>
         Profile
       </ActiveLink>
 
-      <ActiveLink href='/account-settings/team-settings' className='ml-10'>
+      <ActiveLink className='ml-10' href='/account-settings/team-settings'>
         Team Settings
       </ActiveLink>
 
-      <ActiveLink href='/account-settings/billing' className='ml-10'>
+      <ActiveLink className='ml-10' href='/account-settings/billing'>
         Billing
       </ActiveLink>
 
-      <ActiveLink href='/account-settings/notifications' className='ml-10'>
+      <ActiveLink className='ml-10' href='/account-settings/notifications'>
         Notifications
       </ActiveLink>
 
-      <ActiveLink href='/account-settings/security' className='ml-10'>
+      <ActiveLink className='ml-10' href='/account-settings/security'>
         Security
       </ActiveLink>
     </div>

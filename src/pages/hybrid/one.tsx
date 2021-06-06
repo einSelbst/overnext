@@ -92,7 +92,7 @@ const One = (props: Props): OverNextComponentType => {
               <a id='toggleLink'>...Loading</a>
             </Link>
             <br />
-            <a id='toggleAnchor' href='foo'>
+            <a href='foo' id='toggleAnchor'>
               ...Loading
             </a>
           </span>

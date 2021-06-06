@@ -70,15 +70,15 @@ const reportWebVitals = (metric: { name: string; value: string }): void => {
         {isNotAmp && (
           <>
             <meta
-              name='viewport'
               content='initial-scale=1.0, width=device-width'
+              name='viewport'
             />
-            <link rel='preconnect' href='https://fonts.gstatic.com' />
+            <link href='https://fonts.gstatic.com' rel='preconnect' />
             {/* the preload is automatically added by next.js or one of my linter rules */}
             <link
-              rel='preload'
-              href='https://fonts.googleapis.com/css2?family=Inter&family=Sansita&display=swap'
               as='style'
+              href='https://fonts.googleapis.com/css2?family=Inter&family=Sansita&display=swap'
+              rel='preload'
             />
             <link
               href='https://fonts.googleapis.com/css2?family=Inter&family=Sansita&display=swap'
@@ -102,83 +102,83 @@ const reportWebVitals = (metric: { name: string; value: string }): void => {
           />
           <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css" />
         */}
-        <meta name='theme-color' content='#ffffff' />
+        <meta content='#ffffff' name='theme-color' />
         {/* Windows uses these to help your brand feel more embedded */}
-        <meta name='msapplication-TileColor' content='#da532c' />
+        <meta content='#da532c' name='msapplication-TileColor' />
         <meta
-          name='msapplication-TileImage'
           content='/icons/mstile-150x150.png'
+          name='msapplication-TileImage'
         />
         {/* Browsers use these as tab and app icons */}
-        <link rel='icon' href='/favicon.ico' />
-        <link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' />
-        <link rel='apple-touch-icon' href='/icons/apple-touch-icon.png' />
+        <link href='/favicon.ico' rel='icon' />
+        <link href='/favicon.ico' rel='shortcut icon' type='image/x-icon' />
+        <link href='/icons/apple-touch-icon.png' rel='apple-touch-icon' />
         <link
-          rel='icon'
-          type='image/png'
-          sizes='192x192'
           href='/icons/icon-192x192.png'
+          rel='icon'
+          sizes='192x192'
+          type='image/png'
         />
         <link
-          rel='icon'
-          type='image/png'
-          sizes='32x32'
           href='/icons/icon-32x32.png'
-        />
-        <link
           rel='icon'
+          sizes='32x32'
           type='image/png'
-          sizes='16x16'
-          href='/icons/icon-16x16.png'
         />
         <link
+          href='/icons/icon-16x16.png'
+          rel='icon'
+          sizes='16x16'
+          type='image/png'
+        />
+        <link
+          href='/icons/apple-touch-icon-57x57.png'
           rel='apple-touch-icon'
           sizes='57x57'
-          href='/icons/apple-touch-icon-57x57.png'
         />
         <link
+          href='/icons/apple-touch-icon-72x72.png'
           rel='apple-touch-icon'
           sizes='72x72'
-          href='/icons/apple-touch-icon-72x72.png'
         />
         <link
+          href='/icons/apple-touch-icon-76x76.png'
           rel='apple-touch-icon'
           sizes='76x76'
-          href='/icons/apple-touch-icon-76x76.png'
         />
         <link
+          href='/icons/apple-touch-icon-114x114.png'
           rel='apple-touch-icon'
           sizes='114x114'
-          href='/icons/apple-touch-icon-114x114.png'
         />
         <link
+          href='/icons/apple-touch-icon-120x120.png'
           rel='apple-touch-icon'
           sizes='120x120'
-          href='/icons/apple-touch-icon-120x120.png'
         />
         <link
+          href='/icons/apple-touch-icon-144x144.png'
           rel='apple-touch-icon'
           sizes='144x144'
-          href='/icons/apple-touch-icon-144x144.png'
         />
         <link
+          href='/icons/apple-touch-icon-152x152.png'
           rel='apple-touch-icon'
           sizes='152x152'
-          href='/icons/apple-touch-icon-152x152.png'
         />
         <link
+          href='/icons/apple-touch-icon.png'
           rel='apple-touch-icon'
           sizes='180x180'
-          href='/icons/apple-touch-icon.png'
         />
         <link
-          rel='mask-icon'
-          href='/icons/safari-pinned-tab.svg'
           color='#5bbad5'
+          href='/icons/safari-pinned-tab.svg'
+          rel='mask-icon'
         />
         {/* for PWA: */}
         {/* <link rel="manifest" href="path/to/manifest.json" crossorigin="use-credentials" /> */}
-        <link rel='manifest' href='/manifest.json' />
+        <link href='/manifest.json' rel='manifest' />
       </Head>
     )
   }
@@ -203,7 +203,7 @@ function _app({ Component, pageProps }: AppLayoutProps): React.ReactElement {
       <Component {...pageProps} />
     </>
   ) : (
-    <ThemeProvider defaultTheme='system' attribute='class'>
+    <ThemeProvider attribute='class' defaultTheme='system'>
       <DefaultSeo {...SEO} />
       <HeadIcons />
       {/* <Layout {...this.props}> */}

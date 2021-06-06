@@ -8,15 +8,15 @@ const AccountSettingsProfile = () => (
       </p>
       <div className='mt-6'>
         <div className='max-w-4xl mx-auto'>
-          <label htmlFor='display-name' className='block'>
+          <label className='block' htmlFor='display-name'>
             <span className='block fon2t-medium text-sm text-gray-900 leading-tight'>
               Display name
             </span>
             <input
-              id='display-name'
-              type='email'
               className='block w-full border border-gray-300 rounded-lg bg-gray-100 px-3 py-2 leading-tight focus:outline-none focus:border-gray-600 focus:bg-white mt-2'
+              id='display-name'
               placeholder='John Doe'
+              type='email'
             />
           </label>
         </div>
@@ -24,14 +24,14 @@ const AccountSettingsProfile = () => (
     </div>
     <div className='border-t-2 border-gray-200 px-0 py-5 flex justify-end'>
       <button
-        type='button'
         className='px-4 py-3 leading-none font-semibold rounded-lg bg-gray-300 text-gray-900 hover:bg-gray-400 focus:outline-none focus:bg-gray-400'
+        type='button'
       >
         Cancel
       </button>
       <button
-        type='button'
         className='ml-4 px-6 py-3 leading-none font-semibold rounded-lg bg-gray-800 text-white hover:bg-gray-900 focus:outline-none focus:bg-gray-900'
+        type='button'
       >
         Save
       </button>

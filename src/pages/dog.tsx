@@ -69,7 +69,7 @@ const Dog: NextLayoutPage = (
       <Head>
         <title>The Dog</title>
         {/* preload only the LCP image */}
-        <link rel='preload' href={imageUrl} as='image' />
+        <link as='image' href={imageUrl} rel='preload' />
       </Head>
       <h1>The Dog (Hybrid AMP Page)</h1>
       <h2>
@@ -79,9 +79,9 @@ const Dog: NextLayoutPage = (
       The value of platform is: {process.env.platform}
       The value of customKey is: {process.env.customKey}
       {isAmp ? (
-        <amp-img width='800' height='450' src={imageUrl} alt='a cute pups' />
+        <amp-img alt='a cute pups' height='450' src={imageUrl} width='800' />
       ) : (
-        <img width='800' height='450' src={imageUrl} alt='a cute pups' />
+        <img alt='a cute pups' height='450' src={imageUrl} width='800' />
       )}
       <p>
         {isAmp ? (

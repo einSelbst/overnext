@@ -14,9 +14,8 @@ const _Topic = (): JSX.Element => {
   return (
     <>
       <NextSeo
-        title={firstTopic}
-        description='A legal topic.'
         canonical={`https://overnext.vercel.app/legal/${firstTopic}`}
+        description='A legal topic.'
         languageAlternates={locales?.map((loc: string) => ({
           hrefLang: loc,
           href: `https://overnext.vercel.app/${loc}/legal/${firstTopic}`,
@@ -34,6 +33,7 @@ const _Topic = (): JSX.Element => {
             },
           ],
         }}
+        title={firstTopic}
       />
       <main className='bg-white dark:bg-black'>
         <header>
