@@ -26,10 +26,9 @@ const nextConfiguration = {
   webpack: (
     /** @type {{ plugins: any[]; }} */ config,
     /** @type {{ dev: any; isServer: any; }} */ _options
-  ) => 
+  ) =>
     /* { buildId, dev, isServer, defaultLoaders, webpack } = options */
-     config
-  ,
+    config,
   future: {
     webpack5: true,
   },

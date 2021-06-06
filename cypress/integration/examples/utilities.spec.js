@@ -26,10 +26,10 @@ context('Utilities', () => {
 
   it('cypress.Blob - blob utilities and base64 string conversion', () => {
     // https://on.cypress.io/blob
-    cy.get('.utility-blob').then($div => 
+    cy.get('.utility-blob').then($div =>
       // https://github.com/nolanlawson/blob-util#imgSrcToDataURL
       // get the dataUrl string for the javascript-logo
-       Cypress.Blob.imgSrcToDataURL(
+      Cypress.Blob.imgSrcToDataURL(
         'https://example.cypress.io/assets/img/javascript-logo.png',
         undefined,
         'anonymous'
@@ -128,11 +128,11 @@ context('Utilities', () => {
       })
     }
 
-    cy.then(() => 
+    cy.then(() =>
       // return a promise to cy.then() that
       // is awaited until it resolves
       // @ ts-ignore TS7006
-       waitOneSecond().then(string => {
+      waitOneSecond().then(string => {
         expect(string).to.eq('foo')
         expect(waited).to.be.true
       })

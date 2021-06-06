@@ -98,7 +98,7 @@ export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
      *   { params: { dynamic: 'page-1' } },
      *   { params: { dynamic: 'page-1' }, locale: 'en' },
      *   { params: { dynamic: 'page-1' }, locale: 'fr' },
-     * ], 
+     * ],
      */
     /*
      * Fallback shouldn't be enabled here or otherwise this route

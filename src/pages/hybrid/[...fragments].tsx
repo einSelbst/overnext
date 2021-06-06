@@ -69,10 +69,10 @@ export const getStaticProps: GetStaticProps = async ({
 const Fragments = ({
   fragments,
 }: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element => (
-    <div>
-      <h1>My AMP Fragments Page!</h1>
-      <p>Fragments: {fragments}</p>
-    </div>
-  )
+  <div>
+    <h1>My AMP Fragments Page!</h1>
+    <p>Fragments: {fragments}</p>
+  </div>
+)
 
 export default Fragments
