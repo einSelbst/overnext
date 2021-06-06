@@ -6,8 +6,10 @@ const presets = [
       '@babel/preset-env': {
         targets: 'defaults',
         useBuiltIns: 'entry',
-        // corejs version must be kept in sync with package.json
-        // maybe automate with https://docs.renovatebot.com/configuration-options/#postupdateoptions
+        /*
+         * corejs version must be kept in sync with package.json
+         * maybe automate with https://docs.renovatebot.com/configuration-options/#postupdateoptions
+         */
         corejs: '3.10.1',
       },
     },
@@ -28,12 +30,16 @@ if (process.env.APP_ENV === 'test') {
 }
 
 module.exports = {
-  // sourceMaps: true,
-  // sourceType: 'module',
-  // retainLines: true,
+  /*
+   * sourceMaps: true,
+   * sourceType: 'module',
+   * retainLines: true,
+   */
   presets,
   plugins,
 }
-/* module.exports = function(api) {
+/*
+ * module.exports = function(api) {
  *   return {presets, plugins};
- * }; */
+ * }; 
+ */

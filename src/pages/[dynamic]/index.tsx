@@ -40,14 +40,18 @@ const DynamicPage = (
   </main>
 )
 
-// This function gets called at build time on server-side.
-// It may be called again, on a serverless function, if
-// revalidation is enabled and a new request comes in
+/*
+ * This function gets called at build time on server-side.
+ * It may be called again, on a serverless function, if
+ * revalidation is enabled and a new request comes in
+ */
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  // Call an external API endpoint to get posts.
-  // You can use any data fetching library
-  // const res = await fetch(`https://.../posts?locale=${locale}`)
-  // const posts = await res.json()
+  /*
+   * Call an external API endpoint to get posts.
+   * You can use any data fetching library
+   * const res = await fetch(`https://.../posts?locale=${locale}`)
+   * const posts = await res.json()
+   */
 
   const response = await Promise.resolve('Hello')
 
@@ -56,10 +60,12 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
       dynamic: response,
       locale,
     },
-    // Next.js will attempt to re-generate the page:
-    // - When a request comes in
-    // - At most once every second
-    // revalidate: 1, // In seconds
+    /*
+     * Next.js will attempt to re-generate the page:
+     * - When a request comes in
+     * - At most once every second
+     * revalidate: 1, // In seconds
+     */
   }
 }
 
@@ -87,13 +93,17 @@ export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
 
   return {
     paths,
-    /* paths: [
+    /*
+     * paths: [
      *   { params: { dynamic: 'page-1' } },
      *   { params: { dynamic: 'page-1' }, locale: 'en' },
      *   { params: { dynamic: 'page-1' }, locale: 'fr' },
-     * ], */
-    // Fallback shouldn't be enabled here or otherwise this route
-    // will catch every page, even 404s, and we don't want that
+     * ], 
+     */
+    /*
+     * Fallback shouldn't be enabled here or otherwise this route
+     * will catch every page, even 404s, and we don't want that
+     */
     fallback: false,
   }
 }

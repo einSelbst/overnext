@@ -26,10 +26,10 @@ const nextConfiguration = {
   webpack: (
     /** @type {{ plugins: any[]; }} */ config,
     /** @type {{ dev: any; isServer: any; }} */ _options
-  ) => {
+  ) => 
     /* { buildId, dev, isServer, defaultLoaders, webpack } = options */
-    return config
-  },
+     config
+  ,
   future: {
     webpack5: true,
   },
@@ -37,29 +37,37 @@ const nextConfiguration = {
     cpus: 2,
     // plugins?: boolean;
     profiling: true,
-    // sprFlushToDisk?: boolean;
-    // reactMode?: 'legacy' | 'concurrent' | 'blocking';
-    // workerThreads?: boolean;
-    // pageEnv?: boolean;
-    // optimizeImages?: boolean;
-    // optimizeCss: true,
-    // scrollRestoration?: boolean;
-    // scriptLoader?: boolean;
+    /*
+     * sprFlushToDisk?: boolean;
+     * reactMode?: 'legacy' | 'concurrent' | 'blocking';
+     * workerThreads?: boolean;
+     * pageEnv?: boolean;
+     * optimizeImages?: boolean;
+     * optimizeCss: true,
+     * scrollRestoration?: boolean;
+     * scriptLoader?: boolean;
+     */
     stats: true,
-    // externalDir?: boolean;
-    // serialWebpackBuild?: boolean;
-    // conformance?: boolean;
+    /*
+     * externalDir?: boolean;
+     * serialWebpackBuild?: boolean;
+     * conformance?: boolean;
+     */
     amp: {
-      // optimizer: any;
-      // validator?: string;
-      // skipValidation?: boolean;
+      /*
+       * optimizer: any;
+       * validator?: string;
+       * skipValidation?: boolean;
+       */
     },
     // turboMode?: boolean;
     // eslint?: boolean;
-    // reactRoot?: boolean;
-    // enableBlurryPlaceholder?: boolean;
-    // disableOptimizedLoading?: boolean;
-    // gzipSize?: boolean;
+    /*
+     * reactRoot?: boolean;
+     * enableBlurryPlaceholder?: boolean;
+     * disableOptimizedLoading?: boolean;
+     * gzipSize?: boolean;
+     */
   },
 }
 

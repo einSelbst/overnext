@@ -23,6 +23,10 @@ type Props = {
  */
 /* const One = (props: Props): JSX.Element => { */
 const One = (props: Props): OverNextComponentType => {
+  const isAmp = useAmp()
+  const router = useRouter()
+  const { locale } = router
+
   useEffect(() => {
     console.log('useEffect default')
 
@@ -53,10 +57,6 @@ const One = (props: Props): OverNextComponentType => {
   useEffect(() => {
     console.log('useEffect empty array ')
   }, []) // the empty array will call useEffect only for first time while loading the component
-
-  const isAmp = useAmp()
-  const router = useRouter()
-  const { locale } = router
 
   return (
     <main>

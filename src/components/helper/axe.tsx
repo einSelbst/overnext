@@ -7,15 +7,16 @@ import * as ReactDOM from 'react-dom'
  * @see {@link https://github.com/dequelabs/axe-core/blob/master/doc/API.md#api-name-axeconfigure}
  */
 const axeConfig = {
-  /*   rules: [
-    { id: 'heading-order', enabled: true },
-    { id: 'label-title-only', enabled: true },
-    { id: 'link-in-text-block', enabled: true },
-    { id: 'region', enabled: true },
-    { id: 'skip-link', enabled: true },
-    { id: 'help-same-as-label', enabled: true },
-  ],
- */
+  /*
+   *   rules: [
+   *   { id: 'heading-order', enabled: true },
+   *   { id: 'label-title-only', enabled: true },
+   *   { id: 'link-in-text-block', enabled: true },
+   *   { id: 'region', enabled: true },
+   *   { id: 'skip-link', enabled: true },
+   *   { id: 'help-same-as-label', enabled: true },
+   *   ],
+   */
 }
 
 const Axe = (): null => {

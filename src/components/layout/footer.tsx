@@ -1,5 +1,4 @@
-const Vercel = () => {
-  return (
+const Vercel = () => (
     <a href='https://vercel.com' target='_blank' rel='noopener noreferrer'>
       Powered by{' '}
       <img
@@ -11,10 +10,8 @@ const Vercel = () => {
       />
     </a>
   )
-}
 
-const Netlify = () => {
-  return (
+const Netlify = () => (
     <>
       <a href='https://www.netlify.com'>
         <img
@@ -42,14 +39,11 @@ const Netlify = () => {
       </a>
     </>
   )
-}
 
-export const Footer = (): JSX.Element => {
-  return (
+export const Footer = (): JSX.Element => (
     <footer>
       {process.env.platform === 'vercel' ? <Vercel /> : <Netlify />}
       <p>Hosted on {process.env.platform}</p>
       <p>©Copyright 2050 by nobody. All rights reversed.</p>
     </footer>
   )
-}

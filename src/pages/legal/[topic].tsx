@@ -17,12 +17,10 @@ const _Topic = (): JSX.Element => {
         title={firstTopic}
         description='A legal topic.'
         canonical={`https://overnext.vercel.app/legal/${firstTopic}`}
-        languageAlternates={locales?.map((loc: string) => {
-          return {
-            hrefLang: loc,
-            href: `https://overnext.vercel.app/${loc}/legal/${firstTopic}`,
-          }
-        })}
+        languageAlternates={locales?.map((loc: string) => ({
+          hrefLang: loc,
+          href: `https://overnext.vercel.app/${loc}/legal/${firstTopic}`,
+        }))}
         openGraph={{
           type: 'website',
           title: firstTopic,
