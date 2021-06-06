@@ -26,7 +26,7 @@ extends:
   - plugin:react-hooks/recommended
   - plugin:@next/next/recommended
   # - plugin:prettier/recommended
-  # - prettier
+  - prettier
 env:
   es6: true
   browser: true
@@ -135,6 +135,7 @@ overrides:
       - plugin:@typescript-eslint/recommended
       # - plugin:@typescript-eslint/all
       - plugin:@typescript-eslint/recommended-requiring-type-checking
+      - prettier
     settings:
       import/parsers:
         '@typescript-eslint/parser':
