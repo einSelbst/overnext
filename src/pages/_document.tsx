@@ -15,7 +15,7 @@ class _document extends Document {
   }
 
   // I would prefer putting the font declarations in _app.jsx as they wouldn't push down the other meta tags
-  render(): JSX.Element {
+  static render(): JSX.Element {
     return (
       <Html>
         <Head />
