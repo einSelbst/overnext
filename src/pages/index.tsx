@@ -35,7 +35,7 @@ export const Home = (): JSX.Element => (
       <button
         data-cy='test-button'
         onClick={() => {
-          window.alert('With typescript and Jest')
+          window.alert('With typescript and Jest') // eslint-disable-line no-alert
         }}
         type='button'
       >

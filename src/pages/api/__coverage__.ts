@@ -9,7 +9,8 @@ const coverage = (
   request: NextApiRequest,
   response: NextApiResponse<Data>
 ): void => {
-  response.statusCode = 200
+  const httpStatusOk = 200
+  response.statusCode = httpStatusOk
   response.json({
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore TS2339

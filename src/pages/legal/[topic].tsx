@@ -11,6 +11,9 @@ const _Topic = (): JSX.Element => {
   // NextSeo doesn't want a string array, which 'topic' might be
   const firstTopic: string = Array.isArray(topic) ? topic[0] : topic ?? ''
 
+  const imageDefaultWidth = 800,
+    imageDefaultHeight = 600
+
   return (
     <>
       <NextSeo
@@ -27,8 +30,8 @@ const _Topic = (): JSX.Element => {
           images: [
             {
               url: 'https://via.placeholder.com/728x90.png?text=Visit+WhoIsHostingThis.com+Buyers+Guide',
-              width: 800,
-              height: 600,
+              width: imageDefaultWidth,
+              height: imageDefaultHeight,
               alt: firstTopic,
             },
           ],

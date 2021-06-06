@@ -207,8 +207,8 @@ context('Spies, Stubs, and Clock', () => {
     )
 
     // you can alias matchers for shorter it code
-    const { match: M } = Cypress.sinon
+    const { match: m } = Cypress.sinon
 
-    cy.get('@add').should('have.been.calledWith', M.number, M(3))
+    cy.get('@add').should('have.been.calledWith', m.number, m(3))
   })
 })

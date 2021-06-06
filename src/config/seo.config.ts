@@ -1,4 +1,4 @@
-import { ENV } from './'
+import { ENV } from '.'
 
 export default {
   title: 'Overnext | Powered by Next.js',
@@ -8,7 +8,7 @@ export default {
     type: 'website',
     locale: 'en_IE',
     url: ENV.SITE_URL,
-    site_name: 'Overnext',
+    site_name: 'Overnext', // eslint-disable-line camelcase
   },
   twitter: {
     handle: '@overnext',

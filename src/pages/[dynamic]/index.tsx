@@ -75,8 +75,9 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
  */
 export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
   await Promise.resolve('async needs await')
+  const numberOfPages = 10
   // the paths would come from an api, but to have something to work with:
-  let paths = Array.from({ length: 10 }, (_, index) => ({
+  let paths = Array.from({ length: numberOfPages }, (_, index) => ({
     params: {
       dynamic: `page-${index}`,
     },

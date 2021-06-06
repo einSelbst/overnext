@@ -21,12 +21,14 @@ const axeConfig = {
 
 const Axe = (): null => {
   if (process.env.NODE_ENV === 'development') {
+    const timingDelayInMilliseconds = 1000
+    // eslint-disable-next-line no-void
     void (async () => {
       try {
         const { default: axe } = await import('@axe-core/react')
-        await axe(React, ReactDOM, 1000, axeConfig)
+        await axe(React, ReactDOM, timingDelayInMilliseconds, axeConfig)
       } catch {
-        console.log('axe not ready yet')
+        /* console.log('axe not ready yet') */
       }
     })()
   }

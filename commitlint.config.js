@@ -3,7 +3,7 @@ module.exports = {
   /* add some more commit types */
   rules: {
     'type-enum': [
-      2,
+      2, // eslint-disable-line no-magic-numbers
       'always',
       [
         'a11y', // accessibility

@@ -2,8 +2,9 @@
 
 import { NextApiRequest, NextApiResponse } from 'next'
 
-const hello = (request: NextApiRequest, response: NextApiResponse): void => {
-  response.statusCode = 200
+const hello = (_request: NextApiRequest, response: NextApiResponse): void => {
+  const httpStatusOk = 200
+  response.statusCode = httpStatusOk
   response.json({ name: 'John Doe' })
 }
 
