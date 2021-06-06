@@ -2,7 +2,7 @@
 import { DefaultSeo } from 'next-seo'
 import { ThemeProvider } from 'next-themes'
 import { useAmp } from 'next/amp'
-import { AppLayoutProps } from 'next/app'
+import { NextPageContext, NextLayoutComponentType } from 'next'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import * as React from 'react'
@@ -191,12 +191,19 @@ const HeadIcons = (): JSX.Element => {
  * where a page has a property `Layout` and the slightly more advanced version
  * where a page has a function `getLayout`. I will keep both for the moment.
  */
-function _app({ Component, pageProps }: AppLayoutProps): React.ReactElement {
-  const isAmp = useAmp(),
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    Layout = Component.Layout || DefaultLayout,
-    withSiteLayout = (page: React.ReactNode) => <SiteLayout>{page}</SiteLayout>,
-    getLayout = Component.getLayout || withSiteLayout
+function _app({
+  Component,
+  pageProps,
+}: {
+  Component: NextLayoutComponentType
+  pageProps: NextPageContext
+}): React.ReactElement {
+  const isAmp = useAmp()
+  const Layout = Component.Layout || DefaultLayout
+  const withSiteLayout = (page: React.ReactNode) => (
+    <SiteLayout>{page}</SiteLayout>
+  )
+  const getLayout = Component.getLayout || withSiteLayout
 
   // amp pages doesn't work well with the theme so I had to split it
   return isAmp ? (

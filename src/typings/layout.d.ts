@@ -1,9 +1,5 @@
 // see: https://github.com/arasfeld/next-graphql-app/blob/main/next-env.d.ts
-import type {
-  NextComponentType,
-  NextLayoutComponentType,
-  NextPageContext,
-} from 'next'
+import type { NextComponentType, NextPageContext } from 'next'
 import type { AppProps } from 'next/app'
 
 declare module 'next' {
@@ -30,8 +26,8 @@ declare module 'next' {
     unknown,
     P
   > & {
-    Layout?: ReactNode
-    // getLayout?: (page: React.ReactElement) => React.ReactElement
+    Layout?: (children: React.ReactNode) => JSX.Element
+    // Layout?: (page: React.ReactNode) => JSX.Element
     getLayout?: (page: React.ReactNode) => React.ReactNode
   }
 

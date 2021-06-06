@@ -3,8 +3,9 @@ import { useRouter } from 'next/router'
 import ThemeChanger from 'components/layout/theme-changer'
 import { ENV } from 'config'
 import LegalLayout from 'layouts/legal.layout'
+import { NextLayoutPage } from 'next'
 
-const _Topic = (): JSX.Element => {
+const _Topic: NextLayoutPage = (): JSX.Element => {
   const router = useRouter()
   const { locale, locales, query } = router
   const { topic } = query
