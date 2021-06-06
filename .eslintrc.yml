@@ -1,6 +1,5 @@
 ---
 root: true
-parser: '@typescript-eslint/parser'
 parserOptions:
   ecmaVersion: 2021
   ecmaFeatures:
@@ -15,14 +14,15 @@ plugins:
 extends:
   # - eslint:all
   - eslint:recommended
-  - plugin:@typescript-eslint/recommended
+  # - plugin:@typescript-eslint/all
+  # - plugin:@typescript-eslint/recommended
   - plugin:import/errors
   - plugin:import/warnings
-  - plugin:import/typescript
   - plugin:unicorn/recommended
   - plugin:compat/recommended
   - plugin:jsx-a11y/strict
   - plugin:react/recommended
+  # - plugin:react/all
   - plugin:react-hooks/recommended
   - plugin:@next/next/recommended
   # - plugin:prettier/recommended
@@ -30,34 +30,20 @@ extends:
 env:
   es6: true
   browser: true
-  jest: true
   node: true
 settings:
   react:
     version: detect
-  import/parsers:
-    '@typescript-eslint/parser':
-      - '.ts'
-      - '.tsx'
   import/resolver:
-    typescript:
     node:
       extensions:
         - '.js'
         - '.jsx'
-        - '.ts'
-        - '.tsx'
   # for eslint-plugin-compat, @see https://github.com/amilajack/eslint-plugin-compat#adding-polyfills
   polyfills:
     - Promise
 rules:
   react/react-in-jsx-scope: 'off'
-  '@typescript-eslint/explicit-module-boundary-types': 'off'
-  '@typescript-eslint/no-var-requires': 'off'
-  '@typescript-eslint/no-unused-vars':
-    - error
-    - argsIgnorePattern: '^_'
-      varsIgnorePattern: '^_'
   import/order:
     - error
     - alphabetize:
@@ -132,6 +118,7 @@ overrides:
   - files:
       - src/**/*.ts
       - src/**/*.tsx
+    parser: '@typescript-eslint/parser'
     parserOptions:
       project:
         - tsconfig.json
@@ -144,13 +131,30 @@ overrides:
       - eslint-plugin-tsdoc
       - jsx-a11y
     extends:
+      - plugin:import/typescript
       - plugin:@typescript-eslint/recommended
+      # - plugin:@typescript-eslint/all
       - plugin:@typescript-eslint/recommended-requiring-type-checking
     settings:
+      import/parsers:
+        '@typescript-eslint/parser':
+          - '.ts'
+          - '.tsx'
       import/resolver:
         typescript: {}
+        node:
+          extensions:
+            - '.js'
+            - '.jsx'
+            - '.ts'
     rules:
       '@typescript-eslint/no-namespace': [2, { 'allowDeclarations': true }]
+      '@typescript-eslint/explicit-module-boundary-types': 'off'
+      '@typescript-eslint/no-var-requires': 'off'
+      '@typescript-eslint/no-unused-vars':
+        - error
+        - argsIgnorePattern: '^_'
+          varsIgnorePattern: '^_'
       tsdoc/syntax: warn
   # Config for Cypress Linting
   - files:
@@ -172,3 +176,5 @@ overrides:
     extends:
       - plugin:jest/all
       - plugin:jest-dom/recommended
+    env:
+      jest: true
