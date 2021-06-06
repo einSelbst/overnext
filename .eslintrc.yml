@@ -4,16 +4,17 @@ parserOptions:
   sourceType: module
   ecmaVersion: 2021
   ecmaFeatures:
+    modules: true,
+    impliedStrict: true,
     jsx: true
 reportUnusedDisableDirectives: true
 plugins:
   - react
-# - import
-# - unicorn
+  # - import
+  - unicorn
 # - jsx-a11y
 extends:
   - eslint:all
-  # - eslint:recommended
   # - plugin:import/errors
   # - plugin:import/warnings
   - plugin:unicorn/recommended
@@ -23,8 +24,9 @@ extends:
   # - plugin:react/all
   # - plugin:react-hooks/recommended
   # - plugin:@next/next/recommended
-  # - plugin:prettier/recommended
   - prettier
+  # - next
+  # - next/core-web-vitals
 env:
   es6: true
   browser: true
@@ -40,13 +42,57 @@ settings:
   # for eslint-plugin-compat, @see https://github.com/amilajack/eslint-plugin-compat#adding-polyfills
   polyfills:
     - Promise
+    - fetch
 rules:
+  # config for core eslint rules
+  no-warning-comments: off
+  no-inline-comments: off
+  spaced-comment: off
+  capitalized-comments: off
+  line-comment-position: off
+  no-magic-numbers:
+    - warn
+    - ignoreArrayIndexes: true
+      ignoreDefaultValues: true
+      detectObjects: true
+      enforceConst: false
+  no-underscore-dangle: off
+  no-ternary: off
+  one-var: off
+  no-unused-vars:
+    - error
+    - argsIgnorePattern: '^_'
+      varsIgnorePattern: '^_'
+  no-console:
+    - warn
+    - allow:
+        - warn
+        - error
+
+  # I want to renable those
+  sort-keys: off
+  sort-vars: off
+  sort-imports: off
+  max-statements: off
+  no-undefined: off
+  id-length: off
+  func-style: off
+  max-lines-per-function:
+    - warn
+    - max: 120
+      skipComments: true
+      skipBlankLines: true
+
+  # config for react linter rules
   react/react-in-jsx-scope: off
-  # import/order:
-  #   - error
-  #   - alphabetize:
-  #       order: asc # sort in ascending order. Options: ['ignore', 'asc', 'desc']
-  #       caseInsensitive: true # ignore case. Options: [true, false]
+  react/jsx-no-literals: off
+  react/jsx-max-depth: off
+  react/jsx-sort-props: error
+
+  # enable some non-recommended unicorn rules
+  unicorn/string-content: error
+  unicorn/import-index: error
+  # configure some unicorn rules
   unicorn/expiring-todo-comments:
     - warn
     - allowWarningComments: false
@@ -72,6 +118,13 @@ rules:
         i18n: true
         params: true
         src: true
+
+  # import/order:
+  #   - error
+  #   - alphabetize:
+  #       order: asc # sort in ascending order. Options: ['ignore', 'asc', 'desc']
+  #       caseInsensitive: true # ignore case. Options: [true, false]
+
   # jsx-a11y/anchor-is-valid:
   #   - error
   #   - components:
@@ -83,49 +136,6 @@ rules:
   #       - invalidHref
   #       - preferButton
   # jsx-a11y/label-has-associated-control: error
-  capitalized-comments: off
-  line-comment-position: off
-  no-inline-comments: off
-  spaced-comment: off
-  # multiline-comment-style: off
-  # lines-around-comment: off
-  # no-magic-numbers: off
-  no-magic-numbers:
-    - warn
-    - ignoreArrayIndexes: true
-      ignoreDefaultValues: true
-      detectObjects: true
-      enforceConst: false
-
-  max-lines-per-function: warn
-  no-underscore-dangle: warn
-
-  # I want to renable those
-  sort-keys: off
-  sort-vars: off
-  sort-imports: off
-  max-statements: off
-  no-undefined: off
-  id-length: off
-  func-style: off
-
-  # # these rules don't match my code style/prettier config
-  # max-len: off
-  # function-call-argument-newline: off
-  # indent: off
-  no-ternary: off
-  # multiline-ternary: off
-  one-var: off
-  # comma-dangle: off
-  no-unused-vars:
-    - error
-    - argsIgnorePattern: '^_'
-      varsIgnorePattern: '^_'
-  no-console:
-    - warn
-    - allow:
-        - warn
-        - error
 overrides:
   # Config for Typescript Linting
   - files:
@@ -137,6 +147,7 @@ overrides:
         - tsconfig.json
         - cypress/tsconfig.json
       tsconfigRootDir: '.'
+      warnOnUnsupportedTypeScriptVersion: true,
     plugins:
       - react
       - '@typescript-eslint'
