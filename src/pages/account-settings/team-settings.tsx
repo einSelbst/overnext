@@ -1,5 +1,4 @@
 import Head from 'next/head'
-
 import { getLayout } from 'layouts/account-settings.layout'
 
 const AccountSettingsTeamSettings = () => (
