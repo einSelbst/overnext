@@ -15,6 +15,7 @@ const nextConfiguration = {
   poweredByHeader: false,
   reactStrictMode: true,
   target: 'serverless',
+  /* optimizeFonts: false, */
   env: {
     customKey: 'my-value',
     platform: process.env.VERCEL === '1' ? 'Vercel' : 'Netlify', // just a test
@@ -32,41 +33,26 @@ const nextConfiguration = {
   future: {
     webpack5: true,
   },
+  // @see {@link https://github.com/vercel/next.js/blob/canary/packages/next/next-server/server/config-shared.ts#L68}
   experimental: {
-    cpus: 2,
     // plugins?: boolean;
     profiling: true,
-    /*
-     * sprFlushToDisk?: boolean;
-     * reactMode?: 'legacy' | 'concurrent' | 'blocking';
-     * workerThreads?: boolean;
-     * pageEnv?: boolean;
-     * optimizeImages?: boolean;
-     * optimizeCss: true,
-     * scrollRestoration?: boolean;
-     * scriptLoader?: boolean;
-     */
+    /* sprFlushToDisk: true, */
+    /* workerThreads: false */
+    /* pageEnv: false */
+    /* optimizeImages: false, */
+    /* enableStaticImages: false, */
+    /* optimizeCss: true, */
+    /* scrollRestoration: false, */
     stats: true,
-    /*
-     * externalDir?: boolean;
-     * serialWebpackBuild?: boolean;
-     * conformance?: boolean;
-     */
-    amp: {
-      /*
-       * optimizer: any;
-       * validator?: string;
-       * skipValidation?: boolean;
-       */
-    },
-    // turboMode?: boolean;
-    // eslint?: boolean;
-    /*
-     * reactRoot?: boolean;
-     * enableBlurryPlaceholder?: boolean;
-     * disableOptimizedLoading?: boolean;
-     * gzipSize?: boolean;
-     */
+    /* externalDir: false, */
+    /* reactRoot: Number(process.env.NEXT_PRIVATE_REACT_ROOT) > 0, */
+    /* enableBlurryPlaceholder: false, */
+    /* disableOptimizedLoading: true, */
+    /* gzipSize: true, */
+  },
+  amp: {
+    /* canonicalBase: '', */
   },
 }
 
