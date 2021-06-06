@@ -47,19 +47,19 @@ rules:
   #   - alphabetize:
   #       order: asc # sort in ascending order. Options: ['ignore', 'asc', 'desc']
   #       caseInsensitive: true # ignore case. Options: [true, false]
-  # unicorn/expiring-todo-comments:
-  #   - warn
-  #   - allowWarningComments: false
-  #     ignoreDatesOnPullRequests: true
-  # unicorn/filename-case:
-  #   - error
-  #   - case: kebabCase
-  #     ignore:
-  #       - '^__coverage__.ts$'
+  unicorn/expiring-todo-comments:
+    - warn
+    - allowWarningComments: false
+      ignoreDatesOnPullRequests: true
+  unicorn/filename-case:
+    - error
+    - case: kebabCase
+      ignore:
+        - '^__coverage__.ts$'
   unicorn/prefer-module:
     - off # ToDo: figure out how to fix this
-  # # unicorn/prefer-node-protocol:
-  # # - off # ToDo: enable when import/no-unresolved properly supports this
+  unicorn/prefer-node-protocol:
+    - off # ToDo: enable when import/no-unresolved properly supports this
   unicorn/prevent-abbreviations:
     - error
     - checkProperties: true
