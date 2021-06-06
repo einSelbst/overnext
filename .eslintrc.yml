@@ -16,7 +16,7 @@ extends:
   # - eslint:recommended
   # - plugin:import/errors
   # - plugin:import/warnings
-  # - plugin:unicorn/recommended
+  - plugin:unicorn/recommended
   # - plugin:compat/recommended
   # - plugin:jsx-a11y/strict
   - plugin:react/recommended
@@ -47,9 +47,6 @@ rules:
   #   - alphabetize:
   #       order: asc # sort in ascending order. Options: ['ignore', 'asc', 'desc']
   #       caseInsensitive: true # ignore case. Options: [true, false]
-  # unicorn/consistent-function-scoping:
-  #   - error
-  #   - checkArrowFunctions: false
   # unicorn/expiring-todo-comments:
   #   - warn
   #   - allowWarningComments: false
@@ -59,22 +56,22 @@ rules:
   #   - case: kebabCase
   #     ignore:
   #       - '^__coverage__.ts$'
-  # unicorn/prefer-module:
-  #   - off # ToDo: figure out how to fix this
+  unicorn/prefer-module:
+    - off # ToDo: figure out how to fix this
   # # unicorn/prefer-node-protocol:
   # # - off # ToDo: enable when import/no-unresolved properly supports this
-  # unicorn/prevent-abbreviations:
-  #   - error
-  #   - checkProperties: true
-  #     replacements:
-  #       props:
-  #         properties: false
-  #     allowList:
-  #       dest: true
-  #       env: true
-  #       i18n: true
-  #       params: true
-  #       src: true
+  unicorn/prevent-abbreviations:
+    - error
+    - checkProperties: true
+      replacements:
+        props:
+          properties: false
+      allowList:
+        dest: true
+        env: true
+        i18n: true
+        params: true
+        src: true
   # jsx-a11y/anchor-is-valid:
   #   - error
   #   - components:
@@ -195,6 +192,9 @@ overrides:
       cypress/no-unnecessary-waiting: off
       # '@typescript-eslint/no-empty-function': 'off'
       # '@typescript-eslint/ban-ts-comment': 'off'
+      unicorn/consistent-function-scoping:
+        - error
+        - checkArrowFunctions: false
       # try to enable the following rules at some point in the future
       require-unicode-regexp: off
       prefer-destructuring: off

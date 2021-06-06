@@ -149,6 +149,7 @@
     "eslint-import-resolver-typescript": "2.4.0",
     "eslint-plugin-cypress": "2.11.3",
     "eslint-plugin-react": "7.24.0",
+    "eslint-plugin-unicorn": "33.0.1",
     "git-format-staged": "latest",
     "html-validate": "4.13.1",
     "husky": "6.0.0",
