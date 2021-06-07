@@ -71,7 +71,7 @@ specifiers:
   next-compose-plugins: 2.2.1
   next-pwa: 5.2.21
   next-seo: 4.24.0
-  next-sitemap: 1.6.102
+  next-sitemap: 1.6.105
   next-themes: 0.0.14
   next-unused: 0.0.6
   npm-scripts-info: 0.3.9
@@ -109,7 +109,7 @@ dependencies:
   next-compose-plugins: 2.2.1
   next-pwa: 5.2.21_cedaf2861050b847d69a14bf07ed2a6e
   next-seo: 4.24.0_cdb07c42721266739ffbd3ea8e818efe
-  next-sitemap: 1.6.102_next@10.2.3
+  next-sitemap: 1.6.105_next@10.2.3
   next-themes: 0.0.14_cdb07c42721266739ffbd3ea8e818efe
   postcss: 8.3.0
   react: 17.0.2
@@ -10121,8 +10121,8 @@ packages:
       react-dom: 17.0.2_react@17.0.2
     dev: false
 
-  /next-sitemap/1.6.102_next@10.2.3:
-    resolution: {integrity: sha512-6TepEfPo786Zlb5YCmjhcx2QrK9Md8KEZgkSvp6Ed+EcD2rQ60azJYiMIjsvbY87MqOsIx3hlRkLltPR+Sk5+A==}
+  /next-sitemap/1.6.105_next@10.2.3:
+    resolution: {integrity: sha512-l0ZAxVbVZg1g6wp8MAEbVa2CeOjVDuVg0B56iTyR8YHgMAswID2uKBLcTSTnauTPt2uQZPkO5LCd1WCciZ1ybQ==}
     hasBin: true
     peerDependencies:
       next: '*'
@@ -13959,7 +13959,7 @@ packages:
       workbox-core: 6.1.5
     dev: false
 
-  /workbox-build/6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14:
+  /workbox-build/6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14:
     resolution: {integrity: sha512-P+fakR5QFVqJN9l9xHVXtmafga72gh9I+jM3A9HiB/6UNRmOAejXnDgD+RMegOHgQHPwnB44TalMToFaXKWIyA==}
     engines: {node: '>=10.0.0'}
     dependencies:
@@ -14096,7 +14096,7 @@ packages:
       upath: 1.2.0
       webpack: 5.38.1
       webpack-sources: 1.4.3
-      workbox-build: 6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14
+      workbox-build: 6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
