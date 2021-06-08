@@ -87,6 +87,10 @@ This is more about priorities than about a temporal order.
 - automation, [inspirations](https://github.com/sdras/awesome-actions)
 - conformity, [inspirations](https://github.com/dustinspecker/awesome-eslint)
 - [`standard-version`](https://github.com/conventional-changelog/standard-version) for release versioning and changlog creation
+- [`browserlist`](https://github.com/browserslist/browserslist) for browser compatibility
+
+  - [`autoprefixer`](https://github.com/postcss/autoprefixer)
+  - [`eslint-plugin-compat`](https://github.com/amilajack/eslint-plugin-compat)
 
 - <details>
     <summary>

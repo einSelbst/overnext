@@ -18,7 +18,7 @@ extends:
   # - plugin:import/errors
   # - plugin:import/warnings
   - plugin:unicorn/recommended
-  # - plugin:compat/recommended
+  - plugin:compat/recommended
   # - plugin:jsx-a11y/strict
   - plugin:react/all
   # - plugin:react-hooks/recommended
