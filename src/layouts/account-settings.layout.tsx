@@ -26,6 +26,7 @@ const ActiveLink = ({ children, href, className = '' }: ActiveLinkProps) => {
     </Link>
   )
 }
+
 const AccountSettingsLayout = ({ children }: { children: React.ReactNode }) => (
   <div className='max-w-xl mx-auto px-8'>
     <h1 className='text-2xl text-gray-900 font-semibold'>Account Settings</h1>

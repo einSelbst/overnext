@@ -29,11 +29,12 @@ export const Home = (): JSX.Element => (
           src='https://www.youtube-nocookie.com/embed/h6fcK_fRYaI'
           title='YouTube video player'
           width='560'
-        ></iframe>
+        />
       </div>
 
       <button
         data-cy='test-button'
+        // eslint-disable-next-line react/jsx-no-bind
         onClick={() => {
           window.alert('With typescript and Jest') // eslint-disable-line no-alert
         }}

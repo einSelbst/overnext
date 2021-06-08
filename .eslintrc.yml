@@ -20,8 +20,7 @@ extends:
   - plugin:unicorn/recommended
   # - plugin:compat/recommended
   # - plugin:jsx-a11y/strict
-  - plugin:react/recommended
-  # - plugin:react/all
+  - plugin:react/all
   # - plugin:react-hooks/recommended
   # - plugin:@next/next/recommended
   - prettier
@@ -69,7 +68,7 @@ rules:
         - warn
         - error
 
-  # I want to renable those
+  # I want to re-enable those
   sort-keys: off
   sort-vars: off
   sort-imports: off
@@ -85,9 +84,23 @@ rules:
 
   # config for react linter rules
   react/react-in-jsx-scope: off
+  react/jsx-filename-extension:
+    - error
+    - extensions:
+        - '.jsx'
+        - '.tsx'
   react/jsx-no-literals: off
   react/jsx-max-depth: off
   react/jsx-sort-props: error
+  react/require-default-props: off
+  react/function-component-definition:
+    - error
+    - namedComponents: 'arrow-function'
+      unnamedComponents: 'arrow-function'
+
+  # I want to re-enable those
+  react/no-multi-comp: off
+  react/forbid-component-props: off
 
   # enable some non-recommended unicorn rules
   unicorn/string-content: error

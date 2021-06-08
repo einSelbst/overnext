@@ -12,13 +12,14 @@ export const config = {
   amp: 'hybrid',
 }
 
-const DynamicPage = (
-  properties: InferGetStaticPropsType<typeof getStaticProps>
-): JSX.Element => (
+const DynamicPage = ({
+  dynamic,
+  locale,
+}: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element => (
   <main>
     <header>
-      <h1>DynamicPage Component {properties.dynamic}</h1>
-      <h2>Locale: {properties.locale}</h2>
+      <h1>DynamicPage Component {dynamic}</h1>
+      <h2>Locale: {locale}</h2>
     </header>
 
     <section aria-label='quick summary'>

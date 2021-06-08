@@ -53,9 +53,9 @@ const _Topic: NextLayoutPage = (): JSX.Element => {
             <p>The Header of the article</p>
             <p>Main URL for this deployment is {ENV.SITE_URL}</p>
           </header>
-          <section className='introduction'></section>
+          <section className='introduction' />
           <section className='content'>Content goes here</section>
-          <section className='summary'></section>
+          <section className='summary' />
           <footer>
             <p>The footer of the article</p>
           </footer>

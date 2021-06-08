@@ -1,4 +1,3 @@
-/* import { LayoutTree } from '@moxy/next-layout' */
 import { DefaultSeo } from 'next-seo'
 import { ThemeProvider } from 'next-themes'
 import { useAmp } from 'next/amp'
@@ -27,9 +26,10 @@ const sendMetric = async ({
   console.log('sending metrics to quickmetrics...')
 
   // values must be integers
+  const clsMultiplier = 1000
   const valueInt: number = Math.round(
       name === 'CLS'
-        ? Number.parseFloat(value) * 1000
+        ? Number.parseFloat(value) * clsMultiplier
         : Number.parseFloat(value)
     ),
     url = `https://qckm.io?m=${name}&v=${valueInt}&k=${process.env.NEXT_PUBLIC_QUICK_METRICS_API_KEY}`
@@ -191,13 +191,13 @@ const HeadIcons = (): JSX.Element => {
  * where a page has a property `Layout` and the slightly more advanced version
  * where a page has a function `getLayout`. I will keep both for the moment.
  */
-function _app({
+const _app = ({
   Component,
   pageProps,
 }: {
   Component: NextLayoutComponentType
   pageProps: NextPageContext
-}): React.ReactElement {
+}): React.ReactElement => {
   const isAmp = useAmp()
   const Layout = Component.Layout || DefaultLayout
   const withSiteLayout = (page: React.ReactNode) => (
@@ -205,7 +205,8 @@ function _app({
   )
   const getLayout = Component.getLayout || withSiteLayout
 
-  // amp pages doesn't work well with the theme so I had to split it
+  /* eslint-disable react/jsx-props-no-spreading */
+  /* amp pages doesn't work well with the theme so I had to split it */
   return isAmp ? (
     <>
       <DefaultSeo {...SEO} />
@@ -230,6 +231,7 @@ function _app({
       {process.browser && ENV.DEVELOPMENT && <A11yLinter />}
     </ThemeProvider>
   )
+  /* eslint-enable react/jsx-props-no-spreading */
 }
 
 export { reportWebVitals }

@@ -56,16 +56,14 @@ export async function getStaticProps(
   }
 }
 
-function Post({
+const Post = ({
   id,
-}: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element {
+}: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element => (
   // function Post ( props: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element {
-  return (
-    <div>
-      <h1>My AMP Post Page!</h1>
-      <h2>PostID: {id}</h2>
-    </div>
-  )
-}
+  <div>
+    <h1>My AMP Post Page!</h1>
+    <h2>PostID: {id}</h2>
+  </div>
+)
 
 export default Post

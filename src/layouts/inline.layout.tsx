@@ -36,9 +36,9 @@ const InlineLayout = ({
         <header>
           <p>The Header of the article</p>
         </header>
-        <section className='introduction'></section>
+        <section className='introduction' />
         <section className='content'>{children}</section>
-        <section className='summary'></section>
+        <section className='summary' />
         <footer>
           <p>The footer of the article</p>
         </footer>

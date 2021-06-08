@@ -7,7 +7,7 @@ const DefaultLayout = ({
 }): JSX.Element => (
   <>
     <header>
-      <Navigation error={false} success={true} />
+      <Navigation error={false} success />
     </header>
 
     <aside className='left'>
