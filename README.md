@@ -13,7 +13,6 @@
     Tooling
   </summary>
 
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square 'Standard.js')](https://standardjs.com)
 [![Prettier](https://img.shields.io/badge/code_style-Prettier-ff69b4.svg?logo=Prettier&logoColor=white&style=flat-square 'Prettier')](https://github.com/prettier/prettier)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square 'Commitizen')](http://commitizen.github.io/cz-cli/)
 [![Renovate](https://img.shields.io/badge/renovate-enabled-brightgreen.svg?logo=dependabot&style=flat-square 'Renovate')](https://renovateapp.com/)
@@ -183,7 +182,7 @@ info: Display info about the scripts
   - with [`tslib`](https://www.npmjs.com/package/tslib) for imports optimization
   - [`typesync`](https://github.com/jeffijoe/typesync) for find dependency typings
   - [TSDoc](https://tsdoc.org/) docstrings to generate [`typedoc`](https://github.com/TypeStrong/typedoc) documentation
-- [Standard](https://github.com/standard/standard)
+- [Prettier](https://github.com/prettier/prettier)
 - [EditorConfig](https://editorconfig.org/)
 
 ### Linter / A11y
@@ -191,6 +190,7 @@ info: Display info about the scripts
 - [ESLint](https://eslint.org/)
 
   - most core rules are enabled
+  - [`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier), turns off all rules that are unnecessary or conflict with Prettier
   - [`typescript-eslint`](https://github.com/typescript-eslint/typescript-eslint)
   - <details>
       <summary>
@@ -477,6 +477,22 @@ When I actually started using them I had some problems:
 - also `prop-types` itself seem to have an [unclear](https://github.com/facebook/prop-types/issues/337#issuecomment-791013311) [future](https://github.com/facebook/prop-types/issues/249)
 
 I might still use prop-types in case I encounter a situation where I get much benefit from the runtime type checking, but then I would only use it for this specific case.
+
+### Linter
+
+Initially I used [Prettier-Standard](https://github.com/sheerun/prettier-standard)
+which included
+
+- [Stnadard](https://standardjs.com/)
+- [PrettierX](https://github.com/brodybits/prettierx)
+  because I thought it's a great idea to not waste time for config etc. But the tool hasn't received any maintenance for almost a year and I already had to add workarounds.
+  Being interested in linting in general I also had issues with clean extensibility of my eslint config and it wasn't completely clear to me what really runs as part of `prettier-standard`.
+
+I also considerd other bundles like
+[XO](https://github.com/xojs/xo) which would have been my first choice because it includes [unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
+[Canonical](https://github.com/gajus/eslint-config-canonical)
+
+but they all have stuff included I don't need and other stuff is missing which I want so I decided to go vanilla `eslint` and do my config by hand to have max control over everything and less dependencies.
 
 ### Hosting
 
