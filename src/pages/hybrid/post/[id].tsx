@@ -2,9 +2,9 @@
  * This page uses functions instead of const for
  * `getStaticProps` and `getStaticPaths`
  */
-import { ParsedUrlQuery } from 'querystring'
+import type { ParsedUrlQuery } from 'querystring'
 
-import {
+import type {
   GetStaticPathsContext,
   GetStaticPathsResult,
   GetStaticPropsContext,
@@ -40,7 +40,7 @@ async function getStaticPaths(
 }
 
 interface PostProps {
-  id: string | string[] | undefined
+  id: string[] | string | undefined
 }
 
 /* export async function getStaticProps ({ */

@@ -1,4 +1,4 @@
-import { GetServerSideProps } from 'next'
+import type { GetServerSideProps } from 'next'
 import { getServerSideSitemap } from 'next-sitemap'
 
 export const getServerSideProps: GetServerSideProps = async context => {

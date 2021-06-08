@@ -54,7 +54,7 @@ declare module 'next' {
         Layout: ReactNode
       })
     | ReactElement
-    | Array<OverNextComponentType>
+    | OverNextComponentType[]
     | string
     | number
     | boolean

@@ -1,5 +1,5 @@
 /* import { GetStaticProps, GetStaticPropsContext } from 'next' */
-import {
+import type {
   GetStaticProps,
   GetStaticPropsContext,
   GetStaticPropsResult,

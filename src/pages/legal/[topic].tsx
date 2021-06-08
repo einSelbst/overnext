@@ -1,4 +1,4 @@
-import { NextLayoutPage } from 'next'
+import type { NextLayoutPage } from 'next'
 import { NextSeo } from 'next-seo'
 import { useRouter } from 'next/router'
 

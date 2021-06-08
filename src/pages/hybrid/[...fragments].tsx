@@ -3,9 +3,9 @@
  * function declaration for
  * `getStaticProps` and `getStaticPaths`
  */
-import { ParsedUrlQuery } from 'querystring'
+import type { ParsedUrlQuery } from 'querystring'
 
-import {
+import type {
   GetStaticPaths,
   GetStaticPathsContext,
   GetStaticPathsResult,
@@ -21,7 +21,7 @@ const config = {
 }
 
 interface StaticPathParameters extends ParsedUrlQuery {
-  fragments: string | string[]
+  fragments: string[] | string
 }
 
 const getStaticPaths: GetStaticPaths = async (
@@ -67,9 +67,8 @@ const getStaticProps: GetStaticProps = async ({
   }
 }
 
-const Fragments = ({
-  fragments,
-}: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element => (
+const Fragments = ({ fragments }: FragmentsProps): JSX.Element => (
+  //}: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element => (
   <div>
     <h1>My AMP Fragments Page!</h1>
     <p>Fragments: {fragments}</p>

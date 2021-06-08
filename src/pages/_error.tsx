@@ -1,5 +1,6 @@
-import { NextPageContext } from 'next'
-import NextError, { ErrorProps } from 'next/error'
+import type { NextPageContext } from 'next'
+import type { ErrorProps } from 'next/error'
+import NextError from 'next/error'
 
 /**
  * <ErrorPage />
