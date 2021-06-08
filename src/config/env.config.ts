@@ -11,7 +11,7 @@ const baseUrl2 = (): string => {
   return 'example.com'
 }
 
-export default {
+const APP_ENV = {
   PRODUCTION: process.env.NODE_ENV === 'production',
   DEVELOPMENT: process.env.NODE_ENV === 'development',
 
@@ -32,3 +32,5 @@ export default {
   SITE_URL: process.env.URL ?? 'https://overnext.vercel.app',
   SITE_URL2: baseUrl2(),
 }
+
+export default APP_ENV

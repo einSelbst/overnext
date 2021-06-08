@@ -1,15 +1,15 @@
+import { NextPageContext, NextLayoutComponentType } from 'next'
 import { DefaultSeo } from 'next-seo'
 import { ThemeProvider } from 'next-themes'
 import { useAmp } from 'next/amp'
-import { NextPageContext, NextLayoutComponentType } from 'next'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
-import * as React from 'react'
+
 /* import 'styles/main.css' // tailwind */
-import 'styles/global.scss' // global styles
 import { ENV, SEO } from 'config'
 import DefaultLayout from 'layouts/default.layout'
 import SiteLayout from 'layouts/site.layout'
+import 'styles/global.scss' // eslint-disable-line import/no-unassigned-import
 
 const sendMetric = async ({
   name,
@@ -63,7 +63,13 @@ const reportWebVitals = (metric: { name: string; value: string }): void => {
  * Regarding next.js dynamic
  * @see {@link https://github.com/vercel/next.js/blob/0af3b526408bae26d6b3f8cab75c4229998bf7cb/examples/with-dynamic-import/pages/index.js }
  */
-const A11yLinter = dynamic(import('components/helper/axe'), { ssr: false })
+const A11yLinter = dynamic(
+  import(
+    /* webpackChunkName: "axeHelper", webpackPrefetch: true */
+    'components/helper/axe'
+  ),
+  { ssr: false }
+)
 
 const HeadIcons = (): JSX.Element => {
   const isNotAmp = !useAmp()

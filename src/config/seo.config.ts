@@ -1,6 +1,6 @@
 import { ENV } from '.'
 
-export default {
+const SEO_CONFIG = {
   title: 'Overnext | Powered by Next.js',
   titleTemplate: '%s - Nice stuff',
   description: 'Basically nothing but DX',
@@ -16,3 +16,5 @@ export default {
     cardType: 'summary_large_image',
   },
 }
+
+export default SEO_CONFIG

@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 
 /* istanbul ignore next */
-export const config = {
+const config = {
   amp: 'hybrid',
 }
 
@@ -114,5 +114,5 @@ const One = (props: Props): OverNextComponentType => {
     </main>
   )
 }
-
+export { config }
 export default One

@@ -1,5 +1,7 @@
+/* eslint-disable import/no-namespace */
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
+/* eslint-enable import/no-namespace */
 
 /**
  * Configuration for Axe. Unfortunately I have no clue how the default config looks.
@@ -25,7 +27,10 @@ const Axe = (): null => {
     // eslint-disable-next-line no-void
     void (async () => {
       try {
-        const { default: axe } = await import('@axe-core/react')
+        const { default: axe } = await import(
+          /* webpackChunkName: "axeCoreReact", webpackPrefetch: true */
+          '@axe-core/react'
+        )
         await axe(React, ReactDOM, timingDelayInMilliseconds, axeConfig)
       } catch {
         /* console.log('axe not ready yet') */

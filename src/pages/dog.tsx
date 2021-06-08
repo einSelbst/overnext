@@ -10,11 +10,12 @@ import { useAmp } from 'next/amp'
 import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+
 import Byline from 'components/byline'
 import DefaultLayout from 'layouts/default.layout'
 
 /* istanbul ignore next */
-export const config = {
+const config = {
   amp: 'hybrid',
 }
 
@@ -22,7 +23,7 @@ interface HomeProps {
   host: string
 }
 
-export const getStaticProps: GetStaticProps = async (
+const getStaticProps: GetStaticProps = async (
   _context: GetStaticPropsContext
 ): Promise<GetStaticPropsResult<HomeProps>> => {
   await Promise.resolve(
@@ -174,4 +175,5 @@ const Dog: NextLayoutPage = (
 
 Dog.Layout = DefaultLayout
 
+export { config, getStaticProps }
 export default Dog

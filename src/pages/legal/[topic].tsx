@@ -1,9 +1,10 @@
+import { NextLayoutPage } from 'next'
 import { NextSeo } from 'next-seo'
 import { useRouter } from 'next/router'
+
 import ThemeChanger from 'components/layout/theme-changer'
 import { ENV } from 'config'
 import LegalLayout from 'layouts/legal.layout'
-import { NextLayoutPage } from 'next'
 
 const _Topic: NextLayoutPage = (): JSX.Element => {
   const router = useRouter()

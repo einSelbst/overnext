@@ -5,10 +5,9 @@ import {
   /* GetStaticPropsContext, */
   InferGetStaticPropsType,
 } from 'next'
-import * as React from 'react'
 
 /* istanbul ignore next */
-export const config = {
+const config = {
   amp: 'hybrid',
 }
 
@@ -46,7 +45,7 @@ const DynamicPage = ({
  * It may be called again, on a serverless function, if
  * revalidation is enabled and a new request comes in
  */
-export const getStaticProps: GetStaticProps = async ({ locale }) => {
+const getStaticProps: GetStaticProps = async ({ locale }) => {
   /*
    * Call an external API endpoint to get posts.
    * You can use any data fetching library
@@ -74,7 +73,7 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
  * see: https://github.com/vercel/commerce/blob/master/pages/%5B...pages%5D.tsx
  * combine paths with locales so that all pages can be pre-rendered
  */
-export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
+const getStaticPaths: GetStaticPaths = async ({ locales }) => {
   await Promise.resolve('async needs await')
   const numberOfPages = 10
   // the paths would come from an api, but to have something to work with:
@@ -110,4 +109,5 @@ export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
   }
 }
 
+export { config, getStaticPaths, getStaticProps }
 export default DynamicPage

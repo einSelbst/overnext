@@ -300,12 +300,14 @@ info: Display info about the scripts
 
   - [`eslint-plugin-jsx-a11y`](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y), [rules](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/master/docs/rules)
   - [`eslint-plugin-compat`](https://github.com/amilajack/eslint-plugin-compat), works with browserslist
+
+  - [`eslint-plugin-import`](https://github.com/benmosher/eslint-plugin-import), [rules](https://github.com/benmosher/eslint-plugin-import/tree/master/docs/rules)
+  - [`typescript-eslint-language-service`](https://github.com/Quramy/typescript-eslint-language-service), adds typescript support for `eslint-plugin-import`
+
   - [`eslint-plugin-next`](https://github.com/vercel/next.js/tree/canary/packages/eslint-plugin-next)
-  - [`eslint-plugin-import`](https://github.com/benmosher/eslint-plugin-import)
 
   - [`eslint-plugin-tsdoc`](https://github.com/microsoft/tsdoc/tree/master/eslint-plugin)
 
-  - [`typescript-eslint-language-service`](https://github.com/Quramy/typescript-eslint-language-service), not exactly sure what this does...
   - [`eslint-plugin-cypress`](https://github.com/cypress-io/eslint-plugin-cypress)
   - [`eslint-plugin-jest`](https://github.com/jest-community/eslint-plugin-jest)
   - [`eslint-plugin-jest-dom`](https://github.com/testing-library/eslint-plugin-jest-dom)
@@ -483,7 +485,7 @@ I might still use prop-types in case I encounter a situation where I get much be
 Initially I used [Prettier-Standard](https://github.com/sheerun/prettier-standard)
 which included
 
-- [Stnadard](https://standardjs.com/)
+- [Standard](https://standardjs.com/)
 - [PrettierX](https://github.com/brodybits/prettierx)
   because I thought it's a great idea to not waste time for config etc. But the tool hasn't received any maintenance for almost a year and I already had to add workarounds.
   Being interested in linting in general I also had issues with clean extensibility of my eslint config and it wasn't completely clear to me what really runs as part of `prettier-standard`.

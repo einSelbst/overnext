@@ -3,6 +3,7 @@
  * `getStaticProps` and `getStaticPaths`
  */
 import { ParsedUrlQuery } from 'querystring'
+
 import {
   GetStaticPathsContext,
   GetStaticPathsResult,
@@ -12,7 +13,7 @@ import {
 } from 'next'
 
 /* istanbul ignore next */
-export const config = {
+const config = {
   amp: 'hybrid',
 }
 
@@ -20,7 +21,7 @@ interface StaticPathParameters extends ParsedUrlQuery {
   id: string
 }
 
-export async function getStaticPaths(
+async function getStaticPaths(
   _context: GetStaticPathsContext
 ): Promise<GetStaticPathsResult<StaticPathParameters>> {
   await Promise.resolve('async needs await')
@@ -45,7 +46,7 @@ interface PostProps {
 /* export async function getStaticProps ({ */
 /* params, */
 /* }: GetStaticPropsContext): Promise<GetStaticPropsResult<PostProps>> { */
-export async function getStaticProps(
+async function getStaticProps(
   context: GetStaticPropsContext
 ): Promise<GetStaticPropsResult<PostProps>> {
   await Promise.resolve('async needs await')
@@ -66,4 +67,5 @@ const Post = ({
   </div>
 )
 
+export { config, getStaticPaths, getStaticProps }
 export default Post

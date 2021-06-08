@@ -1,7 +1,7 @@
 import { NextPage } from 'next'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import * as React from 'react'
+
 import { getLayout as getSiteLayout } from './site.layout'
 
 type ActiveLinkProps = {
