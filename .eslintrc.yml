@@ -19,7 +19,7 @@ extends:
   # - plugin:import/warnings
   - plugin:unicorn/recommended
   - plugin:compat/recommended
-  # - plugin:jsx-a11y/strict
+  - plugin:jsx-a11y/strict
   - plugin:react/all
   - plugin:react-hooks/recommended
   # - plugin:@next/next/recommended
@@ -138,17 +138,17 @@ rules:
   #       order: asc # sort in ascending order. Options: ['ignore', 'asc', 'desc']
   #       caseInsensitive: true # ignore case. Options: [true, false]
 
-  # jsx-a11y/anchor-is-valid:
-  #   - error
-  #   - components:
-  #       - Link
-  #     specialLink:
-  #       - hrefLeft
-  #       - hrefRight
-  #     aspects:
-  #       - invalidHref
-  #       - preferButton
-  # jsx-a11y/label-has-associated-control: error
+  # the default rule gets messed up with nextjs' ways of doing links
+  jsx-a11y/anchor-is-valid:
+    - error
+    - components:
+        - Link
+      specialLink:
+        - hrefLeft
+        - hrefRight
+      aspects:
+        - invalidHref
+        - preferButton
 overrides:
   # Config for Typescript Linting
   - files:
@@ -164,9 +164,9 @@ overrides:
     plugins:
       - react
       - '@typescript-eslint'
-    # - import
-    # - eslint-plugin-tsdoc
-    # - jsx-a11y
+      # - import
+      # - eslint-plugin-tsdoc
+      - jsx-a11y
     extends:
       # - plugin:import/typescript
       - plugin:@typescript-eslint/recommended
