@@ -8,5 +8,5 @@ public
 report.*
 docs
 coverage
-husky
+.husky
 .env.local
