@@ -189,6 +189,7 @@
       "chokidar": "3",
       "debug": "latest",
       "fsevents": "2.3.2",
+      "glob-parent": "5.1.2",
       "source-map-resolve": "latest",
       "ws": "7.4.6"
     }
