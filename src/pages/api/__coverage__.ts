@@ -2,7 +2,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 type Data = {
-  coverage: string
+  coverage: string | undefined
 }
 
 const coverage = (
@@ -12,8 +12,12 @@ const coverage = (
   const httpStatusOk = 200
   response.statusCode = httpStatusOk
   response.json({
-    // @ts-expect-error TS2339
-    coverage: global.__coverage__ === null ? undefined : global.__coverage__,
+    coverage:
+      // @ts-expect-error TS2339
+      global.__coverage__ === null
+        ? undefined
+        : // @ts-expect-error TS2339
+          (global.__coverage__ as string),
   })
 }
 
