@@ -1,7 +1,8 @@
+import type { OverNextComponentType } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 
-export const Home = (): JSX.Element => (
+export const Home = (): OverNextComponentType => (
   <div className='container'>
     <Head>
       <title>The Egg</title>
@@ -35,7 +36,7 @@ export const Home = (): JSX.Element => (
       <button
         data-cy='test-button'
         // eslint-disable-next-line react/jsx-no-bind
-        onClick={() => {
+        onClick={(): void => {
           window.alert('With typescript and Jest') // eslint-disable-line no-alert
         }}
         type='button'

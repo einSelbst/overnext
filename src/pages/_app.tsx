@@ -208,10 +208,11 @@ const _app = ({
 }: {
   readonly Component: NextLayoutComponentType
   readonly pageProps: NextPageContext
-}): React.ReactElement => {
+}): React.ReactNode => {
+  /* }): JSX.Element => { */
   const isAmp = useAmp()
   const Layout = Component.Layout ?? DefaultLayout
-  const withSiteLayout = (page: React.ReactNode) => (
+  const withSiteLayout = (page: React.ReactNode): React.ReactNode => (
     <SiteLayout>{page}</SiteLayout>
   )
   const getLayout = Component.getLayout ?? withSiteLayout

@@ -228,27 +228,26 @@ overrides:
             - '.ts'
             - '.tsx'
     rules:
+      # todo re-enable later when renaming stuff
+      '@typescript-eslint/naming-convention': off
+
       # improved version in @typescript/eslint
       no-duplicate-imports: off
-
-      # delete those when enabling all
+      no-use-before-define: off
       '@typescript-eslint/prefer-readonly-parameter-types': off
       '@typescript-eslint/explicit-function-return-type': off
-      # keep those
-      '@typescript-eslint/no-type-alias': off
-      '@typescript-eslint/naming-convention': off
-      '@typescript-eslint/consistent-type-definitions': [error, type]
+      '@typescript-eslint/explicit-module-boundary-types': off
       '@typescript-eslint/non-nullable-type-assertion-style': off
       '@typescript-eslint/explicit-member-accessibility': off
       '@typescript-eslint/no-magic-numbers': off
+      '@typescript-eslint/consistent-type-definitions': [error, type]
       '@typescript-eslint/sort-type-union-intersection-members': warn
       '@typescript-eslint/no-unnecessary-condition': warn
-      # older
       '@typescript-eslint/no-namespace': [error, { 'allowDeclarations': true }]
-      '@typescript-eslint/explicit-module-boundary-types': off
-      no-use-before-define: off
-      '@typescript-eslint/no-use-before-define': error
-      '@typescript-eslint/no-var-requires': off
+      '@typescript-eslint/no-type-alias':
+        - error
+        - allowAliases: always
+          allowLiterals: always
       '@typescript-eslint/no-unused-vars':
         - error
         - argsIgnorePattern: '^_'

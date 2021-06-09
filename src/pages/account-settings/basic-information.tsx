@@ -1,6 +1,8 @@
+import type { OverNextComponentType } from 'next'
+
 import { getLayout } from 'layouts/account-settings.layout'
 
-const AccountSettingsBasicInformation = () => (
+const AccountSettingsBasicInformation = (): OverNextComponentType => (
   <div>
     <div className='pt-6 pb-8 sm:pt-8'>
       <p className='text-sm text-gray-700'>

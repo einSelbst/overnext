@@ -25,7 +25,7 @@ const Axe = (): null => {
   if (process.env.NODE_ENV === 'development') {
     const timingDelayInMilliseconds = 1000
     // eslint-disable-next-line no-void
-    void (async () => {
+    void (async (): Promise<void> => {
       try {
         const { default: axe } = await import(
           /* webpackChunkName: "axeCoreReact", webpackPrefetch: true */
