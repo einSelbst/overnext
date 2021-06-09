@@ -56,6 +56,7 @@ specifiers:
   eslint-plugin-jsx-a11y: ^6.4.1
   eslint-plugin-react: 7.24.0
   eslint-plugin-react-hooks: ^4.2.0
+  eslint-plugin-tsdoc: ^0.2.14
   eslint-plugin-unicorn: 33.0.1
   fsevents: 2.3.2
   git-format-staged: latest
@@ -162,6 +163,7 @@ devDependencies:
   eslint-plugin-jsx-a11y: 6.4.1_eslint@7.28.0
   eslint-plugin-react: 7.24.0_eslint@7.28.0
   eslint-plugin-react-hooks: 4.2.0_eslint@7.28.0
+  eslint-plugin-tsdoc: 0.2.14
   eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
   git-format-staged: 2.1.2
   html-validate: 4.13.1_jest@27.0.4
@@ -3462,6 +3464,19 @@ packages:
     engines: {node: '>=10.0.0'}
     dependencies:
       extend: 3.0.2
+    dev: true
+
+  /@microsoft/tsdoc-config/0.15.2:
+    resolution: {integrity: sha512-mK19b2wJHSdNf8znXSMYVShAHktVr/ib0Ck2FA3lsVBSEhSI/TfXT7DJQkAYgcztTuwazGcg58ZjYdk0hTCVrA==}
+    dependencies:
+      '@microsoft/tsdoc': 0.13.2
+      ajv: 6.12.6
+      jju: 1.4.0
+      resolve: 1.19.0
+    dev: true
+
+  /@microsoft/tsdoc/0.13.2:
+    resolution: {integrity: sha512-WrHvO8PDL8wd8T2+zBGKrMwVL5IyzR3ryWUsl0PXgEV0QHup4mTLi0QcATefGI6Gx9Anu7vthPyyyLpY0EpiQg==}
     dev: true
 
   /@next/bundle-analyzer/10.2.3:
@@ -7251,6 +7266,13 @@ packages:
       string.prototype.matchall: 4.0.5
     dev: true
 
+  /eslint-plugin-tsdoc/0.2.14:
+    resolution: {integrity: sha512-fJ3fnZRsdIoBZgzkQjv8vAj6NeeOoFkTfgosj6mKsFjX70QV256sA/wq+y/R2+OL4L8E79VVaVWrPeZnKNe8Ng==}
+    dependencies:
+      '@microsoft/tsdoc': 0.13.2
+      '@microsoft/tsdoc-config': 0.15.2
+    dev: true
+
   /eslint-plugin-unicorn/33.0.1_eslint@7.28.0:
     resolution: {integrity: sha512-VxX/L/9DUEyB3D0v00185LrgsB5/fBwkgA4IC7ehHRu5hFSgA6VecmdpFybhsr4GQ/Y1iyXMHf6q+JKvcR2MwA==}
     engines: {node: '>=12'}
@@ -9778,6 +9800,10 @@ packages:
       - supports-color
       - ts-node
       - utf-8-validate
+    dev: true
+
+  /jju/1.4.0:
+    resolution: {integrity: sha1-o6vicYryQaKykE+EpiWXDzia4yo=}
     dev: true
 
   /joi/17.4.0:
@@ -12878,6 +12904,13 @@ packages:
     resolution: {integrity: sha1-IDEU2CrSxe2ejgQRs5ModeiJ6Xs=}
     dev: true
 
+  /resolve/1.19.0:
+    resolution: {integrity: sha512-rArEXAgsBG4UgRGcynxWIWKFvh/XZCcS8UJdHhwy91zwAvCZIbcs+vAbflgBnNjYMs/i/i+/Ux6IZhML1yPvxg==}
+    dependencies:
+      is-core-module: 2.4.0
+      path-parse: 1.0.7
+    dev: true
+
   /resolve/1.20.0:
     resolution: {integrity: sha512-wENBPt4ySzg4ybFQW2TT1zMQucPK95HSh/nq2CFTZVOGut2+pQvSsgtda4d26YrYcr067wjbmzOG8byDPBX63A==}
     dependencies:
@@ -14974,7 +15007,7 @@ packages:
       workbox-core: 6.1.5
     dev: false
 
-  /workbox-build/6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14:
+  /workbox-build/6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14:
     resolution: {integrity: sha512-P+fakR5QFVqJN9l9xHVXtmafga72gh9I+jM3A9HiB/6UNRmOAejXnDgD+RMegOHgQHPwnB44TalMToFaXKWIyA==}
     engines: {node: '>=10.0.0'}
     dependencies:
@@ -15111,7 +15144,7 @@ packages:
       upath: 1.2.0
       webpack: 5.38.1
       webpack-sources: 1.4.3
-      workbox-build: 6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14
+      workbox-build: 6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
