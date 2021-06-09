@@ -494,7 +494,7 @@ I also considerd other bundles like
 [XO](https://github.com/xojs/xo) which would have been my first choice because it includes [unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
 [Canonical](https://github.com/gajus/eslint-config-canonical)
 
-but they all have stuff included I don't need and other stuff is missing which I want so I decided to go vanilla `eslint` and do my config by hand to have max control over everything and less dependencies.
+but they all have stuff included I don't need and other stuff is missing which I want so I decided to go vanilla `eslint` and [do my config](https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/README.md#eslint-configs) by hand to have max control over everything and less dependencies.
 
 ### Hosting
 

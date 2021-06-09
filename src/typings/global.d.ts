@@ -14,10 +14,10 @@
  * this will extend {@link https://github.com/DefinitelyTyped/DefinitelyTyped/blob/24f1d0c82da2d898acd03fbb3e692eba3c431f82/types/react/index.d.ts#L2902}
  */
 declare namespace JSX {
-  /* eslint-disable @typescript-eslint/no-explicit-any */
+  /* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/consistent-type-definitions */
   interface IntrinsicElements {
     'amp-img': any
     // 'amp-*': any, // not sure if something like this could work but scoping to amp would be better than '*'
   }
-  /* eslint-enable @typescript-eslint/no-explicit-any */
+  /* eslint-enable @typescript-eslint/no-explicit-any, @typescript-eslint/consistent-type-definitions */
 }

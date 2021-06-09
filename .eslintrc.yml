@@ -188,6 +188,7 @@ rules:
       aspects:
         - invalidHref
         - preferButton
+  jsx-a11y/lang: error
 overrides:
   # Config for Typescript Linting
   - files:
@@ -196,7 +197,8 @@ overrides:
     parser: '@typescript-eslint/parser'
     parserOptions:
       project:
-        - tsconfig.json
+        # - tsconfig.json
+        - tsconfig.eslint.json
         - cypress/tsconfig.json
       tsconfigRootDir: '.'
       warnOnUnsupportedTypeScriptVersion: true,
@@ -227,7 +229,20 @@ overrides:
             - '.ts'
             - '.tsx'
     rules:
-      '@typescript-eslint/no-namespace': [2, { 'allowDeclarations': true }]
+      # improved version in @typescript/eslint
+      no-duplicate-imports: off
+      no-magic-numbers: off
+
+      # delete those when enabling all
+      '@typescript-eslint/prefer-readonly-parameter-types': off
+      '@typescript-eslint/explicit-function-return-type': off
+      # keep those
+      '@typescript-eslint/no-type-alias': off
+      '@typescript-eslint/naming-convention': off
+      '@typescript-eslint/consistent-type-definitions': [error, type]
+      # '@typescript-eslint/no-': off
+      # older
+      '@typescript-eslint/no-namespace': [error, { 'allowDeclarations': true }]
       '@typescript-eslint/explicit-module-boundary-types': off
       no-use-before-define: off
       '@typescript-eslint/no-use-before-define': error
@@ -269,7 +284,7 @@ overrides:
       import/no-unassigned-import: off
   # Config for jest Linting
   - files:
-      - '**/*.test.[js|ts]'
+      - '**/*.test.[js|ts|tsx]'
     # extends:
     # - plugin:jest/all
     # - plugin:jest-dom/recommended

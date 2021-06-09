@@ -17,9 +17,9 @@ const config = {
   amp: 'hybrid',
 }
 
-interface StaticPathParameters extends ParsedUrlQuery {
-  id: string
-}
+type StaticPathParameters = {
+  readonly id: string
+} & ParsedUrlQuery
 
 async function getStaticPaths(
   _context: GetStaticPathsContext
@@ -39,8 +39,8 @@ async function getStaticPaths(
   }
 }
 
-interface PostProps {
-  id: string[] | string | undefined
+type PostProps = {
+  readonly id: string[] | string | undefined
 }
 
 /* export async function getStaticProps ({ */
@@ -59,7 +59,7 @@ async function getStaticProps(
 
 const Post = ({
   id,
-}: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element => (
+}: Readonly<InferGetStaticPropsType<typeof getStaticProps>>): JSX.Element => (
   // function Post ( props: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element {
   <div>
     <h1>My AMP Post Page!</h1>

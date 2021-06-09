@@ -1,17 +1,12 @@
 import Link from 'next/link'
-/* import * as React from 'react' */
 
 type Props = {
-  success: boolean
-  error: boolean
+  readonly success: boolean
+  readonly error: boolean
 }
 
-/**
- * Usage of prop-types
- * @see {@link https://fettblog.eu/typescript-react/prop-types/}
- */
 /* export const Navigation: React.ReactComponent = (props: InferProps<typeof Navigation.propTypes>): JSX.Element => { */
-export const Navigation = (props: Props): JSX.Element => (
+const Navigation = (props: Props): ComponentReturnType => (
   <>
     <nav title='Site Navigation'>
       <Link href='/'>
@@ -66,3 +61,5 @@ export const Navigation = (props: Props): JSX.Element => (
     </div>
   </>
 )
+
+export { Navigation }

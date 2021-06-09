@@ -15,8 +15,8 @@ const sendMetric = async ({
   name,
   value,
 }: {
-  name: string
-  value: string
+  readonly name: string
+  readonly value: string
 }): Promise<boolean> => {
   if (!process.env.NEXT_PUBLIC_QUICK_METRICS_API_KEY) {
     return false
@@ -47,7 +47,10 @@ const sendMetric = async ({
  * Web Vitals
  * @see {@link https://www.freecodecamp.org/news/how-to-measure-next-js-web-vitals-using-quickmetrics/}
  */
-const reportWebVitals = (metric: { name: string; value: string }): void => {
+const reportWebVitals = (metric: {
+  readonly name: string
+  readonly value: string
+}): void => {
   // I can only send 5 metrics to free quickmetrics account
   if (metric.name !== 'Next.js-hydration') {
     sendMetric(metric).catch(error => console.error(error))
@@ -201,8 +204,8 @@ const _app = ({
   Component,
   pageProps,
 }: {
-  Component: NextLayoutComponentType
-  pageProps: NextPageContext
+  readonly Component: NextLayoutComponentType
+  readonly pageProps: NextPageContext
 }): React.ReactElement => {
   const isAmp = useAmp()
   const Layout = Component.Layout || DefaultLayout

@@ -12,7 +12,6 @@ const coverage = (
   const httpStatusOk = 200
   response.statusCode = httpStatusOk
   response.json({
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-expect-error TS2339
     coverage: global.__coverage__ || undefined, // eslint-disable-line @typescript-eslint/no-unsafe-assignment
   })

@@ -40,10 +40,12 @@ const Netlify = () => (
   </>
 )
 
-export const Footer = (): JSX.Element => (
+const Footer = (): ComponentReturnType => (
   <footer>
     {process.env.platform === 'vercel' ? <Vercel /> : <Netlify />}
     <p>Hosted on {process.env.platform}</p>
     <p>©Copyright 2050 by nobody. All rights reversed.</p>
   </footer>
 )
+
+export { Footer }

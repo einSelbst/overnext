@@ -3,8 +3,8 @@ import Link from 'next/link'
 const InlineLayout = ({
   children,
 }: {
-  children: React.ReactNode
-}): JSX.Element => (
+  readonly children: React.ReactChild
+}): ComponentReturnType => (
   <>
     <header style={{ background: 'lightblue' }}>
       <nav>

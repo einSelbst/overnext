@@ -5,7 +5,10 @@ import NextError from 'next/error'
 /**
  * <ErrorPage />
  */
-const _error = ({ statusCode, title }: ErrorProps): JSX.Element => (
+const _error = ({
+  statusCode,
+  title,
+}: Readonly<ErrorProps>): ComponentReturnType => (
   <NextError statusCode={statusCode} title={title} />
 )
 

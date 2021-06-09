@@ -12,7 +12,7 @@ import type {
   GetStaticProps,
   GetStaticPropsContext,
   GetStaticPropsResult,
-  InferGetStaticPropsType,
+  /* InferGetStaticPropsType, */
 } from 'next'
 
 /* istanbul ignore next */
@@ -20,9 +20,9 @@ const config = {
   amp: 'hybrid',
 }
 
-interface StaticPathParameters extends ParsedUrlQuery {
+type StaticPathParameters = {
   fragments: string[] | string
-}
+} & ParsedUrlQuery
 
 const getStaticPaths: GetStaticPaths = async (
   _context: GetStaticPathsContext

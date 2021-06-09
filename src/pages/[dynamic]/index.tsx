@@ -14,7 +14,9 @@ const config = {
 const DynamicPage = ({
   dynamic,
   locale,
-}: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element => (
+}: Readonly<
+  InferGetStaticPropsType<typeof getStaticProps>
+>): ComponentReturnType => (
   <main>
     <header>
       <h1>DynamicPage Component {dynamic}</h1>

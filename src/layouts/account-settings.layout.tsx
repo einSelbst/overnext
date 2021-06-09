@@ -5,9 +5,9 @@ import { useRouter } from 'next/router'
 import { getLayout as getSiteLayout } from './site.layout'
 
 type ActiveLinkProps = {
-  children: React.ReactNode
-  href: string
-  className?: string
+  readonly children: React.ReactNode
+  readonly href: string
+  readonly className?: string
 }
 
 const ActiveLink = ({ children, href, className = '' }: ActiveLinkProps) => {
@@ -27,7 +27,11 @@ const ActiveLink = ({ children, href, className = '' }: ActiveLinkProps) => {
   )
 }
 
-const AccountSettingsLayout = ({ children }: { children: React.ReactNode }) => (
+const AccountSettingsLayout = ({
+  children,
+}: {
+  readonly children: React.ReactNode
+}) => (
   <div className='max-w-xl mx-auto px-8'>
     <h1 className='text-2xl text-gray-900 font-semibold'>Account Settings</h1>
 

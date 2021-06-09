@@ -14,8 +14,8 @@ const config = {
  * @see navigation.tsx for an example with prop-types
  */
 type Props = {
-  success: boolean
-  error: boolean
+  readonly success: boolean
+  readonly error: boolean
 }
 
 /**

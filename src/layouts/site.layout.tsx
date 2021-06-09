@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
-interface Props {
-  children: React.ReactNode
+type Props = {
+  readonly children: React.ReactNode
 }
 
 const SiteLayout = ({ children }: Props) => (

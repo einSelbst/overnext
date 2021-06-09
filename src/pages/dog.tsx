@@ -19,7 +19,7 @@ const config = {
   amp: 'hybrid',
 }
 
-interface HomeProps {
+type HomeProps = {
   host: string
 }
 
@@ -57,7 +57,7 @@ const getStaticProps: GetStaticProps = async (
 /* const Dog: NextPage = () => { */
 const Dog: NextLayoutPage = (
   /* props: InferGetStaticPropsType<typeof getStaticProps> */
-  { host }: InferGetStaticPropsType<typeof getStaticProps>
+  { host }: Readonly<InferGetStaticPropsType<typeof getStaticProps>>
 ) => {
   /* const Dog = (props: HomeProps): JSX.Element => { */
   const isAmp = useAmp()
