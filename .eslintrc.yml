@@ -56,6 +56,7 @@ rules:
       enforceConst: false
   no-underscore-dangle: off
   no-ternary: off
+  no-extra-boolean-cast: off
   one-var: off
   no-unused-vars:
     - error
@@ -211,9 +212,7 @@ overrides:
     extends:
       - plugin:import/recommended
       - plugin:import/typescript
-      - plugin:@typescript-eslint/recommended
-      # - plugin:@typescript-eslint/all
-      - plugin:@typescript-eslint/recommended-requiring-type-checking
+      - plugin:@typescript-eslint/all
       - prettier
     settings:
       import/parsers:
@@ -231,7 +230,6 @@ overrides:
     rules:
       # improved version in @typescript/eslint
       no-duplicate-imports: off
-      no-magic-numbers: off
 
       # delete those when enabling all
       '@typescript-eslint/prefer-readonly-parameter-types': off
@@ -240,7 +238,11 @@ overrides:
       '@typescript-eslint/no-type-alias': off
       '@typescript-eslint/naming-convention': off
       '@typescript-eslint/consistent-type-definitions': [error, type]
-      # '@typescript-eslint/no-': off
+      '@typescript-eslint/non-nullable-type-assertion-style': off
+      '@typescript-eslint/explicit-member-accessibility': off
+      '@typescript-eslint/no-magic-numbers': off
+      '@typescript-eslint/sort-type-union-intersection-members': warn
+      '@typescript-eslint/no-unnecessary-condition': warn
       # older
       '@typescript-eslint/no-namespace': [error, { 'allowDeclarations': true }]
       '@typescript-eslint/explicit-module-boundary-types': off

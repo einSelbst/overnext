@@ -1,4 +1,4 @@
-import { NextPageContext, NextLayoutComponentType } from 'next'
+import type { NextPageContext, NextLayoutComponentType } from 'next'
 import { DefaultSeo } from 'next-seo'
 import { ThemeProvider } from 'next-themes'
 import { useAmp } from 'next/amp'
@@ -18,7 +18,7 @@ const sendMetric = async ({
   readonly name: string
   readonly value: string
 }): Promise<boolean> => {
-  if (!process.env.NEXT_PUBLIC_QUICK_METRICS_API_KEY) {
+  if (process.env.NEXT_PUBLIC_QUICK_METRICS_API_KEY === undefined) {
     return false
   }
 
@@ -35,7 +35,7 @@ const sendMetric = async ({
     url = `https://qckm.io?m=${name}&v=${valueInt}&k=${process.env.NEXT_PUBLIC_QUICK_METRICS_API_KEY}`
 
   // Use `navigator.sendBeacon()` if available, falling back to `fetch()`.
-  if (navigator.sendBeacon) {
+  if (typeof navigator.sendBeacon === 'function') {
     navigator.sendBeacon(url)
   } else {
     await fetch(url, { method: 'POST', keepalive: true })
@@ -53,7 +53,9 @@ const reportWebVitals = (metric: {
 }): void => {
   // I can only send 5 metrics to free quickmetrics account
   if (metric.name !== 'Next.js-hydration') {
-    sendMetric(metric).catch(error => console.error(error))
+    sendMetric(metric).catch(error => {
+      console.error(error)
+    })
   }
   console.log(metric) // eslint-disable-line no-console
 }
@@ -208,11 +210,11 @@ const _app = ({
   readonly pageProps: NextPageContext
 }): React.ReactElement => {
   const isAmp = useAmp()
-  const Layout = Component.Layout || DefaultLayout
+  const Layout = Component.Layout ?? DefaultLayout
   const withSiteLayout = (page: React.ReactNode) => (
     <SiteLayout>{page}</SiteLayout>
   )
-  const getLayout = Component.getLayout || withSiteLayout
+  const getLayout = Component.getLayout ?? withSiteLayout
 
   /* eslint-disable react/jsx-props-no-spreading */
   /* amp pages doesn't work well with the theme so I had to split it */
@@ -227,7 +229,7 @@ const _app = ({
       <DefaultSeo {...SEO} />
       <HeadIcons />
       {/* <Layout {...this.props}> */}
-      <Layout>{getLayout && getLayout(<Component {...pageProps} />)}</Layout>
+      <Layout>{getLayout(<Component {...pageProps} />)}</Layout>
 
       {/* <Layout>
             <Component {...pageProps} />

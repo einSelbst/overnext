@@ -20,9 +20,9 @@ const config = {
   amp: 'hybrid',
 }
 
-type StaticPathParameters = {
+type StaticPathParameters = ParsedUrlQuery & {
   fragments: string[] | string
-} & ParsedUrlQuery
+}
 
 const getStaticPaths: GetStaticPaths = async (
   _context: GetStaticPathsContext
@@ -51,7 +51,7 @@ const getStaticPaths: GetStaticPaths = async (
  *     because it is more constrained.”
  */
 type FragmentsProps = {
-  fragments: string | string[]
+  fragments: string[] | string
 }
 
 const getStaticProps: GetStaticProps = async ({

@@ -17,9 +17,9 @@ const config = {
   amp: 'hybrid',
 }
 
-type StaticPathParameters = {
+type StaticPathParameters = ParsedUrlQuery & {
   readonly id: string
-} & ParsedUrlQuery
+}
 
 async function getStaticPaths(
   _context: GetStaticPathsContext

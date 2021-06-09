@@ -6,14 +6,14 @@ type Data = {
 }
 
 const coverage = (
-  request: NextApiRequest,
+  _request: NextApiRequest,
   response: NextApiResponse<Data>
 ): void => {
   const httpStatusOk = 200
   response.statusCode = httpStatusOk
   response.json({
     // @ts-expect-error TS2339
-    coverage: global.__coverage__ || undefined, // eslint-disable-line @typescript-eslint/no-unsafe-assignment
+    coverage: global.__coverage__ === null ? undefined : global.__coverage__,
   })
 }
 

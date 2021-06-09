@@ -39,8 +39,9 @@ const getStaticProps: GetStaticProps = async (
   console.log(process.env.SITE_URL)
 
   let url = 'https://overnext.vercel.app'
-  if (process.env.URL) url = process.env.URL
-
+  if (process.env.URL !== undefined) {
+    url = process.env.URL
+  }
   console.log(url)
   /* eslint-enable no-console */
 
@@ -90,7 +91,9 @@ const Dog: NextLayoutPage = (
             <a>View Non-AMP Version</a>
           </Link>
         ) : (
-          <a href={locale ? `/${locale}/dog?amp=1` : '/dog/?amp=1'}>
+          <a
+            href={locale === undefined ? '/dog/?amp=1' : `/${locale}/dog?amp=1`}
+          >
             view {locale} amp version
           </a>
         )}

@@ -7,7 +7,9 @@ const ThemeChanger = (): ComponentReturnType => {
   const { theme, setTheme }: ThemeType = useTheme()
   const [mounted, setMounted] = useState(false)
 
-  useEffect(() => setMounted(true), [])
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   /*
    * ToDo [>1.2]: refactor to use nextjs default way of rendering only on client
