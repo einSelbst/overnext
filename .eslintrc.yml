@@ -13,6 +13,7 @@ plugins:
   - import
   - unicorn
   - promise
+  - sonarjs
 # - jsx-a11y
 extends:
   - eslint:all
@@ -24,6 +25,7 @@ extends:
   - plugin:react-hooks/recommended
   - plugin:promise/recommended
   - plugin:array-func/all
+  - plugin:sonarjs/recommended
   - plugin:eslint-comments/recommended
   # - plugin:@next/next/recommended
   - prettier
@@ -401,6 +403,8 @@ overrides:
       promise/always-return: off
       promise/no-nesting: off
       promise/prefer-await-to-then: off
+      sonarjs/no-duplicate-string: off
+      sonarjs/no-identical-functions: off
 
   # Config for general jest Linting
   - files:

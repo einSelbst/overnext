@@ -305,9 +305,11 @@ info: Display info about the scripts
   - [`eslint-plugin-compat`](https://github.com/amilajack/eslint-plugin-compat), works with browserslist
 
   - [`eslint-plugin-import`](https://github.com/benmosher/eslint-plugin-import), [rules](https://github.com/benmosher/eslint-plugin-import/tree/master/docs/rules)
+
     - [`typescript-eslint-language-service`](https://github.com/Quramy/typescript-eslint-language-service), adds typescript support for `eslint-plugin-import`
 
   - [`eslint-plugin-next`](https://github.com/vercel/next.js/tree/canary/packages/eslint-plugin-next)
+  - [`eslint-plugin-sonarjs`](https://github.com/SonarSource/eslint-plugin-sonarjs), 25 rules
 
   - [`eslint-plugin-tsdoc`](https://github.com/microsoft/tsdoc/tree/master/eslint-plugin)
   - [`eslint-plugin-eslint-comments`](https://github.com/mysticatea/eslint-plugin-eslint-comments)
