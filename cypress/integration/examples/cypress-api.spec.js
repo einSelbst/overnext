@@ -21,7 +21,7 @@ context('Cypress.Commands', () => {
         /* method = method || 'log' */ // set as default parameter
 
         // log the subject to the console
-        // @ts-ignore TS7017
+        // @ts-expect-error TS7017
         console[method]('The subject is', subject)
 
         // whatever we return becomes the new subject
@@ -31,7 +31,7 @@ context('Cypress.Commands', () => {
       }
     )
 
-    // @ts-ignore TS2339
+    // @ts-expect-error TS2339
     cy.get('button')
       .console('info')
       .then(_$button => {

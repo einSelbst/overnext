@@ -4,6 +4,7 @@ import { render, fireEvent } from '../test-utils'
 describe('home page', () => {
   it('matches snapshot', () => {
     const { asFragment } = render(<Home />, {})
+
     // inline-snapshots require 'prettier', but I use 'prettierx'
     expect(asFragment()).toMatchSnapshot()
   })
@@ -12,6 +13,7 @@ describe('home page', () => {
     const { getByText } = render(<Home />, {})
     jest.spyOn(window, 'alert').mockImplementation()
     fireEvent.click(getByText('Test Button'))
+
     expect(window.alert).toHaveBeenCalledWith('With typescript and Jest')
   })
 })

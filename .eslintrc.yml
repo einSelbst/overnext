@@ -193,8 +193,8 @@ rules:
 overrides:
   # Config for Typescript Linting
   - files:
-      - src/**/*.ts
-      - src/**/*.tsx
+      - '**/*.ts'
+      - '**/*.tsx'
     parser: '@typescript-eslint/parser'
     parserOptions:
       project:
@@ -228,9 +228,10 @@ overrides:
       # todo re-enable later when renaming stuff
       '@typescript-eslint/naming-convention': off
 
-      # improved version in @typescript/eslint
+      # improved version in @typescript-eslint
       no-duplicate-imports: off
       no-use-before-define: off
+      # @typescript-eslint rules config
       '@typescript-eslint/prefer-readonly-parameter-types': off
       '@typescript-eslint/explicit-function-return-type': off
       '@typescript-eslint/explicit-module-boundary-types': off
@@ -250,10 +251,70 @@ overrides:
         - argsIgnorePattern: '^_'
           varsIgnorePattern: '^_'
       tsdoc/syntax: warn
-  # # Config for Cypress Linting
+
+    overrides:
+      # Config for typescript cypress Linting
+      - files:
+          - 'cypress/**/*.ts'
+          - 'cypress/**/*.tsx'
+          - '**/*.spec.ts'
+          - '**/*.spec.tsx'
+        plugins:
+          - cypress
+        extends:
+          - plugin:cypress/recommended
+        env:
+          cypress/globals: true
+        rules:
+          no-console: off
+          no-unused-expressions: off
+          no-magic-numbers: off
+          multiline-comment-style: off
+          max-lines-per-function: off
+          max-statements: off
+          max-lines: off
+          id-length: off
+          cypress/no-unnecessary-waiting: off
+          unicorn/consistent-function-scoping:
+            - error
+            - checkArrowFunctions: false
+          # try to enable the following rules at some point in the future
+          require-unicode-regexp: off
+          prefer-destructuring: off
+          no-invalid-this: off
+          func-names: off
+          no-empty-function: off
+          import/no-unassigned-import: off
+
+      # Config for typescript jest Linting
+      - files:
+          - 'test/**/*.ts'
+          - 'test/**/*.tsx'
+          - '**/*.test.ts'
+          - '**/*.test.tsx'
+        plugins:
+          - jest
+          - jest-dom
+          - jest-formatting
+        extends:
+          - plugin:jest/all
+          - plugin:jest-dom/recommended
+          - plugin:jest-formatting/strict
+        env:
+          jest: true
+          jest/globals: true
+        rules:
+          '@typescript-eslint/no-unsafe-call': warn
+          '@typescript-eslint/no-unsafe-return': warn
+          '@typescript-eslint/no-unsafe-argument': warn
+          jest/prefer-expect-assertions: warn
+
+  # Config for default Cypress Linting
   - files:
-      - cypress/**/*.js
+      - 'cypress/**/*.js'
+      - 'cypress/**/*.jsx'
       - '**/*.spec.js'
+      - '**/*.spec.jsx'
     plugins:
       - cypress
     extends:
@@ -270,8 +331,6 @@ overrides:
       max-lines: off
       id-length: off
       cypress/no-unnecessary-waiting: off
-      # '@typescript-eslint/no-empty-function': 'off'
-      # '@typescript-eslint/ban-ts-comment': 'off'
       unicorn/consistent-function-scoping:
         - error
         - checkArrowFunctions: false
@@ -282,9 +341,13 @@ overrides:
       func-names: off
       no-empty-function: off
       import/no-unassigned-import: off
-  # Config for jest Linting
+
+  # Config for general jest Linting
   - files:
-      - '**/*.test.[js|ts|tsx]'
+      - 'test/**/*.js'
+      - 'test/**/*.jsx'
+      - '**/*.test.js'
+      - '**/*.test.jsx'
     plugins:
       - jest
       - jest-dom
@@ -297,4 +360,4 @@ overrides:
       jest: true
       jest/globals: true
     rules:
-      '@typescript-eslint/no-unsafe-call': off
+      import/no-unresolved: off

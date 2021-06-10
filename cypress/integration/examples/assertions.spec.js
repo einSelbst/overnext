@@ -70,7 +70,7 @@ context('Assertions', () => {
         .should($p => {
           // https://on.cypress.io/$
           // return an array of texts from all of the p's
-          // @ts-ignore TS6133 unused variable
+          // @ts-expect-error TS6133 unused variable
           const texts = $p.map((index, element) => Cypress.$(element).text())
 
           // jquery map returns jquery object
@@ -119,7 +119,7 @@ context('Assertions', () => {
 
           const { className } = $div[0]
 
-          if (!/heading-/.test(className)) {
+          if (!className.includes('heading-')) {
             throw new Error(`Could not find class "heading-" in ${className}`)
           }
         })
