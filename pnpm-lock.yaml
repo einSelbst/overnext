@@ -72,12 +72,12 @@ specifiers:
   next-compose-plugins: 2.2.1
   next-pwa: 5.2.21
   next-seo: 4.24.0
-  next-sitemap: 1.6.105
+  next-sitemap: 1.6.108
   next-themes: 0.0.14
   next-unused: 0.0.6
   npm-scripts-info: 0.3.9
   nyc: 15.1.0
-  pnpm: 6.7.4
+  pnpm: 6.7.5
   postcss: 8.3.1
   prettier: 2.3.1
   prettier-plugin-sh: 0.6.1
@@ -110,7 +110,7 @@ dependencies:
   next-compose-plugins: 2.2.1
   next-pwa: 5.2.21_18c548a170073bdafc1cdccb988007a0
   next-seo: 4.24.0_cdb07c42721266739ffbd3ea8e818efe
-  next-sitemap: 1.6.105_next@10.2.3
+  next-sitemap: 1.6.108_next@10.2.3
   next-themes: 0.0.14_cdb07c42721266739ffbd3ea8e818efe
   postcss: 8.3.1
   react: 17.0.2
@@ -124,7 +124,7 @@ dependencies:
 optionalDependencies:
   '@axe-core/react': 4.2.1
   fsevents: 2.3.2
-  pnpm: 6.7.4
+  pnpm: 6.7.5
 
 devDependencies:
   '@babel/preset-env': 7.14.5_@babel+core@7.14.5
@@ -11308,8 +11308,8 @@ packages:
       react-dom: 17.0.2_react@17.0.2
     dev: false
 
-  /next-sitemap/1.6.105_next@10.2.3:
-    resolution: {integrity: sha512-l0ZAxVbVZg1g6wp8MAEbVa2CeOjVDuVg0B56iTyR8YHgMAswID2uKBLcTSTnauTPt2uQZPkO5LCd1WCciZ1ybQ==}
+  /next-sitemap/1.6.108_next@10.2.3:
+    resolution: {integrity: sha512-uzqpIAm/zgDpmhb8JwKXRFRr8n0lyKZ30AqwjNUazS9uZqkkHnH8frMsMqB/wO0Ypq3Z+q6kpzPa0FYr6hP0Zw==}
     hasBin: true
     peerDependencies:
       next: '*'
@@ -12268,8 +12268,8 @@ packages:
       - typescript
     dev: false
 
-  /pnpm/6.7.4:
-    resolution: {integrity: sha512-XdVdy9s2IL84SEWeHGg9nVr5hVF3Nim05UXqtrst1FS5PJdQM+uDazgHIaFMIpPvvWRt5cPYuFj70dOMX6jZCQ==}
+  /pnpm/6.7.5:
+    resolution: {integrity: sha512-8mT05IP5S6V8OtQoZu9x91jT1hOO2EAGiJG1gKylv+5DRdwP892MBnLtzjD1FUz3xiCbHOQP04PiDK4VGVrWjw==}
     engines: {node: '>=12.17'}
     hasBin: true
     dev: false
@@ -15170,7 +15170,7 @@ packages:
       workbox-core: 6.1.5
     dev: false
 
-  /workbox-build/6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14:
+  /workbox-build/6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14:
     resolution: {integrity: sha512-P+fakR5QFVqJN9l9xHVXtmafga72gh9I+jM3A9HiB/6UNRmOAejXnDgD+RMegOHgQHPwnB44TalMToFaXKWIyA==}
     engines: {node: '>=10.0.0'}
     dependencies:
@@ -15307,7 +15307,7 @@ packages:
       upath: 1.2.0
       webpack: 5.38.1
       webpack-sources: 1.4.3
-      workbox-build: 6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14
+      workbox-build: 6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
