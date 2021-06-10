@@ -21,6 +21,7 @@ extends:
   - plugin:jsx-a11y/strict
   - plugin:react/all
   - plugin:react-hooks/recommended
+  - plugin:eslint-comments/recommended
   # - plugin:@next/next/recommended
   - prettier
   # - next
@@ -190,6 +191,7 @@ rules:
         - invalidHref
         - preferButton
   jsx-a11y/lang: error
+  eslint-comments/no-unused-disable: error
 overrides:
   # Config for Typescript Linting
   - files:
