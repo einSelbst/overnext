@@ -50,6 +50,7 @@ specifiers:
   eslint-config-prettier: 8.3.0
   eslint-find-rules: ^3.6.1
   eslint-import-resolver-typescript: 2.4.0
+  eslint-plugin-array-func: ^3.1.7
   eslint-plugin-compat: ^3.9.0
   eslint-plugin-cypress: 2.11.3
   eslint-plugin-eslint-comments: ^3.2.0
@@ -162,6 +163,7 @@ devDependencies:
   eslint-config-prettier: 8.3.0_eslint@7.28.0
   eslint-find-rules: 3.6.1_eslint@7.28.0
   eslint-import-resolver-typescript: 2.4.0_865bf980219d6c4beaad3708398fa6e4
+  eslint-plugin-array-func: 3.1.7_eslint@7.28.0
   eslint-plugin-compat: 3.9.0_eslint@7.28.0
   eslint-plugin-cypress: 2.11.3_eslint@7.28.0
   eslint-plugin-eslint-comments: 3.2.0_eslint@7.28.0
@@ -7172,6 +7174,15 @@ packages:
       pkg-dir: 2.0.0
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /eslint-plugin-array-func/3.1.7_eslint@7.28.0:
+    resolution: {integrity: sha512-fB5TBICjHSTGToNTbCCgR8zsngpUkoCM31EMh/M/NEAyNg90i5rUuG0dnNNBML2n0BzM0nBE3sPvo2SEWf6jlA==}
+    engines: {node: '>= 6.8.0'}
+    peerDependencies:
+      eslint: '>=3.0.0'
+    dependencies:
+      eslint: 7.28.0
     dev: true
 
   /eslint-plugin-compat/3.9.0_eslint@7.28.0:
@@ -15081,7 +15092,7 @@ packages:
       workbox-core: 6.1.5
     dev: false
 
-  /workbox-build/6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14:
+  /workbox-build/6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14:
     resolution: {integrity: sha512-P+fakR5QFVqJN9l9xHVXtmafga72gh9I+jM3A9HiB/6UNRmOAejXnDgD+RMegOHgQHPwnB44TalMToFaXKWIyA==}
     engines: {node: '>=10.0.0'}
     dependencies:
@@ -15218,7 +15229,7 @@ packages:
       upath: 1.2.0
       webpack: 5.38.1
       webpack-sources: 1.4.3
-      workbox-build: 6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14
+      workbox-build: 6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color

@@ -300,6 +300,7 @@ info: Display info about the scripts
     - "promise/prefer-await-to-callbacks": "warn"
     </details>
 
+  - [`eslint-plugin-array-func`](https://github.com/freaktechnik/eslint-plugin-array-func), [rules](https://github.com/freaktechnik/eslint-plugin-array-func#rules)
   - [`eslint-plugin-jsx-a11y`](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y), [rules](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/master/docs/rules)
   - [`eslint-plugin-compat`](https://github.com/amilajack/eslint-plugin-compat), works with browserslist
 
