@@ -4,3 +4,4 @@
 public/
 docs
 coverage
+next-env.d.ts
