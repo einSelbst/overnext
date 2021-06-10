@@ -48,7 +48,7 @@
     "pree2e": "rm -rf .nyc_output coverage .next || true",
     " ------------------------- Linting ------------------------- ": "",
     "?format": "echo Format source code and fix issues",
-    "format": "prettier --write . --plugin=prettier-plugin-sh --plugin=prettier-plugin-toml",
+    "format": "prettier --check --write --ignore-unknown . --plugin=prettier-plugin-sh --plugin=prettier-plugin-toml",
     "?lint": "echo Lint source code and fix issues",
     "lint1": "eslint . --fix",
     "lint": "eslint . --cache",

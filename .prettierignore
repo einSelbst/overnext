@@ -9,4 +9,3 @@ report.*
 docs
 coverage
 .husky
-.env.local
