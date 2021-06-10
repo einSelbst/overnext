@@ -258,6 +258,8 @@ overrides:
       - cypress
     extends:
       - plugin:cypress/recommended
+    env:
+      cypress/globals: true
     rules:
       no-console: off
       no-unused-expressions: off
@@ -283,8 +285,16 @@ overrides:
   # Config for jest Linting
   - files:
       - '**/*.test.[js|ts|tsx]'
-    # extends:
-    # - plugin:jest/all
-    # - plugin:jest-dom/recommended
+    plugins:
+      - jest
+      - jest-dom
+      - jest-formatting
+    extends:
+      - plugin:jest/all
+      - plugin:jest-dom/recommended
+      - plugin:jest-formatting/strict
     env:
       jest: true
+      jest/globals: true
+    rules:
+      '@typescript-eslint/no-unsafe-call': off

@@ -53,6 +53,9 @@ specifiers:
   eslint-plugin-compat: ^3.9.0
   eslint-plugin-cypress: 2.11.3
   eslint-plugin-import: ^2.23.4
+  eslint-plugin-jest: ^24.3.6
+  eslint-plugin-jest-dom: ^3.9.0
+  eslint-plugin-jest-formatting: ^3.0.0
   eslint-plugin-jsx-a11y: ^6.4.1
   eslint-plugin-react: 7.24.0
   eslint-plugin-react-hooks: ^4.2.0
@@ -160,6 +163,9 @@ devDependencies:
   eslint-plugin-compat: 3.9.0_eslint@7.28.0
   eslint-plugin-cypress: 2.11.3_eslint@7.28.0
   eslint-plugin-import: 2.23.4_eslint@7.28.0
+  eslint-plugin-jest: 24.3.6_a75a172e4514a00a289d53a59e2370f9
+  eslint-plugin-jest-dom: 3.9.0_eslint@7.28.0
+  eslint-plugin-jest-formatting: 3.0.0_eslint@7.28.0
   eslint-plugin-jsx-a11y: 6.4.1_eslint@7.28.0
   eslint-plugin-react: 7.24.0_eslint@7.28.0
   eslint-plugin-react-hooks: 4.2.0_eslint@7.28.0
@@ -7216,6 +7222,45 @@ packages:
       - supports-color
     dev: true
 
+  /eslint-plugin-jest-dom/3.9.0_eslint@7.28.0:
+    resolution: {integrity: sha512-Ou3cuAAY9s6pYZv+KKPa9XquSzUAWW2CgE5al7cQ0yew25w/kp5kNsUJgESb3Pj00Y6pzvznepppL2sk7UOQKg==}
+    engines: {node: ^10.12.0 || >=12.0.0, npm: '>=6', yarn: '>=1'}
+    peerDependencies:
+      eslint: '>=6.8'
+    dependencies:
+      '@babel/runtime': 7.14.5
+      '@testing-library/dom': 7.31.2
+      eslint: 7.28.0
+      requireindex: 1.2.0
+    dev: true
+
+  /eslint-plugin-jest-formatting/3.0.0_eslint@7.28.0:
+    resolution: {integrity: sha512-XM1CHe1jX6j+t/NeppcVnm/1zgDAFqwiSLJEyLB7HDpcqBEGbbTFLSayCW2Q9y7VwcXrJbDAKRoO6vZ7jCmRFw==}
+    engines: {node: ^10.12.0 || >=12.0.0}
+    peerDependencies:
+      eslint: '>=0.8.0'
+    dependencies:
+      eslint: 7.28.0
+    dev: true
+
+  /eslint-plugin-jest/24.3.6_a75a172e4514a00a289d53a59e2370f9:
+    resolution: {integrity: sha512-WOVH4TIaBLIeCX576rLcOgjNXqP+jNlCiEmRgFTfQtJ52DpwnIQKAVGlGPAN7CZ33bW6eNfHD6s8ZbEUTQubJg==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      '@typescript-eslint/eslint-plugin': '>= 4'
+      eslint: '>=5'
+    peerDependenciesMeta:
+      '@typescript-eslint/eslint-plugin':
+        optional: true
+    dependencies:
+      '@typescript-eslint/eslint-plugin': 4.26.1_c8cbd5e7f5f92609ec78d991aced454b
+      '@typescript-eslint/experimental-utils': 4.26.1_eslint@7.28.0+typescript@4.3.2
+      eslint: 7.28.0
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
+    dev: true
+
   /eslint-plugin-jsx-a11y/6.4.1_eslint@7.28.0:
     resolution: {integrity: sha512-0rGPJBbwHoGNPU73/QCLP/vveMlM1b1Z9PponxO87jfr6tuH5ligXbDT6nHSSzBC8ovX2Z+BQu7Bk5D/Xgq9zg==}
     engines: {node: '>=4.0'}
@@ -12837,6 +12882,11 @@ packages:
     resolution: {integrity: sha512-NKN5kMDylKuldxYLSUfrbo5Tuzh4hd+2E8NPPX02mZtn1VuREQToYe/ZdlJy+J3uCpfaiGF05e7B8W0iXbQHmg==}
     dev: true
 
+  /requireindex/1.2.0:
+    resolution: {integrity: sha512-L9jEkOi3ASd9PYit2cwRfyppc9NoABujTP8/5gFcbERmo5jUoAKovIC3fsF17pkTnGsrByysqX+Kxd2OTNI1ww==}
+    engines: {node: '>=0.10.5'}
+    dev: true
+
   /requirejs-config-file/4.0.0:
     resolution: {integrity: sha512-jnIre8cbWOyvr8a5F2KuqBnY+SDA4NXr/hzEZJG79Mxm2WiFQz2dzhC8ibtPJS7zkmBEl1mxSwp5HhC1W4qpxw==}
     engines: {node: '>=10.13.0'}
@@ -15007,7 +15057,7 @@ packages:
       workbox-core: 6.1.5
     dev: false
 
-  /workbox-build/6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14:
+  /workbox-build/6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14:
     resolution: {integrity: sha512-P+fakR5QFVqJN9l9xHVXtmafga72gh9I+jM3A9HiB/6UNRmOAejXnDgD+RMegOHgQHPwnB44TalMToFaXKWIyA==}
     engines: {node: '>=10.0.0'}
     dependencies:
@@ -15144,7 +15194,7 @@ packages:
       upath: 1.2.0
       webpack: 5.38.1
       webpack-sources: 1.4.3
-      workbox-build: 6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14
+      workbox-build: 6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color

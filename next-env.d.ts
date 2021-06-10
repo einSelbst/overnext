@@ -18,7 +18,7 @@
  */
 type ComponentReturnType =
   | ReactElement
-  | Array<ComponentReturnType>
+  | ComponentReturnType[]
   | string
   | number
   | boolean
