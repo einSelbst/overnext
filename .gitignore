@@ -98,3 +98,4 @@ public/sw.js*
 
 # docs
 docs
+.eslintcache

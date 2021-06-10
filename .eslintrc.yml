@@ -147,15 +147,15 @@ rules:
   import/no-amd: error
   import/no-anonymous-default-export: error
   import/no-commonjs: off
-  import/no-cycle: warn
+  import/no-cycle: warn # slow
   import/no-default-export: off
-  import/no-deprecated: error
+  import/no-deprecated: error # slow
   import/no-dynamic-require: error
   import/no-extraneous-dependencies: error
   import/no-import-module-exports: error
   import/no-internal-modules: off
   import/no-mutable-exports: error
-  import/no-named-default: error
+  import/no-named-default: error # slow
   import/no-named-export: off
   import/no-namespace: error
   import/no-nodejs-modules:
@@ -230,6 +230,9 @@ overrides:
       # todo re-enable later when renaming stuff
       '@typescript-eslint/naming-convention': off
 
+      # disabled because it's slow
+      # '@typescript-eslint/no-unsafe-assignment': off
+
       # @typescript-eslint rules config
       '@typescript-eslint/prefer-readonly-parameter-types': off
       '@typescript-eslint/explicit-function-return-type': off
@@ -296,11 +299,6 @@ overrides:
       import/namespace: off
       import/default: off
       import/no-named-as-default-member: off
-
-      # import/no-named-as-default: off
-      # import/no-cycle: off
-      # import/no-unused-modules: off
-      # import/no-deprecated: off
 
     overrides:
       # Config for typescript cypress Linting
