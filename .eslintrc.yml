@@ -228,9 +228,6 @@ overrides:
       # todo re-enable later when renaming stuff
       '@typescript-eslint/naming-convention': off
 
-      # improved version in @typescript-eslint
-      no-duplicate-imports: off
-      no-use-before-define: off
       # @typescript-eslint rules config
       '@typescript-eslint/prefer-readonly-parameter-types': off
       '@typescript-eslint/explicit-function-return-type': off
@@ -251,6 +248,44 @@ overrides:
         - argsIgnorePattern: '^_'
           varsIgnorePattern: '^_'
       tsdoc/syntax: warn
+
+      # improved version in @typescript-eslint
+      # @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/README.md#extension-rules
+      brace-style: off
+      comma-dangle: off
+      comma-spacing: off
+      default-param-last: off
+      dot-notation: off
+      func-call-spacing: off
+      indent: off
+      init-declarations: off
+      keyword-spacing: off
+      lines-between-class-members: off
+      no-array-constructor: off
+      no-dupe-class-members: off
+      no-duplicate-imports: off
+      no-empty-function: off
+      no-extra-parens: off
+      no-extra-semi: off
+      no-implied-eval: off
+      no-invalid-this: off
+      no-loop-func: off
+      no-loss-of-precision: off
+      no-magic-numbers: off
+      no-redeclare: off
+      no-shadow: off
+      no-throw-literal: off
+      no-unused-expressions: off
+      no-unused-vars: off
+      no-use-before-define: off
+      no-useless-constructor: off
+      object-curly-spacing: off
+      quotes: off
+      require-await: off
+      return-await: off
+      semi: off
+      space-before-function-paren: off
+      space-infix-ops: off
 
       # rules that should be disabled as per FAQ
       # @see https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/FAQ.md#my-linting-feels-really-slow
