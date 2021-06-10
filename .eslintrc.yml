@@ -12,6 +12,7 @@ plugins:
   - react
   - import
   - unicorn
+  - promise
 # - jsx-a11y
 extends:
   - eslint:all
@@ -21,6 +22,7 @@ extends:
   - plugin:jsx-a11y/strict
   - plugin:react/all
   - plugin:react-hooks/recommended
+  - plugin:promise/recommended
   - plugin:eslint-comments/recommended
   # - plugin:@next/next/recommended
   - prettier
@@ -192,6 +194,9 @@ rules:
         - preferButton
   jsx-a11y/lang: error
   eslint-comments/no-unused-disable: error
+  promise/avoid-new: error
+  promise/prefer-await-to-then: warn
+  promise/prefer-await-to-callbacks: warn
 overrides:
   # Config for Typescript Linting
   - files:
@@ -389,6 +394,12 @@ overrides:
       func-names: off
       no-empty-function: off
       import/no-unassigned-import: off
+
+      # to lazy to fix those atm
+      promise/catch-or-return: off
+      promise/always-return: off
+      promise/no-nesting: off
+      promise/prefer-await-to-then: off
 
   # Config for general jest Linting
   - files:

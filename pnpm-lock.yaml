@@ -58,6 +58,7 @@ specifiers:
   eslint-plugin-jest-dom: ^3.9.0
   eslint-plugin-jest-formatting: ^3.0.0
   eslint-plugin-jsx-a11y: ^6.4.1
+  eslint-plugin-promise: ^5.1.0
   eslint-plugin-react: 7.24.0
   eslint-plugin-react-hooks: ^4.2.0
   eslint-plugin-tsdoc: ^0.2.14
@@ -169,6 +170,7 @@ devDependencies:
   eslint-plugin-jest-dom: 3.9.0_eslint@7.28.0
   eslint-plugin-jest-formatting: 3.0.0_eslint@7.28.0
   eslint-plugin-jsx-a11y: 6.4.1_eslint@7.28.0
+  eslint-plugin-promise: 5.1.0_eslint@7.28.0
   eslint-plugin-react: 7.24.0_eslint@7.28.0
   eslint-plugin-react-hooks: 4.2.0_eslint@7.28.0
   eslint-plugin-tsdoc: 0.2.14
@@ -7292,6 +7294,15 @@ packages:
       has: 1.0.3
       jsx-ast-utils: 3.2.0
       language-tags: 1.0.5
+    dev: true
+
+  /eslint-plugin-promise/5.1.0_eslint@7.28.0:
+    resolution: {integrity: sha512-NGmI6BH5L12pl7ScQHbg7tvtk4wPxxj8yPHH47NvSmMtFneC077PSeY3huFj06ZWZvtbfxSPt3RuOQD5XcR4ng==}
+    engines: {node: ^10.12.0 || >=12.0.0}
+    peerDependencies:
+      eslint: ^7.0.0
+    dependencies:
+      eslint: 7.28.0
     dev: true
 
   /eslint-plugin-react-hooks/4.2.0_eslint@7.28.0:
@@ -15070,7 +15081,7 @@ packages:
       workbox-core: 6.1.5
     dev: false
 
-  /workbox-build/6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14:
+  /workbox-build/6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14:
     resolution: {integrity: sha512-P+fakR5QFVqJN9l9xHVXtmafga72gh9I+jM3A9HiB/6UNRmOAejXnDgD+RMegOHgQHPwnB44TalMToFaXKWIyA==}
     engines: {node: '>=10.0.0'}
     dependencies:
@@ -15207,7 +15218,7 @@ packages:
       upath: 1.2.0
       webpack: 5.38.1
       webpack-sources: 1.4.3
-      workbox-build: 6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14
+      workbox-build: 6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color

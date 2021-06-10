@@ -296,26 +296,32 @@ info: Display info about the scripts
     - "promise/no-new-statics": "error"
     - "promise/no-return-in-finally": "warn"
     - "promise/valid-params": "warn"
+    - "promise/prefer-await-to-then": "warn"
+    - "promise/prefer-await-to-callbacks": "warn"
     </details>
 
   - [`eslint-plugin-jsx-a11y`](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y), [rules](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/master/docs/rules)
   - [`eslint-plugin-compat`](https://github.com/amilajack/eslint-plugin-compat), works with browserslist
 
   - [`eslint-plugin-import`](https://github.com/benmosher/eslint-plugin-import), [rules](https://github.com/benmosher/eslint-plugin-import/tree/master/docs/rules)
-  - [`typescript-eslint-language-service`](https://github.com/Quramy/typescript-eslint-language-service), adds typescript support for `eslint-plugin-import`
+    - [`typescript-eslint-language-service`](https://github.com/Quramy/typescript-eslint-language-service), adds typescript support for `eslint-plugin-import`
 
   - [`eslint-plugin-next`](https://github.com/vercel/next.js/tree/canary/packages/eslint-plugin-next)
 
   - [`eslint-plugin-tsdoc`](https://github.com/microsoft/tsdoc/tree/master/eslint-plugin)
+  - [`eslint-plugin-eslint-comments`](https://github.com/mysticatea/eslint-plugin-eslint-comments)
 
   - [`eslint-plugin-cypress`](https://github.com/cypress-io/eslint-plugin-cypress)
   - [`eslint-plugin-jest`](https://github.com/jest-community/eslint-plugin-jest)
   - [`eslint-plugin-jest-dom`](https://github.com/testing-library/eslint-plugin-jest-dom)
+  - [`eslint-plugin-jest-formatting`]()
 
 - [Prettier](https://prettier.io/) for code formatting
 - [`husky`](https://github.com/typicode/husky) for hooks
 - [`git-format-staged`](https://github.com/hallettj/git-format-staged), to format staged files (surprise), [reasons](https://www.olioapps.com/blog/automatic-code-formatting/)
 - [`axe-core/react`](https://github.com/dequelabs/axe-core-npm)
+
+- https://github.com/BrainMaestro/eslint-plugin-optimize-regex ?
 
 ## Tech Stack
 
