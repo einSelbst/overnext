@@ -77,7 +77,7 @@ specifiers:
   next-unused: 0.0.6
   npm-scripts-info: 0.3.9
   nyc: 15.1.0
-  pnpm: 6.7.5
+  pnpm: 6.7.6
   postcss: 8.3.2
   prettier: 2.3.1
   prettier-plugin-sh: 0.6.1
@@ -124,7 +124,7 @@ dependencies:
 optionalDependencies:
   '@axe-core/react': 4.2.1
   fsevents: 2.3.2
-  pnpm: 6.7.5
+  pnpm: 6.7.6
 
 devDependencies:
   '@babel/preset-env': 7.14.5_@babel+core@7.14.5
@@ -12268,8 +12268,8 @@ packages:
       - typescript
     dev: false
 
-  /pnpm/6.7.5:
-    resolution: {integrity: sha512-8mT05IP5S6V8OtQoZu9x91jT1hOO2EAGiJG1gKylv+5DRdwP892MBnLtzjD1FUz3xiCbHOQP04PiDK4VGVrWjw==}
+  /pnpm/6.7.6:
+    resolution: {integrity: sha512-VhO6zVIuhVkKXP3kWMZs9W5b3rhcztq524WoAc9OEwjmj7SiKyp0UNltaaLR0VRjFGJPuQOcqDbNkWwzao6dUw==}
     engines: {node: '>=12.17'}
     hasBin: true
     dev: false
@@ -15170,7 +15170,7 @@ packages:
       workbox-core: 6.1.5
     dev: false
 
-  /workbox-build/6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14:
+  /workbox-build/6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14:
     resolution: {integrity: sha512-P+fakR5QFVqJN9l9xHVXtmafga72gh9I+jM3A9HiB/6UNRmOAejXnDgD+RMegOHgQHPwnB44TalMToFaXKWIyA==}
     engines: {node: '>=10.0.0'}
     dependencies:
@@ -15307,7 +15307,7 @@ packages:
       upath: 1.2.0
       webpack: 5.38.1
       webpack-sources: 1.4.3
-      workbox-build: 6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14
+      workbox-build: 6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
