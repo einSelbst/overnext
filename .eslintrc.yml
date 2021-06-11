@@ -27,6 +27,8 @@ extends:
   - plugin:array-func/all
   - plugin:sonarjs/recommended
   - plugin:eslint-comments/recommended
+  - plugin:json-schema-validator/recommended
+  - plugin:toml/standard
   # - plugin:@next/next/recommended
   - prettier
   # - next

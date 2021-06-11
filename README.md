@@ -317,7 +317,7 @@ info: Display info about the scripts
   - [`eslint-plugin-cypress`](https://github.com/cypress-io/eslint-plugin-cypress)
   - [`eslint-plugin-jest`](https://github.com/jest-community/eslint-plugin-jest)
   - [`eslint-plugin-jest-dom`](https://github.com/testing-library/eslint-plugin-jest-dom)
-  - [`eslint-plugin-jest-formatting`]()
+  - [`eslint-plugin-jest-formatting`](https://github.com/dangreenisrael/eslint-plugin-jest-formatting)
 
 - [Prettier](https://prettier.io/) for code formatting
 - [`husky`](https://github.com/typicode/husky) for hooks
