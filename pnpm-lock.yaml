@@ -78,7 +78,7 @@ specifiers:
   npm-scripts-info: 0.3.9
   nyc: 15.1.0
   pnpm: 6.7.5
-  postcss: 8.3.1
+  postcss: 8.3.2
   prettier: 2.3.1
   prettier-plugin-sh: 0.6.1
   prettier-plugin-toml: latest
@@ -103,7 +103,7 @@ dependencies:
   '@types/node': 14.17.3
   '@types/react': 17.0.11
   '@types/react-dom': 17.0.7
-  autoprefixer: 10.2.6_postcss@8.3.1
+  autoprefixer: 10.2.6_postcss@8.3.2
   core-js: 3.14.0
   is-ci: 3.0.0
   next: 10.2.3_d5eaf53769930757bd1a7e1559679236
@@ -112,11 +112,11 @@ dependencies:
   next-seo: 4.24.0_cdb07c42721266739ffbd3ea8e818efe
   next-sitemap: 1.6.108_next@10.2.3
   next-themes: 0.0.14_cdb07c42721266739ffbd3ea8e818efe
-  postcss: 8.3.1
+  postcss: 8.3.2
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   sass: 1.34.1
-  tailwindcss: 2.1.4_c4cc89b87cda20e64b6c2c35894f514f
+  tailwindcss: 2.1.4_32565eec2408f3b70f749fe37ad22ae2
   tslib: 2.2.0
   typescript: 4.3.2
   webpack: 5.38.1
@@ -168,7 +168,7 @@ devDependencies:
   eslint-plugin-react-hooks: 4.2.0_eslint@7.28.0
   eslint-plugin-tsdoc: 0.2.14
   eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
-  git-format-staged: 2.1.1
+  git-format-staged: 2.1.2
   html-validate: 4.13.1_jest@27.0.4
   husky: 6.0.0
   jest: 27.0.4_ts-node@10.0.0
@@ -4892,7 +4892,7 @@ packages:
     hasBin: true
     dev: true
 
-  /autoprefixer/10.2.6_postcss@8.3.1:
+  /autoprefixer/10.2.6_postcss@8.3.2:
     resolution: {integrity: sha512-8lChSmdU6dCNMCQopIf4Pe5kipkAGj/fvTMslCsih0uHpOrXOPUEVOmYMMqmw3cekQkSD7EhIeuYl5y0BLdKqg==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
@@ -4904,7 +4904,7 @@ packages:
       colorette: 1.2.2
       fraction.js: 4.1.1
       normalize-range: 0.1.2
-      postcss: 8.3.1
+      postcss: 8.3.2
       postcss-value-parser: 4.1.0
     dev: false
 
@@ -8288,8 +8288,8 @@ packages:
       got: 6.7.1
     dev: true
 
-  /git-format-staged/2.1.1:
-    resolution: {integrity: sha512-Db4QiAymao9BfpTBCdEcF53jBZfKuwIigqhNmtODD+KOKbxrdDVMDeAs+P7eqJl9udlBZejhRKRbyFRtKLbVmA==}
+  /git-format-staged/2.1.2:
+    resolution: {integrity: sha512-ieP6iEyMJQ9xPKJGFSmK4HELcDdYwUO84dG4NBKdjaSTOdsZgrW9paLaEau2D4daPQjLwSsgwdqtYjqoVxz3Lw==}
     hasBin: true
     dev: true
 
@@ -12297,13 +12297,13 @@ packages:
       postcss: 8.3.0
     dev: false
 
-  /postcss-nested/5.0.5_postcss@8.3.1:
+  /postcss-nested/5.0.5_postcss@8.3.2:
     resolution: {integrity: sha512-GSRXYz5bccobpTzLQZXOnSOfKl6TwVr5CyAQJUPub4nuRJSOECK5AqurxVgmtxP48p0Kc/ndY/YyS1yqldX0Ew==}
     engines: {node: '>=10.0'}
     peerDependencies:
       postcss: ^8.1.13
     dependencies:
-      postcss: 8.3.1
+      postcss: 8.3.2
       postcss-selector-parser: 6.0.6
     dev: false
 
@@ -12358,8 +12358,8 @@ packages:
       nanoid: 3.1.23
       source-map-js: 0.6.2
 
-  /postcss/8.3.1:
-    resolution: {integrity: sha512-9qH0MGjsSm+fjxOi3GnwViL1otfi7qkj+l/WX5gcRGmZNGsIcqc+A5fBkE6PUobEQK4APqYVaES+B3Uti98TCw==}
+  /postcss/8.3.2:
+    resolution: {integrity: sha512-y1FK/AWdZlBF5lusS5j5l4/vF67+vQZt1SXPVJ32y1kRGDQyrs1zk32hG1cInRTu14P0V+orPz+ifwW/7rR4bg==}
     engines: {node: ^10 || ^12 || >=14}
     dependencies:
       colorette: 1.2.2
@@ -14077,7 +14077,7 @@ packages:
       strip-ansi: 6.0.0
     dev: true
 
-  /tailwindcss/2.1.4_c4cc89b87cda20e64b6c2c35894f514f:
+  /tailwindcss/2.1.4_32565eec2408f3b70f749fe37ad22ae2:
     resolution: {integrity: sha512-fh1KImDLg6se/Suaelju/5oFbqq1b0ntagmGLu0aG9LlnNPGHgO1n/4E57CbKcCtyz/VYnvVXUiWmfyfBBZQ6g==}
     engines: {node: '>=12.13.0'}
     hasBin: true
@@ -14086,7 +14086,7 @@ packages:
       postcss: ^8.0.9
     dependencies:
       '@fullhuman/postcss-purgecss': 3.1.3
-      autoprefixer: 10.2.6_postcss@8.3.1
+      autoprefixer: 10.2.6_postcss@8.3.2
       bytes: 3.1.0
       chalk: 4.1.1
       chokidar: 3.5.1
@@ -14104,10 +14104,10 @@ packages:
       normalize-path: 3.0.0
       object-hash: 2.2.0
       parse-glob: 3.0.4
-      postcss: 8.3.1
+      postcss: 8.3.2
       postcss-functions: 3.0.0
       postcss-js: 3.0.3
-      postcss-nested: 5.0.5_postcss@8.3.1
+      postcss-nested: 5.0.5_postcss@8.3.2
       postcss-selector-parser: 6.0.6
       postcss-value-parser: 4.1.0
       pretty-hrtime: 1.0.3
@@ -15170,7 +15170,7 @@ packages:
       workbox-core: 6.1.5
     dev: false
 
-  /workbox-build/6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14:
+  /workbox-build/6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14:
     resolution: {integrity: sha512-P+fakR5QFVqJN9l9xHVXtmafga72gh9I+jM3A9HiB/6UNRmOAejXnDgD+RMegOHgQHPwnB44TalMToFaXKWIyA==}
     engines: {node: '>=10.0.0'}
     dependencies:
@@ -15307,7 +15307,7 @@ packages:
       upath: 1.2.0
       webpack: 5.38.1
       webpack-sources: 1.4.3
-      workbox-build: 6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14
+      workbox-build: 6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
