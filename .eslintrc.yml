@@ -52,62 +52,58 @@ settings:
     - fetch
 rules:
   # config for core eslint rules
-  no-warning-comments: off
-  no-inline-comments: off
-  spaced-comment: off
-  capitalized-comments: off
-  line-comment-position: off
+  id-length:
+    - error
+    - exceptions: ['_']
+  max-lines-per-function:
+    - warn
+    - max: 120
+      skipComments: true
+      skipBlankLines: true
+  max-statements: warn
+  no-console:
+    - warn
+    - allow:
+        - warn
+        - error
   no-magic-numbers:
     - warn
     - ignoreArrayIndexes: true
       ignoreDefaultValues: true
       detectObjects: true
       enforceConst: false
-  no-underscore-dangle: off
-  no-ternary: off
-  no-extra-boolean-cast: off
-  one-var: off
-  no-undefined: off
   no-unused-vars:
     - error
     - argsIgnorePattern: '^_'
       varsIgnorePattern: '^_'
-  no-console:
-    - warn
-    - allow:
-        - warn
-        - error
-
-  # I want to re-enable those
-  sort-keys: off
-  id-length:
-    - error
-    - exceptions: ['_']
-  func-style: off
-  max-statements: warn
-  max-lines-per-function:
-    - warn
-    - max: 120
-      skipComments: true
-      skipBlankLines: true
-
   # integrating with import plugin
   sort-imports:
     - error
     - allowSeparatedGroups: true
       ignoreDeclarationSort: true
 
+  # I want to re-enable those
+  func-style: off
+  sort-keys: off
+
+  # disable core rules I don't agree with
+  capitalized-comments: off
+  line-comment-position: off
+  spaced-comment: off
+  no-inline-comments: off
+  no-warning-comments: off
+  no-ternary: off
+  no-undefined: off
+  no-underscore-dangle: off
+  one-var: off
+
   # config for react linter rules
-  react/react-in-jsx-scope: off
   react/jsx-filename-extension:
     - error
     - extensions:
         - '.jsx'
         - '.tsx'
-  react/jsx-no-literals: off
-  react/jsx-max-depth: off
   react/jsx-sort-props: error
-  react/require-default-props: off
   react/function-component-definition:
     - error
     - namedComponents: 'arrow-function'
@@ -116,6 +112,12 @@ rules:
   # I want to re-enable those
   react/no-multi-comp: off
   react/forbid-component-props: off
+
+  # disable some react rules
+  react/react-in-jsx-scope: off
+  react/jsx-no-literals: off
+  react/jsx-max-depth: off
+  react/require-default-props: off
 
   # enable some non-recommended unicorn rules
   unicorn/string-content: error
@@ -130,10 +132,6 @@ rules:
     - case: kebabCase
       ignore:
         - '^__coverage__.ts$'
-  unicorn/prefer-module:
-    - off # ToDo: figure out how to fix this
-  unicorn/prefer-node-protocol:
-    - off # ToDo: enable when import/no-unresolved properly supports this
   unicorn/prevent-abbreviations:
     - error
     - checkProperties: true
@@ -148,6 +146,10 @@ rules:
         params: true
         src: true
 
+  # I want to re-enable thos
+  unicorn/prefer-module: off
+  unicorn/prefer-node-protocol: off # ToDo: enable when import/no-unresolved properly supports this
+
   # configure import plugin
   import/dynamic-import-chunkname: error
   import/exports-last: error
@@ -161,23 +163,18 @@ rules:
   import/no-absolute-path: error
   import/no-amd: error
   import/no-anonymous-default-export: error
-  import/no-commonjs: off
   import/no-cycle: warn # slow
-  import/no-default-export: off
   import/no-deprecated: error # slow
   import/no-dynamic-require: error
   import/no-extraneous-dependencies: error
   import/no-import-module-exports: error
-  import/no-internal-modules: off
   import/no-mutable-exports: error
   import/no-named-default: error # slow
-  import/no-named-export: off
   import/no-namespace: error
   import/no-nodejs-modules:
     - error
     - allow: [querystring]
   import/no-relative-packages: error
-  import/no-relative-parent-imports: off
   import/no-restricted-paths: error
   import/no-self-import: error
   import/no-unassigned-import: error
@@ -192,6 +189,13 @@ rules:
         order: asc # sort in ascending order. Options: ['ignore', 'asc', 'desc']
         caseInsensitive: false # ignore case. Options: [true, false]
   import/prefer-default-export: warn
+
+  # disable some import rules
+  import/no-commonjs: off
+  import/no-default-export: off
+  import/no-internal-modules: off
+  import/no-named-export: off
+  import/no-relative-parent-imports: off
   import/unambiguous: off
 
   # the default rule gets messed up with nextjs' ways of doing links
@@ -251,16 +255,7 @@ overrides:
       # todo re-enable later when renaming stuff
       '@typescript-eslint/naming-convention': off
 
-      # disabled because it's slow
-      # '@typescript-eslint/no-unsafe-assignment': off
-
       # @typescript-eslint rules config
-      '@typescript-eslint/prefer-readonly-parameter-types': off
-      '@typescript-eslint/explicit-function-return-type': off
-      '@typescript-eslint/explicit-module-boundary-types': off
-      '@typescript-eslint/non-nullable-type-assertion-style': off
-      '@typescript-eslint/explicit-member-accessibility': off
-      '@typescript-eslint/no-magic-numbers': off
       '@typescript-eslint/consistent-type-definitions': [error, type]
       '@typescript-eslint/sort-type-union-intersection-members': warn
       '@typescript-eslint/no-unnecessary-condition': warn
@@ -275,7 +270,15 @@ overrides:
           varsIgnorePattern: '^_'
       tsdoc/syntax: warn
 
-      # improved version in @typescript-eslint
+      # disable some @typescript-eslint rules
+      '@typescript-eslint/explicit-function-return-type': off
+      '@typescript-eslint/explicit-member-accessibility': off
+      '@typescript-eslint/explicit-module-boundary-types': off
+      '@typescript-eslint/no-magic-numbers': off
+      '@typescript-eslint/non-nullable-type-assertion-style': off
+      '@typescript-eslint/prefer-readonly-parameter-types': off
+
+      # improved versions of core rules in @typescript-eslint
       # @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/README.md#extension-rules
       brace-style: off
       comma-dangle: off
@@ -347,6 +350,7 @@ overrides:
           unicorn/consistent-function-scoping:
             - error
             - checkArrowFunctions: false
+
           # try to enable the following rules at some point in the future
           require-unicode-regexp: off
           prefer-destructuring: off
@@ -403,6 +407,7 @@ overrides:
       unicorn/consistent-function-scoping:
         - error
         - checkArrowFunctions: false
+
       # try to enable the following rules at some point in the future
       require-unicode-regexp: off
       prefer-destructuring: off
