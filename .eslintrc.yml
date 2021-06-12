@@ -123,6 +123,7 @@ rules:
   # enable some non-recommended unicorn rules
   unicorn/string-content: error
   unicorn/import-index: error
+
   # configure some unicorn rules
   unicorn/expiring-todo-comments:
     - warn
