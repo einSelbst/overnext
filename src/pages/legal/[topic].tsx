@@ -13,8 +13,8 @@ const _Topic: NextLayoutPage = (): JSX.Element => {
   // NextSeo doesn't want a string array, which 'topic' might be
   const firstTopic: string = Array.isArray(topic) ? topic[0] : topic ?? ''
 
-  const imageDefaultWidth = 800,
-    imageDefaultHeight = 600
+  const imageDefaultHeight = 600,
+    imageDefaultWidth = 800
 
   return (
     <>

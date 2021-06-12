@@ -79,7 +79,6 @@ rules:
 
   # I want to re-enable those
   sort-keys: off
-  sort-vars: off
   sort-imports: off
   max-statements: off
   no-undefined: off

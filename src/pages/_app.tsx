@@ -28,11 +28,11 @@ const sendMetric = async ({
   // values must be integers
   const clsMultiplier = 1000
   const valueInt: number = Math.round(
-      name === 'CLS'
-        ? Number.parseFloat(value) * clsMultiplier
-        : Number.parseFloat(value)
-    ),
-    url = `https://qckm.io?m=${name}&v=${valueInt}&k=${process.env.NEXT_PUBLIC_QUICK_METRICS_API_KEY}`
+    name === 'CLS'
+      ? Number.parseFloat(value) * clsMultiplier
+      : Number.parseFloat(value)
+  )
+  const url = `https://qckm.io?m=${name}&v=${valueInt}&k=${process.env.NEXT_PUBLIC_QUICK_METRICS_API_KEY}`
 
   // Use `navigator.sendBeacon()` if available, falling back to `fetch()`.
   if (typeof navigator.sendBeacon === 'function') {
