@@ -67,6 +67,7 @@ rules:
   no-ternary: off
   no-extra-boolean-cast: off
   one-var: off
+  no-undefined: off
   no-unused-vars:
     - error
     - argsIgnorePattern: '^_'
@@ -79,10 +80,11 @@ rules:
 
   # I want to re-enable those
   sort-keys: off
-  max-statements: off
-  no-undefined: off
-  id-length: off
+  id-length:
+    - error
+    - exceptions: ['_']
   func-style: off
+  max-statements: warn
   max-lines-per-function:
     - warn
     - max: 120
@@ -139,6 +141,7 @@ rules:
         props:
           properties: false
       allowList:
+        args: true
         dest: true
         env: true
         i18n: true

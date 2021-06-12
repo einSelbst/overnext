@@ -91,7 +91,7 @@ const getStaticPaths: GetStaticPaths = async ({ locales }) => {
     )
     // not sure how to rewrite this so for now...
     // eslint-disable-next-line unicorn/no-array-reduce
-    paths = pathsI18n.reduce((a, v) => [...a, ...v], paths)
+    paths = pathsI18n.reduce((args, value) => [...args, ...value], paths)
   }
 
   return {

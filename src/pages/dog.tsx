@@ -30,16 +30,17 @@ const getStaticProps: GetStaticProps = async (
     'This is just a placeholder to make my typescript linter happy'
   )
   /* eslint-disable no-console */
-  console.log('now in getstaticprops')
-
-  console.log('process.env.URL')
-  console.log(process.env.URL)
-
-  console.log('process.env.SITE_URL')
-  console.log(process.env.SITE_URL)
-
+  /*
+   * console.log('now in getstaticprops')
+   *
+   * console.log('process.env.URL')
+   * console.log(process.env.URL)
+   *
+   * console.log('process.env.SITE_URL')
+   * console.log(process.env.SITE_URL)
+   */
   let url = 'https://overnext.vercel.app'
-  if (process.env.URL !== undefined) {
+  if (typeof process.env.URL !== 'undefined') {
     url = process.env.URL
   }
   console.log(url)
