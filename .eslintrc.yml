@@ -1,11 +1,12 @@
 ---
+# eslint-disable max-lines
 root: true
 parserOptions:
   sourceType: module
   ecmaVersion: 2021
   ecmaFeatures:
-    modules: true,
-    impliedStrict: true,
+    modules: true
+    impliedStrict: true
     jsx: true
 reportUnusedDisableDirectives: true
 plugins:
@@ -14,7 +15,7 @@ plugins:
   - unicorn
   - promise
   - sonarjs
-# - jsx-a11y
+  - jsx-a11y
 extends:
   - eslint:all
   - plugin:import/recommended
@@ -30,9 +31,9 @@ extends:
   - plugin:json-schema-validator/recommended
   - plugin:toml/standard
   # - plugin:@next/next/recommended
-  - prettier
   # - next
   # - next/core-web-vitals
+  - prettier
 env:
   es6: true
   browser: true
@@ -202,6 +203,9 @@ rules:
   promise/avoid-new: error
   promise/prefer-await-to-then: warn
   promise/prefer-await-to-callbacks: warn
+  toml/array-bracket-spacing:
+    - error
+    - never
 overrides:
   # Config for Typescript Linting
   - files:
@@ -427,3 +431,4 @@ overrides:
       jest/globals: true
     rules:
       import/no-unresolved: off
+# eslint-enable max-lines

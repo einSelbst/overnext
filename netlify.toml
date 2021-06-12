@@ -55,7 +55,7 @@ spec = "cypress/integration/smoke/*.js"
 package = "netlify-plugin-a11y"
 
 [plugins.inputs]
-checkPaths = [ '/' ]
+checkPaths = ['/']
 
 # optional config
 # ignoreDirectories = ['/admin']  # explicitly ignore these directories
@@ -69,7 +69,7 @@ package = "netlify-plugin-checklinks"
 [plugins.inputs]
 # An array of glob patterns for pages on your site
 # Recursive traversal will start from these
-entryPoints = [ "*.html" ]
+entryPoints = ["*.html"]
 # Recurse through all the links and asset references on your page, starting
 # at the entrypoints
 recursive = true
