@@ -310,7 +310,8 @@ info: Display info about the scripts
 
   - [`eslint-plugin-next`](https://github.com/vercel/next.js/tree/canary/packages/eslint-plugin-next)
   - [`eslint-plugin-sonarjs`](https://github.com/SonarSource/eslint-plugin-sonarjs), 25 rules
-
+  - [`eslint-plugin-sort-keys-fix`](https://github.com/leo-buneev/eslint-plugin-sort-keys-fix), because core can't auto-fix object keys
+  
   - [`eslint-plugin-tsdoc`](https://github.com/microsoft/tsdoc/tree/master/eslint-plugin)
   - [`eslint-plugin-eslint-comments`](https://github.com/mysticatea/eslint-plugin-eslint-comments)
 
@@ -328,7 +329,7 @@ info: Display info about the scripts
 
 ## Tech Stack
 
-- next.js
+- next.js, who would have thought
 - WIP: sanity
 
 ## Next.js Configuration

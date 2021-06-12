@@ -12,27 +12,16 @@ const { PHASE_DEVELOPMENT_SERVER } = require('next/constants')
  * @type {import('next/dist/next-server/server/config').NextConfig}
  */
 const nextConfiguration = {
-  poweredByHeader: false,
-  reactStrictMode: true,
-  target: 'serverless',
+  amp: {
+    /* canonicalBase: '', */
+  },
+
   /* optimizeFonts: false, */
   env: {
     customKey: 'my-value',
     platform: process.env.VERCEL === '1' ? 'Vercel' : 'Netlify', // just a test
   },
-  i18n: {
-    locales: ['en', 'de', 'es', 'fr', 'it'],
-    defaultLocale: 'en',
-  },
-  webpack: (
-    /** @type {{ plugins: any[]; }} */ config,
-    /** @type {{ dev: any; isServer: any; }} */ _options
-  ) =>
-    /* { buildId, dev, isServer, defaultLoaders, webpack } = options */
-    config,
-  future: {
-    webpack5: true,
-  },
+
   // @see {@link https://github.com/vercel/next.js/blob/canary/packages/next/next-server/server/config-shared.ts#L68}
   experimental: {
     // plugins?: boolean;
@@ -51,9 +40,26 @@ const nextConfiguration = {
     /* disableOptimizedLoading: true, */
     /* gzipSize: true, */
   },
-  amp: {
-    /* canonicalBase: '', */
+
+  future: {
+    webpack5: true,
   },
+
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'de', 'es', 'fr', 'it'],
+  },
+
+  poweredByHeader: false,
+  reactStrictMode: true,
+  target: 'serverless',
+
+  webpack: (
+    /** @type {{ plugins: any[]; }} */ config,
+    /** @type {{ dev: any; isServer: any; }} */ _options
+  ) =>
+    /* { buildId, dev, isServer, defaultLoaders, webpack } = options */
+    config,
 }
 
 /**
@@ -81,8 +87,8 @@ const plugins = () =>
           withPWA,
           {
             pwa: {
-              disable: process.env.NODE_ENV === 'development',
               dest: 'public',
+              disable: process.env.NODE_ENV === 'development',
             },
           },
         ],
@@ -91,8 +97,8 @@ const plugins = () =>
         withPWA,
         {
           pwa: {
-            disable: process.env.NODE_ENV === 'development',
             dest: 'public',
+            disable: process.env.NODE_ENV === 'development',
           },
         },
       ]

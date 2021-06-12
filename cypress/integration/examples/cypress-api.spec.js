@@ -147,8 +147,8 @@ context('Cypress.env()', () => {
     // https://on.cypress.io/env
     // set multiple environment variables
     Cypress.env({
-      host: 'veronica.dev.local',
       apiServer: 'http://localhost:8888/v1/',
+      host: 'veronica.dev.local',
     })
 
     // get environment variable

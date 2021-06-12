@@ -38,7 +38,7 @@ const sendMetric = async ({
   if (typeof navigator.sendBeacon === 'function') {
     navigator.sendBeacon(url)
   } else {
-    await fetch(url, { method: 'POST', keepalive: true })
+    await fetch(url, { keepalive: true, method: 'POST' })
   }
   return true
 }

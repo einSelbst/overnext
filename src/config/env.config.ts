@@ -12,8 +12,8 @@ const baseUrl2 = (): string => {
 }
 
 const APP_ENV = {
-  PRODUCTION: process.env.NODE_ENV === 'production',
   DEVELOPMENT: process.env.NODE_ENV === 'development',
+  PRODUCTION: process.env.NODE_ENV === 'production',
 
   /**
    * Determines if we are running on server or in the client.

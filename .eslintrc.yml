@@ -16,6 +16,7 @@ plugins:
   - promise
   - sonarjs
   - jsx-a11y
+  - sort-keys-fix
 extends:
   - eslint:all
   - plugin:import/recommended
@@ -214,6 +215,7 @@ rules:
   promise/avoid-new: error
   promise/prefer-await-to-then: warn
   promise/prefer-await-to-callbacks: warn
+  sort-keys-fix/sort-keys-fix: error
   toml/array-bracket-spacing:
     - error
     - never
@@ -404,6 +406,7 @@ overrides:
       max-lines: off
       id-length: off
       cypress/no-unnecessary-waiting: off
+      sort-keys-fix/sort-keys-fix: off
       unicorn/consistent-function-scoping:
         - error
         - checkArrowFunctions: false

@@ -4,13 +4,13 @@ const presets = [
     'next/babel',
     {
       '@babel/preset-env': {
-        targets: 'defaults',
-        useBuiltIns: 'entry',
         /*
          * corejs version must be kept in sync with package.json
          * maybe automate with https://docs.renovatebot.com/configuration-options/#postupdateoptions
          */
         corejs: '3.10.1',
+        targets: 'defaults',
+        useBuiltIns: 'entry',
       },
     },
   ],
@@ -30,13 +30,13 @@ if (process.env.APP_ENV === 'test') {
 }
 
 module.exports = {
+  plugins,
   /*
    * sourceMaps: true,
    * sourceType: 'module',
    * retainLines: true,
    */
   presets,
-  plugins,
 }
 /*
  * module.exports = function(api) {

@@ -87,7 +87,7 @@ const getStaticPaths: GetStaticPaths = async ({ locales }) => {
 
   if (locales) {
     const pathsI18n = paths.map(path =>
-      locales.map(locale => ({ params: path.params, locale }))
+      locales.map(locale => ({ locale, params: path.params }))
     )
     // not sure how to rewrite this so for now...
     // eslint-disable-next-line unicorn/no-array-reduce
@@ -95,7 +95,6 @@ const getStaticPaths: GetStaticPaths = async ({ locales }) => {
   }
 
   return {
-    paths,
     /*
      * paths: [
      *   { params: { dynamic: 'page-1' } },
@@ -108,6 +107,8 @@ const getStaticPaths: GetStaticPaths = async ({ locales }) => {
      * will catch every page, even 404s, and we don't want that
      */
     fallback: false,
+
+    paths,
   }
 }
 

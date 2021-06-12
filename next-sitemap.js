@@ -1,3 +1,6 @@
+/**
+ * @see also ./src/pages/server-sitemap.xml
+ */
 const baseUrl = () => {
   // eslint-disable-next-line no-console
   console.log('evaluating base URL in sitemap config')
@@ -15,36 +18,38 @@ const maxSitemapEntries = 5000
 const sitemapPriority = 0.7
 
 module.exports = {
-  siteUrl: baseUrl() || 'https://example.com',
   changefreq: 'daily',
-  priority: sitemapPriority,
-  sitemapSize: maxSitemapEntries,
-  generateRobotsTxt: true,
   exclude: ['/server-sitemap.xml', '/awesome/secret-page'],
+  generateRobotsTxt: true,
+  priority: sitemapPriority,
+  robotsTxtOptions: {
+    /* additionalSitemaps: ['https://example.com/server-sitemap.xml'], */
+    additionalSitemaps: [`${baseUrl()}/server-sitemap.xml`],
+
+    policies: [
+      {
+        allow: '/',
+        userAgent: '*',
+      },
+      {
+        allow: ['/path', '/path-2'],
+        userAgent: 'test-bot',
+      },
+      {
+        disallow: ['/sub-path-1', '/path-2'],
+        userAgent: 'black-listed-bot',
+      },
+    ],
+  },
+  siteUrl: baseUrl() || 'https://example.com',
+  sitemapSize: maxSitemapEntries,
+
   // Default transformation function
   // eslint-disable-next-line require-await
   transform: async (config, path) => ({
-    loc: path, // => this will be exported as http(s)://<config.siteUrl>/<path>
     changefreq: config.changefreq,
-    priority: config.priority,
     lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
+    loc: path, // => this will be exported as http(s)://<config.siteUrl>/<path>
+    priority: config.priority,
   }),
-  robotsTxtOptions: {
-    policies: [
-      {
-        userAgent: '*',
-        allow: '/',
-      },
-      {
-        userAgent: 'test-bot',
-        allow: ['/path', '/path-2'],
-      },
-      {
-        userAgent: 'black-listed-bot',
-        disallow: ['/sub-path-1', '/path-2'],
-      },
-    ],
-    /* additionalSitemaps: ['https://example.com/server-sitemap.xml'], */
-    additionalSitemaps: [`${baseUrl()}/server-sitemap.xml`],
-  },
 }

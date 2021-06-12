@@ -22,21 +22,21 @@ const _Topic: NextLayoutPage = (): JSX.Element => {
         canonical={`https://overnext.vercel.app/legal/${firstTopic}`}
         description='A legal topic.'
         languageAlternates={locales?.map((loc: string) => ({
-          hrefLang: loc,
           href: `https://overnext.vercel.app/${loc}/legal/${firstTopic}`,
+          hrefLang: loc,
         }))}
         openGraph={{
-          type: 'website',
-          title: firstTopic,
           description: 'A legal topic',
           images: [
             {
+              alt: firstTopic,
+              height: imageDefaultHeight,
               url: 'https://via.placeholder.com/728x90.png?text=Visit+WhoIsHostingThis.com+Buyers+Guide',
               width: imageDefaultWidth,
-              height: imageDefaultHeight,
-              alt: firstTopic,
             },
           ],
+          title: firstTopic,
+          type: 'website',
         }}
         title={firstTopic}
       />

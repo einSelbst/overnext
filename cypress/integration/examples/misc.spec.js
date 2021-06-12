@@ -82,9 +82,9 @@ context('Misc', () => {
       Cypress.Screenshot.defaults({
         blackout: ['.foo'],
         capture: 'viewport',
-        clip: { x: 0, y: 0, width: 200, height: 200 },
-        scale: false,
+        clip: { height: 200, width: 200, x: 0, y: 0 },
         disableTimersAndAnimations: true,
+        scale: false,
         screenshotOnRunFailure: true,
         onBeforeScreenshot() {},
         onAfterScreenshot() {},

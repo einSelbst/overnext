@@ -9,16 +9,18 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   const fields = [
     {
-      loc: 'https://example.com', // Absolute url
       lastmod: new Date().toISOString(),
+      // Absolute url
+      loc: 'https://example.com',
       /*
        * changefreq
        * priority
        */
     },
     {
-      loc: 'https://example.com/dynamic-path-2', // Absolute url
       lastmod: new Date().toISOString(),
+      // Absolute url
+      loc: 'https://example.com/dynamic-path-2',
       /*
        * changefreq
        * priority
