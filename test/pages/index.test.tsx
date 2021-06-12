@@ -1,5 +1,5 @@
 import { Home } from '../../src/pages'
-import { render, fireEvent } from '../test-utils'
+import { fireEvent, render } from '../test-utils'
 
 describe('home page', () => {
   it('matches snapshot', () => {

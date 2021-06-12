@@ -1,4 +1,4 @@
-import type { NextPageContext, NextLayoutComponentType } from 'next'
+import type { NextLayoutComponentType, NextPageContext } from 'next'
 import { DefaultSeo } from 'next-seo'
 import { ThemeProvider } from 'next-themes'
 import { useAmp } from 'next/amp'

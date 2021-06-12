@@ -79,7 +79,6 @@ rules:
 
   # I want to re-enable those
   sort-keys: off
-  sort-imports: off
   max-statements: off
   no-undefined: off
   id-length: off
@@ -89,6 +88,12 @@ rules:
     - max: 120
       skipComments: true
       skipBlankLines: true
+
+  # integrating with import plugin
+  sort-imports:
+    - error
+    - allowSeparatedGroups: true
+      ignoreDeclarationSort: true
 
   # config for react linter rules
   react/react-in-jsx-scope: off
@@ -182,7 +187,7 @@ rules:
       warnOnUnassignedImports: true
       alphabetize:
         order: asc # sort in ascending order. Options: ['ignore', 'asc', 'desc']
-        caseInsensitive: true # ignore case. Options: [true, false]
+        caseInsensitive: false # ignore case. Options: [true, false]
   import/prefer-default-export: warn
   import/unambiguous: off
 
