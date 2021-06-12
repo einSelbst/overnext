@@ -47,6 +47,7 @@ specifiers:
   cypress-watch-and-reload: 1.3.8
   dependency-version-badge: 1.10.0
   eslint: 7.28.0
+  eslint-config-next: ^10.2.3
   eslint-config-prettier: 8.3.0
   eslint-find-rules: ^3.6.1
   eslint-import-resolver-typescript: 2.4.0
@@ -163,6 +164,7 @@ devDependencies:
   cypress-watch-and-reload: 1.3.8
   dependency-version-badge: 1.10.0
   eslint: 7.28.0
+  eslint-config-next: 10.2.3_aa0fcbfe2388e02d8aa3d858f112d2d9
   eslint-config-prettier: 8.3.0_eslint@7.28.0
   eslint-find-rules: 3.6.1_eslint@7.28.0
   eslint-import-resolver-typescript: 2.4.0_865bf980219d6c4beaad3708398fa6e4
@@ -174,7 +176,7 @@ devDependencies:
   eslint-plugin-jest: 24.3.6_a75a172e4514a00a289d53a59e2370f9
   eslint-plugin-jest-dom: 3.9.0_eslint@7.28.0
   eslint-plugin-jest-formatting: 3.0.0_eslint@7.28.0
-  eslint-plugin-json-schema-validator: 1.0.35_eslint@7.28.0
+  eslint-plugin-json-schema-validator: 1.0.36_eslint@7.28.0
   eslint-plugin-jsx-a11y: 6.4.1_eslint@7.28.0
   eslint-plugin-promise: 5.1.0_eslint@7.28.0
   eslint-plugin-react: 7.24.0_eslint@7.28.0
@@ -3640,6 +3642,10 @@ packages:
       picomatch: 2.3.0
       rollup: 2.51.2
     dev: false
+
+  /@rushstack/eslint-patch/1.0.6:
+    resolution: {integrity: sha512-Myxw//kzromB9yWgS8qYGuGVf91oBUUJpNvy5eM50sqvmKLbKjwLxohJnkWGTeeI9v9IBMtPLxz5Gc60FIfvCA==}
+    dev: true
 
   /@sideway/address/4.1.2:
     resolution: {integrity: sha512-idTz8ibqWFrPU8kMirL0CoPH/A29XOzzAzpyN3zQ4kAWnzmNfFmRaoMNN6VI8ske5M73HZyhIaW4OuSFIdM4oA==}
@@ -7117,6 +7123,30 @@ packages:
       source-map: 0.6.1
     dev: true
 
+  /eslint-config-next/10.2.3_aa0fcbfe2388e02d8aa3d858f112d2d9:
+    resolution: {integrity: sha512-ubpv6YHqd3UFVPTz8z+Nih+H77rORLXrB7ZinIhrI7ZzZn5rvZ6V7AkcVrI8mVoYVyOo0qZ7vN8D2/Q7vxLMfg==}
+    peerDependencies:
+      eslint: ^7.23.0
+      next: '>=10.2.0'
+      typescript: '>=3.3.1'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      '@next/eslint-plugin-next': 10.2.3
+      '@rushstack/eslint-patch': 1.0.6
+      '@typescript-eslint/parser': 4.26.1_eslint@7.28.0+typescript@4.3.2
+      eslint: 7.28.0
+      eslint-import-resolver-node: 0.3.4
+      eslint-plugin-import: 2.23.4_eslint@7.28.0
+      eslint-plugin-react: 7.24.0_eslint@7.28.0
+      eslint-plugin-react-hooks: 4.2.0_eslint@7.28.0
+      next: 10.2.3_d5eaf53769930757bd1a7e1559679236
+      typescript: 4.3.2
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /eslint-config-prettier/8.3.0_eslint@7.28.0:
     resolution: {integrity: sha512-BgZuLUSeKzvlL/VUjx/Yb787VQ26RU3gGjA3iiFvdsp/2bMfVIWUVP7tjxtjS0e+HP409cPlPvNkQloz8C91ew==}
     hasBin: true
@@ -7293,8 +7323,8 @@ packages:
       - typescript
     dev: true
 
-  /eslint-plugin-json-schema-validator/1.0.35_eslint@7.28.0:
-    resolution: {integrity: sha512-VjXJYUD5+27nGsVt/mKClc1SKvLAL6s9LYoRbK/jNRGbbiZrTj2FQfer5jXAvkw85P0ZtX2ghzoDydrn7lGhpg==}
+  /eslint-plugin-json-schema-validator/1.0.36_eslint@7.28.0:
+    resolution: {integrity: sha512-5fZkjk29+dscsatgIYaUyHjqf93FqsW+DnRiNE3QCXy1B+IsS61zg6ZGZGiqkDDtPjg2c/mD+35MGvFrYHvpNw==}
     peerDependencies:
       eslint: '>=6.0.0'
     dependencies:
@@ -15159,7 +15189,7 @@ packages:
       workbox-core: 6.1.5
     dev: false
 
-  /workbox-build/6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14:
+  /workbox-build/6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14:
     resolution: {integrity: sha512-P+fakR5QFVqJN9l9xHVXtmafga72gh9I+jM3A9HiB/6UNRmOAejXnDgD+RMegOHgQHPwnB44TalMToFaXKWIyA==}
     engines: {node: '>=10.0.0'}
     dependencies:
@@ -15296,7 +15326,7 @@ packages:
       upath: 1.2.0
       webpack: 5.38.1
       webpack-sources: 1.4.3
-      workbox-build: 6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14
+      workbox-build: 6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
