@@ -191,127 +191,23 @@ info: Display info about the scripts
 
   - most core rules are enabled
   - [`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier), turns off all rules that are unnecessary or conflict with Prettier
-  - [`typescript-eslint`](https://github.com/typescript-eslint/typescript-eslint)
-  - <details>
-      <summary>
-        <a href="https://github.com/sindresorhus/eslint-plugin-unicorn"><code>eslint-plugin-unicorn</code></a>
-      </summary>
-
-    - "unicorn/better-regex": "error",
-    - "unicorn/catch-error-name": "error",
-    - "unicorn/consistent-destructuring": "error",
-    - "unicorn/consistent-function-scoping": "error",
-    - "unicorn/custom-error-definition": "off",
-    - "unicorn/empty-brace-spaces": "error",
-    - "unicorn/error-message": "error",
-    - "unicorn/escape-case": "error",
-    - "unicorn/expiring-todo-comments": "error",
-    - "unicorn/explicit-length-check": "error",
-    - "unicorn/filename-case": "error",
-    - "unicorn/import-index": "off",
-    - "unicorn/import-style": "error",
-    - "unicorn/new-for-builtins": "error",
-    - "unicorn/no-abusive-eslint-disable": "error",
-    - "unicorn/no-array-callback-reference": "error",
-    - "unicorn/no-array-for-each": "error",
-    - "unicorn/no-array-push-push": "error",
-    - "unicorn/no-array-reduce": "error",
-    - "unicorn/no-console-spaces": "error",
-    - "unicorn/no-for-loop": "error",
-    - "unicorn/no-hex-escape": "error",
-    - "unicorn/no-instanceof-array": "error",
-    - "unicorn/no-keyword-prefix": "off",
-    - "unicorn/no-lonely-if": "error",
-    - "no-nested-ternary": "off",
-    - "unicorn/no-nested-ternary": "error",
-    - "unicorn/no-new-array": "error",
-    - "unicorn/no-new-buffer": "error",
-    - "unicorn/no-null": "error",
-    - "unicorn/no-object-as-default-parameter": "error",
-    - "unicorn/no-process-exit": "error",
-    - "unicorn/no-static-only-class": "error",
-    - "unicorn/no-this-assignment": "error",
-    - "unicorn/no-unreadable-array-destructuring": "error",
-    - "unicorn/no-unsafe-regex": "off",
-    - "unicorn/no-unused-properties": "off",
-    - "unicorn/no-useless-undefined": "error",
-    - "unicorn/no-zero-fractions": "error",
-    - "unicorn/number-literal-case": "error",
-    - "unicorn/numeric-separators-style": "error",
-    - "unicorn/prefer-add-event-listener": "error",
-    - "unicorn/prefer-array-find": "error",
-    - "unicorn/prefer-array-flat": "error",
-    - "unicorn/prefer-array-flat-map": "error",
-    - "unicorn/prefer-array-index-of": "error",
-    - "unicorn/prefer-array-some": "error",
-    - "unicorn/prefer-date-now": "error",
-    - "unicorn/prefer-default-parameters": "error",
-    - "unicorn/prefer-dom-node-append": "error",
-    - "unicorn/prefer-dom-node-dataset": "error",
-    - "unicorn/prefer-dom-node-remove": "error",
-    - "unicorn/prefer-dom-node-text-content": "error",
-    - "unicorn/prefer-includes": "error",
-    - "unicorn/prefer-keyboard-event-key": "error",
-    - "unicorn/prefer-math-trunc": "error",
-    - "unicorn/prefer-modern-dom-apis": "error",
-    - "unicorn/prefer-module": "error",
-    - "unicorn/prefer-negative-index": "error",
-    - "unicorn/prefer-node-protocol": "error",
-    - "unicorn/prefer-number-properties": "error",
-    - "unicorn/prefer-optional-catch-binding": "error",
-    - "unicorn/prefer-query-selector": "error",
-    - "unicorn/prefer-reflect-apply": "error",
-    - "unicorn/prefer-regexp-test": "error",
-    - "unicorn/prefer-set-has": "error",
-    - "unicorn/prefer-spread": "error",
-    - "unicorn/prefer-string-replace-all": "off",
-    - "unicorn/prefer-string-slice": "error",
-    - "unicorn/prefer-string-starts-ends-with": "error",
-    - "unicorn/prefer-string-trim-start-end": "error",
-    - "unicorn/prefer-switch": "error",
-    - "unicorn/prefer-ternary": "error",
-    - "unicorn/prefer-type-error": "error",
-    - "unicorn/prevent-abbreviations": "error",
-    - "unicorn/string-content": "off",
-    - "unicorn/throw-new-error": "error"
-    </details>
-
+  - [`typescript-eslint`](https://github.com/typescript-eslint/typescript-eslint), [rules](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#supported-rules)
+  - [`eslint-plugin-unicorn`](https://github.com/sindresorhus/eslint-plugin-unicorn), [77 rules](https://github.com/sindresorhus/eslint-plugin-unicorn#rules)
   - [`eslint-plugin-react`](https://github.com/yannickcr/eslint-plugin-react), [rules](https://github.com/yannickcr/eslint-plugin-react/tree/master/docs/rules)
   - [`eslint-plugin-react-hooks`](https://www.npmjs.com/package/eslint-plugin-react-hooks)
-
-  - <details>
-      <summary>
-        <a href="https://github.com/xjamundx/eslint-plugin-promise"><code>eslint-plugin-promise</code></a>
-      </summary>
-
-    - "promise/always-return": "error"
-    - "promise/no-return-wrap": "error"
-    - "promise/param-names": "error"
-    - "promise/catch-or-return": "error"
-    - "promise/no-native": "off"
-    - "promise/no-nesting": "warn"
-    - "promise/no-promise-in-callback": "warn"
-    - "promise/no-callback-in-promise": "warn"
-    - "promise/avoid-new": "warn"
-    - "promise/no-new-statics": "error"
-    - "promise/no-return-in-finally": "warn"
-    - "promise/valid-params": "warn"
-    - "promise/prefer-await-to-then": "warn"
-    - "promise/prefer-await-to-callbacks": "warn"
-    </details>
-
+  - [`eslint-plugin-promise`](https://github.com/xjamundx/eslint-plugin-promise), [12/14 rules](https://github.com/xjamundx/eslint-plugin-promise#rules)
   - [`eslint-plugin-array-func`](https://github.com/freaktechnik/eslint-plugin-array-func), [rules](https://github.com/freaktechnik/eslint-plugin-array-func#rules)
   - [`eslint-plugin-jsx-a11y`](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y), [rules](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/master/docs/rules)
   - [`eslint-plugin-compat`](https://github.com/amilajack/eslint-plugin-compat), works with browserslist
 
-  - [`eslint-plugin-import`](https://github.com/benmosher/eslint-plugin-import), [rules](https://github.com/benmosher/eslint-plugin-import/tree/master/docs/rules)
+  - [`eslint-plugin-import`](https://github.com/benmosher/eslint-plugin-import), [43 rules](https://github.com/benmosher/eslint-plugin-import/tree/master/docs/rules)
 
     - [`typescript-eslint-language-service`](https://github.com/Quramy/typescript-eslint-language-service), adds typescript support for `eslint-plugin-import`
 
-  - [`eslint-plugin-next`](https://github.com/vercel/next.js/tree/canary/packages/eslint-plugin-next)
+  - [`eslint-plugin-next`](https://github.com/vercel/next.js/tree/canary/packages/eslint-plugin-next), [12 rules](https://github.com/vercel/next.js/blob/canary/docs/basic-features/eslint.md)
   - [`eslint-plugin-sonarjs`](https://github.com/SonarSource/eslint-plugin-sonarjs), 25 rules
   - [`eslint-plugin-sort-keys-fix`](https://github.com/leo-buneev/eslint-plugin-sort-keys-fix), because core can't auto-fix object keys
-  
+
   - [`eslint-plugin-tsdoc`](https://github.com/microsoft/tsdoc/tree/master/eslint-plugin)
   - [`eslint-plugin-eslint-comments`](https://github.com/mysticatea/eslint-plugin-eslint-comments)
 
@@ -325,7 +221,11 @@ info: Display info about the scripts
 - [`git-format-staged`](https://github.com/hallettj/git-format-staged), to format staged files (surprise), [reasons](https://www.olioapps.com/blog/automatic-code-formatting/)
 - [`axe-core/react`](https://github.com/dequelabs/axe-core-npm)
 
-- https://github.com/BrainMaestro/eslint-plugin-optimize-regex ?
+### Potentially interesting
+
+- [eslint-plugin-optimize-regex](https://github.com/BrainMaestro/eslint-plugin-optimize-regex), there are even more regex plugins
+- [eslint-plugin-testing-library](https://github.com/testing-library/eslint-plugin-testing-library)
+- [eslint-plugin-i18n-json](https://www.npmjs.com/package/eslint-plugin-i18n-json)
 
 ## Tech Stack
 
