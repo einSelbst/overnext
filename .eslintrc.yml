@@ -90,7 +90,6 @@ rules:
   # disable core rules I don't agree with
   capitalized-comments: off
   line-comment-position: off
-  spaced-comment: off
   no-inline-comments: off
   no-warning-comments: off
   no-ternary: off
@@ -390,6 +389,16 @@ overrides:
           '@typescript-eslint/no-unsafe-argument': warn
           jest/prefer-expect-assertions: warn
 
+      # allow triple-slash-directives in typing files
+      - files:
+          - '**/*.d.ts'
+        rules:
+          multiline-comment-style: off
+          spaced-comment:
+            - error
+            - always
+            - markers: ['/']
+
   # Config for default Cypress Linting
   - files:
       - 'cypress/**/*.js'
@@ -411,6 +420,10 @@ overrides:
       max-statements: off
       max-lines: off
       id-length: off
+      spaced-comment:
+        - error
+        - always
+        - markers: ['/']
       cypress/no-unnecessary-waiting: off
       sort-keys-fix/sort-keys-fix: off
       unicorn/consistent-function-scoping:

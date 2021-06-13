@@ -4,5 +4,5 @@
 public/
 docs
 coverage
-next-env.d.ts
+.husky
 pnpm-lock.yaml

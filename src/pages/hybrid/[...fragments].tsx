@@ -68,7 +68,7 @@ const getStaticProps: GetStaticProps = async ({
 }
 
 const Fragments = ({ fragments }: FragmentsProps): JSX.Element => (
-  //}: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element => (
+  /* }: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element => ( */
   <div>
     <h1>My AMP Fragments Page!</h1>
     <p>Fragments: {fragments}</p>

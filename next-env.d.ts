@@ -17,9 +17,9 @@
  * @see {@link https://stackoverflow.com/a/59840095/531439}
  */
 type ComponentReturnType =
-  | ReactElement
   | ComponentReturnType[]
-  | string
-  | number
+  | ReactElement
   | boolean
+  | number
+  | string
   | null // Note: undefined is invalid

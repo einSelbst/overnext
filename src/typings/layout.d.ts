@@ -18,8 +18,8 @@ declare module 'next' {
   //    */
   //   getInitialProps?(context: C): IP | Promise<IP>
   // }
-  //
-  ////////////// additional types ////////////
+
+  // ----------- additional types --------------
 
   type NextLayoutComponentType<P = Record<string, unknown>> = NextComponentType<
     NextPageContext,
@@ -50,14 +50,14 @@ declare module 'next' {
    *     {@link https://stackoverflow.com/a/59840095/531439}
    */
   type OverNextComponentType =
+    | OverNextComponentType[]
+    | ReactElement
+    | boolean
+    | number
+    | string
     | (NextComponentType<NextPageContext, IP, P> & {
         Layout: ReactNode
       })
-    | ReactElement
-    | OverNextComponentType[]
-    | string
-    | number
-    | boolean
     | null // Note: undefined is invalid
 }
 
