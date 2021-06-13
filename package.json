@@ -82,10 +82,9 @@
     "docs": "typedoc",
     "?info": "echo Display info about the scripts",
     "info": "npm-scripts-info",
-    "eslint-find-unused-plugin-rules": "eslint-find-rules -un .eslintrc.yml --no-core --ext .tsx",
-    "eslint-find-unused-rules": "eslint-find-rules -un .eslintrc.yml --ext .tsx",
-    "eslint-find-current-rules": "eslint-find-rules -cnp .eslintrc.yml",
-    "eslint-find-rules": "eslint-find-rules --option -dunp .eslintrc.yml",
+    "eslint-rules:unused": "eslint-find-rules -un .eslintrc.yml --ext .tsx",
+    "eslint-rules:current": "eslint-find-rules -cnp .eslintrc.yml",
+    "eslint-rules": "eslint-find-rules -dunp .eslintrc.yml --ext .tsx",
     "commitlint": "commitlint"
   },
   "config": {
