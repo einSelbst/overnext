@@ -68,7 +68,7 @@ const reportWebVitals = async (metric: {
  */
 const A11yLinter = dynamic(
   import(
-    /* webpackChunkName: "axeHelper", webpackPrefetch: true */
+    /* webpackChunkName: "axeHelper" */
     'components/helper/axe'
   ),
   { ssr: false }
