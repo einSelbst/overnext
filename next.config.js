@@ -16,7 +16,6 @@ const nextConfiguration = {
     /* canonicalBase: '', */
   },
 
-  /* optimizeFonts: false, */
   env: {
     customKey: 'my-value',
     platform: process.env.VERCEL === '1' ? 'Vercel' : 'Netlify', // just a test
@@ -50,6 +49,7 @@ const nextConfiguration = {
     locales: ['en', 'de', 'es', 'fr', 'it'],
   },
 
+  /* optimizeFonts: false, */
   poweredByHeader: false,
   reactStrictMode: true,
   target: 'serverless',

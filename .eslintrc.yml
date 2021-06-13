@@ -150,7 +150,7 @@ rules:
 
   # I want to re-enable thos
   unicorn/prefer-module: off
-  unicorn/prefer-node-protocol: off # ToDo: enable when import/no-unresolved properly supports this
+  unicorn/prefer-node-protocol: off # enable when import/no-unresolved properly supports this
 
   # configure import plugin
   import/dynamic-import-chunkname: error
@@ -217,6 +217,7 @@ rules:
   promise/prefer-await-to-then: warn
   promise/prefer-await-to-callbacks: warn
   sort-keys-fix/sort-keys-fix: error
+  '@next/next/no-img-element': off
   toml/array-bracket-spacing:
     - error
     - never
@@ -255,7 +256,7 @@ overrides:
             - '.ts'
             - '.tsx'
     rules:
-      # todo re-enable later when renaming stuff
+      # re-enable later when renaming stuff
       '@typescript-eslint/naming-convention': off
 
       # @typescript-eslint rules config
@@ -327,6 +328,10 @@ overrides:
       import/default: off
       import/no-named-as-default-member: off
 
+    # nested overrides are allowed, the schemastore needs an update...
+    # https://eslint.org/docs/user-guide/configuring/configuration-files#how-do-overrides-work
+    # https://github.com/SchemaStore/schemastore/blob/master/src/schemas/json/eslintrc.json
+    # eslint-disable-next-line json-schema-validator/no-invalid
     overrides:
       # Config for typescript cypress Linting
       - files:
