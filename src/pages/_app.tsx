@@ -82,23 +82,7 @@ const HeadIcons = (): JSX.Element => {
   return (
     <Head>
       {isNotAmp && (
-        <>
-          <meta
-            content='initial-scale=1.0, width=device-width'
-            name='viewport'
-          />
-          <link href='https://fonts.gstatic.com' rel='preconnect' />
-          {/* the preload is automatically added by next.js or one of my linter rules */}
-          <link
-            as='style'
-            href='https://fonts.googleapis.com/css2?family=Inter&family=Sansita&display=swap'
-            rel='preload'
-          />
-          <link
-            href='https://fonts.googleapis.com/css2?family=Inter&family=Sansita&display=swap'
-            rel='stylesheet'
-          />
-        </>
+        <meta content='initial-scale=1.0, width=device-width' name='viewport' />
       )}
       {/* <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86" /> see https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag */}
       {/* Browsers use this in some areas to help your brand feel more embedded */}
