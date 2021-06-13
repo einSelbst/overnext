@@ -84,6 +84,7 @@ cypress/screenshots/
 # misc
 .DS_Store
 *.pem
+.eslintcache
 
 # vercel
 .vercel
@@ -98,4 +99,3 @@ public/sw.js*
 
 # docs
 docs
-.eslintcache
