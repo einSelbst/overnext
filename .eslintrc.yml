@@ -217,6 +217,7 @@ rules:
   promise/prefer-await-to-callbacks: warn
   sort-keys-fix/sort-keys-fix: error
   '@next/next/no-img-element': off
+  '@next/next/no-page-custom-font': off
   toml/array-bracket-spacing:
     - error
     - never
@@ -384,9 +385,9 @@ overrides:
           jest: true
           jest/globals: true
         rules:
-          '@typescript-eslint/no-unsafe-call': warn
-          '@typescript-eslint/no-unsafe-return': warn
-          '@typescript-eslint/no-unsafe-argument': warn
+          '@typescript-eslint/no-unsafe-call': off
+          '@typescript-eslint/no-unsafe-return': off
+          '@typescript-eslint/no-unsafe-argument': off
           jest/prefer-expect-assertions: warn
 
       # allow triple-slash-directives in typing files
