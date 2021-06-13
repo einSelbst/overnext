@@ -3,11 +3,11 @@ import { Footer, Navigation } from 'components/layout'
 const LegalLayout = ({
   children,
 }: {
-  children: React.ReactNode
-}): React.ReactNode => (
+  readonly children: React.ReactChild
+}): ComponentReturnType => (
   <>
     <header>
-      <Navigation success={true} error={false} />
+      <Navigation error={false} success />
     </header>
 
     {children}

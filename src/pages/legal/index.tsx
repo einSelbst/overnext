@@ -1,4 +1,5 @@
 import Link from 'next/link'
+
 import LegalLayout from 'layouts/legal.layout'
 
 const Legal = (): JSX.Element => (

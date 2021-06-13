@@ -3,11 +3,11 @@ import { Footer, Navigation } from 'components/layout'
 const DefaultLayout = ({
   children,
 }: {
-  children: React.ReactNode
-}): JSX.Element => (
+  readonly children: React.ReactNode
+}): ComponentReturnType => (
   <>
     <header>
-      <Navigation success={true} error={false} />
+      <Navigation error={false} success />
     </header>
 
     <aside className='left'>

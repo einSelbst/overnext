@@ -4,17 +4,19 @@ const presets = [
     'next/babel',
     {
       '@babel/preset-env': {
+        /*
+         * corejs version must be kept in sync with package.json
+         * maybe automate with https://docs.renovatebot.com/configuration-options/#postupdateoptions
+         */
+        corejs: '3.10.1',
         targets: 'defaults',
         useBuiltIns: 'entry',
-        // corejs version must be kept in sync with package.json
-        // maybe automate with https://docs.renovatebot.com/configuration-options/#postupdateoptions
-        corejs: '3.10.1',
       },
     },
   ],
 ]
 const plugins = [
-  /* ["istanbul"] */
+  // ["istanbul"]
 ]
 
 if (process.env.APP_ENV === 'test') {
@@ -28,12 +30,16 @@ if (process.env.APP_ENV === 'test') {
 }
 
 module.exports = {
-  /* sourceMaps: true, */
-  /* sourceType: 'module', */
-  /* retainLines: true, */
-  presets,
   plugins,
+  /*
+   * sourceMaps: true,
+   * sourceType: 'module',
+   * retainLines: true,
+   */
+  presets,
 }
-/* module.exports = function(api) {
+/*
+ * module.exports = function(api) {
  *   return {presets, plugins};
- * }; */
+ * };
+ */

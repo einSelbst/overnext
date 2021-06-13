@@ -13,7 +13,6 @@
     Tooling
   </summary>
 
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square 'Standard.js')](https://standardjs.com)
 [![Prettier](https://img.shields.io/badge/code_style-Prettier-ff69b4.svg?logo=Prettier&logoColor=white&style=flat-square 'Prettier')](https://github.com/prettier/prettier)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square 'Commitizen')](http://commitizen.github.io/cz-cli/)
 [![Renovate](https://img.shields.io/badge/renovate-enabled-brightgreen.svg?logo=dependabot&style=flat-square 'Renovate')](https://renovateapp.com/)
@@ -78,6 +77,7 @@ This is more about priorities than about a temporal order.
 
 - automate it &trade;
 - optimize it, aka do it cheap
+- go vanilla until good reasons to not
 - test'n lint it, aka catch bugs early
 
 ## DX
@@ -85,10 +85,15 @@ This is more about priorities than about a temporal order.
 - [`pnpm`](https://pnpm.js.org/en/) package manager
 - automation, [inspirations](https://github.com/sdras/awesome-actions)
 - conformity, [inspirations](https://github.com/dustinspecker/awesome-eslint)
-- recommended repo files via [cgx](https://github.com/jeroenouw/cgx)
+- [`standard-version`](https://github.com/conventional-changelog/standard-version) for release versioning and changlog creation
+- [`browserlist`](https://github.com/browserslist/browserslist) for browser compatibility
+
+  - [`autoprefixer`](https://github.com/postcss/autoprefixer)
+  - [`eslint-plugin-compat`](https://github.com/amilajack/eslint-plugin-compat)
+
 - <details>
     <summary>
-      <a href="https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/expiring-todo-comments.md">expiring ToDo's</a>
+      <a href="https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/expiring-todo-comments.md">enable expiring ToDo's (`eslint-plugin-unicorn`)</a>
     </summary>
 
   - Expire after a specific date: `[YYYY-MM-DD]` to define a UTC due date in the ISO 8601 format
@@ -102,6 +107,8 @@ This is more about priorities than about a temporal order.
 
 - use [volta](https://github.com/volta-cli/volta) for toolchain management (hoping for [pnpm support](https://github.com/volta-cli/volta/issues/737)), see: [install guide](./CONTRIBUTING.md)
 - use [pnpm completion](https://medium.com/pnpm/pnpm-v4-9-comes-with-command-completion-a411715260b4) via `pnpm install-completion`
+- create recommended repo files via [cgx](https://github.com/jeroenouw/cgx)
+- create `README.md` integrate via [README.so template](https://readme.so/editor)
 
 ### Commit Style
 
@@ -133,7 +140,6 @@ This is more about priorities than about a temporal order.
     </details>
 
   - [`semantic-pull-requests`](https://github.com/zeke/semantic-pull-requests) Github app
-  - [`standard-version`](https://github.com/conventional-changelog/standard-version) for release versioning and changlog creation
 
 ### Scripts
 
@@ -176,138 +182,55 @@ info: Display info about the scripts
   - with [`tslib`](https://www.npmjs.com/package/tslib) for imports optimization
   - [`typesync`](https://github.com/jeffijoe/typesync) for find dependency typings
   - [TSDoc](https://tsdoc.org/) docstrings to generate [`typedoc`](https://github.com/TypeStrong/typedoc) documentation
-- [Standard](https://github.com/standard/standard)
+- [Prettier](https://github.com/prettier/prettier)
 - [EditorConfig](https://editorconfig.org/)
 
 ### Linter / A11y
 
 - [ESLint](https://eslint.org/)
 
-  - [`eslint-plugin-next`](https://github.com/vercel/next.js/tree/canary/packages/eslint-plugin-next)
-  - [`typescript-eslint`](https://github.com/typescript-eslint/typescript-eslint)
-  - <details>
-      <summary>
-        <a href="https://github.com/sindresorhus/eslint-plugin-unicorn"><code>eslint-plugin-unicorn</code></a>
-      </summary>
+  - most core rules are enabled
+  - [`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier), turns off all rules that are unnecessary or conflict with Prettier
+  - [`typescript-eslint`](https://github.com/typescript-eslint/typescript-eslint), [rules](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#supported-rules)
+  - [`eslint-plugin-unicorn`](https://github.com/sindresorhus/eslint-plugin-unicorn), [77 rules](https://github.com/sindresorhus/eslint-plugin-unicorn#rules)
+  - [`eslint-plugin-react`](https://github.com/yannickcr/eslint-plugin-react), [rules](https://github.com/yannickcr/eslint-plugin-react/tree/master/docs/rules)
+  - [`eslint-plugin-react-hooks`](https://www.npmjs.com/package/eslint-plugin-react-hooks)
+  - [`eslint-plugin-promise`](https://github.com/xjamundx/eslint-plugin-promise), [12/14 rules](https://github.com/xjamundx/eslint-plugin-promise#rules)
+  - [`eslint-plugin-array-func`](https://github.com/freaktechnik/eslint-plugin-array-func), [rules](https://github.com/freaktechnik/eslint-plugin-array-func#rules)
+  - [`eslint-plugin-jsx-a11y`](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y), [rules](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/master/docs/rules)
+  - [`eslint-plugin-compat`](https://github.com/amilajack/eslint-plugin-compat), works with browserslist
 
-    - "unicorn/better-regex": "error",
-    - "unicorn/catch-error-name": "error",
-    - "unicorn/consistent-destructuring": "error",
-    - "unicorn/consistent-function-scoping": "error",
-    - "unicorn/custom-error-definition": "off",
-    - "unicorn/empty-brace-spaces": "error",
-    - "unicorn/error-message": "error",
-    - "unicorn/escape-case": "error",
-    - "unicorn/expiring-todo-comments": "error",
-    - "unicorn/explicit-length-check": "error",
-    - "unicorn/filename-case": "error",
-    - "unicorn/import-index": "off",
-    - "unicorn/import-style": "error",
-    - "unicorn/new-for-builtins": "error",
-    - "unicorn/no-abusive-eslint-disable": "error",
-    - "unicorn/no-array-callback-reference": "error",
-    - "unicorn/no-array-for-each": "error",
-    - "unicorn/no-array-push-push": "error",
-    - "unicorn/no-array-reduce": "error",
-    - "unicorn/no-console-spaces": "error",
-    - "unicorn/no-for-loop": "error",
-    - "unicorn/no-hex-escape": "error",
-    - "unicorn/no-instanceof-array": "error",
-    - "unicorn/no-keyword-prefix": "off",
-    - "unicorn/no-lonely-if": "error",
-    - "no-nested-ternary": "off",
-    - "unicorn/no-nested-ternary": "error",
-    - "unicorn/no-new-array": "error",
-    - "unicorn/no-new-buffer": "error",
-    - "unicorn/no-null": "error",
-    - "unicorn/no-object-as-default-parameter": "error",
-    - "unicorn/no-process-exit": "error",
-    - "unicorn/no-static-only-class": "error",
-    - "unicorn/no-this-assignment": "error",
-    - "unicorn/no-unreadable-array-destructuring": "error",
-    - "unicorn/no-unsafe-regex": "off",
-    - "unicorn/no-unused-properties": "off",
-    - "unicorn/no-useless-undefined": "error",
-    - "unicorn/no-zero-fractions": "error",
-    - "unicorn/number-literal-case": "error",
-    - "unicorn/numeric-separators-style": "error",
-    - "unicorn/prefer-add-event-listener": "error",
-    - "unicorn/prefer-array-find": "error",
-    - "unicorn/prefer-array-flat": "error",
-    - "unicorn/prefer-array-flat-map": "error",
-    - "unicorn/prefer-array-index-of": "error",
-    - "unicorn/prefer-array-some": "error",
-    - "unicorn/prefer-date-now": "error",
-    - "unicorn/prefer-default-parameters": "error",
-    - "unicorn/prefer-dom-node-append": "error",
-    - "unicorn/prefer-dom-node-dataset": "error",
-    - "unicorn/prefer-dom-node-remove": "error",
-    - "unicorn/prefer-dom-node-text-content": "error",
-    - "unicorn/prefer-includes": "error",
-    - "unicorn/prefer-keyboard-event-key": "error",
-    - "unicorn/prefer-math-trunc": "error",
-    - "unicorn/prefer-modern-dom-apis": "error",
-    - "unicorn/prefer-module": "error",
-    - "unicorn/prefer-negative-index": "error",
-    - "unicorn/prefer-node-protocol": "error",
-    - "unicorn/prefer-number-properties": "error",
-    - "unicorn/prefer-optional-catch-binding": "error",
-    - "unicorn/prefer-query-selector": "error",
-    - "unicorn/prefer-reflect-apply": "error",
-    - "unicorn/prefer-regexp-test": "error",
-    - "unicorn/prefer-set-has": "error",
-    - "unicorn/prefer-spread": "error",
-    - "unicorn/prefer-string-replace-all": "off",
-    - "unicorn/prefer-string-slice": "error",
-    - "unicorn/prefer-string-starts-ends-with": "error",
-    - "unicorn/prefer-string-trim-start-end": "error",
-    - "unicorn/prefer-switch": "error",
-    - "unicorn/prefer-ternary": "error",
-    - "unicorn/prefer-type-error": "error",
-    - "unicorn/prevent-abbreviations": "error",
-    - "unicorn/string-content": "off",
-    - "unicorn/throw-new-error": "error"
-    </details>
+  - [`eslint-plugin-import`](https://github.com/benmosher/eslint-plugin-import), [43 rules](https://github.com/benmosher/eslint-plugin-import/tree/master/docs/rules)
+
+    - [`typescript-eslint-language-service`](https://github.com/Quramy/typescript-eslint-language-service), adds typescript support for `eslint-plugin-import`
+
+  - [`eslint-plugin-next`](https://github.com/vercel/next.js/tree/canary/packages/eslint-plugin-next), [12 rules](https://github.com/vercel/next.js/blob/canary/docs/basic-features/eslint.md)
+  - [`eslint-plugin-sonarjs`](https://github.com/SonarSource/eslint-plugin-sonarjs), 25 rules
+  - [`eslint-plugin-sort-keys-fix`](https://github.com/leo-buneev/eslint-plugin-sort-keys-fix), because core can't auto-fix object keys
+
+  - [`eslint-plugin-tsdoc`](https://github.com/microsoft/tsdoc/tree/master/eslint-plugin)
+  - [`eslint-plugin-eslint-comments`](https://github.com/mysticatea/eslint-plugin-eslint-comments)
 
   - [`eslint-plugin-cypress`](https://github.com/cypress-io/eslint-plugin-cypress)
-  - [`eslint-plugin-import`](https://github.com/benmosher/eslint-plugin-import)
   - [`eslint-plugin-jest`](https://github.com/jest-community/eslint-plugin-jest)
   - [`eslint-plugin-jest-dom`](https://github.com/testing-library/eslint-plugin-jest-dom)
-  - [`eslint-plugin-jsx-a11y`](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y)
-  - <details>
-      <summary>
-        <a href="https://github.com/xjamundx/eslint-plugin-promise"><code>eslint-plugin-promise</code></a>
-      </summary>
-
-    - "promise/always-return": "error"
-    - "promise/no-return-wrap": "error"
-    - "promise/param-names": "error"
-    - "promise/catch-or-return": "error"
-    - "promise/no-native": "off"
-    - "promise/no-nesting": "warn"
-    - "promise/no-promise-in-callback": "warn"
-    - "promise/no-callback-in-promise": "warn"
-    - "promise/avoid-new": "warn"
-    - "promise/no-new-statics": "error"
-    - "promise/no-return-in-finally": "warn"
-    - "promise/valid-params": "warn"
-    </details>
-
-  - [`eslint-plugin-react`](https://github.com/yannickcr/eslint-plugin-react)
-  - [`eslint-plugin-react-hooks`](https://www.npmjs.com/package/eslint-plugin-react-hooks)
-  - [`eslint-plugin-tsdoc`](https://github.com/microsoft/tsdoc/tree/master/eslint-plugin)
-  - [`eslint-plugin-compat`](https://github.com/amilajack/eslint-plugin-compat), works with browserslist
-  - [`typescript-eslint-language-service`](https://github.com/Quramy/typescript-eslint-language-service), not exactly sure what this does...
+  - [`eslint-plugin-jest-formatting`](https://github.com/dangreenisrael/eslint-plugin-jest-formatting)
 
 - [Prettier](https://prettier.io/) for code formatting
 - [`husky`](https://github.com/typicode/husky) for hooks
 - [`git-format-staged`](https://github.com/hallettj/git-format-staged), to format staged files (surprise), [reasons](https://www.olioapps.com/blog/automatic-code-formatting/)
 - [`axe-core/react`](https://github.com/dequelabs/axe-core-npm)
 
+### Potentially interesting
+
+- [eslint-plugin-optimize-regex](https://github.com/BrainMaestro/eslint-plugin-optimize-regex), there are even more regex plugins
+- [eslint-plugin-testing-library](https://github.com/testing-library/eslint-plugin-testing-library)
+- [eslint-plugin-i18n-json](https://www.npmjs.com/package/eslint-plugin-i18n-json)
+
 ## Tech Stack
 
-- next.js
-- ToDo: sanity
+- next.js, who would have thought
+- WIP: sanity
 
 ## Next.js Configuration
 
@@ -403,7 +326,7 @@ info: Display info about the scripts
 - [Renovate Dashboard](https://app.renovatebot.com/dashboard#github/einSelbst/overnext) for dependency management
 - [Vercel Dashboard](https://vercel.com/einselbst/overnext)
 - [Netlify Dashboard](https://app.netlify.com/sites/overnext/overview)
-- [Dareboost](https://www.dareboost.com/en/dashboard)
+- [Dareboost](https://www.dareboost.com/en/dashboard), free version has 5 analyses per month
 - [Project Wallace](https://www.projectwallace.com/~einselbst/overnext) for CSS monitoring
 
 ## Installation
@@ -431,7 +354,7 @@ see [CONTRIBUTING](./CONTRIBUTING.md)
   - netlify plugins
     - [netlify-plugin-cypress](https://github.com/cypress-io/netlify-plugin-cypress)
     - [netlify-plugin-html-validate](https://github.com/oliverroick/netlify-plugin-html-validate), uses [html-validate](https://html-validate.org/)
-    - [netlify-plugin-check-links](https://github.com/munter/netlify-plugin-checklinks), uses [hyperlink](https://github.com/Munter/hyperlink)
+    - [netlify-plugin-checklinks](https://github.com/munter/netlify-plugin-checklinks), uses [hyperlink](https://github.com/Munter/hyperlink)
     - [netlify-plugin-a11y](https://github.com/netlify-labs/netlify-plugin-a11y), uses [pa11y](https://github.com/pa11y/pa11y)
 - [AWS Amplify](https://docs.amplify.aws/guides/hosting/nextjs/q/platform/js)
 
@@ -466,6 +389,22 @@ When I actually started using them I had some problems:
 - also `prop-types` itself seem to have an [unclear](https://github.com/facebook/prop-types/issues/337#issuecomment-791013311) [future](https://github.com/facebook/prop-types/issues/249)
 
 I might still use prop-types in case I encounter a situation where I get much benefit from the runtime type checking, but then I would only use it for this specific case.
+
+### Linter
+
+Initially I used [Prettier-Standard](https://github.com/sheerun/prettier-standard)
+which included
+
+- [Standard](https://standardjs.com/)
+- [PrettierX](https://github.com/brodybits/prettierx)
+  because I thought it's a great idea to not waste time for config etc. But the tool hasn't received any maintenance for almost a year and I already had to add workarounds.
+  Being interested in linting in general I also had issues with clean extensibility of my eslint config and it wasn't completely clear to me what really runs as part of `prettier-standard`.
+
+I also considerd other bundles like
+[XO](https://github.com/xojs/xo) which would have been my first choice because it includes [unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
+[Canonical](https://github.com/gajus/eslint-config-canonical)
+
+but they all have stuff included I don't need and other stuff is missing which I want so I decided to go vanilla `eslint` and [do my config](https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/README.md#eslint-configs) by hand to have max control over everything and less dependencies.
 
 ### Hosting
 
@@ -505,20 +444,18 @@ ToDo link to API Docs
 
 ## Credits
 
-...where credits due, thanks to [@bahmutov](https://github.com/bahmutov), [@elliottsj](https://github.com/elliottsj), [@ferlopezm94](https://github.com/ferlopezm94),[@iamvishnusankar](https://github.com/iamvishnusankar), [@pacocoursey](https://github.com/pacocoursey), [@thomaseizinger](https://github.com/thomaseizinger) and all the others whom I copied code from!
+...where credits due, thanks to [@bahmutov](https://github.com/bahmutov), [@elliottsj](https://github.com/elliottsj), [Stefan Baumgartner](https://twitter.com/ddprrt), [@ferlopezm94](https://github.com/ferlopezm94),[@iamvishnusankar](https://github.com/iamvishnusankar), [@pacocoursey](https://github.com/pacocoursey), [@thomaseizinger](https://github.com/thomaseizinger), [@sindresorhus](https://github.com/sindresorhus) and all the others whom I copied code from!
 
 ## Related
 
 - [Next Right Now](https://unlyed.github.io/next-right-now/)
   - [`next-right-now`](https://github.com/UnlyEd/next-right-now), flexible production-grade boilerplate with Next.js
-- [Next.js with Moxy](https://next-with.moxy.tech/), a better version of this here
+- [Next.js with Moxy](https://next-with.moxy.tech/), a better version of this project
   - [`next-with-moxy`](https://github.com/moxystudio/next-with-moxy)
 
 ## ToDo
 
 I should use Github Issues for this but hey.
-
-- [ ] integrate with [README.so template](https://readme.so/editor)
 
 - [ ] I have node version defined in several places, maybe I can consolidate this
   - `.nvmrc`
@@ -528,10 +465,10 @@ I should use Github Issues for this but hey.
 - [ ] add [SRI](https://github.com/vercel/next.js/discussions/23951)
 - [ ] cypress a11y plugin
 - [ ] [cypress-html-validate](https://html-validate.org/usage/cypress.html) plugin
-- [ ] make use of [Project Wallace](https://www.projectwallace.com/)
+- [ ] make use of [Project Wallace](https://www.projectwallace.com/), still wip
 - [ ] [wdyr](https://github.com/welldone-software/why-did-you-render/issues/113) vs preact [1](https://github.com/preactjs/preact/issues/2760)
 - [ ] use ISR - Incremental Static Regeneration ? [opinion](https://www.netlify.com/blog/2021/03/08/incremental-static-regeneration-its-benefits-and-its-flaws/)
-- [ ] enable [unused ESLint rules](https://github.com/alexilyaev/stylelint-find-rules)
+- [ ] wip: enable [unused ESLint rules](https://github.com/alexilyaev/stylelint-find-rules)
 
 ### Documentation ToDo's
 

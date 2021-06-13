@@ -84,6 +84,7 @@ cypress/screenshots/
 # misc
 .DS_Store
 *.pem
+.eslintcache
 
 # vercel
 .vercel

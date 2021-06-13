@@ -12,55 +12,54 @@ const { PHASE_DEVELOPMENT_SERVER } = require('next/constants')
  * @type {import('next/dist/next-server/server/config').NextConfig}
  */
 const nextConfiguration = {
-  poweredByHeader: false,
-  reactStrictMode: true,
-  target: 'serverless',
+  amp: {
+    /* canonicalBase: '', */
+  },
+
   env: {
     customKey: 'my-value',
     platform: process.env.VERCEL === '1' ? 'Vercel' : 'Netlify', // just a test
   },
-  i18n: {
-    locales: ['en', 'de', 'es', 'fr', 'it'],
-    defaultLocale: 'en',
+
+  // @see {@link https://github.com/vercel/next.js/blob/canary/packages/next/next-server/server/config-shared.ts#L68}
+  experimental: {
+    // plugins?: boolean;
+    profiling: true,
+    /* sprFlushToDisk: true, */
+    /* workerThreads: false */
+    /* pageEnv: false */
+    /* optimizeImages: false, */
+    /* enableStaticImages: false, */
+    /* optimizeCss: true, */
+    /* scrollRestoration: false, */
+    stats: true,
+    /* externalDir: false, */
+    /* reactRoot: Number(process.env.NEXT_PRIVATE_REACT_ROOT) > 0, */
+    /* enableBlurryPlaceholder: false, */
+    /* disableOptimizedLoading: true, */
+    /* gzipSize: true, */
   },
-  webpack: (
-    /** @type {{ plugins: any[]; }} */ config,
-    /** @type {{ dev: any; isServer: any; }} */ _options
-  ) => {
-    /* { buildId, dev, isServer, defaultLoaders, webpack } = options */
-    return config
-  },
+
   future: {
     webpack5: true,
   },
-  experimental: {
-    cpus: 2,
-    // plugins?: boolean;
-    profiling: true,
-    // sprFlushToDisk?: boolean;
-    // reactMode?: 'legacy' | 'concurrent' | 'blocking';
-    // workerThreads?: boolean;
-    // pageEnv?: boolean;
-    // optimizeImages?: boolean;
-    // optimizeCss: true,
-    // scrollRestoration?: boolean;
-    // scriptLoader?: boolean;
-    stats: true,
-    // externalDir?: boolean;
-    // serialWebpackBuild?: boolean;
-    // conformance?: boolean;
-    amp: {
-      // optimizer: any;
-      // validator?: string;
-      // skipValidation?: boolean;
-    },
-    // turboMode?: boolean;
-    // eslint?: boolean;
-    // reactRoot?: boolean;
-    // enableBlurryPlaceholder?: boolean;
-    // disableOptimizedLoading?: boolean;
-    // gzipSize?: boolean;
+
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'de', 'es', 'fr', 'it'],
   },
+
+  /* optimizeFonts: false, */
+  poweredByHeader: false,
+  reactStrictMode: true,
+  target: 'serverless',
+
+  webpack: (
+    /** @type {{ plugins: any[]; }} */ config,
+    /** @type {{ dev: any; isServer: any; }} */ _options
+  ) =>
+    /* { buildId, dev, isServer, defaultLoaders, webpack } = options */
+    config,
 }
 
 /**
@@ -88,8 +87,8 @@ const plugins = () =>
           withPWA,
           {
             pwa: {
-              disable: process.env.NODE_ENV === 'development',
               dest: 'public',
+              disable: process.env.NODE_ENV === 'development',
             },
           },
         ],
@@ -98,8 +97,8 @@ const plugins = () =>
         withPWA,
         {
           pwa: {
-            disable: process.env.NODE_ENV === 'development',
             dest: 'public',
+            disable: process.env.NODE_ENV === 'development',
           },
         },
       ]

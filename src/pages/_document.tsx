@@ -1,11 +1,5 @@
-import Document, {
-  DocumentContext,
-  DocumentInitialProps,
-  Head,
-  Html,
-  Main,
-  NextScript,
-} from 'next/document'
+import type { DocumentContext, DocumentInitialProps } from 'next/document'
+import Document, { Head, Html, Main, NextScript } from 'next/document'
 
 class _document extends Document {
   static async getInitialProps(
@@ -15,7 +9,7 @@ class _document extends Document {
   }
 
   // I would prefer putting the font declarations in _app.jsx as they wouldn't push down the other meta tags
-  render(): JSX.Element {
+  static render(): JSX.Element {
     return (
       <Html>
         <Head />

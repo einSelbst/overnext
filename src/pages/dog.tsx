@@ -1,5 +1,5 @@
 /* import { GetStaticProps, GetStaticPropsContext } from 'next' */
-import {
+import type {
   GetStaticProps,
   GetStaticPropsContext,
   GetStaticPropsResult,
@@ -10,36 +10,39 @@ import { useAmp } from 'next/amp'
 import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+
 import Byline from 'components/byline'
 import DefaultLayout from 'layouts/default.layout'
 
 /* istanbul ignore next */
-export const config = {
+const config = {
   amp: 'hybrid',
 }
 
-interface HomeProps {
+type HomeProps = {
   host: string
 }
 
-export const getStaticProps: GetStaticProps = async (
+const getStaticProps: GetStaticProps = async (
   _context: GetStaticPropsContext
 ): Promise<GetStaticPropsResult<HomeProps>> => {
   await Promise.resolve(
     'This is just a placeholder to make my typescript linter happy'
   )
   /* eslint-disable no-console */
-  console.log('now in getstaticprops')
-
-  console.log('process.env.URL')
-  console.log(process.env.URL)
-
-  console.log('process.env.SITE_URL')
-  console.log(process.env.SITE_URL)
-
+  /*
+   * console.log('now in getstaticprops')
+   *
+   * console.log('process.env.URL')
+   * console.log(process.env.URL)
+   *
+   * console.log('process.env.SITE_URL')
+   * console.log(process.env.SITE_URL)
+   */
   let url = 'https://overnext.vercel.app'
-  if (process.env.URL) url = process.env.URL
-
+  if (typeof process.env.URL !== 'undefined') {
+    url = process.env.URL
+  }
   console.log(url)
   /* eslint-enable no-console */
 
@@ -56,7 +59,7 @@ export const getStaticProps: GetStaticProps = async (
 /* const Dog: NextPage = () => { */
 const Dog: NextLayoutPage = (
   /* props: InferGetStaticPropsType<typeof getStaticProps> */
-  { host }: InferGetStaticPropsType<typeof getStaticProps>
+  { host }: Readonly<InferGetStaticPropsType<typeof getStaticProps>>
 ) => {
   /* const Dog = (props: HomeProps): JSX.Element => { */
   const isAmp = useAmp()
@@ -69,7 +72,7 @@ const Dog: NextLayoutPage = (
       <Head>
         <title>The Dog</title>
         {/* preload only the LCP image */}
-        <link rel='preload' href={imageUrl} as='image' />
+        <link as='image' href={imageUrl} rel='preload' />
       </Head>
       <h1>The Dog (Hybrid AMP Page)</h1>
       <h2>
@@ -79,9 +82,9 @@ const Dog: NextLayoutPage = (
       The value of platform is: {process.env.platform}
       The value of customKey is: {process.env.customKey}
       {isAmp ? (
-        <amp-img width='800' height='450' src={imageUrl} alt='a cute pups' />
+        <amp-img alt='a cute pups' height='450' src={imageUrl} width='800' />
       ) : (
-        <img width='800' height='450' src={imageUrl} alt='a cute pups' />
+        <img alt='a cute pups' height='450' src={imageUrl} width='800' />
       )}
       <p>
         {isAmp ? (
@@ -89,7 +92,9 @@ const Dog: NextLayoutPage = (
             <a>View Non-AMP Version</a>
           </Link>
         ) : (
-          <a href={locale ? `/${locale}/dog?amp=1` : '/dog/?amp=1'}>
+          <a
+            href={locale === undefined ? '/dog/?amp=1' : `/${locale}/dog?amp=1`}
+          >
             view {locale} amp version
           </a>
         )}
@@ -174,4 +179,5 @@ const Dog: NextLayoutPage = (
 
 Dog.Layout = DefaultLayout
 
+export { config, getStaticProps }
 export default Dog

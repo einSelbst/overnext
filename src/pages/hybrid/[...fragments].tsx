@@ -3,28 +3,28 @@
  * function declaration for
  * `getStaticProps` and `getStaticPaths`
  */
-// eslint-disable-next-line unicorn/prefer-node-protocol
-import { ParsedUrlQuery } from 'querystring'
-import {
+import type { ParsedUrlQuery } from 'querystring'
+
+import type {
   GetStaticPaths,
   GetStaticPathsContext,
   GetStaticPathsResult,
   GetStaticProps,
   GetStaticPropsContext,
   GetStaticPropsResult,
-  InferGetStaticPropsType,
+  /* InferGetStaticPropsType, */
 } from 'next'
 
 /* istanbul ignore next */
-export const config = {
+const config = {
   amp: 'hybrid',
 }
 
-interface StaticPathParameters extends ParsedUrlQuery {
-  fragments: string | string[]
+type StaticPathParameters = ParsedUrlQuery & {
+  fragments: string[] | string
 }
 
-export const getStaticPaths: GetStaticPaths = async (
+const getStaticPaths: GetStaticPaths = async (
   _context: GetStaticPathsContext
 ): Promise<GetStaticPathsResult<StaticPathParameters>> => {
   await Promise.resolve('async needs await')
@@ -51,10 +51,10 @@ export const getStaticPaths: GetStaticPaths = async (
  *     because it is more constrained.”
  */
 type FragmentsProps = {
-  fragments: string | string[]
+  fragments: string[] | string
 }
 
-export const getStaticProps: GetStaticProps = async ({
+const getStaticProps: GetStaticProps = async ({
   params,
 }: GetStaticPropsContext): Promise<GetStaticPropsResult<FragmentsProps>> => {
   await Promise.resolve('async needs await')
@@ -67,15 +67,13 @@ export const getStaticProps: GetStaticProps = async ({
   }
 }
 
-function Fragments({
-  fragments,
-}: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element {
-  return (
-    <div>
-      <h1>My AMP Fragments Page!</h1>
-      <p>Fragments: {fragments}</p>
-    </div>
-  )
-}
+const Fragments = ({ fragments }: FragmentsProps): JSX.Element => (
+  /* }: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element => ( */
+  <div>
+    <h1>My AMP Fragments Page!</h1>
+    <p>Fragments: {fragments}</p>
+  </div>
+)
 
+export { config, getStaticPaths, getStaticProps }
 export default Fragments

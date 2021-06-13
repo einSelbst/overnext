@@ -4,3 +4,5 @@
 public/
 docs
 coverage
+.husky
+pnpm-lock.yaml

@@ -21,7 +21,7 @@ context('Cypress.Commands', () => {
         /* method = method || 'log' */ // set as default parameter
 
         // log the subject to the console
-        // @ts-ignore TS7017
+        // @ts-expect-error TS7017
         console[method]('The subject is', subject)
 
         // whatever we return becomes the new subject
@@ -31,7 +31,7 @@ context('Cypress.Commands', () => {
       }
     )
 
-    // @ts-ignore TS2339
+    // @ts-expect-error TS2339
     cy.get('button')
       .console('info')
       .then(_$button => {
@@ -147,21 +147,21 @@ context('Cypress.env()', () => {
     // https://on.cypress.io/env
     // set multiple environment variables
     Cypress.env({
+      apiServer: 'http://localhost:8888/v1/',
       host: 'veronica.dev.local',
-      api_server: 'http://localhost:8888/v1/',
     })
 
     // get environment variable
     expect(Cypress.env('host')).to.eq('veronica.dev.local')
 
     // set environment variable
-    Cypress.env('api_server', 'http://localhost:8888/v2/')
-    expect(Cypress.env('api_server')).to.eq('http://localhost:8888/v2/')
+    Cypress.env('apiServer', 'http://localhost:8888/v2/')
+    expect(Cypress.env('apiServer')).to.eq('http://localhost:8888/v2/')
 
     // get all environment variable
     expect(Cypress.env()).to.have.property('host', 'veronica.dev.local')
     expect(Cypress.env()).to.have.property(
-      'api_server',
+      'apiServer',
       'http://localhost:8888/v2/'
     )
   })

@@ -1,9 +1,5 @@
 // see: https://github.com/arasfeld/next-graphql-app/blob/main/next-env.d.ts
-import type {
-  NextComponentType,
-  NextLayoutComponentType,
-  NextPageContext,
-} from 'next'
+import type { NextComponentType, NextPageContext } from 'next'
 import type { AppProps } from 'next/app'
 
 declare module 'next' {
@@ -22,16 +18,16 @@ declare module 'next' {
   //    */
   //   getInitialProps?(context: C): IP | Promise<IP>
   // }
-  //
-  ////////////// additional types ////////////
+
+  // ----------- additional types --------------
 
   type NextLayoutComponentType<P = Record<string, unknown>> = NextComponentType<
     NextPageContext,
     unknown,
     P
   > & {
-    Layout?: ReactNode
-    // getLayout?: (page: React.ReactElement) => React.ReactElement
+    Layout?: (children: React.ReactNode) => JSX.Element
+    // Layout?: (page: React.ReactNode) => JSX.Element
     getLayout?: (page: React.ReactNode) => React.ReactNode
   }
 
@@ -54,14 +50,14 @@ declare module 'next' {
    *     {@link https://stackoverflow.com/a/59840095/531439}
    */
   type OverNextComponentType =
+    | OverNextComponentType[]
+    | ReactElement
+    | boolean
+    | number
+    | string
     | (NextComponentType<NextPageContext, IP, P> & {
         Layout: ReactNode
       })
-    | ReactElement
-    | Array<OverNextComponentType>
-    | string
-    | number
-    | boolean
     | null // Note: undefined is invalid
 }
 

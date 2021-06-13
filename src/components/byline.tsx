@@ -1,4 +1,8 @@
-const Byline = ({ author }: { author: string }): JSX.Element => (
+const Byline = ({
+  author,
+}: {
+  readonly author: string
+}): ComponentReturnType => (
   <>
     <div className='byline'>By {author}</div>
     <style jsx>{`

@@ -26,10 +26,10 @@ context('Utilities', () => {
 
   it('cypress.Blob - blob utilities and base64 string conversion', () => {
     // https://on.cypress.io/blob
-    cy.get('.utility-blob').then($div => {
+    cy.get('.utility-blob').then($div =>
       // https://github.com/nolanlawson/blob-util#imgSrcToDataURL
       // get the dataUrl string for the javascript-logo
-      return Cypress.Blob.imgSrcToDataURL(
+      Cypress.Blob.imgSrcToDataURL(
         'https://example.cypress.io/assets/img/javascript-logo.png',
         undefined,
         'anonymous'
@@ -44,7 +44,7 @@ context('Utilities', () => {
 
         cy.get('.utility-blob img').click().should('have.attr', 'src', dataUrl)
       })
-    })
+    )
   })
 
   it('cypress.minimatch - it out glob patterns against strings', () => {
@@ -116,7 +116,7 @@ context('Utilities', () => {
      */
     function waitOneSecond() {
       // return a promise that resolves after 1 second
-      // @ts-ignore TS2351 (new Cypress.Promise)
+      // @ts-expect-error TS2351 (new Cypress.Promise)
       return new Cypress.Promise((resolve, _reject) => {
         setTimeout(() => {
           // set waited to true
@@ -128,14 +128,14 @@ context('Utilities', () => {
       })
     }
 
-    cy.then(() => {
+    cy.then(() =>
       // return a promise to cy.then() that
       // is awaited until it resolves
       // @ ts-ignore TS7006
-      return waitOneSecond().then(string => {
+      waitOneSecond().then(string => {
         expect(string).to.eq('foo')
         expect(waited).to.be.true
       })
-    })
+    )
   })
 })

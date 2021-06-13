@@ -1,11 +1,11 @@
-import { OverNextComponentType } from 'next'
+import type { OverNextComponentType } from 'next'
 import { useAmp } from 'next/amp'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 
 /* istanbul ignore next */
-export const config = {
+const config = {
   amp: 'hybrid',
 }
 
@@ -14,15 +14,18 @@ export const config = {
  * @see navigation.tsx for an example with prop-types
  */
 type Props = {
-  success: boolean
-  error: boolean
+  readonly success: boolean
+  readonly error: boolean
 }
 
 /**
  * HTML entities should be escaped
  */
-/* const One = (props: Props): JSX.Element => { */
 const One = (props: Props): OverNextComponentType => {
+  const isAmp = useAmp()
+  const router = useRouter()
+  const { locale } = router
+
   useEffect(() => {
     console.log('useEffect default')
 
@@ -40,23 +43,23 @@ const One = (props: Props): OverNextComponentType => {
     ) as HTMLAnchorElement
     const ampLink = document.querySelector('#ampLink') as HTMLAnchorElement
 
-    const link = linkCanonical ? linkCanonical : linkAmp
-
-    if (ampLink) ampLink.href = link.href
-    if (toggleLink) toggleLink.textContent = link.href
-    if (toggleAnchor) {
+    /* eslint-disable @typescript-eslint/no-unnecessary-condition */
+    let link = linkCanonical
+    if (linkCanonical === null) {
+      link = linkAmp
+    }
+    if (ampLink !== null) ampLink.href = link.href
+    if (toggleLink !== null) toggleLink.textContent = link.href
+    if (toggleAnchor !== null) {
       toggleAnchor.href = link.href
       toggleAnchor.textContent = link.href
     }
+    /* eslint-enable @typescript-eslint/no-unnecessary-condition */
     console.info(router)
   })
   useEffect(() => {
     console.log('useEffect empty array ')
   }, []) // the empty array will call useEffect only for first time while loading the component
-
-  const isAmp = useAmp()
-  const router = useRouter()
-  const { locale } = router
 
   return (
     <main>
@@ -92,7 +95,7 @@ const One = (props: Props): OverNextComponentType => {
               <a id='toggleLink'>...Loading</a>
             </Link>
             <br />
-            <a id='toggleAnchor' href='foo'>
+            <a href='foo' id='toggleAnchor'>
               ...Loading
             </a>
           </span>
@@ -104,9 +107,7 @@ const One = (props: Props): OverNextComponentType => {
             <a>View Non-AMP Version</a>
           </Link>
         ) : (
-          <a
-            href={locale ? `/${locale}/hybrid/one?amp=1` : '/hybrid/one?amp=1'}
-          >
+          <a href={`/${locale ?? 'en'}/hybrid/one?amp=1`}>
             view {locale} amp version via a
           </a>
         )}
@@ -114,5 +115,5 @@ const One = (props: Props): OverNextComponentType => {
     </main>
   )
 }
-
+export { config }
 export default One

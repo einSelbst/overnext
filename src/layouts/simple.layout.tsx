@@ -1,7 +1,9 @@
-export default function SimpleLayout({
+const SimpleLayout = ({
   children,
 }: {
-  children: React.ReactNode
-}): JSX.Element {
-  return <main style={{ border: '4px dashed red' }}>{children}</main>
-}
+  readonly children: React.ReactChild
+}): ComponentReturnType => (
+  <main style={{ border: '4px dashed red' }}>{children}</main>
+)
+
+export default SimpleLayout

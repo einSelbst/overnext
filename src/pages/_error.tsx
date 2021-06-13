@@ -1,10 +1,14 @@
-import { NextPageContext } from 'next'
-import NextError, { ErrorProps } from 'next/error'
+import type { NextPageContext } from 'next'
+import type { ErrorProps } from 'next/error'
+import NextError from 'next/error'
 
 /**
  * <ErrorPage />
  */
-const _error = ({ statusCode, title }: ErrorProps): JSX.Element => (
+const _error = ({
+  statusCode,
+  title,
+}: Readonly<ErrorProps>): ComponentReturnType => (
   <NextError statusCode={statusCode} title={title} />
 )
 

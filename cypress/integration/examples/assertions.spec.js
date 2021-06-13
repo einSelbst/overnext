@@ -70,7 +70,7 @@ context('Assertions', () => {
         .should($p => {
           // https://on.cypress.io/$
           // return an array of texts from all of the p's
-          // @ts-ignore TS6133 unused variable
+          // @ts-expect-error TS6133 unused variable
           const texts = $p.map((index, element) => Cypress.$(element).text())
 
           // jquery map returns jquery object
@@ -97,7 +97,7 @@ context('Assertions', () => {
         .should($div => {
           expect($div).to.have.length(1)
 
-          const className = $div[0].className
+          const { className } = $div[0]
 
           expect(className).to.match(/heading-/)
         })
@@ -117,9 +117,9 @@ context('Assertions', () => {
             throw new Error('Did not find 1 element')
           }
 
-          const className = $div[0].className
+          const { className } = $div[0]
 
-          if (!/heading-/.test(className)) {
+          if (!className.includes('heading-')) {
             throw new Error(`Could not find class "heading-" in ${className}`)
           }
         })
@@ -130,7 +130,7 @@ context('Assertions', () => {
        * Text from the first element.
        * @type {string}
        */
-      let text
+      let text = ''
 
       /**
        * Normalizes passed text,
@@ -158,8 +158,8 @@ context('Assertions', () => {
 
     it('assert - assert shape of an object', () => {
       const person = {
-        name: 'Joe',
         age: 20,
+        name: 'Joe',
       }
 
       assert.isObject(person, 'value is object')

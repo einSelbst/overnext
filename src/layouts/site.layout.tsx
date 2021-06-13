@@ -1,8 +1,7 @@
 import Link from 'next/link'
-import * as React from 'react'
 
-interface Props {
-  children: React.ReactNode
+type Props = {
+  readonly children: React.ReactNode
 }
 
 const SiteLayout = ({ children }: Props) => (
@@ -13,11 +12,11 @@ const SiteLayout = ({ children }: Props) => (
           <nav title='Main Navigation'>
             <div className='py-4 flex-shrink-0 flex items-center'>
               <img
-                className='h-8 w-8'
-                src='/icons/safari-pinned-tab.svg'
                 alt='Logo Icon'
-                width='32'
+                className='h-8 w-8'
                 height='32'
+                src='/icons/safari-pinned-tab.svg'
+                width='32'
               />
               <Link href='/'>
                 <a className='ml-8 font-medium text-gray-900'>Home</a>
@@ -32,11 +31,11 @@ const SiteLayout = ({ children }: Props) => (
               <label htmlFor='search-local'>
                 <span>Find settings</span>
                 <input
+                  className='block w-full border border-gray-300 rounded-lg bg-gray-100 px-3 py-2 leading-tight focus:outline-none focus:border-gray-600 focus:bg-white'
+                  id='search-local'
+                  placeholder='Search...'
                   title='Search again'
                   type='search'
-                  id='search-local'
-                  className='block w-full border border-gray-300 rounded-lg bg-gray-100 px-3 py-2 leading-tight focus:outline-none focus:border-gray-600 focus:bg-white'
-                  placeholder='Search...'
                 />
               </label>
             </div>

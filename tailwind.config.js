@@ -1,11 +1,12 @@
 module.exports = {
   darkMode: 'class', // or 'media' or false
   future: {
+    applyComplexClasses: true,
+    purgeLayersByDefault: true,
     removeDeprecatedGapUtilities: true,
     standardFontWeights: true,
-    purgeLayersByDefault: true,
-    applyComplexClasses: true,
   },
+  plugins: [],
   purge: {
     content: [
       './src/layouts/**/*.{js,ts,jsx,tsx}',
@@ -24,5 +25,4 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
 }

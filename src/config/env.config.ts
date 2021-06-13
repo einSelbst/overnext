@@ -3,17 +3,17 @@ const baseUrl2 = (): string => {
   console.log('evaluating base URL in env config')
 
   if (process.env.VERCEL === '1') {
-    return `https://${process.env.VERCEL_URL as string}`
+    return `https://${process.env.VERCEL_URL ?? ''}`
   }
   if (process.env.NETLIFY === 'true') {
-    return `https://${process.env.DEPLOY_PRIME_URL as string}`
+    return `https://${process.env.DEPLOY_PRIME_URL ?? ''}`
   }
   return 'example.com'
 }
 
-export default {
-  PRODUCTION: process.env.NODE_ENV === 'production',
+const APP_ENV = {
   DEVELOPMENT: process.env.NODE_ENV === 'development',
+  PRODUCTION: process.env.NODE_ENV === 'production',
 
   /**
    * Determines if we are running on server or in the client.
@@ -32,3 +32,5 @@ export default {
   SITE_URL: process.env.URL ?? 'https://overnext.vercel.app',
   SITE_URL2: baseUrl2(),
 }
+
+export default APP_ENV

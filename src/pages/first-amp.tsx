@@ -1,8 +1,7 @@
 /* istanbul ignore next */
-export const config = { amp: true }
+const config = { amp: true }
 
-function About(): JSX.Element {
-  return <h1>My AMP About Page!</h1>
-}
+const About = (): JSX.Element => <h1>My AMP About Page!</h1>
 
+export { config }
 export default About

@@ -1,13 +1,13 @@
-import { NextPage } from 'next'
+import type { NextPage } from 'next'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import * as React from 'react'
+
 import { getLayout as getSiteLayout } from './site.layout'
 
 type ActiveLinkProps = {
-  children: React.ReactNode
-  href: string
-  className?: string
+  readonly children: React.ReactNode
+  readonly href: string
+  readonly className?: string
 }
 
 const ActiveLink = ({ children, href, className = '' }: ActiveLinkProps) => {
@@ -26,7 +26,12 @@ const ActiveLink = ({ children, href, className = '' }: ActiveLinkProps) => {
     </Link>
   )
 }
-const AccountSettingsLayout = ({ children }: { children: React.ReactNode }) => (
+
+const AccountSettingsLayout = ({
+  children,
+}: {
+  readonly children: React.ReactNode
+}) => (
   <div className='max-w-xl mx-auto px-8'>
     <h1 className='text-2xl text-gray-900 font-semibold'>Account Settings</h1>
 
@@ -38,23 +43,23 @@ const AccountSettingsLayout = ({ children }: { children: React.ReactNode }) => (
         Basic Information
       </ActiveLink>
 
-      <ActiveLink href='/account-settings/profile' className='ml-10'>
+      <ActiveLink className='ml-10' href='/account-settings/profile'>
         Profile
       </ActiveLink>
 
-      <ActiveLink href='/account-settings/team-settings' className='ml-10'>
+      <ActiveLink className='ml-10' href='/account-settings/team-settings'>
         Team Settings
       </ActiveLink>
 
-      <ActiveLink href='/account-settings/billing' className='ml-10'>
+      <ActiveLink className='ml-10' href='/account-settings/billing'>
         Billing
       </ActiveLink>
 
-      <ActiveLink href='/account-settings/notifications' className='ml-10'>
+      <ActiveLink className='ml-10' href='/account-settings/notifications'>
         Notifications
       </ActiveLink>
 
-      <ActiveLink href='/account-settings/security' className='ml-10'>
+      <ActiveLink className='ml-10' href='/account-settings/security'>
         Security
       </ActiveLink>
     </div>

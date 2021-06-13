@@ -1,11 +1,12 @@
+import type { OverNextComponentType } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 
-export const Home = (): JSX.Element => (
+export const Home = (): OverNextComponentType => (
   <div className='container'>
     <Head>
       <title>The Egg</title>
-      <meta name='description' content='A page about life on earth' />
+      <meta content='A page about life on earth' name='description' />
     </Head>
 
     <main>
@@ -22,45 +23,46 @@ export const Home = (): JSX.Element => (
           A short story
         </h2>
         <iframe
-          width='560'
-          height='315'
-          src='https://www.youtube-nocookie.com/embed/h6fcK_fRYaI'
-          title='YouTube video player'
           allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
           allowFullScreen
+          height='315'
           loading='lazy'
-        ></iframe>
+          src='https://www.youtube-nocookie.com/embed/h6fcK_fRYaI'
+          title='YouTube video player'
+          width='560'
+        />
       </div>
 
       <button
         data-cy='test-button'
-        type='button'
-        onClick={() => {
-          window.alert('With typescript and Jest')
+        // eslint-disable-next-line react/jsx-no-bind
+        onClick={(): void => {
+          window.alert('With typescript and Jest') // eslint-disable-line no-alert
         }}
+        type='button'
       >
         Test Button
       </button>
 
       <div className='grid'>
-        <a href='https://nextjs.org/docs' className='card'>
+        <a className='card' href='https://nextjs.org/docs'>
           <h3>Documentation &rarr;</h3>
           <p>Find in-depth information about Next.js features and API.</p>
         </a>
 
-        <a href='https://nextjs.org/docs/getting-started' className='card'>
+        <a className='card' href='https://nextjs.org/docs/getting-started'>
           <h3>Learn &rarr;</h3>
           <p>Learn about Next.js in an interactive course with quizzes!</p>
         </a>
 
         <Link href='/legal' locale='fr'>
-          <a data-cy='fr-legal' className='card'>
+          <a className='card' data-cy='fr-legal'>
             <h3>Legal &rarr;</h3>
             <p>Discover and enjoy the depths of legal issues.</p>
           </a>
         </Link>
 
-        <a href='https://vercel.com/import?filter=next.js' className='card'>
+        <a className='card' href='https://vercel.com/import?filter=next.js'>
           <h3>Deploy &rarr;</h3>
           <p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
         </a>
@@ -71,7 +73,7 @@ export const Home = (): JSX.Element => (
         background: #0072ed;
       }
     `}</style>
-    <style jsx global>{`
+    <style global jsx>{`
       html,
       body {
         color: #000;

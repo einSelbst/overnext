@@ -2,9 +2,9 @@
  * This page uses functions instead of const for
  * `getStaticProps` and `getStaticPaths`
  */
-// eslint-disable-next-line unicorn/prefer-node-protocol
-import { ParsedUrlQuery } from 'querystring'
-import {
+import type { ParsedUrlQuery } from 'querystring'
+
+import type {
   GetStaticPathsContext,
   GetStaticPathsResult,
   GetStaticPropsContext,
@@ -13,15 +13,15 @@ import {
 } from 'next'
 
 /* istanbul ignore next */
-export const config = {
+const config = {
   amp: 'hybrid',
 }
 
-interface StaticPathParameters extends ParsedUrlQuery {
-  id: string
+type StaticPathParameters = ParsedUrlQuery & {
+  readonly id: string
 }
 
-export async function getStaticPaths(
+async function getStaticPaths(
   _context: GetStaticPathsContext
 ): Promise<GetStaticPathsResult<StaticPathParameters>> {
   await Promise.resolve('async needs await')
@@ -39,14 +39,14 @@ export async function getStaticPaths(
   }
 }
 
-interface PostProps {
-  id: string | string[] | undefined
+type PostProps = {
+  readonly id: string[] | string | undefined
 }
 
 /* export async function getStaticProps ({ */
 /* params, */
 /* }: GetStaticPropsContext): Promise<GetStaticPropsResult<PostProps>> { */
-export async function getStaticProps(
+async function getStaticProps(
   context: GetStaticPropsContext
 ): Promise<GetStaticPropsResult<PostProps>> {
   await Promise.resolve('async needs await')
@@ -57,16 +57,15 @@ export async function getStaticProps(
   }
 }
 
-function Post({
+const Post = ({
   id,
-}: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element {
+}: Readonly<InferGetStaticPropsType<typeof getStaticProps>>): JSX.Element => (
   // function Post ( props: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element {
-  return (
-    <div>
-      <h1>My AMP Post Page!</h1>
-      <h2>PostID: {id}</h2>
-    </div>
-  )
-}
+  <div>
+    <h1>My AMP Post Page!</h1>
+    <h2>PostID: {id}</h2>
+  </div>
+)
 
+export { config, getStaticPaths, getStaticProps }
 export default Post
