@@ -60,8 +60,8 @@ checkPaths = ['/']
 # optional config
 # ignoreDirectories = ['/admin']  # explicitly ignore these directories
 # resultMode = "warn" # is "error" by default
-[[plugins]]
-package = "netlify-plugin-html-validate"
+# [[plugins]]
+# package = "netlify-plugin-html-validate"
 
 [[plugins]]
 package = "netlify-plugin-checklinks"
