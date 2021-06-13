@@ -47,15 +47,13 @@ const sendMetric = async ({
  * Web Vitals
  * @see {@link https://www.freecodecamp.org/news/how-to-measure-next-js-web-vitals-using-quickmetrics/}
  */
-const reportWebVitals = (metric: {
+const reportWebVitals = async (metric: {
   readonly name: string
   readonly value: string
-}): void => {
+}): Promise<void> => {
   // I can only send 5 metrics to free quickmetrics account
   if (metric.name !== 'Next.js-hydration') {
-    sendMetric(metric).catch(error => {
-      console.error(error)
-    })
+    await sendMetric(metric)
   }
   console.log(metric) // eslint-disable-line no-console
 }
