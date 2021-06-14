@@ -46,8 +46,7 @@ const InlineLayout = ({
     </main>
 
     <aside
-      style={{ background: 'darkslateblue', color: 'lightgoldenrodyellow' }}
-    >
+      style={{ background: 'darkslateblue', color: 'lightgoldenrodyellow' }}>
       <p>Something which is supposed to be on the side</p>
     </aside>
 

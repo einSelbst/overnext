@@ -51,14 +51,12 @@ const AccountSettingsBasicInformation = (): OverNextComponentType => (
     <div className='border-t-2 border-gray-200 px-0 py-5 flex justify-end'>
       <button
         className='px-4 py-3 leading-none font-semibold rounded-lg bg-gray-300 text-gray-900 hover:bg-gray-400 focus:outline-none focus:bg-gray-400'
-        type='button'
-      >
+        type='button'>
         Cancel
       </button>
       <button
         className='ml-4 px-6 py-3 leading-none font-semibold rounded-lg bg-gray-800 text-white hover:bg-gray-900 focus:outline-none focus:bg-gray-900'
-        type='button'
-      >
+        type='button'>
         Save
       </button>
     </div>

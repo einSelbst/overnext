@@ -39,8 +39,7 @@ export const Home = (): OverNextComponentType => (
         onClick={(): void => {
           window.alert('With typescript and Jest') // eslint-disable-line no-alert
         }}
-        type='button'
-      >
+        type='button'>
         Test Button
       </button>
 
