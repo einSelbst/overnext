@@ -46,9 +46,9 @@ package = "@netlify/plugin-nextjs"
 # runs Cypress tests against the deployed URL
 # package = "netlify-plugin-cypress"
 
-[plugins.inputs]
-record = true
-spec = "cypress/integration/smoke/*.js"
+# [plugins.inputs]
+# record = true
+# spec = "cypress/integration/smoke/*.js"
 
 # pa11y config
 [[plugins]]
