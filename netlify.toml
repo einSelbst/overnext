@@ -44,7 +44,7 @@ package = "@netlify/plugin-nextjs"
 
 [[plugins]]
 # runs Cypress tests against the deployed URL
-package = "netlify-plugin-cypress"
+# package = "netlify-plugin-cypress"
 
 [plugins.inputs]
 record = true
