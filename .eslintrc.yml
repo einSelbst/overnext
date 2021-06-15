@@ -32,8 +32,6 @@ extends:
   - plugin:json-schema-validator/recommended
   - plugin:toml/standard
   - plugin:@next/next/recommended
-  # - next
-  # - next/core-web-vitals
   - prettier
 env:
   es6: true
