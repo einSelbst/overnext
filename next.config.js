@@ -21,6 +21,12 @@ const nextConfiguration = {
     platform: process.env.VERCEL === '1' ? 'Vercel' : 'Netlify', // just a test
   },
 
+  eslint: {
+    // Warning: Dangerously allow production builds to successfully complete even if
+    // your project has ESLint errors. ... I don't want a production dependency on eslint
+    ignoreDuringBuilds: true,
+  },
+
   // @see {@link https://github.com/vercel/next.js/blob/canary/packages/next/next-server/server/config-shared.ts#L68}
   experimental: {
     // plugins?: boolean;
