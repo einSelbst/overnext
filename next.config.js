@@ -40,9 +40,7 @@ const nextConfiguration = {
     /* gzipSize: true, */
   },
 
-  future: {
-    webpack5: true,
-  },
+  future: {},
 
   i18n: {
     defaultLocale: 'en',
