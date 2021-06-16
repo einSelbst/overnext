@@ -6,7 +6,8 @@ import dynamic from 'next/dynamic'
 import Head from 'next/head'
 
 /* import 'styles/main.css' // tailwind */
-import { ENV, SEO } from 'config'
+import ENV from 'config/env.config'
+import SEO from 'config/seo.config'
 import DefaultLayout from 'layouts/default.layout'
 import SiteLayout from 'layouts/site.layout'
 import 'styles/global.scss' // eslint-disable-line import/no-unassigned-import
@@ -67,10 +68,12 @@ const reportWebVitals = async (metric: {
  * @see {@link https://github.com/vercel/next.js/blob/0af3b526408bae26d6b3f8cab75c4229998bf7cb/examples/with-dynamic-import/pages/index.js }
  */
 const A11yLinter = dynamic(
+  /* eslint-disable import/max-dependencies */
   import(
     /* webpackChunkName: "axeHelper" */
     'components/helper/axe'
   ),
+  /* eslint-enable import/max-dependencies */
   { ssr: false }
 )
 

@@ -240,7 +240,7 @@ info: Display info about the scripts
 - [Custom `App`](https://nextjs.org/docs/advanced-features/custom-app)
 - [Custom `Document`](https://nextjs.org/docs/advanced-features/custom-document)
 - [Custom Error Pages](https://nextjs.org/docs/advanced-features/custom-error-page)
-- [module path aliases](https://nextjs.org/docs/advanced-features/module-path-aliases)
+- [Absolute imports and module path aliases](https://nextjs.org/docs/advanced-features/module-path-aliases), so far no need for path aliases
 - [Internationalized Routing](https://nextjs.org/docs/advanced-features/i18n-routing)
 - [AMP Support](https://nextjs.org/docs/advanced-features/amp-support/introduction), but [not for long](https://www.lafoo.com/the-end-of-amp/)
 - [Measuring performance](https://nextjs.org/docs/advanced-features/measuring-performance)
@@ -389,6 +389,15 @@ When I actually started using them I had some problems:
 - also `prop-types` itself seem to have an [unclear](https://github.com/facebook/prop-types/issues/337#issuecomment-791013311) [future](https://github.com/facebook/prop-types/issues/249)
 
 I might still use prop-types in case I encounter a situation where I get much benefit from the runtime type checking, but then I would only use it for this specific case.
+
+### Typescript Barrel
+
+Using an `index.ts` file to bundle multiple submodules is called 'Barreling'.
+This can cause circular dependency issues as it happened for me because I was using the `env.config` insided `seo.config`.
+Also it might affect Webpack's ability to chunk the code.
+
+- [Gitbook on barrel](https://basarat.gitbook.io/typescript/main-1/barrel)
+-
 
 ### Linter
 

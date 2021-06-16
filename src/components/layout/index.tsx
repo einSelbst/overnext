@@ -1,2 +1,2 @@
-export * from './navigation'
-export * from './footer'
+export { default as Navigation } from './navigation'
+export { default as Footer } from './footer'
