@@ -390,6 +390,15 @@ When I actually started using them I had some problems:
 
 I might still use prop-types in case I encounter a situation where I get much benefit from the runtime type checking, but then I would only use it for this specific case.
 
+### Typescript Barrel
+
+Using an `index.ts` file to bundle multiple submodules is called 'Barreling'.
+This can cause circular dependency issues as it happened for me because I was using the `env.config` insided `seo.config`.
+Also it might affect Webpack's ability to chunk the code.
+
+- [Gitbook on barrel](https://basarat.gitbook.io/typescript/main-1/barrel)
+-
+
 ### Linter
 
 Initially I used [Prettier-Standard](https://github.com/sheerun/prettier-standard)

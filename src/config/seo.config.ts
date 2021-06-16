@@ -1,4 +1,4 @@
-import { ENV } from '.'
+import ENV from 'config/env.config'
 
 const SEO_CONFIG = {
   description: 'Basically nothing but DX',
