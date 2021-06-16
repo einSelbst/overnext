@@ -19,7 +19,7 @@ specifiers:
   '@cypress/code-coverage': 3.9.6
   '@istanbuljs/nyc-config-typescript': 1.0.1
   '@next/bundle-analyzer': 10.2.3
-  '@next/eslint-plugin-next': 10.2.3
+  '@next/eslint-plugin-next': 11.0.0
   '@size-limit/preset-app': 4.12.0
   '@testing-library/react': 11.2.7
   '@types/babel__core': 7.1.14
@@ -47,7 +47,7 @@ specifiers:
   cypress-watch-and-reload: 1.3.9
   dependency-version-badge: 1.10.0
   eslint: 7.28.0
-  eslint-config-next: 10.2.3
+  eslint-config-next: 11.0.0
   eslint-config-prettier: 8.3.0
   eslint-find-rules: 3.6.1
   eslint-import-resolver-typescript: 2.4.0
@@ -141,7 +141,7 @@ devDependencies:
   '@cypress/code-coverage': 3.9.6_cypress@7.5.0
   '@istanbuljs/nyc-config-typescript': 1.0.1_40f74ebf3b42f8d97356b2262606f547
   '@next/bundle-analyzer': 10.2.3
-  '@next/eslint-plugin-next': 10.2.3
+  '@next/eslint-plugin-next': 11.0.0
   '@size-limit/preset-app': 4.12.0_size-limit@4.12.0
   '@testing-library/react': 11.2.7_react-dom@17.0.2+react@17.0.2
   '@types/babel__core': 7.1.14
@@ -164,7 +164,7 @@ devDependencies:
   cypress-watch-and-reload: 1.3.9
   dependency-version-badge: 1.10.0
   eslint: 7.28.0
-  eslint-config-next: 10.2.3_f2751d9c7d058c6a710be2755ae79ce8
+  eslint-config-next: 11.0.0_f2751d9c7d058c6a710be2755ae79ce8
   eslint-config-prettier: 8.3.0_eslint@7.28.0
   eslint-find-rules: 3.6.1_eslint@7.28.0
   eslint-import-resolver-typescript: 2.4.0_865bf980219d6c4beaad3708398fa6e4
@@ -2572,8 +2572,8 @@ packages:
     resolution: {integrity: sha512-VKpmDvTYeCpEQjREg3J4pCmVs/QjEzoLmkM8shGFK6e9AmFd0G9QXOL8HGA8qKhy/XmNb7dHeMqrcMiBua4OgA==}
     dev: false
 
-  /@next/eslint-plugin-next/10.2.3:
-    resolution: {integrity: sha512-XkYm3cMxY2RZgbGyZLDN3vR9StFyiQVdwdS/EL6NxOerzt0To03/coY22p4jcFLtLYlQxAivJRicMTDNhRzPog==}
+  /@next/eslint-plugin-next/11.0.0:
+    resolution: {integrity: sha512-fPZ0904yY1box6bRpR9rJqIkNxJdvzzxH7doXS+cdjyBAdptMR7wj3mcx1hEikBHzWduU8BOXBvRg2hWc09YDQ==}
     dev: true
 
   /@next/polyfill-module/11.0.0:
@@ -5838,8 +5838,8 @@ packages:
       source-map: 0.6.1
     dev: true
 
-  /eslint-config-next/10.2.3_f2751d9c7d058c6a710be2755ae79ce8:
-    resolution: {integrity: sha512-ubpv6YHqd3UFVPTz8z+Nih+H77rORLXrB7ZinIhrI7ZzZn5rvZ6V7AkcVrI8mVoYVyOo0qZ7vN8D2/Q7vxLMfg==}
+  /eslint-config-next/11.0.0_f2751d9c7d058c6a710be2755ae79ce8:
+    resolution: {integrity: sha512-pmatg4zqb5Vygu2HrSPxbsCBudXO9OZQUMKQCyrPKRvfL8PJ3lOIOzzwsiW68eMPXOZwOc1yxTRZWKNY8OJT0w==}
     peerDependencies:
       eslint: ^7.23.0
       next: '>=10.2.0'
@@ -5848,12 +5848,13 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@next/eslint-plugin-next': 10.2.3
+      '@next/eslint-plugin-next': 11.0.0
       '@rushstack/eslint-patch': 1.0.6
       '@typescript-eslint/parser': 4.27.0_eslint@7.28.0+typescript@4.3.2
       eslint: 7.28.0
       eslint-import-resolver-node: 0.3.4
       eslint-plugin-import: 2.23.4_eslint@7.28.0
+      eslint-plugin-jsx-a11y: 6.4.1_eslint@7.28.0
       eslint-plugin-react: 7.24.0_eslint@7.28.0
       eslint-plugin-react-hooks: 4.2.0_eslint@7.28.0
       next: 11.0.0_b0918f6d8cea1acc457a984b2bdc4555
@@ -13161,7 +13162,7 @@ packages:
       workbox-core: 6.1.5
     dev: false
 
-  /workbox-build/6.1.5_@types+babel__@types+babel__core@7.1.14:
+  /workbox-build/6.1.5_@types+babel__core@7.1.14:
     resolution: {integrity: sha512-P+fakR5QFVqJN9l9xHVXtmafga72gh9I+jM3A9HiB/6UNRmOAejXnDgD+RMegOHgQHPwnB44TalMToFaXKWIyA==}
     engines: {node: '>=10.0.0'}
     dependencies:
@@ -13298,7 +13299,7 @@ packages:
       upath: 1.2.0
       webpack: 5.39.0
       webpack-sources: 1.4.3
-      workbox-build: 6.1.5_@types+babel__@types+babel__core@7.1.14
+      workbox-build: 6.1.5_@types+babel__core@7.1.14
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
