@@ -22,8 +22,10 @@ const nextConfiguration = {
   },
 
   eslint: {
-    // Warning: Dangerously allow production builds to successfully complete even if
-    // your project has ESLint errors. ... I don't want a production dependency on eslint
+    /*
+     * Warning: Dangerously allow production builds to successfully complete even if
+     * your project has ESLint errors. ... I don't want a production dependency on eslint
+     */
     ignoreDuringBuilds: true,
   },
 
