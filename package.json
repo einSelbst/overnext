@@ -112,7 +112,7 @@
     "sass": "1.35.1",
     "tailwindcss": "2.1.4",
     "tslib": "2.3.0",
-    "typescript": "4.3.2",
+    "typescript": "4.3.3",
     "webpack": "5.39.0"
   },
   "devDependencies": {
@@ -183,7 +183,7 @@
     "standard-version": "9.3.0",
     "start-server-and-test": "1.12.5",
     "ts-node": "10.0.0",
-    "typedoc": "0.20.36",
+    "typedoc": "0.20.37",
     "typescript-eslint-language-service": "4.1.4",
     "typesync": "0.8.0"
   },
