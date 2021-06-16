@@ -26,8 +26,9 @@ const One = (props: Props): OverNextComponentType => {
   const router = useRouter()
   const { locale } = router
 
+  // eslint-disable-next-line max-statements
   useEffect(() => {
-    console.log('useEffect default')
+    /* console.log('useEffect default') */
 
     const linkCanonical = document.querySelector(
       'link[rel="canonical"]'
@@ -55,10 +56,10 @@ const One = (props: Props): OverNextComponentType => {
       toggleAnchor.textContent = link.href
     }
     /* eslint-enable @typescript-eslint/no-unnecessary-condition */
-    console.info(router)
+    /* console.info(router) */
   })
   useEffect(() => {
-    console.log('useEffect empty array ')
+    /* console.log('useEffect empty array ') */
   }, []) // the empty array will call useEffect only for first time while loading the component
 
   return (
