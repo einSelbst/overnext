@@ -240,7 +240,7 @@ info: Display info about the scripts
 - [Custom `App`](https://nextjs.org/docs/advanced-features/custom-app)
 - [Custom `Document`](https://nextjs.org/docs/advanced-features/custom-document)
 - [Custom Error Pages](https://nextjs.org/docs/advanced-features/custom-error-page)
-- [module path aliases](https://nextjs.org/docs/advanced-features/module-path-aliases)
+- [Absolute imports and module path aliases](https://nextjs.org/docs/advanced-features/module-path-aliases), so far no need for path aliases
 - [Internationalized Routing](https://nextjs.org/docs/advanced-features/i18n-routing)
 - [AMP Support](https://nextjs.org/docs/advanced-features/amp-support/introduction), but [not for long](https://www.lafoo.com/the-end-of-amp/)
 - [Measuring performance](https://nextjs.org/docs/advanced-features/measuring-performance)

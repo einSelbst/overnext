@@ -13,13 +13,6 @@
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
-    "paths": {
-      "config": ["config/"],
-      "components/*": ["components/*"],
-      "layouts/*": ["layouts/*"],
-      "styles/*": ["styles/*"],
-      "utils/*": ["utils/*"]
-    },
     "plugins": [
       {
         "name": "typescript-eslint-language-service",
