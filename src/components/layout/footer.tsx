@@ -40,6 +40,15 @@ const Netlify = () => (
   </>
 )
 
+const Amplify = () => (
+  <a
+    href='https://main.d2y25he53ruhoy.amplifyapp.com'
+    rel='noopener noreferrer'
+    target='_blank'>
+    Amplify
+  </a>
+)
+
 const Footer = (): ComponentReturnType => (
   <footer>
     {process.env.platform === 'vercel' ? <Vercel /> : <Netlify />}
