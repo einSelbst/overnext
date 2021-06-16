@@ -62,4 +62,4 @@ const Navigation = (props: Props): ComponentReturnType => (
   </>
 )
 
-export { Navigation }
+export default Navigation

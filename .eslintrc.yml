@@ -187,7 +187,11 @@ rules:
       alphabetize:
         order: asc # sort in ascending order. Options: ['ignore', 'asc', 'desc']
         caseInsensitive: false # ignore case. Options: [true, false]
-  import/prefer-default-export: warn
+
+  # difficult topic,
+  # @see https://github.com/airbnb/javascript/issues/1365
+  # @see https://github.com/ni/javascript-styleguide/issues/39#issuecomment-856246109
+  import/prefer-default-export: error
 
   # disable some import rules
   import/no-commonjs: off

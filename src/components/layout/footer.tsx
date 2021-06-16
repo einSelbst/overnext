@@ -48,4 +48,4 @@ const Footer = (): ComponentReturnType => (
   </footer>
 )
 
-export { Footer }
+export default Footer
