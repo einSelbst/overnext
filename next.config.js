@@ -8,6 +8,22 @@ const { withPlugins, optional } = require('next-compose-plugins')
 const withPWA = require('next-pwa')
 const { PHASE_DEVELOPMENT_SERVER } = require('next/constants')
 
+const VERCEL = 'VERCEL'
+const NETLIFY = 'NETLIFY'
+const AMPLIFY = 'AMPLIFY'
+const LOCALHOST = 'LOCALHOST'
+
+const detectPlatform = () => {
+  if (process.env.VERCEL === '1') {
+    return VERCEL
+  } else if (process.env.NETLIFY === 'true') {
+    return NETLIFY
+  } else if (process.env.CODEBUILD_CI === 'true') {
+    return AMPLIFY
+  }
+  return LOCALHOST
+}
+
 /**
  * @type {import('next/dist/next-server/server/config').NextConfig}
  */
@@ -18,9 +34,10 @@ const nextConfiguration = {
 
   env: {
     customKey: 'my-value',
-    platform: process.env.VERCEL === '1' ? 'Vercel' : 'Netlify', // just a test
+    // just a test
+    platform: detectPlatform(),
+    platform1: process.env.VERCEL === '1' ? 'Vercel' : 'Netlify',
   },
-
   eslint: {
     /*
      * Warning: Dangerously allow production builds to successfully complete even if

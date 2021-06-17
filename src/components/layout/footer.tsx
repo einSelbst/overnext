@@ -1,3 +1,11 @@
+import ENV from 'config/env.config'
+
+const NOTIFICATION_STATES: Record<string, string> = {
+  error: 'Something went wrong ...',
+  info: 'Did you know? ...',
+  warning: 'Be careful here ...',
+} as const
+
 const Vercel = () => (
   <a href='https://vercel.com' rel='noopener noreferrer' target='_blank'>
     Powered by{' '}
@@ -49,12 +57,34 @@ const Amplify = () => (
   </a>
 )
 
-const Footer = (): ComponentReturnType => (
-  <footer>
-    {process.env.platform === 'vercel' ? <Vercel /> : <Netlify />}
-    <p>Hosted on {process.env.platform}</p>
-    <p>©Copyright 2050 by nobody. All rights reversed.</p>
-  </footer>
-)
+const HOSTER: Record<string, React.ReactNode> = {
+  AMPLIFY: <Amplify />,
+  LOCALHOST: <span>Localhost</span>,
+  NETLIFY: <Netlify />,
+  VERCEL: <Vercel />,
+}
+
+const Footer = ({
+  platform = 'VERCEL',
+  notification = 'error',
+}: {
+  platform?: keyof typeof HOSTER
+  notification?: keyof typeof NOTIFICATION_STATES
+}): ComponentReturnType => {
+  console.log(HOSTER[platform])
+  console.log(notification)
+  console.log(platform)
+  console.log(HOSTER.NETLIFY)
+
+  return (
+    <footer>
+      <div>{NOTIFICATION_STATES[notification]}</div>
+      <div>{HOSTER[ENV.PLATFORMX]}</div>
+      <div>{HOSTER.VERCEL}</div>
+      <p>Hosted on {process.env.platform}</p>
+      <p>©Copyright 2050 by nobody. All rights reversed.</p>
+    </footer>
+  )
+}
 
 export default Footer
