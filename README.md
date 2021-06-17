@@ -178,6 +178,7 @@ info: Display info about the scripts
 
 - React [Strict Mode](https://reactjs.org/docs/strict-mode.html) enabled in [development](https://nextjs.org/docs/api-reference/next.config.js/react-strict-mode)
   - ~~[`prop-types`](https://www.npmjs.com/package/prop-types) (for run-time type checking)~~ -> discarded, see [reasons](#prop-types)
+  - not using `defaultProps` on function components because [deprecation incoming](https://github.com/reactjs/rfcs/pull/107)
 - [Typescript](https://www.typescriptlang.org/) (for compile time type checking)
   - with [`tslib`](https://www.npmjs.com/package/tslib) for imports optimization
   - [`typesync`](https://github.com/jeffijoe/typesync) for find dependency typings
@@ -230,6 +231,7 @@ info: Display info about the scripts
 ## Tech Stack
 
 - next.js, who would have thought
+- test branch with preact, btw [inferno](https://github.com/infernojs/inferno) is [not compatible](https://github.com/vercel/next.js/pull/9038) with nextjs
 - WIP: sanity
 
 ## Next.js Configuration
