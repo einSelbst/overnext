@@ -86,7 +86,7 @@ specifiers:
   npm-scripts-info: 0.3.9
   nyc: 15.1.0
   pnpm: 6.7.6
-  postcss: 8.3.4
+  postcss: 8.3.5
   prettier: 2.3.1
   prettier-plugin-sh: 0.6.1
   prettier-plugin-toml: latest
@@ -111,7 +111,7 @@ dependencies:
   '@types/node': 14.17.3
   '@types/react': 17.0.11
   '@types/react-dom': 17.0.7
-  autoprefixer: 10.2.6_postcss@8.3.4
+  autoprefixer: 10.2.6_postcss@8.3.5
   core-js: 3.14.0
   is-ci: 3.0.0
   next: 11.0.0_cb0505d9d134d49841d42fe7abf8524d
@@ -120,11 +120,11 @@ dependencies:
   next-seo: 4.25.1_202b18601d71dc92f6dbf39b46c5242f
   next-sitemap: 1.6.116_next@11.0.0
   next-themes: 0.0.14_202b18601d71dc92f6dbf39b46c5242f
-  postcss: 8.3.4
+  postcss: 8.3.5
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   sass: 1.35.1
-  tailwindcss: 2.1.4_505819627e86648d07c4e196a4237c15
+  tailwindcss: 2.1.4_72be89de93206f86f2d67dd5290ec14d
   tslib: 2.3.0
   typescript: 4.3.3
   webpack: 5.39.0
@@ -3750,7 +3750,7 @@ packages:
     hasBin: true
     dev: true
 
-  /autoprefixer/10.2.6_postcss@8.3.4:
+  /autoprefixer/10.2.6_postcss@8.3.5:
     resolution: {integrity: sha512-8lChSmdU6dCNMCQopIf4Pe5kipkAGj/fvTMslCsih0uHpOrXOPUEVOmYMMqmw3cekQkSD7EhIeuYl5y0BLdKqg==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
@@ -3762,7 +3762,7 @@ packages:
       colorette: 1.2.2
       fraction.js: 4.1.1
       normalize-range: 0.1.2
-      postcss: 8.3.4
+      postcss: 8.3.5
       postcss-value-parser: 4.1.0
     dev: false
 
@@ -10444,13 +10444,13 @@ packages:
       postcss: 8.3.4
     dev: false
 
-  /postcss-nested/5.0.5_postcss@8.3.4:
+  /postcss-nested/5.0.5_postcss@8.3.5:
     resolution: {integrity: sha512-GSRXYz5bccobpTzLQZXOnSOfKl6TwVr5CyAQJUPub4nuRJSOECK5AqurxVgmtxP48p0Kc/ndY/YyS1yqldX0Ew==}
     engines: {node: '>=10.0'}
     peerDependencies:
       postcss: ^8.1.13
     dependencies:
-      postcss: 8.3.4
+      postcss: 8.3.5
       postcss-selector-parser: 6.0.6
     dev: false
 
@@ -10504,6 +10504,15 @@ packages:
       colorette: 1.2.2
       nanoid: 3.1.23
       source-map-js: 0.6.2
+
+  /postcss/8.3.5:
+    resolution: {integrity: sha512-NxTuJocUhYGsMiMFHDUkmjSKT3EdH4/WbGF6GCi1NDGk+vbcUTun4fpbOqaPtD8IIsztA2ilZm2DhYCuyN58gA==}
+    engines: {node: ^10 || ^12 || >=14}
+    dependencies:
+      colorette: 1.2.2
+      nanoid: 3.1.23
+      source-map-js: 0.6.2
+    dev: false
 
   /precinct/7.1.0:
     resolution: {integrity: sha512-I1RkW5PX51/q6Xl39//D7x9NgaKNGHpR5DCNaoxP/b2+KbzzXDNhauJUMV17KSYkJA41CSpwYUPRtRoNxbshWA==}
@@ -12128,7 +12137,7 @@ packages:
       strip-ansi: 6.0.0
     dev: true
 
-  /tailwindcss/2.1.4_505819627e86648d07c4e196a4237c15:
+  /tailwindcss/2.1.4_72be89de93206f86f2d67dd5290ec14d:
     resolution: {integrity: sha512-fh1KImDLg6se/Suaelju/5oFbqq1b0ntagmGLu0aG9LlnNPGHgO1n/4E57CbKcCtyz/VYnvVXUiWmfyfBBZQ6g==}
     engines: {node: '>=12.13.0'}
     hasBin: true
@@ -12137,7 +12146,7 @@ packages:
       postcss: ^8.0.9
     dependencies:
       '@fullhuman/postcss-purgecss': 3.1.3
-      autoprefixer: 10.2.6_postcss@8.3.4
+      autoprefixer: 10.2.6_postcss@8.3.5
       bytes: 3.1.0
       chalk: 4.1.1
       chokidar: 3.5.2
@@ -12155,10 +12164,10 @@ packages:
       normalize-path: 3.0.0
       object-hash: 2.2.0
       parse-glob: 3.0.4
-      postcss: 8.3.4
+      postcss: 8.3.5
       postcss-functions: 3.0.0
       postcss-js: 3.0.3
-      postcss-nested: 5.0.5_postcss@8.3.4
+      postcss-nested: 5.0.5_postcss@8.3.5
       postcss-selector-parser: 6.0.6
       postcss-value-parser: 4.1.0
       pretty-hrtime: 1.0.3
@@ -13169,7 +13178,7 @@ packages:
       workbox-core: 6.1.5
     dev: false
 
-  /workbox-build/6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14:
+  /workbox-build/6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14:
     resolution: {integrity: sha512-P+fakR5QFVqJN9l9xHVXtmafga72gh9I+jM3A9HiB/6UNRmOAejXnDgD+RMegOHgQHPwnB44TalMToFaXKWIyA==}
     engines: {node: '>=10.0.0'}
     dependencies:
@@ -13306,7 +13315,7 @@ packages:
       upath: 1.2.0
       webpack: 5.39.0
       webpack-sources: 1.4.3
-      workbox-build: 6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14
+      workbox-build: 6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
