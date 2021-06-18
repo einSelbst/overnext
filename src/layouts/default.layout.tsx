@@ -7,7 +7,7 @@ const DefaultLayout = ({
 }): ComponentReturnType => (
   <>
     <header>
-      <Navigation error={false} success />
+      <Navigation success error={false} />
     </header>
 
     <aside className='left'>

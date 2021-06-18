@@ -101,7 +101,11 @@ rules:
     - extensions:
         - '.jsx'
         - '.tsx'
-  react/jsx-sort-props: error
+  react/jsx-sort-props:
+    - error
+    - callbacksLast: true
+      shorthandFirst: true
+      reservedFirst: true
   react/function-component-definition:
     - error
     - namedComponents: 'arrow-function'

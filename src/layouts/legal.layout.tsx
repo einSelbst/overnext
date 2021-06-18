@@ -7,7 +7,7 @@ const LegalLayout = ({
 }): ComponentReturnType => (
   <>
     <header>
-      <Navigation error={false} success />
+      <Navigation success error={false} />
     </header>
 
     {children}
