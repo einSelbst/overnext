@@ -33,11 +33,9 @@ const nextConfiguration = {
   },
 
   env: {
-    customKey: 'my-value',
-    // just a test
     platform: detectPlatform(),
-    platform1: process.env.VERCEL === '1' ? 'Vercel' : 'Netlify',
   },
+
   eslint: {
     /*
      * Warning: Dangerously allow production builds to successfully complete even if

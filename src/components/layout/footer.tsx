@@ -1,5 +1,3 @@
-import ENV from 'config/env.config'
-
 const NOTIFICATION_STATES: Record<string, string> = {
   error: 'Something went wrong ...',
   info: 'Did you know? ...',
@@ -93,6 +91,11 @@ const HOSTER: Record<string, React.ReactNode> = {
   VERCEL: <Vercel />,
 }
 
+/**
+ * I show the hoster in the footer. At build time the hoster is determined from the
+ * env vars and memoized in an old-style next.js env var in next.config.js.
+ * This values is used here to render the matching logo and link.
+ */
 const Footer = ({
   _platform = 'VERCEL',
   _notification = 'error',
@@ -103,7 +106,7 @@ const Footer = ({
   <footer>
     <div style={{ display: 'inline-block' }}>
       <p>Hosted on</p>
-      {HOSTER[ENV.PLATFORMX]}
+      {HOSTER[process.env.platform as string]}
     </div>
     <p>©Copyright 2050 by nobody. All rights reversed.</p>
   </footer>

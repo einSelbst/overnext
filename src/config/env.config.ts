@@ -1,19 +1,3 @@
-const VERCEL = 'VERCEL'
-const NETLIFY = 'NETLIFY'
-const AMPLIFY = 'AMPLIFY'
-const LOCALHOST = 'LOCALHOST'
-
-const detectPlatform2 = () => {
-  if (process.env.VERCEL === '1') {
-    return VERCEL
-  } else if (process.env.NETLIFY === 'true') {
-    return NETLIFY
-  } else if (process.env.CODEBUILD_CI === 'true') {
-    return AMPLIFY
-  }
-  return LOCALHOST
-}
-
 const baseUrl2 = (): string => {
   // eslint-disable-next-line no-console
   console.log('evaluating base URL in env config')
@@ -29,8 +13,6 @@ const baseUrl2 = (): string => {
 
 const APP_ENV = {
   DEVELOPMENT: process.env.NODE_ENV === 'development',
-  PLATFORMY: detectPlatform2(),
-  PLATFORMX: process.env.PLATFORM ?? LOCALHOST,
   PRODUCTION: process.env.NODE_ENV === 'production',
 
   /**
