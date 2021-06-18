@@ -6,19 +6,6 @@ const NOTIFICATION_STATES: Record<string, string> = {
   warning: 'Be careful here ...',
 } as const
 
-const Vercel = () => (
-  <a href='https://vercel.com' rel='noopener noreferrer' target='_blank'>
-    <img
-      alt='Visit vercel.com'
-      className='logo'
-      height='24px'
-      src='/logos/vercel-logo.svg'
-      width='106px'
-      style={{ margin: '10px auto' }}
-    />
-  </a>
-)
-
 const Netlify = () => (
   <>
     <a href='https://www.netlify.com' rel='noopener noreferrer' target='_blank'>
@@ -49,21 +36,54 @@ const Netlify = () => (
   </>
 )
 
+const HosterLogoLink = ({
+  href,
+  hoster,
+  logoSrc,
+  logoWidth,
+  logoHeight,
+}: {
+  href: string
+  hoster: string
+  logoSrc: string
+  logoWidth: number
+  logoHeight: string
+}) => (
+  <a href={href} rel='noopener noreferrer' target='_blank'>
+    <img
+      alt={`${hoster} logo`}
+      className='logo'
+      height={logoHeight}
+      src={`/logos/${logoSrc}`}
+      title={`visit ${hoster}`}
+      width={`${logoWidth}px`}
+    />
+    <style jsx>{`
+      img.logo {
+        margin: 11px auto;
+      }
+    `}</style>
+  </a>
+)
+
 const Amplify = () => (
-  <center>
-    <a
-      href='https://main.d2y25he53ruhoy.amplifyapp.com'
-      rel='noopener noreferrer'
-      target='_blank'>
-      <img
-        alt='visit AWS Amplify'
-        className='logo'
-        height='24px'
-        src='/logos/aws-amplify-logo.png'
-        width='169px'
-      />
-    </a>
-  </center>
+  <HosterLogoLink
+    hoster='AWS Amplify'
+    href='https://aws.amazon.com/de/amplify/'
+    logoHeight='24px'
+    logoSrc='aws-amplify-logo.png'
+    logoWidth={169}
+  />
+)
+
+const Vercel = () => (
+  <HosterLogoLink
+    hoster='Vercel'
+    href='https://vercel.com'
+    logoHeight='24px'
+    logoSrc='vercel-logo.svg'
+    logoWidth={106}
+  />
 )
 
 const HOSTER: Record<string, React.ReactNode> = {
@@ -74,19 +94,19 @@ const HOSTER: Record<string, React.ReactNode> = {
 }
 
 const Footer = ({
-  platform = 'VERCEL',
-  notification = 'error',
+  _platform = 'VERCEL',
+  _notification = 'error',
 }: {
-  platform?: keyof typeof HOSTER
-  notification?: keyof typeof NOTIFICATION_STATES
-}): ComponentReturnType => {
-  return (
-    <footer>
+  _platform?: keyof typeof HOSTER
+  _notification?: keyof typeof NOTIFICATION_STATES
+}): ComponentReturnType => (
+  <footer>
+    <div style={{ display: 'inline-block' }}>
       <p>Hosted on</p>
       {HOSTER[ENV.PLATFORMX]}
-      <p>©Copyright 2050 by nobody. All rights reversed.</p>
-    </footer>
-  )
-}
+    </div>
+    <p>©Copyright 2050 by nobody. All rights reversed.</p>
+  </footer>
+)
 
 export default Footer
