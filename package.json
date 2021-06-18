@@ -60,7 +60,7 @@
     "?validate": "echo Validate source code and output files",
     "validate": "pnpm validate:src && pnpm validate:out",
     "?validate:src": "echo Format, lint, type-check & unit test the app",
-    "validate:src": "pnpm format && pnpm lint && pnpm type-check && jest",
+    "validate:src": "pnpm format && pnpm lint:fix && pnpm type-check && jest",
     "?validate:out": "echo Build app, run integration tests & validate generated html",
     "validate:out": "pnpm e2e && pnpm lint:html",
     " ------------------------- Helpers ------------------------- ": "",
