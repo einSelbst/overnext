@@ -183,7 +183,7 @@
     "standard-version": "9.3.0",
     "start-server-and-test": "1.12.5",
     "ts-node": "10.0.0",
-    "typedoc": "0.20.37",
+    "typedoc": "0.21.0",
     "typescript-eslint-language-service": "4.1.4",
     "typesync": "0.8.0"
   },
