@@ -455,7 +455,8 @@ ToDo link to API Docs
 
 ## Credits
 
-...where credits due, thanks to [@bahmutov](https://github.com/bahmutov), [@elliottsj](https://github.com/elliottsj), [Stefan Baumgartner](https://twitter.com/ddprrt), [@ferlopezm94](https://github.com/ferlopezm94),[@iamvishnusankar](https://github.com/iamvishnusankar), [@pacocoursey](https://github.com/pacocoursey), [@thomaseizinger](https://github.com/thomaseizinger), [@sindresorhus](https://github.com/sindresorhus) and all the others whom I copied code from!
+...where credits due, thanks to [@bahmutov](https://github.com/bahmutov), [@elliottsj](https://github.com/elliottsj), [Stefan Baumgartner](https://twitter.com/ddprrt), [@ferlopezm94](https://github.com/ferlopezm94),[@iamvishnusankar](https://github.com/iamvishnusankar),
+[@pacocoursey](https://github.com/pacocoursey), [@thomaseizinger](https://github.com/thomaseizinger), [@sindresorhus](https://github.com/sindresorhus) and all the others whom I copied code from!
 
 ## Related
 
@@ -479,7 +480,6 @@ I should use Github Issues for this but hey.
 - [ ] make use of [Project Wallace](https://www.projectwallace.com/), still wip
 - [ ] [wdyr](https://github.com/welldone-software/why-did-you-render/issues/113) vs preact [1](https://github.com/preactjs/preact/issues/2760)
 - [ ] use ISR - Incremental Static Regeneration ? [opinion](https://www.netlify.com/blog/2021/03/08/incremental-static-regeneration-its-benefits-and-its-flaws/)
-- [ ] wip: enable [unused ESLint rules](https://github.com/alexilyaev/stylelint-find-rules)
 
 ### Documentation ToDo's
 
