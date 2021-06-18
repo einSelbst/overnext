@@ -97,7 +97,7 @@ specifiers:
   source-map-support: 0.5.19
   standard-version: 9.3.0
   start-server-and-test: 1.12.5
-  tailwindcss: 2.2.1
+  tailwindcss: 2.2.2
   ts-node: 10.0.0
   tslib: 2.3.0
   typedoc: 0.21.0
@@ -124,7 +124,7 @@ dependencies:
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   sass: 1.35.1
-  tailwindcss: 2.2.1_f96ad3552c7dac4ec527f0e804dd21b1
+  tailwindcss: 2.2.2_f96ad3552c7dac4ec527f0e804dd21b1
   tslib: 2.3.0
   typescript: 4.3.4
   webpack: 5.39.1
@@ -12117,8 +12117,8 @@ packages:
       strip-ansi: 6.0.0
     dev: true
 
-  /tailwindcss/2.2.1_f96ad3552c7dac4ec527f0e804dd21b1:
-    resolution: {integrity: sha512-97F3NFPyEV/SuteJ9nKL+TcMpEoV6o80Macy/UtSjwIVhpEFCDbRkPBs54l7+aUDLIO75DzZm+vmJ3P/3ifYuA==}
+  /tailwindcss/2.2.2_f96ad3552c7dac4ec527f0e804dd21b1:
+    resolution: {integrity: sha512-OzFWhlnfrO3JXZKHQiqZcb0Wwl3oJSmQ7PvT2jdIgCjV5iUoAyql9bb9ZLCSBI5TYXmawujXAoNxXVfP5Auy/Q==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:
@@ -13161,7 +13161,7 @@ packages:
       workbox-core: 6.1.5
     dev: false
 
-  /workbox-build/6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14:
+  /workbox-build/6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14:
     resolution: {integrity: sha512-P+fakR5QFVqJN9l9xHVXtmafga72gh9I+jM3A9HiB/6UNRmOAejXnDgD+RMegOHgQHPwnB44TalMToFaXKWIyA==}
     engines: {node: '>=10.0.0'}
     dependencies:
@@ -13298,7 +13298,7 @@ packages:
       upath: 1.2.0
       webpack: 5.39.1
       webpack-sources: 1.4.3
-      workbox-build: 6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14
+      workbox-build: 6.1.5_@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__@types+babel__core@7.1.14
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
