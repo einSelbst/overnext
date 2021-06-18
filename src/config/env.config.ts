@@ -29,7 +29,8 @@ const baseUrl2 = (): string => {
 
 const APP_ENV = {
   DEVELOPMENT: process.env.NODE_ENV === 'development',
-  PLATFORMX: detectPlatform2(),
+  PLATFORMY: detectPlatform2(),
+  PLATFORMX: process.env.PLATFORM ?? LOCALHOST,
   PRODUCTION: process.env.NODE_ENV === 'production',
 
   /**
