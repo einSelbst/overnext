@@ -93,8 +93,9 @@ const Dog: NextLayoutPage = (
           </Link>
         ) : (
           <a
-            href={locale === undefined ? '/dog/?amp=1' : `/${locale}/dog?amp=1`}
-          >
+            href={
+              locale === undefined ? '/dog/?amp=1' : `/${locale}/dog?amp=1`
+            }>
             view {locale} amp version
           </a>
         )}

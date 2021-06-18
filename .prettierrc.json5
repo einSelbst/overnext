@@ -107,7 +107,7 @@
    * jsxBracketSameLine: <bool>
    * default: false
    */
-  // jsxBracketSameLine: false,
+  jsxBracketSameLine: true,
 
   /**
    * Arrow Function Parentheses

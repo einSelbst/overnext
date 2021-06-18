@@ -106,6 +106,7 @@ This is more about priorities than about a temporal order.
 ### Tips
 
 - use [volta](https://github.com/volta-cli/volta) for toolchain management (hoping for [pnpm support](https://github.com/volta-cli/volta/issues/737)), see: [install guide](./CONTRIBUTING.md)
+- use [eslint_d](https://github.com/mantoni/eslint_d.js) to speed up eslint, `volta install eslint_d`
 - use [pnpm completion](https://medium.com/pnpm/pnpm-v4-9-comes-with-command-completion-a411715260b4) via `pnpm install-completion`
 - create recommended repo files via [cgx](https://github.com/jeroenouw/cgx)
 - create `README.md` integrate via [README.so template](https://readme.so/editor)
@@ -178,11 +179,12 @@ info: Display info about the scripts
 
 - React [Strict Mode](https://reactjs.org/docs/strict-mode.html) enabled in [development](https://nextjs.org/docs/api-reference/next.config.js/react-strict-mode)
   - ~~[`prop-types`](https://www.npmjs.com/package/prop-types) (for run-time type checking)~~ -> discarded, see [reasons](#prop-types)
+  - not using `defaultProps` on function components because [deprecation incoming](https://github.com/reactjs/rfcs/pull/107)
 - [Typescript](https://www.typescriptlang.org/) (for compile time type checking)
   - with [`tslib`](https://www.npmjs.com/package/tslib) for imports optimization
   - [`typesync`](https://github.com/jeffijoe/typesync) for find dependency typings
   - [TSDoc](https://tsdoc.org/) docstrings to generate [`typedoc`](https://github.com/TypeStrong/typedoc) documentation
-- [Prettier](https://github.com/prettier/prettier)
+- [Prettier](https://prettier.io/) for code formatting
 - [EditorConfig](https://editorconfig.org/)
 
 ### Linter / A11y
@@ -216,7 +218,6 @@ info: Display info about the scripts
   - [`eslint-plugin-jest-dom`](https://github.com/testing-library/eslint-plugin-jest-dom)
   - [`eslint-plugin-jest-formatting`](https://github.com/dangreenisrael/eslint-plugin-jest-formatting)
 
-- [Prettier](https://prettier.io/) for code formatting
 - [`husky`](https://github.com/typicode/husky) for hooks
 - [`git-format-staged`](https://github.com/hallettj/git-format-staged), to format staged files (surprise), [reasons](https://www.olioapps.com/blog/automatic-code-formatting/)
 - [`axe-core/react`](https://github.com/dequelabs/axe-core-npm)
@@ -230,6 +231,7 @@ info: Display info about the scripts
 ## Tech Stack
 
 - next.js, who would have thought
+- test branch with preact, btw [inferno](https://github.com/infernojs/inferno) is [not compatible](https://github.com/vercel/next.js/pull/9038) with nextjs
 - WIP: sanity
 
 ## Next.js Configuration
@@ -453,7 +455,8 @@ ToDo link to API Docs
 
 ## Credits
 
-...where credits due, thanks to [@bahmutov](https://github.com/bahmutov), [@elliottsj](https://github.com/elliottsj), [Stefan Baumgartner](https://twitter.com/ddprrt), [@ferlopezm94](https://github.com/ferlopezm94),[@iamvishnusankar](https://github.com/iamvishnusankar), [@pacocoursey](https://github.com/pacocoursey), [@thomaseizinger](https://github.com/thomaseizinger), [@sindresorhus](https://github.com/sindresorhus) and all the others whom I copied code from!
+...where credits due, thanks to [@bahmutov](https://github.com/bahmutov), [@elliottsj](https://github.com/elliottsj), [Stefan Baumgartner](https://twitter.com/ddprrt), [@ferlopezm94](https://github.com/ferlopezm94),[@iamvishnusankar](https://github.com/iamvishnusankar),
+[@pacocoursey](https://github.com/pacocoursey), [@thomaseizinger](https://github.com/thomaseizinger), [@sindresorhus](https://github.com/sindresorhus) and all the others whom I copied code from!
 
 ## Related
 
@@ -477,7 +480,6 @@ I should use Github Issues for this but hey.
 - [ ] make use of [Project Wallace](https://www.projectwallace.com/), still wip
 - [ ] [wdyr](https://github.com/welldone-software/why-did-you-render/issues/113) vs preact [1](https://github.com/preactjs/preact/issues/2760)
 - [ ] use ISR - Incremental Static Regeneration ? [opinion](https://www.netlify.com/blog/2021/03/08/incremental-static-regeneration-its-benefits-and-its-flaws/)
-- [ ] wip: enable [unused ESLint rules](https://github.com/alexilyaev/stylelint-find-rules)
 
 ### Documentation ToDo's
 

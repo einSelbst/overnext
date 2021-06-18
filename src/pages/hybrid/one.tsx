@@ -3,6 +3,8 @@ import { useAmp } from 'next/amp'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
+// eslint-disable-next-line import/no-unassigned-import
+import type {} from 'typed-query-selector'
 
 /* istanbul ignore next */
 const config = {
@@ -30,36 +32,24 @@ const One = (props: Props): OverNextComponentType => {
   useEffect(() => {
     /* console.log('useEffect default') */
 
-    const linkCanonical = document.querySelector(
-      'link[rel="canonical"]'
-    ) as HTMLLinkElement
-    const linkAmp = document.querySelector(
-      'link[rel="amphtml"]'
-    ) as HTMLLinkElement
-    const toggleAnchor = document.querySelector(
-      '#toggleAnchor'
-    ) as HTMLAnchorElement
-    const toggleLink = document.querySelector(
-      '#toggleLink'
-    ) as HTMLAnchorElement
-    const ampLink = document.querySelector('#ampLink') as HTMLAnchorElement
+    const linkCanonical = document.querySelector('link[rel="canonical"]')
+    const linkAmp = document.querySelector('link[rel="amphtml"]')
+    const toggleAnchor = document.querySelector('a#toggleAnchor')
+    const toggleLink = document.querySelector('a#toggleLink')
+    const ampLink = document.querySelector('a#ampLink')
 
-    /* eslint-disable @typescript-eslint/no-unnecessary-condition */
-    let link = linkCanonical
-    if (linkCanonical === null) {
-      link = linkAmp
-    }
-    if (ampLink !== null) ampLink.href = link.href
-    if (toggleLink !== null) toggleLink.textContent = link.href
+    if (linkCanonical === null && linkAmp === null) return
+
+    const link = linkCanonical === null ? linkAmp : linkCanonical
+    /* eslint-disable @typescript-eslint/no-non-null-assertion */
+    if (ampLink !== null) ampLink.href = link!.href
+    if (toggleLink !== null) toggleLink.textContent = link!.href
+    /* eslint-enable @typescript-eslint/no-non-null-assertion */
     if (toggleAnchor !== null) {
-      toggleAnchor.href = link.href
-      toggleAnchor.textContent = link.href
+      toggleAnchor.href = link === null ? '/' : link.href
+      toggleAnchor.textContent = link === null ? 'broken' : link.href
     }
-    /* eslint-enable @typescript-eslint/no-unnecessary-condition */
     /* console.info(router) */
-  })
-  useEffect(() => {
-    /* console.log('useEffect empty array ') */
   }, []) // the empty array will call useEffect only for first time while loading the component
 
   return (

@@ -23,8 +23,8 @@ export const Home = (): OverNextComponentType => (
           A short story
         </h2>
         <iframe
-          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
           allowFullScreen
+          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
           height='315'
           loading='lazy'
           src='https://www.youtube-nocookie.com/embed/h6fcK_fRYaI'
@@ -35,12 +35,11 @@ export const Home = (): OverNextComponentType => (
 
       <button
         data-cy='test-button'
+        type='button'
         // eslint-disable-next-line react/jsx-no-bind
         onClick={(): void => {
           window.alert('With typescript and Jest') // eslint-disable-line no-alert
-        }}
-        type='button'
-      >
+        }}>
         Test Button
       </button>
 
