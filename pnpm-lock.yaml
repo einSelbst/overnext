@@ -16,7 +16,7 @@ specifiers:
   '@babel/preset-env': 7.14.5
   '@commitlint/cli': 12.1.4
   '@commitlint/config-conventional': 12.1.4
-  '@cypress/code-coverage': 3.9.6
+  '@cypress/code-coverage': 3.9.7
   '@istanbuljs/nyc-config-typescript': 1.0.1
   '@next/bundle-analyzer': 10.2.3
   '@next/eslint-plugin-next': 11.0.0
@@ -59,7 +59,7 @@ specifiers:
   eslint-plugin-jest: 24.3.6
   eslint-plugin-jest-dom: 3.9.0
   eslint-plugin-jest-formatting: 3.0.0
-  eslint-plugin-json-schema-validator: 1.0.38
+  eslint-plugin-json-schema-validator: 1.0.39
   eslint-plugin-jsx-a11y: 6.4.1
   eslint-plugin-promise: 5.1.0
   eslint-plugin-react: 7.24.0
@@ -140,7 +140,7 @@ devDependencies:
   '@babel/preset-env': 7.14.5_@babel+core@7.14.6
   '@commitlint/cli': 12.1.4
   '@commitlint/config-conventional': 12.1.4
-  '@cypress/code-coverage': 3.9.6_cypress@7.5.0
+  '@cypress/code-coverage': 3.9.7_cypress@7.5.0
   '@istanbuljs/nyc-config-typescript': 1.0.1_40f74ebf3b42f8d97356b2262606f547
   '@next/bundle-analyzer': 10.2.3
   '@next/eslint-plugin-next': 11.0.0
@@ -178,7 +178,7 @@ devDependencies:
   eslint-plugin-jest: 24.3.6_c2d2ebe88994b8faf8d0e772eddf3b2d
   eslint-plugin-jest-dom: 3.9.0_eslint@7.29.0
   eslint-plugin-jest-formatting: 3.0.0_eslint@7.29.0
-  eslint-plugin-json-schema-validator: 1.0.38_eslint@7.29.0
+  eslint-plugin-json-schema-validator: 1.0.39_eslint@7.29.0
   eslint-plugin-jsx-a11y: 6.4.1_eslint@7.29.0
   eslint-plugin-promise: 5.1.0_eslint@7.29.0
   eslint-plugin-react: 7.24.0_eslint@7.29.0
@@ -2136,8 +2136,8 @@ packages:
       - supports-color
     dev: true
 
-  /@cypress/code-coverage/3.9.6_cypress@7.5.0:
-    resolution: {integrity: sha512-rp7+DfUcwZE6Q9gmEC9d/1g3aUiYMdDXRwhCqloNuVHPWnZQ4Waluf2q8kTmc7Vzwx6s/MmsdpyitDsIWKmdGw==}
+  /@cypress/code-coverage/3.9.7_cypress@7.5.0:
+    resolution: {integrity: sha512-2oWdlth15NVMYswrLlrU1c5gLrNFCMHp+hXk7py6VH92YI66/TTsCHEipqu/Uu9j6s/KT/kkbA5tKYabsZ8YIQ==}
     peerDependencies:
       cypress: '*'
     dependencies:
@@ -2147,7 +2147,7 @@ packages:
       dayjs: 1.10.5
       debug: 4.3.1
       execa: 4.1.0
-      globby: 11.0.3
+      globby: 11.0.4
       istanbul-lib-coverage: 3.0.0
       js-yaml: 3.14.1
       nyc: 15.1.0
@@ -6045,8 +6045,8 @@ packages:
       - typescript
     dev: true
 
-  /eslint-plugin-json-schema-validator/1.0.38_eslint@7.29.0:
-    resolution: {integrity: sha512-uSRrK0BLpQRpgiBGf2JX7TvCL3/QFnRl7vr7z8uwGFO0UGzzZFNj91IDT04VSHrPsqIZlQ8RauIUXBkHtGBvRg==}
+  /eslint-plugin-json-schema-validator/1.0.39_eslint@7.29.0:
+    resolution: {integrity: sha512-DBGb3+7oSzJ/khm8fqUHds6u9hBCNacg9tu3qmkeGnjLZmXCuOX1nD4VoGefl8nR58vLYl1Z3iBUnOCuIHMQrw==}
     peerDependencies:
       eslint: '>=6.0.0'
     dependencies:
@@ -7137,18 +7137,6 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       type-fest: 0.20.2
-    dev: true
-
-  /globby/11.0.3:
-    resolution: {integrity: sha512-ffdmosjA807y7+lA1NM0jELARVmYul/715xiILEjo3hBLPTcirgQNnXECn5g3mtR8TOLCVbkfua1Hpen25/Xcg==}
-    engines: {node: '>=10'}
-    dependencies:
-      array-union: 2.1.0
-      dir-glob: 3.0.1
-      fast-glob: 3.2.5
-      ignore: 5.1.8
-      merge2: 1.4.1
-      slash: 3.0.0
     dev: true
 
   /globby/11.0.4:
@@ -13162,7 +13150,7 @@ packages:
       workbox-core: 6.1.5
     dev: false
 
-  /workbox-build/6.1.5_@types+babel__@types+babel__core@7.1.14:
+  /workbox-build/6.1.5_@types+babel__@types+babel__@types+babel__core@7.1.14:
     resolution: {integrity: sha512-P+fakR5QFVqJN9l9xHVXtmafga72gh9I+jM3A9HiB/6UNRmOAejXnDgD+RMegOHgQHPwnB44TalMToFaXKWIyA==}
     engines: {node: '>=10.0.0'}
     dependencies:
@@ -13299,7 +13287,7 @@ packages:
       upath: 1.2.0
       webpack: 5.39.1
       webpack-sources: 1.4.3
-      workbox-build: 6.1.5_@types+babel__@types+babel__core@7.1.14
+      workbox-build: 6.1.5_@types+babel__@types+babel__@types+babel__core@7.1.14
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
