@@ -105,7 +105,7 @@ specifiers:
   typescript: 4.3.4
   typescript-eslint-language-service: 4.1.4
   typesync: 0.8.0
-  webpack: 5.39.1
+  webpack: 5.40.0
 
 dependencies:
   '@babel/core': 7.14.6
@@ -115,9 +115,9 @@ dependencies:
   autoprefixer: 10.2.6_postcss@8.3.5
   core-js: 3.15.0
   is-ci: 3.0.0
-  next: 11.0.0_be717204c92beb560948b12f93a29809
+  next: 11.0.0_a569c78e1cf29d32c2e1def35b70376e
   next-compose-plugins: 2.2.1
-  next-pwa: 5.2.21_399e11a47adbc1e5915396182233fc03
+  next-pwa: 5.2.21_f619fbd778dfa98a31fd62e5ba5ec81a
   next-seo: 4.26.0_202b18601d71dc92f6dbf39b46c5242f
   next-sitemap: 1.6.121_next@11.0.0
   next-themes: 0.0.14_202b18601d71dc92f6dbf39b46c5242f
@@ -129,7 +129,7 @@ dependencies:
   tslib: 2.3.0
   typed-query-selector: 2.6.0
   typescript: 4.3.4
-  webpack: 5.39.1
+  webpack: 5.40.0
 
 optionalDependencies:
   '@axe-core/react': 4.2.1
@@ -2606,7 +2606,7 @@ packages:
       strip-ansi: 6.0.0
     dev: false
 
-  /@next/react-refresh-utils/11.0.0_d2d5cb0c54847735c91f523ac7ca0bc8:
+  /@next/react-refresh-utils/11.0.0_4f9671521bc0ec4fc0432200fa855c8c:
     resolution: {integrity: sha512-hi5eY+KBn4QGtUv7VL2OptdM33fI2hxhd7+omOFmAK+S0hDWhg1uqHqqGJk0W1IfqlWEzzL10WvTJDPRAtDugQ==}
     peerDependencies:
       react-refresh: 0.8.3
@@ -2616,7 +2616,7 @@ packages:
         optional: true
     dependencies:
       react-refresh: 0.8.3
-      webpack: 5.39.1
+      webpack: 5.40.0
     dev: false
 
   /@nodelib/fs.scandir/2.1.5:
@@ -2906,7 +2906,7 @@ packages:
     resolution: {integrity: sha512-O/ql2+rrCUe2W2rs7wMR+GqPRcgB6UiqN5RhrR5xruFlY7l9YLMn0ZkDzjoHLeiFkR8MCQZVudUuuvQ2BLC9Qw==}
     dependencies:
       '@types/eslint': 7.2.13
-      '@types/estree': 0.0.47
+      '@types/estree': 0.0.48
     dev: false
 
   /@types/eslint/7.2.13:
@@ -3837,7 +3837,7 @@ packages:
       - supports-color
     dev: true
 
-  /babel-loader/8.2.2_45ce778302d7701309b6da7f1a1707f7:
+  /babel-loader/8.2.2_1ef96c0ff5bf278057a4bc2ae1f672a2:
     resolution: {integrity: sha512-JvTd0/D889PQBtUXJ2PXaKU/pjZDMtHA9V2ecm+eNRmmBCMR09a+fmpGTNwnJtFmFl5Ei7Vy47LjBb+L0wQ99g==}
     engines: {node: '>= 8.9'}
     peerDependencies:
@@ -3849,7 +3849,7 @@ packages:
       loader-utils: 1.4.0
       make-dir: 3.1.0
       schema-utils: 2.7.1
-      webpack: 5.39.1
+      webpack: 5.40.0
     dev: false
 
   /babel-plugin-add-module-exports/1.0.2:
@@ -4491,7 +4491,7 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /clean-webpack-plugin/3.0.0_webpack@5.39.1:
+  /clean-webpack-plugin/3.0.0_webpack@5.40.0:
     resolution: {integrity: sha512-MciirUH5r+cYLGCOL5JX/ZLzOZbVr1ot3Fw+KcvbhUb6PM+yycqd9ZhIlcigQ5gl+XhppNmw3bEFuaaMNyLj3A==}
     engines: {node: '>=8.9.0'}
     peerDependencies:
@@ -4499,7 +4499,7 @@ packages:
     dependencies:
       '@types/webpack': 4.41.29
       del: 4.1.1
-      webpack: 5.39.1
+      webpack: 5.40.0
     dev: false
 
   /cli-cursor/1.0.2:
@@ -5800,8 +5800,8 @@ packages:
       isarray: 2.0.5
     dev: true
 
-  /es-module-lexer/0.4.1:
-    resolution: {integrity: sha512-ooYciCUtfw6/d2w56UVeqHPcoCFAiJdz5XOkYpv/Txl1HMUozpXjz/2RIQgqwKdXNDPSF1W7mJCFse3G+HDyAA==}
+  /es-module-lexer/0.6.0:
+    resolution: {integrity: sha512-f8kcHX1ArhllUtb/wVSyvygoKCznIjnxhLxy7TCvIiMdT7fL4ZDTIKaadMe6eLvOXg6Wk02UeoFgUoZ2EKZZUA==}
     dev: false
 
   /es-to-primitive/1.2.1:
@@ -5869,7 +5869,7 @@ packages:
       eslint-plugin-jsx-a11y: 6.4.1_eslint@7.29.0
       eslint-plugin-react: 7.24.0_eslint@7.29.0
       eslint-plugin-react-hooks: 4.2.0_eslint@7.29.0
-      next: 11.0.0_be717204c92beb560948b12f93a29809
+      next: 11.0.0_a569c78e1cf29d32c2e1def35b70376e
       typescript: 4.3.4
     transitivePeerDependencies:
       - supports-color
@@ -9535,17 +9535,17 @@ packages:
     resolution: {integrity: sha512-OjJ+fV15FXO2uQXQagLD4C0abYErBjyjE0I0FHpOEIB8upw0hg1ldFP6cqHTJBH1cZqy96OeR3u1dJ+Ez2D4Bg==}
     dev: false
 
-  /next-pwa/5.2.21_399e11a47adbc1e5915396182233fc03:
+  /next-pwa/5.2.21_f619fbd778dfa98a31fd62e5ba5ec81a:
     resolution: {integrity: sha512-jL782UGX0E59TmmYi1xe5kgImeGPBO3me/b3RX7bLP0eG8oJeZiJqTVkc5DJNmXgdwOc6RSvRSOUdBQ9zLu4RA==}
     peerDependencies:
       next: '>=7.0.0'
     dependencies:
-      babel-loader: 8.2.2_45ce778302d7701309b6da7f1a1707f7
-      clean-webpack-plugin: 3.0.0_webpack@5.39.1
+      babel-loader: 8.2.2_1ef96c0ff5bf278057a4bc2ae1f672a2
+      clean-webpack-plugin: 3.0.0_webpack@5.40.0
       globby: 11.0.4
-      next: 11.0.0_be717204c92beb560948b12f93a29809
-      terser-webpack-plugin: 5.1.3_webpack@5.39.1
-      workbox-webpack-plugin: 6.1.5_fa2917c6d78243729a500a2a8fe6cdc5
+      next: 11.0.0_a569c78e1cf29d32c2e1def35b70376e
+      terser-webpack-plugin: 5.1.3_webpack@5.40.0
+      workbox-webpack-plugin: 6.1.5_778ad094406021d4e7172863cd6a6de7
       workbox-window: 6.1.5
     transitivePeerDependencies:
       - '@babel/core'
@@ -9561,7 +9561,7 @@ packages:
       react: '>=16.0.0'
       react-dom: '>=16.0.0'
     dependencies:
-      next: 11.0.0_be717204c92beb560948b12f93a29809
+      next: 11.0.0_a569c78e1cf29d32c2e1def35b70376e
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
     dev: false
@@ -9575,7 +9575,7 @@ packages:
       '@corex/deepmerge': 2.6.20
       matcher: 4.0.0
       minimist: 1.2.5
-      next: 11.0.0_be717204c92beb560948b12f93a29809
+      next: 11.0.0_a569c78e1cf29d32c2e1def35b70376e
     dev: false
 
   /next-themes/0.0.14_202b18601d71dc92f6dbf39b46c5242f:
@@ -9585,7 +9585,7 @@ packages:
       react: '*'
       react-dom: '*'
     dependencies:
-      next: 11.0.0_be717204c92beb560948b12f93a29809
+      next: 11.0.0_a569c78e1cf29d32c2e1def35b70376e
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
     dev: false
@@ -9601,7 +9601,7 @@ packages:
       - supports-color
     dev: true
 
-  /next/11.0.0_be717204c92beb560948b12f93a29809:
+  /next/11.0.0_a569c78e1cf29d32c2e1def35b70376e:
     resolution: {integrity: sha512-1OA0ccCTwVtdLats/1v7ReiBVx+Akya0UVhHo9IBr8ZkpDI3/SGNcaruJBp5agy8ROF97VDKkZamoUXxRB9NUA==}
     engines: {node: '>=12.0.0'}
     hasBin: true
@@ -9624,7 +9624,7 @@ packages:
       '@next/env': 11.0.0
       '@next/polyfill-module': 11.0.0
       '@next/react-dev-overlay': 11.0.0_react-dom@17.0.2+react@17.0.2
-      '@next/react-refresh-utils': 11.0.0_d2d5cb0c54847735c91f523ac7ca0bc8
+      '@next/react-refresh-utils': 11.0.0_4f9671521bc0ec4fc0432200fa855c8c
       assert: 2.0.0
       ast-types: 0.13.2
       browserify-zlib: 0.2.0
@@ -12217,7 +12217,7 @@ packages:
       supports-hyperlinks: 2.2.0
     dev: true
 
-  /terser-webpack-plugin/5.1.3_webpack@5.39.1:
+  /terser-webpack-plugin/5.1.3_webpack@5.40.0:
     resolution: {integrity: sha512-cxGbMqr6+A2hrIB5ehFIF+F/iST5ZOxvOmy9zih9ySbP1C2oEWQSOUS+2SNBTjzx5xLKO4xnod9eywdfq1Nb9A==}
     engines: {node: '>= 10.13.0'}
     peerDependencies:
@@ -12229,7 +12229,7 @@ packages:
       serialize-javascript: 5.0.1
       source-map: 0.6.1
       terser: 5.7.0
-      webpack: 5.39.1
+      webpack: 5.40.0
     dev: false
 
   /terser/5.7.0:
@@ -13018,8 +13018,8 @@ packages:
       source-map: 0.6.1
     dev: false
 
-  /webpack/5.39.1:
-    resolution: {integrity: sha512-ulOvoNCh2PvTUa+zbpRuEb1VPeQnhxpnHleMPVVCq3QqnaFogjsLyps+o42OviQFoaGtTQYrUqDXu1QNkvUPzw==}
+  /webpack/5.40.0:
+    resolution: {integrity: sha512-c7f5e/WWrxXWUzQqTBg54vBs5RgcAgpvKE4F4VegVgfo4x660ZxYUF2/hpMkZUnLjgytVTitjeXaN4IPlXCGIw==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     peerDependencies:
@@ -13037,7 +13037,7 @@ packages:
       browserslist: 4.16.6
       chrome-trace-event: 1.0.3
       enhanced-resolve: 5.8.2
-      es-module-lexer: 0.4.1
+      es-module-lexer: 0.6.0
       eslint-scope: 5.1.1
       events: 3.3.0
       glob-to-regexp: 0.4.1
@@ -13048,7 +13048,7 @@ packages:
       neo-async: 2.6.2
       schema-utils: 3.0.0
       tapable: 2.2.0
-      terser-webpack-plugin: 5.1.3_webpack@5.39.1
+      terser-webpack-plugin: 5.1.3_webpack@5.40.0
       watchpack: 2.2.0
       webpack-sources: 2.3.0
     dev: false
@@ -13281,7 +13281,7 @@ packages:
     resolution: {integrity: sha512-IMDiqxYbKzPorZLGMUMacLB6r76iVQbdTzYthIZoPfy+uFURJFUtqiWQJKg1L+RMyuYXwKXTahCIGkgFs4jBeg==}
     dev: false
 
-  /workbox-webpack-plugin/6.1.5_fa2917c6d78243729a500a2a8fe6cdc5:
+  /workbox-webpack-plugin/6.1.5_778ad094406021d4e7172863cd6a6de7:
     resolution: {integrity: sha512-tsgeNAYiFP4STNPDxBVT58eiU8nGUmcv7Lq9FFJkQf5MMu6tPw1OLp+KpszhbCWP+R/nEdu85Gjexs6fY647Kg==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
@@ -13291,7 +13291,7 @@ packages:
       pretty-bytes: 5.6.0
       source-map-url: 0.4.1
       upath: 1.2.0
-      webpack: 5.39.1
+      webpack: 5.40.0
       webpack-sources: 1.4.3
       workbox-build: 6.1.5_@types+babel__core@7.1.14
     transitivePeerDependencies:
