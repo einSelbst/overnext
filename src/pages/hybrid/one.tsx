@@ -31,26 +31,25 @@ const One = (props: Props): OverNextComponentType => {
 
   // eslint-disable-next-line max-statements
   useEffect(() => {
-    /* console.log('useEffect default') */
-
+    // get the AMP or canonical links from the document header
     const linkCanonical = document.querySelector('link[rel="canonical"]')
     const linkAmp = document.querySelector('link[rel="amphtml"]')
-    const toggleLink = document.querySelector('a#toggleLink')
-    const ampLink = document.querySelector('a#ampLink')
-
     if (linkCanonical === null && linkAmp === null) return
 
+    const toggleLink = document.querySelector('a#toggleLink')
+    const ampLink = document.querySelector('a#ampLink')
     const link = linkCanonical === null ? linkAmp : linkCanonical
-    /* eslint-disable @typescript-eslint/no-non-null-assertion */
-    if (ampLink !== null) ampLink.href = link!.href
-    if (toggleLink !== null) toggleLink.textContent = link!.href
-    /* eslint-enable @typescript-eslint/no-non-null-assertion */
-    if (toggleAnchorReference.current !== null) {
-        toggleAnchorReference.current.href = link === null ? '/' : link.href
-        toggleAnchorReference.current.textContent = link === null ? 'broken' : link.href
+
+    if (link !== null) {
+      if (ampLink !== null) ampLink.href = link.href
+      if (toggleLink !== null) toggleLink.textContent = link.href
+      if (toggleAnchorReference.current !== null) {
+        toggleAnchorReference.current.href = link.href
+        toggleAnchorReference.current.textContent = link.href
+      }
     }
-    /* console.info(router) */
-  }, []) // the empty array will call useEffect only for first time while loading the component
+  }, []) // the array of dependencies on whom useEffect depends
+  // empty array means useEffect is only called for first time when component is loading/ rendered
 
   return (
     <main>
@@ -58,7 +57,7 @@ const One = (props: Props): OverNextComponentType => {
       <p>
         I&apos;m a hybrid page and I&apos;m available in multiple languages!
       </p>
-      {isAmp && <p>Now I am AMP! (escaping entity is difficult here)</p>}
+      {isAmp && <p>Now I&apos;am AMP! (escaping entity is difficult here)</p>}
 
       {/* @see https://github.com/sindresorhus/react-extras#choose */}
       <div className='h-8 w-8'>
@@ -75,36 +74,41 @@ const One = (props: Props): OverNextComponentType => {
         })()}
       </div>
 
-      <p>
+      <div>
         {isAmp ? (
-          <Link href='/hybrid/one'>
-            <a>View Non-AMP Version</a>
-          </Link>
+          <>
+            <p>On AMP pages I can make use of the LINK element</p>
+            <Link href='/hybrid/one'>
+              <a>View Non-AMP Version</a>
+            </Link>
+          </>
         ) : (
-          <span>
+          <>
+            <p>This doesn&apos;t work because LINK is locally routed</p>
             <Link data-id='ampLink' href='/hybrid/one?amp=1'>
               <a id='toggleLink'>...Loading</a>
             </Link>
             <br />
-            <a href='foo' id='toggleAnchor'>
+            <br />
+            <p>This is ok because a full reload is triggered</p>
+            <a ref={toggleAnchorReference} href='foo' id='toggleAnchor'>
               ...Loading
             </a>
-          </span>
+            <br />
+            <br />
+            <p>
+              This is also ok because a full reload is triggered but only works
+              locally as for the different AMP links in production
+            </p>
+            <a href={`/${locale ?? 'en'}/hybrid/one?amp=1`}>
+              view {locale} amp version via anchor link
+            </a>
+          </>
         )}
-      </p>
-      <p>
-        {isAmp ? (
-          <Link href='/hybrid/one'>
-            <a>View Non-AMP Version</a>
-          </Link>
-        ) : (
-          <a href={`/${locale ?? 'en'}/hybrid/one?amp=1`}>
-            view {locale} amp version via a
-          </a>
-        )}
-      </p>
+      </div>
     </main>
   )
 }
 export { config }
+
 export default One
