@@ -1,3 +1,5 @@
+import Toggle from 'components/toggle'
+
 const NOTIFICATION_STATES: Record<string, string> = {
   error: 'Something went wrong ...',
   info: 'Did you know? ...',
@@ -91,6 +93,15 @@ const HOSTER: Record<string, React.ReactNode> = {
   VERCEL: <Vercel />,
 }
 
+/*
+ * callback should be outside of the actual component for proper memoization
+ * alternatively can use 'useCallback', see 'Toggle' component
+ */
+const toggleCallback = (state: boolean) => {
+  // eslint-disable-next-line no-console
+  console.log(state)
+}
+
 /**
  * I show the hoster in the footer. At build time the hoster is determined from the
  * env vars and memoized in an old-style next.js env var in next.config.js.
@@ -109,6 +120,7 @@ const Footer = ({
       {HOSTER[process.env.platform as string]}
     </div>
     <p>©Copyright 2050 by nobody. All rights reversed.</p>
+    <Toggle checked label='CSS styling' onChange={toggleCallback} />
   </footer>
 )
 
