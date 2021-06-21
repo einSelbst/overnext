@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 /**
  * A toggle checkbox with A11y in mind.
@@ -13,6 +13,7 @@ const Toggle = ({
   checked = false,
   disabled = false,
   direction = 'ltr',
+  toggleId,
   onChange,
   label = 'Toggle',
 }: {
@@ -20,37 +21,49 @@ const Toggle = ({
   readonly disabled?: boolean
   readonly direction?: string
   readonly label: string
+  readonly toggleId: string
   readonly onChange?: ((state: boolean) => void) | null
 }): ComponentReturnType => {
-  const [toggle, setToggle] = useState(false)
-  console.log('a')
-  const triggerToggle1 = useCallback(() => {
-    console.log('a1')
+  const [checkedItems, setCheckedItems] = useState<Record<string, boolean>>({})
 
-    if (disabled) return
-    console.log('a2')
+  // optional logging
+  useEffect(() => {
+    console.log('checkedItems:', checkedItems)
+  }, [checkedItems])
 
-    setToggle(!toggle)
-    console.log('a3')
+  const triggerToggle = useCallback(
+    (event: React.FormEvent<HTMLInputElement>) => {
+      if (disabled) return
 
-    if (typeof onChange === 'function') {
-      console.log('a4')
-      onChange(!toggle)
-      /* setToggle(t => ...) */
-    }
-    /* }, [setToggle, onChange, disabled, toggle]) */
-  }, [setToggle])
+      // I don't really understand what I'm doing here
+      /* https://stackoverflow.com/questions/56273038/how-to-implement-multiple-checkbox-using-react-hook */
+      setCheckedItems(previousState => ({
+        ...previousState,
+        [event.target.id]: event.target.checked,
+        /* ...checkedItems, */
+        /* [event.target.id]: event.target.checked, */
+      }))
+
+      if (typeof onChange === 'function') {
+        console.log('a4')
+        onChange(!toggle)
+        /* setToggle(t => ...) */
+      }
+    },
+    [onChange, checkedItems, disabled]
+  )
 
   return (
-    <div>
-      <label className='Toggle' dir={direction} htmlFor='toggle'>
+    <>
+      <label className='Toggle' dir={direction} htmlFor={toggleId}>
         <input
           className='Toggle__input'
           defaultChecked={checked}
           disabled={disabled}
+          id={toggleId}
           name='toggle'
           type='checkbox'
-          onChange={triggerToggle1}
+          onChange={triggerToggle}
         />
         <span hidden className='Toggle__display'>
           <svg
@@ -87,11 +100,11 @@ const Toggle = ({
       </label>
       <style jsx>{`
         .Toggle {
-          display: flex;
+          display: inline-flex;
           flex-wrap: wrap;
           align-items: center;
           position: relative;
-          margin-bottom: 1em;
+          margin: 1em 2em 0;
           cursor: pointer;
           gap: 1ch;
         }
@@ -112,7 +125,7 @@ const Toggle = ({
 
         .Toggle__display {
           --offset: 0.25em;
-          --diameter: 1.8em;
+          --diameter: 1.5em;
 
           display: inline-flex;
           align-items: center;
@@ -209,7 +222,7 @@ const Toggle = ({
           box-sizing: border-box;
         }
       `}</style>
-    </div>
+    </>
   )
 }
 
