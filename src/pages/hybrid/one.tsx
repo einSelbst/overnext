@@ -28,6 +28,7 @@ const One = (props: Props): OverNextComponentType => {
   const router = useRouter()
   const { locale } = router
   const toggleAnchorReference = useRef<HTMLAnchorElement>(null)
+  const toggleLinkReference = useRef<HTMLAnchorElement>(null)
 
   // eslint-disable-next-line max-statements
   useEffect(() => {
@@ -36,13 +37,15 @@ const One = (props: Props): OverNextComponentType => {
     const linkAmp = document.querySelector('link[rel="amphtml"]')
     if (linkCanonical === null && linkAmp === null) return
 
-    const toggleLink = document.querySelector('a#toggleLink')
+    // this is the non-working assignment
     const ampLink = document.querySelector('a#ampLink')
     const link = linkCanonical === null ? linkAmp : linkCanonical
 
     if (link !== null) {
       if (ampLink !== null) ampLink.href = link.href
-      if (toggleLink !== null) toggleLink.textContent = link.href
+      if (toggleLinkReference.current !== null)
+        toggleLinkReference.current.textContent = link.href
+      // this is the functional/working assignment
       if (toggleAnchorReference.current !== null) {
         toggleAnchorReference.current.href = link.href
         toggleAnchorReference.current.textContent = link.href
@@ -86,19 +89,19 @@ const One = (props: Props): OverNextComponentType => {
           <>
             <p>This doesn&apos;t work because LINK is locally routed</p>
             <Link data-id='ampLink' href='/hybrid/one?amp=1'>
-              <a id='toggleLink'>...Loading</a>
+              <a ref={toggleLinkReference}>...Loading</a>
             </Link>
             <br />
             <br />
             <p>This is ok because a full reload is triggered</p>
-            <a ref={toggleAnchorReference} href='foo' id='toggleAnchor'>
+            <a ref={toggleAnchorReference} href='foo'>
               ...Loading
             </a>
             <br />
             <br />
             <p>
-              This is also ok because a full reload is triggered but only works
-              locally as for the different AMP links in production
+              This would also be ok but only works locally as for the different
+              AMP links in production
             </p>
             <a href={`/${locale ?? 'en'}/hybrid/one?amp=1`}>
               view {locale} amp version via anchor link
