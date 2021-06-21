@@ -2,7 +2,7 @@ import type { OverNextComponentType } from 'next'
 import { useAmp } from 'next/amp'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 // eslint-disable-next-line import/no-unassigned-import
 import type {} from 'typed-query-selector'
 
@@ -27,6 +27,7 @@ const One = (props: Props): OverNextComponentType => {
   const isAmp = useAmp()
   const router = useRouter()
   const { locale } = router
+  const toggleAnchorReference = useRef<HTMLAnchorElement>(null)
 
   // eslint-disable-next-line max-statements
   useEffect(() => {
@@ -34,7 +35,6 @@ const One = (props: Props): OverNextComponentType => {
 
     const linkCanonical = document.querySelector('link[rel="canonical"]')
     const linkAmp = document.querySelector('link[rel="amphtml"]')
-    const toggleAnchor = document.querySelector('a#toggleAnchor')
     const toggleLink = document.querySelector('a#toggleLink')
     const ampLink = document.querySelector('a#ampLink')
 
@@ -45,9 +45,9 @@ const One = (props: Props): OverNextComponentType => {
     if (ampLink !== null) ampLink.href = link!.href
     if (toggleLink !== null) toggleLink.textContent = link!.href
     /* eslint-enable @typescript-eslint/no-non-null-assertion */
-    if (toggleAnchor !== null) {
-      toggleAnchor.href = link === null ? '/' : link.href
-      toggleAnchor.textContent = link === null ? 'broken' : link.href
+    if (toggleAnchorReference.current !== null) {
+        toggleAnchorReference.current.href = link === null ? '/' : link.href
+        toggleAnchorReference.current.textContent = link === null ? 'broken' : link.href
     }
     /* console.info(router) */
   }, []) // the empty array will call useEffect only for first time while loading the component
