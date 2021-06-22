@@ -30,7 +30,7 @@
 ![@babel/core version](https://img.shields.io/badge/@babel/core-7.14.6-brightgreen)
 ![typescript version](https://img.shields.io/badge/typescript-4.3.4-brightgreen)
 ![cypress version](https://img.shields.io/badge/cypress-7.5.0-brightgreen)
-![jest version](https://img.shields.io/badge/jest-27.0.4-brightgreen)
+![jest version](https://img.shields.io/badge/jest-27.0.5-brightgreen)
 ![eslint version](https://img.shields.io/badge/eslint-7.29.0-brightgreen)
 ![tailwindcss version](https://img.shields.io/badge/tailwindcss-2.2.2-brightgreen)
 
