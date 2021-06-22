@@ -97,9 +97,27 @@ const HOSTER: Record<string, React.ReactNode> = {
  * callback should be outside of the actual component for proper memoization
  * alternatively can use 'useCallback', see 'Toggle' component
  */
-const toggleCallback = (state: boolean) => {
-  // eslint-disable-next-line no-console
-  console.log(state)
+const toggleCss = (cssStyling: boolean) => {
+  const styles = document.styleSheets
+  /* let I = document.querySelectorAll('[style]') // probably not so relevant */
+
+  console.log(cssStyling)
+  if (cssStyling) {
+    // show styles
+    for (const index in styles) {
+      if (styles[index].type === 'text/css') {
+        styles[index].disabled = false
+      }
+    }
+  } else {
+    // hide styles
+    for (const index in styles) {
+      if (styles[index].type === 'text/css') {
+        styles[index].disabled = true
+      }
+    }
+    /* for (var i in I) I[i].style = '' */
+  }
 }
 
 /**
@@ -120,7 +138,13 @@ const Footer = ({
       {HOSTER[process.env.platform as string]}
     </div>
     <p>©Copyright 2050 by nobody. All rights reversed.</p>
-    <Toggle checked label='CSS styling' onChange={toggleCallback} />
+    <Toggle
+      checked
+      label='CSS styling'
+      toggleId='cssStyling'
+      onChange={toggleCss}
+    />
+    <Toggle disabled label='Something else' toggleId='somethingElse' />
   </footer>
 )
 

@@ -35,22 +35,26 @@ const Toggle = ({
     (event: React.FormEvent<HTMLInputElement>) => {
       if (disabled) return
 
+      // due to the ts compiler not getting it
+      const target = event.target as HTMLInputElement
+      const isChecked: boolean = target.checked
+      const { id } = target
+
       // I don't really understand what I'm doing here
       /* https://stackoverflow.com/questions/56273038/how-to-implement-multiple-checkbox-using-react-hook */
       setCheckedItems(previousState => ({
         ...previousState,
-        [event.target.id]: event.target.checked,
+        [id]: isChecked,
         /* ...checkedItems, */
         /* [event.target.id]: event.target.checked, */
       }))
 
       if (typeof onChange === 'function') {
-        console.log('a4')
-        onChange(!toggle)
-        /* setToggle(t => ...) */
+        onChange(isChecked)
+        /* onChange(checkedItems[event.target.id]) */
       }
     },
-    [onChange, checkedItems, disabled]
+    [onChange, disabled]
   )
 
   return (
