@@ -93,7 +93,7 @@ specifiers:
   react: 17.0.2
   react-dom: 17.0.2
   sass: 1.35.1
-  size-limit: 4.12.0
+  size-limit: 5.0.1
   source-map-support: 0.5.19
   standard-version: 9.3.0
   start-server-and-test: 1.12.5
@@ -144,7 +144,7 @@ devDependencies:
   '@istanbuljs/nyc-config-typescript': 1.0.1_40f74ebf3b42f8d97356b2262606f547
   '@next/bundle-analyzer': 10.2.3
   '@next/eslint-plugin-next': 11.0.0
-  '@size-limit/preset-app': 4.12.0_size-limit@4.12.0
+  '@size-limit/preset-app': 4.12.0_size-limit@5.0.1
   '@testing-library/react': 11.2.7_react-dom@17.0.2+react@17.0.2
   '@types/babel__core': 7.1.14
   '@types/babel__preset-env': 7.9.1
@@ -199,7 +199,7 @@ devDependencies:
   prettier: 2.3.1
   prettier-plugin-sh: 0.6.1_prettier@2.3.1
   prettier-plugin-toml: 0.3.1
-  size-limit: 4.12.0
+  size-limit: 5.0.1
   source-map-support: 0.5.19
   standard-version: 9.3.0
   start-server-and-test: 1.12.5
@@ -2890,38 +2890,38 @@ packages:
       - supports-color
     dev: true
 
-  /@size-limit/file/4.12.0_size-limit@4.12.0:
+  /@size-limit/file/4.12.0_size-limit@5.0.1:
     resolution: {integrity: sha512-csgGSAG3s2y9eOl/taahojXY91AXpNgqLs9HJ5c/Qmrs+6UHgXbwJ4vo475NfZmt1Y9simircb1ygqupauNUyA==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       size-limit: 4.12.0
     dependencies:
       semver: 7.3.5
-      size-limit: 4.12.0
+      size-limit: 5.0.1
     dev: true
 
-  /@size-limit/preset-app/4.12.0_size-limit@4.12.0:
+  /@size-limit/preset-app/4.12.0_size-limit@5.0.1:
     resolution: {integrity: sha512-5/6LsGCL3lkw8dcyjYBoSbMmTNTlJ4jV0MEMXcZFnHUpV30yVOKE63Q4Gx8U9Oj3MSoJ2V+87eVZsz9mcVTebQ==}
     peerDependencies:
       size-limit: 4.12.0
     dependencies:
-      '@size-limit/file': 4.12.0_size-limit@4.12.0
-      '@size-limit/time': 4.12.0_size-limit@4.12.0
-      size-limit: 4.12.0
+      '@size-limit/file': 4.12.0_size-limit@5.0.1
+      '@size-limit/time': 4.12.0_size-limit@5.0.1
+      size-limit: 5.0.1
     transitivePeerDependencies:
       - bufferutil
       - supports-color
       - utf-8-validate
     dev: true
 
-  /@size-limit/time/4.12.0_size-limit@4.12.0:
+  /@size-limit/time/4.12.0_size-limit@5.0.1:
     resolution: {integrity: sha512-vqfeZbhXHmPqNtQsW6PDt8zHpLSgjAA9BdQOTVb7yAWyZB82KlPHM63hS1nplWEOCf04a4OVsyeqXVBNApQLNA==}
     peerDependencies:
       size-limit: 4.12.0
     dependencies:
       estimo: 2.2.8
       react: 17.0.2
-      size-limit: 4.12.0
+      size-limit: 5.0.1
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -3986,7 +3986,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.16.6
-      caniuse-lite: 1.0.30001239
+      caniuse-lite: 1.0.30001240
       colorette: 1.2.2
       fraction.js: 4.1.1
       normalize-range: 0.1.2
@@ -4411,7 +4411,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001239
+      caniuse-lite: 1.0.30001240
       colorette: 1.2.2
       electron-to-chromium: 1.3.752
       escalade: 3.1.1
@@ -4579,8 +4579,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /caniuse-lite/1.0.30001239:
-    resolution: {integrity: sha512-cyBkXJDMeI4wthy8xJ2FvDU6+0dtcZSJW3voUF8+e9f1bBeuvyZfc3PNbkOETyhbR+dGCPzn9E7MA3iwzusOhQ==}
+  /caniuse-lite/1.0.30001240:
+    resolution: {integrity: sha512-nb8mDzfMdxBDN7ZKx8chWafAdBp5DAAlpWvNyUGe5tcDWd838zpzDN3Rah9cjCqhfOKkrvx40G2SDtP0qiWX/w==}
 
   /capture-stack-trace/1.0.1:
     resolution: {integrity: sha512-mYQLZnx5Qt1JgB1WEiMCf2647plpGeQ2NMR/5L0HNZzGQo4fuSPnK+wjfPnKZV0aiJDgzmWqqkV/g7JD+DW0qw==}
@@ -5305,7 +5305,7 @@ packages:
     peerDependencies:
       postcss: ^8.2.1
     dependencies:
-      caniuse-lite: 1.0.30001239
+      caniuse-lite: 1.0.30001240
       postcss: 8.2.13
     dev: false
 
@@ -6184,7 +6184,7 @@ packages:
       '@mdn/browser-compat-data': 2.0.7
       ast-metadata-inferer: 0.4.0
       browserslist: 4.16.6
-      caniuse-lite: 1.0.30001239
+      caniuse-lite: 1.0.30001240
       core-js: 3.14.0
       eslint: 7.29.0
       find-up: 4.1.0
@@ -9538,6 +9538,12 @@ packages:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
 
+  /mico-spinner/1.1.1:
+    resolution: {integrity: sha512-b9F3Qx9l6fO141+FbR9hqRUJ15p4bGVsqgXiO/noxxXZmN+hYZVCuWd4LEubadrVkw0eIYAJDXWo0ZYGoLrmfg==}
+    dependencies:
+      colorette: 1.2.2
+    dev: true
+
   /micromatch/3.1.10:
     resolution: {integrity: sha512-MWikgl9n9M3w+bpsY3He8L+w9eF9338xRl8IAO5viDizwSzziFEyUzo2xrrloB64ADbTf8uA8vRqqttDTOmccg==}
     engines: {node: '>=0.10.0'}
@@ -9856,7 +9862,7 @@ packages:
       browserify-zlib: 0.2.0
       browserslist: 4.16.6
       buffer: 5.6.0
-      caniuse-lite: 1.0.30001239
+      caniuse-lite: 1.0.30001240
       chalk: 2.4.2
       chokidar: 3.5.2
       constants-browserify: 1.0.0
@@ -11744,9 +11750,9 @@ packages:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
     dev: true
 
-  /size-limit/4.12.0:
-    resolution: {integrity: sha512-LwlUDPxFJbJDIJsBE5bKo8kFMuxmuewBMDjgfSoQwnO27V8DSK+j6881nsrX3GoM3bJMFIeEq56thqBEdYC8bw==}
-    engines: {node: ^10 || ^11 || ^12 || >=13.7}
+  /size-limit/5.0.1:
+    resolution: {integrity: sha512-FZwVay5fCdatHoZU1lGyvVK3KrI4puMKbU1UoLLhEaMjQBxPuovuF+eJIDzmJN+xZRk3thuG7yS77DhuWF4fEQ==}
+    engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
     hasBin: true
     dependencies:
       bytes-iec: 3.1.1
@@ -11755,8 +11761,7 @@ packages:
       colorette: 1.2.2
       globby: 11.0.4
       lilconfig: 2.0.3
-      ora: 5.4.1
-      read-pkg-up: 7.0.1
+      mico-spinner: 1.1.1
     dev: true
 
   /slash/3.0.0:
