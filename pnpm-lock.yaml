@@ -71,7 +71,7 @@ specifiers:
   eslint-plugin-unicorn: 33.0.1
   fsevents: 2.3.2
   git-format-staged: latest
-  html-validate: 4.14.0
+  html-validate: 5.0.1
   husky: 6.0.0
   is-ci: 3.0.0
   jest: 27.0.5
@@ -189,7 +189,7 @@ devDependencies:
   eslint-plugin-tsdoc: 0.2.14
   eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
   git-format-staged: 2.1.2
-  html-validate: 4.14.0_jest@27.0.5
+  html-validate: 5.0.1_jest@27.0.5
   husky: 6.0.0
   jest: 27.0.5_ts-node@10.0.0
   jest-watch-typeahead: 0.6.4_jest@27.0.5
@@ -2445,9 +2445,9 @@ packages:
       '@hapi/hoek': 9.2.0
     dev: true
 
-  /@html-validate/stylish/1.0.1:
-    resolution: {integrity: sha512-fx1eJv6N00JYxYXxR3yP53jm33ZBoLGEwv2x6Q2KIg7Uz3I9/+Bpl5tJtja7CdxD+ueq1SDNhsiYZ4KDwuHe8Q==}
-    engines: {node: '>= 10.0'}
+  /@html-validate/stylish/2.0.0:
+    resolution: {integrity: sha512-lmI4sUZGHpxfWyPtKKrcIbwBbDLXSb+XPEYS1USc46ZzXx/VsnsVqbk3pPIUdEPhd4v72xGS8HDAy/+8wZzlbQ==}
+    engines: {node: '>= 12.0'}
     dependencies:
       kleur: 4.1.4
       text-table: 0.2.0
@@ -2855,14 +2855,14 @@ packages:
     resolution: {integrity: sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==}
     dev: true
 
-  /@sidvind/better-ajv-errors/0.9.0_ajv@7.2.4:
+  /@sidvind/better-ajv-errors/0.9.0_ajv@8.6.0:
     resolution: {integrity: sha512-GeeIsUsq8eUB7kvDq+fS0wpD0hZ56xrqsaVTiJEmSWqEK+BvTd29mah3AWDublvRx2dWQ/qMbvb3Ml98Huedcw==}
     engines: {node: '>= 10.0'}
     peerDependencies:
       ajv: 4.11.8 - 8
     dependencies:
       '@babel/code-frame': 7.14.5
-      ajv: 7.2.4
+      ajv: 8.6.0
       chalk: 4.1.1
       json-to-ast: 2.1.0
       jsonpointer: 4.1.0
@@ -3663,15 +3663,6 @@ packages:
       fast-json-stable-stringify: 2.1.0
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
-
-  /ajv/7.2.4:
-    resolution: {integrity: sha512-nBeQgg/ZZA3u3SYxyaDvpvDtgZ/EZPF547ARgZBrG9Bhu1vKDwAIjtIf+sDtJUKa2zOcEbmRLBRSyMraS/Oy1A==}
-    dependencies:
-      fast-deep-equal: 3.1.3
-      json-schema-traverse: 1.0.0
-      require-from-string: 2.0.2
-      uri-js: 4.4.1
-    dev: true
 
   /ajv/8.6.0:
     resolution: {integrity: sha512-cnUG4NSBiM4YFBxgZIj/In3/6KX+rQ2l2YPRVcvAMQGWEPKuXoPIhxzwqh31jA3IPbI4qEOp/5ILI4ynioXsGQ==}
@@ -7599,9 +7590,9 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
-  /html-validate/4.14.0_jest@27.0.5:
-    resolution: {integrity: sha512-+QXML6W1ulLl6F98PqnBvscm1kqmfYzPpB2WgBsRHEKI5J6xDGvoyrPC7nb3yS5fKL354wHRZ0vQDCp6s50cVg==}
-    engines: {node: '>= 10.0'}
+  /html-validate/5.0.1_jest@27.0.5:
+    resolution: {integrity: sha512-s2sHskOlobnhim2seVTkAvt0MPMDSetJLUuARgqSiSxF5J3yYzGIeN3+wgpw1XlpYdNRBs7C2EM1wZJtzHlhNg==}
+    engines: {node: '>= 12.0'}
     hasBin: true
     peerDependencies:
       jest: ^24 || ^25 || ^26 || ^27
@@ -7610,10 +7601,10 @@ packages:
         optional: true
     dependencies:
       '@babel/code-frame': 7.14.5
-      '@html-validate/stylish': 1.0.1
-      '@sidvind/better-ajv-errors': 0.9.0_ajv@7.2.4
+      '@html-validate/stylish': 2.0.0
+      '@sidvind/better-ajv-errors': 0.9.0_ajv@8.6.0
       acorn-walk: 8.1.0
-      ajv: 7.2.4
+      ajv: 8.6.0
       deepmerge: 4.2.2
       espree: 7.3.1
       glob: 7.1.7
@@ -7623,6 +7614,7 @@ packages:
       kleur: 4.1.4
       minimist: 1.2.5
       prompts: 2.4.1
+      semver: 7.3.5
     dev: true
 
   /htmlescape/1.1.1:
