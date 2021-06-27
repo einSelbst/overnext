@@ -124,7 +124,7 @@
     "@istanbuljs/nyc-config-typescript": "1.0.1",
     "@next/bundle-analyzer": "10.2.3",
     "@next/eslint-plugin-next": "11.0.0",
-    "@size-limit/preset-app": "4.12.0",
+    "@size-limit/preset-app": "5.0.1",
     "@testing-library/react": "11.2.7",
     "@types/babel__core": "7.1.14",
     "@types/babel__preset-env": "7.9.1",
