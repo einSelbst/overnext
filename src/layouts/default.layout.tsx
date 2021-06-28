@@ -11,9 +11,17 @@ const DefaultLayout = ({
     </header>
 
     <aside aria-labelledby='comp1' className='left'>
-      <h2 id='comp1'>Title for complementary area 1</h2>
-      <p>Something which is supposed to be on the left side</p>
-      <p>Some more text</p>
+      <p id='comp1'>Cryptids of Cornwall:</p>
+      <dl>
+        <dt>Beast of Bodmin</dt>
+        <dd>A large feline inhabiting Bodmin Moor.</dd>
+
+        <dt>Morgawr</dt>
+        <dd>A sea serpent.</dd>
+
+        <dt>Owlman</dt>
+        <dd>A giant owl-like creature.</dd>
+      </dl>
     </aside>
 
     {children}
