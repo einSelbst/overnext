@@ -57,7 +57,7 @@ describe('Homepage', () => {
     it('navigates to legal page', () => {
       cy.visit('/')
       // https://on.cypress.io/click
-      cy.get('button').click()
+      /* cy.get('button').click() */
 
       /* cy.get('a[href]').click() */
       cy.get('[data-cy=fr-legal]').click()
