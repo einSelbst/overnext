@@ -1,7 +1,4 @@
 const baseUrl2 = (): string => {
-  // eslint-disable-next-line no-console
-  console.log('evaluating base URL in env config')
-
   if (process.env.VERCEL === '1') {
     return `https://${process.env.VERCEL_URL ?? ''}`
   }
