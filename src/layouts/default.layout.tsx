@@ -10,14 +10,24 @@ const DefaultLayout = ({
       <Navigation success error={false} />
     </header>
 
-    <aside className='left'>
-      <p>Something which is supposed to be on the left side</p>
-      <p>Some more text</p>
+    <aside aria-labelledby='comp1' className='left'>
+      <p id='comp1'>Cryptids of Cornwall:</p>
+      <dl>
+        <dt>Beast of Bodmin</dt>
+        <dd>A large feline inhabiting Bodmin Moor.</dd>
+
+        <dt>Morgawr</dt>
+        <dd>A sea serpent.</dd>
+
+        <dt>Owlman</dt>
+        <dd>A giant owl-like creature.</dd>
+      </dl>
     </aside>
 
     {children}
 
-    <aside className='right'>
+    <aside aria-labelledby='comp2' className='right'>
+      <h2 id='comp2'>Title for complementary area 2</h2>
       <p>Something which is supposed to be on the right side</p>
     </aside>
 
