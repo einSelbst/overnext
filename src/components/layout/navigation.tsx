@@ -59,8 +59,8 @@ const Navigation = (props: Props): ComponentReturnType => (
             title='Search on Overnext'
             type='search'
           />
-          <input type='submit' value='search' />
         </label>
+        <button type='submit'>search</button>
       </form>
     </div>
   </>
