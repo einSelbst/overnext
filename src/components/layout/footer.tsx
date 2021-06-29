@@ -101,7 +101,6 @@ const toggleCss = (cssStyling: boolean) => {
   const styles = document.styleSheets
   /* let I = document.querySelectorAll('[style]') // probably not so relevant */
 
-  console.log(cssStyling)
   if (cssStyling) {
     // show styles
     for (const index in styles) {

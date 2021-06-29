@@ -122,8 +122,10 @@ rules:
   react/require-default-props: off
 
   # enable some non-recommended unicorn rules
-  unicorn/string-content: error
   unicorn/import-index: error
+  unicorn/prefer-at: error
+  unicorn/prefer-top-level-await: error
+  unicorn/string-content: error
 
   # configure some unicorn rules
   unicorn/expiring-todo-comments:
