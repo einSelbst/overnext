@@ -28,6 +28,7 @@ const Toggle = ({
 
   // optional logging
   useEffect(() => {
+    // eslint-disable-next-line no-console
     console.log('checkedItems:', checkedItems)
   }, [checkedItems])
 
