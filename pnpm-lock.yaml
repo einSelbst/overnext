@@ -19,7 +19,7 @@ specifiers:
   '@cypress/code-coverage': 3.9.7
   '@istanbuljs/nyc-config-typescript': 1.0.1
   '@next/bundle-analyzer': 10.2.3
-  '@next/eslint-plugin-next': 11.0.0
+  '@next/eslint-plugin-next': 11.0.1
   '@size-limit/preset-app': 5.0.1
   '@testing-library/react': 11.2.7
   '@types/babel__core': 7.1.14
@@ -143,7 +143,7 @@ devDependencies:
   '@cypress/code-coverage': 3.9.7_cypress@7.5.0
   '@istanbuljs/nyc-config-typescript': 1.0.1_40f74ebf3b42f8d97356b2262606f547
   '@next/bundle-analyzer': 10.2.3
-  '@next/eslint-plugin-next': 11.0.0
+  '@next/eslint-plugin-next': 11.0.1
   '@size-limit/preset-app': 5.0.1_size-limit@5.0.1
   '@testing-library/react': 11.2.7_react-dom@17.0.2+react@17.0.2
   '@types/babel__core': 7.1.14
@@ -2579,6 +2579,10 @@ packages:
 
   /@next/eslint-plugin-next/11.0.0:
     resolution: {integrity: sha512-fPZ0904yY1box6bRpR9rJqIkNxJdvzzxH7doXS+cdjyBAdptMR7wj3mcx1hEikBHzWduU8BOXBvRg2hWc09YDQ==}
+    dev: true
+
+  /@next/eslint-plugin-next/11.0.1:
+    resolution: {integrity: sha512-UzdX3y6XSrj9YuASUb/p4sRvfjP2klj2YgIOfMwrWoLTTPJQMh00hREB9Ftr7m7RIxjVSAaaLXIRLdxvq948GA==}
     dev: true
 
   /@next/polyfill-module/11.0.1:
