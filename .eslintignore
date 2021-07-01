@@ -6,3 +6,4 @@ docs
 coverage
 .husky
 pnpm-lock.yaml
+next-env.d.ts
