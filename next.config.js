@@ -98,6 +98,9 @@ const nextConfiguration = {
 
   /* optimizeFonts: false, */
   poweredByHeader: false,
+  /* publicRuntimeConfig: {
+   *   dns: process.env.SENTRY_DSN || process.env.NEXT_PUBLIC_SENTRY_DSN,
+   * }, */
   reactStrictMode: true,
   target: 'experimental-serverless-trace',
 

@@ -4,8 +4,11 @@
  * https://docs.sentry.io/platforms/javascript/guides/nextjs/
  */
 import { init } from '@sentry/nextjs'
+// @see https://github.com/natterstefan/next-with-sentry/commit/01c2996e6f371c6ce988d053f2e002635ca2019a
+/* import getConfig from 'next/config' */
 
 const SENTRY_DSN = process.env.SENTRY_DSN || process.env.NEXT_PUBLIC_SENTRY_DSN
+/* const SENTRY_DSN = getConfig().publicRuntimeConfig.dns */
 const SENTRY_TRACES_SAMPLE_RATE =
   process.env.SENTRY_TRACES_SAMPLE_RATE ||
   process.env.NEXT_PUBLIC_SENTRY_TRACES_SAMPLE_RATE
