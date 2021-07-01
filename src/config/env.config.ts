@@ -12,6 +12,9 @@ const APP_ENV = {
   DEVELOPMENT: process.env.NODE_ENV === 'development',
   PRODUCTION: process.env.NODE_ENV === 'production',
 
+  // Sentry Monitoring
+  SENTRY_TRACES: 1,
+
   /**
    * Determines if we are running on server or in the client.
    *

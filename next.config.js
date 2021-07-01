@@ -56,6 +56,8 @@ const nextConfiguration = {
   },
 
   env: {
+    NEXT_PUBLIC_SENTRY_DSN:
+      'https://6dbd51aeaa4a4e32b77e9f51a7236a64@o470070.ingest.sentry.io/5842378',
     platform: detectPlatform(),
   },
 
