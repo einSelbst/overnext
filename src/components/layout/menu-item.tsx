@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import * as PropTypes from 'prop-types'
 import * as React from 'react'
 /* import { FaCarrot } from 'react-icons/fa' */
 
@@ -10,50 +9,42 @@ import * as React from 'react'
 type InferPropertyTypes<
   PropertyTypes,
   DefaultProps = unknown,
-  Props = PropTypes.InferProps<PropertyTypes>
+  Props = PropertyTypes
 > = {
   [Key in keyof Props]: Key extends keyof DefaultProps
-    ? Props[Key] | DefaultProps[Key]
+    ? DefaultProps[Key] | Props[Key]
     : Props[Key]
 }
 
 /**
  * A single Menu Item for usage in navigation
  */
-const MenuItem: React.FC<MenuItemProps> = (
-  props: MenuItemProps
-): React.ReactElement => {
+const MenuItem: MenuItemProps = (props: MenuItemProps): React.ReactElement => (
   /* const myIcon = React.createElement(props.icon) */
-  return (
-    <>
-      <Link href={props.path}>
-        <a>
-          {/* {myIcon} */}
-          {props.title}
-        </a>
-      </Link>
-      &nbsp; &nbsp; &nbsp;
-    </>
-  )
-}
+  <>
+    <Link href={props.path}>
+      <a>
+        {/* {myIcon} */}
+        {props.title}
+      </a>
+    </Link>
+    &nbsp; &nbsp; &nbsp;
+  </>
+)
 
-const menuItemPropertyTypes = {
-  title: PropTypes.string.isRequired,
-  path: PropTypes.string.isRequired,
-  /* icon: PropTypes.func.isRequired, */
+type menuItemPropertyTypes = {
+  path: String
+  title: String
 }
+;/ * icon: PropTypes.func.isRequired, * /
 
 const menuItemDefaultProps = {
   /* icon: FaCarrot, */
 }
 
 type MenuItemProps = InferPropertyTypes<
-  typeof menuItemPropertyTypes,
+  menuItemPropertyTypes,
   typeof menuItemDefaultProps
 >
-
-MenuItem.propTypes = menuItemPropertyTypes
-
-MenuItem.defaultProps = menuItemDefaultProps
 
 export default MenuItem

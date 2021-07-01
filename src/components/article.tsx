@@ -1,13 +1,13 @@
 import * as PropTypes from 'prop-types'
 
-interface Props {
+type Props = {
   title: string
   price: number
 }
 // same as
 const propTypes = {
-  title: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
 }
 
 type MyComponentProps = PropTypes.InferProps<Props>
