@@ -4,6 +4,7 @@
  *
  * @see https://github.com/cyrilwanner/next-compose-plugins
  */
+const { withSentryConfig } = require('@sentry/nextjs')
 const { withPlugins, optional } = require('next-compose-plugins')
 const withPWA = require('next-pwa')
 const { PHASE_DEVELOPMENT_SERVER } = require('next/constants')
@@ -22,6 +23,28 @@ const detectPlatform = () => {
     return AMPLIFY
   }
   return LOCALHOST
+}
+
+/*
+ * Set a custom webpack configuration to use Next.js app with Sentry.
+ *
+ * https://nextjs.org/docs/api-reference/next.config.js/introduction
+ * https://docs.sentry.io/platforms/javascript/guides/nextjs/
+ */
+const SentryWebpackPluginOptions = {
+  /*
+   * Additional config options for the Sentry Webpack plugin. Keep in mind that
+   * the following options are set automatically, and overriding them is not
+   * recommended:
+   *   release, url, org, project, authToken, configFile, stripPrefix,
+   *   urlPrefix, include, ignore
+   */
+
+  silent: true, // Suppresses all logs
+  /*
+   * For all available options, see:
+   * https://github.com/getsentry/sentry-webpack-plugin#options.
+   */
 }
 
 /**
@@ -124,4 +147,13 @@ const plugins = () =>
         },
       ]
 
-module.exports = withPlugins(plugins(), nextConfiguration)
+const nextPluginConfiguration = withPlugins(plugins(), nextConfiguration)
+
+/*
+ * Make sure adding Sentry options is the last code to run before exporting, to
+ * ensure that your source maps include changes from all other Webpack plugins
+ */
+module.exports = withSentryConfig(
+  nextPluginConfiguration,
+  SentryWebpackPluginOptions
+)
