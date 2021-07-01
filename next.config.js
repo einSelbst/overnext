@@ -28,8 +28,9 @@ const detectPlatform = () => {
 /*
  * Set a custom webpack configuration to use Next.js app with Sentry.
  *
- * https://nextjs.org/docs/api-reference/next.config.js/introduction
- * https://docs.sentry.io/platforms/javascript/guides/nextjs/
+ * @see https://nextjs.org/docs/api-reference/next.config.js/introduction
+ * @see https://docs.sentry.io/platforms/javascript/guides/nextjs/
+ * @see https://blog.sentry.io/2020/08/04/enable-suspect-commits-unminify-js-and-track-releases-with-vercel-and-sentry
  */
 const SentryWebpackPluginOptions = {
   /*
@@ -159,3 +160,7 @@ module.exports = withSentryConfig(
   nextPluginConfiguration,
   SentryWebpackPluginOptions
 )
+
+// print the config during deployment
+// eslint-disable-next-line no-console, no-magic-numbers, unicorn/no-null
+console.log('next.config.js', JSON.stringify(nextPluginConfiguration, null, 2))
