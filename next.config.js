@@ -73,7 +73,7 @@ const nextConfiguration = {
   /* optimizeFonts: false, */
   poweredByHeader: false,
   reactStrictMode: true,
-  target: 'serverless',
+  /* target: 'serverless', */
 
   webpack: (
     /** @type {{ plugins: any[]; }} */ config,
