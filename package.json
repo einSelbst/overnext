@@ -170,7 +170,7 @@
     "eslint-plugin-unicorn": "34.0.1",
     "git-format-staged": "latest",
     "html-validate": "5.0.2",
-    "husky": "6.0.0",
+    "husky": "7.0.0",
     "jest": "27.0.6",
     "jest-watch-typeahead": "0.6.4",
     "next-unused": "0.0.6",
