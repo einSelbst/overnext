@@ -232,9 +232,14 @@ info: Display info about the scripts
 
 - next.js, who would have thought
 - test branch with preact, btw [inferno](https://github.com/infernojs/inferno) is [not compatible](https://github.com/vercel/next.js/pull/9038) with nextjs
+- Sentry for error monitoring
 - WIP: sanity
+- TODO: React Query
+- TODO: FaunaDB
 
 ## Next.js Configuration
+
+- I used to use `target: 'serverless'` in nextjs config because netlify once told me so but this is not adviced and now I use `target: 'experimental-serverless-trace'`
 
 ### Features
 
