@@ -83,6 +83,7 @@ skipPatterns = [
   "page-",
   "dog",
   "fonts.gstatic.com",
+  ".map",
   "account-settings"
 ]
 # You can mark some check as todo, which will execute the check, but allow failures.
