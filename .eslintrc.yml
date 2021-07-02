@@ -133,7 +133,7 @@ rules:
     - allowWarningComments: false
       ignoreDatesOnPullRequests: true
   unicorn/filename-case:
-    - warn
+    - error
     - case: kebabCase
       ignore:
         - '^__coverage__.ts$'

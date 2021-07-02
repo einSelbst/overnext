@@ -1,6 +1,3 @@
-/* import { FaBeer, FaCarrot, FaDog } from 'react-icons/fa' */
-/* import { FcAbout, FcPrivacy } from 'react-icons/fc' */
-/* import { GrContact } from 'react-icons/gr' */
 import MenuItem from './menu-item'
 
 import HeartIcon from 'components/icons/heart-icon'
@@ -10,21 +7,14 @@ type Props = {
   readonly error: boolean
 }
 
-/* export const Navigation: React.ReactComponent = (props: InferProps<typeof Navigation.propTypes>): JSX.Element => { */
 const Navigation = (props: Props): ComponentReturnType => (
   <>
     <nav title='Site Navigation'>
-      {/* <MenuItem title='Home' path='/' icon={FaBeer} /> */}
       <MenuItem path='/' title='Home' />
-      {/* <MenuItem title='Dog' path='/dog' icon={FaDog} /> */}
       <MenuItem path='/dog' title='Dog' />
-      {/* <MenuItem title='Page 1' path='/page-1' icon={FaCarrot} /> */}
       <MenuItem path='/page-1' title='Page 1' />
-      {/* <MenuItem title='About' path='/legal/about' icon={FcAbout} /> */}
       <MenuItem path='/legal/about' title='About' />
-      {/* <MenuItem title='Privacy' path='/legal/privacy' icon={FcPrivacy} /> */}
       <MenuItem path='/legal/privacy' title='Privacy' />
-      {/* <MenuItem title='Contact' path='/legal/contact' icon={GrContact} /> */}
       <MenuItem path='/legal/contact' title='Contact' />
       {/* @see https://github.com/sindresorhus/react-extras#choose */}
       <div>
