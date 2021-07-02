@@ -111,3 +111,10 @@ followSourceMaps = true
 #   path = "first-amp"
 #     [plugins.inputs.audits.thresholds]
 #     performance = 0.8
+
+[[plugins]]
+package = "@sentry/netlify-build-plugin"
+
+[plugins.inputs]
+sentryOrg = "vehicle-jg"
+sentryProject = "overnext"

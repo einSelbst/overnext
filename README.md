@@ -232,9 +232,19 @@ info: Display info about the scripts
 
 - next.js, who would have thought
 - test branch with preact, btw [inferno](https://github.com/infernojs/inferno) is [not compatible](https://github.com/vercel/next.js/pull/9038) with nextjs
+- Sentry for error monitoring
+  - via [@sentry/nextjs](https://docs.sentry.io/platforms/javascript/guides/nextjs/), which is a wrapper around
+    - [Sentry for React](), [docs](https://docs.sentry.io/platforms/javascript/guides/react/), for the app frontend monitoring
+    - [Sentry for NodeJS](), [docs](https://docs.sentry.io/platforms/node/), for server monitoring
+    - [SentryWebpackPlugin](), [docs](https://docs.sentry.io/platforms/javascript/guides/react/sourcemaps/tools/webpack/), to load client & server monitoring & for sourcemap upload
+      - uses [sentry-cli](https://docs.sentry.io/product/cli/configuration/) under the hood
 - WIP: sanity
+- TODO: React Query
+- TODO: FaunaDB
 
 ## Next.js Configuration
+
+- I used to use `target: 'serverless'` in nextjs config because netlify once told me so but this is not adviced and now I use `target: 'experimental-serverless-trace'`
 
 ### Features
 
@@ -289,6 +299,7 @@ info: Display info about the scripts
   - [Github Integration](https://docs.cypress.io/guides/dashboard/github-integration.html#Install-the-Cypress-GitHub-app)
   - [cypress-watch-and-reload](https://github.com/bahmutov/cypress-watch-and-reload)
   - ToDo: if I want to run [headless cypress in watch mode](https://github.com/cypress-io/cypress/issues/3665#issuecomment-665866436)
+- ToDo: integrate [Sentry TestKit](https://docs.sentry.io/platforms/javascript/guides/nextjs/configuration/sentry-testkit/), to intercept error reporting in tests
 
 ## CI
 
@@ -348,6 +359,7 @@ see [CONTRIBUTING](./CONTRIBUTING.md)
     - override "Build Command":
       - `pnpm run build` (vercel will use yarn otherwise)
   - [`vercelignore`](https://vercel.com/guides/prevent-uploading-sourcepaths-with-vercelignore) to only upload neccessary files
+  - [Sentry Integration](https://docs.sentry.io/product/integrations/vercel/)
 - [Netlify](https://www.netlify.com/blog/2020/11/30/how-to-deploy-next.js-sites-to-netlify/)
   - "Redirects and rewrites using next.config.js aren’t currently supported for Next.js sites on Netlify."
   - [`netlify.toml`](https://github.com/netlify/netlify-plugin-nextjs)
@@ -358,6 +370,7 @@ see [CONTRIBUTING](./CONTRIBUTING.md)
     - [netlify-plugin-html-validate](https://github.com/oliverroick/netlify-plugin-html-validate), uses [html-validate](https://html-validate.org/)
     - [netlify-plugin-checklinks](https://github.com/munter/netlify-plugin-checklinks), uses [hyperlink](https://github.com/Munter/hyperlink)
     - [netlify-plugin-a11y](https://github.com/netlify-labs/netlify-plugin-a11y), uses [pa11y](https://github.com/pa11y/pa11y)
+    - [Sentry Netlify build plugin](https://github.com/getsentry/sentry-netlify-build-plugin)
 - [AWS Amplify](https://docs.amplify.aws/guides/hosting/nextjs/q/platform/js)
 
 ## Demo
@@ -447,9 +460,11 @@ ToDo link to API Docs
 
 ## Roadmap
 
-- Additional browser support
-
-- Add more integrations
+- integrate Sanity
+- integrate FaunaDB
+- integrate React Query
+- integrate React Hook Form
+- integrate ajv
 
 ## Optimizations
 

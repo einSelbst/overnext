@@ -22,30 +22,7 @@ const detectPlatform = () => {
   } else if (process.env.CODEBUILD_CI === 'true') {
     return AMPLIFY
   }
-  return LOCALHOST
-}
-
-/*
- * Set a custom webpack configuration to use Next.js app with Sentry.
- *
- * @see https://nextjs.org/docs/api-reference/next.config.js/introduction
- * @see https://docs.sentry.io/platforms/javascript/guides/nextjs/
- * @see https://blog.sentry.io/2020/08/04/enable-suspect-commits-unminify-js-and-track-releases-with-vercel-and-sentry
- */
-const SentryWebpackPluginOptions = {
-  /*
-   * Additional config options for the Sentry Webpack plugin. Keep in mind that
-   * the following options are set automatically, and overriding them is not
-   * recommended:
-   *   release, url, org, project, authToken, configFile, stripPrefix,
-   *   urlPrefix, include, ignore
-   */
-
-  silent: true, // Suppresses all logs
-  /*
-   * For all available options, see:
-   * https://github.com/getsentry/sentry-webpack-plugin#options.
-   */
+  return LOCALHOST // might also be Github CI
 }
 
 /**
@@ -58,7 +35,9 @@ const nextConfiguration = {
 
   env: {
     NEXT_PUBLIC_SENTRY_DSN:
-      'https://6dbd51aeaa4a4e32b77e9f51a7236a64@o470070.ingest.sentry.io/5842378',
+      detectPlatform() === LOCALHOST
+        ? undefined
+        : 'https://6dbd51aeaa4a4e32b77e9f51a7236a64@o470070.ingest.sentry.io/5842378',
     platform: detectPlatform(),
   },
 
@@ -98,9 +77,11 @@ const nextConfiguration = {
 
   /* optimizeFonts: false, */
   poweredByHeader: false,
-  /* publicRuntimeConfig: {
+  /*
+   * publicRuntimeConfig: {
    *   dns: process.env.SENTRY_DSN || process.env.NEXT_PUBLIC_SENTRY_DSN,
-   * }, */
+   * },
+   */
   reactStrictMode: true,
   target: 'experimental-serverless-trace',
 
@@ -154,6 +135,45 @@ const plugins = () =>
       ]
 
 const nextPluginConfiguration = withPlugins(plugins(), nextConfiguration)
+
+/*
+ * Set a custom webpack configuration to use Next.js app with Sentry.
+ *
+ * @see https://nextjs.org/docs/api-reference/next.config.js/introduction
+ * @see https://docs.sentry.io/platforms/javascript/guides/nextjs/
+ * @see https://blog.sentry.io/2020/08/04/enable-suspect-commits-unminify-js-and-track-releases-with-vercel-and-sentry
+ */
+const SentryWebpackPluginOptions = {
+  /*
+   * Additional config options for the Sentry Webpack plugin. Keep in mind that
+   * the following options are set automatically, and overriding them is not
+   * recommended:
+   *   release, url, org, project, authToken, configFile, stripPrefix,
+   *   urlPrefix, include, ignore
+   */
+
+  /*
+   * Modify the event here
+   * can use this to improve privacy, eg. to disable error reporting if user not d'accord
+   * @see https://docs.sentry.io/platforms/javascript/guides/nextjs/configuration/filtering/
+   */
+  beforeSend(event) {
+    if (event.user) {
+      // Don't send user's email address
+      delete event.user.email
+    }
+    return event
+  },
+  debug: true,
+  /* dryRun: process.env.NODE_ENV === 'development', */
+  dryRun: true,
+  silent: true, // Suppresses all logs
+
+  /*
+   * For all available options, see:
+   * https://github.com/getsentry/sentry-webpack-plugin#options.
+   */
+}
 
 /*
  * Make sure adding Sentry options is the last code to run before exporting, to
