@@ -96,6 +96,7 @@ checkExternal = true
 # Enable to check references to source maps, source map sources etc.
 # Many build tools don't emit working references, so this is disabled by default
 followSourceMaps = true
+
 # # lighthouse config
 # [[plugins]]
 # package = "@netlify/plugin-lighthouse"
@@ -111,7 +112,6 @@ followSourceMaps = true
 #   path = "first-amp"
 #     [plugins.inputs.audits.thresholds]
 #     performance = 0.8
-
 [[plugins]]
 package = "@sentry/netlify-build-plugin"
 
