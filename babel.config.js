@@ -8,7 +8,7 @@ const presets = [
          * corejs version must be kept in sync with package.json
          * maybe automate with https://docs.renovatebot.com/configuration-options/#postupdateoptions
          */
-        corejs: '3.10.1',
+        corejs: '3.15.2',
         targets: 'defaults',
         useBuiltIns: 'entry',
       },

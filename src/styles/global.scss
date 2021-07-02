@@ -21,6 +21,12 @@ header {
   background: khaki;
   padding: 2rem;
   grid-column: 1 / 4;
+
+  nav svg {
+    display: inline;
+    vertical-align: text-top;
+    margin-right: 5px;
+  }
 }
 
 .left {

@@ -57,6 +57,7 @@
     "?lint:html": "Run html-validate on generated static output files",
     "lint:html": "html-validate '.next/**/*.html'",
     "type-check": "tsc --pretty --noEmit",
+    "type-check:watch": "tsc -w --pretty --skipLibCheck --noEmit",
     "?validate": "echo Validate source code and output files",
     "validate": "pnpm validate:src && pnpm validate:out",
     "?validate:src": "echo Format, lint, type-check & unit test the app",
