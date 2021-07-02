@@ -1,4 +1,5 @@
 // Report API code coverage: https://github.com/bahmutov/next-and-cypress-example
+import { withSentry } from '@sentry/nextjs'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 type Data = {
@@ -21,4 +22,4 @@ const coverage = (
   })
 }
 
-export default coverage
+export default withSentry(coverage)

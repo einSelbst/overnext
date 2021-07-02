@@ -4,6 +4,7 @@
  *
  * @see https://github.com/cyrilwanner/next-compose-plugins
  */
+const { withSentryConfig } = require('@sentry/nextjs')
 const { withPlugins, optional } = require('next-compose-plugins')
 const withPWA = require('next-pwa')
 const { PHASE_DEVELOPMENT_SERVER } = require('next/constants')
@@ -24,6 +25,29 @@ const detectPlatform = () => {
   return LOCALHOST
 }
 
+/*
+ * Set a custom webpack configuration to use Next.js app with Sentry.
+ *
+ * @see https://nextjs.org/docs/api-reference/next.config.js/introduction
+ * @see https://docs.sentry.io/platforms/javascript/guides/nextjs/
+ * @see https://blog.sentry.io/2020/08/04/enable-suspect-commits-unminify-js-and-track-releases-with-vercel-and-sentry
+ */
+const SentryWebpackPluginOptions = {
+  /*
+   * Additional config options for the Sentry Webpack plugin. Keep in mind that
+   * the following options are set automatically, and overriding them is not
+   * recommended:
+   *   release, url, org, project, authToken, configFile, stripPrefix,
+   *   urlPrefix, include, ignore
+   */
+
+  silent: true, // Suppresses all logs
+  /*
+   * For all available options, see:
+   * https://github.com/getsentry/sentry-webpack-plugin#options.
+   */
+}
+
 /**
  * @type {import('next/dist/next-server/server/config').NextConfig}
  */
@@ -33,6 +57,8 @@ const nextConfiguration = {
   },
 
   env: {
+    NEXT_PUBLIC_SENTRY_DSN:
+      'https://6dbd51aeaa4a4e32b77e9f51a7236a64@o470070.ingest.sentry.io/5842378',
     platform: detectPlatform(),
   },
 
@@ -72,6 +98,9 @@ const nextConfiguration = {
 
   /* optimizeFonts: false, */
   poweredByHeader: false,
+  /* publicRuntimeConfig: {
+   *   dns: process.env.SENTRY_DSN || process.env.NEXT_PUBLIC_SENTRY_DSN,
+   * }, */
   reactStrictMode: true,
   target: 'experimental-serverless-trace',
 
@@ -124,4 +153,17 @@ const plugins = () =>
         },
       ]
 
-module.exports = withPlugins(plugins(), nextConfiguration)
+const nextPluginConfiguration = withPlugins(plugins(), nextConfiguration)
+
+/*
+ * Make sure adding Sentry options is the last code to run before exporting, to
+ * ensure that your source maps include changes from all other Webpack plugins
+ */
+module.exports = withSentryConfig(
+  nextPluginConfiguration,
+  SentryWebpackPluginOptions
+)
+
+// print the config during deployment
+// eslint-disable-next-line no-console, no-magic-numbers, unicorn/no-null
+console.log('next.config.js', JSON.stringify(nextPluginConfiguration, null, 2))

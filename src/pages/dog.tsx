@@ -53,6 +53,10 @@ const getStaticProps: GetStaticProps = async (
   }
 }
 
+const throwError = () => {
+  throw new Error('Sentry Frontend Error')
+}
+
 /* const Dog:NextPage<HomeProps> = (props: HomeProps): JSX.Element => { */
 /* const Dog: NextPage = (props: HomeProps): JSX.Element => { */
 /* const Dog: NextPage = (props: HomeProps) => { */
@@ -100,6 +104,9 @@ const Dog: NextLayoutPage = (
           </a>
         )}
       </p>
+      <button type='button' onClick={throwError}>
+        Throw error
+      </button>
       <p className='caption'>Woooooooooooof</p>
       <p>
         The redirect from the non-amp version to the amp version is not working
