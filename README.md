@@ -244,7 +244,7 @@ info: Display info about the scripts
 
 ## Next.js Configuration
 
-- I used to use `target: 'serverless'` in nextjs config because netlify once told me so but this is not adviced and now I use `target: 'experimental-serverless-trace'`
+- I used to use `target: 'serverless'` in nextjs config because netlify once told me so but this is [not adviced](https://github.com/vercel/next.js/issues/20487#issuecomment-753884085) and doesn't work with the sentry plugin so now I use `target: 'experimental-serverless-trace'`
 
 ### Features
 
@@ -326,6 +326,7 @@ info: Display info about the scripts
 ### Audits & Service Dashboards
 
 - [Lighthouse](https://github.com/GoogleChrome/lighthouse/) on vercel
+- [Sentry](https://sentry.io/organizations/vehicle-jg/projects/overnext/?project=5842378)
 - [Quickmetrics Dashboard](https://app.quickmetrics.io/dashboards)
   - to track [Web Vitals](https://web.dev/vitals/)
   - [how-to](https://www.freecodecamp.org/news/how-to-measure-next-js-web-vitals-using-quickmetrics/)
