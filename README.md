@@ -362,7 +362,9 @@ see [CONTRIBUTING](./CONTRIBUTING.md)
   - [`vercelignore`](https://vercel.com/guides/prevent-uploading-sourcepaths-with-vercelignore) to only upload neccessary files
   - [Sentry Integration](https://docs.sentry.io/product/integrations/vercel/)
 - [Netlify](https://www.netlify.com/blog/2020/11/30/how-to-deploy-next.js-sites-to-netlify/)
-  - "Redirects and rewrites using next.config.js aren’t currently supported for Next.js sites on Netlify."
+  - Caveats:
+    - "Redirects and rewrites using next.config.js aren’t currently supported for Next.js sites on Netlify."
+    - Locale Detection not working
   - [`netlify.toml`](https://github.com/netlify/netlify-plugin-nextjs)
   - asset [post processing](https://docs.netlify.com/configure-builds/file-based-configuration/#post-processing)
   - [skip](https://docs.netlify.com/configure-builds/file-based-configuration/#ignore-builds) deployments without [relevant changes](https://answers.netlify.com/t/issues-with-build-ignore-command-not-ignoring-as-required/23428/13?u=einselbst)
@@ -373,6 +375,8 @@ see [CONTRIBUTING](./CONTRIBUTING.md)
     - [netlify-plugin-a11y](https://github.com/netlify-labs/netlify-plugin-a11y), uses [pa11y](https://github.com/pa11y/pa11y)
     - [Sentry Netlify build plugin](https://github.com/getsentry/sentry-netlify-build-plugin)
 - [AWS Amplify](https://docs.amplify.aws/guides/hosting/nextjs/q/platform/js)
+- Maybe ToDo: [Azure Pipelines](https://meeg.dev/blog/using-azure-pipelines-to-build-and-deploy-a-next-js-app-to-azure-app-services)
+- tried [Cloudflare Pages](https://developers.cloudflare.com/pages/) but only works for static pages via `next export` which in turn doesn't support i18n
 
 ## Demo
 
