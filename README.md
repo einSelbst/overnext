@@ -244,7 +244,7 @@ info: Display info about the scripts
 
 ## Next.js Configuration
 
-- I used to use `target: 'serverless'` in nextjs config because netlify once told me so but this is not adviced and now I use `target: 'experimental-serverless-trace'`
+- I used to use `target: 'serverless'` in nextjs config because netlify once told me so but this is [not adviced](https://github.com/vercel/next.js/issues/20487#issuecomment-753884085) and doesn't work with the sentry plugin so now I use `target: 'experimental-serverless-trace'`
 
 ### Features
 
@@ -326,6 +326,7 @@ info: Display info about the scripts
 ### Audits & Service Dashboards
 
 - [Lighthouse](https://github.com/GoogleChrome/lighthouse/) on vercel
+- [Sentry](https://sentry.io/organizations/vehicle-jg/projects/overnext/?project=5842378)
 - [Quickmetrics Dashboard](https://app.quickmetrics.io/dashboards)
   - to track [Web Vitals](https://web.dev/vitals/)
   - [how-to](https://www.freecodecamp.org/news/how-to-measure-next-js-web-vitals-using-quickmetrics/)
@@ -361,7 +362,9 @@ see [CONTRIBUTING](./CONTRIBUTING.md)
   - [`vercelignore`](https://vercel.com/guides/prevent-uploading-sourcepaths-with-vercelignore) to only upload neccessary files
   - [Sentry Integration](https://docs.sentry.io/product/integrations/vercel/)
 - [Netlify](https://www.netlify.com/blog/2020/11/30/how-to-deploy-next.js-sites-to-netlify/)
-  - "Redirects and rewrites using next.config.js aren’t currently supported for Next.js sites on Netlify."
+  - Caveats:
+    - "Redirects and rewrites using next.config.js aren’t currently supported for Next.js sites on Netlify."
+    - Locale Detection not working
   - [`netlify.toml`](https://github.com/netlify/netlify-plugin-nextjs)
   - asset [post processing](https://docs.netlify.com/configure-builds/file-based-configuration/#post-processing)
   - [skip](https://docs.netlify.com/configure-builds/file-based-configuration/#ignore-builds) deployments without [relevant changes](https://answers.netlify.com/t/issues-with-build-ignore-command-not-ignoring-as-required/23428/13?u=einselbst)
@@ -372,6 +375,8 @@ see [CONTRIBUTING](./CONTRIBUTING.md)
     - [netlify-plugin-a11y](https://github.com/netlify-labs/netlify-plugin-a11y), uses [pa11y](https://github.com/pa11y/pa11y)
     - [Sentry Netlify build plugin](https://github.com/getsentry/sentry-netlify-build-plugin)
 - [AWS Amplify](https://docs.amplify.aws/guides/hosting/nextjs/q/platform/js)
+- Maybe ToDo: [Azure Pipelines](https://meeg.dev/blog/using-azure-pipelines-to-build-and-deploy-a-next-js-app-to-azure-app-services)
+- tried [Cloudflare Pages](https://developers.cloudflare.com/pages/) but only works for static pages via `next export` which in turn doesn't support i18n
 
 ## Demo
 
