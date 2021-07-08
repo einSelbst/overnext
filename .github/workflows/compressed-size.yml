@@ -43,13 +43,13 @@ jobs:
         with:
           fetch-depth: 1
 
-      - uses: actions/cache@v2
-        if: ${{ steps.skip_check.outputs.should_skip != 'true' }}
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+      # - uses: actions/cache@v2
+      #   if: ${{ steps.skip_check.outputs.should_skip != 'true' }}
+      #   with:
+      #     path: ~/.npm
+      #     key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-node-
 
       - name: Check and report changes in the application's package size
         if: ${{ steps.skip_check.outputs.should_skip != 'true' }}
