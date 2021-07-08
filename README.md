@@ -76,9 +76,10 @@ This is more about priorities than about a temporal order.
 ## Guiding Principles
 
 - automate it &trade;
-- optimize it, aka do it cheap
+- optimize it, do it cheap
 - go vanilla until good reasons to not
-- test'n lint it, aka catch bugs early
+- test & lint it, to catch bugs early
+- [manage tech dept](https://www.reforge.com/blog/managing-tech-debt)
 
 ## DX
 
@@ -241,6 +242,12 @@ info: Display info about the scripts
 - WIP: sanity
 - TODO: React Query
 - TODO: FaunaDB
+
+### Afternext
+
+- [vite](https://vitejs.dev/) with [vite-p.ugin-ssr](https://github.com/brillout/vite-plugin-ssr)
+- [solid.js](https://www.solidjs.com/)
+- [svelte](https://svelte.dev/)
 
 ## Next.js Configuration
 
