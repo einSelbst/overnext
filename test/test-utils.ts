@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-unresolved
 import { render } from '@testing-library/react'
 /*
  * import { ThemeProvider } from "my-ui-lib"
@@ -21,8 +20,9 @@ const customRender = (ui, options = {}) =>
   render(ui, { wrapper: Providers, ...options })
 
 // re-export everything
-// eslint-disable-next-line import/no-unresolved
+// eslint-disable-next-line import/export
 export * from '@testing-library/react'
 
 // override render method
+// eslint-disable-next-line import/export
 export { customRender as render }

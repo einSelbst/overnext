@@ -161,7 +161,8 @@ test:cy: Open cypress test runner (needs a running app server)
 e2e:watch: Start dev server, open cypress and watch
 e2e: Build & serve app, then run cypress once
 format: Format source code and fix issues
-lint: Lint source code and fix issues
+lint: Lint source code
+lint:fix: Use deamon to lint source code and fix issues
 lint:html: Run html-validate on generated static output files
 validate: Validate source code and output files
 validate:src: Format, lint, type-check & unit test the app
