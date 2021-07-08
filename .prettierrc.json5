@@ -1,4 +1,5 @@
 {
+  $schema: 'http://json.schemastore.org/prettierrc',
   /**
    * Print Width
    * https://prettier.io/docs/en/options.html#print-width
@@ -144,8 +145,39 @@
    * parser: "<string>" | require("./my-parser")
    * no default
    *
-   */
-  // parser: '',
+    "anyOf": [
+            { "enum": ["flow"], "description": "Flow" },
+            { "enum": ["babel"], "description": "JavaScript" },
+            { "enum": ["babel-flow"], "description": "Flow" },
+            { "enum": ["babel-ts"], "description": "TypeScript" },
+            { "enum": ["typescript"], "description": "TypeScript" },
+            { "enum": ["espree"], "description": "JavaScript" },
+            { "enum": ["meriyah"], "description": "JavaScript" },
+            { "enum": ["css"], "description": "CSS" },
+            { "enum": ["less"], "description": "Less" },
+            { "enum": ["scss"], "description": "SCSS" },
+            { "enum": ["json"], "description": "JSON" },
+            { "enum": ["json5"], "description": "JSON5" },
+            { "enum": ["json-stringify"], "description": "JSON.stringify" },
+            { "enum": ["graphql"], "description": "GraphQL" },
+            { "enum": ["markdown"], "description": "Markdown" },
+            { "enum": ["mdx"], "description": "MDX" },
+            { "enum": ["vue"], "description": "Vue" },
+            { "enum": ["yaml"], "description": "YAML" },
+            { "enum": ["glimmer"], "description": "Ember / Handlebars" },
+            { "enum": ["html"], "description": "HTML" },
+            { "enum": ["angular"], "description": "Angular" },
+            { "enum": ["lwc"], "description": "Lightning Web Components" },
+            { "type": "string", "description": "Custom parser" }
+          ]
+  */
+
+  // overrides: [
+  //   {
+  //     files: '*.ts',
+  //     options: { parser: 'typescript' },
+  //   },
+  // ],
 
   /**
    * File Path

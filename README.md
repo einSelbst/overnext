@@ -253,7 +253,7 @@ info: Display info about the scripts
 
 - I used to use `target: 'serverless'` in nextjs config because netlify once told me so but this is [not adviced](https://github.com/vercel/next.js/issues/20487#issuecomment-753884085) and doesn't work with the sentry plugin so now I use `target: 'experimental-serverless-trace'`
 
-### Features
+### Features in use
 
 - [`src` Directory](https://nextjs.org/docs/advanced-features/src-directory)
 - [Custom `App`](https://nextjs.org/docs/advanced-features/custom-app)
@@ -261,7 +261,7 @@ info: Display info about the scripts
 - [Custom Error Pages](https://nextjs.org/docs/advanced-features/custom-error-page)
 - [Absolute imports and module path aliases](https://nextjs.org/docs/advanced-features/module-path-aliases), so far no need for path aliases
 - [Internationalized Routing](https://nextjs.org/docs/advanced-features/i18n-routing)
-- [AMP Support](https://nextjs.org/docs/advanced-features/amp-support/introduction), but [not for long](https://www.lafoo.com/the-end-of-amp/)
+- [AMP Support](https://nextjs.org/docs/advanced-features/amp-support/introduction), but maybe [not for long](https://www.lafoo.com/the-end-of-amp/)
 - [Measuring performance](https://nextjs.org/docs/advanced-features/measuring-performance)
 
 ### Plugins & Helper
@@ -412,7 +412,7 @@ When I actually started using them I had some problems:
 
 - to be able to extend the function object I had to use `React.FC` because otherwise TypeScript prevents this, but:
 - I don't want to use `React.FC` for [these reasons](https://fettblog.eu/typescript-react-why-i-dont-use-react-fc/),
-  - especially I dont want to close the door for [going Preact](https://fettblog.eu/go-preact/)
+  - especially I don't want to close the door for [going Preact](https://fettblog.eu/go-preact/)
 - also `prop-types` itself seem to have an [unclear](https://github.com/facebook/prop-types/issues/337#issuecomment-791013311) [future](https://github.com/facebook/prop-types/issues/249)
 
 I might still use prop-types in case I encounter a situation where I get much benefit from the runtime type checking, but then I would only use it for this specific case.
@@ -420,11 +420,10 @@ I might still use prop-types in case I encounter a situation where I get much be
 ### Typescript Barrel
 
 Using an `index.ts` file to bundle multiple submodules is called 'Barreling'.
-This can cause circular dependency issues as it happened for me because I was using the `env.config` insided `seo.config`.
+This can cause circular dependency issues as it happened to me because I was using the `env.config` inside of `seo.config`.
 Also it might affect Webpack's ability to chunk the code.
 
 - [Gitbook on barrel](https://basarat.gitbook.io/typescript/main-1/barrel)
--
 
 ### Linter
 
@@ -436,9 +435,10 @@ which included
   because I thought it's a great idea to not waste time for config etc. But the tool hasn't received any maintenance for almost a year and I already had to add workarounds.
   Being interested in linting in general I also had issues with clean extensibility of my eslint config and it wasn't completely clear to me what really runs as part of `prettier-standard`.
 
-I also considerd other bundles like
-[XO](https://github.com/xojs/xo) which would have been my first choice because it includes [unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
-[Canonical](https://github.com/gajus/eslint-config-canonical)
+I also considerd other bundles like:
+
+- [XO](https://github.com/xojs/xo) which would have been my first choice because it includes [unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
+- [Canonical](https://github.com/gajus/eslint-config-canonical)
 
 but they all have stuff included I don't need and other stuff is missing which I want so I decided to go vanilla `eslint` and [do my config](https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/README.md#eslint-configs) by hand to have max control over everything and less dependencies.
 
@@ -451,20 +451,7 @@ There are a few differences between Vercel & Netlify.
 
 ### Setup
 
-- on MacOS BigSur, with iterm2 I have a strange problem that my terminal windows just vanish, the syslogs just say
-
-```sh
-login[55941]: DEAD_PROCESS: 55941 ttys000
-```
-
-I noticed that running scripts with multiple sub-invocations (eg. `pnpm validate`) not only start `zsh` processes, which I use and which is also the default in BigSur,
-but also a `bash` process. You can use the following command to check what pnpm will use as a script shell (in my case it was 'null', which seem to mean `bash`)
-
-```sh
-% pnpm config get script-shell
-```
-
-So I set it to `zsh` by running `% pnpm config set script-shell zsh` but it doesn't solve the issue, keeping notes here anyway...
+ToDo
 
 ## API Reference
 
