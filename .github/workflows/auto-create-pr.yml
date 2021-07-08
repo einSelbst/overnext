@@ -84,7 +84,7 @@ jobs:
           body: |
             Hi!
             This PR was created in response to a new branch pushed from "${{ github.actor }}".
-            I will to the following things for you:
+            I will do the following things for you:
               - deploy to vercel
               - deploy to netlify
               - run lighthouse check on vercel and add the results
