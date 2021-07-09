@@ -1,12 +1,12 @@
 [
   {
     "name": "load time for all",
-    "limit": "12 s",
+    "limit": "15 s",
     "path": [".next/**/*.html"]
   },
   {
     "name": "size of all",
-    "limit": "600 kB",
+    "limit": "800 kB",
     "path": [".next/**/*.html"]
   },
   {
@@ -16,7 +16,7 @@
   },
   {
     "name": "size of static rendered index page",
-    "limit": "5 kB",
+    "limit": "7 kB",
     "path": ".next/serverless/pages/de.html"
   },
   {
