@@ -56,13 +56,16 @@ jobs:
         uses: preactjs/compressed-size-action@v2
         with:
           repo-token: '${{ secrets.GITHUB_TOKEN }}'
+          collapse-unchanged: true
+          # omit-unchanged:
+          # use-check:
+          # cwd:
           # build-script: 'build'
-          clean: 'rm -rf packages/node_modules'
+          clean-script: 'rm -rf packages/node_modules'
           # Any JS files anywhere within a dist directory:
           # pattern: ".next/static/**/*.js"
           pattern: '.next/**/*.{css,js,json,html}'
           # pattern: "{build/**/*.js,build/**/*.css}" # multiple paths
-          # compression: none
           # show-total: false
           # compression: brotli
           # Always ignore SourceMaps and node_modules:
