@@ -26,7 +26,7 @@ specifiers:
   '@types/babel__core': 7.1.15
   '@types/babel__preset-env': 7.9.2
   '@types/core-js': 2.5.4
-  '@types/eslint': 7.2.14
+  '@types/eslint': 7.28.0
   '@types/is-ci': 3.0.0
   '@types/jest': 26.0.24
   '@types/node': 14.17.5
@@ -151,7 +151,7 @@ devDependencies:
   '@types/babel__core': 7.1.15
   '@types/babel__preset-env': 7.9.2
   '@types/core-js': 2.5.4
-  '@types/eslint': 7.2.14
+  '@types/eslint': 7.28.0
   '@types/is-ci': 3.0.0
   '@types/jest': 26.0.24
   '@types/prettier': 2.3.2
@@ -3083,6 +3083,14 @@ packages:
     dependencies:
       '@types/estree': 0.0.48
       '@types/json-schema': 7.0.7
+    dev: false
+
+  /@types/eslint/7.28.0:
+    resolution: {integrity: sha512-07XlgzX0YJUn4iG1ocY4IX9DzKSmMGUs6ESKlxWhZRaa0fatIWaHWUVapcuGa8r5HFnTqzj+4OCjd5f7EZ/i/A==}
+    dependencies:
+      '@types/estree': 0.0.50
+      '@types/json-schema': 7.0.7
+    dev: true
 
   /@types/estree/0.0.39:
     resolution: {integrity: sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==}
@@ -3090,10 +3098,10 @@ packages:
 
   /@types/estree/0.0.48:
     resolution: {integrity: sha512-LfZwXoGUDo0C3me81HXgkBg5CTQYb6xzEl+fNmbO4JdRiSKQ8A0GD1OBBvKAIsbCUgoyAty7m99GqqMQe784ew==}
+    dev: false
 
   /@types/estree/0.0.50:
     resolution: {integrity: sha512-C6N5s2ZFtuZRj54k2/zyRhNDjJwwcViAM3Nbm8zjBpbqAdZ00mr0CFxvSKeO8Y/e03WVFLpQMdHYVfUd6SB+Hw==}
-    dev: false
 
   /@types/glob/7.1.3:
     resolution: {integrity: sha512-SEYeGAIQIQX8NN6LDKprLjbrd5dARM5EXsd8GI/A5l0apYI1fGMWgPHSe4ZKL4eozlAyI+doUE9XbYS4xCkQ1w==}
