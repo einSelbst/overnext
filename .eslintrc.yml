@@ -75,6 +75,9 @@ rules:
     - error
     - argsIgnorePattern: '^_'
       varsIgnorePattern: '^_'
+  no-void:
+    - error
+    - allowAsStatement: true
   # integrating with import plugin
   sort-imports:
     - error
