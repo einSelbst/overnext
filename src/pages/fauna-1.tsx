@@ -1,4 +1,7 @@
+import type { NextLayoutPage } from 'next'
 import { useEffect, useState } from 'react'
+
+import DefaultLayout from 'layouts/default.layout'
 
 const fetcher = async (url: RequestInfo) => {
   const response = await fetch(url)
@@ -6,7 +9,7 @@ const fetcher = async (url: RequestInfo) => {
 }
 
 /* eslint-disable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-argument */
-const Fauna1 = () => {
+const Fauna1: NextLayoutPage = () => {
   type show = {
     ref: Record<string, unknown>
     ts: number
@@ -31,11 +34,12 @@ const Fauna1 = () => {
     })()
   }, []) // empty array if effect doesn't need props or state, means will be executed only once on load
 
-  function handleNewShow(error: {
+  function handleNewShow(event: {
     target: { value: string; checked: unknown }
   }) {
-    setNewShow(error.target.value)
+    setNewShow(event.target.value)
   }
+
   async function handleAddShow() {
     const response = await fetch('/api/addShows', {
       body: JSON.stringify({
@@ -52,6 +56,7 @@ const Fauna1 = () => {
   }
 
   async function handleUpdateShow(event: React.MouseEvent<HTMLInputElement>) {
+    /* async function handleUpdateShow(event: { target: HTMLInputElement }) { */
     const eventTarget = event.target as HTMLInputElement
     await fetch('/api/updateShow', {
       body: JSON.stringify({
@@ -77,36 +82,47 @@ const Fauna1 = () => {
   }
 
   return (
-    <>
-    <h1>Some example data from FaunaDB</h1>
-    <form>
-      <fieldset className='todo-list'>
-        <legend className='todo-list__title'>Shows I want to watch</legend>
-        <input
-          name='newShow'
-          type='text'
-          value={newShow}
-          onChange={handleNewShow}
-        />
-        <input type='submit' value="Add" onClick={handleAddShow} />
-        {shows.map(show => (
-          <label key={show.data.title} className='todo-list__label'>
+    <main>
+      <h1>Some example data from FaunaDB</h1>
+      <form>
+        <fieldset className='todo-list'>
+          <legend className='todo-list__title'>TV Show Watchlist</legend>
+          <label htmlFor='newShow'>
+            <span>Enter new&nbsp;</span>
             <input
-              defaultChecked={show.data.watched}
-              name='showWatched'
-              type='checkbox'
-              value={show.data.title}
-              onClick={handleUpdateShow}
+              id='newShow'
+              name='newShow'
+              placeholder='Movie name'
+              type='text'
+              value={newShow}
+              onChange={handleNewShow}
             />
-            <i className='check' />
-            <span>{show.data.title}</span>
           </label>
-        ))}
-      </fieldset>
-    </form>
-    </>
+          <button type='submit' onClick={handleAddShow}>
+            Add to list
+          </button>
+          {shows.map(show => (
+            <p key={show.data.title}>
+              <label className='todo-list__label'>
+                <input
+                  defaultChecked={show.data.watched}
+                  name='showWatched'
+                  type='checkbox'
+                  value={show.data.title}
+                  onClick={handleUpdateShow}
+                />
+                <i className='check' />
+                <span>{show.data.title}</span>
+              </label>
+            </p>
+          ))}
+        </fieldset>
+      </form>
+    </main>
   )
 }
+
+Fauna1.Layout = DefaultLayout
 
 export default Fauna1
 /* eslint-enable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-argument*/
