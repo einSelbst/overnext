@@ -41,7 +41,7 @@ const Fauna1: NextLayoutPage = () => {
   }
 
   async function handleAddShow() {
-    const response = await fetch('/api/addShows', {
+    const response = await fetch('/api/add-show', {
       body: JSON.stringify({
         title: newShow,
       }),
@@ -58,7 +58,7 @@ const Fauna1: NextLayoutPage = () => {
   async function handleUpdateShow(event: React.MouseEvent<HTMLInputElement>) {
     /* async function handleUpdateShow(event: { target: HTMLInputElement }) { */
     const eventTarget = event.target as HTMLInputElement
-    await fetch('/api/updateShow', {
+    await fetch('/api/update-show', {
       body: JSON.stringify({
         title: eventTarget.value,
         watched: eventTarget.checked,
