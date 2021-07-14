@@ -13,6 +13,7 @@ const Navigation = (props: Props): ComponentReturnType => (
       <MenuItem path='/' title='Home' />
       <MenuItem path='/dog' title='Dog' />
       <MenuItem path='/page-1' title='Page 1' />
+      <MenuItem path='/fauna-1' title='Fauna 1' />
       <MenuItem path='/first-amp' title='First AMP' />
       <MenuItem path='/hybrid/one' title='One' />
       <MenuItem path='/hybrid/post/1' title='Post 1' />
@@ -40,7 +41,7 @@ const Navigation = (props: Props): ComponentReturnType => (
     <div className='mt-2'>
       <form role='search'>
         <label htmlFor='search-global'>
-          <span>Discover Vehicles</span>
+          <span>Discover Something (not yet)</span>
           {/* ToDo [+next-i18next]: localize title */}
           <input
             aria-label='search text'
