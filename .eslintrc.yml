@@ -75,6 +75,9 @@ rules:
     - error
     - argsIgnorePattern: '^_'
       varsIgnorePattern: '^_'
+  no-void:
+    - error
+    - allowAsStatement: true
   # integrating with import plugin
   sort-imports:
     - error
@@ -123,7 +126,12 @@ rules:
 
   # enable some non-recommended unicorn rules
   unicorn/import-index: error
+  # unicorn/no-keyword-prefix: error
+  unicorn/no-unsafe-regex: error
+  unicorn/no-unused-properties: error
   unicorn/prefer-at: error
+  unicorn/prefer-object-has-own: error
+  unicorn/prefer-string-replace-all: error
   unicorn/prefer-top-level-await: error
   unicorn/string-content: error
 
@@ -150,6 +158,9 @@ rules:
         i18n: true
         params: true
         src: true
+
+  # disable some unicorn rules
+  unicorn/prefer-spread: off # in favour of array-func/prefer-array-from
 
   # I want to re-enable thos
   unicorn/prefer-module: off
@@ -219,6 +230,8 @@ rules:
         - invalidHref
         - preferButton
   jsx-a11y/lang: error
+  jsx-a11y/label-has-for: off # deprecated
+
   eslint-comments/no-unused-disable: error
   promise/avoid-new: error
   promise/prefer-await-to-then: warn
