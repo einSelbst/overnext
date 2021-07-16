@@ -183,7 +183,3 @@ module.exports = withSentryConfig(
   nextPluginConfiguration,
   SentryWebpackPluginOptions
 )
-
-// print the config during deployment
-// eslint-disable-next-line no-console, no-magic-numbers, unicorn/no-null
-console.log('next.config.js', JSON.stringify(nextPluginConfiguration, null, 2))
