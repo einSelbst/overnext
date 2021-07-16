@@ -9,7 +9,7 @@ const fetcher = async (url: RequestInfo) => {
 }
 
 /* eslint-disable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-argument */
-const Fauna1: NextLayoutPage = () => {
+const Fauna2: NextLayoutPage = () => {
   type show = {
     ref: Record<string, unknown>
     ts: number
@@ -84,7 +84,7 @@ const Fauna1: NextLayoutPage = () => {
   return (
     <main>
       <h1>Some example data from FaunaDB</h1>
-      <p>This will be loaded on the client.</p>
+      <p>This will be pre-rendered on build time.</p>
       <form>
         <fieldset className='todo-list'>
           <legend className='todo-list__title'>TV Show Watchlist</legend>
@@ -123,7 +123,7 @@ const Fauna1: NextLayoutPage = () => {
   )
 }
 
-Fauna1.Layout = DefaultLayout
+Fauna2.Layout = DefaultLayout
 
-export default Fauna1
+export default Fauna2
 /* eslint-enable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-argument*/
