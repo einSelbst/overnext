@@ -1,4 +1,5 @@
 /* import { GetStaticProps, GetStaticPropsContext } from 'next' */
+import { captureMessage } from '@sentry/nextjs'
 import type {
   GetStaticProps,
   GetStaticPropsContext,
@@ -54,7 +55,9 @@ const getStaticProps: GetStaticProps = async (
 }
 
 const throwError = () => {
-  throw new Error('Sentry Frontend Error')
+  /* throw new Error('Sentry Frontend Error') */
+  /* Sentry.captureException(err); */
+  captureMessage('Something went wrong with the dog')
 }
 
 /* const Dog:NextPage<HomeProps> = (props: HomeProps): JSX.Element => { */
