@@ -60,7 +60,7 @@ specifiers:
   eslint-plugin-jest: 24.3.6
   eslint-plugin-jest-dom: 3.9.0
   eslint-plugin-jest-formatting: 3.0.0
-  eslint-plugin-json-schema-validator: 1.1.1
+  eslint-plugin-json-schema-validator: 1.1.2
   eslint-plugin-jsx-a11y: 6.4.1
   eslint-plugin-promise: 5.1.0
   eslint-plugin-react: 7.24.0
@@ -88,7 +88,7 @@ specifiers:
   next-unused: 0.0.6
   npm-scripts-info: 0.3.9
   nyc: 15.1.0
-  pnpm: 6.10.0
+  pnpm: 6.10.2
   postcss: 8.3.5
   prettier: 2.3.2
   prettier-plugin-sh: 0.7.1
@@ -98,7 +98,7 @@ specifiers:
   sass: 1.35.2
   size-limit: 5.0.1
   source-map-support: 0.5.19
-  standard-version: 9.3.0
+  standard-version: 9.3.1
   start-server-and-test: 1.12.6
   tailwindcss: 2.2.4
   tap-spot: 1.1.1
@@ -140,7 +140,7 @@ dependencies:
 optionalDependencies:
   '@axe-core/react': 4.2.2
   fsevents: 2.3.2
-  pnpm: 6.10.0
+  pnpm: 6.10.2
 
 devDependencies:
   '@babel/preset-env': 7.14.7_@babel+core@7.14.6
@@ -184,7 +184,7 @@ devDependencies:
   eslint-plugin-jest: 24.3.6_c7802047a424f5f4702bce272d08e602
   eslint-plugin-jest-dom: 3.9.0_eslint@7.30.0
   eslint-plugin-jest-formatting: 3.0.0_eslint@7.30.0
-  eslint-plugin-json-schema-validator: 1.1.1_eslint@7.30.0
+  eslint-plugin-json-schema-validator: 1.1.2_eslint@7.30.0
   eslint-plugin-jsx-a11y: 6.4.1_eslint@7.30.0
   eslint-plugin-promise: 5.1.0_eslint@7.30.0
   eslint-plugin-react: 7.24.0_eslint@7.30.0
@@ -208,7 +208,7 @@ devDependencies:
   prettier-plugin-toml: 0.3.1
   size-limit: 5.0.1
   source-map-support: 0.5.19
-  standard-version: 9.3.0
+  standard-version: 9.3.1
   start-server-and-test: 1.12.6
   tap-spot: 1.1.1
   ts-node: 10.1.0_400a4096d34ae850b4639c830a4747bf
@@ -5274,7 +5274,7 @@ packages:
       conventional-changelog-angular: 5.0.12
       conventional-changelog-atom: 2.0.8
       conventional-changelog-codemirror: 2.0.8
-      conventional-changelog-conventionalcommits: 4.5.0
+      conventional-changelog-conventionalcommits: 4.6.0
       conventional-changelog-core: 4.2.3
       conventional-changelog-ember: 2.0.9
       conventional-changelog-eslint: 3.0.9
@@ -6698,8 +6698,8 @@ packages:
       - typescript
     dev: true
 
-  /eslint-plugin-json-schema-validator/1.1.1_eslint@7.30.0:
-    resolution: {integrity: sha512-kZ1Ty+EIcgOE5dqqNV0b7qLAommab7uyIFsfTqgRUh7QpDhn7BeNpNTMEgnkVUEhfQLkpgRtLyjVvJg6392DCw==}
+  /eslint-plugin-json-schema-validator/1.1.2_eslint@7.30.0:
+    resolution: {integrity: sha512-SSzKHywh/JR1yD3aXi84O812YhZJt/21AHBtTYr7fLhR92HJNy+OenLp9gqIya+8CP+6xHCwcX3US/XL1ZNZ1w==}
     peerDependencies:
       eslint: '>=6.0.0'
     dependencies:
@@ -11516,8 +11516,8 @@ packages:
       - typescript
     dev: false
 
-  /pnpm/6.10.0:
-    resolution: {integrity: sha512-fHKtgvnp9CfT/3qijmjUCstOFSB45OAF5EoK6lJxfdpEDe9bgO4om4do8Ut3boV+atZbV6rlEk9vZOUK6BGclw==}
+  /pnpm/6.10.2:
+    resolution: {integrity: sha512-o/CAEMtqjalEJyS9MgID3iZVx46LsqZ8MlwYGmWHNHD7Q0nOqtuYj+BKmgCXRiIWANA/JuC0Y6usNKhU8P3haw==}
     engines: {node: '>=12.17'}
     hasBin: true
     dev: false
@@ -13241,8 +13241,8 @@ packages:
       type-fest: 0.7.1
     dev: false
 
-  /standard-version/9.3.0:
-    resolution: {integrity: sha512-cYxxKXhYfI3S9+CA84HmrJa9B88H56V5FQ302iFF2TNwJukJCNoU8FgWt+11YtwKFXRkQQFpepC2QOF7aDq2Ow==}
+  /standard-version/9.3.1:
+    resolution: {integrity: sha512-5qMxXw/FxLouC5nANyx/5RY1kiorJx9BppUso8gN07MG64q2uLRmrPb4KfXp3Ql4s/gxjZwZ89e0FwxeLubGww==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
