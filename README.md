@@ -164,9 +164,11 @@ format: Format source code and fix issues
 lint: Lint source code
 lint:fix: Use deamon to lint source code and fix issues
 lint:html: Run html-validate on generated static output files
+checklinks: Test integrity of hyperlinks in the build files
+checklinks:server: Test integrity of hyperlinks on the local server
 validate: Validate source code and output files
-validate:src: Format, lint, type-check & unit test the app
-validate:out: Build app, run integration tests & validate generated html
+validate:src: Format, lint, type-check, unit test & link check the app
+validate:out: Build app, run integration tests, check links & validate generated html
 build:analyze: Build app and output bundle analyzer diagrams
 build:size: build app and measure loading performance
 find:unused: Find unused files
@@ -235,14 +237,9 @@ info: Display info about the scripts
 - next.js, who would have thought
 - test branch with preact, btw [inferno](https://github.com/infernojs/inferno) is [not compatible](https://github.com/vercel/next.js/pull/9038) with nextjs
 - Sentry for error monitoring
-  - via [@sentry/nextjs](https://docs.sentry.io/platforms/javascript/guides/nextjs/), which is a wrapper around
-    - [Sentry for React](), [docs](https://docs.sentry.io/platforms/javascript/guides/react/), for the app frontend monitoring
-    - [Sentry for NodeJS](), [docs](https://docs.sentry.io/platforms/node/), for server monitoring
-    - [SentryWebpackPlugin](), [docs](https://docs.sentry.io/platforms/javascript/guides/react/sourcemaps/tools/webpack/), to load client & server monitoring & for sourcemap upload
-      - uses [sentry-cli](https://docs.sentry.io/product/cli/configuration/) under the hood
+- FaunaDB
 - WIP: sanity
 - TODO: React Query
-- TODO: FaunaDB
 
 ### Afternext
 
@@ -393,6 +390,11 @@ see [CONTRIBUTING](./CONTRIBUTING.md)
 
 ## Monitoring
 
+- [Sentry](https://sentry.io/welcome/), via [@sentry/nextjs](https://github.com/getsentry/sentry-javascript/tree/master/packages/nextjs), [docs](https://docs.sentry.io/platforms/javascript/guides/nextjs/), which is a wrapper around
+  - [Sentry for React](https://github.com/getsentry/sentry-javascript/tree/master/packages/react), [docs](https://docs.sentry.io/platforms/javascript/guides/react/), for the app frontend monitoring
+  - [Sentry for NodeJS](https://github.com/getsentry/sentry-javascript/tree/master/packages/node), [docs](https://docs.sentry.io/platforms/node/), for server monitoring
+  - [SentryWebpackPlugin](https://github.com/getsentry/sentry-webpack-plugin), [docs](https://docs.sentry.io/platforms/javascript/guides/react/sourcemaps/tools/webpack/), to load client & server monitoring & for sourcemap upload
+    - uses [sentry-cli](https://docs.sentry.io/product/cli/configuration/) under the hood
 - [Speedlify](https://overwatch-next.netlify.app/overnext/)
 
 ## Documentation

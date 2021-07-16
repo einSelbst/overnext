@@ -12,7 +12,7 @@ const ThemeChanger = (): ComponentReturnType => {
   }, [])
 
   /*
-   * ToDo [>1.2]: refactor to use nextjs default way of rendering only on client
+   * ToDo [>1.3]: refactor to use nextjs default way of rendering only on client
    * @see {@link https://github.com/vercel/next.js/blob/4e9c5eeae075e2cba60bab0a522cd43ce9662c5c/examples/progressive-render/pages/index.js}
    */
   // eslint-disable-next-line unicorn/no-null
