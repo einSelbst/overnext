@@ -60,7 +60,6 @@ jobs:
           # omit-unchanged:
           # use-check:
           # cwd:
-          preinstall: 'npm install'
           # build-script: 'npx pnpm i -P && pnpm run build'
           # clean-script: 'rm -rf packages/node_modules'
           # Any JS files anywhere within a dist directory:
