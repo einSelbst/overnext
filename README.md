@@ -164,9 +164,11 @@ format: Format source code and fix issues
 lint: Lint source code
 lint:fix: Use deamon to lint source code and fix issues
 lint:html: Run html-validate on generated static output files
+checklinks: Test integrity of hyperlinks in the build files
+checklinks:server: Test integrity of hyperlinks on the local server
 validate: Validate source code and output files
-validate:src: Format, lint, type-check & unit test the app
-validate:out: Build app, run integration tests & validate generated html
+validate:src: Format, lint, type-check, unit test & link check the app
+validate:out: Build app, run integration tests, check links & validate generated html
 build:analyze: Build app and output bundle analyzer diagrams
 build:size: build app and measure loading performance
 find:unused: Find unused files
