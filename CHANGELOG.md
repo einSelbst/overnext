@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/einSelbst/overnext/compare/v1.3.0...v1.4.0) (2021-07-16)
+
+### Features
+
+- add api endpoint to get data from faunadb ([a8ad1da](https://github.com/einSelbst/overnext/commit/a8ad1daf59fe7494d0b46e61af789b59e984c22e))
+- add example page which shows data from faunadb ([b1c7ead](https://github.com/einSelbst/overnext/commit/b1c7eadeefb53a5e5f9d3003af7c5a2709009a34))
+- add fauna api client ([6b3357f](https://github.com/einSelbst/overnext/commit/6b3357f8414af05146dfecbccee0d3dfbc958345))
+- add fauna test page to navigation menu ([58e20b7](https://github.com/einSelbst/overnext/commit/58e20b7ef3543ca06229cd846f6e8593676b42fb))
+- **db:** add api endpoints to create / update shows ([4964336](https://github.com/einSelbst/overnext/commit/4964336339964cd5b88d60d5c22d08b14b37d71e))
+
+### Bug Fixes
+
+- **ci:** preinstall not supported in this action ([44b7158](https://github.com/einSelbst/overnext/commit/44b7158ead3b6ec9dc7383ac0cff27983d28e3de))
+- remove debug print of config, didn't work ([38f37f9](https://github.com/einSelbst/overnext/commit/38f37f9f0dc46e70ca790e0c1535377193b329cc))
+
 ## [1.3.0](https://github.com/einSelbst/overnext/compare/v1.2.0...v1.3.0) (2021-07-14)
 
 ### Features
