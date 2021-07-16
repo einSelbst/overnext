@@ -319,7 +319,7 @@ All notable changes to this project will be documented in this file. See [standa
 - **test:** snapshot ([1e08833](https://github.com/einSelbst/overnext/commit/1e08833279a50c769b73a621418b785d5fb1ac89))
 
 ### 1.0.1 (2020-12-20)
+
 - inital nextjs project
 
 <!-- markdownlint-disable-file MD024 -->
-
