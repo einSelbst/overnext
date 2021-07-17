@@ -1,38 +1,91 @@
-import type { NextLayoutPage } from 'next'
+import { query as q } from 'faunadb'
+import type {
+  GetStaticPropsContext,
+  NextLayoutPage,
+  /*
+   * GetStaticPropsResult,
+   * InferGetStaticPropsType,
+   */
+} from 'next'
 import { useEffect, useState } from 'react'
 
 import DefaultLayout from 'layouts/default.layout'
+import faunaClient from 'lib/fauna-client'
+
+type ShowQueryType = {
+  data: ShowType[]
+}
+
+type ShowQueryType1 = {
+  data: [ref: any, ts: number, data: {}]
+}
+type ShowType = {
+  ref: Record<string, unknown>
+  ts: number
+  data: {
+    title: string
+    watched: boolean
+  }
+}
 
 const fetcher = async (url: RequestInfo) => {
   const response = await fetch(url)
   return response.json()
 }
 
-/* eslint-disable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-argument */
-const Fauna2: NextLayoutPage = () => {
-  type show = {
-    ref: Record<string, unknown>
-    ts: number
-    data: {
-      title: string
-      watched: boolean
+// async function getStaticProps(
+const getStaticProps = async () =>
+  // ): Promise<GetStaticPropsResult<ShowType[]>> => {
+  {
+    const showsQuery: ShowQueryType = await faunaClient.query(
+      q.Map(
+        q.Paginate(q.Documents(q.Collection('shows'))),
+        q.Lambda(show => q.Get(show))
+      )
+    )
+    /*
+     *   const shows = showsQuery.data
+     * const shows = showsQuery.data.forEach(show => {delete show.ref as showType});
+     * const newArray = array.map(({keepAttr1, keepAttr2}) => ({keepAttr1, newPropName: keepAttr2}))
+     */
+    const shows = showsQuery.data.map(({ ref, ...keepAttributes }) => keepAttributes)
+
+    // this would 404
+    if (!shows) {
+      return {
+        notFound: true,
+      }
+    }
+
+    // instead of 404 I could also redirect
+    if (!shows) {
+      return {
+        redirect: {
+          destination: '/',
+          permanent: false,
+        },
+      }
+    }
+
+    /*
+     *  console.log('get static props shows')
+     *  console.log(shows)
+     *  console.log(shows[0])
+     */
+
+    return {
+      //  props: shows,
+      props: { shows },
+      //    props: JSON.parse(JSON.stringify({shows}))
     }
   }
 
-  const [shows, setShows] = useState<show[]>([])
+/* eslint-disable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-argument */
+const Fauna2: NextLayoutPage = ({
+  shows,
+}: // }: InferGetStaticPropsType<typeof getStaticProps>) => {
+ShowType[]) => {
   const [newShow, setNewShow] = useState('')
-
-  /*
-   * using an async IIFE (Immediately invoked function expression)
-   * @see https://stackoverflow.com/questions/53332321/react-hook-warnings-for-async-function-in-useeffect-useeffect-function-must-ret
-   */
-  useEffect(() => {
-    void (async () => {
-      let showData = await fetcher('/api/get-shows')
-      showData = await showData.data.data
-      setShows(showData)
-    })()
-  }, []) // empty array if effect doesn't need props or state, means will be executed only once on load
 
   function handleNewShow(event: {
     target: { value: string; checked: unknown }
@@ -51,12 +104,11 @@ const Fauna2: NextLayoutPage = () => {
     // add the new show to the existing list
     const newShows = Array.from(shows)
     newShows.push(body.data)
-    setShows(newShows)
+    /* setShows(newShows) */
     setNewShow('')
   }
 
   async function handleUpdateShow(event: React.MouseEvent<HTMLInputElement>) {
-    /* async function handleUpdateShow(event: { target: HTMLInputElement }) { */
     const eventTarget = event.target as HTMLInputElement
     await fetch('/api/update-show', {
       body: JSON.stringify({
@@ -65,7 +117,7 @@ const Fauna2: NextLayoutPage = () => {
       }),
       method: 'POST',
     })
-    let newShows = Array.from(shows)
+    let newShows: ShowType[] = Array.from(shows)
     newShows = newShows.map(show => {
       if (show.data.title === eventTarget.value) {
         return {
@@ -78,8 +130,14 @@ const Fauna2: NextLayoutPage = () => {
       }
       return show
     })
-    setShows(newShows)
+    // setShows(newShows)
   }
+
+  if (shows === undefined) {
+    shows = []
+  }
+
+  console.log(shows)
 
   return (
     <main>
@@ -102,6 +160,7 @@ const Fauna2: NextLayoutPage = () => {
           <button type='submit' onClick={handleAddShow}>
             Add to list
           </button>
+
           {shows.map(show => (
             <p key={show.data.title}>
               <label className='todo-list__label'>
@@ -125,5 +184,6 @@ const Fauna2: NextLayoutPage = () => {
 
 Fauna2.Layout = DefaultLayout
 
+export { getStaticProps }
 export default Fauna2
 /* eslint-enable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-argument*/
