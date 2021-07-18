@@ -104,7 +104,7 @@ Promise<GetStaticPropsResult<ShowQueryType1>> => {
 }
 
 /* eslint-disable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-argument */
-const Fauna2: NextLayoutPage = (
+const FaunaSSG: NextLayoutPage = (
   { locale, data }: Readonly<InferGetStaticPropsType<typeof getStaticProps>> // : JSX.Element
 ) =>
   /*
@@ -208,8 +208,8 @@ const Fauna2: NextLayoutPage = (
     )
   }
 
-Fauna2.Layout = DefaultLayout
+FaunaSSG.Layout = DefaultLayout
 
 export { getStaticProps }
-export default Fauna2
+export default FaunaSSG
 /* eslint-enable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-argument*/
