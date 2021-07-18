@@ -52,7 +52,7 @@ const nextConfiguration = {
   // @see {@link https://github.com/vercel/next.js/blob/canary/packages/next/next-server/server/config-shared.ts#L68}
   experimental: {
     // plugins?: boolean;
-    profiling: true,
+    /* profiling: true, */
     /* sprFlushToDisk: true, */
     /* workerThreads: false */
     /* pageEnv: false */
@@ -60,7 +60,7 @@ const nextConfiguration = {
     /* enableStaticImages: false, */
     /* optimizeCss: true, */
     /* scrollRestoration: false, */
-    stats: true,
+    /* stats: true, */
     /* externalDir: false, */
     /* reactRoot: Number(process.env.NEXT_PRIVATE_REACT_ROOT) > 0, */
     /* enableBlurryPlaceholder: false, */
