@@ -1,6 +1,6 @@
 import { query as q } from 'faunadb'
 import type {
-  // GetStaticPropsContext,
+  GetStaticPropsContext,
   GetStaticPropsResult,
   InferGetStaticPropsType,
   /* NextLayoutPage, */
@@ -24,6 +24,7 @@ type ShowType1 = {
 }
 
 type ShowQueryType1 = {
+  locale: string | undefined
   data: ShowType[]
 }
 
@@ -42,14 +43,16 @@ const _fetcher = async (url: RequestInfo) => {
 }
 
 /*
- *  async function getStaticProps(
  * const getStaticProps = async () =>
  * const getStaticProps = async (): Promise<GetStaticPropsResult<ShowType[]>> => {
  */
-const getStaticProps = async (): /* context: GetStaticPropsContext */
+const getStaticProps = async (
+  context: GetStaticPropsContext
+): // const getStaticProps = async (): /* context: GetStaticPropsContext */
 // ) => {
 Promise<GetStaticPropsResult<ShowQueryType1>> => {
-  /* console.log(context) */
+  console.log(context)
+  const { locale } = context
 
   const showsQuery: ShowQueryType = await faunaClient.query(
     /* eslint-disable new-cap, @typescript-eslint/no-unsafe-argument */
@@ -59,8 +62,12 @@ Promise<GetStaticPropsResult<ShowQueryType1>> => {
     )
     /* eslint-enable new-cap, @typescript-eslint/no-unsafe-argument */
   )
+
   /*
-   *   const shows = showsQuery.data
+   * I don't know how to deserialize the 'ref' object which is coming from fauna,
+   * so I remove it from the array objects
+   *
+   * const shows = showsQuery.data
    * const shows = showsQuery.data.forEach(show => {delete show.ref as showType});
    * const newArray = array.map(({keepAttr1, keepAttr2}) => ({keepAttr1, newPropName: keepAttr2}))
    */
@@ -89,7 +96,10 @@ Promise<GetStaticPropsResult<ShowQueryType1>> => {
 
   return {
     //  props: shows,
-    props: { data: shows },
+    props: {
+      data: shows,
+      locale,
+    },
     //    props: JSON.parse(JSON.stringify({shows}))
   }
 }
@@ -97,7 +107,7 @@ Promise<GetStaticPropsResult<ShowQueryType1>> => {
 /* eslint-disable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-argument */
 const Fauna2 = (
   /* { data }: InferGetStaticPropsType<ShowType[]>) => */
-  { data }: Readonly<InferGetStaticPropsType<typeof getStaticProps>> // : JSX.Element
+  { locale, data }: Readonly<InferGetStaticPropsType<typeof getStaticProps>> // : JSX.Element
 ) =>
   /*
    * : InferGetStaticPropsType<typeof getStaticProps>) => {
@@ -107,10 +117,8 @@ const Fauna2 = (
     const [shows, setShows] = useState(data)
     const [newShow, setNewShow] = useState('')
 
+    console.log(locale)
     console.log(shows)
-
-    /* const { data } = props */
-    /* setShows(data) */
 
     function handleNewShow(event: {
       target: { value: string; checked: unknown }
@@ -162,6 +170,7 @@ const Fauna2 = (
       <main>
         <h1>Some example data from FaunaDB</h1>
         <p>This will be pre-rendered on build time.</p>
+        <p>The current locale is: &apos;{locale}&apos;.</p>
         <form>
           <fieldset className='todo-list'>
             <legend className='todo-list__title'>TV Show Watchlist</legend>
