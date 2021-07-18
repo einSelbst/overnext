@@ -78,7 +78,7 @@ skipPatterns = [
   "index.html",
   "legal",
   "dog",
-  "fauna-1",
+  "fauna-",
   "page-1",
   "first-amp",
   "account-settings"
