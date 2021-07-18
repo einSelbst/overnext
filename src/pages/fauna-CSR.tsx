@@ -9,7 +9,7 @@ const fetcher = async (url: RequestInfo) => {
 }
 
 /* eslint-disable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-argument */
-const Fauna1: NextLayoutPage = () => {
+const FaunaCSR: NextLayoutPage = () => {
   type show = {
     ref: Record<string, unknown>
     ts: number
@@ -123,7 +123,7 @@ const Fauna1: NextLayoutPage = () => {
   )
 }
 
-Fauna1.Layout = DefaultLayout
+FaunaCSR.Layout = DefaultLayout
 
-export default Fauna1
+export default FaunaCSR
 /* eslint-enable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-argument*/
