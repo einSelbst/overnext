@@ -30,7 +30,6 @@ type ShowQueryType1 = {
 }
 
 type ShowType = {
-  /* ref: Record<string, unknown> */
   ts: number
   data: {
     title: string
@@ -92,21 +91,17 @@ const getStaticProps: GetStaticProps = async (
   }
 }
 
-/* eslint-disable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-argument */
 const FaunaSSG: NextLayoutPage = ({
   locale,
   data,
-}: Readonly<InferGetStaticPropsType<typeof getStaticProps>>): JSX.Element => {
-  const [shows, setShows] = useState<ShowType[]>(data)
+}: Readonly<InferGetStaticPropsType<typeof getStaticProps>>) => {
+  const [shows, setShows] = useState<ShowType[]>(data as ShowType[])
   const [newShow, setNewShow] = useState('')
-
-
-  console.log(locale)
-  console.log(shows)
 
   function handleNewShow(event: {
     target: { value: string; checked: unknown }
   }) {
+    /* event.preventDefault() */
     setNewShow(event.target.value)
   }
 
@@ -117,7 +112,10 @@ const FaunaSSG: NextLayoutPage = ({
       }),
       method: 'POST',
     })
-    const body = await response.json()
+    const body: { data: ShowType } = (await response.json()) as {
+      data: ShowType
+    }
+
     // add the new show to the existing list
     const newShows = Array.from(shows)
     newShows.push(body.data)
@@ -198,4 +196,3 @@ FaunaSSG.Layout = DefaultLayout
 
 export { getStaticProps }
 export default FaunaSSG
-/* eslint-enable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-argument*/
