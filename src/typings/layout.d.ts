@@ -59,6 +59,8 @@ declare module 'next' {
         Layout: ReactNode
       })
     | null // Note: undefined is invalid
+
+  export { NextLayoutComponentType, NextLayoutPage, OverNextComponentType }
 }
 
 declare module 'next/app' {
