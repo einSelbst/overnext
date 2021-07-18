@@ -11,30 +11,25 @@ import { useState } from 'react'
 import DefaultLayout from 'layouts/default.layout'
 import faunaClient from 'lib/fauna-client'
 
-type ShowQueryType = {
-  data: ShowType1[]
-}
-
-type ShowType1 = {
-  ref: Record<string, unknown>
-  ts: number
-  data: {
-    title: string
-    watched: boolean
-  }
-}
-
-type ShowQueryType1 = {
-  locale: string | undefined
-  data: ShowType[]
-}
-
 type ShowType = {
   ts: number
   data: {
     title: string
     watched: boolean
   }
+}
+
+type ShowTypeRaw = ShowType & {
+  ref: Record<string, unknown>
+}
+
+type ShowQueryType = {
+  data: ShowTypeRaw[]
+}
+
+type FaunaSsgPropsType = {
+  locale: string | undefined
+  data: ShowType[]
 }
 
 const _fetcher = async (url: RequestInfo) => {
@@ -44,7 +39,7 @@ const _fetcher = async (url: RequestInfo) => {
 
 const getStaticProps: GetStaticProps = async (
   context: GetStaticPropsContext
-): Promise<GetStaticPropsResult<ShowQueryType1>> => {
+): Promise<GetStaticPropsResult<FaunaSsgPropsType>> => {
   const { locale } = context
 
   const showsQuery: ShowQueryType = await faunaClient.query(
