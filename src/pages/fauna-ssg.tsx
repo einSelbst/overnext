@@ -33,24 +33,21 @@ type FaunaSsgPropsType = {
   data: ShowType[]
 }
 
-const _fetcher = async (url: RequestInfo) => {
-  const response = await fetch(url)
-  return response.json()
-}
+const fetcher = async (collection: string) =>
+  faunaClient.query(
+    /* eslint-disable new-cap */
+    q.Map(
+      q.Paginate(q.Documents(q.Collection(collection))),
+      q.Lambda((show: ShowTypeRaw) => q.Get(show))
+    )
+    /* eslint-enable new-cap */
+  )
 
 const getStaticProps: GetStaticProps = async (
   context: GetStaticPropsContext
 ): Promise<GetStaticPropsResult<FaunaSsgPropsType>> => {
   const { locale } = context
-
-  const showsQuery: ShowQueryType = await faunaClient.query(
-    /* eslint-disable new-cap, @typescript-eslint/no-unsafe-argument */
-    q.Map(
-      q.Paginate(q.Documents(q.Collection('shows'))),
-      q.Lambda(show => q.Get(show))
-    )
-    /* eslint-enable new-cap, @typescript-eslint/no-unsafe-argument */
-  )
+  const showsQuery: ShowQueryType = (await fetcher('shows')) as ShowQueryType
 
   /*
    * I don't know how to deserialize the 'ref' object which is coming from fauna,
