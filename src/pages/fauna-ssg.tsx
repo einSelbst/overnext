@@ -7,7 +7,7 @@ import type {
   NextLayoutPage,
 } from 'next'
 import type { MouseEvent } from 'react'
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 
 import DefaultLayout from 'layouts/default.layout'
 import faunaClient from 'lib/fauna-client'
@@ -94,14 +94,15 @@ const FaunaSSG: NextLayoutPage = ({
   const [shows, setShows] = useState<ShowType[]>(data as ShowType[])
   const [newShow, setNewShow] = useState('')
 
-  const handleNewShow = (event: {
-    target: { value: string; checked: unknown }
-  }) => {
-    /* event.preventDefault() */
-    setNewShow(event.target.value)
-  }
+  const handleNewShow = useCallback(
+    (event: { target: { value: string; checked: unknown } }) => {
+      /* event.preventDefault() */
+      setNewShow(event.target.value)
+    },
+    [setNewShow]
+  ) // Array of dependencies for which the memoization should update
 
-  const handleAddShow = async () => {
+  const handleAddShow = useCallback(async () => {
     const response = await fetch('/api/add-show', {
       body: JSON.stringify({
         title: newShow,
@@ -117,32 +118,35 @@ const FaunaSSG: NextLayoutPage = ({
     newShows.push(body.data)
     setShows(newShows)
     setNewShow('')
-  }
+  }, [newShow, shows])
 
-  const handleUpdateShow = async (event: MouseEvent<HTMLInputElement>) => {
-    const eventTarget = event.target as HTMLInputElement
-    await fetch('/api/update-show', {
-      body: JSON.stringify({
-        title: eventTarget.value,
-        watched: eventTarget.checked,
-      }),
-      method: 'POST',
-    })
-    let newShows: ShowType[] = Array.from(shows)
-    newShows = newShows.map(show => {
-      if (show.data.title === eventTarget.value) {
-        return {
-          ...show,
-          data: {
-            title: eventTarget.value,
-            watched: eventTarget.checked,
-          },
+  const handleUpdateShow = useCallback(
+    async (event: MouseEvent<HTMLInputElement>) => {
+      const eventTarget = event.target as HTMLInputElement
+      await fetch('/api/update-show', {
+        body: JSON.stringify({
+          title: eventTarget.value,
+          watched: eventTarget.checked,
+        }),
+        method: 'POST',
+      })
+      let newShows: ShowType[] = Array.from(shows)
+      newShows = newShows.map(show => {
+        if (show.data.title === eventTarget.value) {
+          return {
+            ...show,
+            data: {
+              title: eventTarget.value,
+              watched: eventTarget.checked,
+            },
+          }
         }
-      }
-      return show
-    })
-    setShows(newShows)
-  }
+        return show
+      })
+      setShows(newShows)
+    },
+    [shows]
+  )
 
   return (
     <main>
