@@ -1,9 +1,10 @@
 import { query as q } from 'faunadb'
 import type {
+  GetStaticProps,
   GetStaticPropsContext,
   GetStaticPropsResult,
   InferGetStaticPropsType,
-  /* NextLayoutPage, */
+  NextLayoutPage,
 } from 'next'
 import { useState } from 'react'
 
@@ -46,12 +47,11 @@ const _fetcher = async (url: RequestInfo) => {
  * const getStaticProps = async () =>
  * const getStaticProps = async (): Promise<GetStaticPropsResult<ShowType[]>> => {
  */
-const getStaticProps = async (
+const getStaticProps: GetStaticProps = async (
   context: GetStaticPropsContext
 ): // const getStaticProps = async (): /* context: GetStaticPropsContext */
 // ) => {
 Promise<GetStaticPropsResult<ShowQueryType1>> => {
-  console.log(context)
   const { locale } = context
 
   const showsQuery: ShowQueryType = await faunaClient.query(
@@ -95,7 +95,6 @@ Promise<GetStaticPropsResult<ShowQueryType1>> => {
    */
 
   return {
-    //  props: shows,
     props: {
       data: shows,
       locale,
@@ -105,8 +104,7 @@ Promise<GetStaticPropsResult<ShowQueryType1>> => {
 }
 
 /* eslint-disable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-argument */
-const Fauna2 = (
-  /* { data }: InferGetStaticPropsType<ShowType[]>) => */
+const Fauna2: NextLayoutPage = (
   { locale, data }: Readonly<InferGetStaticPropsType<typeof getStaticProps>> // : JSX.Element
 ) =>
   /*
@@ -114,7 +112,7 @@ const Fauna2 = (
    */
   // ShowQueryType
   {
-    const [shows, setShows] = useState(data)
+    const [shows, setShows] = useState<ShowType[]>(data)
     const [newShow, setNewShow] = useState('')
 
     console.log(locale)
