@@ -6,6 +6,7 @@ import type {
   InferGetStaticPropsType,
   NextLayoutPage,
 } from 'next'
+import type { MouseEvent } from 'react'
 import { useState } from 'react'
 
 import DefaultLayout from 'layouts/default.layout'
@@ -93,14 +94,14 @@ const FaunaSSG: NextLayoutPage = ({
   const [shows, setShows] = useState<ShowType[]>(data as ShowType[])
   const [newShow, setNewShow] = useState('')
 
-  function handleNewShow(event: {
+  const handleNewShow = (event: {
     target: { value: string; checked: unknown }
-  }) {
+  }) => {
     /* event.preventDefault() */
     setNewShow(event.target.value)
   }
 
-  async function handleAddShow() {
+  const handleAddShow = async () => {
     const response = await fetch('/api/add-show', {
       body: JSON.stringify({
         title: newShow,
@@ -118,7 +119,7 @@ const FaunaSSG: NextLayoutPage = ({
     setNewShow('')
   }
 
-  async function handleUpdateShow(event: React.MouseEvent<HTMLInputElement>) {
+  const handleUpdateShow = async (event: MouseEvent<HTMLInputElement>) => {
     const eventTarget = event.target as HTMLInputElement
     await fetch('/api/update-show', {
       body: JSON.stringify({
