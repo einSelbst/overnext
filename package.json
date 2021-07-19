@@ -110,7 +110,7 @@
     "is-ci": "3.0.0",
     "next": "11.0.1",
     "next-compose-plugins": "2.2.1",
-    "next-pwa": "5.2.23",
+    "next-pwa": "5.2.24",
     "next-seo": "4.26.0",
     "next-sitemap": "1.6.140",
     "next-themes": "0.0.15",
@@ -201,7 +201,7 @@
   "optionalDependencies": {
     "@axe-core/react": "4.2.2",
     "fsevents": "2.3.2",
-    "pnpm": "6.10.2"
+    "pnpm": "6.10.3"
   },
   "engines": {
     "pnpm": ">=6"
