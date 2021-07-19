@@ -81,14 +81,14 @@ specifiers:
   jest-watch-typeahead: 0.6.4
   next: 11.0.1
   next-compose-plugins: 2.2.1
-  next-pwa: 5.2.23
+  next-pwa: 5.2.24
   next-seo: 4.26.0
   next-sitemap: 1.6.140
   next-themes: 0.0.15
   next-unused: 0.0.6
   npm-scripts-info: 0.3.9
   nyc: 15.1.0
-  pnpm: 6.10.2
+  pnpm: 6.10.3
   postcss: 8.3.5
   prettier: 2.3.2
   prettier-plugin-sh: 0.7.1
@@ -123,7 +123,7 @@ dependencies:
   is-ci: 3.0.0
   next: 11.0.1_56596ba53e58a3ba51fb40f711be8616
   next-compose-plugins: 2.2.1
-  next-pwa: 5.2.23_e695ae1dd873cfa36be3c578542c8f04
+  next-pwa: 5.2.24_e695ae1dd873cfa36be3c578542c8f04
   next-seo: 4.26.0_de3a444b12c9ebc463b1db22b5bac6fe
   next-sitemap: 1.6.140_next@11.0.1
   next-themes: 0.0.15_de3a444b12c9ebc463b1db22b5bac6fe
@@ -140,7 +140,7 @@ dependencies:
 optionalDependencies:
   '@axe-core/react': 4.2.2
   fsevents: 2.3.2
-  pnpm: 6.10.2
+  pnpm: 6.10.3
 
 devDependencies:
   '@babel/preset-env': 7.14.7_@babel+core@7.14.6
@@ -10564,8 +10564,8 @@ packages:
     resolution: {integrity: sha512-OjJ+fV15FXO2uQXQagLD4C0abYErBjyjE0I0FHpOEIB8upw0hg1ldFP6cqHTJBH1cZqy96OeR3u1dJ+Ez2D4Bg==}
     dev: false
 
-  /next-pwa/5.2.23_e695ae1dd873cfa36be3c578542c8f04:
-    resolution: {integrity: sha512-nGYp0zliA0lJBoKETEZgW4kaiBckF8m9xpBw3VQ+EyVJ57Bn5HfFeNZUvFi2mvDiiwBuqf34baQIt8EhiN8k+A==}
+  /next-pwa/5.2.24_e695ae1dd873cfa36be3c578542c8f04:
+    resolution: {integrity: sha512-gDGcRfoCsNUjgzH7HQVqJxEN4mR1uA3i+AeK1sgiwSeamQu3hl4fgu9wclPjRj2R5iyWs2EkTfHum7Qy712NbQ==}
     peerDependencies:
       next: '>=9.0.0'
     dependencies:
@@ -11515,8 +11515,8 @@ packages:
       - typescript
     dev: false
 
-  /pnpm/6.10.2:
-    resolution: {integrity: sha512-o/CAEMtqjalEJyS9MgID3iZVx46LsqZ8MlwYGmWHNHD7Q0nOqtuYj+BKmgCXRiIWANA/JuC0Y6usNKhU8P3haw==}
+  /pnpm/6.10.3:
+    resolution: {integrity: sha512-GdxerBN3hhe9x9W0mAMmiWoDELy7KekrmHbYdo7WeHC1MthP/gI7MGVYIgcKj9Vy4zWLO9v1hVYOgKUrewkDVg==}
     engines: {node: '>=12.17'}
     hasBin: true
     dev: false
