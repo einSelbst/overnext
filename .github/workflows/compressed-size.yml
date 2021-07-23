@@ -74,6 +74,8 @@ jobs:
           strip-hash: "[\\/\\.-]([\\w-]{20,21})[\\.\\/]"
           # Ignore changes of less than 100 bytes
           minimum-change-threshold: 100
+        env:
+          FAUNADB_SECRET: ${{ secrets.FAUNADB_SECRET }}
 
       - name: Load time cost
         if: ${{ steps.skip_check.outputs.should_skip != 'true' }}
