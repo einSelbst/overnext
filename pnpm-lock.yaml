@@ -97,7 +97,7 @@ specifiers:
   source-map-support: 0.5.19
   standard-version: 9.3.1
   start-server-and-test: 1.13.0
-  tailwindcss: 2.2.6
+  tailwindcss: 2.2.7
   tap-spot: 1.1.1
   ts-node: 10.1.0
   tslib: 2.3.0
@@ -128,7 +128,7 @@ dependencies:
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   sass: 1.35.2
-  tailwindcss: 2.2.6_8d4210a4630c9bfea14e510ac381ce60
+  tailwindcss: 2.2.7_8d4210a4630c9bfea14e510ac381ce60
   tslib: 2.3.0
   typed-query-selector: 2.6.0
   typescript: 4.3.5
@@ -14904,8 +14904,8 @@ packages:
       strip-ansi: 6.0.0
     dev: true
 
-  /tailwindcss/2.2.6_8d4210a4630c9bfea14e510ac381ce60:
-    resolution: {integrity: sha512-hyYAltGfxf7zPpB9lImj7uUCoa0gdUKhG91J1JXdlLq2bTAgessoA0doJ1FhKc1KwSUfx0hiohPQbMfNFgQO1A==}
+  /tailwindcss/2.2.7_8d4210a4630c9bfea14e510ac381ce60:
+    resolution: {integrity: sha512-jv35rugP5j8PpzbXnsria7ZAry7Evh0KtQ4MZqNd+PhF+oIKPwJTVwe/rmfRx9cZw3W7iPZyzBmeoAoNwfJ1yg==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:
