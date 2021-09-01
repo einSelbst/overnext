@@ -80,6 +80,7 @@
     "find:unused": "next-unused",
     "?build:ssr": "echo used on CI for 'compressed size' action",
     "build:ssr": "NODE_ENV=production BROWSERSLIST_ENV=ssr next build",
+    "gh-action:cleanup": "rm package-lock.json",
     "?cz": "Make new commit",
     "cz": "git-cz",
     "?release": "Prepare a new release",

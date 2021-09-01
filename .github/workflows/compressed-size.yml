@@ -62,7 +62,7 @@ jobs:
           # cwd:
           # build-script: 'npx pnpm i -P && pnpm run build'
           # clean-script: 'rm -rf packages/node_modules'
-          clean-script: 'rm package-lock.json'
+          clean-script: 'gh-action:cleanup'
           # Any JS files anywhere within a dist directory:
           # pattern: ".next/static/**/*.js"
           pattern: '.next/**/*.{css,js,json,html}'
