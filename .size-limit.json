@@ -6,7 +6,7 @@
   },
   {
     "name": "size of all",
-    "limit": "800 kB",
+    "limit": "900 kB",
     "path": [".next/**/*.html"]
   },
   {
