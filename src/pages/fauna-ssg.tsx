@@ -6,7 +6,6 @@ import type {
   InferGetStaticPropsType,
   NextLayoutPage,
 } from 'next'
-import type { MouseEvent } from 'react'
 import { useCallback, useState } from 'react'
 
 import DefaultLayout from 'layouts/default.layout'
@@ -118,7 +117,7 @@ const FaunaSSG: NextLayoutPage = ({
   }, [newShow, shows])
 
   const handleUpdateShow = useCallback(
-    async (event: MouseEvent<HTMLInputElement>) => {
+    async (event: React.MouseEvent<HTMLInputElement>) => {
       const eventTarget = event.target as HTMLInputElement
       await fetch('/api/update-show', {
         body: JSON.stringify({
