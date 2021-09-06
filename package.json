@@ -202,7 +202,7 @@
   "optionalDependencies": {
     "@axe-core/react": "4.2.2",
     "fsevents": "2.3.2",
-    "pnpm": "6.14.6"
+    "pnpm": "6.14.7"
   },
   "engines": {
     "pnpm": ">=6"
