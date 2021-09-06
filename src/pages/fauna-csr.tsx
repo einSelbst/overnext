@@ -1,5 +1,5 @@
 import type { NextLayoutPage } from 'next'
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 import DefaultLayout from 'layouts/default.layout'
 
@@ -34,13 +34,15 @@ const FaunaCSR: NextLayoutPage = () => {
     })()
   }, []) // empty array if effect doesn't need props or state, means will be executed only once on load
 
-  function handleNewShow(event: {
-    target: { value: string; checked: unknown }
-  }) {
-    setNewShow(event.target.value)
-  }
+  const handleNewShow = useCallback(
+    (event: { target: { value: string; checked: unknown } }) => {
+      setNewShow(event.target.value)
+    },
+    [setNewShow]
+  )
 
-  async function handleAddShow() {
+  const handleAddShow = useCallback(async () => {
+    /* async function handleAddShow() { */
     const response = await fetch('/api/add-show', {
       body: JSON.stringify({
         title: newShow,
@@ -53,33 +55,36 @@ const FaunaCSR: NextLayoutPage = () => {
     newShows.push(body.data)
     setShows(newShows)
     setNewShow('')
-  }
+  }, [newShow, shows])
 
-  async function handleUpdateShow(event: React.MouseEvent<HTMLInputElement>) {
-    /* async function handleUpdateShow(event: { target: HTMLInputElement }) { */
-    const eventTarget = event.target as HTMLInputElement
-    await fetch('/api/update-show', {
-      body: JSON.stringify({
-        title: eventTarget.value,
-        watched: eventTarget.checked,
-      }),
-      method: 'POST',
-    })
-    let newShows = Array.from(shows)
-    newShows = newShows.map(show => {
-      if (show.data.title === eventTarget.value) {
-        return {
-          ...show,
-          data: {
-            title: eventTarget.value,
-            watched: eventTarget.checked,
-          },
+  const handleUpdateShow = useCallback(
+    async (event: React.MouseEvent<HTMLInputElement>) => {
+      /* async function handleUpdateShow(event: { target: HTMLInputElement }) { */
+      const eventTarget = event.target as HTMLInputElement
+      await fetch('/api/update-show', {
+        body: JSON.stringify({
+          title: eventTarget.value,
+          watched: eventTarget.checked,
+        }),
+        method: 'POST',
+      })
+      let newShows = Array.from(shows)
+      newShows = newShows.map(show => {
+        if (show.data.title === eventTarget.value) {
+          return {
+            ...show,
+            data: {
+              title: eventTarget.value,
+              watched: eventTarget.checked,
+            },
+          }
         }
-      }
-      return show
-    })
-    setShows(newShows)
-  }
+        return show
+      })
+      setShows(newShows)
+    },
+    [shows]
+  )
 
   return (
     <main>
