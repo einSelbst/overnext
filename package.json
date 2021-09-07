@@ -140,7 +140,7 @@
     "@types/core-js": "2.5.5",
     "@types/eslint": "7.28.0",
     "@types/is-ci": "3.0.0",
-    "@types/jest": "26.0.24",
+    "@types/jest": "27.0.1",
     "@types/prettier": "2.3.2",
     "@types/sass": "1.16.1",
     "@types/source-map-support": "0.5.4",
