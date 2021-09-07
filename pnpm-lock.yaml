@@ -66,7 +66,7 @@ specifiers:
   eslint-plugin-sort-keys-fix: 1.1.2
   eslint-plugin-toml: 0.2.0
   eslint-plugin-tsdoc: 0.2.14
-  eslint-plugin-unicorn: 34.0.1
+  eslint-plugin-unicorn: 35.0.0
   faunadb: 4.4.1
   fsevents: 2.3.2
   git-format-staged: latest
@@ -190,7 +190,7 @@ devDependencies:
   eslint-plugin-sort-keys-fix: 1.1.2
   eslint-plugin-toml: 0.2.0_eslint@7.32.0
   eslint-plugin-tsdoc: 0.2.14
-  eslint-plugin-unicorn: 34.0.1_eslint@7.32.0
+  eslint-plugin-unicorn: 35.0.0_eslint@7.32.0
   git-format-staged: 2.1.2
   html-validate: 5.5.0_jest@27.1.0
   husky: 7.0.2
@@ -6829,12 +6829,13 @@ packages:
       '@microsoft/tsdoc-config': 0.15.2
     dev: true
 
-  /eslint-plugin-unicorn/34.0.1_eslint@7.32.0:
-    resolution: {integrity: sha512-GUBtRYRhPVOW/GDu6QtOjrneSZxY/MulOT8puJU+47VKCzNmMgS/iHO2gZqoQ7KPMrpNYlebUlvCWy3IR1USVQ==}
+  /eslint-plugin-unicorn/35.0.0_eslint@7.32.0:
+    resolution: {integrity: sha512-FHsaO68tDPQILfs/mGF8eSISJp8RswR4FpUuBDnueK2wyEHC6zmsc9WxjYyldXoIsBuVmru6jQyFCbCWPoW/KQ==}
     engines: {node: '>=12'}
     peerDependencies:
       eslint: '>=7.28.0'
     dependencies:
+      '@babel/helper-validator-identifier': 7.14.9
       ci-info: 3.2.0
       clean-regexp: 1.0.0
       eslint: 7.32.0
@@ -6845,7 +6846,6 @@ packages:
       pluralize: 8.0.0
       read-pkg-up: 7.0.1
       regexp-tree: 0.1.23
-      reserved-words: 0.1.2
       safe-regex: 2.1.1
       semver: 7.3.5
     transitivePeerDependencies:
@@ -12382,10 +12382,6 @@ packages:
     resolution: {integrity: sha512-ipEzlWQe6RK3jkzikgCupiTbTvm4S0/CAU5GlgptkN5SO6F3u0UD0K18wy6ErDqiCyP4J4YYe1HuAShvsxePLg==}
     engines: {node: '>=0.4.0'}
     hasBin: true
-    dev: true
-
-  /reserved-words/0.1.2:
-    resolution: {integrity: sha1-AKCUD5jNUBrqqsMWQR2a3FKzGrE=}
     dev: true
 
   /resolve-cwd/3.0.0:
