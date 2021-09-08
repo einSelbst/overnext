@@ -42,7 +42,7 @@ specifiers:
   commitizen: 4.2.4
   core-js: 3.17.2
   cypress: 8.3.1
-  cypress-watch-and-reload: 1.5.2
+  cypress-watch-and-reload: 1.5.3
   dependency-version-badge: 1.10.0
   eslint: 7.32.0
   eslint-config-next: 11.1.2
@@ -97,7 +97,7 @@ specifiers:
   source-map-support: 0.5.19
   standard-version: 9.3.1
   start-server-and-test: 1.14.0
-  tailwindcss: 2.2.12
+  tailwindcss: 2.2.14
   tap-spot: 1.1.1
   ts-node: 10.2.1
   tslib: 2.3.1
@@ -128,7 +128,7 @@ dependencies:
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   sass: 1.39.0
-  tailwindcss: 2.2.12_dc78e7f376224e686a37b2113facd53c
+  tailwindcss: 2.2.14_dc78e7f376224e686a37b2113facd53c
   tslib: 2.3.1
   typed-query-selector: 2.6.0
   typescript: 4.4.2
@@ -166,7 +166,7 @@ devDependencies:
   babel-plugin-istanbul: 6.0.0
   commitizen: 4.2.4
   cypress: 8.3.1
-  cypress-watch-and-reload: 1.5.2
+  cypress-watch-and-reload: 1.5.3
   dependency-version-badge: 1.10.0
   eslint: 7.32.0
   eslint-config-next: 11.1.2_1a4cc63bb962be0c1c6a016cd2486bf8
@@ -5774,12 +5774,12 @@ packages:
       array-find-index: 1.0.2
     dev: true
 
-  /cypress-watch-and-reload/1.5.2:
-    resolution: {integrity: sha512-raHLaW+zKvdjSVSDUtiTIW/FeinZVd+BW9v6lcL2cOhGIaGTYNnUBImyDnKzztjKIkfBwC8WKhPCOPZWMewDQg==}
+  /cypress-watch-and-reload/1.5.3:
+    resolution: {integrity: sha512-AY+ZwyENAU+YzZYNBq2RjXrUlkkE037Q5uOvXTDPrLR2bfsOwS5H9QTt41AjROg2+IbKPpyFTxZL99GoAfo0YA==}
     dependencies:
       async-wait-until: 1.2.6
       chokidar: 3.5.2
-      ws: 8.2.1
+      ws: 8.2.2
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
@@ -13535,8 +13535,8 @@ packages:
       strip-ansi: 6.0.0
     dev: true
 
-  /tailwindcss/2.2.12_dc78e7f376224e686a37b2113facd53c:
-    resolution: {integrity: sha512-xB21XYyad1ZBATFHfSqe8hDHK7G+QLgErEy754h5gG+BcvrBoCBknaXGCDq9CXj9Azqz4zby3adCyY88kYRg0g==}
+  /tailwindcss/2.2.14_dc78e7f376224e686a37b2113facd53c:
+    resolution: {integrity: sha512-gQQPKbV8qb8GthGhJGbRR+lKluSpFq+L78CJZLmqumEBKPMDkD+l5wFlOTzlOhWozG4S1I9AUSaPkD1EfnNsug==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:
@@ -15017,8 +15017,8 @@ packages:
         optional: true
     dev: true
 
-  /ws/8.2.1:
-    resolution: {integrity: sha512-XkgWpJU3sHU7gX8f13NqTn6KQ85bd1WU7noBHTT8fSohx7OS1TPY8k+cyRPCzFkia7C4mM229yeHr1qK9sM4JQ==}
+  /ws/8.2.2:
+    resolution: {integrity: sha512-Q6B6H2oc8QY3llc3cB8kVmQ6pnJWVQbP7Q5algTcIxx7YEpc0oU4NBVHlztA7Ekzfhw2r0rPducMUiCGWKQRzw==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
