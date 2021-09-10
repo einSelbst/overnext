@@ -92,7 +92,7 @@ specifiers:
   prettier-plugin-toml: latest
   react: 17.0.2
   react-dom: 17.0.2
-  sass: 1.39.0
+  sass: 1.39.2
   size-limit: 5.0.3
   source-map-support: 0.5.20
   standard-version: 9.3.1
@@ -118,7 +118,7 @@ dependencies:
   core-js: 3.17.3
   faunadb: 4.4.1
   is-ci: 3.0.0
-  next: 11.1.2_dbdd396251b92133b4247ce89d95acc7
+  next: 11.1.2_b4c39301f7a688c67518c642e818aff7
   next-compose-plugins: 2.2.1
   next-pwa: 5.3.1_27bd9a7213ff2dc621b5ff6177fdf248
   next-seo: 4.26.0_6fbf59523517da779df50d355b375324
@@ -127,7 +127,7 @@ dependencies:
   postcss: 8.3.6
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
-  sass: 1.39.0
+  sass: 1.39.2
   tailwindcss: 2.2.14_dc78e7f376224e686a37b2113facd53c
   tslib: 2.3.1
   typed-query-selector: 2.6.0
@@ -3007,7 +3007,7 @@ packages:
       '@sentry/tracing': 6.12.0
       '@sentry/utils': 6.12.0
       '@sentry/webpack-plugin': 1.17.1
-      next: 11.1.2_dbdd396251b92133b4247ce89d95acc7
+      next: 11.1.2_b4c39301f7a688c67518c642e818aff7
       react: 17.0.2
       tslib: 1.14.1
     transitivePeerDependencies:
@@ -6677,7 +6677,7 @@ packages:
       eslint-plugin-jsx-a11y: 6.4.1_eslint@7.32.0
       eslint-plugin-react: 7.25.1_eslint@7.32.0
       eslint-plugin-react-hooks: 4.2.0_eslint@7.32.0
-      next: 11.1.2_dbdd396251b92133b4247ce89d95acc7
+      next: 11.1.2_b4c39301f7a688c67518c642e818aff7
       typescript: 4.4.2
     transitivePeerDependencies:
       - supports-color
@@ -10642,7 +10642,7 @@ packages:
       babel-loader: 8.2.2_02ab79faf18a98050fd2cd956ffa58f7
       clean-webpack-plugin: 3.0.0_webpack@5.52.0
       globby: 11.0.4
-      next: 11.1.2_dbdd396251b92133b4247ce89d95acc7
+      next: 11.1.2_b4c39301f7a688c67518c642e818aff7
       terser-webpack-plugin: 5.2.3_webpack@5.52.0
       workbox-webpack-plugin: 6.2.4_f143c42fd0e1da8fed4c41c0c34e0763
       workbox-window: 6.2.4
@@ -10663,7 +10663,7 @@ packages:
       react: '>=16.0.0'
       react-dom: '>=16.0.0'
     dependencies:
-      next: 11.1.2_dbdd396251b92133b4247ce89d95acc7
+      next: 11.1.2_b4c39301f7a688c67518c642e818aff7
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
     dev: false
@@ -10677,7 +10677,7 @@ packages:
       '@corex/deepmerge': 2.6.34
       matcher: 4.0.0
       minimist: 1.2.5
-      next: 11.1.2_dbdd396251b92133b4247ce89d95acc7
+      next: 11.1.2_b4c39301f7a688c67518c642e818aff7
     dev: false
 
   /next-themes/0.0.15_6fbf59523517da779df50d355b375324:
@@ -10687,7 +10687,7 @@ packages:
       react: '*'
       react-dom: '*'
     dependencies:
-      next: 11.1.2_dbdd396251b92133b4247ce89d95acc7
+      next: 11.1.2_b4c39301f7a688c67518c642e818aff7
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
     dev: false
@@ -10703,7 +10703,7 @@ packages:
       - supports-color
     dev: true
 
-  /next/11.1.2_dbdd396251b92133b4247ce89d95acc7:
+  /next/11.1.2_b4c39301f7a688c67518c642e818aff7:
     resolution: {integrity: sha512-azEYL0L+wFjv8lstLru3bgvrzPvK0P7/bz6B/4EJ9sYkXeW8r5Bjh78D/Ol7VOg0EIPz0CXoe72hzAlSAXo9hw==}
     engines: {node: '>=12.0.0'}
     hasBin: true
@@ -10763,7 +10763,7 @@ packages:
       react-dom: 17.0.2_react@17.0.2
       react-is: 17.0.2
       react-refresh: 0.8.3
-      sass: 1.39.0
+      sass: 1.39.2
       stream-browserify: 3.0.0
       stream-http: 3.1.1
       string_decoder: 1.3.0
@@ -12784,8 +12784,8 @@ packages:
       commander: 2.20.3
     dev: true
 
-  /sass/1.39.0:
-    resolution: {integrity: sha512-F4o+RhJkNOIG0b6QudYU8c78ZADKZjKDk5cyrf8XTKWfrgbtyVVXImFstJrc+1pkQDCggyidIOytq6gS4gCCZg==}
+  /sass/1.39.2:
+    resolution: {integrity: sha512-4/6Vn2RPc+qNwSclUSKvssh7dqK1Ih3FfHBW16I/GfH47b3scbYeOw65UIrYG7PkweFiKbpJjgkf5CV8EMmvzw==}
     engines: {node: '>=8.9.0'}
     hasBin: true
     dependencies:
