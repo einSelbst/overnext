@@ -85,7 +85,7 @@ specifiers:
   next-unused: 0.0.6
   npm-scripts-info: 0.3.9
   nyc: 15.1.0
-  pnpm: 6.14.7
+  pnpm: 6.15.0
   postcss: 8.3.6
   prettier: 2.4.0
   prettier-plugin-sh: 0.7.1
@@ -137,7 +137,7 @@ dependencies:
 optionalDependencies:
   '@axe-core/react': 4.2.2
   fsevents: 2.3.2
-  pnpm: 6.14.7
+  pnpm: 6.15.0
 
 devDependencies:
   '@babel/preset-env': 7.15.6_@babel+core@7.15.5
@@ -11567,8 +11567,8 @@ packages:
       - typescript
     dev: false
 
-  /pnpm/6.14.7:
-    resolution: {integrity: sha512-/pjz4Eod3Heyxw/QCGLYpkZR8YNuzTTblgcVC+qvvYCtX0Wb5J9jVcbHoSRqC2jeo4ldtg8H9dssPlHlH50I7w==}
+  /pnpm/6.15.0:
+    resolution: {integrity: sha512-RqG3S1JHiFYxRgXQ941xT2BnNsjJbp+J1ImacB6b8JiqAIRkp6TAcNeosvF3X0Z9I6FvuCkccMwBxPJe8bboPQ==}
     engines: {node: '>=12.17'}
     hasBin: true
     requiresBuild: true
