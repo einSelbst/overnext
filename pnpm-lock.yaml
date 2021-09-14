@@ -51,7 +51,7 @@ specifiers:
   eslint-import-resolver-typescript: 2.5.0
   eslint-plugin-array-func: 3.1.7
   eslint-plugin-compat: 3.13.0
-  eslint-plugin-cypress: 2.11.3
+  eslint-plugin-cypress: 2.12.1
   eslint-plugin-eslint-comments: 3.2.0
   eslint-plugin-import: 2.24.2
   eslint-plugin-jest: 24.4.0
@@ -175,7 +175,7 @@ devDependencies:
   eslint-import-resolver-typescript: 2.5.0_b7a4de75e7d0094cbe979e30a9a325ab
   eslint-plugin-array-func: 3.1.7_eslint@7.32.0
   eslint-plugin-compat: 3.13.0_eslint@7.32.0
-  eslint-plugin-cypress: 2.11.3_eslint@7.32.0
+  eslint-plugin-cypress: 2.12.1_eslint@7.32.0
   eslint-plugin-eslint-comments: 3.2.0_eslint@7.32.0
   eslint-plugin-import: 2.24.2_eslint@7.32.0
   eslint-plugin-jest: 24.4.0_c59ad1753f394c982c539a8e2c3d4e25
@@ -6872,8 +6872,8 @@ packages:
       semver: 7.3.5
     dev: true
 
-  /eslint-plugin-cypress/2.11.3_eslint@7.32.0:
-    resolution: {integrity: sha512-hOoAid+XNFtpvOzZSNWP5LDrQBEJwbZwjib4XJ1KcRYKjeVj0mAmPmucG4Egli4j/aruv+Ow/acacoloWWCl9Q==}
+  /eslint-plugin-cypress/2.12.1_eslint@7.32.0:
+    resolution: {integrity: sha512-c2W/uPADl5kospNDihgiLc7n87t5XhUbFDoTl6CfVkmG+kDAb5Ux10V9PoLPu9N+r7znpc+iQlcmAqT1A/89HA==}
     peerDependencies:
       eslint: '>= 3.2.1'
     dependencies:
