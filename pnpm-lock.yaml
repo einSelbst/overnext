@@ -26,9 +26,9 @@ specifiers:
   '@types/eslint': 7.28.0
   '@types/is-ci': 3.0.0
   '@types/jest': 27.0.1
-  '@types/node': 14.17.15
+  '@types/node': 14.17.16
   '@types/prettier': 2.3.2
-  '@types/react': 17.0.20
+  '@types/react': 17.0.21
   '@types/react-dom': 17.0.9
   '@types/sass': 1.16.1
   '@types/source-map-support': 0.5.4
@@ -92,7 +92,7 @@ specifiers:
   prettier-plugin-toml: latest
   react: 17.0.2
   react-dom: 17.0.2
-  sass: 1.40.1
+  sass: 1.41.0
   size-limit: 5.0.3
   source-map-support: 0.5.20
   standard-version: 9.3.1
@@ -111,14 +111,14 @@ specifiers:
 dependencies:
   '@babel/core': 7.15.5
   '@sentry/nextjs': 6.12.0_next@11.1.2+react@17.0.2
-  '@types/node': 14.17.15
-  '@types/react': 17.0.20
+  '@types/node': 14.17.16
+  '@types/react': 17.0.21
   '@types/react-dom': 17.0.9
   autoprefixer: 10.3.4_postcss@8.3.6
   core-js: 3.17.3
   faunadb: 4.4.1
   is-ci: 3.0.0
-  next: 11.1.2_ccfc0a8cadc3a1363bb980c89cd77bc5
+  next: 11.1.2_f7f422c1e9ce8dd02d0048c861871efb
   next-compose-plugins: 2.2.1
   next-pwa: 5.3.1_70ba417ebf1fb4d06589ee918677aaa3
   next-seo: 4.26.0_6fbf59523517da779df50d355b375324
@@ -127,7 +127,7 @@ dependencies:
   postcss: 8.3.6
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
-  sass: 1.40.1
+  sass: 1.41.0
   tailwindcss: 2.2.15_dc78e7f376224e686a37b2113facd53c
   tslib: 2.3.1
   typed-query-selector: 2.6.0
@@ -208,7 +208,7 @@ devDependencies:
   standard-version: 9.3.1
   start-server-and-test: 1.14.0
   tap-spot: 1.1.1
-  ts-node: 10.2.1_91d7040b2316c81455e367292ad70221
+  ts-node: 10.2.1_8819252bdc5f26e5767446edef4251b2
   typedoc: 0.22.3_typescript@4.4.3
   typescript-eslint-language-service: 4.1.5_e2d3c88d378335c4183365c112128ce9
   typesync: 0.8.0
@@ -2478,7 +2478,7 @@ packages:
       '@istanbuljs/schema': 0.1.3
       nyc: 15.1.0
       source-map-support: 0.5.20
-      ts-node: 10.2.1_91d7040b2316c81455e367292ad70221
+      ts-node: 10.2.1_8819252bdc5f26e5767446edef4251b2
     dev: true
 
   /@istanbuljs/schema/0.1.3:
@@ -3007,7 +3007,7 @@ packages:
       '@sentry/tracing': 6.12.0
       '@sentry/utils': 6.12.0
       '@sentry/webpack-plugin': 1.17.1
-      next: 11.1.2_ccfc0a8cadc3a1363bb980c89cd77bc5
+      next: 11.1.2_f7f422c1e9ce8dd02d0048c861871efb
       react: 17.0.2
       tslib: 1.14.1
     transitivePeerDependencies:
@@ -3378,6 +3378,11 @@ packages:
 
   /@types/node/14.17.15:
     resolution: {integrity: sha512-D1sdW0EcSCmNdLKBGMYb38YsHUS6JcM7yQ6sLQ9KuZ35ck7LYCKE7kYFHOO59ayFOY3zobWVZxf4KXhYHcHYFA==}
+    dev: true
+
+  /@types/node/14.17.16:
+    resolution: {integrity: sha512-WiFf2izl01P1CpeY8WqFAeKWwByMueBEkND38EcN8N68qb0aDG3oIS1P5MhAX5kUdr469qRyqsY/MjanLjsFbQ==}
+    dev: false
 
   /@types/normalize-package-data/2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
@@ -3406,6 +3411,14 @@ packages:
 
   /@types/react/17.0.20:
     resolution: {integrity: sha512-wWZrPlihslrPpcKyCSlmIlruakxr57/buQN1RjlIeaaTWDLtJkTtRW429MoQJergvVKc4IWBpRhWw7YNh/7GVA==}
+    dependencies:
+      '@types/prop-types': 15.7.4
+      '@types/scheduler': 0.16.2
+      csstype: 3.0.8
+    dev: false
+
+  /@types/react/17.0.21:
+    resolution: {integrity: sha512-GzzXCpOthOjXvrAUFQwU/svyxu658cwu00Q9ugujS4qc1zXgLFaO0kS2SLOaMWLt2Jik781yuHCWB7UcYdGAeQ==}
     dependencies:
       '@types/prop-types': 15.7.4
       '@types/scheduler': 0.16.2
@@ -6757,7 +6770,7 @@ packages:
       eslint-plugin-jsx-a11y: 6.4.1_eslint@7.32.0
       eslint-plugin-react: 7.25.1_eslint@7.32.0
       eslint-plugin-react-hooks: 4.2.0_eslint@7.32.0
-      next: 11.1.2_ccfc0a8cadc3a1363bb980c89cd77bc5
+      next: 11.1.2_f7f422c1e9ce8dd02d0048c861871efb
       typescript: 4.4.3
     transitivePeerDependencies:
       - supports-color
@@ -9277,7 +9290,7 @@ packages:
       jest-validate: 27.2.0
       micromatch: 4.0.4
       pretty-format: 27.2.0
-      ts-node: 10.2.1_91d7040b2316c81455e367292ad70221
+      ts-node: 10.2.1_8819252bdc5f26e5767446edef4251b2
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -10740,7 +10753,7 @@ packages:
       babel-loader: 8.2.2_16ff48a381fa3cd612ae60c01c46e0d7
       clean-webpack-plugin: 3.0.0_webpack@5.52.1
       globby: 11.0.4
-      next: 11.1.2_ccfc0a8cadc3a1363bb980c89cd77bc5
+      next: 11.1.2_f7f422c1e9ce8dd02d0048c861871efb
       terser-webpack-plugin: 5.2.3_webpack@5.52.1
       workbox-webpack-plugin: 6.2.4_35d7aee927b19958f8903c1cfa00dccf
       workbox-window: 6.2.4
@@ -10761,7 +10774,7 @@ packages:
       react: '>=16.0.0'
       react-dom: '>=16.0.0'
     dependencies:
-      next: 11.1.2_ccfc0a8cadc3a1363bb980c89cd77bc5
+      next: 11.1.2_f7f422c1e9ce8dd02d0048c861871efb
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
     dev: false
@@ -10775,7 +10788,7 @@ packages:
       '@corex/deepmerge': 2.6.34
       matcher: 4.0.0
       minimist: 1.2.5
-      next: 11.1.2_ccfc0a8cadc3a1363bb980c89cd77bc5
+      next: 11.1.2_f7f422c1e9ce8dd02d0048c861871efb
     dev: false
 
   /next-themes/0.0.15_6fbf59523517da779df50d355b375324:
@@ -10785,7 +10798,7 @@ packages:
       react: '*'
       react-dom: '*'
     dependencies:
-      next: 11.1.2_ccfc0a8cadc3a1363bb980c89cd77bc5
+      next: 11.1.2_f7f422c1e9ce8dd02d0048c861871efb
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
     dev: false
@@ -10801,7 +10814,7 @@ packages:
       - supports-color
     dev: true
 
-  /next/11.1.2_ccfc0a8cadc3a1363bb980c89cd77bc5:
+  /next/11.1.2_f7f422c1e9ce8dd02d0048c861871efb:
     resolution: {integrity: sha512-azEYL0L+wFjv8lstLru3bgvrzPvK0P7/bz6B/4EJ9sYkXeW8r5Bjh78D/Ol7VOg0EIPz0CXoe72hzAlSAXo9hw==}
     engines: {node: '>=12.0.0'}
     hasBin: true
@@ -10861,7 +10874,7 @@ packages:
       react-dom: 17.0.2_react@17.0.2
       react-is: 17.0.2
       react-refresh: 0.8.3
-      sass: 1.40.1
+      sass: 1.41.0
       stream-browserify: 3.0.0
       stream-http: 3.1.1
       string_decoder: 1.3.0
@@ -11748,7 +11761,7 @@ packages:
     dependencies:
       import-cwd: 3.0.0
       lilconfig: 2.0.3
-      ts-node: 10.2.1_91d7040b2316c81455e367292ad70221
+      ts-node: 10.2.1_8819252bdc5f26e5767446edef4251b2
       yaml: 1.10.2
     dev: false
 
@@ -12892,8 +12905,8 @@ packages:
       commander: 2.20.3
     dev: true
 
-  /sass/1.40.1:
-    resolution: {integrity: sha512-M6WskYLzTfdZdb09W9SftIScjudL8jNkhdh9z96U+olQaKIcw2Knb6QLL9bUhnuSm4VD+1yJVaO2/ENDPMTtAQ==}
+  /sass/1.41.0:
+    resolution: {integrity: sha512-wb8nT60cjo9ZZMcHzG7TzdbFtCAmHEKWrH+zAdScPb4ZxL64WQBnGdbp5nwlenW5wJPcHva1JWmVa0h6iqA5eg==}
     engines: {node: '>=8.9.0'}
     hasBin: true
     dependencies:
@@ -14143,7 +14156,7 @@ packages:
       typescript: 4.4.2
     dev: true
 
-  /ts-node/10.2.1_91d7040b2316c81455e367292ad70221:
+  /ts-node/10.2.1_8819252bdc5f26e5767446edef4251b2:
     resolution: {integrity: sha512-hCnyOyuGmD5wHleOQX6NIjJtYVIO8bPP8F2acWkB4W06wdlkgyvJtubO/I9NkI88hCFECbsEgoLc0VNkYmcSfw==}
     engines: {node: '>=12.0.0'}
     hasBin: true
@@ -14163,7 +14176,7 @@ packages:
       '@tsconfig/node12': 1.0.9
       '@tsconfig/node14': 1.0.1
       '@tsconfig/node16': 1.0.2
-      '@types/node': 14.17.15
+      '@types/node': 14.17.16
       acorn: 8.5.0
       acorn-walk: 8.2.0
       arg: 4.1.3
