@@ -5,12 +5,13 @@ import { useAmp } from 'next/amp'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 
-/* import 'styles/main.css' // tailwind */
 import ENV from 'config/env.config'
 import SEO from 'config/seo.config'
-import DefaultLayout from 'layouts/default.layout'
+/* import DefaultLayout from 'layouts/default.layout' */
+import HolyGrailLayout from 'layouts/holy-grail.layout'
 import SiteLayout from 'layouts/site.layout'
 import 'styles/global.scss' // eslint-disable-line import/no-unassigned-import
+/* import 'styles/main.css' // tailwind */
 
 const sendMetric = async ({
   name,
@@ -212,7 +213,12 @@ const _app = ({
 }): React.ReactNode => {
   /* }): JSX.Element => { */
   const isAmp = useAmp()
-  const Layout = Component.Layout ?? DefaultLayout
+
+  /*
+   * layout specific
+   * every page can specify its layout, if none is specifid we define a fallback here
+   */
+  const Layout = Component.Layout ?? HolyGrailLayout
   const withSiteLayout = (page: React.ReactNode): React.ReactNode => (
     <SiteLayout>{page}</SiteLayout>
   )
