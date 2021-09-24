@@ -16,7 +16,9 @@ const LegalLayout = ({
       <p>Something which is supposed to be on the side</p>
     </aside>
 
-    <Footer />
+    <footer>
+      <Footer />
+    </footer>
   </>
 )
 

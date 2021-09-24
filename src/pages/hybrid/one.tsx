@@ -55,7 +55,7 @@ const One = (props: Props): OverNextComponentType => {
   // empty array means useEffect is only called for first time when component is loading/ rendered
 
   return (
-    <main>
+    <div>
       <h1>One</h1>
       <p>
         I&apos;m a hybrid page and I&apos;m available in multiple languages!
@@ -109,7 +109,7 @@ const One = (props: Props): OverNextComponentType => {
           </>
         )}
       </div>
-    </main>
+    </div>
   )
 }
 export { config }

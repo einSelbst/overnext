@@ -31,7 +31,9 @@ const DefaultLayout = ({
       <p>Something which is supposed to be on the right side</p>
     </aside>
 
-    <Footer />
+    <footer>
+      <Footer />
+    </footer>
   </>
 )
 

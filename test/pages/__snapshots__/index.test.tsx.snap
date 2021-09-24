@@ -5,8 +5,9 @@ exports[`home page matches snapshot 1`] = `
   <div
     class="jsx-1885047670 container"
   >
-    <main
+    <div
       class="jsx-1885047670"
+      id="main"
     >
       <h1
         class="jsx-1885047670"
@@ -55,6 +56,11 @@ exports[`home page matches snapshot 1`] = `
       >
         Test Button
       </button>
+      <h2
+        class="jsx-1885047670"
+      >
+        Some further info
+      </h2>
       <div
         class="jsx-1885047670 grid"
       >
@@ -120,7 +126,7 @@ exports[`home page matches snapshot 1`] = `
           </p>
         </a>
       </div>
-    </main>
+    </div>
   </div>
 </DocumentFragment>
 `;

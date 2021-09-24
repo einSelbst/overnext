@@ -131,7 +131,7 @@ const Footer = ({
   _platform?: keyof typeof HOSTER
   _notification?: keyof typeof NOTIFICATION_STATES
 }): ComponentReturnType => (
-  <footer>
+  <>
     <div style={{ display: 'inline-block' }}>
       <p>Hosted on</p>
       {HOSTER[process.env.platform as string]}
@@ -144,7 +144,7 @@ const Footer = ({
       onChange={toggleCss}
     />
     <Toggle disabled label='Something else' toggleId='somethingElse' />
-  </footer>
+  </>
 )
 
 export default Footer
