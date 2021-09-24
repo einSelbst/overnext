@@ -100,8 +100,22 @@ const HeadIcons = (): JSX.Element => {
             href='https://fonts.googleapis.com/css2?family=Inter&family=Sansita&display=swap'
             rel='stylesheet'
           />
+          {/* Safari & Chrome 93 supports media in 'theme-color' so I can use different */}
+          {/* theme colors based on color scheme. However, this doesn't work with AMP. */}
+          <meta
+            content='white'
+            media='(prefers-color-scheme: light)'
+            name='theme-color'
+          />
+          <meta
+            content='darkgrey'
+            media='(prefers-color-scheme: dark)'
+            name='theme-color'
+          />
         </>
       )}
+      {useAmp() && <meta content='#ffffff' name='theme-color' />}
+
       {/* <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86" /> see https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag */}
       {/* Browsers use this in some areas to help your brand feel more embedded */}
 
@@ -118,7 +132,7 @@ const HeadIcons = (): JSX.Element => {
           />
           <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css" />
         */}
-      <meta content='#ffffff' name='theme-color' />
+
       {/* Windows uses these to help your brand feel more embedded */}
       <meta content='#da532c' name='msapplication-TileColor' />
       <meta
@@ -215,7 +229,7 @@ const _app = ({
   const isAmp = useAmp()
 
   /*
-   * layout specific
+   * Layout specific
    * every page can specify its layout, if none is specifid we define a fallback here
    */
   const Layout = Component.Layout ?? HolyGrailLayout
