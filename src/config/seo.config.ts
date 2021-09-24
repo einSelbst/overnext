@@ -1,19 +1,19 @@
 import ENV from 'config/env.config'
 
 const SEO_CONFIG = {
-  description: 'Basically nothing but DX',
+  description: 'Ihr Notar in Teterow',
   openGraph: {
-    locale: 'en_IE',
-    site_name: 'Overnext', // eslint-disable-line camelcase
+    locale: 'de',
+    site_name: 'Notarin Schipke', // eslint-disable-line camelcase
     type: 'website',
     url: ENV.SITE_URL,
   },
-  title: 'Overnext | Powered by Next.js',
-  titleTemplate: '%s - Nice stuff',
+  title: 'Notarin Schipke | Ihr Notar in Teterow',
+  titleTemplate: '%s - Notarin Schipke',
   twitter: {
     cardType: 'summary_large_image',
-    handle: '@overnext',
-    site: '@overnext',
+    handle: '@notarin-schipke',
+    site: '@notarin-schipke',
   },
 }
 

@@ -29,7 +29,7 @@ const APP_ENV = {
    * Regarding the `??`:
    * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_Coalescing_Operator | Nullish Coalescing Operator}
    */
-  SITE_URL: process.env.URL ?? 'https://overnext.vercel.app',
+  SITE_URL: process.env.URL ?? 'https://notari.vercel.app',
   SITE_URL2: baseUrl2(),
 }
 
