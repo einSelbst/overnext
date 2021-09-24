@@ -1,4 +1,4 @@
-# Overnext - Overly Opinionated Next.js Boilerplate
+# Notari - Next.js Website for my girl
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/einselbst/overnext/Continuous%20integration)
 [![Continuous integration](https://github.com/einSelbst/overnext/actions/workflows/basics.yml/badge.svg)](https://github.com/einSelbst/overnext/actions/workflows/basics.yml)
