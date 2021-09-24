@@ -17,7 +17,7 @@ const DynamicPage = ({
 }: Readonly<
   InferGetStaticPropsType<typeof getStaticProps>
 >): ComponentReturnType => (
-  <main>
+  <div>
     <header>
       <h1>DynamicPage Component {dynamic}</h1>
       <h2>Locale: {locale}</h2>
@@ -39,7 +39,7 @@ const DynamicPage = ({
         <p>The footer of the article</p>
       </footer>
     </article>
-  </main>
+  </div>
 )
 
 /*

@@ -9,7 +9,7 @@ export const Home = (): OverNextComponentType => (
       <meta content='A page about life on earth' name='description' />
     </Head>
 
-    <main>
+    <div id="main">
       <h1>
         Welcome to <a href='https://nextjs.org'>Overnext!</a>
       </h1>
@@ -43,6 +43,8 @@ export const Home = (): OverNextComponentType => (
         Test Button
       </button>
 
+      <h2>Some further info</h2>
+
       <div className='grid'>
         <a className='card' href='https://nextjs.org/docs'>
           <h3>Documentation &rarr;</h3>
@@ -66,7 +68,7 @@ export const Home = (): OverNextComponentType => (
           <p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
         </a>
       </div>
-    </main>
+    </div>
     <style jsx>{`
       button {
         background: #0072ed;
