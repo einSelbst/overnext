@@ -3,124 +3,105 @@
 exports[`home page matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="jsx-1885047670 container"
+    class="jsx-3087994289 container"
   >
     <div
-      class="jsx-1885047670"
+      class="jsx-3087994289"
       id="main"
     >
       <h1
-        class="jsx-1885047670"
+        class="jsx-3087994289"
       >
         Welcome to 
         <a
-          class="jsx-1885047670"
+          class="jsx-3087994289"
           href="https://nextjs.org"
         >
-          Overnext!
+          Notariat!
         </a>
       </h1>
       <p
-        class="jsx-1885047670 description"
+        class="jsx-3087994289 description"
       >
         An overly opinionated starter for 
         <code
-          class="jsx-1885047670"
+          class="jsx-3087994289"
         >
           next.js
         </code>
       </p>
-      <div
-        class="jsx-1885047670 py-20"
-      >
-        <h2
-          class="jsx-1885047670 text-3xl text-center text-gray-700 dark:text-gray-100"
-        >
-          A short story
-        </h2>
-        <iframe
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen=""
-          class="jsx-1885047670"
-          height="315"
-          loading="lazy"
-          src="https://www.youtube-nocookie.com/embed/h6fcK_fRYaI"
-          title="YouTube video player"
-          width="560"
-        />
-      </div>
       <button
-        class="jsx-1885047670"
+        class="jsx-3087994289"
         data-cy="test-button"
         type="button"
       >
         Test Button
       </button>
       <h2
-        class="jsx-1885047670"
+        class="jsx-3087994289"
       >
         Some further info
       </h2>
       <div
-        class="jsx-1885047670 grid"
+        class="jsx-3087994289 grid"
       >
         <a
-          class="jsx-1885047670 card"
+          class="jsx-3087994289 card"
           href="https://nextjs.org/docs"
         >
           <h3
-            class="jsx-1885047670"
+            class="jsx-3087994289"
           >
             Documentation →
           </h3>
           <p
-            class="jsx-1885047670"
+            class="jsx-3087994289"
           >
             Find in-depth information about Next.js features and API.
           </p>
         </a>
         <a
-          class="jsx-1885047670 card"
+          class="jsx-3087994289 card"
           href="https://nextjs.org/docs/getting-started"
         >
           <h3
-            class="jsx-1885047670"
+            class="jsx-3087994289"
           >
             Learn →
           </h3>
           <p
-            class="jsx-1885047670"
+            class="jsx-3087994289"
           >
             Learn about Next.js in an interactive course with quizzes!
           </p>
         </a>
         <a
-          class="jsx-1885047670 card"
+          class="jsx-3087994289 card"
           data-cy="fr-legal"
           href="/legal"
         >
           <h3
-            class="jsx-1885047670"
+            class="jsx-3087994289"
           >
             Legal →
           </h3>
           <p
-            class="jsx-1885047670"
+            class="jsx-3087994289"
           >
             Discover and enjoy the depths of legal issues.
           </p>
         </a>
         <a
-          class="jsx-1885047670 card"
+          class="jsx-3087994289 card"
           href="https://vercel.com/import?filter=next.js"
         >
           <h3
-            class="jsx-1885047670"
+            class="jsx-3087994289"
           >
             Deploy →
           </h3>
           <p
-            class="jsx-1885047670"
+            class="jsx-3087994289"
           >
             Instantly deploy your Next.js site to a public URL with Vercel.
           </p>

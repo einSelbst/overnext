@@ -9,29 +9,14 @@ export const Home = (): OverNextComponentType => (
       <meta content='A page about life on earth' name='description' />
     </Head>
 
-    <div id="main">
+    <div id='main'>
       <h1>
-        Welcome to <a href='https://nextjs.org'>Overnext!</a>
+        Welcome to <a href='https://nextjs.org'>Notariat!</a>
       </h1>
 
       <p className='description'>
         An overly opinionated starter for <code>next.js</code>
       </p>
-
-      <div className='py-20'>
-        <h2 className='text-3xl text-center text-gray-700 dark:text-gray-100'>
-          A short story
-        </h2>
-        <iframe
-          allowFullScreen
-          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-          height='315'
-          loading='lazy'
-          src='https://www.youtube-nocookie.com/embed/h6fcK_fRYaI'
-          title='YouTube video player'
-          width='560'
-        />
-      </div>
 
       <button
         data-cy='test-button'
@@ -77,11 +62,12 @@ export const Home = (): OverNextComponentType => (
     <style global jsx>{`
       html,
       body {
-        color: #000;
+        color: #0a0;
         background: #fff;
       }
 
       [data-theme='dark'],
+      [theme-color='black'],
       [data-theme='dark'] body {
         color: #fff;
         background: #000;
