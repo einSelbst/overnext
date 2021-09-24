@@ -106,4 +106,4 @@ package = "@sentry/netlify-build-plugin"
 
 [plugins.inputs]
 sentryOrg = "vehicle-jg"
-sentryProject = "overnext"
+sentryProject = "notari"
