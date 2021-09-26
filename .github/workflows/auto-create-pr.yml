@@ -46,7 +46,8 @@ jobs:
         shell: bash
         run: |
           # echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-          echo "##[set-output name=branch;]$(echo ${{steps.set-branch-name.outputs.result}})"
+          # echo "##[set-output name=branch;]$(echo ${{steps.set-branch-name.outputs.result}})"
+          echo "##[set-output name=branch;] ${{steps.set-branch-name.outputs.result}}"
           # echo "PULL_REQUEST_TITLE=${{steps.set-branch-name.outputs.result}}" >> $GITHUB_ENV
 
       - uses: FranzDiebold/github-env-vars-action@v2
