@@ -85,7 +85,7 @@ specifiers:
   next-unused: 0.0.6
   npm-scripts-info: 0.3.9
   nyc: 15.1.0
-  pnpm: 6.15.1
+  pnpm: 6.15.2
   postcss: 8.3.8
   prettier: 2.4.1
   prettier-plugin-sh: 0.7.1
@@ -97,7 +97,7 @@ specifiers:
   source-map-support: 0.5.20
   standard-version: 9.3.1
   start-server-and-test: 1.14.0
-  tailwindcss: 2.2.15
+  tailwindcss: 2.2.16
   tap-spot: 1.1.1
   ts-node: 10.2.1
   tslib: 2.3.1
@@ -128,7 +128,7 @@ dependencies:
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   sass: 1.42.1
-  tailwindcss: 2.2.15_e5fdce4cf438c0c3bd179f0884a5b4d1
+  tailwindcss: 2.2.16_e5fdce4cf438c0c3bd179f0884a5b4d1
   tslib: 2.3.1
   typed-query-selector: 2.6.0
   typescript: 4.4.3
@@ -137,7 +137,7 @@ dependencies:
 optionalDependencies:
   '@axe-core/react': 4.3.1
   fsevents: 2.3.2
-  pnpm: 6.15.1
+  pnpm: 6.15.2
 
 devDependencies:
   '@babel/preset-env': 7.15.6_@babel+core@7.15.5
@@ -11779,8 +11779,8 @@ packages:
       - typescript
     dev: false
 
-  /pnpm/6.15.1:
-    resolution: {integrity: sha512-hYGK8xlLdMj/sFhOLJ+x8IotsOkBp01c2mdWdLeKlUdA6EOl/RNWRp+7dUWs3Si2E1zgdTiHsEgNGYffv0PyLQ==}
+  /pnpm/6.15.2:
+    resolution: {integrity: sha512-zDvVALUM2r4DfU9lTP/zkUbkRlrVy/Ihn9vojfrrqOJfkUXoYlT/hfe2TfAELMmOsG21h7b3qms5DV6gzpVX9w==}
     engines: {node: '>=12.17'}
     hasBin: true
     requiresBuild: true
@@ -11852,7 +11852,7 @@ packages:
     engines: {node: '>=10.0'}
     dependencies:
       camelcase-css: 2.0.1
-      postcss: 8.3.6
+      postcss: 8.3.8
     dev: false
 
   /postcss-load-config/3.1.0_ts-node@10.2.1:
@@ -12142,6 +12142,7 @@ packages:
       colorette: 1.3.0
       nanoid: 3.1.25
       source-map-js: 0.6.2
+    dev: true
 
   /postcss/8.3.8:
     resolution: {integrity: sha512-GT5bTjjZnwDifajzczOC+r3FI3Cu+PgPvrsjhQdRqa2kTJ4968/X9CUce9xttIB0xOs5c6xf0TCWZo/y9lF6bA==}
@@ -12422,7 +12423,7 @@ packages:
     dependencies:
       commander: 6.2.1
       glob: 7.1.7
-      postcss: 8.3.6
+      postcss: 8.3.8
       postcss-selector-parser: 6.0.6
     dev: false
 
@@ -13898,8 +13899,8 @@ packages:
       strip-ansi: 6.0.0
     dev: true
 
-  /tailwindcss/2.2.15_e5fdce4cf438c0c3bd179f0884a5b4d1:
-    resolution: {integrity: sha512-WgV41xTMbnSoTNMNnJvShQZ+8GmY86DmXTrCgnsveNZJdlybfwCItV8kAqjYmU49YiFr+ofzmT1JlAKajBZboQ==}
+  /tailwindcss/2.2.16_e5fdce4cf438c0c3bd179f0884a5b4d1:
+    resolution: {integrity: sha512-EireCtpQyyJ4Xz8NYzHafBoy4baCOO96flM0+HgtsFcIQ9KFy/YBK3GEtlnD+rXen0e4xm8t3WiUcKBJmN6yjg==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:
