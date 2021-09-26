@@ -120,7 +120,7 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "sass": "1.42.1",
-    "tailwindcss": "2.2.15",
+    "tailwindcss": "2.2.16",
     "tslib": "2.3.1",
     "typed-query-selector": "2.6.0",
     "typescript": "4.4.3",
@@ -203,7 +203,7 @@
   "optionalDependencies": {
     "@axe-core/react": "4.3.1",
     "fsevents": "2.3.2",
-    "pnpm": "6.15.1"
+    "pnpm": "6.15.2"
   },
   "engines": {
     "pnpm": ">=6"
