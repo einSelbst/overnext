@@ -9,7 +9,7 @@ export const Home = (): OverNextComponentType => (
       <meta content='A page about life on earth' name='description' />
     </Head>
 
-    <div id="main">
+    <div id='main'>
       <h1>
         Welcome to <a href='https://nextjs.org'>Overnext!</a>
       </h1>
