@@ -1,7 +1,7 @@
 [
   {
     "name": "load time for all",
-    "limit": "16 s",
+    "limit": "17 s",
     "path": [".next/**/*.html"]
   },
   {
