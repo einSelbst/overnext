@@ -3,6 +3,7 @@ import { DefaultSeo } from 'next-seo'
 import { ThemeProvider } from 'next-themes'
 import { useAmp } from 'next/amp'
 import dynamic from 'next/dynamic'
+import type { ErrorProps } from 'next/error'
 import Head from 'next/head'
 
 import ENV from 'config/env.config'
@@ -221,9 +222,11 @@ const HeadIcons = (): JSX.Element => {
 const _app = ({
   Component,
   pageProps,
+  err,
 }: {
   readonly Component: NextLayoutComponentType
   readonly pageProps: NextPageContext
+  readonly err: ErrorProps
 }): React.ReactNode => {
   /* }): JSX.Element => { */
   const isAmp = useAmp()
@@ -244,14 +247,14 @@ const _app = ({
     <>
       <DefaultSeo {...SEO} />
       <HeadIcons />
-      <Component {...pageProps} />
+      <Component {...pageProps} err={err} />
     </>
   ) : (
     <ThemeProvider attribute='class' defaultTheme='system'>
       <DefaultSeo {...SEO} />
       <HeadIcons />
       {/* <Layout {...this.props}> */}
-      <Layout>{getLayout(<Component {...pageProps} />)}</Layout>
+      <Layout>{getLayout(<Component {...pageProps} err={err} />)}</Layout>
 
       {/* <Layout>
             <Component {...pageProps} />

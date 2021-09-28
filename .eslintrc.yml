@@ -280,6 +280,9 @@ overrides:
       # re-enable later when renaming stuff
       '@typescript-eslint/naming-convention': off
 
+      # re-enable when I want to restict usage of a specific package
+      '@typescript-eslint/no-restricted-imports': off
+
       # @typescript-eslint rules config
       '@typescript-eslint/consistent-type-definitions': [error, type]
       '@typescript-eslint/sort-type-union-intersection-members': warn
@@ -327,6 +330,7 @@ overrides:
       no-loss-of-precision: off
       no-magic-numbers: off
       no-redeclare: off
+      no-restricted-imports: off
       no-shadow: off
       no-throw-literal: off
       no-unused-expressions: off

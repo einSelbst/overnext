@@ -3,6 +3,7 @@
  * Next.js Configuration
  *
  * @see https://github.com/cyrilwanner/next-compose-plugins
+ * @see https://github.com/natterstefan/next-with-sentry/blob/main/next.config.js
  */
 const { withSentryConfig } = require('@sentry/nextjs')
 const { withPlugins, optional } = require('next-compose-plugins')
