@@ -292,6 +292,7 @@ overrides:
         - error
         - allowAliases: always
           allowLiterals: always
+          allowGenerics: always
       '@typescript-eslint/no-unused-vars':
         - error
         - argsIgnorePattern: '^_'
