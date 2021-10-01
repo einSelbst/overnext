@@ -164,10 +164,11 @@ format: Format source code and fix issues
 lint: Lint source code
 lint:fix: Use deamon to lint source code and fix issues
 lint:html: Run html-validate on generated static output files
+lint:css: Run stylelint on source code to lint CSS
 checklinks: Test integrity of hyperlinks in the build files
 checklinks:server: Test integrity of hyperlinks on the local server
 validate: Validate source code and output files
-validate:src: Format, lint, type-check, unit test & link check the app
+validate:src: Format, lint, type-check & unit test the app
 validate:out: Build app, run integration tests, check links & validate generated html
 build:analyze: Build app and output bundle analyzer diagrams
 build:size: build app and measure loading performance
@@ -226,7 +227,6 @@ info: Display info about the scripts
   - [`stylelint-config-standard`](https://github.com/stylelint/stylelint-config-standard) configuration
   - [`stylelint-config-idiomatic-order`](https://github.com/ream88/stylelint-config-idiomatic-order) configuration
   - [`stylelint-scss`](https://github.com/kristerkari/stylelint-scss) plugin
-  
 - [`husky`](https://github.com/typicode/husky) for hooks
 - [`git-format-staged`](https://github.com/hallettj/git-format-staged), to format staged files (surprise), [reasons](https://www.olioapps.com/blog/automatic-code-formatting/)
 - [`axe-core/react`](https://github.com/dequelabs/axe-core-npm)
