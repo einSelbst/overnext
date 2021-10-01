@@ -98,8 +98,9 @@ specifiers:
   source-map-support: 0.5.20
   standard-version: 9.3.1
   start-server-and-test: 1.14.0
-  stylelint: ^13.13.1
-  stylelint-config-standard: ^22.0.0
+  stylelint: 13.13.1
+  stylelint-config-standard: 22.0.0
+  stylelint-scss: 3.21.0
   tailwindcss: 2.2.16
   tap-spot: 1.1.1
   ts-node: 10.2.1
@@ -213,6 +214,7 @@ devDependencies:
   start-server-and-test: 1.14.0
   stylelint: 13.13.1
   stylelint-config-standard: 22.0.0_stylelint@13.13.1
+  stylelint-scss: 3.21.0_stylelint@13.13.1
   tap-spot: 1.1.1
   ts-node: 10.2.1_ddf0beaba3e4c42b0be7fbba82e51a9d
   typedoc: 0.22.5_typescript@4.4.3
@@ -14207,6 +14209,20 @@ packages:
     dependencies:
       stylelint: 13.13.1
       stylelint-config-recommended: 5.0.0_stylelint@13.13.1
+    dev: true
+
+  /stylelint-scss/3.21.0_stylelint@13.13.1:
+    resolution: {integrity: sha512-CMI2wSHL+XVlNExpauy/+DbUcB/oUZLARDtMIXkpV/5yd8nthzylYd1cdHeDMJVBXeYHldsnebUX6MoV5zPW4A==}
+    engines: {node: '>=8'}
+    peerDependencies:
+      stylelint: ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0 || ^12.0.0 || ^13.0.0
+    dependencies:
+      lodash: 4.17.21
+      postcss-media-query-parser: 0.2.3
+      postcss-resolve-nested-selector: 0.1.1
+      postcss-selector-parser: 6.0.6
+      postcss-value-parser: 4.1.0
+      stylelint: 13.13.1
     dev: true
 
   /stylelint/13.13.1:
