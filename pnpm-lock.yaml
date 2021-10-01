@@ -99,6 +99,7 @@ specifiers:
   standard-version: 9.3.1
   start-server-and-test: 1.14.0
   stylelint: 13.13.1
+  stylelint-config-idiomatic-order: ^8.1.0
   stylelint-config-standard: 22.0.0
   stylelint-scss: 3.21.0
   tailwindcss: 2.2.16
@@ -213,6 +214,7 @@ devDependencies:
   standard-version: 9.3.1
   start-server-and-test: 1.14.0
   stylelint: 13.13.1
+  stylelint-config-idiomatic-order: 8.1.0_stylelint@13.13.1
   stylelint-config-standard: 22.0.0_stylelint@13.13.1
   stylelint-scss: 3.21.0_stylelint@13.13.1
   tap-spot: 1.1.1
@@ -12069,6 +12071,14 @@ packages:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
 
+  /postcss-sorting/5.0.1:
+    resolution: {integrity: sha512-Y9fUFkIhfrm6i0Ta3n+89j56EFqaNRdUKqXyRp6kvTcSXnmgEjaVowCXH+JBe9+YKWqd4nc28r2sgwnzJalccA==}
+    engines: {node: '>=8.7.0'}
+    dependencies:
+      lodash: 4.17.21
+      postcss: 7.0.38
+    dev: true
+
   /postcss-svgo/4.0.3:
     resolution: {integrity: sha512-NoRbrcMWTtUghzuKSoIm6XV+sJdvZ7GZSc3wdBN0W19FTtp2ko8NqLsgoh/m9CzNhU3KLPvQmjIwtaNFkaFTvw==}
     engines: {node: '>=6.9.0'}
@@ -13791,6 +13801,15 @@ packages:
       postcss-selector-parser: 3.1.2
     dev: true
 
+  /stylelint-config-idiomatic-order/8.1.0_stylelint@13.13.1:
+    resolution: {integrity: sha512-iTPY6JjbkIdzy+21x3a1xi/tG33zKhLJb6lZl1xg6jZrXjgIYelnRZ5xVtbcEP9rElxZq/Zu1eGthfvI+ri+YQ==}
+    peerDependencies:
+      stylelint: '>=11'
+    dependencies:
+      stylelint: 13.13.1
+      stylelint-order: 3.1.1_stylelint@13.13.1
+    dev: true
+
   /stylelint-config-recommended/5.0.0_stylelint@13.13.1:
     resolution: {integrity: sha512-c8aubuARSu5A3vEHLBeOSJt1udOdS+1iue7BmJDTSXoCBmfEQmmWX+59vYIj3NQdJBY6a/QRv1ozVFpaB9jaqA==}
     peerDependencies:
@@ -13806,6 +13825,18 @@ packages:
     dependencies:
       stylelint: 13.13.1
       stylelint-config-recommended: 5.0.0_stylelint@13.13.1
+    dev: true
+
+  /stylelint-order/3.1.1_stylelint@13.13.1:
+    resolution: {integrity: sha512-4gP/r8j/6JGZ/LL41b2sYtQqfwZl4VSqTp7WeIwI67v/OXNQ08dnn64BGXNwAUSgb2+YIvIOxQaMzqMyQMzoyQ==}
+    engines: {node: '>=8.7.0'}
+    peerDependencies:
+      stylelint: '>=10.0.1'
+    dependencies:
+      lodash: 4.17.21
+      postcss: 7.0.38
+      postcss-sorting: 5.0.1
+      stylelint: 13.13.1
     dev: true
 
   /stylelint-scss/3.21.0_stylelint@13.13.1:
