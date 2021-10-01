@@ -92,6 +92,13 @@ const HeadIcons = (): JSX.Element => {
           />
           <link href='https://fonts.gstatic.com' rel='preconnect' />
           {/* the preload is automatically added by next.js or one of my linter rules */}
+          {/* eslint-disable react/no-danger */}
+          <noscript
+            dangerouslySetInnerHTML={{
+              __html:
+                '<!-- [html-validate-disable element-required-attributes: nextjs font optimization replaces href with data-href] -->',
+            }}
+          />
           <link
             as='style'
             href='https://fonts.googleapis.com/css2?family=Inter&family=Sansita&display=swap'
@@ -101,6 +108,15 @@ const HeadIcons = (): JSX.Element => {
             href='https://fonts.googleapis.com/css2?family=Inter&family=Sansita&display=swap'
             rel='stylesheet'
           />
+          <noscript
+            dangerouslySetInnerHTML={{
+              __html:
+                '<!-- [html-validate-enable element-required-attributes: nextjs font optimization replaces href with data-href] -->',
+            }}
+          />
+          {/* eslint-enable react/no-danger */}
+
+          {'<!-- [html-validate-enable element-required-attributes] -->'}
           {/* Safari & Chrome 93 supports media in 'theme-color' so I can use different */}
           {/* theme colors based on color scheme. However, this doesn't work with AMP. */}
           <meta

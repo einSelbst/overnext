@@ -76,7 +76,13 @@ const nextConfiguration = {
     locales: ['en', 'de', 'es', 'fr', 'it'],
   },
 
-  /* optimizeFonts: false, */
+  /*
+   * next.js font optimization breaks the link element insofar that there is no 'url' property, which my
+   * html linter complains about. unfortunately it's not possible to disable the linter because next.js
+   * puts the updated code at the top of the document head. I should re-enable font-optimization for production
+   * but will keep it disabled for now to get the linter feedback.
+   */
+  optimizeFonts: false,
   poweredByHeader: false,
   /*
    * publicRuntimeConfig: {
