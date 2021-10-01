@@ -1,9 +1,9 @@
 // import tailwind
 // @see https://tailwindcss.com/docs/guides/nextjs
 @tailwind base;
-@import './base.css';
+// @import './base.css';
 @tailwind components;
-@import './components.css';
+// @import './components.css';
 @tailwind utilities;
 
 body {
@@ -16,8 +16,8 @@ header {
 
   nav svg {
     display: inline;
-    vertical-align: text-top;
     margin-right: 5px;
+    vertical-align: text-top;
   }
 }
 
@@ -30,8 +30,8 @@ header {
 }
 
 main {
-  padding: 2rem;
   display: grid;
+  padding: 2rem;
   background: mintcream;
   place-items: center;
 }
@@ -56,5 +56,6 @@ footer {
 h1 {
   font-family: Sansita, cursive, serif;
   font-size: revert;
+  // stylelint-disable-next-line font-weight-notation -- this is correct usage
   font-weight: revert;
 }
