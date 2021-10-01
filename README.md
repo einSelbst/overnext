@@ -222,6 +222,9 @@ info: Display info about the scripts
   - [`eslint-plugin-jest-dom`](https://github.com/testing-library/eslint-plugin-jest-dom)
   - [`eslint-plugin-jest-formatting`](https://github.com/dangreenisrael/eslint-plugin-jest-formatting)
 
+- [`stylelint`](https://stylelint.io) for CSS
+  - [`stylelint-config-standard`](https://github.com/stylelint/stylelint-config-standard) configuration
+  
 - [`husky`](https://github.com/typicode/husky) for hooks
 - [`git-format-staged`](https://github.com/hallettj/git-format-staged), to format staged files (surprise), [reasons](https://www.olioapps.com/blog/automatic-code-formatting/)
 - [`axe-core/react`](https://github.com/dequelabs/axe-core-npm)
