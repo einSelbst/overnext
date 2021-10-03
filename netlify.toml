@@ -49,14 +49,12 @@ package = "@netlify/plugin-nextjs"
 # [plugins.inputs]
 # record = true
 # spec = "cypress/integration/smoke/*.js"
-# pa11y config
-[[plugins]]
-package = "netlify-plugin-a11y"
-
-[plugins.inputs]
-checkPaths = ['/']
-resultMode = "warn" # is "error" by default
-
+# # pa11y config
+# [[plugins]]
+# package = "netlify-plugin-a11y"
+# [plugins.inputs]
+# checkPaths = ['/']
+# resultMode = "warn" # is "error" by default
 # ignoreDirectories = ['/admin']  # explicitly ignore these directories
 [[plugins]]
 package = "netlify-plugin-html-validate"
@@ -85,7 +83,6 @@ skipPatterns = [
 ]
 # eslint-disable-next-line toml/array-element-newline
 todoPatterns = ["hybrid", ".css"]
-
 # # lighthouse config
 # [[plugins]]
 # package = "@netlify/plugin-lighthouse"
@@ -101,11 +98,9 @@ todoPatterns = ["hybrid", ".css"]
 #   path = "first-amp"
 #     [plugins.inputs.audits.thresholds]
 #     performance = 0.8
-
 # # sentry config (only public repos in free version)
 # [[plugins]]
 # package = "@sentry/netlify-build-plugin"
-
 # [plugins.inputs]
 # sentryOrg = "vehicle-jg"
 # sentryProject = "notari"
