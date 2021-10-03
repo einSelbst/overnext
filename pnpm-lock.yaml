@@ -33,7 +33,7 @@ specifiers:
   '@types/sass': 1.16.1
   '@types/source-map-support': 0.5.4
   '@types/standard-version': 7.0.1
-  '@types/stylelint': 13.13.1
+  '@types/stylelint': 13.13.2
   '@typescript-eslint/eslint-plugin': 4.32.0
   '@typescript-eslint/parser': 4.32.0
   '@typescript-eslint/typescript-estree': 4.32.0
@@ -164,7 +164,7 @@ devDependencies:
   '@types/sass': 1.16.1
   '@types/source-map-support': 0.5.4
   '@types/standard-version': 7.0.1
-  '@types/stylelint': 13.13.1
+  '@types/stylelint': 13.13.2
   '@typescript-eslint/eslint-plugin': 4.32.0_1eacf2495a01e8a68ffa99482308e8ec
   '@typescript-eslint/parser': 4.32.0_eslint@7.32.0+typescript@4.4.3
   '@typescript-eslint/typescript-estree': 4.32.0_typescript@4.4.3
@@ -3545,8 +3545,8 @@ packages:
       '@types/node': 14.17.14
     dev: true
 
-  /@types/stylelint/13.13.1:
-    resolution: {integrity: sha512-CBXFUqaMwCw0PX/sVSlT4JR+wTXJ3rv67cdhIH4EoekbrlNeNw8Dx791p2cTTozYJItMOZJa4/j7Br1mmUHdCw==}
+  /@types/stylelint/13.13.2:
+    resolution: {integrity: sha512-5Yt1LQenR7uk+efCydQmN7ubOtO2qJ8Z9K/qqnlW87X1zkIQ8RkMCZbaOgZj/aBrR/h5Q738mJU6CYhXOj9sEg==}
     dependencies:
       globby: 11.0.4
       postcss: 7.0.36
@@ -4427,7 +4427,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.17.2
-      caniuse-lite: 1.0.30001263
+      caniuse-lite: 1.0.30001264
       fraction.js: 4.1.1
       nanocolors: 0.2.8
       normalize-range: 0.1.2
@@ -4440,7 +4440,7 @@ packages:
     hasBin: true
     dependencies:
       browserslist: 4.17.2
-      caniuse-lite: 1.0.30001263
+      caniuse-lite: 1.0.30001264
       nanocolors: 0.2.12
       normalize-range: 0.1.2
       num2fraction: 1.2.2
@@ -4922,7 +4922,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001263
+      caniuse-lite: 1.0.30001264
       electron-to-chromium: 1.3.855
       escalade: 3.1.1
       nanocolors: 0.2.12
@@ -5110,13 +5110,13 @@ packages:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
     dependencies:
       browserslist: 4.17.2
-      caniuse-lite: 1.0.30001263
+      caniuse-lite: 1.0.30001264
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
     dev: true
 
-  /caniuse-lite/1.0.30001263:
-    resolution: {integrity: sha512-doiV5dft6yzWO1WwU19kt8Qz8R0/8DgEziz6/9n2FxUasteZNwNNYSmJO3GLBH8lCVE73AB1RPDPAeYbcO5Cvw==}
+  /caniuse-lite/1.0.30001264:
+    resolution: {integrity: sha512-Ftfqqfcs/ePiUmyaySsQ4PUsdcYyXG2rfoBVsk3iY1ahHaJEw65vfb7Suzqm+cEkwwPIv/XWkg27iCpRavH4zA==}
 
   /capture-stack-trace/1.0.1:
     resolution: {integrity: sha512-mYQLZnx5Qt1JgB1WEiMCf2647plpGeQ2NMR/5L0HNZzGQo4fuSPnK+wjfPnKZV0aiJDgzmWqqkV/g7JD+DW0qw==}
@@ -6037,7 +6037,7 @@ packages:
     peerDependencies:
       postcss: ^8.2.15
     dependencies:
-      caniuse-lite: 1.0.30001263
+      caniuse-lite: 1.0.30001264
       postcss: 8.2.15
     dev: false
 
@@ -7037,7 +7037,7 @@ packages:
       '@mdn/browser-compat-data': 3.3.14
       ast-metadata-inferer: 0.7.0
       browserslist: 4.17.2
-      caniuse-lite: 1.0.30001263
+      caniuse-lite: 1.0.30001264
       core-js: 3.17.2
       eslint: 7.32.0
       find-up: 5.0.0
@@ -11226,7 +11226,7 @@ packages:
       browserify-zlib: 0.2.0
       browserslist: 4.17.2
       buffer: 5.6.0
-      caniuse-lite: 1.0.30001263
+      caniuse-lite: 1.0.30001264
       chalk: 2.4.2
       chokidar: 3.5.2
       constants-browserify: 1.0.0
