@@ -49,14 +49,12 @@ package = "@netlify/plugin-nextjs"
 # [plugins.inputs]
 # record = true
 # spec = "cypress/integration/smoke/*.js"
-# pa11y config
-[[plugins]]
-package = "netlify-plugin-a11y"
-
-[plugins.inputs]
-checkPaths = ['/']
-resultMode = "warn" # is "error" by default
-
+# # pa11y config
+# [[plugins]]
+# package = "netlify-plugin-a11y"
+# [plugins.inputs]
+# checkPaths = ['/']
+# resultMode = "warn" # is "error" by default
 # ignoreDirectories = ['/admin']  # explicitly ignore these directories
 [[plugins]]
 package = "netlify-plugin-html-validate"
