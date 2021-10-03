@@ -99,7 +99,7 @@ specifiers:
   standard-version: 9.3.1
   start-server-and-test: 1.14.0
   stylelint: 13.13.1
-  stylelint-config-idiomatic-order: ^8.1.0
+  stylelint-config-idiomatic-order: 8.1.0
   stylelint-config-standard: 22.0.0
   stylelint-scss: 3.21.0
   tailwindcss: 2.2.16
