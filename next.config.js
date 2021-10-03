@@ -26,6 +26,9 @@ const detectPlatform = () => {
   return LOCALHOST // might also be Github CI
 }
 
+/* const buildId = `${Date.now()}` */
+/* const generateBuildId = async () => buildId */
+
 /**
  * @type {import('next/dist/next-server/server/config').NextConfig}
  */
@@ -70,6 +73,9 @@ const nextConfiguration = {
   },
 
   future: {},
+
+  // @see {@link https://nextjs.org/docs/api-reference/next.config.js/configuring-the-build-id}
+  generateBuildId: () => `build-{Date.now()}`,
 
   i18n: {
     defaultLocale: 'en',
@@ -125,8 +131,21 @@ const plugins = () =>
           withPWA,
           {
             pwa: {
+              /* additionalManifestEntries: [ */
+              /* '/', */
+              /* '/map', */
+              /* '/collection', */
+              /* '/offline', */
+              /* ].map(url => ({ */
+              /* revision: buildId, */
+              /* url, */
+              /* })), */
               dest: 'public',
               disable: process.env.NODE_ENV === 'development',
+              /* dontCacheBustURLsMatching: /^\/_next\/static\/.* /i, */
+              /* register: false, */
+              /* skipWaiting: false, */
+              /* swSrc: 'utils/serviceWorker.ts', */
             },
           },
         ],
@@ -135,8 +154,21 @@ const plugins = () =>
         withPWA,
         {
           pwa: {
+            /* additionalManifestEntries: [ */
+            /* '/', */
+            /* '/map', */
+            /* '/collection', */
+            /* '/offline', */
+            /* ].map(url => ({ */
+            /* revision: buildId, */
+            /* url, */
+            /* })), */
             dest: 'public',
             disable: process.env.NODE_ENV === 'development',
+            /* dontCacheBustURLsMatching: /^\/_next\/static\/.* /i, */
+            /* register: false, */
+            /* skipWaiting: false, */
+            /* swSrc: 'utils/serviceWorker.ts', */
           },
         },
       ]

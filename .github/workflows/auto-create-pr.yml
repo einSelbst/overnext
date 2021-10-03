@@ -80,7 +80,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           head: ${{ github.ref }}
           base: main
-          draft: true
+          draft: false # doesn't seem to work in private repo
           title: ${{ steps.extract_branch.outputs.branch }}
           body: |
             Hi!
