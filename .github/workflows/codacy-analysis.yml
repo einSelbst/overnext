@@ -20,6 +20,7 @@ on:
 jobs:
   codacy-security-scan:
     name: Codacy Security Scan
+    if: false # don't run on private repo, check would be nice
     runs-on: ubuntu-latest
     steps:
       # Checkout the repository to the GitHub Actions runner

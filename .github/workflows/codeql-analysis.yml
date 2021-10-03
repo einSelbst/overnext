@@ -23,6 +23,7 @@ on:
 jobs:
   analyze:
     name: Analyze
+    if: false # don't run on private repo, check would be nice
     runs-on: ubuntu-latest
 
     strategy:

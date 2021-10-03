@@ -34,8 +34,9 @@ jobs:
 
   njsscan:
     name: njsscan code scanning
+    if: false # don't run on private repo, check would be nice
     needs: pre_job
-    if: ${{ needs.pre_job.outputs.should_skip != 'true' }}
+    # if: ${{ needs.pre_job.outputs.should_skip != 'true' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the code

@@ -15,6 +15,7 @@ on:
 jobs:
   Scan-Build:
     # Scan runs on ubuntu, mac and windows
+    if: false # don't run on private repo, check would be nice
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
