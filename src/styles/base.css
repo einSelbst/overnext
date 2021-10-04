@@ -7,9 +7,9 @@
   --text-base: #000;
   --text-primary: #000;
   --text-secondary: white;
-  --hover: rgba(0, 0, 0, .075);
-  --hover-1: rgba(0, 0, 0, .15);
-  --hover-2: rgba(0, 0, 0, .25);
+  --hover: rgba(0, 0, 0, 0.075);
+  --hover-1: rgba(0, 0, 0, 0.15);
+  --hover-2: rgba(0, 0, 0, 0.25);
   --cyan: #22b8cf;
   --green: #37b679;
   --red: #da3c3c;
@@ -28,7 +28,8 @@
   --accents-7: #495057;
   --accents-8: #343a40;
   --accents-9: #212529;
-  --font-sans: -apple-system, system-ui, blinkmacsystemfont, 'Helvetica Neue', 'Helvetica', sans-serif;
+  --font-sans: -apple-system, system-ui, blinkmacsystemfont, 'Helvetica Neue',
+    'Helvetica', sans-serif;
 }
 
 [data-theme='dark'] {
@@ -36,9 +37,9 @@
   --primary-2: #111;
   --secondary: #fff;
   --secondary-2: #f1f3f5;
-  --hover: rgba(255, 255, 255, .075);
-  --hover-1: rgba(255, 255, 255, .15);
-  --hover-2: rgba(255, 255, 255, .25);
+  --hover: rgba(255, 255, 255, 0.075);
+  --hover-1: rgba(255, 255, 255, 0.15);
+  --hover-2: rgba(255, 255, 255, 0.25);
   --selection: var(--purple);
   --text-base: white;
   --text-primary: white;
