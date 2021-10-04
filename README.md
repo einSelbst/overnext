@@ -226,6 +226,7 @@ info: Display info about the scripts
 - [`stylelint`](https://stylelint.io) for CSS
   - [`stylelint-config-standard`](https://github.com/stylelint/stylelint-config-standard) configuration
   - [`stylelint-config-idiomatic-order`](https://github.com/ream88/stylelint-config-idiomatic-order) configuration
+  - [`stylelint-config-prettier`](https://github.com/prettier/stylelint-config-prettier) configuration, to integrate with prettier
   - [`stylelint-scss`](https://github.com/kristerkari/stylelint-scss) plugin
 - [`husky`](https://github.com/typicode/husky) for hooks
 - [`git-format-staged`](https://github.com/hallettj/git-format-staged), to format staged files (surprise), [reasons](https://www.olioapps.com/blog/automatic-code-formatting/)
