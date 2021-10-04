@@ -110,7 +110,7 @@
     "@types/node": "14.17.20",
     "@types/react": "17.0.27",
     "@types/react-dom": "17.0.9",
-    "autoprefixer": "10.3.6",
+    "autoprefixer": "10.3.7",
     "core-js": "3.18.1",
     "faunadb": "4.4.1",
     "is-ci": "3.0.0",
@@ -120,7 +120,7 @@
     "next-seo": "4.28.1",
     "next-sitemap": "1.6.173",
     "next-themes": "0.0.15",
-    "postcss": "8.3.8",
+    "postcss": "8.3.9",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "sass": "1.42.1",
@@ -213,7 +213,7 @@
   "optionalDependencies": {
     "@axe-core/react": "4.3.1",
     "fsevents": "2.3.2",
-    "pnpm": "6.16.0"
+    "pnpm": "6.16.1"
   },
   "engines": {
     "pnpm": ">=6"
