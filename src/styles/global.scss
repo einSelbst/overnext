@@ -23,8 +23,8 @@ header {
 
   nav svg {
     display: inline;
-    vertical-align: text-top;
     margin-right: 5px;
+    vertical-align: text-top;
   }
 }
 
@@ -37,8 +37,8 @@ header {
 }
 
 main {
-  padding: 2rem;
   display: grid;
+  padding: 2rem;
   background: mintcream;
   place-items: center;
 }
