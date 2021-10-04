@@ -1,9 +1,11 @@
 // import tailwind
 // @see https://tailwindcss.com/docs/guides/nextjs
 @tailwind base;
+/* stylelint-disable no-invalid-position-at-import-rule */
 @import './base.css';
 @tailwind components;
 @import './components.css';
+/* stylelint-enable no-invalid-position-at-import-rule */
 @tailwind utilities;
 
 body {
@@ -56,5 +58,6 @@ footer {
 h1 {
   font-family: Sansita, cursive, serif;
   font-size: revert;
+  // stylelint-disable-next-line font-weight-notation -- this is correct usage
   font-weight: revert;
 }
