@@ -58,7 +58,7 @@ specifiers:
   eslint-plugin-jest: 24.5.2
   eslint-plugin-jest-dom: 3.9.2
   eslint-plugin-jest-formatting: 3.0.0
-  eslint-plugin-json-schema-validator: 1.2.28
+  eslint-plugin-json-schema-validator: 1.2.29
   eslint-plugin-jsx-a11y: 6.4.1
   eslint-plugin-promise: 5.1.0
   eslint-plugin-react: 7.26.1
@@ -188,7 +188,7 @@ devDependencies:
   eslint-plugin-jest: 24.5.2_73e9b746f54dad66aa843ac28a205fd4
   eslint-plugin-jest-dom: 3.9.2_eslint@7.32.0
   eslint-plugin-jest-formatting: 3.0.0_eslint@7.32.0
-  eslint-plugin-json-schema-validator: 1.2.28_eslint@7.32.0
+  eslint-plugin-json-schema-validator: 1.2.29_eslint@7.32.0
   eslint-plugin-jsx-a11y: 6.4.1_eslint@7.32.0
   eslint-plugin-promise: 5.1.0_eslint@7.32.0
   eslint-plugin-react: 7.26.1_eslint@7.32.0
@@ -6928,8 +6928,8 @@ packages:
       - typescript
     dev: true
 
-  /eslint-plugin-json-schema-validator/1.2.28_eslint@7.32.0:
-    resolution: {integrity: sha512-foYblRPCN0L8eJ+q8+rM+NUUT5YV481KV8fuby1W7+vvRfrZlJHSYTkNPk27EdVPax2QPBoXSqSWfbA3itT6Ag==}
+  /eslint-plugin-json-schema-validator/1.2.29_eslint@7.32.0:
+    resolution: {integrity: sha512-4m6m6mw1BGLxTG8gwnjqEHp0W70FrJdbRZha7bNVVKsoctuGUaaP7f5jPlJUidYi0V5z11T0unVOjE1snZFZ6g==}
     peerDependencies:
       eslint: '>=6.0.0'
     dependencies:
