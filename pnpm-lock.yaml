@@ -81,7 +81,7 @@ specifiers:
   next-compose-plugins: 2.2.1
   next-pwa: 5.3.1
   next-seo: 4.28.1
-  next-sitemap: 1.6.173
+  next-sitemap: 1.6.179
   next-themes: 0.0.15
   next-unused: 0.0.6
   npm-scripts-info: 0.3.9
@@ -128,7 +128,7 @@ dependencies:
   next-compose-plugins: 2.2.1
   next-pwa: 5.3.1_c180cbbce3a82684dbdb5168d19df753
   next-seo: 4.28.1_6fbf59523517da779df50d355b375324
-  next-sitemap: 1.6.173_next@11.1.2
+  next-sitemap: 1.6.179_next@11.1.2
   next-themes: 0.0.15_6fbf59523517da779df50d355b375324
   postcss: 8.3.9
   react: 17.0.2
@@ -10901,8 +10901,8 @@ packages:
       react-dom: 17.0.2_react@17.0.2
     dev: false
 
-  /next-sitemap/1.6.173_next@11.1.2:
-    resolution: {integrity: sha512-wRLMQ4M03bNElt6BqFBPrqt+5q+qgD5/VFnJ9aYFvfYehkQb/kPbQh74FY7chG2VNn8ZYLydOfTBKsH7PW/X9g==}
+  /next-sitemap/1.6.179_next@11.1.2:
+    resolution: {integrity: sha512-j8vGSjAE5PFw/BZNzmwoFKU9DmNGMDA1TiyxmO65gUU3Fx0/PKAiRZgAIt9kzyeC3ElgadytXurzCeYpFK+gpg==}
     hasBin: true
     peerDependencies:
       next: '*'
