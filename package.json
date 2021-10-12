@@ -224,6 +224,7 @@
       "caniuse-lite": "latest",
       "chokidar": "3",
       "debug": "latest",
+      "ansi-regex": "5.0.1",
       "source-map-resolve": "latest"
     }
   },
