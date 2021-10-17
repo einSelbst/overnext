@@ -197,7 +197,7 @@
     "prettier-plugin-toml": "latest",
     "size-limit": "6.0.3",
     "source-map-support": "0.5.20",
-    "standard-version": "9.3.1",
+    "standard-version": "9.3.2",
     "start-server-and-test": "1.14.0",
     "stylelint": "13.13.1",
     "stylelint-config-idiomatic-order": "8.1.0",
