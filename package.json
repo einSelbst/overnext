@@ -199,7 +199,7 @@
     "source-map-support": "0.5.20",
     "standard-version": "9.3.2",
     "start-server-and-test": "1.14.0",
-    "stylelint": "13.13.1",
+    "stylelint": "14.0.0",
     "stylelint-config-idiomatic-order": "8.1.0",
     "stylelint-config-prettier": "9.0.3",
     "stylelint-config-standard": "22.0.0",
