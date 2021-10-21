@@ -102,7 +102,7 @@ specifiers:
   stylelint: 14.0.0
   stylelint-config-idiomatic-order: 8.1.0
   stylelint-config-prettier: 9.0.3
-  stylelint-config-standard: 22.0.0
+  stylelint-config-standard: 23.0.0
   stylelint-scss: 3.21.0
   tailwindcss: 2.2.17
   tap-spot: 1.1.1
@@ -218,7 +218,7 @@ devDependencies:
   stylelint: 14.0.0
   stylelint-config-idiomatic-order: 8.1.0_stylelint@14.0.0
   stylelint-config-prettier: 9.0.3_stylelint@14.0.0
-  stylelint-config-standard: 22.0.0_stylelint@14.0.0
+  stylelint-config-standard: 23.0.0_stylelint@14.0.0
   stylelint-scss: 3.21.0_stylelint@14.0.0
   tap-spot: 1.1.1
   ts-node: 10.3.0_64c822b0f0ef3f125d8d3681dcee4e14
@@ -13795,21 +13795,21 @@ packages:
       stylelint: 14.0.0
     dev: true
 
-  /stylelint-config-recommended/5.0.0_stylelint@14.0.0:
-    resolution: {integrity: sha512-c8aubuARSu5A3vEHLBeOSJt1udOdS+1iue7BmJDTSXoCBmfEQmmWX+59vYIj3NQdJBY6a/QRv1ozVFpaB9jaqA==}
+  /stylelint-config-recommended/6.0.0_stylelint@14.0.0:
+    resolution: {integrity: sha512-ZorSSdyMcxWpROYUvLEMm0vSZud2uB7tX1hzBZwvVY9SV/uly4AvvJPPhCcymZL3fcQhEQG5AELmrxWqtmzacw==}
     peerDependencies:
-      stylelint: ^13.13.0
+      stylelint: ^14.0.0
     dependencies:
       stylelint: 14.0.0
     dev: true
 
-  /stylelint-config-standard/22.0.0_stylelint@14.0.0:
-    resolution: {integrity: sha512-uQVNi87SHjqTm8+4NIP5NMAyY/arXrBgimaaT7skvRfE9u3JKXRK9KBkbr4pVmeciuCcs64kAdjlxfq6Rur7Hw==}
+  /stylelint-config-standard/23.0.0_stylelint@14.0.0:
+    resolution: {integrity: sha512-8PDlk+nWuc1T66nVaODTdVodN0pjuE5TBlopi39Lt9EM36YJsRhqttMyUhnS78oc/59Q6n8iw2GJB4QcoFqtRg==}
     peerDependencies:
-      stylelint: ^13.13.0
+      stylelint: ^14.0.0
     dependencies:
       stylelint: 14.0.0
-      stylelint-config-recommended: 5.0.0_stylelint@14.0.0
+      stylelint-config-recommended: 6.0.0_stylelint@14.0.0
     dev: true
 
   /stylelint-order/3.1.1_stylelint@14.0.0:
