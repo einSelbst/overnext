@@ -103,7 +103,7 @@ specifiers:
   stylelint-config-idiomatic-order: 8.1.0
   stylelint-config-prettier: 9.0.3
   stylelint-config-standard: 23.0.0
-  stylelint-scss: 3.21.0
+  stylelint-scss: 4.0.0
   tailwindcss: 2.2.17
   tap-spot: 1.1.1
   ts-node: 10.3.1
@@ -219,7 +219,7 @@ devDependencies:
   stylelint-config-idiomatic-order: 8.1.0_stylelint@14.0.0
   stylelint-config-prettier: 9.0.3_stylelint@14.0.0
   stylelint-config-standard: 23.0.0_stylelint@14.0.0
-  stylelint-scss: 3.21.0_stylelint@14.0.0
+  stylelint-scss: 4.0.0_stylelint@14.0.0
   tap-spot: 1.1.1
   ts-node: 10.3.1_64c822b0f0ef3f125d8d3681dcee4e14
   typedoc: 0.22.6_typescript@4.4.4
@@ -13824,11 +13824,10 @@ packages:
       stylelint: 14.0.0
     dev: true
 
-  /stylelint-scss/3.21.0_stylelint@14.0.0:
-    resolution: {integrity: sha512-CMI2wSHL+XVlNExpauy/+DbUcB/oUZLARDtMIXkpV/5yd8nthzylYd1cdHeDMJVBXeYHldsnebUX6MoV5zPW4A==}
-    engines: {node: '>=8'}
+  /stylelint-scss/4.0.0_stylelint@14.0.0:
+    resolution: {integrity: sha512-lIRhPqtI6I065EJ6aI4mWKsmQt8Krnu6aF9XSL9s8Nd2f/cDKImST0T9TfjnUul3ReKYWozkG9dlpNTZH2FB9w==}
     peerDependencies:
-      stylelint: ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0 || ^12.0.0 || ^13.0.0
+      stylelint: ^14.0.0
     dependencies:
       lodash: 4.17.21
       postcss-media-query-parser: 0.2.3
