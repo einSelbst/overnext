@@ -42,7 +42,7 @@ specifiers:
   babel-jest: 27.3.1
   babel-plugin-istanbul: 6.1.1
   commitizen: 4.2.4
-  core-js: 3.18.3
+  core-js: 3.19.0
   cypress: 8.6.0
   cypress-watch-and-reload: 1.5.4
   dependency-version-badge: 1.11.0
@@ -122,7 +122,7 @@ dependencies:
   '@types/react': 17.0.32
   '@types/react-dom': 17.0.10
   autoprefixer: 10.3.7_postcss@8.3.11
-  core-js: 3.18.3
+  core-js: 3.19.0
   faunadb: 4.4.1
   is-ci: 3.0.0
   next: 11.1.2_263b4b4274a49a1718f86ec00f4dfa09
@@ -5574,15 +5574,9 @@ packages:
     requiresBuild: true
     dev: true
 
-  /core-js/3.18.1:
-    resolution: {integrity: sha512-vJlUi/7YdlCZeL6fXvWNaLUPh/id12WXj3MbkMw5uOyF0PfWPBNOCNbs53YqgrvtujLNlt9JQpruyIKkUZ+PKA==}
+  /core-js/3.19.0:
+    resolution: {integrity: sha512-L1TpFRWXZ76vH1yLM+z6KssLZrP8Z6GxxW4auoCj+XiViOzNPJCAuTIkn03BGdFe6Z5clX5t64wRIRypsZQrUg==}
     requiresBuild: true
-    dev: true
-
-  /core-js/3.18.3:
-    resolution: {integrity: sha512-tReEhtMReZaPFVw7dajMx0vlsz3oOb8ajgPoHVYGxr8ErnZ6PcYEvvmjGmXlfpnxpkYSdOQttjB+MvVbCGfvLw==}
-    requiresBuild: true
-    dev: false
 
   /core-util-is/1.0.2:
     resolution: {integrity: sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=}
@@ -6794,7 +6788,7 @@ packages:
       ast-metadata-inferer: 0.7.0
       browserslist: 4.17.5
       caniuse-lite: 1.0.30001271
-      core-js: 3.18.1
+      core-js: 3.19.0
       eslint: 7.32.0
       find-up: 5.0.0
       lodash.memoize: 4.1.2
