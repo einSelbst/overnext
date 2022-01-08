@@ -225,7 +225,9 @@
       "chokidar": "3",
       "debug": "latest",
       "ansi-regex": "5.0.1",
-      "source-map-resolve": "latest"
+      "source-map-resolve": "latest",
+      "jsonpointer@<5.0.0": ">=5.0.0",
+      "json-schema@<0.4.0": ">=0.4.0"
     }
   },
   "next-unused": {
