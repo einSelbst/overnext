@@ -158,7 +158,7 @@ const HeadIcons = (): JSX.Element => {
       />
       {/* Browsers use these as tab and app icons */}
       <link href='/favicon.ico' rel='icon' />
-      <link href='/favicon.ico' rel='shortcut icon' type='image/x-icon' />
+      <link href='/favicon.ico' rel='icon' type='image/x-icon' />
       <link href='/icons/apple-touch-icon.png' rel='apple-touch-icon' />
       <link
         href='/icons/icon-192x192.png'
