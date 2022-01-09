@@ -60,7 +60,7 @@ declare module 'next' {
       })
     | null // Note: undefined is invalid
 
-  export { NextLayoutComponentType, NextLayoutPage, OverNextComponentType }
+  export type { NextLayoutComponentType, NextLayoutPage, OverNextComponentType }
 }
 
 declare module 'next/app' {
