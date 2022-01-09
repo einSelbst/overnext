@@ -157,7 +157,7 @@
     "babel-jest": "27.4.6",
     "babel-plugin-istanbul": "6.1.1",
     "commitizen": "4.2.4",
-    "cypress": "8.7.0",
+    "cypress": "9.2.0",
     "cypress-watch-and-reload": "1.5.5",
     "dependency-version-badge": "1.11.0",
     "eslint": "7.32.0",
