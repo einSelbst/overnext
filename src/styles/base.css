@@ -7,9 +7,9 @@
   --text-base: #000;
   --text-primary: #000;
   --text-secondary: white;
-  --hover: rgba(0, 0, 0, 0.075);
-  --hover-1: rgba(0, 0, 0, 0.15);
-  --hover-2: rgba(0, 0, 0, 0.25);
+  --hover: rgb(0 0 0 / 7.5%);
+  --hover-1: rgb(0 0 0 / 15%);
+  --hover-2: rgb(0 0 0 / 25%);
   --cyan: #22b8cf;
   --green: #37b679;
   --red: #da3c3c;
@@ -37,9 +37,9 @@
   --primary-2: #111;
   --secondary: #fff;
   --secondary-2: #f1f3f5;
-  --hover: rgba(255, 255, 255, 0.075);
-  --hover-1: rgba(255, 255, 255, 0.15);
-  --hover-2: rgba(255, 255, 255, 0.25);
+  --hover: rgb(255 255 255 / 7.5%);
+  --hover-1: rgb(255 255 255 / 15%);
+  --hover-2: rgb(255 255 255 / 25%);
   --selection: var(--purple);
   --text-base: white;
   --text-primary: white;
@@ -89,7 +89,7 @@ body {
 }
 
 a {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
 }
 
 .animated {
@@ -103,10 +103,10 @@ a {
 
 @keyframes fadeIn {
   from {
-    opacity: 0;
+    opacity: 0%;
   }
 
   to {
-    opacity: 1;
+    opacity: 100%;
   }
 }
