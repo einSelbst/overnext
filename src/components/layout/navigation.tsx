@@ -7,7 +7,7 @@ type Props = {
   readonly error: boolean
 }
 
-const Navigation = (props: Props): ComponentReturnType => (
+const Navigation = ({ success, error }: Props): ComponentReturnType => (
   <>
     <nav title='Site Navigation'>
       <MenuItem path='/' title='Home' />
@@ -26,11 +26,11 @@ const Navigation = (props: Props): ComponentReturnType => (
       {/* @see https://github.com/sindresorhus/react-extras#choose */}
       <div>
         {(() => {
-          if (props.success) {
-            return <span>{props.success}</span>
+          if (success) {
+            return <span>{success}</span>
           }
-          if (props.error) {
-            return <span>{props.error}</span>
+          if (error) {
+            return <span>{error}</span>
           }
           return <span>�</span>
         })()}

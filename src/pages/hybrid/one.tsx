@@ -23,7 +23,7 @@ type Props = {
 /**
  * HTML entities should be escaped
  */
-const One = (props: Props): OverNextComponentType => {
+const One = ({ success, error }: Props): OverNextComponentType => {
   const isAmp = useAmp()
   const router = useRouter()
   const { locale } = router
@@ -65,12 +65,12 @@ const One = (props: Props): OverNextComponentType => {
       {/* @see https://github.com/sindresorhus/react-extras#choose */}
       <div className='h-8 w-8'>
         {(() => {
-          if (props.success) {
-            return <span>{props.success}</span>
+          if (success) {
+            return <span>{success}</span>
           }
 
-          if (props.error) {
-            return <span>{props.error}</span>
+          if (error) {
+            return <span>{error}</span>
           }
 
           return <span>�</span>
