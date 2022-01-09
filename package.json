@@ -195,7 +195,7 @@
     "prettier": "2.5.1",
     "prettier-plugin-sh": "0.8.1",
     "prettier-plugin-toml": "latest",
-    "size-limit": "6.0.4",
+    "size-limit": "7.0.5",
     "source-map-support": "0.5.21",
     "standard-version": "9.3.2",
     "start-server-and-test": "1.14.0",
