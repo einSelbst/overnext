@@ -1,16 +1,23 @@
+defaultSeverity: warning
+reportDescriptionlessDisables: true
+reportInvalidScopeDisables: true
+reportNeedlessDisables: true
+
 extends:
-  - stylelint-config-standard
+  - stylelint-config-standard-scss
   - stylelint-config-idiomatic-order
   - stylelint-config-prettier
-plugins:
-  - stylelint-scss
-# better use .stylelintignore file
-# ignoreFiles:
-# - 'node_modules/**/*'
-# - 'dist/**/*'
-# - '**/*.d.ts'
+# plugins:
+# - stylelint-scss
+overrides:
+  - customSyntax: '@stylelint/postcss-css-in-js'
+    files:
+      - src/**/*.tsx
+  - customSyntax: postcss-scss
+    files:
+      - src/**/*.scss
 rules:
-  at-rule-empty-line-before: 'always'
+  # at-rule-empty-line-before: 'always'
   at-rule-no-unknown: null
   scss/at-rule-no-unknown:
     - true
@@ -22,8 +29,8 @@ rules:
   media-feature-name-no-vendor-prefix: true
   no-descending-specificity: null
   property-no-vendor-prefix: true
-  selector-attribute-quotes: 'always'
+  # selector-attribute-quotes: 'always'
   selector-no-vendor-prefix: true
-  string-quotes: 'single'
+  # string-quotes: 'single'
   # unit-allowed-list: ['em', 'rem', 's']
   value-no-vendor-prefix: true
