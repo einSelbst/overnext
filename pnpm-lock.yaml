@@ -61,7 +61,7 @@ specifiers:
   eslint-plugin-jest: 25.3.4
   eslint-plugin-jest-dom: 3.9.4
   eslint-plugin-jest-formatting: 3.1.0
-  eslint-plugin-json-schema-validator: 2.1.28
+  eslint-plugin-json-schema-validator: 2.1.29
   eslint-plugin-jsx-a11y: 6.5.1
   eslint-plugin-promise: 5.2.0
   eslint-plugin-react: 7.28.0
@@ -76,7 +76,7 @@ specifiers:
   git-format-staged: latest
   html-validate: 6.1.6
   husky: 7.0.4
-  hyperlink: 5.0.3
+  hyperlink: 5.0.4
   is-ci: 3.0.1
   jest: 27.4.7
   jest-watch-typeahead: 1.0.0
@@ -84,7 +84,7 @@ specifiers:
   next-compose-plugins: 2.2.1
   next-pwa: 5.4.4
   next-seo: 4.28.1
-  next-sitemap: 1.6.261
+  next-sitemap: 1.8.4
   next-themes: 0.0.15
   next-unused: 0.0.6
   npm-scripts-info: 0.3.9
@@ -131,7 +131,7 @@ dependencies:
   next-compose-plugins: 2.2.1
   next-pwa: 5.4.4_17743cdcb9e0791023dc3fc7176d15fb
   next-seo: 4.28.1_f31eebcf8e9bc07b0badd69a2d419605
-  next-sitemap: 1.6.261_next@11.1.3
+  next-sitemap: 1.8.4_next@11.1.3
   next-themes: 0.0.15_f31eebcf8e9bc07b0badd69a2d419605
   postcss: 8.4.5
   react: 17.0.2
@@ -191,7 +191,7 @@ devDependencies:
   eslint-plugin-jest: 25.3.4_be9d9318be9f0cde906108175cd10881
   eslint-plugin-jest-dom: 3.9.4_eslint@7.32.0
   eslint-plugin-jest-formatting: 3.1.0_eslint@7.32.0
-  eslint-plugin-json-schema-validator: 2.1.28_eslint@7.32.0
+  eslint-plugin-json-schema-validator: 2.1.29_eslint@7.32.0
   eslint-plugin-jsx-a11y: 6.5.1_eslint@7.32.0
   eslint-plugin-promise: 5.2.0_eslint@7.32.0
   eslint-plugin-react: 7.28.0_eslint@7.32.0
@@ -204,7 +204,7 @@ devDependencies:
   git-format-staged: 2.1.3
   html-validate: 6.1.6_jest@27.4.7
   husky: 7.0.4
-  hyperlink: 5.0.3
+  hyperlink: 5.0.4
   jest: 27.4.7_ts-node@10.4.0
   jest-watch-typeahead: 1.0.0_jest@27.4.7
   next-unused: 0.0.6
@@ -5914,6 +5914,7 @@ packages:
   /escape-string-regexp/4.0.0:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
+    dev: true
 
   /escodegen/1.14.3:
     resolution: {integrity: sha512-qFcX0XJkdg+PB3xjZZG/wKSuT1PnQWx57+TVSjIMmILd2yC/6ByYElPwJnslDsuWuSAp4AwJGumarAAmJch5Kw==}
@@ -6142,8 +6143,8 @@ packages:
       - typescript
     dev: true
 
-  /eslint-plugin-json-schema-validator/2.1.28_eslint@7.32.0:
-    resolution: {integrity: sha512-H8nWKIZ6Ue2VQt5YESYchT/vPMvkbhFJeGc4IRTeBwYlabKYaRirhEMgFkjnbo7bpigV2IxqoP3lQKNXvCB+fQ==}
+  /eslint-plugin-json-schema-validator/2.1.29_eslint@7.32.0:
+    resolution: {integrity: sha512-w7x2lIWSefKK7+Yd+rDTEfBHDLnfvbeago/tcqdDY8swFs19Wo7ZYAqgGVmR3YUQC4ft4YIZdlCCG/KSvZGqJA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: '>=6.0.0'
@@ -7651,8 +7652,8 @@ packages:
     hasBin: true
     dev: true
 
-  /hyperlink/5.0.3:
-    resolution: {integrity: sha512-jp0SjVPhUEYQnvqQDmPEVhcrcxjtfvjHRkSswrrX1SeW2vYSIVMX7CECGA4AqYWpVy0+WMbtRyu1BU98/gcUBQ==}
+  /hyperlink/5.0.4:
+    resolution: {integrity: sha512-McN25ky/8OszPWctZJbvNYb4odYQSYeqE8hNK1aH/oM9GtmOyBZNE4ObkIEKOxIntG1PVfPp7uP7QoIdFEKkDg==}
     hasBin: true
     dependencies:
       '@munter/tap-render': 0.2.0
@@ -9436,13 +9437,6 @@ packages:
     hasBin: true
     dev: true
 
-  /matcher/4.0.0:
-    resolution: {integrity: sha512-S6x5wmcDmsDRRU/c2dkccDwQPXoFczc5+HpQ2lON8pnvHlnvHAHj5WlLVvw6n6vNyHuVugYrFohYxbS+pvFpKQ==}
-    engines: {node: '>=10'}
-    dependencies:
-      escape-string-regexp: 4.0.0
-    dev: false
-
   /mathml-tag-names/2.1.3:
     resolution: {integrity: sha512-APMBEanjybaPzUrfqU0IMU5I0AswKMH7k8OTLs0vvV4KZpExkTkY87nR/zpbuTPj+gARop7aGUbl11pnDfW6xg==}
     dev: true
@@ -9768,14 +9762,14 @@ packages:
       react-dom: 17.0.2_react@17.0.2
     dev: false
 
-  /next-sitemap/1.6.261_next@11.1.3:
-    resolution: {integrity: sha512-4RGogAJE2IsMffeH1Lfa6eT85BI1TWO8Fn1hmwX1h40UnvIaJKephlLnp+3F4C4jXKDAZ6P+xHLtVPmyQznVPQ==}
+  /next-sitemap/1.8.4_next@11.1.3:
+    resolution: {integrity: sha512-UYk2HQiZk+0EM+Az7uRfj0Vxl8fJ/6FMiVPtTgQo7WwavGgkX57Ol5lcKjcty/vJyVdZOUIuyjGtGzz4QzajVA==}
+    engines: {node: '>=12'}
     hasBin: true
     peerDependencies:
       next: '*'
     dependencies:
       '@corex/deepmerge': 2.6.148
-      matcher: 4.0.0
       minimist: 1.2.5
       next: 11.1.3_42f19ee0a9fd918c0e149b31c54cef62
     dev: false
