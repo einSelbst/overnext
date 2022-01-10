@@ -63,7 +63,7 @@ specifiers:
   eslint-plugin-jest-formatting: 3.1.0
   eslint-plugin-json-schema-validator: 2.1.29
   eslint-plugin-jsx-a11y: 6.5.1
-  eslint-plugin-promise: 5.2.0
+  eslint-plugin-promise: 6.0.0
   eslint-plugin-react: 7.28.0
   eslint-plugin-react-hooks: 4.3.0
   eslint-plugin-sonarjs: 0.11.0
@@ -193,7 +193,7 @@ devDependencies:
   eslint-plugin-jest-formatting: 3.1.0_eslint@7.32.0
   eslint-plugin-json-schema-validator: 2.1.29_eslint@7.32.0
   eslint-plugin-jsx-a11y: 6.5.1_eslint@7.32.0
-  eslint-plugin-promise: 5.2.0_eslint@7.32.0
+  eslint-plugin-promise: 6.0.0_eslint@7.32.0
   eslint-plugin-react: 7.28.0_eslint@7.32.0
   eslint-plugin-react-hooks: 4.3.0_eslint@7.32.0
   eslint-plugin-sonarjs: 0.11.0_eslint@7.32.0
@@ -6184,11 +6184,11 @@ packages:
       minimatch: 3.0.4
     dev: true
 
-  /eslint-plugin-promise/5.2.0_eslint@7.32.0:
-    resolution: {integrity: sha512-SftLb1pUG01QYq2A/hGAWfDRXqYD82zE7j7TopDOyNdU+7SvvoXREls/+PRTY17vUXzXnZA/zfnyKgRH6x4JJw==}
-    engines: {node: ^10.12.0 || >=12.0.0}
+  /eslint-plugin-promise/6.0.0_eslint@7.32.0:
+    resolution: {integrity: sha512-7GPezalm5Bfi/E22PnQxDWH2iW9GTvAlUNTztemeHb6c1BniSyoeTrM87JkC0wYdi6aQrZX9p2qEiAno8aTcbw==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
-      eslint: ^7.0.0
+      eslint: ^7.0.0 || ^8.0.0
     dependencies:
       eslint: 7.32.0
     dev: true
