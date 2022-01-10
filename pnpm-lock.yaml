@@ -104,7 +104,7 @@ specifiers:
   stylelint: 14.2.0
   stylelint-config-idiomatic-order: 8.1.0
   stylelint-config-prettier: 9.0.3
-  stylelint-config-standard: 23.0.0
+  stylelint-config-standard: 24.0.0
   stylelint-scss: 4.1.0
   tailwindcss: 2.2.19
   tap-spot: 1.1.1
@@ -220,7 +220,7 @@ devDependencies:
   stylelint: 14.2.0
   stylelint-config-idiomatic-order: 8.1.0_stylelint@14.2.0
   stylelint-config-prettier: 9.0.3_stylelint@14.2.0
-  stylelint-config-standard: 23.0.0_stylelint@14.2.0
+  stylelint-config-standard: 24.0.0_stylelint@14.2.0
   stylelint-scss: 4.1.0_stylelint@14.2.0
   tap-spot: 1.1.1
   ts-node: 10.4.0_228d16a7acaee6b833b6767fe1bd8bbd
@@ -12514,8 +12514,8 @@ packages:
       stylelint: 14.2.0
     dev: true
 
-  /stylelint-config-standard/23.0.0_stylelint@14.2.0:
-    resolution: {integrity: sha512-8PDlk+nWuc1T66nVaODTdVodN0pjuE5TBlopi39Lt9EM36YJsRhqttMyUhnS78oc/59Q6n8iw2GJB4QcoFqtRg==}
+  /stylelint-config-standard/24.0.0_stylelint@14.2.0:
+    resolution: {integrity: sha512-+RtU7fbNT+VlNbdXJvnjc3USNPZRiRVp/d2DxOF/vBDDTi0kH5RX2Ny6errdtZJH3boO+bmqIYEllEmok4jiuw==}
     peerDependencies:
       stylelint: ^14.0.0
     dependencies:
