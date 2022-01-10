@@ -202,6 +202,7 @@
     "standard-version": "9.3.2",
     "start-server-and-test": "1.14.0",
     "stylelint": "14.2.0",
+    "stylelint-a11y": "^1.2.3",
     "stylelint-config-idiomatic-order": "8.1.0",
     "stylelint-config-prettier": "9.0.3",
     "stylelint-config-standard-scss": "3.0.0",
@@ -227,6 +228,7 @@
       "debug": "latest",
       "ansi-regex": "5.0.1",
       "source-map-resolve": "latest",
+      "stylelint": "14.2.0",
       "jsonpointer@<5.0.0": ">=5.0.0",
       "json-schema@<0.4.0": ">=0.4.0"
     }

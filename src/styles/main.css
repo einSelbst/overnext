@@ -2,11 +2,11 @@
 
 @tailwind base;
 
-@import './base.css';
+@import "./base.css";
 
 @tailwind components;
 
-@import './components.css';
+@import "./components.css";
 
 @tailwind utilities;
 /* stylelint-enable no-invalid-position-at-import-rule */

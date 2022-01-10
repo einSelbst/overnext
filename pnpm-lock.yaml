@@ -7,6 +7,7 @@ overrides:
   debug: latest
   ansi-regex: 5.0.1
   source-map-resolve: latest
+  stylelint: 14.2.0
   jsonpointer@<5.0.0: '>=5.0.0'
   json-schema@<0.4.0: '>=0.4.0'
 
@@ -104,6 +105,7 @@ specifiers:
   standard-version: 9.3.2
   start-server-and-test: 1.14.0
   stylelint: 14.2.0
+  stylelint-a11y: ^1.2.3
   stylelint-config-idiomatic-order: 8.1.0
   stylelint-config-prettier: 9.0.3
   stylelint-config-standard-scss: 3.0.0
@@ -221,6 +223,7 @@ devDependencies:
   standard-version: 9.3.2
   start-server-and-test: 1.14.0
   stylelint: 14.2.0
+  stylelint-a11y: 1.2.3_stylelint@14.2.0
   stylelint-config-idiomatic-order: 8.1.0_stylelint@14.2.0
   stylelint-config-prettier: 9.0.3_stylelint@14.2.0
   stylelint-config-standard-scss: 3.0.0_postcss@8.4.5+stylelint@14.2.0
@@ -12416,6 +12419,15 @@ packages:
       browserslist: 4.19.1
       postcss: 8.4.5
       postcss-selector-parser: 6.0.8
+    dev: true
+
+  /stylelint-a11y/1.2.3_stylelint@14.2.0:
+    resolution: {integrity: sha512-S/iiKFUsYBfa4suxP0pYQqoPB9R1+SnvxVuzHHlz9al0IWxLZzXlnZEqEez0zNOhVh5iO3rATUmDnbZE5wm/pQ==}
+    engines: {node: '>=8.7.0'}
+    peerDependencies:
+      stylelint: ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0 || ^12.0.0 || ^13.0.0
+    dependencies:
+      stylelint: 14.2.0
     dev: true
 
   /stylelint-config-idiomatic-order/8.1.0_stylelint@14.2.0:
