@@ -28,11 +28,11 @@
   --accents-7: #495057;
   --accents-8: #343a40;
   --accents-9: #212529;
-  --font-sans: -apple-system, system-ui, blinkmacsystemfont, "Helvetica Neue",
-    "Helvetica", sans-serif;
+  --font-sans: -apple-system, system-ui, blinkmacsystemfont, 'Helvetica Neue',
+    'Helvetica', sans-serif;
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   --primary: #000;
   --primary-2: #111;
   --secondary: #fff;
@@ -65,7 +65,7 @@
 html {
   height: 100%;
   box-sizing: border-box;
-  font-feature-settings: "case" 1, "rlig" 1, "calt" 0;
+  font-feature-settings: 'case' 1, 'rlig' 1, 'calt' 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -98,9 +98,9 @@ a {
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-.fade-in {
-  animation: none;
-}
+  .fade-in {
+    animation: none;
+  }
 }
 
 .fade-in {

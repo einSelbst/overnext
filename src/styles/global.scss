@@ -2,13 +2,13 @@
 // @see https://tailwindcss.com/docs/guides/nextjs
 
 @tailwind base;
-/* stylelint-disable no-invalid-position-at-import-rule because I don't know how to make @tailwind known*/
+/* stylelint-disable no-invalid-position-at-import-rule -- I don't know how to make @tailwind known */
 
-@import "./base.css";
+@import './base.css';
 
 @tailwind components;
 
-@import "./components.css";
+@import './components.css';
 /* stylelint-enable no-invalid-position-at-import-rule */
 
 @tailwind utilities;
