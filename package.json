@@ -131,7 +131,7 @@
     "webpack": "5.65.0"
   },
   "devDependencies": {
-    "@babel/preset-env": "7.16.7",
+    "@babel/preset-env": "7.16.8",
     "@commitlint/cli": "16.0.2",
     "@commitlint/config-conventional": "16.0.0",
     "@cypress/code-coverage": "3.9.12",
@@ -152,13 +152,13 @@
     "@types/source-map-support": "0.5.4",
     "@types/standard-version": "7.0.1",
     "@types/stylelint": "13.13.3",
-    "@typescript-eslint/eslint-plugin": "5.9.0",
-    "@typescript-eslint/parser": "5.9.0",
-    "@typescript-eslint/typescript-estree": "5.9.0",
+    "@typescript-eslint/eslint-plugin": "5.9.1",
+    "@typescript-eslint/parser": "5.9.1",
+    "@typescript-eslint/typescript-estree": "5.9.1",
     "babel-jest": "27.4.6",
     "babel-plugin-istanbul": "6.1.1",
     "commitizen": "4.2.4",
-    "cypress": "9.2.0",
+    "cypress": "9.2.1",
     "cypress-watch-and-reload": "1.5.5",
     "dependency-version-badge": "1.11.0",
     "eslint": "7.32.0",
@@ -174,7 +174,7 @@
     "eslint-plugin-jest": "25.3.4",
     "eslint-plugin-jest-dom": "3.9.4",
     "eslint-plugin-jest-formatting": "3.1.0",
-    "eslint-plugin-json-schema-validator": "2.1.29",
+    "eslint-plugin-json-schema-validator": "2.1.30",
     "eslint-plugin-jsx-a11y": "6.5.1",
     "eslint-plugin-promise": "6.0.0",
     "eslint-plugin-react": "7.28.0",
@@ -266,7 +266,7 @@
     ]
   },
   "volta": {
-    "node": "14.18.2",
+    "node": "14.18.3",
     "npm": "8.3.0"
   }
 }
