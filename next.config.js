@@ -96,7 +96,7 @@ const nextConfiguration = {
    * },
    */
   reactStrictMode: true,
-  target: 'experimental-serverless-trace',
+  /* target: 'experimental-serverless-trace', */
 
   webpack: (
     /** @type {{ plugins: any[]; }} */ config,
