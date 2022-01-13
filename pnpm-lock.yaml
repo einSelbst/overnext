@@ -115,7 +115,7 @@ specifiers:
   typed-query-selector: 2.6.1
   typedoc: 0.22.10
   typescript: 4.5.4
-  typescript-eslint-language-service: 4.1.5
+  typescript-eslint-language-service: 5.0.0
   typesync: 0.8.0
   webpack: 5.66.0
 
@@ -228,7 +228,7 @@ devDependencies:
   tap-spot: 1.1.1
   ts-node: 10.4.0_c0a8ca172db2ce87bc71f1a1cb132fc8
   typedoc: 0.22.10_typescript@4.5.4
-  typescript-eslint-language-service: 4.1.5_b7b2e42b32ee097737cd3e626b10847b
+  typescript-eslint-language-service: 5.0.0_b7b2e42b32ee097737cd3e626b10847b
   typesync: 0.8.0
 
 packages:
@@ -13210,12 +13210,12 @@ packages:
       typescript: 4.5.4
     dev: true
 
-  /typescript-eslint-language-service/4.1.5_b7b2e42b32ee097737cd3e626b10847b:
-    resolution: {integrity: sha512-lJ9tH53m8e8fYYwhG5hTpiUHCz4SjY55rT8T4ADrmF/29JPdWkUik8cbZy+KsCsUIG1CEMRz+DOV4S+wVyYivQ==}
+  /typescript-eslint-language-service/5.0.0_b7b2e42b32ee097737cd3e626b10847b:
+    resolution: {integrity: sha512-QB3YsL+lDOpKwblXuqD9GkzpHhJC2D02e/3OIj38kIe6LSL97cEsUtnsVPqIaofnOsV2glj2T5VLxp5gmLTERQ==}
     peerDependencies:
-      '@typescript-eslint/parser': '>= 4.0.0'
-      eslint: '>= 6.7.0 <= 6.8.x || >= 7.0.0'
-      typescript: '>= 3.0.0 || >= 4.0.0'
+      '@typescript-eslint/parser': '>= 5.0.0'
+      eslint: '>= 8.0.0'
+      typescript: '>= 4.0.0'
     dependencies:
       '@typescript-eslint/parser': 5.9.1_eslint@8.6.0+typescript@4.5.4
       eslint: 8.6.0

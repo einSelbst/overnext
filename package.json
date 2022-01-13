@@ -208,7 +208,7 @@
     "tap-spot": "1.1.1",
     "ts-node": "10.4.0",
     "typedoc": "0.22.10",
-    "typescript-eslint-language-service": "4.1.5",
+    "typescript-eslint-language-service": "5.0.0",
     "typesync": "0.8.0"
   },
   "optionalDependencies": {
