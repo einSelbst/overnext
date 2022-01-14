@@ -12,10 +12,12 @@ import type {
   InferGetStaticPropsType,
 } from 'next'
 
+/* eslint-disable import/exports-last, import/group-exports */
 /* istanbul ignore next */
-const config = {
+export const config = {
   amp: 'hybrid',
 }
+/* eslint-enable import/exports-last, import/group-exports */
 
 type StaticPathParameters = ParsedUrlQuery & {
   readonly id: string
@@ -67,5 +69,5 @@ const Post = ({
   </div>
 )
 
-export { config, getStaticPaths, getStaticProps }
+export { getStaticPaths, getStaticProps }
 export default Post
