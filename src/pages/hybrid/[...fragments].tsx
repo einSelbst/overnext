@@ -15,10 +15,12 @@ import type {
   /* InferGetStaticPropsType, */
 } from 'next'
 
+/* eslint-disable import/exports-last, import/group-exports */
 /* istanbul ignore next */
-const config = {
+export const config = {
   amp: 'hybrid',
 }
+/* eslint-enable import/exports-last, import/group-exports */
 
 type StaticPathParameters = ParsedUrlQuery & {
   fragments: string[] | string
@@ -75,5 +77,5 @@ const Fragments = ({ fragments }: FragmentsProps): JSX.Element => (
   </div>
 )
 
-export { config, getStaticPaths, getStaticProps }
+export { getStaticPaths, getStaticProps } // eslint-disable-line import/group-exports
 export default Fragments

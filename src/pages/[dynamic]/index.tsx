@@ -6,10 +6,12 @@ import type {
   InferGetStaticPropsType,
 } from 'next'
 
+/* eslint-disable import/exports-last, import/group-exports */
 /* istanbul ignore next */
-const config = {
+export const config = {
   amp: 'hybrid',
 }
+/* eslint-enable import/exports-last, import/group-exports */
 
 const DynamicPage = ({
   dynamic,
@@ -112,5 +114,5 @@ const getStaticPaths: GetStaticPaths = async ({ locales }) => {
   }
 }
 
-export { config, getStaticPaths, getStaticProps }
+export { getStaticPaths, getStaticProps } // eslint-disable-line import/group-exports
 export default DynamicPage
