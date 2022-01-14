@@ -69,5 +69,5 @@ const Post = ({
   </div>
 )
 
-export { getStaticPaths, getStaticProps }
+export { getStaticPaths, getStaticProps } // eslint-disable-line import/group-exports
 export default Post
