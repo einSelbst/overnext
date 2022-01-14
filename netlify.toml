@@ -40,9 +40,8 @@ NODE_ENV = "production"
 NEXT_SERVERLESS = "false"
 NODE_ENV = "production"
 
-[[plugins]]
-package = "@netlify/plugin-nextjs"
-
+# [[plugins]]
+# package = "@netlify/plugin-nextjs"
 # [[plugins]]
 # runs Cypress tests against the deployed URL
 # package = "netlify-plugin-cypress"
