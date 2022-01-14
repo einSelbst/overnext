@@ -1,7 +1,6 @@
 /* istanbul ignore next */
-const config = { amp: true }
+export const config = { amp: true } // eslint-disable-line import/exports-last
 
 const About = (): JSX.Element => <h1>My AMP About Page!</h1>
 
-export { config }
 export default About

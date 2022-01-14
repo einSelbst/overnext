@@ -15,10 +15,12 @@ import { useRouter } from 'next/router'
 import Byline from 'components/byline'
 import DefaultLayout from 'layouts/default.layout'
 
+/* eslint-disable import/exports-last, import/group-exports */
 /* istanbul ignore next */
-const config = {
+export const config = {
   amp: 'hybrid',
 }
+/* eslint-enable import/exports-last, import/group-exports */
 
 type HomeProps = {
   host: string
@@ -190,5 +192,5 @@ const Dog: NextLayoutPage = (
 
 Dog.Layout = DefaultLayout
 
-export { config, getStaticProps }
+export { getStaticProps } // eslint-disable-line import/group-exports
 export default Dog

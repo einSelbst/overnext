@@ -6,10 +6,12 @@ import { useEffect, useRef } from 'react'
 // eslint-disable-next-line import/no-unassigned-import
 import type {} from 'typed-query-selector'
 
+/* eslint-disable import/exports-last */
 /* istanbul ignore next */
-const config = {
+export const config = {
   amp: 'hybrid',
 }
+/* eslint-enable import/exports-last */
 
 /**
  * Using 'normal' props instead of prop-types package
@@ -112,6 +114,5 @@ const One = ({ success, error }: Props): OverNextComponentType => {
     </div>
   )
 }
-export { config }
 
 export default One
