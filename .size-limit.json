@@ -12,21 +12,21 @@
   {
     "name": "load time static rendered index page",
     "limit": "250 ms",
-    "path": ".next/serverless/pages/de.html"
+    "path": ".next/server/pages/de.html"
   },
   {
     "name": "size of static rendered index page",
     "limit": "7 kB",
-    "path": ".next/serverless/pages/de.html"
+    "path": ".next/server/pages/de.html"
   },
   {
     "name": "load time static rendered dog page",
     "limit": "250 ms",
-    "path": ".next/serverless/pages/fr/dog.html"
+    "path": ".next/server/pages/fr/dog.html"
   },
   {
     "name": "load time static rendered dog amp page",
     "limit": "250 ms",
-    "path": ".next/serverless/pages/fr/dog.amp.html"
+    "path": ".next/server/pages/fr/dog.amp.html"
   }
 ]
