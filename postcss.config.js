@@ -4,3 +4,18 @@ module.exports = {
     tailwindcss: {},
   },
 }
+
+/*
+ * "postcss": {
+ *   "plugins": {
+ *     "postcss-mixins": {
+ *       "mixinsDir": "mixins"
+ *     },
+ *     "postcss-media-minmax": {},
+ *     "postcss-nested": {},
+ *     "postcss-hexrgba": {},
+ *     "postcss-momentum-scrolling": {},
+ *     "autoprefixer": {}
+ *   }
+ * },
+ */
