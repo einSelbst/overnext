@@ -147,7 +147,7 @@
     "@size-limit/webpack": "7.0.5",
     "@size-limit/webpack-why": "7.0.5",
     "@stylelint/postcss-css-in-js": "0.37.2",
-    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/jest-dom": "5.16.1",
     "@testing-library/react": "12.1.2",
     "@types/babel__core": "7.1.18",
     "@types/core-js": "2.5.5",
