@@ -148,6 +148,7 @@
     "@size-limit/webpack": "7.0.5",
     "@size-limit/webpack-why": "7.0.5",
     "@stylelint/postcss-css-in-js": "0.37.2",
+    "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "12.1.2",
     "@types/babel__core": "7.1.18",
     "@types/babel__preset-env": "7.9.2",
@@ -160,6 +161,7 @@
     "@types/source-map-support": "0.5.4",
     "@types/standard-version": "7.0.1",
     "@types/stylelint": "13.13.3",
+    "@types/testing-library__jest-dom": "^5.14.2",
     "@typescript-eslint/eslint-plugin": "5.10.0",
     "@typescript-eslint/parser": "5.10.0",
     "@typescript-eslint/typescript-estree": "5.10.0",
@@ -229,15 +231,17 @@
   },
   "pnpm": {
     "overrides": {
+      "ansi-regex": "5.0.1",
       "browserslist": "latest",
       "caniuse-lite": "latest",
       "chokidar": "3",
       "debug": "latest",
-      "ansi-regex": "5.0.1",
-      "source-map-resolve": "latest",
-      "stylelint": "14.2.0",
       "jsonpointer@<5.0.0": ">=5.0.0",
-      "json-schema@<0.4.0": ">=0.4.0"
+      "json-schema@<0.4.0": ">=0.4.0",
+      "nanoid": "3.1.31",
+      "node-fetch": "2.6.7",
+      "source-map-resolve": "latest",
+      "stylelint": "14.2.0"
     }
   },
   "next-unused": {

@@ -10,6 +10,8 @@ overrides:
   stylelint: 14.2.0
   jsonpointer@<5.0.0: '>=5.0.0'
   json-schema@<0.4.0: '>=0.4.0'
+  nanoid: 3.1.31
+  node-fetch: 2.6.7
 
 specifiers:
   '@axe-core/react': 4.3.2
@@ -26,6 +28,7 @@ specifiers:
   '@size-limit/webpack': 7.0.5
   '@size-limit/webpack-why': 7.0.5
   '@stylelint/postcss-css-in-js': 0.37.2
+  '@testing-library/jest-dom': ^5.16.1
   '@testing-library/react': 12.1.2
   '@types/babel__core': 7.1.18
   '@types/babel__preset-env': 7.9.2
@@ -41,6 +44,7 @@ specifiers:
   '@types/source-map-support': 0.5.4
   '@types/standard-version': 7.0.1
   '@types/stylelint': 13.13.3
+  '@types/testing-library__jest-dom': ^5.14.2
   '@typescript-eslint/eslint-plugin': 5.10.0
   '@typescript-eslint/parser': 5.10.0
   '@typescript-eslint/typescript-estree': 5.10.0
@@ -164,6 +168,7 @@ devDependencies:
   '@size-limit/webpack': 7.0.5_size-limit@7.0.5
   '@size-limit/webpack-why': 7.0.5_size-limit@7.0.5+webpack@5.66.0
   '@stylelint/postcss-css-in-js': 0.37.2_8143638ceb7d0d47a7ad2c329d589c11
+  '@testing-library/jest-dom': 5.16.1
   '@testing-library/react': 12.1.2_react-dom@17.0.2+react@17.0.2
   '@types/babel__core': 7.1.18
   '@types/babel__preset-env': 7.9.2
@@ -176,6 +181,7 @@ devDependencies:
   '@types/source-map-support': 0.5.4
   '@types/standard-version': 7.0.1
   '@types/stylelint': 13.13.3
+  '@types/testing-library__jest-dom': 5.14.2
   '@typescript-eslint/eslint-plugin': 5.10.0_3b6b276e93ead7cf6063f183a5e18d1f
   '@typescript-eslint/parser': 5.10.0_eslint@8.7.0+typescript@4.5.4
   '@typescript-eslint/typescript-estree': 5.10.0_typescript@4.5.4
@@ -2296,11 +2302,12 @@ packages:
     dependencies:
       https-proxy-agent: 5.0.0
       mkdirp: 0.5.5
-      node-fetch: 2.6.6
+      node-fetch: 2.6.7
       npmlog: 4.1.2
       progress: 2.0.3
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
+      - encoding
       - supports-color
     dev: false
 
@@ -2364,6 +2371,7 @@ packages:
       tslib: 1.14.1
       webpack: 5.66.0
     transitivePeerDependencies:
+      - encoding
       - supports-color
     dev: false
 
@@ -2429,6 +2437,7 @@ packages:
     dependencies:
       '@sentry/cli': 1.71.0
     transitivePeerDependencies:
+      - encoding
       - supports-color
     dev: false
 
@@ -2501,6 +2510,7 @@ packages:
       size-limit: 7.0.5
     transitivePeerDependencies:
       - bufferutil
+      - encoding
       - supports-color
       - utf-8-validate
     dev: true
@@ -2516,6 +2526,7 @@ packages:
       size-limit: 7.0.5
     transitivePeerDependencies:
       - bufferutil
+      - encoding
       - supports-color
       - utf-8-validate
     dev: true
@@ -2543,7 +2554,7 @@ packages:
       size-limit: 7.0.5
     dependencies:
       escape-string-regexp: 4.0.0
-      nanoid: 3.1.30
+      nanoid: 3.1.31
       size-limit: 7.0.5
       webpack: 5.66.0
     transitivePeerDependencies:
@@ -2737,6 +2748,21 @@ packages:
       dom-accessibility-api: 0.5.10
       lz-string: 1.4.4
       pretty-format: 27.4.6
+    dev: true
+
+  /@testing-library/jest-dom/5.16.1:
+    resolution: {integrity: sha512-ajUJdfDIuTCadB79ukO+0l8O+QwN0LiSxDaYUTI4LndbbUsGi6rWU1SCexXzBA2NSjlVB9/vbkasQIL3tmPBjw==}
+    engines: {node: '>=8', npm: '>=6', yarn: '>=1'}
+    dependencies:
+      '@babel/runtime': 7.16.7
+      '@types/testing-library__jest-dom': 5.14.2
+      aria-query: 5.0.0
+      chalk: 3.0.0
+      css: 3.0.0
+      css.escape: 1.5.1
+      dom-accessibility-api: 0.5.10
+      lodash: 4.17.21
+      redent: 3.0.0
     dev: true
 
   /@testing-library/react/12.1.2_react-dom@17.0.2+react@17.0.2:
@@ -3014,6 +3040,12 @@ packages:
     dependencies:
       globby: 11.1.0
       postcss: 7.0.39
+    dev: true
+
+  /@types/testing-library__jest-dom/5.14.2:
+    resolution: {integrity: sha512-vehbtyHUShPxIa9SioxDwCvgxukDMH//icJG90sXQBUm5lJOHLT5kNeU9tnivhnA/TkOFMzGIXN2cTc4hY8/kg==}
+    dependencies:
+      '@types/jest': 27.4.0
     dev: true
 
   /@types/trusted-types/2.0.2:
@@ -3803,6 +3835,12 @@ packages:
     resolution: {integrity: sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==}
     engines: {node: '>= 4.0.0'}
 
+  /atob/2.1.2:
+    resolution: {integrity: sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==}
+    engines: {node: '>= 4.5.0'}
+    hasBin: true
+    dev: true
+
   /autoprefixer/10.4.2_postcss@8.4.5:
     resolution: {integrity: sha512-9fOPpHKuDW1w/0EKfRmVnxTDt8166MAnLI3mgZ1JCnhNtYWxcJ6Ud5CO/AVOZi/AvFa8DY9RTy3h3+tFBlrrdQ==}
     engines: {node: ^10 || ^12 || >=14}
@@ -4501,6 +4539,14 @@ packages:
       escape-string-regexp: 1.0.5
       supports-color: 5.5.0
 
+  /chalk/3.0.0:
+    resolution: {integrity: sha512-4D3B6Wf41KOYRFdszmDqMCGq5VV/uMAB273JILmO+3jAlh8X4qDtdtgCR3fxtbLEMzSx22QdhnDcJvu2u1fVwg==}
+    engines: {node: '>=8'}
+    dependencies:
+      ansi-styles: 4.3.0
+      supports-color: 7.2.0
+    dev: true
+
   /chalk/4.1.2:
     resolution: {integrity: sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==}
     engines: {node: '>=10'}
@@ -5188,7 +5234,9 @@ packages:
   /cross-fetch/3.1.4:
     resolution: {integrity: sha512-1eAtFWdIubi6T4XPy6ei9iUFoKpUkIF971QLN8lIvvvwueI65+Nw5haMNKUwfJxabqlIIDODJKGrQ66gxC0PbQ==}
     dependencies:
-      node-fetch: 2.6.1
+      node-fetch: 2.6.7
+    transitivePeerDependencies:
+      - encoding
     dev: false
 
   /cross-spawn/7.0.3:
@@ -5256,6 +5304,18 @@ packages:
   /css-what/5.1.0:
     resolution: {integrity: sha512-arSMRWIIFY0hV8pIxZMEfmMI47Wj3R/aWpZDDxWYCPEiOMv6tfOrnpDtgxBYPEQD4V0Y/958+1TdC3iWTFcUPw==}
     engines: {node: '>= 6'}
+    dev: true
+
+  /css.escape/1.5.1:
+    resolution: {integrity: sha1-QuJ9T6BK4y+TGktNQZH6nN3ul8s=}
+    dev: true
+
+  /css/3.0.0:
+    resolution: {integrity: sha512-DG9pFfwOrzc+hawpmqX/dHYHJG+Bsdb0klhyi1sDneOgGOXy9wQIC8hzyVp1e4NRYDBdxcylvywPkkXCHAzTyQ==}
+    dependencies:
+      inherits: 2.0.4
+      source-map: 0.6.1
+      source-map-resolve: 0.6.0
     dev: true
 
   /cssesc/3.0.0:
@@ -5517,6 +5577,11 @@ packages:
 
   /decimal.js/10.3.1:
     resolution: {integrity: sha512-V0pfhfr8suzyPGOx3nmq4aHqabehUZn6Ch9kyFpV79TGDTWFmHqUqXdabR7QHqxzrYolF4+tVmJhUG4OURg5dQ==}
+    dev: true
+
+  /decode-uri-component/0.2.0:
+    resolution: {integrity: sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=}
+    engines: {node: '>=0.10'}
     dev: true
 
   /dedent/0.7.0:
@@ -6588,10 +6653,11 @@ packages:
       '@sitespeed.io/tracium': 0.3.3
       commander: 8.3.0
       find-chrome-bin: 0.1.0
-      nanoid: 3.1.30
+      nanoid: 3.1.31
       puppeteer-core: 12.0.1
     transitivePeerDependencies:
       - bufferutil
+      - encoding
       - supports-color
       - utf-8-validate
     dev: true
@@ -6835,6 +6901,8 @@ packages:
       fn-annotate: 1.2.0
       object-assign: 4.1.1
       util-deprecate: 1.0.2
+    transitivePeerDependencies:
+      - encoding
     dev: false
 
   /fb-watchman/2.0.1:
@@ -9725,8 +9793,8 @@ packages:
     resolution: {integrity: sha512-UWbdl4LHd2fUnaEcOUFVWRdWGLkNoV12cKVIPiirYd8qM5VkCoCTXErlDubevrkEG7kGohvjRxAlTQmOqG80tw==}
     dev: true
 
-  /nanoid/3.1.30:
-    resolution: {integrity: sha512-zJpuPDwOv8D2zq2WRoMe1HsfZthVewpel9CAvTfc/2mBD1uUT/agc5f7GHGWXlYkFvi1mVxe4IjvP2HNrop7nQ==}
+  /nanoid/3.1.31:
+    resolution: {integrity: sha512-ZivnJm0o9bb13p2Ot5CpgC2rQdzB9Uxm/mFZweqm5eMViqOJe3PV6LU2E30SiLgheesmcPrjquqraoolONSA0A==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
@@ -9839,7 +9907,7 @@ packages:
       '@next/react-refresh-utils': 12.0.8_2a7ba7237bbfbbeeafd3857897844364
       caniuse-lite: 1.0.30001301
       jest-worker: 27.0.0-next.5
-      node-fetch: 2.6.1
+      node-fetch: 2.6.7
       postcss: 8.2.15
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
@@ -9863,6 +9931,7 @@ packages:
       '@next/swc-win32-x64-msvc': 12.0.8
     transitivePeerDependencies:
       - '@babel/core'
+      - encoding
       - webpack
     dev: false
 
@@ -9879,24 +9948,16 @@ packages:
       tslib: 2.3.1
     dev: true
 
-  /node-fetch/2.6.1:
-    resolution: {integrity: sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==}
+  /node-fetch/2.6.7:
+    resolution: {integrity: sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==}
     engines: {node: 4.x || >=6.0.0}
-    dev: false
-
-  /node-fetch/2.6.5:
-    resolution: {integrity: sha512-mmlIVHJEu5rnIxgEgez6b9GgWXbkZj5YZ7fx+2r94a2E+Uirsp6HsPTPlomfdHtpt/B0cdKviwkoaM6pyvUOpQ==}
-    engines: {node: 4.x || >=6.0.0}
+    peerDependencies:
+      encoding: ^0.1.0
+    peerDependenciesMeta:
+      encoding:
+        optional: true
     dependencies:
       whatwg-url: 5.0.0
-    dev: true
-
-  /node-fetch/2.6.6:
-    resolution: {integrity: sha512-Z8/6vRlTUChSdIgMa51jxQ4lrw/Jy5SOW10ObaA47/RElsAN2c5Pn8bTgFGWn/ibwzXTE8qwr1Yzx28vsecXEA==}
-    engines: {node: 4.x || >=6.0.0}
-    dependencies:
-      whatwg-url: 5.0.0
-    dev: false
 
   /node-int64/0.4.0:
     resolution: {integrity: sha1-h6kGXNs1XTGC2PlM4RGIuCXGijs=}
@@ -10928,7 +10989,7 @@ packages:
     engines: {node: ^10 || ^12 || >=14}
     dependencies:
       colorette: 1.4.0
-      nanoid: 3.1.30
+      nanoid: 3.1.31
       source-map: 0.6.1
     dev: false
 
@@ -10936,7 +10997,7 @@ packages:
     resolution: {integrity: sha512-jBDboWM8qpaqwkMwItqTQTiFikhs/67OYVvblFFTM7MrZjt6yMKd6r2kgXizEbTTljacm4NldIlZnhbjr84QYg==}
     engines: {node: ^10 || ^12 || >=14}
     dependencies:
-      nanoid: 3.1.30
+      nanoid: 3.1.31
       picocolors: 1.0.0
       source-map-js: 1.0.1
 
@@ -11147,7 +11208,7 @@ packages:
       devtools-protocol: 0.0.937139
       extract-zip: 2.0.1
       https-proxy-agent: 5.0.0
-      node-fetch: 2.6.5
+      node-fetch: 2.6.7
       pkg-dir: 4.2.0
       progress: 2.0.3
       proxy-from-env: 1.1.0
@@ -11157,6 +11218,7 @@ packages:
       ws: 8.2.3
     transitivePeerDependencies:
       - bufferutil
+      - encoding
       - supports-color
       - utf-8-validate
     dev: true
@@ -11902,6 +11964,14 @@ packages:
   /source-map-js/1.0.1:
     resolution: {integrity: sha512-4+TN2b3tqOCd/kaGRJ/sTYA0tR0mdXx26ipdolxcwtJVqEnqNYvlCAt1q3ypy4QMlYus+Zh34RNtYLoq2oQ4IA==}
     engines: {node: '>=0.10.0'}
+
+  /source-map-resolve/0.6.0:
+    resolution: {integrity: sha512-KXBr9d/fO/bWo97NXsPIAW1bFSBOuCnjbNTBMO7N59hsv5i9yzRDfcYwwt0l04+VqnKC+EwzvJZIP/qkuMgR/w==}
+    deprecated: See https://github.com/lydell/source-map-resolve#deprecated
+    dependencies:
+      atob: 2.1.2
+      decode-uri-component: 0.2.0
+    dev: true
 
   /source-map-support/0.5.21:
     resolution: {integrity: sha512-uBHU3L3czsIyYXKX88fdrGovxdSCoTGDRZ6SYXtSRxLZUzHg5P/66Ht6uoUlHu9EZod+inXhKo3qQgwXUT/y1w==}
