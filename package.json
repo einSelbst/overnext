@@ -189,7 +189,7 @@
     "eslint-plugin-sort-keys-fix": "1.1.2",
     "eslint-plugin-toml": "0.3.0",
     "eslint-plugin-tsdoc": "0.2.14",
-    "eslint-plugin-unicorn": "37.0.1",
+    "eslint-plugin-unicorn": "39.0.0",
     "git-format-staged": "latest",
     "html-validate": "6.2.0",
     "husky": "7.0.4",
