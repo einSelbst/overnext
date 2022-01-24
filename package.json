@@ -229,15 +229,17 @@
   },
   "pnpm": {
     "overrides": {
+      "ansi-regex": "5.0.1",
       "browserslist": "latest",
       "caniuse-lite": "latest",
       "chokidar": "3",
       "debug": "latest",
-      "ansi-regex": "5.0.1",
-      "source-map-resolve": "latest",
-      "stylelint": "14.2.0",
       "jsonpointer@<5.0.0": ">=5.0.0",
-      "json-schema@<0.4.0": ">=0.4.0"
+      "json-schema@<0.4.0": ">=0.4.0",
+      "nanoid": "3.1.31",
+      "node-fetch": "2.6.7",
+      "source-map-resolve": "latest",
+      "stylelint": "14.2.0"
     }
   },
   "next-unused": {

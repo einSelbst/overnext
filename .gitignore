@@ -102,3 +102,6 @@ docs
 
 # FaunaDB
 .faunarc
+
+# Sentry
+.sentryclirc
