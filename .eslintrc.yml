@@ -161,6 +161,7 @@ rules:
 
   # disable some unicorn rules
   unicorn/prefer-spread: off # in favour of array-func/prefer-array-from
+  unicorn/no-empty-file: off
 
   # I want to re-enable those
   unicorn/prefer-module: off
