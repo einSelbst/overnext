@@ -7,6 +7,7 @@
  */
 const { withSentryConfig } = require('@sentry/nextjs')
 const { withPlugins, optional } = require('next-compose-plugins')
+const withPreact = require('next-plugin-preact')
 const withPWA = require('next-pwa')
 const { PHASE_DEVELOPMENT_SERVER } = require('next/constants')
 
@@ -127,6 +128,7 @@ const plugins = () =>
           },
           ['!', PHASE_DEVELOPMENT_SERVER],
         ],
+        withPreact,
         [
           withPWA,
           {
@@ -151,26 +153,29 @@ const plugins = () =>
         ],
       ]
     : [
-        withPWA,
-        {
-          pwa: {
-            /* additionalManifestEntries: [ */
-            /* '/', */
-            /* '/map', */
-            /* '/collection', */
-            /* '/offline', */
-            /* ].map(url => ({ */
-            /* revision: buildId, */
-            /* url, */
-            /* })), */
-            dest: 'public',
-            disable: process.env.NODE_ENV === 'development',
-            /* dontCacheBustURLsMatching: /^\/_next\/static\/.* /i, */
-            /* register: false, */
-            /* skipWaiting: false, */
-            /* swSrc: 'utils/serviceWorker.ts', */
+        withPreact,
+        [
+          withPWA,
+          {
+            pwa: {
+              /* additionalManifestEntries: [ */
+              /* '/', */
+              /* '/map', */
+              /* '/collection', */
+              /* '/offline', */
+              /* ].map(url => ({ */
+              /* revision: buildId, */
+              /* url, */
+              /* })), */
+              dest: 'public',
+              disable: process.env.NODE_ENV === 'development',
+              /* dontCacheBustURLsMatching: /^\/_next\/static\/.* /i, */
+              /* register: false, */
+              /* skipWaiting: false, */
+              /* swSrc: 'utils/serviceWorker.ts', */
+            },
           },
-        },
+        ],
       ]
 
 const nextPluginConfiguration = withPlugins(plugins(), nextConfiguration)

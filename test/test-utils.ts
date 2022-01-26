@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react'
+import { render } from '@testing-library/preact'
 /*
  * import { ThemeProvider } from "my-ui-lib"
  * import { TranslationProvider } from "my-i18n-lib"
@@ -21,7 +21,7 @@ const customRender = (ui, options = {}) =>
 
 // re-export everything
 // eslint-disable-next-line import/export
-export * from '@testing-library/react'
+export * from '@testing-library/preact'
 
 // override render method
 // eslint-disable-next-line import/export

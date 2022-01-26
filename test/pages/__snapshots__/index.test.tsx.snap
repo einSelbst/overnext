@@ -34,7 +34,7 @@ exports[`home page matches snapshot 1`] = `
         </h2>
         <iframe
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen=""
+          allowfullscreen="true"
           height="315"
           loading="lazy"
           src="https://www.youtube-nocookie.com/embed/h6fcK_fRYaI"
@@ -101,14 +101,19 @@ exports[`home page matches snapshot 1`] = `
         </a>
       </div>
     </div>
-    <style>
+    <style
+      jsx="true"
+    >
       
       button {
         background: #0072ed;
       }
     
     </style>
-    <style>
+    <style
+      global="true"
+      jsx="true"
+    >
       
       html,
       body {
