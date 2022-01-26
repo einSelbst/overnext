@@ -38,8 +38,8 @@ jobs:
   eslint:
     name: Run ESLint
     needs: pre_job
-    if: false # not ready for eslint 8, see https://github.com/bradennapier/eslint-plus-action/issues/72
-    #if: ${{ needs.pre_job.outputs.should_skip != 'true' }}
+    # if: false # not ready for eslint 8, see https://github.com/bradennapier/eslint-plus-action/issues/72
+    # if: ${{ needs.pre_job.outputs.should_skip != 'true'
     runs-on: ubuntu-latest
 
     strategy:
@@ -95,7 +95,8 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - name: Run Eslint
-        uses: bradennapier/eslint-plus-action@v3.4.2
+        # uses: bradennapier/eslint-plus-action@v3.4.2
+        uses: Maggi64/eslint-plus-action@master
         with:
           reportIgnoredFiles: true
           issueSummaryType: full
