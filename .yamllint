@@ -1,0 +1,25 @@
+ignore: |
+  pnpm-lock.yaml
+  node_modules/
+
+extends: default
+
+rules:
+  braces:
+    forbid: false
+    min-spaces-inside: 1
+    max-spaces-inside: 1
+  comments:
+    require-starting-space: true
+    ignore-shebangs: true
+    min-spaces-from-content: 1
+  document-start:
+    present: false
+  line-length: {
+    max: 160,
+    allow-non-breakable-words: true,
+    allow-non-breakable-inline-mappings: true
+  }
+  truthy:
+    allowed-values: ['true', 'false', 'off']
+    check-keys: false
