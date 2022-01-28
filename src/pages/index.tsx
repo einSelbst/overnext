@@ -19,7 +19,7 @@ export const Home = (): NextComponentType => (
       </p>
 
       <div className='py-20'>
-        <h2 className='text-3xl text-center text-gray-700 dark:text-gray-100'>
+        <h2 className='text-center text-3xl text-gray-700 dark:text-gray-100'>
           A short story
         </h2>
         <iframe

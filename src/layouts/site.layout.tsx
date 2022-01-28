@@ -8,9 +8,9 @@ const SiteLayout = ({ children }: Props) => (
   <div className='bg-white antialiased'>
     <div>
       <div>
-        <div className='max-w-xl mx-auto px-8'>
+        <div className='mx-auto max-w-xl px-8'>
           <nav title='Main Navigation'>
-            <div className='py-4 flex-shrink-0 flex items-center'>
+            <div className='flex flex-shrink-0 items-center py-4'>
               <img
                 alt='Logo Icon'
                 className='h-8 w-8'
@@ -31,7 +31,7 @@ const SiteLayout = ({ children }: Props) => (
               <label htmlFor='search-local'>
                 <span>Find settings</span>
                 <input
-                  className='block w-full border border-gray-300 rounded-lg bg-gray-100 px-3 py-2 leading-tight focus:outline-none focus:border-gray-600 focus:bg-white'
+                  className='block w-full rounded-lg border border-gray-300 bg-gray-100 px-3 py-2 leading-tight focus:border-gray-600 focus:bg-white focus:outline-none'
                   id='search-local'
                   placeholder='Search...'
                   title='Search again'

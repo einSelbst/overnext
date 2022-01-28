@@ -11,13 +11,13 @@ const AccountSettingsTeamSettings = () => (
       <div className='pt-6 pb-8 sm:pt-8'>
         <p className='text-sm text-gray-700'>Set your team preferences here.</p>
         <div className='mt-6'>
-          <div className='max-w-4xl mx-auto'>
+          <div className='mx-auto max-w-4xl'>
             <label className='block' htmlFor='team-name'>
-              <span className='block font-medium text-sm text-gray-900 leading-tight'>
+              <span className='block text-sm font-medium leading-tight text-gray-900'>
                 Team name
               </span>
               <input
-                className='block w-full border border-gray-300 rounded-lg bg-gray-100 px-3 py-2 leading-tight focus:outline-none focus:border-gray-600 focus:bg-white mt-2'
+                className='mt-2 block w-full rounded-lg border border-gray-300 bg-gray-100 px-3 py-2 leading-tight focus:border-gray-600 focus:bg-white focus:outline-none'
                 id='team-name'
                 placeholder='My Team'
                 type='email'
@@ -26,14 +26,14 @@ const AccountSettingsTeamSettings = () => (
           </div>
         </div>
       </div>
-      <div className='border-t-2 border-gray-200 px-0 py-5 flex justify-end'>
+      <div className='flex justify-end border-t-2 border-gray-200 px-0 py-5'>
         <button
-          className='px-4 py-3 leading-none font-semibold rounded-lg bg-gray-300 text-gray-900 hover:bg-gray-400 focus:outline-none focus:bg-gray-400'
+          className='rounded-lg bg-gray-300 px-4 py-3 font-semibold leading-none text-gray-900 hover:bg-gray-400 focus:bg-gray-400 focus:outline-none'
           type='button'>
           Cancel
         </button>
         <button
-          className='ml-4 px-6 py-3 leading-none font-semibold rounded-lg bg-gray-800 text-white hover:bg-gray-900 focus:outline-none focus:bg-gray-900'
+          className='ml-4 rounded-lg bg-gray-800 px-6 py-3 font-semibold leading-none text-white hover:bg-gray-900 focus:bg-gray-900 focus:outline-none'
           type='button'>
           Save
         </button>

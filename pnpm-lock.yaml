@@ -103,6 +103,7 @@ specifiers:
   postcss-syntax: 0.36.2
   prettier: 2.5.1
   prettier-plugin-sh: 0.8.1
+  prettier-plugin-tailwindcss: ^0.1.4
   prettier-plugin-toml: latest
   react: 17.0.2
   react-dom: 17.0.2
@@ -231,6 +232,7 @@ devDependencies:
   postcss-syntax: 0.36.2_postcss@8.4.5
   prettier: 2.5.1
   prettier-plugin-sh: 0.8.1_prettier@2.5.1
+  prettier-plugin-tailwindcss: 0.1.4_prettier@2.5.1
   prettier-plugin-toml: 0.3.1
   size-limit: 7.0.5
   source-map-support: 0.5.21
@@ -11071,6 +11073,14 @@ packages:
       prettier: ^2.0.0
     dependencies:
       mvdan-sh: 0.5.0
+      prettier: 2.5.1
+    dev: true
+
+  /prettier-plugin-tailwindcss/0.1.4_prettier@2.5.1:
+    resolution: {integrity: sha512-kt3YFWqxcG9+bilBI0hPF7RjQZNtgBRvjJZGw6B2MNAjPqlfcYIiZnNaIEnq4XimKLTzZYxz6jQnUXmSQ/5njg==}
+    peerDependencies:
+      prettier: '>=2.2.0'
+    dependencies:
       prettier: 2.5.1
     dev: true
 

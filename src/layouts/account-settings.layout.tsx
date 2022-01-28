@@ -17,9 +17,9 @@ const ActiveLink = ({ children, href, className = '' }: ActiveLinkProps) => {
       <a
         className={`${
           router.pathname === href
-            ? 'text-gray-900 border-gray-800'
-            : 'text-gray-600 hover:text-gray-700 border-transparent'
-        } ${className} block pb-4 font-semibold text-sm sm:text-base border-b-2 focus:outline-none focus:text-gray-900 whitespace-no-wrap`}>
+            ? 'border-gray-800 text-gray-900'
+            : 'border-transparent text-gray-600 hover:text-gray-700'
+        } ${className} whitespace-no-wrap block border-b-2 pb-4 text-sm font-semibold focus:text-gray-900 focus:outline-none sm:text-base`}>
         {children}
       </a>
     </Link>
@@ -31,11 +31,11 @@ const AccountSettingsLayout = ({
 }: {
   readonly children: React.ReactNode
 }) => (
-  <div className='max-w-xl mx-auto px-8'>
-    <h1 className='text-2xl text-gray-900 font-semibold'>Account Settings</h1>
+  <div className='mx-auto max-w-xl px-8'>
+    <h1 className='text-2xl font-semibold text-gray-900'>Account Settings</h1>
 
     <div
-      className='mt-6 flex overflow-x-auto scrollbar-none'
+      className='scrollbar-none mt-6 flex overflow-x-auto'
       style={{ boxShadow: 'inset 0 -2px 0 #edf2f7' }}>
       <ActiveLink href='/account-settings/basic-information'>
         Basic Information
