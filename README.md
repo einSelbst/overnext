@@ -172,12 +172,16 @@ validate:src: Format, lint, type-check & unit test the app
 validate:out: Build app, run integration tests, check links & validate generated html
 build:analyze: Build app and output bundle analyzer diagrams
 build:size: build app and measure loading performance
+size: Run size-limit
+size:why: Run size-limit and open statoscope report in browser
+audit:fix: Check vulnerabilities in production package and try to fix them
 find:unused: Find unused files
 build:ssr: used on CI for 'compressed size' action
 cz: Make new commit
 release: Prepare a new release
 docs: Generate typedoc docs
 info: Display info about the scripts
+stylelint-check: Check stylelint for rules conflicting prettier
 ```
 
 ## Code Style
