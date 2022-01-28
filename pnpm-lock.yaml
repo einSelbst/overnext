@@ -79,7 +79,7 @@ specifiers:
   eslint-plugin-toml: 0.3.0
   eslint-plugin-tsdoc: 0.2.14
   eslint-plugin-unicorn: 40.1.0
-  faunadb: 4.4.1
+  faunadb: 4.4.2
   fsevents: 2.3.2
   git-format-staged: latest
   html-validate: 6.2.0
@@ -136,7 +136,7 @@ dependencies:
   '@types/react-dom': 17.0.11
   autoprefixer: 10.4.2_postcss@8.4.5
   core-js: 3.20.3
-  faunadb: 4.4.1
+  faunadb: 4.4.2
   is-ci: 3.0.1
   next: 12.0.9_dc4cf3343b0898a8727f66e61a683eab
   next-compose-plugins: 2.2.1
@@ -6781,8 +6781,8 @@ packages:
     dependencies:
       reusify: 1.0.4
 
-  /faunadb/4.4.1:
-    resolution: {integrity: sha512-1V2ve22T4Q45C3PBB+LD7Fpk4lVajbtxDXDpENsujC+LMe88LqBQ9brl5v5uB3sCTSVAX0fsGtuZ+N5x15vdoQ==}
+  /faunadb/4.4.2:
+    resolution: {integrity: sha512-kbyfN18hmFTuJ3EwU9wsnQG1F5xsHpSZHXl7H79fMZ0TX28CVQY5A64g13z2PR+fcR5WiACqcWfkJQLMpQSaAw==}
     requiresBuild: true
     dependencies:
       abort-controller: 3.0.0
