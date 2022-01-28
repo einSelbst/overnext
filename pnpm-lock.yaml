@@ -121,7 +121,6 @@ specifiers:
   tailwindcss: 3.0.17
   tap-spot: 1.1.1
   ts-node: 10.4.0
-  tslib: 2.3.1
   typed-query-selector: 2.6.1
   typedoc: 0.22.11
   typescript: 4.5.5
@@ -149,7 +148,6 @@ dependencies:
   react-dom: 17.0.2_react@17.0.2
   sass: 1.49.0
   tailwindcss: 3.0.17_f98f8cb1d4c2734d9765edb689db6e16
-  tslib: 2.3.1
   typed-query-selector: 2.6.1
   typescript: 4.5.5
   webpack: 5.67.0
@@ -12947,6 +12945,7 @@ packages:
 
   /tslib/2.3.1:
     resolution: {integrity: sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==}
+    dev: true
 
   /tsutils/3.21.0_typescript@3.9.10:
     resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==}

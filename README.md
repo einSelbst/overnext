@@ -186,7 +186,6 @@ info: Display info about the scripts
   - ~~[`prop-types`](https://www.npmjs.com/package/prop-types) (for run-time type checking)~~ -> discarded, see [reasons](#prop-types)
   - not using `defaultProps` on function components because [deprecation incoming](https://github.com/reactjs/rfcs/pull/107)
 - [Typescript](https://www.typescriptlang.org/) (for compile time type checking)
-  - with [`tslib`](https://www.npmjs.com/package/tslib) for imports optimization
   - [`typesync`](https://github.com/jeffijoe/typesync) for find dependency typings
   - [TSDoc](https://tsdoc.org/) docstrings to generate [`typedoc`](https://github.com/TypeStrong/typedoc) documentation
 - [Prettier](https://prettier.io/) for code formatting
