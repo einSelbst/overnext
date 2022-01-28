@@ -1,7 +1,7 @@
-import type { NextLayoutPage } from 'next'
 import { useCallback, useEffect, useState } from 'react'
 
 import DefaultLayout from 'layouts/default.layout'
+import type { NextLayoutPage } from 'typings/layout'
 
 const fetcher = async (url: RequestInfo) => {
   const response = await fetch(url)

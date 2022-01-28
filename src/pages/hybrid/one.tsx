@@ -1,4 +1,4 @@
-import type { OverNextComponentType } from 'next'
+import type { NextComponentType } from 'next'
 import { useAmp } from 'next/amp'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -25,7 +25,7 @@ type Props = {
 /**
  * HTML entities should be escaped
  */
-const One = ({ success, error }: Props): OverNextComponentType => {
+const One = ({ success, error }: Props): NextComponentType => {
   const isAmp = useAmp()
   const router = useRouter()
   const { locale } = router

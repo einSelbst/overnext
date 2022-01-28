@@ -1,8 +1,8 @@
-import type { OverNextComponentType } from 'next'
+import type { NextComponentType } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 
-export const Home = (): OverNextComponentType => (
+export const Home = (): NextComponentType => (
   <div className='container'>
     <Head>
       <title>The Egg</title>
