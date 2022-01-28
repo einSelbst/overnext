@@ -28,7 +28,7 @@ exports[`home page matches snapshot 1`] = `
         class="py-20"
       >
         <h2
-          class="text-3xl text-center text-gray-700 dark:text-gray-100"
+          class="text-center text-3xl text-gray-700 dark:text-gray-100"
         >
           A short story
         </h2>

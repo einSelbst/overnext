@@ -1,7 +1,14 @@
 // see: https://github.com/arasfeld/next-graphql-app/blob/main/next-env.d.ts
-import type { NextComponentType, NextPageContext } from 'next'
+import type {
+  NextComponentType,
+  NextLayoutComponentType,
+  NextPage,
+  NextPageContext,
+} from 'next'
 import type { AppProps } from 'next/app'
+import type { ReactElement, ReactNode } from 'react'
 
+/* eslint-disable @typescript-eslint/no-shadow */
 declare module 'next' {
   // type NextPage<P = {}, IP = P> = NextComponentType<NextPageContext, IP, P>
   //
@@ -26,17 +33,9 @@ declare module 'next' {
     unknown,
     P
   > & {
-    Layout?: (children: React.ReactNode) => JSX.Element
+    Layout?: (children: ReactNode) => JSX.Element
     // Layout?: (page: React.ReactNode) => JSX.Element
-    getLayout?: (page: React.ReactNode) => React.ReactNode
-  }
-
-  type NextLayoutPage<P = Record<string, unknown>, IP = P> = NextComponentType<
-    NextPageContext,
-    IP,
-    P
-  > & {
-    Layout: ReactNode
+    getLayout?: (page: ReactNode) => ReactNode
   }
 
   /**
@@ -49,8 +48,8 @@ declare module 'next' {
    *   - taking into account what was proposed here:
    *     {@link https://stackoverflow.com/a/59840095/531439}
    */
-  type OverNextComponentType =
-    | OverNextComponentType[]
+  type NextComponentType =
+    | NextComponentType[]
     | ReactElement
     | boolean
     | number
@@ -59,12 +58,25 @@ declare module 'next' {
         Layout: ReactNode
       })
     | null // Note: undefined is invalid
-
-  export type { NextLayoutComponentType, NextLayoutPage, OverNextComponentType }
 }
+/* eslint-enable @typescript-eslint/no-shadow */
 
 declare module 'next/app' {
   type AppLayoutProps<P = unknown> = AppProps<P> & {
     Component: NextLayoutComponentType
   }
 }
+
+type NextLayoutPage1<P = Record<string, unknown>, IP = P> = NextComponentType<
+  NextPageContext,
+  IP,
+  P
+> & {
+  Layout: React.ReactNode
+}
+
+type NextLayoutPage<P = Record<string, unknown>> = NextPage<P> & {
+  Layout: React.ReactNode
+}
+
+export type { NextLayoutPage, NextLayoutPage1 }

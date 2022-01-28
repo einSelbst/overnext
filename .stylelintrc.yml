@@ -4,25 +4,32 @@ reportInvalidScopeDisables: true
 reportNeedlessDisables: true
 
 extends:
-  - stylelint-config-standard-scss
+  - stylelint-config-standard
   - stylelint-config-idiomatic-order
   # - stylelint-a11y/recommended  # enable when support for stylelint 14 is merged
   - stylelint-config-prettier
-# plugins:
-# - stylelint-scss
+plugins:
+  - stylelint-declaration-strict-value
 overrides:
   - customSyntax: '@stylelint/postcss-css-in-js'
     files:
       - src/**/*.tsx
   - customSyntax: postcss-scss
+    extends:
+      - stylelint-config-standard-scss
     files:
       - src/**/*.scss
+    rules:
+      at-rule-no-unknown: null
+      scss/at-rule-no-unknown:
+        - true
+        - ignoreAtRules:
+            ['tailwind', 'apply', 'responsive', 'variants', 'screen']
 rules:
   # at-rule-empty-line-before: 'always'
-  at-rule-no-unknown: null
-  scss/at-rule-no-unknown:
+  at-rule-no-unknown:
     - true
-    - ignoreAtRules: ['tailwind', 'apply', 'responsive', 'variants', 'screen']
+    - ignoreAtRules: ['tailwind']
   at-rule-no-vendor-prefix: true
   font-family-name-quotes: 'always-where-recommended'
   font-weight-notation: 'named-where-possible'
@@ -30,6 +37,9 @@ rules:
   media-feature-name-no-vendor-prefix: true
   no-descending-specificity: null
   property-no-vendor-prefix: true
+  scale-unlimited/declaration-strict-value:
+    - ['/color$/', '/font$/', '/background$/']
+    - disableFix: true
   # selector-attribute-quotes: 'always'
   selector-no-vendor-prefix: true
   # string-quotes: 'single'

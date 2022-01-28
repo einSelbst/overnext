@@ -4,9 +4,7 @@
     "baseUrl": "src",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "importHelpers": true,
     "incremental": true,
-    "tsBuildInfoFile": ".next/tsbuildinfo",
     "isolatedModules": true,
     "jsx": "preserve",
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -19,12 +17,12 @@
         "watchDirs": ["src"]
       }
     ],
-    "removeComments": true,
+    "pretty": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "sourceMap": true,
     "strict": true,
-    "target": "es5"
+    "target": "es6",
+    "tsBuildInfoFile": ".next/tsbuildinfo"
   },
   "include": ["next-env.d.ts", "src"],
   "exclude": ["src/**/*.test.js"]

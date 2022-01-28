@@ -1,8 +1,8 @@
-import type { OverNextComponentType } from 'next'
+import type { NextComponentType } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 
-export const Home = (): OverNextComponentType => (
+export const Home = (): NextComponentType => (
   <div className='container'>
     <Head>
       <title>The Egg</title>
@@ -19,7 +19,7 @@ export const Home = (): OverNextComponentType => (
       </p>
 
       <div className='py-20'>
-        <h2 className='text-3xl text-center text-gray-700 dark:text-gray-100'>
+        <h2 className='text-center text-3xl text-gray-700 dark:text-gray-100'>
           A short story
         </h2>
         <iframe

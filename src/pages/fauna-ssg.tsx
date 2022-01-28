@@ -4,12 +4,12 @@ import type {
   GetStaticPropsContext,
   GetStaticPropsResult,
   InferGetStaticPropsType,
-  NextLayoutPage,
 } from 'next'
 import { useCallback, useState } from 'react'
 
 import DefaultLayout from 'layouts/default.layout'
 import faunaClient from 'lib/fauna-client'
+import type { NextLayoutPage } from 'typings/layout'
 
 type ShowType = {
   ts: number

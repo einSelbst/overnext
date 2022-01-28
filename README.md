@@ -172,12 +172,16 @@ validate:src: Format, lint, type-check & unit test the app
 validate:out: Build app, run integration tests, check links & validate generated html
 build:analyze: Build app and output bundle analyzer diagrams
 build:size: build app and measure loading performance
+size: Run size-limit
+size:why: Run size-limit and open statoscope report in browser
+audit:fix: Check vulnerabilities in production package and try to fix them
 find:unused: Find unused files
 build:ssr: used on CI for 'compressed size' action
 cz: Make new commit
 release: Prepare a new release
 docs: Generate typedoc docs
 info: Display info about the scripts
+stylelint-check: Check stylelint for rules conflicting prettier
 ```
 
 ## Code Style
@@ -186,7 +190,6 @@ info: Display info about the scripts
   - ~~[`prop-types`](https://www.npmjs.com/package/prop-types) (for run-time type checking)~~ -> discarded, see [reasons](#prop-types)
   - not using `defaultProps` on function components because [deprecation incoming](https://github.com/reactjs/rfcs/pull/107)
 - [Typescript](https://www.typescriptlang.org/) (for compile time type checking)
-  - with [`tslib`](https://www.npmjs.com/package/tslib) for imports optimization
   - [`typesync`](https://github.com/jeffijoe/typesync) for find dependency typings
   - [TSDoc](https://tsdoc.org/) docstrings to generate [`typedoc`](https://github.com/TypeStrong/typedoc) documentation
 - [Prettier](https://prettier.io/) for code formatting
