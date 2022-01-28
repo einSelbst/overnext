@@ -59,7 +59,7 @@
     "lint:html": "html-validate '.next/**/*.html'",
     "?lint:css": "echo Run stylelint on source code to lint CSS",
     "lint:css": "stylelint --fix 'src/**/*.{css,scss,tsx}' --color --custom-formatter=node_modules/stylelint-formatter-pretty",
-    "type-check": "tsc --pretty --noEmit",
+    "type-check": "tsc",
     "type-check:watch": "tsc -w --pretty --skipLibCheck --noEmit",
     "?checklinks": "echo Test integrity of hyperlinks in the build files",
     "checklinks": "hyperlink .next/**/*.html --canonicalroot https://overnext.vercel.app/ -pr --root .next/serverless/pages --skip index.html --skip legal --skip account-settings --skip fonts.gstatic --skip chunks --skip ico --skip png --skip svg --skip manifest --skip pages/fauna --skip pages/first --skip pages/dog --skip pages/page --skip _next --todo hybrid --todo ampshared.css --todo ampdoc.css | tap-spot",
