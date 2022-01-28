@@ -27,6 +27,10 @@ specifiers:
   '@size-limit/webpack': 7.0.5
   '@size-limit/webpack-why': 7.0.5
   '@stylelint/postcss-css-in-js': 0.37.2
+  '@tailwindcss/aspect-ratio': ^0.4.0
+  '@tailwindcss/forms': ^0.4.0
+  '@tailwindcss/line-clamp': ^0.3.1
+  '@tailwindcss/typography': ^0.5.0
   '@testing-library/jest-dom': 5.16.1
   '@testing-library/react': 12.1.2
   '@types/babel__core': 7.1.18
@@ -114,7 +118,7 @@ specifiers:
   stylelint-config-standard-scss: 3.0.0
   stylelint-declaration-strict-value: 1.8.0
   stylelint-formatter-pretty: ^3.1.0
-  tailwindcss: 3.0.16
+  tailwindcss: 3.0.17
   tap-spot: 1.1.1
   ts-node: 10.4.0
   tslib: 2.3.1
@@ -144,7 +148,7 @@ dependencies:
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   sass: 1.49.0
-  tailwindcss: 3.0.16_f98f8cb1d4c2734d9765edb689db6e16
+  tailwindcss: 3.0.17_f98f8cb1d4c2734d9765edb689db6e16
   tslib: 2.3.1
   typed-query-selector: 2.6.1
   typescript: 4.5.5
@@ -166,6 +170,10 @@ devDependencies:
   '@size-limit/webpack': 7.0.5_size-limit@7.0.5
   '@size-limit/webpack-why': 7.0.5_size-limit@7.0.5+webpack@5.67.0
   '@stylelint/postcss-css-in-js': 0.37.2_8143638ceb7d0d47a7ad2c329d589c11
+  '@tailwindcss/aspect-ratio': 0.4.0_tailwindcss@3.0.17
+  '@tailwindcss/forms': 0.4.0_tailwindcss@3.0.17
+  '@tailwindcss/line-clamp': 0.3.1_tailwindcss@3.0.17
+  '@tailwindcss/typography': 0.5.0_tailwindcss@3.0.17
   '@testing-library/jest-dom': 5.16.1
   '@testing-library/react': 12.1.2_react-dom@17.0.2+react@17.0.2
   '@types/babel__core': 7.1.18
@@ -2697,6 +2705,43 @@ packages:
       magic-string: 0.25.7
       string.prototype.matchall: 4.0.6
     dev: false
+
+  /@tailwindcss/aspect-ratio/0.4.0_tailwindcss@3.0.17:
+    resolution: {integrity: sha512-WJu0I4PpqNPuutpaA9zDUq2JXR+lorZ7PbLcKNLmb6GL9/HLfC7w3CRsMhJF4BbYd/lkY6CfXOvkYpuGnZfkpQ==}
+    peerDependencies:
+      tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
+    dependencies:
+      tailwindcss: 3.0.17_f98f8cb1d4c2734d9765edb689db6e16
+    dev: true
+
+  /@tailwindcss/forms/0.4.0_tailwindcss@3.0.17:
+    resolution: {integrity: sha512-DeaQBx6EgEeuZPQACvC+mKneJsD8am1uiJugjgQK1+/Vt+Ai0GpFBC2T2fqnUad71WgOxyrZPE6BG1VaI6YqfQ==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
+    dependencies:
+      mini-svg-data-uri: 1.4.3
+      tailwindcss: 3.0.17_f98f8cb1d4c2734d9765edb689db6e16
+    dev: true
+
+  /@tailwindcss/line-clamp/0.3.1_tailwindcss@3.0.17:
+    resolution: {integrity: sha512-pNr0T8LAc3TUx/gxCfQZRe9NB2dPEo/cedPHzUGIPxqDMhgjwNm6jYxww4W5l0zAsAddxr+XfZcqttGiFDgrGg==}
+    peerDependencies:
+      tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
+    dependencies:
+      tailwindcss: 3.0.17_f98f8cb1d4c2734d9765edb689db6e16
+    dev: true
+
+  /@tailwindcss/typography/0.5.0_tailwindcss@3.0.17:
+    resolution: {integrity: sha512-1p/3C6C+JJziS/ghtG8ACYalbA2SyLJY27Pm33cVTlAoY6VQ7zfm2H64cPxUMBkVIlWXTtWHhZcZJPobMRmQAA==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1 || insiders'
+    dependencies:
+      lodash.castarray: 4.4.0
+      lodash.isplainobject: 4.0.6
+      lodash.merge: 4.6.2
+      lodash.uniq: 4.5.0
+      tailwindcss: 3.0.17_f98f8cb1d4c2734d9765edb689db6e16
+    dev: true
 
   /@testing-library/dom/8.11.1:
     resolution: {integrity: sha512-3KQDyx9r0RKYailW2MiYrSSKEfH0GTkI51UGEvJenvcoDoeRYs0PZpi2SXqtnMClQvCqdtTTpOfFETDTVADpAg==}
@@ -9236,6 +9281,10 @@ packages:
     resolution: {integrity: sha1-DZnzzNem0mHRm9rrkkUAXShYCOc=}
     dev: true
 
+  /lodash.castarray/4.4.0:
+    resolution: {integrity: sha1-wCUTUV4wna3dTCTGDP3c9ZdtkRU=}
+    dev: true
+
   /lodash.clone/4.5.0:
     resolution: {integrity: sha1-GVhwRQ9aExkkeN9Lw9I9LeoZB7Y=}
     dev: true
@@ -9257,6 +9306,10 @@ packages:
 
   /lodash.ismatch/4.4.0:
     resolution: {integrity: sha1-dWy1FQyjum8RCFp4hJZF8Yj4Xzc=}
+    dev: true
+
+  /lodash.isplainobject/4.0.6:
+    resolution: {integrity: sha1-fFJqUtibRcRcxpC4gWO+BJf1UMs=}
     dev: true
 
   /lodash.map/4.6.0:
@@ -9608,6 +9661,11 @@ packages:
   /min-indent/1.0.1:
     resolution: {integrity: sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==}
     engines: {node: '>=4'}
+    dev: true
+
+  /mini-svg-data-uri/1.4.3:
+    resolution: {integrity: sha512-gSfqpMRC8IxghvMcxzzmMnWpXAChSA+vy4cia33RgerMS8Fex95akUyQZPbxJJmeBGiGmK7n/1OpUX8ksRjIdA==}
+    hasBin: true
     dev: true
 
   /minimalistic-assert/1.0.1:
@@ -12611,8 +12669,8 @@ packages:
       strip-ansi: 6.0.1
     dev: true
 
-  /tailwindcss/3.0.16_f98f8cb1d4c2734d9765edb689db6e16:
-    resolution: {integrity: sha512-1L8E5Wr+o1c4kxxObNz2owJe94a7BLEMV+2Lz6wzprJdcs3ENSRR9t4OZf2OqtRNS/q/zFPuOKoLtQoy3Lrhhw==}
+  /tailwindcss/3.0.17_f98f8cb1d4c2734d9765edb689db6e16:
+    resolution: {integrity: sha512-OiHUsmOKQQEg/ocXaLIjk/kOz8EK2jF6iPuc1bQ4NsmhYl7sk70UDsGV02AJvBAAiJhinPCkDR8egT9qY+ulCw==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:
