@@ -100,10 +100,23 @@ const nextConfiguration = {
 
   webpack: (
     /** @type {{ plugins: any[]; }} */ config,
-    /** @type {{ dev: any; isServer: any; }} */ _options
-  ) =>
+    /** @type {{ dev: any; isServer: any; }} */ { dev, isServer }
+  ) => {
     /* { buildId, dev, isServer, defaultLoaders, webpack } = options */
-    config,
+
+    if (!dev && !isServer) {
+      /*
+       * Replace React with Preact only in client production build
+       * @see {@link https://github.com/timlrx/tailwind-nextjs-starter-blog/blob/master/next.config.js}
+       */
+      Object.assign(config.resolve.alias, {
+        react: 'preact/compat',
+        'react-dom': 'preact/compat',
+        'react/jsx-runtime.js': 'preact/compat/jsx-runtime',
+      })
+    }
+    return config
+  },
 }
 
 /**
