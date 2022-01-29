@@ -100,7 +100,7 @@ specifiers:
   pnpm: 6.28.0
   postcss: 8.4.5
   postcss-syntax: 0.36.2
-  preact: ^10.6.5
+  preact: 10.6.5
   prettier: 2.5.1
   prettier-plugin-sh: 0.8.1
   prettier-plugin-tailwindcss: 0.1.4
