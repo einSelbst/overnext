@@ -97,7 +97,7 @@ specifiers:
   next-unused: 0.0.6
   npm-scripts-info: 0.3.9
   nyc: 15.1.0
-  pnpm: 6.28.0
+  pnpm: 6.29.0
   postcss: 8.4.5
   postcss-syntax: 0.36.2
   preact: 10.6.5
@@ -157,7 +157,7 @@ dependencies:
 optionalDependencies:
   '@axe-core/react': 4.3.2
   fsevents: 2.3.2
-  pnpm: 6.28.0
+  pnpm: 6.29.0
 
 devDependencies:
   '@commitlint/cli': 16.1.0_@types+node@16.11.21
@@ -10458,8 +10458,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /pnpm/6.28.0:
-    resolution: {integrity: sha512-6k0bXft4zengPSmQFx2rTkRrvp2CpXRytNAY/vjvi/7YzVm5GCDY4Uiz8A80lEEf6D1UZ32P9bG9yEiS4crmvQ==}
+  /pnpm/6.29.0:
+    resolution: {integrity: sha512-JaWW7Lgqz1eqs0/THVVOJfDD93e4nQUYNjLegcPkVhIxbMf0qlSn+d4aEWLValryKb8ZFcYRR84Q0N6YsgfK0g==}
     engines: {node: '>=12.17'}
     hasBin: true
     requiresBuild: true
