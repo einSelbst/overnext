@@ -186,7 +186,7 @@
     "eslint-plugin-jest": "26.0.0",
     "eslint-plugin-jest-dom": "4.0.1",
     "eslint-plugin-jest-formatting": "3.1.0",
-    "eslint-plugin-json-schema-validator": "2.1.44",
+    "eslint-plugin-json-schema-validator": "2.1.45",
     "eslint-plugin-jsx-a11y": "6.5.1",
     "eslint-plugin-promise": "6.0.0",
     "eslint-plugin-react": "7.28.0",
@@ -231,7 +231,7 @@
   "optionalDependencies": {
     "@axe-core/react": "4.3.2",
     "fsevents": "2.3.2",
-    "pnpm": "6.29.0"
+    "pnpm": "6.29.1"
   },
   "engines": {
     "pnpm": ">=6"
