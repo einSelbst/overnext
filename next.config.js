@@ -1,4 +1,5 @@
 // @ts-check
+/* eslint-disable max-lines */
 /**
  * Next.js Configuration
  *
@@ -107,28 +108,48 @@ const nextConfiguration = {
      */
     ignoreDuringBuilds: true,
   },
-
-  // @see {@link https://github.com/vercel/next.js/blob/canary/packages/next/next-server/server/config-shared.ts#L68}
-  /* experimental: { */
-  // plugins?: boolean;
-  /* profiling: true, */
-  /* sprFlushToDisk: true, */
-  /* workerThreads: false */
-  /* pageEnv: false */
-  /* optimizeImages: false, */
-  /* enableStaticImages: false, */
-  /* optimizeCss: true, */
-  /* scrollRestoration: false, */
-  /* stats: true, */
-  /* externalDir: false, */
-  /* reactRoot: Number(process.env.NEXT_PRIVATE_REACT_ROOT) > 0, */
-  /* enableBlurryPlaceholder: false, */
-  /* disableOptimizedLoading: true, */
-  /* gzipSize: true, */
-  /* }, */
+  // @see {@link https://github.com/vercel/next.js/blob/canary/packages/next/server/config-shared.ts#L130}
+  experimental: {
+    reactRemoveProperties: true,
+    /* disablePostcssPresetEnv: boolean */
+    removeConsole: true,
+    /* styledComponents?: boolean */
+    /* swcFileReading?: boolean */
+    /* cpus?: number */
+    /* sharedPool?: boolean */
+    /* plugins?: boolean */
+    /* profiling?: boolean */
+    /* isrFlushToDisk?: boolean */
+    /* reactMode?: 'legacy' | 'concurrent' | 'blocking' */
+    /* workerThreads?: boolean */
+    /* pageEnv?: boolean */
+    /* optimizeImages?: boolean */
+    /* optimizeCss?: boolean */
+    /* scrollRestoration?: boolean */
+    /* externalDir?: boolean */
+    /* conformance?: boolean */
+    /*
+     * amp?: {
+     *   optimizer?: any
+     *   validator?: string
+     *   skipValidation?: boolean
+     * }
+     */
+    /* reactRoot?: boolean */
+    /* disableOptimizedLoading?: boolean */
+    /* gzipSize?: boolean */
+    /* craCompat?: boolean */
+    /* esmExternals?: boolean | 'loose' */
+    /* isrMemoryCacheSize?: number */
+    /* concurrentFeatures?: boolean */
+    /* serverComponents?: boolean */
+    /* fullySpecified?: boolean */
+    /* urlImports?: NonNullable<webpack5.Configuration['experiments']>['buildHttp'] */
+    /* outputFileTracingRoot?: string */
+    /* outputStandalone?: boolean */
+  },
 
   future: {},
-
   // @see {@link https://nextjs.org/docs/api-reference/next.config.js/configuring-the-build-id}
   generateBuildId: () => `build-{Date.now()}`,
 
@@ -155,6 +176,7 @@ const nextConfiguration = {
    * but will keep it disabled for now to get the linter feedback.
    */
   optimizeFonts: false,
+
   poweredByHeader: false,
   /*
    * publicRuntimeConfig: {
@@ -162,6 +184,8 @@ const nextConfiguration = {
    * },
    */
   reactStrictMode: true,
+
+  swcMinify: true,
   /* target: 'experimental-serverless-trace', */
 
   webpack: (
@@ -301,3 +325,4 @@ module.exports = withSentryConfig(
   nextPluginConfiguration,
   SentryWebpackPluginOptions
 )
+/* eslint-enable max-lines */
