@@ -108,6 +108,7 @@ const nextConfiguration = {
      */
     ignoreDuringBuilds: true,
   },
+
   // @see {@link https://github.com/vercel/next.js/blob/canary/packages/next/server/config-shared.ts#L130}
   experimental: {
     reactRemoveProperties: true,
@@ -150,19 +151,18 @@ const nextConfiguration = {
   },
 
   future: {},
+
   // @see {@link https://nextjs.org/docs/api-reference/next.config.js/configuring-the-build-id}
   generateBuildId: () => `build-{Date.now()}`,
 
   // eslint-disable-next-line require-await
-  async headers() {
-    return [
-      {
-        headers: securityHeaders,
-        // Apply these headers to all routes in your application.
-        source: '/(.*)',
-      },
-    ]
-  },
+  headers: async () => [
+    {
+      headers: securityHeaders,
+      // Apply these headers to all routes in your application.
+      source: '/(.*)',
+    },
+  ],
 
   i18n: {
     defaultLocale: 'en',
