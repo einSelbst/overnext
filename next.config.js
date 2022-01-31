@@ -29,8 +29,63 @@ const detectPlatform = () => {
 /* const buildId = `${Date.now()}` */
 /* const generateBuildId = async () => buildId */
 
+/*
+ * Security Header stuff
+ * @see {@link https://scotthel.me/cspcheatsheet}
+ * Thanks @ https://github.com/timlrx/tailwind-nextjs-starter-blog/blob/master/next.config.js
+ *
+ * You might need to insert additional domains in script-src if you are using external services
+ * @see {@link https://report-uri.com/home/generate}
+ */
+const ContentSecurityPolicy = `
+  default-src 'self';
+  script-src 'self' 'unsafe-eval' 'unsafe-inline';
+  style-src 'self' 'unsafe-inline' *.googleapis.com;
+  img-src * blob: data:;
+  font-src 'self' fonts.gstatic.com;
+  connect-src *;
+  media-src 'none';
+  upgrade-insecure-requests",
+`
+
+const securityHeaders = [
+  {
+    key: 'X-DNS-Prefetch-Control',
+    value: 'on',
+  },
+  {
+    key: 'Strict-Transport-Security',
+    value: 'max-age=63072000; includeSubDomains; preload',
+  },
+  {
+    key: 'X-XSS-Protection',
+    value: '1; mode=block',
+  },
+  {
+    key: 'X-Content-Type-Options',
+    value: 'nosniff',
+  },
+  {
+    key: 'X-Frame-Options',
+    value: 'DENY',
+  },
+  {
+    key: 'Referrer-Policy',
+    value: 'strict-origin-when-cross-origin',
+  },
+  {
+    key: 'Content-Security-Policy',
+    value: ContentSecurityPolicy.replace(/\n/gu, ''),
+  },
+  {
+    key: 'Permissions-Policy',
+    value:
+      'camera=(), microphone=(), geolocation=(), payment=(), interest-cohort=()',
+  },
+]
+
 /**
- * @type {import('next/dist/next-server/server/config').NextConfig}
+ * @type {import('next/dist/server/config').NextConfig}
  */
 const nextConfiguration = {
   amp: {
@@ -76,6 +131,17 @@ const nextConfiguration = {
 
   // @see {@link https://nextjs.org/docs/api-reference/next.config.js/configuring-the-build-id}
   generateBuildId: () => `build-{Date.now()}`,
+
+  // eslint-disable-next-line require-await
+  async headers() {
+    return [
+      {
+        headers: securityHeaders,
+        // Apply these headers to all routes in your application.
+        source: '/(.*)',
+      },
+    ]
+  },
 
   i18n: {
     defaultLocale: 'en',
