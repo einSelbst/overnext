@@ -164,15 +164,16 @@ const nextConfiguration = {
       source: '/:path*',
     },
     {
-      // CORS headers
+      // CORS headers, @see {@link https://ieftimov.com/post/deep-dive-cors-history-how-it-works-best-practices/}
       headers: [
-        { key: "Access-Control-Allow-Credentials", value: "true" },
+        // the next line is an anti-pattern with 'Access-Control-Allow-Origing: *'
+        /* { key: "Access-Control-Allow-Credentials", value: "true" }, */
         { key: "Access-Control-Allow-Origin", value: "*" },
         { key: "Access-Control-Allow-Methods", value: "GET,OPTIONS,PATCH,DELETE,POST,PUT" },
         { key: "Access-Control-Allow-Headers", value: "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version" },
       ],
-      // matching all API routes
-      source: "/api/:path*",
+      // matching all API routes, btw '/:path*' is not matching unlocalized api routes like '/api/hello'
+      source: "/api/:(.*)",
     },
   ],
 
