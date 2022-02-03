@@ -40,10 +40,11 @@ const detectPlatform = () => {
  */
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self';
-  style-src 'self' *.googleapis.com;
+  script-src 'self' 'unsafe-inline';
+  style-src 'self' *.googleapis.com unsafe-inline;
   img-src * blob: data:;
-  font-src 'self' fonts.gstatic.com;
+  font-src 'self' data: fonts.gstatic.com;
+  frame-src 'self' *.wwwyoutube-nocookie.com;
   connect-src *;
   media-src 'none';
   upgrade-insecure-requests
@@ -173,7 +174,7 @@ const nextConfiguration = {
         { key: "Access-Control-Allow-Headers", value: "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version" },
       ],
       // matching all API routes, btw '/:path*' is not matching unlocalized api routes like '/api/hello'
-      source: "/api/:(.*)",
+      source: "/api/(.*)",
     },
   ],
 
@@ -199,7 +200,6 @@ const nextConfiguration = {
   reactStrictMode: true,
 
   swcMinify: true,
-  /* target: 'experimental-serverless-trace', */
 
   webpack: (
     /** @type {{ plugins: any[]; }} */ config,
