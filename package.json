@@ -30,7 +30,7 @@
     "serve": "pnpm build && (open http://localhost:3002) && next start -p 3002",
     "serve:3003": "pnpm build && next start -p 3003",
     "?servex": "echo Build & run app on public URL",
-    "servex": "pnpm serve & npx localtunnel --port 3000",
+    "servex": "start-test 'pnpm serve' 3002 'npx localtunnel --port 3002'",
     " ------------------------- Testing ------------------------- ": "",
     "?test": "echo Run unit and integration tests once",
     "test": "jest && pnpm e2e",
