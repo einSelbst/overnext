@@ -41,10 +41,10 @@ const detectPlatform = () => {
 const ContentSecurityPolicy = `
   default-src 'self';
   script-src 'self' 'unsafe-inline';
-  style-src 'self' *.googleapis.com unsafe-inline;
+  style-src 'self' *.googleapis.com 'unsafe-inline';
   img-src * blob: data:;
   font-src 'self' data: fonts.gstatic.com;
-  frame-src 'self' *.wwwyoutube-nocookie.com;
+  frame-src 'self' *.youtube-nocookie.com;
   connect-src *;
   media-src 'none';
   upgrade-insecure-requests
@@ -173,8 +173,8 @@ const nextConfiguration = {
         { key: "Access-Control-Allow-Methods", value: "GET,OPTIONS,PATCH,DELETE,POST,PUT" },
         { key: "Access-Control-Allow-Headers", value: "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version" },
       ],
-      // matching all API routes, btw '/:path*' is not matching unlocalized api routes like '/api/hello'
-      source: "/api/(.*)",
+      // matching all localized API routes, but not routes like '/api/hello'
+      source: "/api/:path*",
     },
   ],
 
