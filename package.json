@@ -198,7 +198,7 @@
     "eslint-plugin-tsdoc": "0.2.14",
     "eslint-plugin-unicorn": "40.1.0",
     "git-format-staged": "latest",
-    "html-validate": "6.3.0",
+    "html-validate": "6.3.1",
     "husky": "7.0.4",
     "hyperlink": "5.0.4",
     "jest": "27.4.7",
@@ -286,6 +286,6 @@
   },
   "volta": {
     "node": "16.13.2",
-    "npm": "8.4.0"
+    "npm": "8.4.1"
   }
 }
