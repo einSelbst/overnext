@@ -158,9 +158,10 @@ const nextConfiguration = {
   // eslint-disable-next-line require-await
   headers: async () => [
     {
+      // Apply these headers to all routes in the application
       headers: securityHeaders,
-      // Apply these headers to all routes in your application.
-      source: '/(.*)',
+      // Because of i18n routing I have to use "/:path*" instead of "/(.*)"
+      source: '/:path*',
     },
   ],
 
