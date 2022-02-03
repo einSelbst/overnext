@@ -112,6 +112,7 @@ specifiers:
   source-map-support: 0.5.21
   standard-version: 9.3.2
   start-server-and-test: 1.14.0
+  styled-jsx: 5.0.0
   stylelint: 14.2.0
   stylelint-config-idiomatic-order: 8.1.0
   stylelint-config-prettier: 9.0.3
@@ -149,6 +150,7 @@ dependencies:
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   sass: 1.49.7
+  styled-jsx: 5.0.0_@babel+core@7.17.0+react@17.0.2
   tailwindcss: 3.0.18_395544cfbe1472baf4d44cf7709a657a
   typed-query-selector: 2.6.1
   typescript: 4.5.5
