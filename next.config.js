@@ -40,13 +40,13 @@ const detectPlatform = () => {
  */
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline';
-  style-src 'self' 'unsafe-inline' *.googleapis.com;
+  script-src 'self';
+  style-src 'self' *.googleapis.com;
   img-src * blob: data:;
   font-src 'self' fonts.gstatic.com;
   connect-src *;
   media-src 'none';
-  upgrade-insecure-requests",
+  upgrade-insecure-requests,
 `
 
 const securityHeaders = [
