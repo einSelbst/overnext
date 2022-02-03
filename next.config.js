@@ -46,7 +46,7 @@ const ContentSecurityPolicy = `
   font-src 'self' fonts.gstatic.com;
   connect-src *;
   media-src 'none';
-  upgrade-insecure-requests,
+  upgrade-insecure-requests
 `
 
 const securityHeaders = [
@@ -162,6 +162,17 @@ const nextConfiguration = {
       headers: securityHeaders,
       // Because of i18n routing I have to use "/:path*" instead of "/(.*)"
       source: '/:path*',
+    },
+    {
+      // CORS headers
+      headers: [
+        { key: "Access-Control-Allow-Credentials", value: "true" },
+        { key: "Access-Control-Allow-Origin", value: "*" },
+        { key: "Access-Control-Allow-Methods", value: "GET,OPTIONS,PATCH,DELETE,POST,PUT" },
+        { key: "Access-Control-Allow-Headers", value: "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version" },
+      ],
+      // matching all API routes
+      source: "/api/:path*",
     },
   ],
 
