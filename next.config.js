@@ -165,18 +165,27 @@ const nextConfiguration = {
       source: '/:path*',
     },
     {
-      // api routes are not localized
-      locale: false,
+      
       // CORS headers, @see {@link https://ieftimov.com/post/deep-dive-cors-history-how-it-works-best-practices/}
-      headers: [
+headers: [
         // the next line is an anti-pattern with 'Access-Control-Allow-Origing: *'
         /* { key: "Access-Control-Allow-Credentials", value: "true" }, */
-        { key: "Access-Control-Allow-Origin", value: "*" },
-        { key: "Access-Control-Allow-Methods", value: "GET,OPTIONS,PATCH,DELETE,POST,PUT" },
-        { key: "Access-Control-Allow-Headers", value: "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version" },
+        { key: 'Access-Control-Allow-Origin', value: '*' },
+        {
+          key: 'Access-Control-Allow-Methods',
+          value: 'GET,OPTIONS,PATCH,DELETE,POST,PUT',
+        },
+        {
+          key: 'Access-Control-Allow-Headers',
+          value:
+            'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version',
+        },
       ],
+      
+      // api routes are not localized
+locale: false,
       // matching all localized API routes, but not routes like '/api/hello'
-      source: "/api/:path*",
+      source: '/api/:path*',
     },
   ],
 
