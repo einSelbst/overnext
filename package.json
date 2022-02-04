@@ -210,7 +210,7 @@
     "postcss-syntax": "0.36.2",
     "prettier": "2.5.1",
     "prettier-plugin-sh": "0.8.1",
-    "prettier-plugin-tailwindcss": "0.1.4",
+    "prettier-plugin-tailwindcss": "0.1.5",
     "prettier-plugin-toml": "latest",
     "size-limit": "7.0.8",
     "source-map-support": "0.5.21",
