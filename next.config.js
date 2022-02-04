@@ -165,6 +165,8 @@ const nextConfiguration = {
       source: '/:path*',
     },
     {
+      // api routes are not localized
+      locale: false,
       // CORS headers, @see {@link https://ieftimov.com/post/deep-dive-cors-history-how-it-works-best-practices/}
       headers: [
         // the next line is an anti-pattern with 'Access-Control-Allow-Origing: *'
