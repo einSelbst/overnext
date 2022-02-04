@@ -103,7 +103,7 @@ specifiers:
   preact: 10.6.5
   prettier: 2.5.1
   prettier-plugin-sh: 0.8.1
-  prettier-plugin-tailwindcss: 0.1.4
+  prettier-plugin-tailwindcss: 0.1.5
   prettier-plugin-toml: latest
   react: 17.0.2
   react-dom: 17.0.2
@@ -233,7 +233,7 @@ devDependencies:
   postcss-syntax: 0.36.2_postcss@8.4.6
   prettier: 2.5.1
   prettier-plugin-sh: 0.8.1_prettier@2.5.1
-  prettier-plugin-tailwindcss: 0.1.4_prettier@2.5.1
+  prettier-plugin-tailwindcss: 0.1.5_prettier@2.5.1
   prettier-plugin-toml: 0.3.1
   size-limit: 7.0.8
   source-map-support: 0.5.21
@@ -3791,7 +3791,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.19.1
-      caniuse-lite: 1.0.30001306
+      caniuse-lite: 1.0.30001307
       fraction.js: 4.1.2
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -4290,7 +4290,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001306
+      caniuse-lite: 1.0.30001307
       electron-to-chromium: 1.4.55
       escalade: 3.1.1
       node-releases: 2.0.1
@@ -4433,13 +4433,13 @@ packages:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
     dependencies:
       browserslist: 4.19.1
-      caniuse-lite: 1.0.30001306
+      caniuse-lite: 1.0.30001307
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
     dev: true
 
-  /caniuse-lite/1.0.30001306:
-    resolution: {integrity: sha512-Wd1OuggRzg1rbnM5hv1wXs2VkxJH/AA+LuudlIqvZiCvivF+wJJe2mgBZC8gPMgI7D76PP5CTx8Luvaqc1V6OQ==}
+  /caniuse-lite/1.0.30001307:
+    resolution: {integrity: sha512-+MXEMczJ4FuxJAUp0jvAl6Df0NI/OfW1RWEE61eSmzS7hw6lz4IKutbhbXendwq8BljfFuHtu26VWsg4afQ7Ng==}
 
   /capture-stack-trace/1.0.1:
     resolution: {integrity: sha512-mYQLZnx5Qt1JgB1WEiMCf2647plpGeQ2NMR/5L0HNZzGQo4fuSPnK+wjfPnKZV0aiJDgzmWqqkV/g7JD+DW0qw==}
@@ -6202,7 +6202,7 @@ packages:
       '@mdn/browser-compat-data': 4.1.6
       ast-metadata-inferer: 0.7.0
       browserslist: 4.19.1
-      caniuse-lite: 1.0.30001306
+      caniuse-lite: 1.0.30001307
       core-js: 3.21.0
       eslint: 8.8.0
       find-up: 5.0.0
@@ -9818,7 +9818,7 @@ packages:
         optional: true
     dependencies:
       '@next/env': 12.0.10
-      caniuse-lite: 1.0.30001306
+      caniuse-lite: 1.0.30001307
       postcss: 8.4.5
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
@@ -10985,8 +10985,9 @@ packages:
       prettier: 2.5.1
     dev: true
 
-  /prettier-plugin-tailwindcss/0.1.4_prettier@2.5.1:
-    resolution: {integrity: sha512-kt3YFWqxcG9+bilBI0hPF7RjQZNtgBRvjJZGw6B2MNAjPqlfcYIiZnNaIEnq4XimKLTzZYxz6jQnUXmSQ/5njg==}
+  /prettier-plugin-tailwindcss/0.1.5_prettier@2.5.1:
+    resolution: {integrity: sha512-e+jTxwiHL4I3Ot8OjV1LAiiaAx0Zgy71xTL7xNmJtNmhpja7GKzFSAoulqBDS1D57B7lbZDCvDEKIWIQSBUmBQ==}
+    engines: {node: '>=12.17.0'}
     peerDependencies:
       prettier: '>=2.2.0'
     dependencies:
