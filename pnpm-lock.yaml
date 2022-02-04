@@ -79,7 +79,7 @@ specifiers:
   eslint-plugin-toml: 0.3.0
   eslint-plugin-tsdoc: 0.2.14
   eslint-plugin-unicorn: 40.1.0
-  faunadb: 4.5.0
+  faunadb: 4.5.2
   fsevents: 2.3.2
   git-format-staged: latest
   html-validate: 6.3.1
@@ -138,7 +138,7 @@ dependencies:
   '@types/react-dom': 17.0.11
   autoprefixer: 10.4.2_postcss@8.4.6
   core-js: 3.21.0
-  faunadb: 4.5.0
+  faunadb: 4.5.2
   is-ci: 3.0.1
   next: 12.0.10_af0f67aef152a75de0ec57fc3ea7e052
   next-compose-plugins: 2.2.1
@@ -3357,13 +3357,6 @@ packages:
   /abab/2.0.5:
     resolution: {integrity: sha512-9IK9EadsbHo6jLWIpxpR6pL0sazTXV6+SQv25ZB+F7Bj9mJNaOc4nCRabwd5M/JwmUa8idz6Eci6eKfJryPs6Q==}
     dev: true
-
-  /abort-controller/3.0.0:
-    resolution: {integrity: sha512-h8lQ8tacZYnR3vNQTgibj+tODHI5/+l06Au2Pcriv/Gmet0eaj4TwWH41sO9wnHDiQsEj19q0drzdWdeAHtweg==}
-    engines: {node: '>=6.5'}
-    dependencies:
-      event-target-shim: 5.0.1
-    dev: false
 
   /acorn-globals/6.0.0:
     resolution: {integrity: sha512-ZQl7LOWaF5ePqqcX4hLuv/bLXYQNfNWw2c0/yX/TsPRKamzHcTGQnlCjHT3TsmkOUVEPS3crCxiPfdzE/Trlhg==}
@@ -6630,11 +6623,6 @@ packages:
       through: 2.3.8
     dev: true
 
-  /event-target-shim/5.0.1:
-    resolution: {integrity: sha512-i/2XbnSz/uxRCU6+NdVJgKWDTM427+MqYbkQzD321DuCQJUqOuJKIA0IM2+W2xtYHdKOmZ4dR6fExsd4SXL+WQ==}
-    engines: {node: '>=6'}
-    dev: false
-
   /eventemitter2/6.4.5:
     resolution: {integrity: sha512-bXE7Dyc1i6oQElDG0jMRZJrRAn9QR2xyyFGmBdZleNmyQX0FqGYmhZIrIrpPfm/w//LTo4tVQGOGQcGCb5q9uw==}
     dev: true
@@ -6819,11 +6807,10 @@ packages:
     dependencies:
       reusify: 1.0.4
 
-  /faunadb/4.5.0:
-    resolution: {integrity: sha512-QNSw4XD53aHdikld1rt3kiiVbgx8DiXeeL5Z1/1TfhoiwgAEfYZ9VyGfXjwmthrlLy3YilU+bRPFyysK8q+kMg==}
+  /faunadb/4.5.2:
+    resolution: {integrity: sha512-XQ2yDoPZc5/IqC4eS4tP5tjewFbAK8UdQYLDGlUiJy5E9F3rpvYCMdjlkRWcaxOMD2yPYr8NSoql10zy1CNoCA==}
     requiresBuild: true
     dependencies:
-      abort-controller: 3.0.0
       base64-js: 1.5.1
       boxen: 5.1.2
       btoa-lite: 1.0.0
@@ -6831,6 +6818,7 @@ packages:
       cross-fetch: 3.1.5
       dotenv: 8.6.0
       fn-annotate: 1.2.0
+      node-abort-controller: 3.0.1
       object-assign: 4.1.1
       util-deprecate: 1.0.2
     transitivePeerDependencies:
@@ -9854,6 +9842,10 @@ packages:
       lower-case: 2.0.2
       tslib: 2.3.1
     dev: true
+
+  /node-abort-controller/3.0.1:
+    resolution: {integrity: sha512-/ujIVxthRs+7q6hsdjHMaj8hRG9NuWmwrz+JdRwZ14jdFoKSkm+vDsCbF9PLpnSqjaWQJuTmVtcWHNLr+vrOFw==}
+    dev: false
 
   /node-fetch/2.6.7:
     resolution: {integrity: sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==}
