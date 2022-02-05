@@ -201,7 +201,7 @@
     "html-validate": "6.3.1",
     "husky": "7.0.4",
     "hyperlink": "5.0.4",
-    "jest": "27.4.7",
+    "jest": "27.5.0",
     "jest-watch-typeahead": "1.0.0",
     "next-unused": "0.0.6",
     "npm-scripts-info": "0.3.9",
