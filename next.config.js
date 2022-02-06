@@ -40,7 +40,7 @@ const detectPlatform = () => {
  */
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-inline';
+  script-src 'self' 'unsafe-eval' 'unsafe-inline';
   style-src 'self' *.googleapis.com 'unsafe-inline';
   img-src * blob: data:;
   font-src 'self' data: fonts.gstatic.com;
@@ -48,6 +48,29 @@ const ContentSecurityPolicy = `
   connect-src *;
   media-src 'none';
   upgrade-insecure-requests
+`
+
+const PermissionsPolicy = `
+  accelerometer=(),
+  autoplay=(self "https://www.youtube-nocookie.com"),
+  camera=(),
+  display-capture=(),
+  document-domain=(),
+  encrypted-media=(),
+  fullscreen=(self "https://www.youtube-nocookie.com"),
+  geolocation=(),
+  gyroscope=(),
+  interest-cohort=(),
+  magnetometer=(),
+  microphone=(),
+  midi=(),
+  payment=(),
+  picture-in-picture=(),
+  publickey-credentials-get=(),
+  sync-xhr=(),
+  usb=(),
+  screen-wake-lock=(),
+  xr-spatial-tracking=()
 `
 
 const securityHeaders = [
@@ -81,8 +104,7 @@ const securityHeaders = [
   },
   {
     key: 'Permissions-Policy',
-    value:
-      'camera=(), microphone=(), geolocation=(), payment=(), interest-cohort=()',
+    value: PermissionsPolicy.replace(/\n/gu, ''),
   },
 ]
 
@@ -165,9 +187,8 @@ const nextConfiguration = {
       source: '/:path*',
     },
     {
-      
       // CORS headers, @see {@link https://ieftimov.com/post/deep-dive-cors-history-how-it-works-best-practices/}
-headers: [
+      headers: [
         // the next line is an anti-pattern with 'Access-Control-Allow-Origing: *'
         /* { key: "Access-Control-Allow-Credentials", value: "true" }, */
         { key: 'Access-Control-Allow-Origin', value: '*' },
@@ -181,9 +202,9 @@ headers: [
             'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version',
         },
       ],
-      
+
       // api routes are not localized
-locale: false,
+      locale: false,
       // matching all localized API routes, but not routes like '/api/hello'
       source: '/api/:path*',
     },
