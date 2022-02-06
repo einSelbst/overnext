@@ -270,6 +270,7 @@ stylelint-check: Check stylelint for rules conflicting prettier
 - [Internationalized Routing](https://nextjs.org/docs/advanced-features/i18n-routing)
 - [AMP Support](https://nextjs.org/docs/advanced-features/amp-support/introduction), but maybe [not for long](https://www.lafoo.com/the-end-of-amp/)
 - [Measuring performance](https://nextjs.org/docs/advanced-features/measuring-performance)
+- [Security Headers](https://nextjs.org/docs/advanced-features/security-headers), gets an 'A' on [securityheaders.com](https://securityheaders.com/?q=https%3A%2F%2Fovernext.vercel.app&followRedirects=on)
 
 ### Plugins & Helper
 
