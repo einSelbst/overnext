@@ -175,8 +175,10 @@ const nextConfiguration = {
 
   future: {},
 
-  // @see {@link https://nextjs.org/docs/api-reference/next.config.js/configuring-the-build-id}
-  // @see {@link https://levelup.gitconnected.com/how-to-deploy-next-js-on-multiple-servers-3b493d4ce0e9}
+  /*
+   * @see {@link https://nextjs.org/docs/api-reference/next.config.js/configuring-the-build-id}
+   * @see {@link https://levelup.gitconnected.com/how-to-deploy-next-js-on-multiple-servers-3b493d4ce0e9}
+   */
   /* generateBuildId: () => `build-{Date.now()}`, */
 
   // eslint-disable-next-line require-await
