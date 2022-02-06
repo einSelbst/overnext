@@ -42,7 +42,7 @@ rules:
     - disableFix: true
   # selector-attribute-quotes: 'always'
   selector-no-vendor-prefix: true
-  # string-quotes: 'single'
+  string-quotes: 'single'
   # unit-allowed-list: ['em', 'rem', 's']
   value-no-vendor-prefix: true
 

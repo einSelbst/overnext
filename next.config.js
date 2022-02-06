@@ -1,4 +1,5 @@
 // @ts-check
+/* eslint-disable max-lines */
 /**
  * Next.js Configuration
  *
@@ -29,8 +30,86 @@ const detectPlatform = () => {
 /* const buildId = `${Date.now()}` */
 /* const generateBuildId = async () => buildId */
 
+/*
+ * Security Header stuff
+ * @see {@link https://scotthel.me/cspcheatsheet}
+ * Thanks @ https://github.com/timlrx/tailwind-nextjs-starter-blog/blob/master/next.config.js
+ *
+ * You might need to insert additional domains in script-src if you are using external services
+ * @see {@link https://report-uri.com/home/generate}
+ */
+const ContentSecurityPolicy = `
+  default-src 'self';
+  script-src 'self' 'unsafe-eval' 'unsafe-inline';
+  style-src 'self' *.googleapis.com 'unsafe-inline';
+  img-src * blob: data:;
+  font-src 'self' data: fonts.gstatic.com;
+  frame-src 'self' *.youtube-nocookie.com;
+  connect-src *;
+  media-src 'none';
+  upgrade-insecure-requests
+`
+
+const PermissionsPolicy = `
+  accelerometer=(),
+  autoplay=(self "https://www.youtube-nocookie.com"),
+  camera=(),
+  display-capture=(),
+  document-domain=(),
+  encrypted-media=(),
+  fullscreen=(self "https://www.youtube-nocookie.com"),
+  geolocation=(),
+  gyroscope=(),
+  interest-cohort=(),
+  magnetometer=(),
+  microphone=(),
+  midi=(),
+  payment=(),
+  picture-in-picture=(),
+  publickey-credentials-get=(),
+  sync-xhr=(),
+  usb=(),
+  screen-wake-lock=(),
+  xr-spatial-tracking=()
+`
+
+const securityHeaders = [
+  {
+    key: 'X-DNS-Prefetch-Control',
+    value: 'on',
+  },
+  {
+    key: 'Strict-Transport-Security',
+    value: 'max-age=63072000; includeSubDomains; preload',
+  },
+  {
+    key: 'X-XSS-Protection',
+    value: '1; mode=block',
+  },
+  {
+    key: 'X-Content-Type-Options',
+    value: 'nosniff',
+  },
+  {
+    key: 'X-Frame-Options',
+    value: 'DENY',
+  },
+  {
+    key: 'Referrer-Policy',
+    value: 'strict-origin-when-cross-origin',
+  },
+  {
+    key: 'Content-Security-Policy',
+    value: ContentSecurityPolicy.replace(/\n/gu, ''),
+  },
+  {
+    key: 'Permissions-Policy',
+    value: PermissionsPolicy.replace(/\n/gu, ''),
+  },
+]
+
 /**
- * @type {import('next/dist/next-server/server/config').NextConfig}
+ * @type {import('next/dist/server/config').NextConfig}
  */
 const nextConfiguration = {
   amp: {
@@ -53,29 +132,86 @@ const nextConfiguration = {
     ignoreDuringBuilds: true,
   },
 
-  // @see {@link https://github.com/vercel/next.js/blob/canary/packages/next/next-server/server/config-shared.ts#L68}
-  /* experimental: { */
-  // plugins?: boolean;
-  /* profiling: true, */
-  /* sprFlushToDisk: true, */
-  /* workerThreads: false */
-  /* pageEnv: false */
-  /* optimizeImages: false, */
-  /* enableStaticImages: false, */
-  /* optimizeCss: true, */
-  /* scrollRestoration: false, */
-  /* stats: true, */
-  /* externalDir: false, */
-  /* reactRoot: Number(process.env.NEXT_PRIVATE_REACT_ROOT) > 0, */
-  /* enableBlurryPlaceholder: false, */
-  /* disableOptimizedLoading: true, */
-  /* gzipSize: true, */
-  /* }, */
+  // @see {@link https://github.com/vercel/next.js/blob/canary/packages/next/server/config-shared.ts#L130}
+  experimental: {
+    reactRemoveProperties: true,
+    /* disablePostcssPresetEnv: boolean */
+    removeConsole: true,
+    /* styledComponents?: boolean */
+    /* swcFileReading?: boolean */
+    /* cpus?: number */
+    /* sharedPool?: boolean */
+    /* plugins?: boolean */
+    /* profiling?: boolean */
+    /* isrFlushToDisk?: boolean */
+    /* reactMode?: 'legacy' | 'concurrent' | 'blocking' */
+    /* workerThreads?: boolean */
+    /* pageEnv?: boolean */
+    /* optimizeImages?: boolean */
+    /* optimizeCss?: boolean */
+    /* scrollRestoration?: boolean */
+    /* externalDir?: boolean */
+    /* conformance?: boolean */
+    /*
+     * amp?: {
+     *   optimizer?: any
+     *   validator?: string
+     *   skipValidation?: boolean
+     * }
+     */
+    /* reactRoot?: boolean */
+    /* disableOptimizedLoading?: boolean */
+    /* gzipSize?: boolean */
+    /* craCompat?: boolean */
+    /* esmExternals?: boolean | 'loose' */
+    /* isrMemoryCacheSize?: number */
+    /* concurrentFeatures?: boolean */
+    /* serverComponents?: boolean */
+    /* fullySpecified?: boolean */
+    /* urlImports?: NonNullable<webpack5.Configuration['experiments']>['buildHttp'] */
+    /* outputFileTracingRoot?: string */
+    /* outputStandalone?: boolean */
+  },
 
   future: {},
 
-  // @see {@link https://nextjs.org/docs/api-reference/next.config.js/configuring-the-build-id}
-  generateBuildId: () => `build-{Date.now()}`,
+  /*
+   * @see {@link https://nextjs.org/docs/api-reference/next.config.js/configuring-the-build-id}
+   * @see {@link https://levelup.gitconnected.com/how-to-deploy-next-js-on-multiple-servers-3b493d4ce0e9}
+   */
+  /* generateBuildId: () => `build-{Date.now()}`, */
+
+  // eslint-disable-next-line require-await
+  headers: async () => [
+    {
+      // Apply these headers to all routes in the application
+      headers: securityHeaders,
+      // Because of i18n routing I have to use "/:path*" instead of "/(.*)"
+      source: '/:path*',
+    },
+    {
+      // CORS headers, @see {@link https://ieftimov.com/post/deep-dive-cors-history-how-it-works-best-practices/}
+      headers: [
+        // the next line is an anti-pattern with 'Access-Control-Allow-Origing: *'
+        /* { key: "Access-Control-Allow-Credentials", value: "true" }, */
+        { key: 'Access-Control-Allow-Origin', value: '*' },
+        {
+          key: 'Access-Control-Allow-Methods',
+          value: 'GET,OPTIONS,PATCH,DELETE,POST,PUT',
+        },
+        {
+          key: 'Access-Control-Allow-Headers',
+          value:
+            'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version',
+        },
+      ],
+
+      // api routes are not localized
+      locale: false,
+      // matching all localized API routes, but not routes like '/api/hello'
+      source: '/api/:path*',
+    },
+  ],
 
   i18n: {
     defaultLocale: 'en',
@@ -89,6 +225,7 @@ const nextConfiguration = {
    * but will keep it disabled for now to get the linter feedback.
    */
   optimizeFonts: false,
+
   poweredByHeader: false,
   /*
    * publicRuntimeConfig: {
@@ -96,7 +233,8 @@ const nextConfiguration = {
    * },
    */
   reactStrictMode: true,
-  /* target: 'experimental-serverless-trace', */
+
+  swcMinify: true,
 
   webpack: (
     /** @type {{ plugins: any[]; }} */ config,
@@ -235,3 +373,4 @@ module.exports = withSentryConfig(
   nextPluginConfiguration,
   SentryWebpackPluginOptions
 )
+/* eslint-enable max-lines */
