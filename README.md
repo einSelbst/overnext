@@ -231,6 +231,8 @@ stylelint-check: Check stylelint for rules conflicting prettier
   - [`stylelint-config-idiomatic-order`](https://github.com/ream88/stylelint-config-idiomatic-order) configuration
   - [`stylelint-config-prettier`](https://github.com/prettier/stylelint-config-prettier) configuration, to integrate with prettier
   - [`stylelint-scss`](https://github.com/kristerkari/stylelint-scss) plugin
+- [`textlint`]() for text, [collection of rules](https://github.com/textlint/textlint/wiki/Collection-of-textlint-rule)
+  - [`textlint-rule-terminology`](https://github.com/sapegin/textlint-rule-terminology) to check and fix terms, brands and technologies spelling
 - [`husky`](https://github.com/typicode/husky) for hooks
 - [`git-format-staged`](https://github.com/hallettj/git-format-staged), to format staged files (surprise), [reasons](https://www.olioapps.com/blog/automatic-code-formatting/)
 - [`axe-core/react`](https://github.com/dequelabs/axe-core-npm)
