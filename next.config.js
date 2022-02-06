@@ -176,7 +176,7 @@ const nextConfiguration = {
   future: {},
 
   // @see {@link https://nextjs.org/docs/api-reference/next.config.js/configuring-the-build-id}
-  generateBuildId: () => `build-{Date.now()}`,
+  /* generateBuildId: () => `build-{Date.now()}`, */
 
   // eslint-disable-next-line require-await
   headers: async () => [
