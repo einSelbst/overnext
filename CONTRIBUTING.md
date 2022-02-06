@@ -9,7 +9,7 @@
 
 ### node.js
 
-- if you have volta installed _node_ should be installed automatically when you open the project
+- if you have volta installed _Node.js_ should be installed automatically when you open the project
 - if you have `nvm` installed use `nvm i`
 - I need to test this but I think `pnpm` will install _node.js_ automatically because I have set `use-node-version` in `.npmrc`
 
@@ -47,4 +47,4 @@
 
 ## Lastly
 
-- open a pull request on Github.
+- open a pull request on GitHub.

@@ -22,6 +22,7 @@ export const Home = (): NextComponentType => (
         <h2 className='text-center text-3xl text-gray-700 dark:text-gray-100'>
           A short story
         </h2>
+        {/* @see {@link https://css-tricks.com/lazy-load-embedded-youtube-videos/} */}
         <iframe
           allowFullScreen
           allow='autoplay; encrypted-media; picture-in-picture'
