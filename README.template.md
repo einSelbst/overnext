@@ -120,7 +120,7 @@ Please adhere to this project's `code of conduct`.
 
 ## API Reference OK
 
-#### Get all items
+### Get all items
 
 ```http
   GET /api/items
@@ -130,7 +130,7 @@ Please adhere to this project's `code of conduct`.
 | :-------- | :------- | :------------------------- |
 | `api_key` | `string` | **Required**. Your API key |
 
-#### Get item
+### Get item
 
 ```http
   GET /api/items/${id}
@@ -140,7 +140,7 @@ Please adhere to this project's `code of conduct`.
 | :-------- | :------- | :-------------------------------- |
 | `id`      | `string` | **Required**. ID of item to fetch |
 
-#### add(num1, num2)
+### add(num1, num2)
 
 Takes two numbers and returns the sum.
 
