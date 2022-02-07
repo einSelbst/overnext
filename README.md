@@ -227,10 +227,12 @@ stylelint-check: Check stylelint for rules conflicting prettier
   - [`eslint-plugin-jest-formatting`](https://github.com/dangreenisrael/eslint-plugin-jest-formatting)
 
 - [`stylelint`](https://stylelint.io) for CSS
+
   - [`stylelint-config-standard`](https://github.com/stylelint/stylelint-config-standard) configuration
   - [`stylelint-config-idiomatic-order`](https://github.com/ream88/stylelint-config-idiomatic-order) configuration
   - [`stylelint-config-prettier`](https://github.com/prettier/stylelint-config-prettier) configuration, to integrate with prettier
   - [`stylelint-scss`](https://github.com/kristerkari/stylelint-scss) plugin
+
 - [`textlint`](https://github.com/textlint/textlint) for text, [collection of rules](https://github.com/textlint/textlint/wiki/Collection-of-textlint-rule)
   - [`textlint-plugin-jsx`](https://github.com/hata6502/textlint-plugin-jsx) for JSX and TSX support
   - [`textlint-rule-terminology`](https://github.com/sapegin/textlint-rule-terminology) to check and fix terms, brands and technologies spelling
@@ -349,12 +351,16 @@ stylelint-check: Check stylelint for rules conflicting prettier
   - to track [Web Vitals](https://web.dev/vitals/)
   - [how-to](https://www.freecodecamp.org/news/how-to-measure-next-js-web-vitals-using-quickmetrics/)
 - [Sonarcloud Dashboard](https://sonarcloud.io/dashboard?id=einSelbst_feehikel)
+
   - needs `SONAR_TOKEN` env var in GitHub
+
 - [LGTM Dashboard](https://lgtm.com/projects/g/einSelbst/overnext/?mode=list)
 - [Code Inspector](https://frontend.code-inspector.com/project/21436/dashboard)
 - [Cypress Dashboard](https://dashboard.cypress.io/projects/esdwok/runs)
 - [Fossa Dashboard](https://app.fossa.com/projects)
+
   - needs `FOSSA_API_KEY` env var in GitHub
+
 - [Renovate Dashboard](https://app.renovatebot.com/dashboard#github/einSelbst/overnext) for dependency management
 - [Vercel Dashboard](https://vercel.com/einselbst/overnext)
 - [Netlify Dashboard](https://app.netlify.com/sites/overnext/overview)
@@ -406,7 +412,7 @@ see [CONTRIBUTING](./CONTRIBUTING.md)
 - [Sentry](https://sentry.io/welcome/), via [@sentry/nextjs](https://github.com/getsentry/sentry-javascript/tree/master/packages/nextjs), [docs](https://docs.sentry.io/platforms/javascript/guides/nextjs/), which is a wrapper around
   - [Sentry for React](https://github.com/getsentry/sentry-javascript/tree/master/packages/react), [docs](https://docs.sentry.io/platforms/javascript/guides/react/), for the app frontend monitoring
   - [Sentry for Node.js](https://github.com/getsentry/sentry-javascript/tree/master/packages/node), [docs](https://docs.sentry.io/platforms/node/), for server monitoring
-  - [SentryWebpackPlugin](https://github.com/getsentry/sentry-webpack-plugin), [docs](https://docs.sentry.io/platforms/javascript/guides/react/sourcemaps/tools/webpack/), to load client & server monitoring & for source map upload
+  - [SentryWebpackPlugin](https://github.com/getsentry/sentry-webpack-plugin), to load client & server monitoring & for source map upload
     - uses [sentry-cli](https://docs.sentry.io/product/cli/configuration/) under the hood
 - [Speedlify](https://overwatch-next.netlify.app/overnext/)
 
@@ -499,7 +505,7 @@ ToDo link to API Docs
 
 I should use GitHub Issues for this but hey.
 
-- [ ] I have Node.js version defined in several places, maybe I can consolidate this
+- [ ] I have _Node.js_ version defined in several places, maybe I can consolidate this
   - `.nvmrc`
   - `.npmrc` because pnpm
   - ~package.json > engine~, removed because annoying warning in vercel
