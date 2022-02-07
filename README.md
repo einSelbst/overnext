@@ -64,7 +64,7 @@
   - the foundation
 - Integrations _second_
   - db/cms
-  - 3rd party services
+  - Third-party services
 - UI _third_
   - all screens: from watch-face to wide screen, not just mobile/desktop
   - the [new responsive](https://www.youtube.com/watch?v=jUQ2-C5ZNRc)
@@ -109,7 +109,7 @@ This is more about priorities than about a temporal order.
 - use [volta](https://github.com/volta-cli/volta) for toolchain management (hoping for [pnpm support](https://github.com/volta-cli/volta/issues/737)), see: [install guide](./CONTRIBUTING.md)
 - use [eslint_d](https://github.com/mantoni/eslint_d.js) to speed up eslint, `volta install eslint_d`
 - use [pnpm completion](https://medium.com/pnpm/pnpm-v4-9-comes-with-command-completion-a411715260b4) via `pnpm install-completion`
-- create recommended repo files via [cgx](https://github.com/jeroenouw/cgx)
+- create recommended repository files via [cgx](https://github.com/jeroenouw/cgx)
 - create `README.md` integrate via [README.so template](https://readme.so/editor)
 
 ### Commit Style
@@ -121,15 +121,15 @@ This is more about priorities than about a temporal order.
       <summary>Show commit types</summary>
 
     - `a11y`: Accessibility
-    - `build`: Changes that affect the build system (example scopes: webpack, typescript, babel, pnpm)
+    - `build`: Changes that affect the build tooling (example scopes: webpack, typescript, pnpm)
     - `chore`: Other changes that don't modify src or test files
-    - `ci`: Changes to the CI configuration files and scripts (example scopes: Github Actions, BrowserStack)
+    - `ci`: Changes to the CI configuration files and scripts (example scopes: GitHub Actions, BrowserStack)
     - `cx`: Customer Experience
     - `deps`: Managing dependencies
     - `docs`: Documentation only changes
     - `dx`: All things about improving developer experience
     - `feat`: A new feature
-    - `fix`: A bug fix
+    - `fix`: A bugfix
     - `i18n`: Internationalization
     - `perf`: A code change that improves performance
     - `refactor`: A code change that neither fixes a bug nor adds a feature
@@ -141,7 +141,7 @@ This is more about priorities than about a temporal order.
     - `wip`: work in progress
     </details>
 
-  - [`semantic-pull-requests`](https://github.com/zeke/semantic-pull-requests) Github app
+  - [`semantic-pull-requests`](https://github.com/zeke/semantic-pull-requests) GitHub app
 
 ### Scripts
 
@@ -187,9 +187,9 @@ stylelint-check: Check stylelint for rules conflicting prettier
 ## Code Style
 
 - React [Strict Mode](https://reactjs.org/docs/strict-mode.html) enabled in [development](https://nextjs.org/docs/api-reference/next.config.js/react-strict-mode)
-  - ~~[`prop-types`](https://www.npmjs.com/package/prop-types) (for run-time type checking)~~ -> discarded, see [reasons](#prop-types)
+  - ~~[`prop-types`](https://www.npmjs.com/package/prop-types) (for runtime type checking)~~ -> discarded, see [reasons](#prop-types)
   - not using `defaultProps` on function components because [deprecation incoming](https://github.com/reactjs/rfcs/pull/107)
-- [Typescript](https://www.typescriptlang.org/) (for compile time type checking)
+- [TypeScript](https://www.typescriptlang.org/) (for compile time type checking)
   - [`typesync`](https://github.com/jeffijoe/typesync) for find dependency typings
   - [TSDoc](https://tsdoc.org/) docstrings to generate [`typedoc`](https://github.com/TypeStrong/typedoc) documentation
 - [Prettier](https://prettier.io/) for code formatting
@@ -212,11 +212,11 @@ stylelint-check: Check stylelint for rules conflicting prettier
 
   - [`eslint-plugin-import`](https://github.com/benmosher/eslint-plugin-import), [43 rules](https://github.com/benmosher/eslint-plugin-import/tree/master/docs/rules)
 
-    - [`typescript-eslint-language-service`](https://github.com/Quramy/typescript-eslint-language-service), adds typescript support for `eslint-plugin-import`
+    - [`typescript-eslint-language-service`](https://github.com/Quramy/typescript-eslint-language-service), adds TypeScript support for `eslint-plugin-import`
 
   - [`eslint-plugin-next`](https://github.com/vercel/next.js/tree/canary/packages/eslint-plugin-next), [12 rules](https://github.com/vercel/next.js/blob/canary/docs/basic-features/eslint.md)
   - [`eslint-plugin-sonarjs`](https://github.com/SonarSource/eslint-plugin-sonarjs), 25 rules
-  - [`eslint-plugin-sort-keys-fix`](https://github.com/leo-buneev/eslint-plugin-sort-keys-fix), because core can't auto-fix object keys
+  - [`eslint-plugin-sort-keys-fix`](https://github.com/leo-buneev/eslint-plugin-sort-keys-fix), because core can't autofix object keys
 
   - [`eslint-plugin-tsdoc`](https://github.com/microsoft/tsdoc/tree/master/eslint-plugin)
   - [`eslint-plugin-eslint-comments`](https://github.com/mysticatea/eslint-plugin-eslint-comments)
@@ -227,17 +227,22 @@ stylelint-check: Check stylelint for rules conflicting prettier
   - [`eslint-plugin-jest-formatting`](https://github.com/dangreenisrael/eslint-plugin-jest-formatting)
 
 - [`stylelint`](https://stylelint.io) for CSS
+
   - [`stylelint-config-standard`](https://github.com/stylelint/stylelint-config-standard) configuration
   - [`stylelint-config-idiomatic-order`](https://github.com/ream88/stylelint-config-idiomatic-order) configuration
   - [`stylelint-config-prettier`](https://github.com/prettier/stylelint-config-prettier) configuration, to integrate with prettier
   - [`stylelint-scss`](https://github.com/kristerkari/stylelint-scss) plugin
+
+- [`textlint`](https://github.com/textlint/textlint) for text, [collection of rules](https://github.com/textlint/textlint/wiki/Collection-of-textlint-rule)
+  - [`textlint-plugin-jsx`](https://github.com/hata6502/textlint-plugin-jsx) for JSX and TSX support
+  - [`textlint-rule-terminology`](https://github.com/sapegin/textlint-rule-terminology) to check and fix terms, brands and technologies spelling
 - [`husky`](https://github.com/typicode/husky) for hooks
 - [`git-format-staged`](https://github.com/hallettj/git-format-staged), to format staged files (surprise), [reasons](https://www.olioapps.com/blog/automatic-code-formatting/)
 - [`axe-core/react`](https://github.com/dequelabs/axe-core-npm)
 
 ### Potentially interesting
 
-- [eslint-plugin-optimize-regex](https://github.com/BrainMaestro/eslint-plugin-optimize-regex), there are even more regex plugins
+- [eslint-plugin-optimize-regex](https://github.com/BrainMaestro/eslint-plugin-optimize-regex), there are even more regular expression plugins
 - [eslint-plugin-testing-library](https://github.com/testing-library/eslint-plugin-testing-library)
 - [eslint-plugin-i18n-json](https://www.npmjs.com/package/eslint-plugin-i18n-json)
 
@@ -291,8 +296,8 @@ stylelint-check: Check stylelint for rules conflicting prettier
 ...all still unclear atm...
 
 - Stage 1: site should be useable without any CSS
-- Stage 2: site should look ok with only [classless CSS](https://github.com/dohliam/dropin-minimal-css)
-- Stage 3: some kind of CSS framework, no css-in-js
+- Stage 2: site should look OK with only [classless CSS](https://github.com/dohliam/dropin-minimal-css)
+- Stage 3: some kind of CSS framework, no CSS in JS
 
 - keep it [simple](https://1linelayouts.glitch.me/)
 - make use of [modern-normalize](https://github.com/sindresorhus/modern-normalize) -> is part of [tailwind](https://tailwindcss.com/docs/adding-base-styles)
@@ -311,14 +316,14 @@ stylelint-check: Check stylelint for rules conflicting prettier
 - [Cypress](https://www.cypress.io/)
   - [Code Coverage](https://docs.cypress.io/guides/tooling/code-coverage.html) via [istanbul](https://istanbul.js.org/) and [nyc](https://github.com/istanbuljs/nyc), bon voyage
   - [Dashboard](https://dashboard.cypress.io/)
-  - [Github Integration](https://docs.cypress.io/guides/dashboard/github-integration.html#Install-the-Cypress-GitHub-app)
+  - [GitHub Integration](https://docs.cypress.io/guides/dashboard/github-integration.html#Install-the-Cypress-GitHub-app)
   - [cypress-watch-and-reload](https://github.com/bahmutov/cypress-watch-and-reload)
   - ToDo: if I want to run [headless cypress in watch mode](https://github.com/cypress-io/cypress/issues/3665#issuecomment-665866436)
 - ToDo: integrate [Sentry TestKit](https://docs.sentry.io/platforms/javascript/guides/nextjs/configuration/sentry-testkit/), to intercept error reporting in tests
 
 ## CI
 
-### Github Actions
+### GitHub Actions
 
 - [Skip Duplicate Actions](https://github.com/marketplace/actions/skip-duplicate-actions)
 - [`create-pull-request`](https://github.com/thomaseizinger/create-pull-request), creates PR's for new branches
@@ -327,10 +332,10 @@ stylelint-check: Check stylelint for rules conflicting prettier
 - `basic`: runs linters, tests and build
 - [`compressed-size`](https://github.com/preactjs/compressed-size-action): checks the size of the bundled files and adds a comment in the PR
 - [`size-limit`](https://github.com/andresz1/size-limit-action) for load time performance tracking
-- [`eslint-plus-action`](https://github.com/bradennapier/eslint-plus-action), runs eslint and prints a summary in the PR
+- [`eslint-plus-action`](https://github.com/bradennapier/eslint-plus-action), runs ESLint and prints a summary in the PR
 - [Super-Linter](https://github.com/github/super-linter)
 - Lighthouse on Vercel: Runs a Lighthouse Audit on the Vercel Preview URL
-- WIP: [`auto-push-css`](https://github.com/projectwallace/push-css-action), needs `PROJECT_WALLACE_TOKEN` set in Repo Env Secrets
+- WIP: [`auto-push-css`](https://github.com/projectwallace/push-css-action), needs `PROJECT_WALLACE_TOKEN` set in repository Env Secrets
 
 #### WIP Security Audits
 
@@ -346,12 +351,16 @@ stylelint-check: Check stylelint for rules conflicting prettier
   - to track [Web Vitals](https://web.dev/vitals/)
   - [how-to](https://www.freecodecamp.org/news/how-to-measure-next-js-web-vitals-using-quickmetrics/)
 - [Sonarcloud Dashboard](https://sonarcloud.io/dashboard?id=einSelbst_feehikel)
-  - needs `SONAR_TOKEN` env var in Github
+
+  - needs `SONAR_TOKEN` env var in GitHub
+
 - [LGTM Dashboard](https://lgtm.com/projects/g/einSelbst/overnext/?mode=list)
 - [Code Inspector](https://frontend.code-inspector.com/project/21436/dashboard)
 - [Cypress Dashboard](https://dashboard.cypress.io/projects/esdwok/runs)
 - [Fossa Dashboard](https://app.fossa.com/projects)
-  - needs `FOSSA_API_KEY` env var in Github
+
+  - needs `FOSSA_API_KEY` env var in GitHub
+
 - [Renovate Dashboard](https://app.renovatebot.com/dashboard#github/einSelbst/overnext) for dependency management
 - [Vercel Dashboard](https://vercel.com/einselbst/overnext)
 - [Netlify Dashboard](https://app.netlify.com/sites/overnext/overview)
@@ -402,8 +411,8 @@ see [CONTRIBUTING](./CONTRIBUTING.md)
 
 - [Sentry](https://sentry.io/welcome/), via [@sentry/nextjs](https://github.com/getsentry/sentry-javascript/tree/master/packages/nextjs), [docs](https://docs.sentry.io/platforms/javascript/guides/nextjs/), which is a wrapper around
   - [Sentry for React](https://github.com/getsentry/sentry-javascript/tree/master/packages/react), [docs](https://docs.sentry.io/platforms/javascript/guides/react/), for the app frontend monitoring
-  - [Sentry for NodeJS](https://github.com/getsentry/sentry-javascript/tree/master/packages/node), [docs](https://docs.sentry.io/platforms/node/), for server monitoring
-  - [SentryWebpackPlugin](https://github.com/getsentry/sentry-webpack-plugin), [docs](https://docs.sentry.io/platforms/javascript/guides/react/sourcemaps/tools/webpack/), to load client & server monitoring & for sourcemap upload
+  - [Sentry for Node.js](https://github.com/getsentry/sentry-javascript/tree/master/packages/node), [docs](https://docs.sentry.io/platforms/node/), for server monitoring
+  - [SentryWebpackPlugin](https://github.com/getsentry/sentry-webpack-plugin), to load client & server monitoring & for source map upload
     - uses [sentry-cli](https://docs.sentry.io/product/cli/configuration/) under the hood
 - [Speedlify](https://overwatch-next.netlify.app/overnext/)
 
@@ -418,7 +427,7 @@ ToDo [Documentation](https://linktodocumentation)
 Intially I wanted to use [prop-types](https://github.com/facebook/prop-types) because of the reasons given in those articles:
 
 - [TypeScript and React: Prop Types](https://fettblog.eu/typescript-react/prop-types/) - Blogpost by Stefan Baumgartner
-- [PropTypes in a TypeScript React Application](https://stackoverflow.com/a/54690878/531439) - Anwer on StackOverflow
+- [PropTypes in a TypeScript React Application](https://stackoverflow.com/a/54690878/531439) - Anwer on Stack Overflow
 - [Notes on TypeScript: Inferring React PropTypes](https://dev.to/busypeoples/notes-on-typescript-inferring-react-proptypes-1g88) - Guide on `dev.to`
 
 When I actually started using them I had some problems:
@@ -430,11 +439,11 @@ When I actually started using them I had some problems:
 
 I might still use prop-types in case I encounter a situation where I get much benefit from the runtime type checking, but then I would only use it for this specific case.
 
-### Typescript Barrel
+### TypeScript Barrel
 
 Using an `index.ts` file to bundle multiple submodules is called 'Barreling'.
 This can cause circular dependency issues as it happened to me because I was using the `env.config` inside of `seo.config`.
-Also it might affect Webpack's ability to chunk the code.
+Also it might affect webpack's ability to chunk the code.
 
 - [Gitbook on barrel](https://basarat.gitbook.io/typescript/main-1/barrel)
 
@@ -446,14 +455,14 @@ which included
 - [Standard](https://standardjs.com/)
 - [PrettierX](https://github.com/brodybits/prettierx)
   because I thought it's a great idea to not waste time for config etc. But the tool hasn't received any maintenance for almost a year and I already had to add workarounds.
-  Being interested in linting in general I also had issues with clean extensibility of my eslint config and it wasn't completely clear to me what really runs as part of `prettier-standard`.
+  Being interested in linting in general I also had issues with clean extensibility of my ESLint config and it wasn't completely clear to me what really runs as part of `prettier-standard`.
 
 I also considerd other bundles like:
 
 - [XO](https://github.com/xojs/xo) which would have been my first choice because it includes [unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
 - [Canonical](https://github.com/gajus/eslint-config-canonical)
 
-but they all have stuff included I don't need and other stuff is missing which I want so I decided to go vanilla `eslint` and [do my config](https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/README.md#eslint-configs) by hand to have max control over everything and less dependencies.
+but they all have stuff included I don't need and other stuff is missing which I want so I decided to go vanilla `eslint` and [do my config](https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/README.md#eslint-configs) by hand to have max control over everything and Less dependencies.
 
 ### Hosting
 
@@ -494,9 +503,9 @@ ToDo link to API Docs
 
 ## ToDo
 
-I should use Github Issues for this but hey.
+I should use GitHub Issues for this but hey.
 
-- [ ] I have node version defined in several places, maybe I can consolidate this
+- [ ] I have _Node.js_ version defined in several places, maybe I can consolidate this
   - `.nvmrc`
   - `.npmrc` because pnpm
   - ~package.json > engine~, removed because annoying warning in vercel
@@ -543,7 +552,7 @@ I should use Github Issues for this but hey.
 ### Pull Requests
 
 - ToDo: [PR Labeler](https://github.com/Decathlon/pull-request-labeler-action)
-- ToDo: [prow github action](https://github.com/jpmcb/prow-github-actions)
+- ToDo: [prow GitHub action](https://github.com/jpmcb/prow-github-actions)
 - ToDo: [task completed checker action](https://github.com/kentaro-m/task-completed-checker-action)
 </details>
 

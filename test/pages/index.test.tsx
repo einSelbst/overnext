@@ -18,6 +18,6 @@ describe('home page', () => {
     jest.spyOn(window, 'alert').mockImplementation()
     fireEvent.click(getByText('Test Button'))
 
-    expect(window.alert).toHaveBeenCalledWith('With typescript and Jest')
+    expect(window.alert).toHaveBeenCalledWith('With TypeScript and Jest')
   })
 })

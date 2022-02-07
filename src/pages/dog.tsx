@@ -30,7 +30,7 @@ const getStaticProps: GetStaticProps = async (
   _context: GetStaticPropsContext
 ): Promise<GetStaticPropsResult<HomeProps>> => {
   await Promise.resolve(
-    'This is just a placeholder to make my typescript linter happy'
+    'This is just a placeholder to make my TypeScript linter happy'
   )
   /* eslint-disable no-console */
   /*

@@ -4,7 +4,7 @@
 
 An overly opinonated next.js starter template.
 
-## Badges ok
+## Badges OK
 
 Add badges from somewhere like: [shields.io](https://shields.io/)
 
@@ -12,20 +12,20 @@ Add badges from somewhere like: [shields.io](https://shields.io/)
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 [![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
 
-## Tech Stack ok
+## Tech Stack OK
 
 **Client:** React, Redux, TailwindCSS
 
 **Server:** Node, Express
 
-## Features ok
+## Features OK
 
 - Light/dark mode toggle
 - Live previews
 - Fullscreen mode
 - Cross platform
 
-## Installation ok
+## Installation OK
 
 Install my-project with npm
 
@@ -90,7 +90,7 @@ To run tests, run the following command
 npm run test
 ```
 
-## Deployment ok
+## Deployment OK
 
 To deploy this project run
 
@@ -98,11 +98,11 @@ To deploy this project run
 npm run deploy
 ```
 
-## Demo ok
+## Demo OK
 
-Insert gif or link to demo
+Insert GIF or link to demo
 
-## Lessons Learned ok
+## Lessons Learned OK
 
 What did you learn while building this project? What challenges did you face and how did you overcome them?
 
@@ -118,9 +118,9 @@ See `contributing.md` for ways to get started.
 
 Please adhere to this project's `code of conduct`.
 
-## API Reference ok
+## API Reference OK
 
-#### Get all items
+### Get all items
 
 ```http
   GET /api/items
@@ -130,7 +130,7 @@ Please adhere to this project's `code of conduct`.
 | :-------- | :------- | :------------------------- |
 | `api_key` | `string` | **Required**. Your API key |
 
-#### Get item
+### Get item
 
 ```http
   GET /api/items/${id}
@@ -138,9 +138,9 @@ Please adhere to this project's `code of conduct`.
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `id`      | `string` | **Required**. Id of item to fetch |
+| `id`      | `string` | **Required**. ID of item to fetch |
 
-#### add(num1, num2)
+### add(num1, num2)
 
 Takes two numbers and returns the sum.
 
@@ -148,13 +148,13 @@ Takes two numbers and returns the sum.
 
 ![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
-## Roadmap ok
+## Roadmap OK
 
 - Additional browser support
 
 - Add more integrations
 
-## Optimizations ok
+## Optimizations OK
 
 What optimizations did you make in your code? E.g. refactors, performance improvements, accessibility
 
@@ -162,7 +162,7 @@ What optimizations did you make in your code? E.g. refactors, performance improv
 
 - [@katherinepeterson](https://www.github.com/katherinepeterson)
 
-## Acknowledgements ok as Credits
+## Acknowledgements OK as Credits
 
 - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
 - [Awesome README](https://github.com/matiassingers/awesome-readme)
@@ -172,12 +172,12 @@ What optimizations did you make in your code? E.g. refactors, performance improv
 
 Any additional information goes here
 
-## Related ok
+## Related OK
 
 Here are some related projects
 
 [Awesome README](https://github.com/matiassingers/awesome-readme)
 
-## License ok
+## License OK
 
 [MIT](https://choosealicense.com/licenses/mit/)
