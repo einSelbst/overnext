@@ -125,7 +125,8 @@ specifiers:
   tailwindcss: 3.0.18
   tap-spot: 1.1.1
   textlint: 12.1.0
-  textlint-plugin-jsx: ^1.1.2
+  textlint-plugin-jsx: 1.1.2
+  textlint-rule-diacritics: 1.0.0
   textlint-rule-terminology: 2.1.5
   ts-node: 10.4.0
   typed-query-selector: 2.6.1
@@ -256,6 +257,7 @@ devDependencies:
   tap-spot: 1.1.1
   textlint: 12.1.0
   textlint-plugin-jsx: 1.1.2_typescript@4.5.5
+  textlint-rule-diacritics: 1.0.0
   textlint-rule-terminology: 2.1.5_1be97c5a86dbacd7a0ea2a31884cce0d
   ts-node: 10.4.0_247b6ed5e900a7cb1f087e65be0c3da9
   typedoc: 0.22.11_typescript@4.5.5
@@ -9770,6 +9772,10 @@ packages:
     hasBin: true
     dev: true
 
+  /match-casing/1.0.3:
+    resolution: {integrity: sha512-oMyC3vUVCFbGu+M2Zxl212LPJThcaw7QxB5lFuJPQCgV/dsGBP0yZeCoLmX6CiBkoBcVbAKDJZrBpJVu0XcLMw==}
+    dev: true
+
   /mathml-tag-names/2.1.3:
     resolution: {integrity: sha512-APMBEanjybaPzUrfqU0IMU5I0AswKMH7k8OTLs0vvV4KZpExkTkY87nR/zpbuTPj+gARop7aGUbl11pnDfW6xg==}
     dev: true
@@ -13430,6 +13436,14 @@ packages:
     dependencies:
       '@textlint/ast-node-types': 4.4.3
       typescript: 4.5.5
+    dev: true
+
+  /textlint-rule-diacritics/1.0.0:
+    resolution: {integrity: sha512-hhJvDZzhV+sKD7walPQ4VmWkBw5o1T/lFLRsoDsAJF+LYhD89R5/L4yFVtxFRUkP9VZ5cvoUIPkYjZvkPEawTA==}
+    engines: {node: '>=8.6'}
+    dependencies:
+      match-casing: 1.0.3
+      strip-json-comments: 3.1.1
     dev: true
 
   /textlint-rule-helper/2.2.1_1be97c5a86dbacd7a0ea2a31884cce0d:

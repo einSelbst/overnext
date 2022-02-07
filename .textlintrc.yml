@@ -1,6 +1,10 @@
 plugins:
   jsx: true
 rules:
+  diacritics:
+    # List of additional words
+    words:
+      - 'tâmia'
   terminology:
     # Load default terms (see terms.json in the repository)
     defaultTerms: true
