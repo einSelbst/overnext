@@ -59,6 +59,7 @@
     "lint:html": "html-validate '.next/**/*.html'",
     "?lint:css": "echo Run stylelint on source code to lint CSS",
     "lint:css": "stylelint --fix 'src/**/*.{css,scss,tsx}' --color --custom-formatter=node_modules/stylelint-formatter-pretty",
+    "?lint:text": "echo Run textlint and fix issues",
     "lint:text": "textlint . -f stylish --fix",
     "type-check": "tsc",
     "type-check:watch": "tsc -w --pretty --skipLibCheck --noEmit",

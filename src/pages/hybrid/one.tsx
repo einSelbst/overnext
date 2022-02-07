@@ -95,14 +95,14 @@ const One = ({ success, error }: Props): NextComponentType => {
             </Link>
             <br />
             <br />
-            <p>This is ok because a full reload is triggered</p>
+            <p>This is OK because a full reload is triggered</p>
             <a ref={toggleAnchorReference} href='foo'>
               ...Loading
             </a>
             <br />
             <br />
             <p>
-              This would also be ok but only works locally as for the different
+              This would also be OK but only works locally as for the different
               AMP links in production
             </p>
             <a href={`/${locale ?? 'en'}/hybrid/one?amp=1`}>

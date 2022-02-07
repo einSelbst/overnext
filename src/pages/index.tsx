@@ -40,7 +40,7 @@ export const Home = (): NextComponentType => (
         type='button'
         // eslint-disable-next-line react/jsx-no-bind
         onClick={(): void => {
-          window.alert('With typescript and Jest') // eslint-disable-line no-alert
+          window.alert('With TypeScript and Jest') // eslint-disable-line no-alert
         }}>
         Test Button
       </button>
