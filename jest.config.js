@@ -47,29 +47,29 @@ const customJestConfig = {
   // with babel
   transform: {
     // the first line would mean swc is used in tests, but it gives a warning I don't know how to get rid of
-  /* '^.+\\.(ts|tsx)$': 'babel-jest', */
-  // so I'm optiong out of swc for jest for now
+    /* '^.+\\.(ts|tsx)$': 'babel-jest', */
+    // so I'm optiong out of swc for jest for now
 
-  '^.+\\.(js|jsx|ts|tsx)$': [
-    'babel-jest',
-    {
-      presets: [
-        [
-          'next/babel',
-          {
-            'styled-jsx': {
-              'babel-test': true,
+    '^.+\\.(js|jsx|ts|tsx)$': [
+      'babel-jest',
+      {
+        presets: [
+          [
+            'next/babel',
+            {
+              'styled-jsx': {
+                'babel-test': true,
+              },
             },
-          },
+          ],
         ],
-      ],
-    },
-  ],
-},
-
+      },
+    ],
+  },
 
   // with swc explicitly
-  /* transform: {
+  /*
+   * transform: {
    *   '^.+\\.(ts|tsx)$': [
    *     '@swc/jest',
    *     {
