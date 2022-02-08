@@ -11,13 +11,14 @@ const customJestConfig = {
   clearMocks: true,
 
   collectCoverageFrom: ['src/**/*.{ts,tsx,js,jsx}'],
-
-  globals: {
-    'ts-jest': {
-      isolatedModules: true,
-      useESM: true,
-    },
-  },
+  /*
+   * globals: {
+   *    'ts-jest': {
+   *      isolatedModules: true,
+   *      useESM: true,
+   *    },
+   *  },
+   */
 
   // if using TypeScript with a baseUrl set to the root directory then you need the below for alias' to work
   moduleDirectories: ['node_modules', '<rootDir>/'],
@@ -29,7 +30,7 @@ const customJestConfig = {
     '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/test/__mocks__/fileMock.js',
   },
 
-  preset: 'ts-jest/presets/default-esm',
+  /* preset: 'ts-jest/presets/default-esm', */
   /* preset: 'ts-jest/presets/js-with-babel-esm', */
 
   roots: ['<rootDir>'],

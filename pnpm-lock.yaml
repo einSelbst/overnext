@@ -128,7 +128,6 @@ specifiers:
   textlint-plugin-jsx: 1.1.2
   textlint-rule-diacritics: 1.0.0
   textlint-rule-terminology: 2.1.5
-  ts-jest: 27.1.3
   ts-node: 10.5.0
   typed-query-selector: 2.6.1
   typedoc: 0.22.11
@@ -260,7 +259,6 @@ devDependencies:
   textlint-plugin-jsx: 1.1.2_typescript@4.5.5
   textlint-rule-diacritics: 1.0.0
   textlint-rule-terminology: 2.1.5_1be97c5a86dbacd7a0ea2a31884cce0d
-  ts-jest: 27.1.3_7ef2d78ce471893f470776eba2d1fa48
   ts-node: 10.5.0_247b6ed5e900a7cb1f087e65be0c3da9
   typedoc: 0.22.11_typescript@4.5.5
   typescript-eslint-language-service: 5.0.0_de5a1ddccd75ca1e499b8b8491d3dcba
@@ -4481,13 +4479,6 @@ packages:
       escalade: 3.1.1
       node-releases: 2.0.1
       picocolors: 1.0.0
-
-  /bs-logger/0.2.6:
-    resolution: {integrity: sha512-pd8DCoxmbgc7hyPKOvxtqNcjYoOsABPQdcCUjGp3d42VR2CX1ORhk2A87oqqu5R1kk+76nsxZupkmyd+MVtCog==}
-    engines: {node: '>= 6'}
-    dependencies:
-      fast-json-stable-stringify: 2.1.0
-    dev: true
 
   /bser/2.1.1:
     resolution: {integrity: sha512-gQxTNE/GAfIIrmHLUE3oJyp5FO6HRBfhjnw4/wMmA63ZGDJnWBmgY/lyQBpnDUkGmAhbSe39tx2d/iTOAfglwQ==}
@@ -13658,41 +13649,6 @@ packages:
 
   /try-resolve/1.0.1:
     resolution: {integrity: sha1-z95vq9ctY+V5fPqrhzq76OcA6RI=}
-    dev: true
-
-  /ts-jest/27.1.3_7ef2d78ce471893f470776eba2d1fa48:
-    resolution: {integrity: sha512-6Nlura7s6uM9BVUAoqLH7JHyMXjz8gluryjpPXxr3IxZdAXnU6FhjvVLHFtfd1vsE1p8zD1OJfskkc0jhTSnkA==}
-    engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
-    hasBin: true
-    peerDependencies:
-      '@babel/core': '>=7.0.0-beta.0 <8'
-      '@types/jest': ^27.0.0
-      babel-jest: '>=27.0.0 <28'
-      esbuild: ~0.14.0
-      jest: ^27.0.0
-      typescript: '>=3.8 <5.0'
-    peerDependenciesMeta:
-      '@babel/core':
-        optional: true
-      '@types/jest':
-        optional: true
-      babel-jest:
-        optional: true
-      esbuild:
-        optional: true
-    dependencies:
-      '@babel/core': 7.17.0
-      '@types/jest': 27.4.0
-      bs-logger: 0.2.6
-      fast-json-stable-stringify: 2.1.0
-      jest: 27.5.0_ts-node@10.5.0
-      jest-util: 27.5.0
-      json5: 2.2.0
-      lodash.memoize: 4.1.2
-      make-error: 1.3.6
-      semver: 7.3.5
-      typescript: 4.5.5
-      yargs-parser: 20.2.9
     dev: true
 
   /ts-loader/7.0.5_typescript@4.5.5:
