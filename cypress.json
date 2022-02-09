@@ -1,17 +1,18 @@
 {
-  "projectId": "esdwok",
   "baseUrl": "http://localhost:3004",
-  "videoUploadOnPasses": false,
+  "chromeWebSecurity": true,
+  "cypress-watch-and-reload": {
+    "watch": ["src/**/*"]
+  },
   "env": {
     "codeCoverage": {
       "url": "/api/__coverage__"
     }
   },
+  "projectId": "esdwok",
   "retries": {
     "runMode": 2,
     "openMode": 0
   },
-  "cypress-watch-and-reload": {
-    "watch": ["src/**/*"]
-  }
+  "videoUploadOnPasses": false
 }
