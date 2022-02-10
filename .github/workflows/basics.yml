@@ -32,7 +32,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [16.14.x]
 
     steps:
       - name: Checkout Repo
@@ -40,37 +40,21 @@ jobs:
         with:
           ref: ${{ github.event.client_payload.ref }}
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@main
-        with:
-          node-version: ${{ matrix.node-version }}
-          check-latest: true
-
-      - name: Cache some stuff
-        id: cache-pnpm-dir
-        uses: actions/cache@main
-        env:
-          cache-name: cache-pnpm-store
-        with:
-          path: |
-            ~/.pnpm-store
-            ${{ github.workspace }}/node_modules
-            ${{ github.workspace }}/.next/cache
-            ~/.cache/Cypress
-          key: |
-            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-${{ matrix.node-version }}-build-
-
       - name: Install pnpm
         uses: pnpm/action-setup@master
         with:
           version: next
 
+      # - name: Use Node.js ${{ matrix.node-version }}
+      #   uses: actions/setup-node@main
+      #   with:
+      #     node-version: ${{ matrix.node-version }}
+      #     check-latest: true
+      #     cache: 'pnpm'
+
       - name: Install dependencies
-        if: steps.cache-pnpm-dir.outputs.cache-hit != 'true'
         run: |
+          corepack enable
           pnpm --version
           pnpm install --prefer-frozen-lockfile
 
@@ -105,42 +89,25 @@ jobs:
         with:
           ref: ${{ github.event.client_payload.ref }}
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@main
-        with:
-          node-version: ${{ matrix.node-version }}
-          check-latest: true
-
-      - name: Cache some stuff
-        id: cache-pnpm-dir
-        uses: actions/cache@main
-        env:
-          cache-name: cache-pnpm-store
-        with:
-          path: |
-            ~/.pnpm-store
-            ${{ github.workspace }}/node_modules
-            ${{ github.workspace }}/.next/cache
-            ~/.cache/Cypress
-          key: |
-            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-${{ matrix.node-version }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-${{ matrix.node-version }}-build-
-
       - name: Install pnpm
         uses: pnpm/action-setup@master
         with:
           version: next
 
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@main
+        with:
+          node-version: ${{ matrix.node-version }}
+          check-latest: true
+          cache: 'pnpm'
+
       - name: Install dependencies
-        if: steps.cache-pnpm-dir.outputs.cache-hit != 'true'
         run: |
           pnpm --version
           pnpm install --prefer-frozen-lockfile
 
       - name: 'Run tests'
-        run: pnpm test
+        run: pnpm test:coverage
         env:
           CI: true
           FAUNADB_SECRET: ${{ secrets.FAUNADB_SECRET }}
