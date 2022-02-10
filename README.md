@@ -27,10 +27,10 @@
 ![next version](https://img.shields.io/badge/next-12.0.10-brightgreen)
 ![react version](https://img.shields.io/badge/react-17.0.2-brightgreen)
 ![webpack version](https://img.shields.io/badge/webpack-5.68.0-brightgreen)
-![@babel/core version](https://img.shields.io/badge/@babel/core-7.17.0-brightgreen)
+![@babel/core version](https://img.shields.io/badge/@babel/core-7.17.2-brightgreen)
 ![typescript version](https://img.shields.io/badge/typescript-4.5.5-brightgreen)
 ![cypress version](https://img.shields.io/badge/cypress-9.4.1-brightgreen)
-![jest version](https://img.shields.io/badge/jest-27.5.0-brightgreen)
+![jest version](https://img.shields.io/badge/jest-27.5.1-brightgreen)
 ![eslint version](https://img.shields.io/badge/eslint-8.8.0-brightgreen)
 ![tailwindcss version](https://img.shields.io/badge/tailwindcss-3.0.19-brightgreen)
 
