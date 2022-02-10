@@ -234,7 +234,7 @@ const nextConfiguration = {
    */
   reactStrictMode: true,
 
-  /* swcMinify: true, */
+  swcMinify: true,
 
   webpack: (
     /** @type {{ plugins: any[]; }} */ config,
