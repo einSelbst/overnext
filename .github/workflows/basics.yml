@@ -32,7 +32,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.14.x]
+        node-version: [14.x, 16.13.x]
 
     steps:
       - name: Checkout Repo
@@ -40,17 +40,17 @@ jobs:
         with:
           ref: ${{ github.event.client_payload.ref }}
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@master
-        with:
-          version: next
-
-      # - name: Use Node.js ${{ matrix.node-version }}
-      #   uses: actions/setup-node@main
+      # - name: Install pnpm
+      #   uses: pnpm/action-setup@master
       #   with:
-      #     node-version: ${{ matrix.node-version }}
-      #     check-latest: true
-      #     cache: 'pnpm'
+      #     version: next
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@main
+        with:
+          node-version: ${{ matrix.node-version }}
+          check-latest: true
+          cache: 'pnpm'
 
       - name: Install dependencies
         run: |
