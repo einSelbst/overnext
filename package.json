@@ -34,8 +34,8 @@
     " ------------------------- Testing ------------------------- ": "",
     "?test": "echo Run unit and integration tests once",
     "test": "jest && pnpm e2e",
-    "?test:ci": "echo Run jest tests on CI, will re-add cypress later again",
-    "test:ci": "jest",
+    "?test:coverage": "echo Run jest and cypress test and measure coverage, wip",
+    "test:coverage": "jest --coverage & pnpm e2e",
     "?test:jest": "echo Run jest tests and update screenshots",
     "test:jest": "jest -u",
     "test:jest:coverage": "jest --coverage",
@@ -247,6 +247,7 @@
     "pnpm": "6.30.1"
   },
   "engines": {
+    "node": "16.14.0",
     "pnpm": ">=6"
   },
   "pnpm": {
