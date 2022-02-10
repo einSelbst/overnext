@@ -295,9 +295,5 @@
     "entrypoints": [
       "src"
     ]
-  },
-  "volta": {
-    "node": "16.13.2",
-    "npm": "8.4.1"
   }
 }
