@@ -40,7 +40,7 @@
     "test:jest": "jest -u",
     "test:jest:coverage": "jest --coverage",
     "test:jest:coverage2": "nyc jest",
-    "test:jest:coverage3": "c8 jest",
+    "test:jest:coverage3": "c8 -all --src='src/' jest",
     "?test:cy": "echo Open cypress test runner (needs a running app server)",
     "test:cy": "cypress open",
     "?e2e:watch": "echo Start dev server, open cypress and watch",
