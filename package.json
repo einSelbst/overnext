@@ -38,6 +38,9 @@
     "test:ci": "jest",
     "?test:jest": "echo Run jest tests and update screenshots",
     "test:jest": "jest -u",
+    "test:jest:coverage": "jest --coverage",
+    "test:jest:coverage2": "nyc jest",
+    "test:jest:coverage3": "c8 -all --src='src/' jest",
     "?test:cy": "echo Open cypress test runner (needs a running app server)",
     "test:cy": "cypress open",
     "?e2e:watch": "echo Start dev server, open cypress and watch",
@@ -74,7 +77,7 @@
     "validate:src:raw": "pnpm format & pnpm lint:fix & pnpm lint:css & pnpm lint:text & pnpm type-check & jest && pnpm audit:fix",
     "validate:src": "pnpm validate:src:raw --aggregate-output",
     "?validate:out": "echo Build app, run integration tests, check links & validate generated html",
-    "validate:out:raw": "pnpm size & (pnpm e2e2 && pnpm lint:html)",
+    "validate:out:raw": "pnpm e2e2 && (pnpm lint:html & pnpm size)",
     "validate:out": "pnpm validate:out:raw --aggregate-output",
     " ------------------------- Helpers ------------------------- ": "",
     "?build:analyze": "echo Build app and output bundle analyzer diagrams",
@@ -173,6 +176,7 @@
     "@typescript-eslint/eslint-plugin": "5.11.0",
     "@typescript-eslint/parser": "5.11.0",
     "@typescript-eslint/typescript-estree": "5.11.0",
+    "c8": "7.11.0",
     "commitizen": "4.2.4",
     "cypress": "9.4.1",
     "cypress-watch-and-reload": "1.7.4",
@@ -291,9 +295,5 @@
     "entrypoints": [
       "src"
     ]
-  },
-  "volta": {
-    "node": "16.13.2",
-    "npm": "8.4.1"
   }
 }
