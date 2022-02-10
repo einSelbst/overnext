@@ -75,7 +75,7 @@
     "validate:src:raw": "pnpm format & pnpm lint:fix & pnpm lint:css & pnpm lint:text & pnpm type-check & jest && pnpm audit:fix",
     "validate:src": "pnpm validate:src:raw --aggregate-output",
     "?validate:out": "echo Build app, run integration tests, check links & validate generated html",
-    "validate:out:raw": "pnpm size & (pnpm e2e2 && pnpm lint:html)",
+    "validate:out:raw": "pnpm e2e2 && (pnpm lint:html & pnpm size)",
     "validate:out": "pnpm validate:out:raw --aggregate-output",
     " ------------------------- Helpers ------------------------- ": "",
     "?build:analyze": "echo Build app and output bundle analyzer diagrams",
