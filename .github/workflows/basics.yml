@@ -40,16 +40,13 @@ jobs:
         with:
           ref: ${{ github.event.client_payload.ref }}
 
-      # - name: Install pnpm
-      #   uses: pnpm/action-setup@master
-      #   with:
-      #     version: next
+      - name: Install pnpm
+        uses: pnpm/action-setup@master
+        with:
+          version: next
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@main
-        run: |
-          corepack enable
-          pnpm --version
         with:
           node-version: ${{ matrix.node-version }}
           check-latest: true
@@ -57,6 +54,7 @@ jobs:
 
       - name: Install dependencies
         run: |
+          pnpm --version
           pnpm install --prefer-frozen-lockfile
 
       - name: Run prettier
