@@ -242,25 +242,20 @@
     "typesync": "0.8.0"
   },
   "optionalDependencies": {
-    "@axe-core/react": "4.3.2",
+    "@axe-core/react": "latest",
     "fsevents": "2.3.2",
-    "pnpm": "6.30.1"
+    "pnpm": "latest"
   },
   "engines": {
     "pnpm": ">=6"
   },
   "pnpm": {
     "overrides": {
-      "ansi-regex": "5.0.1",
       "browserslist": "latest",
       "caniuse-lite": "latest",
       "chokidar": "3",
       "debug": "latest",
-      "jsonpointer@<5.0.0": ">=5.0.0",
-      "json-schema@<0.4.0": ">=0.4.0",
-      "nanoid": "3.1.31",
       "source-map-resolve": "latest",
-      "stylelint": "14.2.0",
       "estimo": "2.3.1",
       "puppeteer-core": "latest"
     }
