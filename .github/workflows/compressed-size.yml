@@ -39,21 +39,19 @@ jobs:
 
       - name: Check out the application's source code
         if: ${{ steps.skip_check.outputs.should_skip != 'true' }}
-        uses: actions/checkout@v2-beta
+        uses: actions/checkout@v2
         with:
           fetch-depth: 1
 
-      # - uses: actions/cache@v2
-      #   if: ${{ steps.skip_check.outputs.should_skip != 'true' }}
-      #   with:
-      #     path: ~/.npm
-      #     key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-      #     restore-keys: |
-      #       ${{ runner.os }}-node-
+      - name: Install pnpm
+        uses: pnpm/action-setup@master
+        with:
+          version: next
 
       - name: Check and report changes in the application's package size
         if: ${{ steps.skip_check.outputs.should_skip != 'true' }}
-        uses: preactjs/compressed-size-action@v2
+        # uses: preactjs/compressed-size-action@v2
+        uses: einselbst/compressed-size-action@improve-pnpm-support
         with:
           repo-token: '${{ secrets.GITHUB_TOKEN }}'
           collapse-unchanged: true
@@ -62,7 +60,7 @@ jobs:
           # cwd:
           # build-script: 'npx pnpm i -P && pnpm run build'
           # clean-script: 'rm -rf packages/node_modules'
-          clean-script: 'gh-action:cleanup'
+          # clean-script: 'gh-action:cleanup'
           # Any JS files anywhere within a dist directory:
           # pattern: ".next/static/**/*.js"
           pattern: '.next/**/*.{css,js,json,html}'

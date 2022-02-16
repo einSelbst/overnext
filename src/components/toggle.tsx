@@ -33,7 +33,7 @@ const Toggle = ({
   }, [checkedItems])
 
   const triggerToggle = useCallback(
-    (event: React.FormEvent<HTMLInputElement>) => {
+    (event: React.FormEvent) => {
       if (disabled) return
 
       // due to the ts compiler not getting it
