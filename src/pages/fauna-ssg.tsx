@@ -117,7 +117,7 @@ const FaunaSSG: NextLayoutPage = ({
   }, [newShow, shows])
 
   const handleUpdateShow = useCallback(
-    async (event: React.MouseEvent<HTMLInputElement>) => {
+    async (event: React.MouseEvent) => {
       const eventTarget = event.target as HTMLInputElement
       await fetch('/api/update-show', {
         body: JSON.stringify({
