@@ -67,7 +67,7 @@ jobs:
         run: pnpm type-check
 
       - name: Run jest
-        run: pnpm test:jest:coverage2
+        run: pnpm test:jest:ci
 
       # TODO: would be better to run this once a day or so
       - name: Run audit
@@ -110,6 +110,12 @@ jobs:
 
       - name: Cypress run
         uses: cypress-io/github-action@v2
+        with:
+          # we have already installed all dependencies above
+          install: false
+          # command: pnpm --dir cypress/ cypress:ci
+          start: 'next dev -p 3004'
+          # wait-on: 'https://localhost:3000'
         env:
           CI: true
           FAUNADB_SECRET: ${{ secrets.FAUNADB_SECRET }}
