@@ -19,6 +19,7 @@
     " ----------------------- Development ----------------------- ": "",
     "?dev": "echo Start next app in dev mode",
     "dev": "pnpm open && next",
+    "dev:ci": "next -p 3004",
     "?debug": "echo Start node debugger",
     "debug": "NODE_OPTIONS='--inspect' next",
     "?build": "echo Build the app",

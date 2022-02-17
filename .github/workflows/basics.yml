@@ -114,7 +114,7 @@ jobs:
           # we have already installed all dependencies above
           install: false
           # command: pnpm --dir cypress/ cypress:ci
-          start: 'next dev -p 3004'
+          start: 'pnpm run dev:ci'
           wait-on: 'http://localhost:3004'
         env:
           CI: true
