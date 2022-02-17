@@ -115,7 +115,7 @@ jobs:
           install: false
           # command: pnpm --dir cypress/ cypress:ci
           start: 'next dev -p 3004'
-          wait-on: 'https://localhost:3004'
+          wait-on: 'http://localhost:3004'
         env:
           CI: true
           FAUNADB_SECRET: ${{ secrets.FAUNADB_SECRET }}
