@@ -66,6 +66,9 @@ jobs:
       - name: Run type-check
         run: pnpm type-check
 
+      - name: Run jest
+        run: pnpm test:jest:coverage2
+
       # TODO: would be better to run this once a day or so
       - name: Run audit
         run: |
@@ -105,8 +108,8 @@ jobs:
           pnpm --version
           pnpm install --prefer-frozen-lockfile
 
-      - name: 'Run tests'
-        run: pnpm test:coverage
+      - name: 'Run cypress tests'
+        run: pnpm test:jest:coverage3
         env:
           CI: true
           FAUNADB_SECRET: ${{ secrets.FAUNADB_SECRET }}
