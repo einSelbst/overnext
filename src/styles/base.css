@@ -68,7 +68,9 @@ html {
   font-feature-settings: 'case' 1, 'rlig' 1, 'calt' 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizelegibility;
+
+  /* @see https://bocoup.com/blog/text-rendering */
+  text-rendering: auto;
   touch-action: manipulation;
 }
 
@@ -79,7 +81,9 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizelegibility;
+
+  /* @see https://bocoup.com/blog/text-rendering */
+  text-rendering: auto;
 }
 
 body {
