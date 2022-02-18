@@ -20,7 +20,6 @@ const customJestConfig = {
    *  },
    */
 
-  // if using TypeScript with a baseUrl set to the root directory then you need the below for alias' to work
   moduleDirectories: ['node_modules', '<rootDir>/'],
 
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json', 'jsx'],
@@ -38,35 +37,35 @@ const customJestConfig = {
   /* setupFilesAfterEnv: ['<rootDir>/jest-setup.ts'], */
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
 
-  testEnvironment: 'jsdom',
-  /* testEnvironment: 'jest-environment-jsdom', */
+  /* testEnvironment: 'jsdom', */
+  testEnvironment: 'jest-environment-jsdom',
 
   testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(test).[jt]s?(x)'],
   testPathIgnorePatterns: ['<rootDir>[/\\\\](node_modules|.next)[/\\\\]'],
 
   // with babel
-  transform: {
-    // the first line would mean swc is used in tests, but it gives a warning I don't know how to get rid of
-    /* '^.+\\.(ts|tsx)$': 'babel-jest', */
-    // so I'm optiong out of swc for jest for now
+  /* transform: { */
+  // the first line would mean swc is used in tests, but it gives a warning I don't know how to get rid of
+  /* '^.+\\.(ts|tsx)$': 'babel-jest', */
+  // so I'm optiong out of swc for jest for now
 
-    '^.+\\.(js|jsx|ts|tsx)$': [
-      'babel-jest',
-      {
-        presets: [
-          [
-            'next/babel',
-            {
-              'styled-jsx': {
-                'babel-test': true,
-              },
-            },
-          ],
-        ],
-      },
-    ],
-  },
-
+  /* '^.+\\.(js|jsx|ts|tsx)$': [
+   *   'babel-jest',
+   *   {
+   *     presets: [
+   *       [
+   *         'next/babel',
+   *         {
+   *           'styled-jsx': {
+   *             'babel-test': true,
+   *           },
+   *         },
+   *       ],
+   *     ],
+   *   },
+   * ],
+     },
+   */
   // with swc explicitly
   /*
    * transform: {
