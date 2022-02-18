@@ -120,12 +120,11 @@ const nextConfiguration = {
     reactRemoveProperties: true,
     removeConsole: true,
   },
-
   env: {
     NEXT_PUBLIC_SENTRY_DSN:
       detectPlatform() === LOCALHOST
-        ? undefined
-        : 'https://6dbd51aeaa4a4e32b77e9f51a7236a64@o470070.ingest.sentry.io/5842378',
+      ? undefined
+      : 'https://6dbd51aeaa4a4e32b77e9f51a7236a64@o470070.ingest.sentry.io/5842378',
     platform: detectPlatform(),
   },
 
@@ -139,41 +138,41 @@ const nextConfiguration = {
 
   // @see {@link https://github.com/vercel/next.js/blob/canary/packages/next/server/config-shared.ts#L130}
   /* experimental: { */
-  /* disablePostcssPresetEnv: boolean */
-  /* styledComponents?: boolean */
-  /* swcFileReading?: boolean */
-  /* cpus?: number */
-  /* sharedPool?: boolean */
-  /* plugins?: boolean */
-  /* profiling?: boolean */
-  /* isrFlushToDisk?: boolean */
-  /* reactMode?: 'legacy' | 'concurrent' | 'blocking' */
-  /* workerThreads?: boolean */
-  /* pageEnv?: boolean */
-  /* optimizeImages?: boolean */
-  /* optimizeCss?: boolean */
-  /* scrollRestoration?: boolean */
-  /* externalDir?: boolean */
-  /* conformance?: boolean */
-  /*
-   * amp?: {
-   *   optimizer?: any
-   *   validator?: string
-   *   skipValidation?: boolean
-   * }
-   */
-  /* reactRoot?: boolean */
-  /* disableOptimizedLoading?: boolean */
-  /* gzipSize?: boolean */
-  /* craCompat?: boolean */
-  /* esmExternals?: boolean | 'loose' */
-  /* isrMemoryCacheSize?: number */
-  /* concurrentFeatures?: boolean */
-  /* serverComponents?: boolean */
-  /* fullySpecified?: boolean */
-  /* urlImports?: NonNullable<webpack5.Configuration['experiments']>['buildHttp'] */
-  /* outputFileTracingRoot?: string */
-  /* outputStandalone?: boolean */
+    /* disablePostcssPresetEnv: boolean */
+    /* styledComponents?: boolean */
+    /* swcFileReading?: boolean */
+    /* cpus?: number */
+    /* sharedPool?: boolean */
+    /* plugins?: boolean */
+    /* profiling?: boolean */
+    /* isrFlushToDisk?: boolean */
+    /* reactMode?: 'legacy' | 'concurrent' | 'blocking' */
+    /* workerThreads?: boolean */
+    /* pageEnv?: boolean */
+    /* optimizeImages?: boolean */
+    /* optimizeCss?: boolean */
+    /* scrollRestoration?: boolean */
+    /* externalDir?: boolean */
+    /* conformance?: boolean */
+    /*
+     * amp?: {
+     *   optimizer?: any
+     *   validator?: string
+     *   skipValidation?: boolean
+     * }
+     */
+    /* reactRoot?: boolean */
+    /* disableOptimizedLoading?: boolean */
+    /* gzipSize?: boolean */
+    /* craCompat?: boolean */
+    /* esmExternals?: boolean | 'loose' */
+    /* isrMemoryCacheSize?: number */
+    /* concurrentFeatures?: boolean */
+    /* serverComponents?: boolean */
+    /* fullySpecified?: boolean */
+    /* urlImports?: NonNullable<webpack5.Configuration['experiments']>['buildHttp'] */
+    /* outputFileTracingRoot?: string */
+    /* outputStandalone?: boolean */
   /* }, */
 
   future: {},
