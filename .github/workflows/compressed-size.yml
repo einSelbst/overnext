@@ -78,7 +78,7 @@ jobs:
 
       - name: Load time cost
         if: ${{ steps.skip_check.outputs.should_skip != 'true' }}
-        uses: andresz1/size-limit-action@v1
+        uses: andresz1/size-limit-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           skip_step: build
