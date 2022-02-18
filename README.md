@@ -24,7 +24,7 @@
     Versions
   </summary>
 
-![next version](https://img.shields.io/badge/next-12.0.10-brightgreen)
+![next version](https://img.shields.io/badge/next-12.1.0-brightgreen)
 ![react version](https://img.shields.io/badge/react-17.0.2-brightgreen)
 ![webpack version](https://img.shields.io/badge/webpack-5.69.0-brightgreen)
 ![@babel/core version](https://img.shields.io/badge/@babel/core-7.17.4-brightgreen)
