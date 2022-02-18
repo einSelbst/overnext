@@ -49,7 +49,8 @@ const customJestConfig = {
   /* '^.+\\.(ts|tsx)$': 'babel-jest', */
   // so I'm optiong out of swc for jest for now
 
-  /* '^.+\\.(js|jsx|ts|tsx)$': [
+  /*
+   * '^.+\\.(js|jsx|ts|tsx)$': [
    *   'babel-jest',
    *   {
    *     presets: [
@@ -64,7 +65,7 @@ const customJestConfig = {
    *     ],
    *   },
    * ],
-     },
+   * },
    */
   // with swc explicitly
   /*
