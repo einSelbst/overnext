@@ -166,7 +166,7 @@
     "@types/core-js": "2.5.5",
     "@types/eslint": "8.4.1",
     "@types/is-ci": "3.0.0",
-    "@types/jest": "27.4.0",
+    "@types/jest": "27.4.1",
     "@types/prettier": "2.4.4",
     "@types/sass": "1.43.1",
     "@types/source-map-support": "0.5.4",
