@@ -2,9 +2,10 @@ import { useTheme } from 'next-themes'
 import { useCallback, useEffect, useState } from 'react'
 
 const ThemeChanger = (): ComponentReturnType => {
-  type ThemeType = ReturnType<typeof useTheme>
+  /* type ThemeType = ReturnType<typeof useTheme> */
 
-  const { theme, setTheme }: ThemeType = useTheme()
+  /* const { theme, setTheme }: ThemeType = useTheme() */
+  const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
