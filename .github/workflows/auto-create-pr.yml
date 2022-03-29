@@ -98,7 +98,7 @@ jobs:
       # GitHub Action does not allow recursion so the CI checks are
       # not triggered when the branch is pushed
       - name: Trigger CI checks for new pull request
-        uses: peter-evans/repository-dispatch@v1
+        uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ secrets.ACTION_TOKEN }}
           event-type: new-pull-request
