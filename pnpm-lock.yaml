@@ -27,7 +27,7 @@ specifiers:
   '@tailwindcss/forms': 0.5.0
   '@tailwindcss/line-clamp': 0.3.1
   '@tailwindcss/typography': 0.5.2
-  '@testing-library/jest-dom': 5.16.2
+  '@testing-library/jest-dom': 5.16.3
   '@testing-library/react': 12.1.4
   '@textlint/ast-node-types': 12.1.1
   '@textlint/types': 12.1.1
@@ -180,7 +180,7 @@ devDependencies:
   '@tailwindcss/forms': 0.5.0_tailwindcss@3.0.23
   '@tailwindcss/line-clamp': 0.3.1_tailwindcss@3.0.23
   '@tailwindcss/typography': 0.5.2_tailwindcss@3.0.23
-  '@testing-library/jest-dom': 5.16.2
+  '@testing-library/jest-dom': 5.16.3
   '@testing-library/react': 12.1.4_react-dom@17.0.2+react@17.0.2
   '@textlint/ast-node-types': 12.1.1
   '@textlint/types': 12.1.1
@@ -2739,8 +2739,8 @@ packages:
       pretty-format: 27.5.1
     dev: true
 
-  /@testing-library/jest-dom/5.16.2:
-    resolution: {integrity: sha512-6ewxs1MXWwsBFZXIk4nKKskWANelkdUehchEOokHsN8X7c2eKXGw+77aRV63UU8f/DTSVUPLaGxdrj4lN7D/ug==}
+  /@testing-library/jest-dom/5.16.3:
+    resolution: {integrity: sha512-u5DfKj4wfSt6akfndfu1eG06jsdyA/IUrlX2n3pyq5UXgXMhXY+NJb8eNK/7pqPWAhCKsCGWDdDO0zKMKAYkEA==}
     engines: {node: '>=8', npm: '>=6', yarn: '>=1'}
     dependencies:
       '@babel/runtime': 7.17.2
