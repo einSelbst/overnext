@@ -249,7 +249,7 @@ stylelint-check: Check stylelint for rules conflicting prettier
 ## Tech Stack
 
 - next.js, who would have thought
-- test branch with preact, btw [inferno](https://github.com/infernojs/inferno) is [not compatible](https://github.com/vercel/next.js/pull/9038) with nextjs
+- production deployment (& a test branch with another setup) with preact, btw [inferno](https://github.com/infernojs/inferno) is [not compatible](https://github.com/vercel/next.js/pull/9038) with nextjs
 - Sentry for error monitoring
 - FaunaDB
 - WIP: sanity
@@ -257,13 +257,11 @@ stylelint-check: Check stylelint for rules conflicting prettier
 
 ### Afternext
 
-- [vite](https://vitejs.dev/) with [vite-p.ugin-ssr](https://github.com/brillout/vite-plugin-ssr)
+- [vite](https://vitejs.dev/) with [vite-plugin-ssr](https://github.com/brillout/vite-plugin-ssr)
 - [solid.js](https://www.solidjs.com/)
 - [svelte](https://svelte.dev/)
 
 ## Next.js Configuration
-
-- I used to use `target: 'serverless'` in nextjs config because netlify once told me so but this is [not adviced](https://github.com/vercel/next.js/issues/20487#issuecomment-753884085) and doesn't work with the sentry plugin so now I use `target: 'experimental-serverless-trace'`
 
 ### Features in use
 
@@ -482,7 +480,6 @@ ToDo link to API Docs
 ## Roadmap
 
 - integrate Sanity
-- integrate FaunaDB
 - integrate React Query
 - integrate React Hook Form
 - integrate ajv
