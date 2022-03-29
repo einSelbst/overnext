@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Create or Update Project Card
         id: card-creation
-        uses: peter-evans/create-or-update-project-card@v1
+        uses: peter-evans/create-or-update-project-card@v2
         with:
           project-name: Main Project
           column-name: In progress
