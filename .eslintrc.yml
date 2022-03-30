@@ -287,6 +287,7 @@ overrides:
       '@typescript-eslint/consistent-type-definitions': [error, type]
       '@typescript-eslint/sort-type-union-intersection-members': warn
       '@typescript-eslint/no-unnecessary-condition': warn
+      '@typescript-eslint/no-misused-promises': warn
       '@typescript-eslint/no-namespace': [error, { 'allowDeclarations': true }]
       '@typescript-eslint/no-type-alias':
         - error
