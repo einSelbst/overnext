@@ -41,14 +41,16 @@ const detectPlatform = () => {
 const ContentSecurityPolicy = `
   default-src 'self';
   script-src 'self' 'unsafe-eval' 'unsafe-inline';
+  script-src-elem 'self' data:;
   style-src 'self' *.googleapis.com 'unsafe-inline';
   img-src * blob: data:;
   font-src 'self' data: fonts.gstatic.com;
   frame-src 'self' *.youtube-nocookie.com;
+  sandbox allow-same-origin allow-scripts;
   connect-src *;
   media-src 'none';
-  upgrade-insecure-requests
 `
+/* upgrade-insecure-requests */
 
 const PermissionsPolicy = `
   accelerometer=(),

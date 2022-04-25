@@ -1,7 +1,7 @@
 [
   {
     "name": "load time for all",
-    "limit": "750 ms",
+    "limit": "850 ms",
     "path": [".next/**/*.html"]
   },
   {
@@ -11,7 +11,7 @@
   },
   {
     "name": "load time static rendered index page",
-    "limit": "500 ms",
+    "limit": "600 ms",
     "path": ".next/server/pages/de.html"
   },
   {

@@ -2,6 +2,7 @@ import type { NextComponentType } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 
+/* eslint-disable react/iframe-missing-sandbox */
 export const Home = (): NextComponentType => (
   <div className='container'>
     <Head>
@@ -23,11 +24,15 @@ export const Home = (): NextComponentType => (
           A short story
         </h2>
         {/* @see {@link https://css-tricks.com/lazy-load-embedded-youtube-videos/} */}
+        {/* iframe sandbox attribute should match my CSP headers, actually I have this redundant now */}
+        {/* however, using 'allow-scripts' and 'allow-same-origin' defeates the purpose of sandboxing, but without this my need loading trick doesn't work */}
+        {/* to allow links from iframes I would need to add 'allow-popups', see https://csplite.com/csp/test186/ */}
         <iframe
           allowFullScreen
           allow='autoplay; encrypted-media; picture-in-picture'
           height='315'
           loading='lazy'
+          sandbox='allow-scripts allow-same-origin'
           src='https://www.youtube-nocookie.com/embed/h6fcK_fRYaI'
           srcDoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%;}div{display:grid;place-items:center;}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:50px;text-align:center;font:28px/50px sans-serif;color:white; width: 13%;background-color: rgba( 0, 0, 0, 0.6 );border-radius:10px}span:hover{background-color: red}</style><a href=https://www.youtube-nocookie.com/embed/h6fcK_fRYaI?autoplay=1><img src=https://img.youtube.com/vi/h6fcK_fRYaI/hqdefault.jpg alt='Kurzgesagt: The Egg' /><div><span>&#x25BA;</span></div></a>"
           title='YouTube video player'
@@ -99,5 +104,6 @@ export const Home = (): NextComponentType => (
     `}</style>
   </div>
 )
+/* eslint-enable react/iframe-missing-sandbox */
 
 export default Home
