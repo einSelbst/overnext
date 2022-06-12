@@ -76,7 +76,7 @@ jobs:
       - name: Install pnpm
         if: steps.cache-pnpm-dir.outputs.cache-hit != 'true'
         run: |
-          npm i pnpm@next -g
+          npm i pnpm@next-7 -g
           pnpm --version
 
       - name: Install dependencies

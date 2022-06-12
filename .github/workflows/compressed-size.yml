@@ -46,7 +46,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@master
         with:
-          version: next
+          version: next-7
 
       - name: Check and report changes in the application's package size
         if: ${{ steps.skip_check.outputs.should_skip != 'true' }}
