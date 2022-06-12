@@ -256,10 +256,9 @@
       "chokidar": "3",
       "debug": "latest",
       "source-map-resolve": "latest",
-      "estimo": "2.3.1",
-      "puppeteer-core": "latest",
       "minimist": ">=1.2.6",
-      "async@<2.6.4": ">=2.6.4"
+      "async@<2.6.4": ">=2.6.4",
+      "ejs@<3.1.7": ">=3.1.7"
     }
   },
   "next-unused": {
