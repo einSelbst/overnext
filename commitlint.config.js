@@ -1,8 +1,6 @@
 module.exports = {
   extends: ['@commitlint/config-conventional'],
-  ignores: [
-    (message) => message.includes('skip actions')
-  ],
+  ignores: [message => message.includes('skip actions')],
   /* add some more commit types */
   rules: {
     'type-enum': [
@@ -20,7 +18,6 @@ module.exports = {
         'feat',
         'fix',
         'i18n', // internationalization
-        'look',
         'perf',
         'refactor',
         'revert',
