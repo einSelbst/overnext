@@ -83,7 +83,7 @@ specifiers:
   faunadb: 4.5.3
   fsevents: 2.3.2
   git-format-staged: latest
-  html-validate: 6.11.1
+  html-validate: 7.1.1
   husky: 8.0.1
   hyperlink: 5.0.4
   is-ci: 3.0.1
@@ -229,7 +229,7 @@ devDependencies:
   eslint-plugin-tsdoc: 0.2.16
   eslint-plugin-unicorn: 42.0.0_eslint@8.17.0
   git-format-staged: 3.0.0
-  html-validate: 6.11.1_jest@27.5.1
+  html-validate: 7.1.1_jest@27.5.1
   husky: 8.0.1
   hyperlink: 5.0.4
   jest: 27.5.1_ts-node@10.8.1
@@ -1881,12 +1881,11 @@ packages:
       '@hapi/hoek': 9.2.1
     dev: true
 
-  /@html-validate/stylish/2.0.1:
-    resolution: {integrity: sha512-iRLjgQnNq66rcsTukun6KwMhPEoUV2R3atPbTSapnEvD1aETjD+pfS+1yYrmaPeJFgXHzfsSYjAuyUVq7EID/Q==}
-    engines: {node: '>= 12.0'}
+  /@html-validate/stylish/3.0.1:
+    resolution: {integrity: sha512-jQNDrSnWvJEPSlqC1tFqcbmVuJy2x61UwqFsXHxYT2sgCXFW4AVhsoIcHkECCmUHtQ8hpHU6yOBGA+rMLZhS7A==}
+    engines: {node: '>= 14.0'}
     dependencies:
       kleur: 4.1.4
-      text-table: 0.2.0
     dev: true
 
   /@humanwhocodes/config-array/0.9.3:
@@ -2565,9 +2564,9 @@ packages:
     resolution: {integrity: sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==}
     dev: true
 
-  /@sidvind/better-ajv-errors/1.1.1_ajv@8.10.0:
-    resolution: {integrity: sha512-CXnmMcV4QoyWuFA0zlDk0AWMHftaMFAIFWz68AH4EXOO2iUEq0gsonJEhY3OjM08xHYobqqDeCAPPEsL5E+8QA==}
-    engines: {node: '>= 12.13.0'}
+  /@sidvind/better-ajv-errors/2.0.0_ajv@8.10.0:
+    resolution: {integrity: sha512-S+3eyeMbWQifgbDF15eojGVJi8n5uU0bGJYQsvsHPyU4lmrMsXvfiCh7MM0IPEF4a4jRBsljMExtKlo7kM0jqQ==}
+    engines: {node: '>= 14.0.0'}
     peerDependencies:
       ajv: 4.11.8 - 8
     dependencies:
@@ -8131,9 +8130,9 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /html-validate/6.11.1_jest@27.5.1:
-    resolution: {integrity: sha512-SyEEVN/7atyRSFmvTJgGH8yDZtvA7FH+gR4Uir5m9Cq1cME6udnfMaSVteafWqLVB7II+YLdfCSmdynrTs52Cw==}
-    engines: {node: '>= 12.22'}
+  /html-validate/7.1.1_jest@27.5.1:
+    resolution: {integrity: sha512-T2/VAg9EsgZ1Xcn5hzfimCf8qdtXHiRXw6vI+B6w+y62vDJYC1/Z/2Prhr+kkus7mtjZIKxQUd12BaCzHYGbgg==}
+    engines: {node: '>= 14.0'}
     hasBin: true
     peerDependencies:
       jest: ^25.1 || ^26 || ^27.1 || ^28
@@ -8148,8 +8147,8 @@ packages:
         optional: true
     dependencies:
       '@babel/code-frame': 7.16.7
-      '@html-validate/stylish': 2.0.1
-      '@sidvind/better-ajv-errors': 1.1.1_ajv@8.10.0
+      '@html-validate/stylish': 3.0.1
+      '@sidvind/better-ajv-errors': 2.0.0_ajv@8.10.0
       acorn-walk: 8.2.0
       ajv: 8.10.0
       deepmerge: 4.2.2
