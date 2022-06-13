@@ -8,7 +8,7 @@ overrides:
   source-map-resolve: latest
   minimist: '>=1.2.6'
   async@<2.6.4: '>=2.6.4'
-  ejs@<3.1.7: '>=3.1.7'
+  ejs: '>=3.1.7'
 
 specifiers:
   '@axe-core/react': latest
@@ -84,7 +84,7 @@ specifiers:
   fsevents: 2.3.2
   git-format-staged: latest
   html-validate: 6.6.1
-  husky: 7.0.4
+  husky: 8.0.1
   hyperlink: 5.0.4
   is-ci: 3.0.1
   jest: 27.5.1
@@ -230,7 +230,7 @@ devDependencies:
   eslint-plugin-unicorn: 42.0.0_eslint@8.12.0
   git-format-staged: 3.0.0
   html-validate: 6.6.1_jest@27.5.1
-  husky: 7.0.4
+  husky: 8.0.1
   hyperlink: 5.0.4
   jest: 27.5.1_ts-node@10.7.0
   jest-watch-typeahead: 1.0.0_jest@27.5.1
@@ -2675,7 +2675,7 @@ packages:
   /@surma/rollup-plugin-off-main-thread/2.2.3:
     resolution: {integrity: sha512-lR8q/9W7hZpMWweNiAKU7NQerBnzQQLvi8qnTDU/fxItPhtZVMbPV3lbCwjhIlNBe9Bbr5V+KHshvWmVSG9cxQ==}
     dependencies:
-      ejs: 3.1.6
+      ejs: 3.1.8
       json5: 2.2.0
       magic-string: 0.25.7
       string.prototype.matchall: 4.0.6
@@ -6191,12 +6191,12 @@ packages:
       safer-buffer: 2.1.2
     dev: true
 
-  /ejs/3.1.6:
-    resolution: {integrity: sha512-9lt9Zse4hPucPkoP7FHDF0LQAlGyF9JVpnClFLFH3aSSbxmyoqINRpp/9wePWJTUl4KOQwRL72Iw3InHPDkoGw==}
+  /ejs/3.1.8:
+    resolution: {integrity: sha512-/sXZeMlhS0ArkfX2Aw780gJzXSMPnKjtspYZv+f3NiKLlubezAHDU5+9xz6gd3/NhG3txQCo6xlglmTS+oTGEQ==}
     engines: {node: '>=0.10.0'}
     hasBin: true
     dependencies:
-      jake: 10.8.2
+      jake: 10.8.5
     dev: false
 
   /electron-to-chromium/1.4.152:
@@ -8205,9 +8205,9 @@ packages:
     engines: {node: '>=10.17.0'}
     dev: true
 
-  /husky/7.0.4:
-    resolution: {integrity: sha512-vbaCKN2QLtP/vD4yvs6iz6hBEo6wkSzs8HpRah1Z6aGmF2KW5PdYuAd7uX5a+OyBZHBhd+TFLqgjUgytQr4RvQ==}
-    engines: {node: '>=12'}
+  /husky/8.0.1:
+    resolution: {integrity: sha512-xs7/chUH/CKdOCs7Zy0Aev9e/dKOMZf3K1Az1nar3tzlv0jfqnYtu235bstsWTmXOR0EfINrPa97yy4Lz6RiKw==}
+    engines: {node: '>=14'}
     hasBin: true
     dev: true
 
@@ -8802,12 +8802,13 @@ packages:
       istanbul-lib-report: 3.0.0
     dev: true
 
-  /jake/10.8.2:
-    resolution: {integrity: sha512-eLpKyrfG3mzvGE2Du8VoPbeSkRry093+tyNjdYaBbJS9v17knImYGNXQCUV0gLxQtF82m3E8iRb/wdSQZLoq7A==}
+  /jake/10.8.5:
+    resolution: {integrity: sha512-sVpxYeuAhWt0OTWITwT98oyV0GsXyMlXCF+3L1SuafBVUIr/uILGRB+NqwkzhgXKvoJpDIpQvqkUALgdmQsQxw==}
+    engines: {node: '>=10'}
     hasBin: true
     dependencies:
       async: 3.2.3
-      chalk: 2.4.2
+      chalk: 4.1.2
       filelist: 1.0.2
       minimatch: 3.1.2
     dev: false
