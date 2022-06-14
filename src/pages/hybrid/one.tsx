@@ -62,7 +62,9 @@ const One = ({ success, error }: Props): NextComponentType => {
       <p>
         I&apos;m a hybrid page and I&apos;m available in multiple languages!
       </p>
-      {isAmp && <p>Now I&apos;am AMP! (escaping entity is difficult here)</p>}
+      {isAmp ? (
+        <p>Now I&apos;am AMP! (escaping entity is difficult here)</p>
+      ) : undefined}
 
       {/* @see https://github.com/sindresorhus/react-extras#choose */}
       <div className='h-8 w-8'>

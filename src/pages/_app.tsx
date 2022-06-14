@@ -84,7 +84,7 @@ const HeadIcons = (): JSX.Element => {
 
   return (
     <Head>
-      {isNotAmp && (
+      {isNotAmp ? (
         <>
           <meta
             content='initial-scale=1.0, width=device-width'
@@ -130,7 +130,7 @@ const HeadIcons = (): JSX.Element => {
             name='theme-color'
           />
         </>
-      )}
+      ) : undefined}
       {useAmp() && <meta content='#ffffff' name='theme-color' />}
 
       {/* <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86" /> see https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag */}
@@ -280,7 +280,7 @@ const _app = ({
             Component={Component}
             pageProps={pageProps} /> */}
 
-      {process.browser && ENV.DEVELOPMENT && <A11yLinter />}
+      {process.browser && ENV.DEVELOPMENT ? <A11yLinter /> : undefined}
     </ThemeProvider>
   )
   /* eslint-enable react/jsx-props-no-spreading */

@@ -28,7 +28,7 @@ extends:
   - plugin:array-func/all
   - plugin:sonarjs/recommended
   - plugin:eslint-comments/recommended
-  - plugin:json-schema-validator/recommended
+  #  - plugin:json-schema-validator/recommended
   - plugin:toml/standard
   - plugin:@next/next/recommended
   - prettier
@@ -359,7 +359,7 @@ overrides:
     # nested overrides are allowed, the schemastore needs an update...
     # https://eslint.org/docs/user-guide/configuring/configuration-files#how-do-overrides-work
     # https://github.com/SchemaStore/schemastore/blob/master/src/schemas/json/eslintrc.json
-    # eslint-disable-next-line json-schema-validator/no-invalid
+    # wip-eslint-disable-next-line json-schema-validator/no-invalid
     overrides:
       # Config for typescript cypress Linting
       - files:
