@@ -7,7 +7,7 @@ rules:
       - 'tâmia'
   terminology:
     # Load default terms (see terms.json in the repository)
-    # defaultTerms: true
+    defaultTerms: false
     # Syntax elements to skip. Overrides the default
     # skip:
     #   - Blockquote
