@@ -7,7 +7,8 @@
     "no-inline-style": "off",
     "no-redundant-for": "off",
     "void-style": "off",
-    "require-sri": "off"
+    "require-sri": "off",
+    "valid-id": ["error", { "relaxed": true }]
   },
   "plugins": [],
   "elements": [
