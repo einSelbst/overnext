@@ -7,7 +7,7 @@ rules:
       - 'tâmia'
   terminology:
     # Load default terms (see terms.json in the repository)
-    defaultTerms: true
+    defaultTerms: false
     # Syntax elements to skip. Overrides the default
     # skip:
     #   - Blockquote
@@ -38,8 +38,8 @@ rules:
     #     - $1webpack
     #   - - '(\w+[^.?!]\)? )internet'
     #     - $internet
-    # # OR load terms from a file
-    # "terms": "~/terms.json",
+    # OR load terms from a file
+    'terms': './terms.jsonc'
     # OR load terms from npm
     # "terms": "@johnsmith/terms",
     # Excludes terms
