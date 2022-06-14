@@ -175,6 +175,7 @@
     "@types/standard-version": "7.0.1",
     "@types/stylelint": "13.13.3",
     "@types/testing-library__jest-dom": "5.14.3",
+    "@typescript-eslint/eslint-plugin": "5.28.0",
     "babel-loader": "8.2.5",
     "c8": "7.11.3",
     "commitizen": "4.2.4",
