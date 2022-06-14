@@ -103,7 +103,7 @@ specifiers:
   postcss: 8.4.14
   postcss-syntax: 0.36.2
   preact: 10.8.0
-  prettier: 2.6.2
+  prettier: 2.7.0
   prettier-plugin-sh: 0.11.0
   prettier-plugin-tailwindcss: 0.1.11
   prettier-plugin-toml: latest
@@ -241,9 +241,9 @@ devDependencies:
   nyc: 15.1.0
   postcss: 8.4.14
   postcss-syntax: 0.36.2_postcss@8.4.14
-  prettier: 2.6.2
-  prettier-plugin-sh: 0.11.0_prettier@2.6.2
-  prettier-plugin-tailwindcss: 0.1.11_prettier@2.6.2
+  prettier: 2.7.0
+  prettier-plugin-sh: 0.11.0_prettier@2.7.0
+  prettier-plugin-tailwindcss: 0.1.11_prettier@2.7.0
   prettier-plugin-toml: 0.3.1
   size-limit: 7.0.8
   source-map-support: 0.5.21
@@ -1819,7 +1819,7 @@ packages:
       jest-util: 27.5.1
       jest-validate: 27.5.1
       jest-watcher: 27.5.1
-      micromatch: 4.0.5
+      micromatch: 4.0.4
       rimraf: 3.0.2
       slash: 3.0.0
       strip-ansi: 6.0.1
@@ -4671,7 +4671,7 @@ packages:
     dev: true
 
   /code-point-at/1.1.0:
-    resolution: {integrity: sha512-RpAVKQA5T63xEj6/giIbUEtZwJ4UFIc3ZtvEkiaUERylqe8xb5IvqcgOurZLahv93CLKfxcw5YI+DZcUBRyLXA==}
+    resolution: {integrity: sha1-DQcLTQQ6W+ozovGkDi7bPZpMz3c=}
     engines: {node: '>=0.10.0'}
 
   /collect-v8-coverage/1.0.1:
@@ -8140,7 +8140,7 @@ packages:
     resolution: {integrity: sha512-VLghIWNM6ELQzo7zwmcg0NmTVyWKYjvIeM83yjp0wRDTmUnrM678fQbcKBo6n2CJEF0szoG//ytg+TKla89ALQ==}
 
   /isexe/2.0.0:
-    resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
+    resolution: {integrity: sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=}
 
   /isstream/0.1.2:
     resolution: {integrity: sha512-Yljz7ffyPbrLpLngrMtZ7NduUgVvi6wG9RJ9IUcyCd59YQ911PBJphODUcbOVbqYfxe1wuYf/LJ8PauMRwsM/g==}
@@ -8334,7 +8334,7 @@ packages:
       jest-runner: 27.5.1
       jest-util: 27.5.1
       jest-validate: 27.5.1
-      micromatch: 4.0.5
+      micromatch: 4.0.4
       parse-json: 5.2.0
       pretty-format: 27.5.1
       slash: 3.0.0
@@ -9035,7 +9035,7 @@ packages:
     dev: true
 
   /lie/3.1.1:
-    resolution: {integrity: sha512-RiNhHysUjhrDQntfYSfY4MU24coXXdEOgw9WGcKHNeEwffDYbF//u87M1EWaMGzuFoSbqW0C9C6lEEhDOAswfw==}
+    resolution: {integrity: sha1-mkNrLMd0bKWd56QfpGmz77dr2H4=}
     dependencies:
       immediate: 3.0.6
     dev: false
@@ -9660,6 +9660,14 @@ packages:
       - supports-color
     dev: true
 
+  /micromatch/4.0.4:
+    resolution: {integrity: sha512-pRmzw/XUcwXGpD9aI9q/0XOwLNygjETJ8y0ao0wdqprrzDa4YnxLcz7fQRZr8voh8V10kGhABbNcHVk5wHgWwg==}
+    engines: {node: '>=8.6'}
+    dependencies:
+      braces: 3.0.2
+      picomatch: 2.3.1
+    dev: true
+
   /micromatch/4.0.5:
     resolution: {integrity: sha512-DMy+ERcEW2q8Z2Po+WNXuw3c5YaUSFjAO5GsJqfEl7UjvtIuFKO6ZrKvcItdy98dwFI2N1tg3zNIdKaQT+aNdA==}
     engines: {node: '>=8.6'}
@@ -9820,7 +9828,7 @@ packages:
     dev: true
 
   /natural-compare/1.4.0:
-    resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
+    resolution: {integrity: sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=}
     dev: true
 
   /neo-async/2.6.2:
@@ -10066,7 +10074,7 @@ packages:
     dev: true
 
   /number-is-nan/1.0.1:
-    resolution: {integrity: sha512-4jbtZXNAsfZbAHiiqjLPBiCl16dES1zI4Hpzzxw61Tk+loF+sBDBKx1ICKKKwIqQ7M0mFn1TmkN7euSncWgHiQ==}
+    resolution: {integrity: sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=}
     engines: {node: '>=0.10.0'}
 
   /nwsapi/2.2.0:
@@ -10918,14 +10926,6 @@ packages:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
 
-  /postcss-selector-parser/6.0.9:
-    resolution: {integrity: sha512-UO3SgnZOVTwu4kyLR22UQ1xZh086RyNZppb7lLAKBFK8a32ttG5i87Y/P3+2bRSjZNyJ1B7hfFNo273tKe9YxQ==}
-    engines: {node: '>=4'}
-    dependencies:
-      cssesc: 3.0.0
-      util-deprecate: 1.0.2
-    dev: true
-
   /postcss-sorting/5.0.1:
     resolution: {integrity: sha512-Y9fUFkIhfrm6i0Ta3n+89j56EFqaNRdUKqXyRp6kvTcSXnmgEjaVowCXH+JBe9+YKWqd4nc28r2sgwnzJalccA==}
     engines: {node: '>=8.7.0'}
@@ -11092,23 +11092,23 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /prettier-plugin-sh/0.11.0_prettier@2.6.2:
+  /prettier-plugin-sh/0.11.0_prettier@2.7.0:
     resolution: {integrity: sha512-YwuWGYuf6UiF80BZ3Lrby2yot0zRcktcBl+VD/xSLoPrmiH/yXcopz3RBtNMNcBeP13ALim9N/LtlTCmvUziVQ==}
     engines: {node: '>=12.20'}
     peerDependencies:
       prettier: ^2.0.0
     dependencies:
       mvdan-sh: 0.10.1
-      prettier: 2.6.2
+      prettier: 2.7.0
     dev: true
 
-  /prettier-plugin-tailwindcss/0.1.11_prettier@2.6.2:
+  /prettier-plugin-tailwindcss/0.1.11_prettier@2.7.0:
     resolution: {integrity: sha512-a28+1jvpIZQdZ/W97wOXb6VqI762MKE/TxMMuibMEHhyYsSxQA8Ek30KObd5kJI2HF1ldtSYprFayXJXi3pz8Q==}
     engines: {node: '>=12.17.0'}
     peerDependencies:
       prettier: '>=2.2.0'
     dependencies:
-      prettier: 2.6.2
+      prettier: 2.7.0
     dev: true
 
   /prettier-plugin-toml/0.3.1:
@@ -11124,8 +11124,8 @@ packages:
     hasBin: true
     dev: true
 
-  /prettier/2.6.2:
-    resolution: {integrity: sha512-PkUpF+qoXTqhOeWL9fu7As8LXsIUZ1WYaJiY/a7McAQzxjk82OF0tibkFXVCDImZtWxbvojFjerkiLb0/q8mew==}
+  /prettier/2.7.0:
+    resolution: {integrity: sha512-nwoX4GMFgxoPC6diHvSwmK/4yU8FFH3V8XWtLQrbj4IBsK2pkYhG4kf/ljF/haaZ/aii+wNJqISrCDPgxGWDVQ==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
@@ -11903,7 +11903,7 @@ packages:
       randombytes: 2.1.0
 
   /set-blocking/2.0.0:
-    resolution: {integrity: sha512-KiKBS8AnWGEyLzofFfmvKwpdPzqiy16LvQfK3yv/fVH7Bj13/wl3JSR1J+rfgRE9q7xUJK4qvgS8raSOeLUehw==}
+    resolution: {integrity: sha1-BF+XgtARrppoA93TgrJDkrPYkPc=}
 
   /shebang-command/2.0.0:
     resolution: {integrity: sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==}
@@ -12201,7 +12201,7 @@ packages:
     dev: true
 
   /string-width/1.0.2:
-    resolution: {integrity: sha512-0XsVpQLnVCXHJfyEs8tC0zpTVIr5PKKsQtkT29IwupnPTjtPmQ3xT/4yCREF9hYkV/3M3kzcUTSAZT6a6h81tw==}
+    resolution: {integrity: sha1-EYvfW4zcUaKn5w0hHgfisLmxB9M=}
     engines: {node: '>=0.10.0'}
     dependencies:
       code-point-at: 1.1.0
@@ -12278,7 +12278,7 @@ packages:
     dev: true
 
   /strip-ansi/3.0.1:
-    resolution: {integrity: sha512-VhumSSbBqDTP8p2ZLKj40UjBCV4+v8bUSEpUb4KjRgWk9pbqGF4REFj6KEagidb2f/M6AzC0EmFyDNGaw9OCzg==}
+    resolution: {integrity: sha1-ajhfuIU9lS1f8F0Oiq+UJ43GPc8=}
     engines: {node: '>=0.10.0'}
     dependencies:
       ansi-regex: 2.1.1
@@ -12528,7 +12528,7 @@ packages:
       lodash: 4.17.21
       postcss-media-query-parser: 0.2.3
       postcss-resolve-nested-selector: 0.1.1
-      postcss-selector-parser: 6.0.9
+      postcss-selector-parser: 6.0.10
       postcss-value-parser: 4.2.0
       stylelint: 14.9.1
     dev: true
