@@ -22,7 +22,9 @@ export default defineConfig({
     baseUrl: 'http://localhost:3004',
     excludeSpecPattern: '**/examples/*.spec.js',
     setupNodeEvents(on, config) {
-      return require('./cypress/plugins')(on, config)
+      /* eslint-disable eslint-comments/no-unlimited-disable, unicorn/no-abusive-eslint-disable */
+      return require('./cypress/plugins')(on, config) // eslint-disable-line
+      /* eslint-enable */
     },
     specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx}',
   },

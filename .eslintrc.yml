@@ -153,6 +153,8 @@ rules:
       allowList:
         args: true
         dest: true
+        devServer: true
+        e2e: true
         env: true
         i18n: true
         params: true
