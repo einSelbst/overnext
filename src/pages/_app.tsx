@@ -270,12 +270,12 @@ const _app = ({
       <DefaultSeo {...SEO} />
       <HeadIcons />
       {/* <Layout {...this.props}> */}
-      <Layout>{getLayout(<Component {...pageProps} err={err} />)}</Layout>
+      {/* <Layout>{getLayout(<Component {...pageProps} err={err} />)}</Layout> */}
 
-      {/* <Layout>
+      <Layout key="foo" props="bar" type="baz">
             <Component {...pageProps} />
-            </Layout>
-          */}
+      </Layout>
+
       {/* <LayoutTree
             Component={Component}
             pageProps={pageProps} /> */}

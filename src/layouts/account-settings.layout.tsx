@@ -67,7 +67,8 @@ const AccountSettingsLayout = ({
 )
 
 /* export const getLayout = (page: React.ReactNode) => */
-export const getLayout = (page: NextPage) =>
+// export const getLayout = (page: NextPage) =>
+export const getLayout = (page: React.ReactNode) =>
   getSiteLayout(<AccountSettingsLayout>{page}</AccountSettingsLayout>)
 
 export default AccountSettingsLayout
