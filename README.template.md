@@ -16,7 +16,7 @@ Add badges from somewhere like: [shields.io](https://shields.io/)
 
 **Client:** React, Redux, TailwindCSS
 
-**Server:** Node, Express
+**Server:** Node.js, Express
 
 ## Features OK
 
