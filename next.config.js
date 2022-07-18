@@ -142,23 +142,26 @@ const nextConfiguration = {
   },
 
   // @see {@link https://github.com/vercel/next.js/blob/canary/packages/next/server/config-shared.ts#L130}
-  /* experimental: { */
-  /* disablePostcssPresetEnv: boolean */
-  /* styledComponents?: boolean */
-  /* swcFileReading?: boolean */
-  /* cpus?: number */
-  /* sharedPool?: boolean */
-  /* plugins?: boolean */
-  /* profiling?: boolean */
-  /* isrFlushToDisk?: boolean */
-  /* reactMode?: 'legacy' | 'concurrent' | 'blocking' */
-  /* workerThreads?: boolean */
-  /* pageEnv?: boolean */
-  /* optimizeImages?: boolean */
-  /* optimizeCss?: boolean */
-  /* scrollRestoration?: boolean */
-  /* externalDir?: boolean */
-  /* conformance?: boolean */
+  experimental: {
+    browsersListForSwc: true,
+    legacyBrowsers: false,
+    /* disablePostcssPresetEnv: boolean */
+    /* styledComponents?: boolean */
+    /* swcFileReading?: boolean */
+    /* cpus?: number */
+    /* sharedPool?: boolean */
+    /* plugins?: boolean */
+    /* profiling?: boolean */
+    /* isrFlushToDisk?: boolean */
+    /* reactMode?: 'legacy' | 'concurrent' | 'blocking' */
+    /* workerThreads?: boolean */
+    /* pageEnv?: boolean */
+    /* optimizeImages?: boolean */
+    /* optimizeCss?: boolean */
+    /* scrollRestoration?: boolean */
+    /* externalDir?: boolean */
+    /* conformance?: boolean */
+  },
   /*
    * amp?: {
    *   optimizer?: any
