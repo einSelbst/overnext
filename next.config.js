@@ -3,6 +3,8 @@
 /**
  * Next.js Configuration
  *
+ * @type {import('next').NextConfig}
+ *
  * @see https://github.com/cyrilwanner/next-compose-plugins
  * @see https://github.com/natterstefan/next-with-sentry/blob/main/next.config.js
  */
