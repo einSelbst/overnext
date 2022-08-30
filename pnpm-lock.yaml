@@ -41,7 +41,7 @@ specifiers:
   '@types/jest': 28.1.1
   '@types/node': 16.11.39
   '@types/prettier': 2.6.3
-  '@types/react': 18.0.12
+  '@types/react': 17.0.45
   '@types/react-dom': 17.0.17
   '@types/sass': 1.43.1
   '@types/source-map-support': 0.5.4
@@ -141,7 +141,7 @@ dependencies:
   '@babel/core': 7.18.5
   '@sentry/nextjs': 6.19.7_t4rfobzmy5gttlpayumpbwr4my
   '@types/node': 16.11.39
-  '@types/react': 18.0.12
+  '@types/react': 17.0.45
   '@types/react-dom': 17.0.17
   autoprefixer: 10.4.7_postcss@8.4.14
   core-js: 3.23.1
@@ -3129,14 +3129,6 @@ packages:
       '@types/prop-types': 15.7.4
       '@types/scheduler': 0.16.2
       csstype: 3.0.10
-
-  /@types/react/18.0.12:
-    resolution: {integrity: sha512-duF1OTASSBQtcigUvhuiTB1Ya3OvSy+xORCiEf20H0P0lzx+/KeVsA99U5UjLXSbyo1DRJDlLKqTeM1ngosqtg==}
-    dependencies:
-      '@types/prop-types': 15.7.4
-      '@types/scheduler': 0.16.2
-      csstype: 3.0.10
-    dev: false
 
   /@types/resolve/1.17.1:
     resolution: {integrity: sha512-yy7HuzQhj0dhGpD8RLXSZWEkLsV9ibvxvi6EiJ3bkqLAO1RGo0WbkWQiwpRlSFymTJRz0d3k5LM3kkx8ArDbLw==}
