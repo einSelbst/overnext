@@ -17,7 +17,7 @@ const baseUrl = () => {
 const maxSitemapEntries = 5000
 const sitemapPriority = 0.7
 
-module.exports = {
+const sitemapConfig = {
   changefreq: 'daily',
   exclude: ['/server-sitemap.xml', '/awesome/secret-page'],
   generateRobotsTxt: true,
@@ -53,3 +53,5 @@ module.exports = {
     priority: config.priority,
   }),
 }
+
+module.exports = sitemapConfig
