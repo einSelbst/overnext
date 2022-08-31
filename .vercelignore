@@ -9,7 +9,7 @@
 # Re-add some files
 !/vercel.json
 !/next-env.d.ts
-!/next-sitemap.js
+!/next-sitemap.config.js
 !/next.config.js
 !/package.json
 !/pnpm-lock.yaml
