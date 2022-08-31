@@ -19,6 +19,7 @@ specifiers:
   '@cypress/code-coverage': 3.10.0
   '@istanbuljs/nyc-config-typescript': 1.0.2
   '@next/bundle-analyzer': 12.2.5
+  '@next/env': 12.2.5
   '@next/eslint-plugin-next': 12.2.5
   '@sentry/nextjs': 7.11.1
   '@size-limit/preset-app': 8.0.1
@@ -139,6 +140,7 @@ specifiers:
 
 dependencies:
   '@babel/core': 7.18.13
+  '@next/env': 12.2.5
   '@sentry/nextjs': 7.11.1_ddjm2czf6qwegmedyr4jdmksu4
   '@types/node': 18.7.14
   '@types/react': 17.0.45
