@@ -60,7 +60,7 @@
   "Ajax",
   "API",
   ["API['’]?s", "APIs"],
-  "CSS",
+  ["(?<!\\s)css\\b", "CSS"],
   "GIF",
   "HTTPS",
   "IoT",
@@ -70,8 +70,8 @@
   "MIME",
   "OK",
   "PaaS",
-  "PDF",
-  "PNG",
+  ["(?<!\\.)pdf\\b", "PDF"],
+  ["(?<!\\s)png\\b", "PNG"],
   "SaaS",
   "URL",
   ["URL['’]?s", "URLs"],
@@ -95,7 +95,7 @@
   ["smartphone(s)?", "mobile phone$1"],
   // https://stackoverflow.com/questions/44934828/is-it-spread-syntax-or-the-spread-operator
   ["spread operator", "spread syntax"],
-  ["web[- ]?site(s)?", "site$1"],
+  // ["web[- ]?site(s)?", "site$1"],
 
   // Single word
   ["auto[- ]complete", "autocomplete"],
@@ -150,7 +150,7 @@
   ["style-?guide(s)?", "style guide$1"],
   ["tree-?shaking", "tree shaking"],
   ["source-?map(s)?", "source map$1"],
-  ["style-?sheet(s)?", "style sheet$1"],
+  // ["style-?sheet(s)?", "style sheet$1"],
   ["user-?base", "user base"],
   ["web-?page(s)?", "web page$1"],
 

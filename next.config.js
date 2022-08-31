@@ -3,6 +3,8 @@
 /**
  * Next.js Configuration
  *
+ * @type {import('next').NextConfig}
+ *
  * @see https://github.com/cyrilwanner/next-compose-plugins
  * @see https://github.com/natterstefan/next-with-sentry/blob/main/next.config.js
  */
@@ -140,23 +142,26 @@ const nextConfiguration = {
   },
 
   // @see {@link https://github.com/vercel/next.js/blob/canary/packages/next/server/config-shared.ts#L130}
-  /* experimental: { */
-  /* disablePostcssPresetEnv: boolean */
-  /* styledComponents?: boolean */
-  /* swcFileReading?: boolean */
-  /* cpus?: number */
-  /* sharedPool?: boolean */
-  /* plugins?: boolean */
-  /* profiling?: boolean */
-  /* isrFlushToDisk?: boolean */
-  /* reactMode?: 'legacy' | 'concurrent' | 'blocking' */
-  /* workerThreads?: boolean */
-  /* pageEnv?: boolean */
-  /* optimizeImages?: boolean */
-  /* optimizeCss?: boolean */
-  /* scrollRestoration?: boolean */
-  /* externalDir?: boolean */
-  /* conformance?: boolean */
+  experimental: {
+    browsersListForSwc: true,
+    legacyBrowsers: false,
+    /* disablePostcssPresetEnv: boolean */
+    /* styledComponents?: boolean */
+    /* swcFileReading?: boolean */
+    /* cpus?: number */
+    /* sharedPool?: boolean */
+    /* plugins?: boolean */
+    /* profiling?: boolean */
+    /* isrFlushToDisk?: boolean */
+    /* reactMode?: 'legacy' | 'concurrent' | 'blocking' */
+    /* workerThreads?: boolean */
+    /* pageEnv?: boolean */
+    /* optimizeImages?: boolean */
+    /* optimizeCss?: boolean */
+    /* scrollRestoration?: boolean */
+    /* externalDir?: boolean */
+    /* conformance?: boolean */
+  },
   /*
    * amp?: {
    *   optimizer?: any

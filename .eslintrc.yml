@@ -495,5 +495,6 @@ overrides:
       jest: true
       jest/globals: true
     rules:
+      jest/unbound-method: off
       import/no-unresolved: off
 # eslint-enable max-lines
