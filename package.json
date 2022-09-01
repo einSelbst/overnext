@@ -258,10 +258,7 @@
       "chokidar": "3",
       "debug": "latest",
       "electron-to-chromium": "1.4.237",
-      "source-map-resolve": "latest",
-      "minimist": ">=1.2.6",
-      "async@<2.6.4": ">=2.6.4",
-      "ejs": ">=3.1.7"
+      "source-map-resolve": "latest"
     }
   },
   "next-unused": {
