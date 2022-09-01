@@ -67,7 +67,6 @@ declare module 'next/app' {
   }
 }
 
-// eslint-disable-next-line @typescript-eslint/no-redundant-type-constituents
 type NextLayoutPage1<P = Record<string, unknown>, IP = P> = NextComponentType<
   NextPageContext,
   IP,

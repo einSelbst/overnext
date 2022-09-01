@@ -190,7 +190,7 @@ const Dog: NextLayoutPage = (
   )
 }
 
-// Dog.Layout = DefaultLayout
+Dog.Layout = DefaultLayout
 
 export { getStaticProps } // eslint-disable-line import/group-exports
 export default Dog
