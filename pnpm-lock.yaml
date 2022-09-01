@@ -5,10 +5,8 @@ overrides:
   caniuse-lite: latest
   chokidar: '3'
   debug: latest
+  electron-to-chromium: 1.4.237
   source-map-resolve: latest
-  minimist: '>=1.2.6'
-  async@<2.6.4: '>=2.6.4'
-  ejs: '>=3.1.7'
 
 specifiers:
   '@axe-core/react': latest
@@ -26,10 +24,10 @@ specifiers:
   '@size-limit/webpack': 8.0.1
   '@size-limit/webpack-why': 8.0.1
   '@stylelint/postcss-css-in-js': 0.38.0
-  '@tailwindcss/aspect-ratio': 0.4.0
+  '@tailwindcss/aspect-ratio': 0.4.1
   '@tailwindcss/forms': 0.5.2
-  '@tailwindcss/line-clamp': 0.4.0
-  '@tailwindcss/typography': 0.5.4
+  '@tailwindcss/line-clamp': 0.4.1
+  '@tailwindcss/typography': 0.5.6
   '@testing-library/jest-dom': 5.16.5
   '@testing-library/react': 12.1.5
   '@textlint/ast-node-types': 12.1.1
@@ -131,8 +129,8 @@ specifiers:
   textlint-rule-diacritics: 1.0.0
   textlint-rule-terminology: 3.0.1
   ts-node: 10.9.1
-  typed-query-selector: 2.6.1
-  typedoc: 0.23.12
+  typed-query-selector: 2.7.0
+  typedoc: 0.23.13
   typescript: 4.8.2
   typescript-eslint-language-service: 5.0.0
   typesync: 0.9.2
@@ -161,7 +159,7 @@ dependencies:
   sass: 1.54.8
   styled-jsx: 5.0.4_u2aypivye4tius5ftakppbroiy
   tailwindcss: 3.1.8_57znarxsqwmnneadci5z5fd5gu
-  typed-query-selector: 2.6.1
+  typed-query-selector: 2.7.0
   typescript: 4.8.2
   webpack: 5.74.0
 
@@ -182,10 +180,10 @@ devDependencies:
   '@size-limit/webpack': 8.0.1_size-limit@8.0.1
   '@size-limit/webpack-why': 8.0.1_7ztkwwtt4luq6y5bfdqinkxd5y
   '@stylelint/postcss-css-in-js': 0.38.0_wuc352kuwbjfwnfzykq4fs3caq
-  '@tailwindcss/aspect-ratio': 0.4.0_tailwindcss@3.1.8
+  '@tailwindcss/aspect-ratio': 0.4.1_tailwindcss@3.1.8
   '@tailwindcss/forms': 0.5.2_tailwindcss@3.1.8
-  '@tailwindcss/line-clamp': 0.4.0_tailwindcss@3.1.8
-  '@tailwindcss/typography': 0.5.4_tailwindcss@3.1.8
+  '@tailwindcss/line-clamp': 0.4.1_tailwindcss@3.1.8
+  '@tailwindcss/typography': 0.5.6_tailwindcss@3.1.8
   '@testing-library/jest-dom': 5.16.5
   '@testing-library/react': 12.1.5_sfoxds7t5ydpegc3knd667wn6m
   '@textlint/ast-node-types': 12.1.1
@@ -266,7 +264,7 @@ devDependencies:
   textlint-rule-diacritics: 1.0.0
   textlint-rule-terminology: 3.0.1_4ye76y54xad35l4e4ikwfatiny
   ts-node: 10.9.1_tphhiizkxv2hzwkunblc3hbmra
-  typedoc: 0.23.12_typescript@4.8.2
+  typedoc: 0.23.13_typescript@4.8.2
   typescript-eslint-language-service: 5.0.0_lbwfnm54o3pmr3ypeqp3btnera
   typesync: 0.9.2
 
@@ -2824,8 +2822,8 @@ packages:
       tslib: 2.4.0
     dev: false
 
-  /@tailwindcss/aspect-ratio/0.4.0_tailwindcss@3.1.8:
-    resolution: {integrity: sha512-WJu0I4PpqNPuutpaA9zDUq2JXR+lorZ7PbLcKNLmb6GL9/HLfC7w3CRsMhJF4BbYd/lkY6CfXOvkYpuGnZfkpQ==}
+  /@tailwindcss/aspect-ratio/0.4.1_tailwindcss@3.1.8:
+    resolution: {integrity: sha512-1wN2Znrh064KfaULmW+UVgnMCk+LUbYnupH4syF9I9Qx7JLfUlGyPYd0oMXFwqkpNv5aiHu4j+0uSbjSY9tNvA==}
     peerDependencies:
       tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
     dependencies:
@@ -2841,22 +2839,23 @@ packages:
       tailwindcss: 3.1.8_57znarxsqwmnneadci5z5fd5gu
     dev: true
 
-  /@tailwindcss/line-clamp/0.4.0_tailwindcss@3.1.8:
-    resolution: {integrity: sha512-HQZo6gfx1D0+DU3nWlNLD5iA6Ef4JAXh0LeD8lOGrJwEDBwwJNKQza6WoXhhY1uQrxOuU8ROxV7CqiQV4CoiLw==}
+  /@tailwindcss/line-clamp/0.4.1_tailwindcss@3.1.8:
+    resolution: {integrity: sha512-aeA3Dv4pjxIyIlsxZ9LX7KPI8U7T9oNpV1B2Xax7P57VuJH9Lh+p2H8Ad6+FXP+waR+Gu90Ga3rtkWHKcr3Y/A==}
     peerDependencies:
       tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
     dependencies:
       tailwindcss: 3.1.8_57znarxsqwmnneadci5z5fd5gu
     dev: true
 
-  /@tailwindcss/typography/0.5.4_tailwindcss@3.1.8:
-    resolution: {integrity: sha512-QEdg40EmGvE7kKoDei8zr5sf4D1pIayHj4R31bH3lX8x2BtTiR+jNejYPOkhbmy3DXgkMF9jC8xqNiGFAuL9Sg==}
+  /@tailwindcss/typography/0.5.6_tailwindcss@3.1.8:
+    resolution: {integrity: sha512-d7gNgMl43SmUlC3H7UFWuDVtgU6Slr0h4k0idVfwZ/gFRpjTgFpkD3WIs8AhvwELmWvhI8GwklAeInrhXxFu7A==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
     dependencies:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
+      postcss-selector-parser: 6.0.10
       tailwindcss: 3.1.8_57znarxsqwmnneadci5z5fd5gu
     dev: true
 
@@ -4438,7 +4437,7 @@ packages:
       caniuse-lite: 1.0.30001387
       electron-to-chromium: 1.4.237
       node-releases: 2.0.6
-      update-browserslist-db: 1.0.5_browserslist@4.21.3
+      update-browserslist-db: 1.0.6_browserslist@4.21.3
 
   /bser/2.1.1:
     resolution: {integrity: sha512-gQxTNE/GAfIIrmHLUE3oJyp5FO6HRBfhjnw4/wMmA63ZGDJnWBmgY/lyQBpnDUkGmAhbSe39tx2d/iTOAfglwQ==}
@@ -5994,6 +5993,7 @@ packages:
 
   /electron-to-chromium/1.4.237:
     resolution: {integrity: sha512-vxVyGJcsgArNOVUJcXm+7iY3PJAfmSapEszQD1HbyPLl0qoCmNQ1o/EX3RI7Et5/88In9oLxX3SGF8J3orkUgA==}
+    requiresBuild: true
 
   /emittery/0.10.2:
     resolution: {integrity: sha512-aITqOwnLanpHLNXZJENbOgjUBeHocD+xsSJmNrjovKBW5HbSpW3d1pEls7GFQPUWXiwG9+0P4GtHfEqC/4M0Iw==}
@@ -13989,8 +13989,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /typed-query-selector/2.6.1:
-    resolution: {integrity: sha512-nzzcDrI0nncM5XTNyqeG7MrcXTx8lelUtNlTP+NvpnOfRzApyr+ZW4H/FoOaPfzmjn++Tf0ZxXpBN7Q3FN3ERw==}
+  /typed-query-selector/2.7.0:
+    resolution: {integrity: sha512-as41ht96B9wCJflTJtuNL8LueDlkhctp+p8Rn+WBkEZZ+Rakpycr7cQMbBsOND9iHY5/7pv6DVv/aojfQedDnQ==}
     dev: false
 
   /typedarray-to-buffer/3.1.5:
@@ -14003,8 +14003,8 @@ packages:
     resolution: {integrity: sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==}
     dev: true
 
-  /typedoc/0.23.12_typescript@4.8.2:
-    resolution: {integrity: sha512-wr7r/ufgGSsw2ntKTkLDJA7a+0hDdk2oRPouJGd9lwpFj305ZV6gjUwVxncp3ZuD92iKpc+kqsl5ag109rvkmA==}
+  /typedoc/0.23.13_typescript@4.8.2:
+    resolution: {integrity: sha512-47VgWyZ5Q8g5dtJxjIHvFqX7ZD+YQRLAFRhLjt6v9KW0//feHtLUrbukHkKcvQuua1xQtdvkQ17fCjmF7qLXlg==}
     engines: {node: '>= 14.14'}
     hasBin: true
     peerDependencies:
@@ -14204,8 +14204,8 @@ packages:
     engines: {node: '>=4'}
     dev: false
 
-  /update-browserslist-db/1.0.5_browserslist@4.21.3:
-    resolution: {integrity: sha512-dteFFpCyvuDdr9S/ff1ISkKt/9YZxKjI9WlRR99c180GaztJtRa/fn18FdxGVKVsnPY7/a/FDN68mcvUmP4U7Q==}
+  /update-browserslist-db/1.0.6_browserslist@4.21.3:
+    resolution: {integrity: sha512-We7BqM9XFlcW94Op93uW8+2LXvGezs7QA0WY+f1H7RR1q46B06W6hZF6LbmOlpCS1HU22q/6NOGTGW5sCm7NJQ==}
     hasBin: true
     peerDependencies:
       browserslist: '>= 4.21.0'
@@ -14571,7 +14571,7 @@ packages:
   /wide-align/1.1.5:
     resolution: {integrity: sha512-eDMORYaPNZ4sQIuuYPDHdQvf4gyCF9rEEV/yPxGfwPkRodwEgiMUUXTx/dex+Me0wxx53S+NgUHaP7y3MGlDmg==}
     dependencies:
-      string-width: 4.2.3
+      string-width: 1.0.2
     dev: false
 
   /widest-line/3.1.0:
