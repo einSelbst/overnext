@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 overrides:
   browserslist: latest
-  caniuse-lite: latest
+  caniuse-lite: 1.0.30001387
   chokidar: '3'
   debug: latest
   electron-to-chromium: 1.4.237
@@ -4083,7 +4083,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.21.3
-      caniuse-lite: 1.0.30001388
+      caniuse-lite: 1.0.30001387
       fraction.js: 4.2.0
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -4424,7 +4424,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001388
+      caniuse-lite: 1.0.30001387
       electron-to-chromium: 1.4.237
       node-releases: 2.0.6
       update-browserslist-db: 1.0.6_browserslist@4.21.3
@@ -4576,13 +4576,13 @@ packages:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
     dependencies:
       browserslist: 4.21.3
-      caniuse-lite: 1.0.30001388
+      caniuse-lite: 1.0.30001387
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
     dev: true
 
-  /caniuse-lite/1.0.30001388:
-    resolution: {integrity: sha512-znVbq4OUjqgLxMxoNX2ZeeLR0d7lcDiE5uJ4eUiWdml1J1EkxbnQq6opT9jb9SMfJxB0XA16/ziHwni4u1I3GQ==}
+  /caniuse-lite/1.0.30001387:
+    resolution: {integrity: sha512-fKDH0F1KOJvR+mWSOvhj8lVRr/Q/mc5u5nabU2vi1/sgvlSqEsE8dOq0Hy/BqVbDkCYQPRRHB1WRjW6PGB/7PA==}
 
   /capture-stack-trace/1.0.1:
     resolution: {integrity: sha512-mYQLZnx5Qt1JgB1WEiMCf2647plpGeQ2NMR/5L0HNZzGQo4fuSPnK+wjfPnKZV0aiJDgzmWqqkV/g7JD+DW0qw==}
@@ -6340,7 +6340,7 @@ packages:
       '@mdn/browser-compat-data': 4.2.1
       ast-metadata-inferer: 0.7.0
       browserslist: 4.21.3
-      caniuse-lite: 1.0.30001388
+      caniuse-lite: 1.0.30001387
       core-js: 3.25.0
       eslint: 8.23.0
       find-up: 5.0.0
@@ -10485,7 +10485,7 @@ packages:
     dependencies:
       '@next/env': 12.2.2
       '@swc/helpers': 0.4.2
-      caniuse-lite: 1.0.30001388
+      caniuse-lite: 1.0.30001387
       postcss: 8.4.5
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2

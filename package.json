@@ -254,7 +254,7 @@
   "pnpm": {
     "overrides": {
       "browserslist": "latest",
-      "caniuse-lite": "latest",
+      "caniuse-lite": "1.0.30001387",
       "chokidar": "3",
       "debug": "latest",
       "electron-to-chromium": "1.4.237",
