@@ -13,7 +13,6 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 
-// eslint-disable-next-line import/no-unresolved
 import { mount } from 'cypress/react'
 
 // Import commands.js using ES2015 syntax:
@@ -34,7 +33,6 @@ declare global {
   }
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
 Cypress.Commands.add('mount', mount)
 
 // Example use:
