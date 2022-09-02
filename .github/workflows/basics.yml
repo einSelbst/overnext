@@ -32,7 +32,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x]
+        node-version: [16.x]
 
     steps:
       - name: Checkout Repo
@@ -80,7 +80,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [16.x]
 
     steps:
       - name: Checkout Repo
@@ -91,7 +91,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@master
         with:
-          version: next-7
+          version: v7.9.5
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@main
@@ -106,12 +106,13 @@ jobs:
           pnpm install --prefer-frozen-lockfile
 
       - name: 'Run tests'
-        run: pnpm test:coverage
+        run: pnpm test
         env:
           CI: true
           FAUNADB_SECRET: ${{ secrets.FAUNADB_SECRET }}
 
       - name: Report Test Coverage
+        if: false
         uses: romeovs/lcov-reporter-action@v0.3.1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
