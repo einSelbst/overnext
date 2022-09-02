@@ -30,8 +30,8 @@ specifiers:
   '@tailwindcss/typography': 0.5.6
   '@testing-library/jest-dom': 5.16.5
   '@testing-library/react': 12.1.5
-  '@textlint/ast-node-types': 12.1.1
-  '@textlint/types': 12.1.1
+  '@textlint/ast-node-types': 12.2.1
+  '@textlint/types': 12.2.1
   '@types/babel__core': 7.1.19
   '@types/babel__preset-env': 7.9.2
   '@types/core-js': 2.5.5
@@ -124,10 +124,10 @@ specifiers:
   stylelint-formatter-pretty: 3.1.0
   tailwindcss: 3.1.8
   tap-spot: 1.1.2
-  textlint: 12.1.1
+  textlint: 12.2.1
   textlint-plugin-jsx: 1.1.2
   textlint-rule-diacritics: 1.0.0
-  textlint-rule-terminology: 3.0.1
+  textlint-rule-terminology: 3.0.3
   ts-node: 10.9.1
   typed-query-selector: 2.7.0
   typedoc: 0.23.13
@@ -186,8 +186,8 @@ devDependencies:
   '@tailwindcss/typography': 0.5.6_tailwindcss@3.1.8
   '@testing-library/jest-dom': 5.16.5
   '@testing-library/react': 12.1.5_sfoxds7t5ydpegc3knd667wn6m
-  '@textlint/ast-node-types': 12.1.1
-  '@textlint/types': 12.1.1
+  '@textlint/ast-node-types': 12.2.1
+  '@textlint/types': 12.2.1
   '@types/babel__core': 7.1.19
   '@types/babel__preset-env': 7.9.2
   '@types/core-js': 2.5.5
@@ -259,10 +259,10 @@ devDependencies:
   stylelint-declaration-strict-value: 1.9.0_stylelint@14.11.0
   stylelint-formatter-pretty: 3.1.0
   tap-spot: 1.1.2
-  textlint: 12.1.1
+  textlint: 12.2.1
   textlint-plugin-jsx: 1.1.2_typescript@4.8.2
   textlint-rule-diacritics: 1.0.0
-  textlint-rule-terminology: 3.0.1_4ye76y54xad35l4e4ikwfatiny
+  textlint-rule-terminology: 3.0.3_lnfvi5qkchyz6ykl3uzwwdbugi
   ts-node: 10.9.1_tphhiizkxv2hzwkunblc3hbmra
   typedoc: 0.23.13_typescript@4.8.2
   typescript-eslint-language-service: 5.0.0_lbwfnm54o3pmr3ypeqp3btnera
@@ -2902,10 +2902,6 @@ packages:
       react-dom: 17.0.2_react@17.0.2
     dev: true
 
-  /@textlint/ast-node-types/12.1.1:
-    resolution: {integrity: sha512-5/XK9S1177UYetOY6407o1RDuNVndaYfuzsZwhmo52V367s4ZuUD2064WhbmCd6TPyKD4dVr2zoWjfNDfzUZQg==}
-    dev: true
-
   /@textlint/ast-node-types/12.2.1:
     resolution: {integrity: sha512-NXYza6aG1+LdZ4g83gjRhDht+gdrTjJYkdcQhpvzNCtTar/sVpaykkauRcAKLhkIWrQpfb311pfMlU6qNDW76Q==}
     dev: true
@@ -3036,12 +3032,6 @@ packages:
     resolution: {integrity: sha512-8Dt1Sn9AdqvweVxCLvlj1IC+pDxPRpdgERY6FzD6kLNpMAyl7luVWtpql19CvTYlxhPUHRxsETDBkRCQFClXsw==}
     dependencies:
       '@textlint/text-to-ast': 12.2.1
-    dev: true
-
-  /@textlint/types/12.1.1:
-    resolution: {integrity: sha512-s0TjnEwEwp3fa8yEhEH8w/lFpih15wtQy2CYaKx0eMScl1bSh+0e8WhiGZaTiiJXAGwNCw6erxB0reBScdU/hA==}
-    dependencies:
-      '@textlint/ast-node-types': 12.1.1
     dev: true
 
   /@textlint/types/12.2.1:
@@ -4093,7 +4083,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.21.3
-      caniuse-lite: 1.0.30001387
+      caniuse-lite: 1.0.30001388
       fraction.js: 4.2.0
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -4434,7 +4424,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001387
+      caniuse-lite: 1.0.30001388
       electron-to-chromium: 1.4.237
       node-releases: 2.0.6
       update-browserslist-db: 1.0.6_browserslist@4.21.3
@@ -4586,13 +4576,13 @@ packages:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
     dependencies:
       browserslist: 4.21.3
-      caniuse-lite: 1.0.30001387
+      caniuse-lite: 1.0.30001388
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
     dev: true
 
-  /caniuse-lite/1.0.30001387:
-    resolution: {integrity: sha512-fKDH0F1KOJvR+mWSOvhj8lVRr/Q/mc5u5nabU2vi1/sgvlSqEsE8dOq0Hy/BqVbDkCYQPRRHB1WRjW6PGB/7PA==}
+  /caniuse-lite/1.0.30001388:
+    resolution: {integrity: sha512-znVbq4OUjqgLxMxoNX2ZeeLR0d7lcDiE5uJ4eUiWdml1J1EkxbnQq6opT9jb9SMfJxB0XA16/ziHwni4u1I3GQ==}
 
   /capture-stack-trace/1.0.1:
     resolution: {integrity: sha512-mYQLZnx5Qt1JgB1WEiMCf2647plpGeQ2NMR/5L0HNZzGQo4fuSPnK+wjfPnKZV0aiJDgzmWqqkV/g7JD+DW0qw==}
@@ -6351,7 +6341,7 @@ packages:
       '@mdn/browser-compat-data': 4.2.1
       ast-metadata-inferer: 0.7.0
       browserslist: 4.21.3
-      caniuse-lite: 1.0.30001387
+      caniuse-lite: 1.0.30001388
       core-js: 3.25.0
       eslint: 8.23.0
       find-up: 5.0.0
@@ -10496,7 +10486,7 @@ packages:
     dependencies:
       '@next/env': 12.2.2
       '@swc/helpers': 0.4.2
-      caniuse-lite: 1.0.30001387
+      caniuse-lite: 1.0.30001388
       postcss: 8.4.5
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
@@ -13574,36 +13564,36 @@ packages:
       strip-json-comments: 3.1.1
     dev: true
 
-  /textlint-rule-helper/2.2.1_4ye76y54xad35l4e4ikwfatiny:
+  /textlint-rule-helper/2.2.1_lnfvi5qkchyz6ykl3uzwwdbugi:
     resolution: {integrity: sha512-pdX3uNbFzQTgINamaBpEHRT/MgROHev5wCnQnUTXRLT5DaRjls0Rmpi5d1MPZG6HT5NKVL++Q2J0FUbh5shi3Q==}
     peerDependencies:
       '@textlint/ast-node-types': ^12.1.0
       '@textlint/types': ^12.1.0
     dependencies:
-      '@textlint/ast-node-types': 12.1.1
-      '@textlint/types': 12.1.1
+      '@textlint/ast-node-types': 12.2.1
+      '@textlint/types': 12.2.1
       structured-source: 3.0.2
       unist-util-visit: 2.0.3
     dev: true
 
-  /textlint-rule-terminology/3.0.1_4ye76y54xad35l4e4ikwfatiny:
-    resolution: {integrity: sha512-jk2SGGep+XBckhIm9u6CG7NeMZiosJRPfoh7ISlCZizj/JGNk/zheDYGVXwKbFu20SxsguyUIpTF1z/d1Q+NeQ==}
+  /textlint-rule-terminology/3.0.3_lnfvi5qkchyz6ykl3uzwwdbugi:
+    resolution: {integrity: sha512-c1AzZ7ztXZfLySI8j7CnUGj8leNsfTCs+OPwJQV0ZWpKIZ7FsuRULCof1wLxsOZM+9MpVkmJWGfi6/qR6kRGIg==}
     engines: {node: '>=14'}
     dependencies:
       lodash: 4.17.21
       strip-json-comments: 3.1.1
-      textlint-rule-helper: 2.2.1_4ye76y54xad35l4e4ikwfatiny
+      textlint-rule-helper: 2.2.1_lnfvi5qkchyz6ykl3uzwwdbugi
     transitivePeerDependencies:
       - '@textlint/ast-node-types'
       - '@textlint/types'
     dev: true
 
-  /textlint/12.1.1:
-    resolution: {integrity: sha512-AoE/pPL+6e/7hHOxwxL5oBTYIsG6gjrMP77VQZVYxXYfTDduwRlqhQUUrVd32DaLQTm7z3/lCnY46uFkmK06fA==}
+  /textlint/12.2.1:
+    resolution: {integrity: sha512-e6xKNLbTt10KbnG0x3eVE7l8A7uOC9bj0Hc8cWk6VoLffjrdw4o8kJjWVIspNzfb0kUEs2dBKgXZo0ob4tMWAg==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:
-      '@textlint/ast-node-types': 12.1.1
+      '@textlint/ast-node-types': 12.2.1
       '@textlint/ast-traverse': 12.2.1
       '@textlint/feature-flag': 12.2.1
       '@textlint/fixer-formatter': 12.2.1
@@ -13612,7 +13602,7 @@ packages:
       '@textlint/module-interop': 12.2.1
       '@textlint/textlint-plugin-markdown': 12.2.1
       '@textlint/textlint-plugin-text': 12.2.1
-      '@textlint/types': 12.1.1
+      '@textlint/types': 12.2.1
       '@textlint/utils': 12.2.1
       debug: 4.3.4
       deep-equal: 1.1.1
