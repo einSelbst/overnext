@@ -1,8 +1,7 @@
 import { withSentry } from '@sentry/nextjs'
 import { query as q } from 'faunadb'
-import type { NextApiRequest, NextApiResponse } from 'next'
-
 import faunaClient from 'lib/fauna-client'
+import type { NextApiRequest, NextApiResponse } from 'next'
 
 /* eslint-disable new-cap, @typescript-eslint/no-unsafe-argument */
 const getShows = async (request: NextApiRequest, response: NextApiResponse) => {

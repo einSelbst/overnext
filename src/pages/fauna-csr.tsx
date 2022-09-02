@@ -1,6 +1,5 @@
-import { useCallback, useEffect, useState } from 'react'
-
 import DefaultLayout from 'layouts/default.layout'
+import { useCallback, useEffect, useState } from 'react'
 import type { NextLayoutPage } from 'typings/layout'
 
 const fetcher = async (url: RequestInfo) => {

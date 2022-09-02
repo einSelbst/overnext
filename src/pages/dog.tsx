@@ -1,5 +1,7 @@
 /* import { GetStaticProps, GetStaticPropsContext } from 'next' */
 import { captureMessage } from '@sentry/nextjs'
+import Byline from 'components/byline'
+import DefaultLayout from 'layouts/default.layout'
 import type {
   GetStaticProps,
   GetStaticPropsContext,
@@ -10,9 +12,6 @@ import { useAmp } from 'next/amp'
 import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-
-import Byline from 'components/byline'
-import DefaultLayout from 'layouts/default.layout'
 import type { NextLayoutPage } from 'typings/layout'
 
 /* eslint-disable import/exports-last, import/group-exports */

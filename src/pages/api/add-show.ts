@@ -1,8 +1,7 @@
 import { withSentry } from '@sentry/nextjs'
 import { query as q } from 'faunadb'
-import type { NextApiRequest, NextApiResponse } from 'next'
-
 import faunaClient from 'lib/fauna-client'
+import type { NextApiRequest, NextApiResponse } from 'next'
 
 type showType = {
   title: string

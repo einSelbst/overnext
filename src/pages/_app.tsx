@@ -1,3 +1,7 @@
+import ENV from 'config/env.config'
+import SEO from 'config/seo.config'
+import HolyGrailLayout from 'layouts/holy-grail.layout'
+import SiteLayout from 'layouts/site.layout'
 import type { NextLayoutComponentType, NextPageContext } from 'next'
 import { DefaultSeo } from 'next-seo'
 import { ThemeProvider } from 'next-themes'
@@ -6,11 +10,7 @@ import dynamic from 'next/dynamic'
 import type { ErrorProps } from 'next/error'
 import Head from 'next/head'
 
-import ENV from 'config/env.config'
-import SEO from 'config/seo.config'
 /* import DefaultLayout from 'layouts/default.layout' */
-import HolyGrailLayout from 'layouts/holy-grail.layout'
-import SiteLayout from 'layouts/site.layout'
 import 'styles/global.scss' // eslint-disable-line import/no-unassigned-import
 /* import 'styles/main.css' // tailwind */
 

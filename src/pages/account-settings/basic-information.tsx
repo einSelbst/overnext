@@ -1,6 +1,5 @@
-import type { NextComponentType } from 'next'
-
 import { getLayout } from 'layouts/account-settings.layout'
+import type { NextComponentType } from 'next'
 
 const AccountSettingsBasicInformation = (): NextComponentType => (
   <div>

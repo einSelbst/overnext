@@ -1,9 +1,8 @@
-import { NextSeo } from 'next-seo'
-import { useRouter } from 'next/router'
-
 import ThemeChanger from 'components/layout/theme-changer'
 import ENV from 'config/env.config'
 import LegalLayout from 'layouts/legal.layout'
+import { NextSeo } from 'next-seo'
+import { useRouter } from 'next/router'
 import type { NextLayoutPage } from 'typings/layout'
 
 const _Topic: NextLayoutPage = (): JSX.Element => {

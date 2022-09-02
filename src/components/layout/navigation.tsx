@@ -1,6 +1,6 @@
-import MenuItem from './menu-item'
-
 import HeartIcon from 'components/icons/heart-icon'
+
+import MenuItem from './menu-item'
 
 type Props = {
   readonly success: boolean

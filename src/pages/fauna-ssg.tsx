@@ -1,4 +1,6 @@
 import { query as q } from 'faunadb'
+import DefaultLayout from 'layouts/default.layout'
+import faunaClient from 'lib/fauna-client'
 import type {
   GetStaticProps,
   GetStaticPropsContext,
@@ -6,9 +8,6 @@ import type {
   InferGetStaticPropsType,
 } from 'next'
 import { useCallback, useState } from 'react'
-
-import DefaultLayout from 'layouts/default.layout'
-import faunaClient from 'lib/fauna-client'
 import type { NextLayoutPage } from 'typings/layout'
 
 type ShowType = {
