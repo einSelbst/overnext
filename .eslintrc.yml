@@ -103,6 +103,11 @@ rules:
     - extensions:
         - '.jsx'
         - '.tsx'
+  react/no-unknown-property:
+    - error
+    - ignore:
+        - jsx
+        - global
   react/jsx-sort-props:
     - error
     - callbacksLast: true
