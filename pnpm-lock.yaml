@@ -16,9 +16,9 @@ specifiers:
   '@commitlint/config-conventional': 17.1.0
   '@cypress/code-coverage': 3.10.0
   '@istanbuljs/nyc-config-typescript': 1.0.2
-  '@next/bundle-analyzer': 12.2.5
+  '@next/bundle-analyzer': 12.3.0
   '@next/env': 12.2.5
-  '@next/eslint-plugin-next': 12.2.5
+  '@next/eslint-plugin-next': 12.3.0
   '@sentry/nextjs': 7.12.1
   '@size-limit/preset-app': 8.1.0
   '@size-limit/webpack': 8.1.0
@@ -174,8 +174,8 @@ devDependencies:
   '@commitlint/config-conventional': 17.1.0
   '@cypress/code-coverage': 3.10.0_xufegdovzio3sywdsimfwdrk4y
   '@istanbuljs/nyc-config-typescript': 1.0.2_nyc@15.1.0
-  '@next/bundle-analyzer': 12.2.5
-  '@next/eslint-plugin-next': 12.2.5
+  '@next/bundle-analyzer': 12.3.0
+  '@next/eslint-plugin-next': 12.3.0
   '@size-limit/preset-app': 8.1.0_size-limit@8.1.0
   '@size-limit/webpack': 8.1.0_size-limit@8.1.0
   '@size-limit/webpack-why': 8.1.0_z2vqj2c7jiqmv5w23u767jg5ny
@@ -2146,8 +2146,8 @@ packages:
       pause-stream: 0.0.11
     dev: true
 
-  /@next/bundle-analyzer/12.2.5:
-    resolution: {integrity: sha512-lj7ese4GnfbO8tCc9/g1O3/hzgb+pVkrsNgfF929CgZHCFQxplqxY++MIO4aCFwzt0vDx0KL78LOVxzjDDKjlA==}
+  /@next/bundle-analyzer/12.3.0:
+    resolution: {integrity: sha512-hzRLHIrtwOiGEku9rmG7qZk+OQhnqQOL+ycl2XrjBaztBN/xaqnjoG4+HEf9L7ELN943BR+K/ZlaF2OEgbGm+Q==}
     dependencies:
       webpack-bundle-analyzer: 4.3.0
     transitivePeerDependencies:
@@ -2162,12 +2162,6 @@ packages:
   /@next/env/12.2.5:
     resolution: {integrity: sha512-vLPLV3cpPGjUPT3PjgRj7e3nio9t6USkuew3JE/jMeon/9Mvp1WyR18v3iwnCuX7eUAm1HmAbJHHLAbcu/EJcw==}
     dev: false
-
-  /@next/eslint-plugin-next/12.2.5:
-    resolution: {integrity: sha512-VBjVbmqEzGiOTBq4+wpeVXt/KgknnGB6ahvC/AxiIGnN93/RCSyXhFRI4uSfftM2Ba3w7ZO7076bfKasZsA0fw==}
-    dependencies:
-      glob: 7.1.7
-    dev: true
 
   /@next/eslint-plugin-next/12.3.0:
     resolution: {integrity: sha512-jVdq1qYTNDjUtulnE8/hkPv0pHILV4jMg5La99iaY/FFm20WxVnsAZtbNnMvlPbf8dc010oO304SX9yXbg5PAw==}
