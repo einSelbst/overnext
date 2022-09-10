@@ -114,7 +114,7 @@ specifiers:
   source-map-support: 0.5.21
   standard-version: 9.5.0
   start-server-and-test: 1.14.0
-  styled-jsx: 5.0.6
+  styled-jsx: 5.0.7
   stylelint: 14.11.0
   stylelint-config-idiomatic-order: 8.1.0
   stylelint-config-prettier: 9.0.3
@@ -157,7 +157,7 @@ dependencies:
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   sass: 1.54.9
-  styled-jsx: 5.0.6_lyrpg3s5qdiygbgk7rgnrugd7e
+  styled-jsx: 5.0.7_lyrpg3s5qdiygbgk7rgnrugd7e
   tailwindcss: 3.1.8_57znarxsqwmnneadci5z5fd5gu
   typed-query-selector: 2.7.0
   typescript: 4.8.3
@@ -13039,8 +13039,8 @@ packages:
       react: 17.0.2
     dev: false
 
-  /styled-jsx/5.0.6_lyrpg3s5qdiygbgk7rgnrugd7e:
-    resolution: {integrity: sha512-xOeROtkK5MGMDimBQ3J6iPId8q0t/BDoG5XN6oKkZClVz9ISF/hihN8OCn2LggMU6N32aXnrXBdn3auSqNS9fA==}
+  /styled-jsx/5.0.7_lyrpg3s5qdiygbgk7rgnrugd7e:
+    resolution: {integrity: sha512-b3sUzamS086YLRuvnaDigdAewz1/EFYlHpYBP5mZovKEdQQOIIYq8lApylub3HHZ6xFjV051kkGU7cudJmrXEA==}
     engines: {node: '>= 12.0.0'}
     peerDependencies:
       '@babel/core': '*'
