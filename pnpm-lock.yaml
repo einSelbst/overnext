@@ -83,7 +83,7 @@ specifiers:
   faunadb: 4.6.0
   fsevents: 2.3.2
   git-format-staged: 3.0.0
-  html-validate: 7.3.3
+  html-validate: 7.4.0
   husky: 8.0.1
   hyperlink: 5.0.4
   is-ci: 3.0.1
@@ -232,7 +232,7 @@ devDependencies:
   eslint-plugin-unicorn: 43.0.2_eslint@8.23.0
   eslint_d: 12.2.0
   git-format-staged: 3.0.0
-  html-validate: 7.3.3_jest@28.1.3
+  html-validate: 7.4.0_jest@28.1.3
   husky: 8.0.1
   hyperlink: 5.0.4
   jest: 28.1.3_gsb7asu77en4txj3es3i65pxci
@@ -8003,14 +8003,14 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /html-validate/7.3.3_jest@28.1.3:
-    resolution: {integrity: sha512-nABzmBHUb+TbiqLb3ggoC7uEN5mKgZSwbB/LpGyXbrI+ajVBnyYyRMscLFOZGYpw5gacBZtqkK6VzFU7jbXObg==}
+  /html-validate/7.4.0_jest@28.1.3:
+    resolution: {integrity: sha512-Ho77C5Kq7wvuC6w2eY/tk7rDtodJmmqBMPjyaPZmRpvsqNbK+88n1G4b5NVi5PWcAiTRHFj9NGVaODo1JKIbcA==}
     engines: {node: '>= 14.0'}
     hasBin: true
     peerDependencies:
-      jest: ^25.1 || ^26 || ^27.1 || ^28
-      jest-diff: ^25.1 || ^26 || ^27.1 || ^28
-      jest-snapshot: ^25.1 || ^26 || ^27.1 || ^28
+      jest: ^25.1 || ^26 || ^27.1 || ^28.1.3 || ^29.0.3
+      jest-diff: ^25.1 || ^26 || ^27.1 || ^28.1.3 || ^29.0.3
+      jest-snapshot: ^25.1 || ^26 || ^27.1 || ^28.1.3 || ^29.0.3
     peerDependenciesMeta:
       jest:
         optional: true
