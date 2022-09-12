@@ -102,7 +102,7 @@ specifiers:
   pnpm: latest
   postcss: 8.4.16
   postcss-syntax: 0.36.2
-  preact: 10.10.6
+  preact: 10.11.0
   prettier: 2.7.1
   prettier-plugin-sh: 0.12.8
   prettier-plugin-tailwindcss: 0.1.13
@@ -153,7 +153,7 @@ dependencies:
   next-seo: 5.5.0_5cnqhqacu5mt2w4dmejsl6hu6y
   next-sitemap: 3.1.22_oft4srhikjzureldvsn5mwkski
   next-themes: 0.2.1_5cnqhqacu5mt2w4dmejsl6hu6y
-  preact: 10.10.6
+  preact: 10.11.0
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   sass: 1.54.9
@@ -11610,8 +11610,8 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.0.2
 
-  /preact/10.10.6:
-    resolution: {integrity: sha512-w0mCL5vICUAZrh1DuHEdOWBjxdO62lvcO++jbzr8UhhYcTbFkpegLH9XX+7MadjTl/y0feoqwQ/zAnzkc/EGog==}
+  /preact/10.11.0:
+    resolution: {integrity: sha512-Fk6+vB2kb6mSJfDgODq0YDhMfl0HNtK5+Uc9QqECO4nlyPAQwCI+BKyWO//idA7ikV7o+0Fm6LQmNuQi1wXI1w==}
     dev: false
 
   /precinct/7.1.0:
