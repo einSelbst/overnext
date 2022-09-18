@@ -130,7 +130,7 @@ specifiers:
   textlint-rule-terminology: 3.0.3
   ts-node: 10.9.1
   typed-query-selector: 2.7.0
-  typedoc: 0.23.14
+  typedoc: 0.23.15
   typescript: 4.8.3
   typescript-eslint-language-service: 5.0.0
   typesync: 0.9.2
@@ -166,7 +166,7 @@ dependencies:
 optionalDependencies:
   '@axe-core/react': 4.4.4
   fsevents: 2.3.2
-  pnpm: 7.11.0
+  pnpm: 7.12.0
 
 devDependencies:
   '@babel/preset-env': 7.19.1_@babel+core@7.19.0
@@ -264,7 +264,7 @@ devDependencies:
   textlint-rule-diacritics: 1.0.0
   textlint-rule-terminology: 3.0.3_lnfvi5qkchyz6ykl3uzwwdbugi
   ts-node: 10.9.1_5phtbhw2vjptp6mevgyr22345q
-  typedoc: 0.23.14_typescript@4.8.3
+  typedoc: 0.23.15_typescript@4.8.3
   typescript-eslint-language-service: 5.0.0_wxqvmnl3i4rbvz4ixyoiufmx3e
   typesync: 0.9.2
 
@@ -11235,8 +11235,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /pnpm/7.11.0:
-    resolution: {integrity: sha512-cxh4TfCE8L4ZbLBN72kTGKTYP7X08nrIzoQ2rQCKihAcIHAdNIgsk4bEJyE1xHjE+bNJt9skwr7aJv3LpvUawQ==}
+  /pnpm/7.12.0:
+    resolution: {integrity: sha512-Zc38WaMNkomazbIFl5nq2TR1e97R4iG+G7f9QKUL+YHbHOnkOYV3UuR45xYPhhpn1ArLfTpxjxmRu1H3gn6SPw==}
     engines: {node: '>=14.6'}
     hasBin: true
     requiresBuild: true
@@ -14070,8 +14070,8 @@ packages:
     resolution: {integrity: sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==}
     dev: true
 
-  /typedoc/0.23.14_typescript@4.8.3:
-    resolution: {integrity: sha512-s2I+ZKBET38EctZvbXp2GooHrNaKjWZkrwGEK/sttnOGiKJqU0vHrsdcwLgKZGuo2aedNL3RRPj1LnAAeYscig==}
+  /typedoc/0.23.15_typescript@4.8.3:
+    resolution: {integrity: sha512-x9Zu+tTnwxb9YdVr+zvX7LYzyBl1nieOr6lrSHbHsA22/RJK2m4Y525WIg5Mj4jWCmfL47v6f4hUzY7EIuwS5w==}
     engines: {node: '>= 14.14'}
     hasBin: true
     peerDependencies:
