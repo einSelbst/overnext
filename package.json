@@ -160,7 +160,7 @@
     "@tailwindcss/line-clamp": "0.4.2",
     "@tailwindcss/typography": "0.5.7",
     "@testing-library/jest-dom": "5.16.5",
-    "@testing-library/react": "12.1.5",
+    "@testing-library/react": "13.4.0",
     "@textlint/ast-node-types": "12.2.2",
     "@textlint/types": "12.2.2",
     "@types/babel__core": "7.1.19",

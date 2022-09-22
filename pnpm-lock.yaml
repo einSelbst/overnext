@@ -29,7 +29,7 @@ specifiers:
   '@tailwindcss/line-clamp': 0.4.2
   '@tailwindcss/typography': 0.5.7
   '@testing-library/jest-dom': 5.16.5
-  '@testing-library/react': 12.1.5
+  '@testing-library/react': 13.4.0
   '@textlint/ast-node-types': 12.2.2
   '@textlint/types': 12.2.2
   '@types/babel__core': 7.1.19
@@ -107,8 +107,8 @@ specifiers:
   prettier-plugin-sh: 0.12.8
   prettier-plugin-tailwindcss: 0.1.13
   prettier-plugin-toml: 0.3.1
-  react: 17.0.2
-  react-dom: 17.0.2
+  react: 18.2.0
+  react-dom: 18.2.0
   sass: 1.54.9
   size-limit: 8.1.0
   source-map-support: 0.5.21
@@ -139,7 +139,7 @@ specifiers:
 dependencies:
   '@babel/core': 7.19.0
   '@next/env': 12.3.0
-  '@sentry/nextjs': 7.12.1_pt4yjw2ugeulrem6mi7ng46pri
+  '@sentry/nextjs': 7.12.1_hriwgwit4qupb3ragn4st5hcw4
   '@types/node': 18.7.14
   '@types/react': 17.0.49
   '@types/react-dom': 18.0.6
@@ -147,17 +147,17 @@ dependencies:
   core-js: 3.25.1
   faunadb: 4.6.0
   is-ci: 3.0.1
-  next: 12.3.0_ceqegk62aowd7zijfxyuzsexrq
+  next: 12.3.0_psqvd2pzzkjlzpo33alcb6tbxu
   next-compose-plugins: 2.2.1
   next-pwa: 5.6.0_xcq4hpfrwdwyix7hp3kaqhlfhe
-  next-seo: 5.5.0_5cnqhqacu5mt2w4dmejsl6hu6y
+  next-seo: 5.5.0_c3hne4hwj64hb7tofigd3bvkji
   next-sitemap: 3.1.22_oft4srhikjzureldvsn5mwkski
-  next-themes: 0.2.1_5cnqhqacu5mt2w4dmejsl6hu6y
+  next-themes: 0.2.1_c3hne4hwj64hb7tofigd3bvkji
   preact: 10.11.0
-  react: 17.0.2
-  react-dom: 17.0.2_react@17.0.2
+  react: 18.2.0
+  react-dom: 18.2.0_react@18.2.0
   sass: 1.54.9
-  styled-jsx: 5.0.7_lyrpg3s5qdiygbgk7rgnrugd7e
+  styled-jsx: 5.0.7_obstn65pa6zrrg27pp7sudypiq
   tailwindcss: 3.1.8_57znarxsqwmnneadci5z5fd5gu
   typed-query-selector: 2.7.0
   typescript: 4.8.3
@@ -166,7 +166,7 @@ dependencies:
 optionalDependencies:
   '@axe-core/react': 4.4.4
   fsevents: 2.3.2
-  pnpm: 7.11.0
+  pnpm: 7.12.2
 
 devDependencies:
   '@babel/preset-env': 7.19.1_@babel+core@7.19.0
@@ -185,7 +185,7 @@ devDependencies:
   '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.1.8
   '@tailwindcss/typography': 0.5.7_tailwindcss@3.1.8
   '@testing-library/jest-dom': 5.16.5
-  '@testing-library/react': 12.1.5_sfoxds7t5ydpegc3knd667wn6m
+  '@testing-library/react': 13.4.0_biqbaboplfbrettd7655fr4n2y
   '@textlint/ast-node-types': 12.2.2
   '@textlint/types': 12.2.2
   '@types/babel__core': 7.1.19
@@ -2493,7 +2493,7 @@ packages:
       tslib: 1.14.1
     dev: false
 
-  /@sentry/nextjs/7.12.1_pt4yjw2ugeulrem6mi7ng46pri:
+  /@sentry/nextjs/7.12.1_hriwgwit4qupb3ragn4st5hcw4:
     resolution: {integrity: sha512-g9Aw+x+H8ihND1vO01ee0E77tnwZO4FhnVCYv8LHUNwR+PMrV8UeRirIeqlXjAl696lcg9In42wufHxd65KNGA==}
     engines: {node: '>=8'}
     peerDependencies:
@@ -2510,15 +2510,15 @@ packages:
       '@sentry/hub': 7.12.1
       '@sentry/integrations': 7.12.1
       '@sentry/node': 7.12.1
-      '@sentry/react': 7.12.1_react@17.0.2
+      '@sentry/react': 7.12.1_react@18.2.0
       '@sentry/tracing': 7.12.1
       '@sentry/types': 7.12.1
       '@sentry/utils': 7.12.1
       '@sentry/webpack-plugin': 1.19.0
       chalk: 3.0.0
       jscodeshift: 0.13.1_@babel+preset-env@7.19.1
-      next: 12.3.0_ceqegk62aowd7zijfxyuzsexrq
-      react: 17.0.2
+      next: 12.3.0_psqvd2pzzkjlzpo33alcb6tbxu
+      react: 18.2.0
       rollup: 2.78.0
       tslib: 1.14.1
       webpack: 5.74.0
@@ -2544,7 +2544,7 @@ packages:
       - supports-color
     dev: false
 
-  /@sentry/react/7.12.1_react@17.0.2:
+  /@sentry/react/7.12.1_react@18.2.0:
     resolution: {integrity: sha512-CmdiRzhPpjD29GxlDJs+VIoLlQcKp1BfISQOfPUZNppWbKyRad+J5Z8tgg5MCNPHjQtcOT+0V+MsSdRNqtXg4g==}
     engines: {node: '>=8'}
     peerDependencies:
@@ -2554,7 +2554,7 @@ packages:
       '@sentry/types': 7.12.1
       '@sentry/utils': 7.12.1
       hoist-non-react-statics: 3.3.2
-      react: 17.0.2
+      react: 18.2.0
       tslib: 1.14.1
     dev: false
 
@@ -2927,18 +2927,18 @@ packages:
       redent: 3.0.0
     dev: true
 
-  /@testing-library/react/12.1.5_sfoxds7t5ydpegc3knd667wn6m:
-    resolution: {integrity: sha512-OfTXCJUFgjd/digLUuPxa0+/3ZxsQmE7ub9kcbW/wi96Bh3o/p5vrETcBGfP17NWPGqeYYl5LTRpwyGoMC4ysg==}
+  /@testing-library/react/13.4.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-sXOGON+WNTh3MLE9rve97ftaZukN3oNf2KjDy7YTx6hcTO2uuLHuCGynMDhFwGw/jYf4OJ2Qk0i4i79qMNNkyw==}
     engines: {node: '>=12'}
     peerDependencies:
-      react: <18.0.0
-      react-dom: <18.0.0
+      react: ^18.0.0
+      react-dom: ^18.0.0
     dependencies:
       '@babel/runtime': 7.18.9
       '@testing-library/dom': 8.17.1
-      '@types/react-dom': 17.0.17
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
+      '@types/react-dom': 18.0.6
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: true
 
   /@textlint/ast-node-types/12.2.2:
@@ -3299,17 +3299,10 @@ packages:
   /@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
 
-  /@types/react-dom/17.0.17:
-    resolution: {integrity: sha512-VjnqEmqGnasQKV0CWLevqMTXBYG9GbwuE6x3VetERLh0cq2LTptFE73MrQi2S7GkKXCf2GgwItB/melLnxfnsg==}
-    dependencies:
-      '@types/react': 17.0.49
-    dev: true
-
   /@types/react-dom/18.0.6:
     resolution: {integrity: sha512-/5OFZgfIPSwy+YuIBP/FgJnQnsxhZhjjrnxudMddeblOouIodEQ75X14Rr4wGSG/bknL+Omy9iWlLo1u/9GzAA==}
     dependencies:
       '@types/react': 17.0.49
-    dev: false
 
   /@types/react/17.0.49:
     resolution: {integrity: sha512-CCBPMZaPhcKkYUTqFs/hOWqKjPxhTEmnZWjlHHgIMop67DsXywf9B5Os9Hz8KSacjNOgIdnZVJamwl232uxoPg==}
@@ -10489,7 +10482,7 @@ packages:
       babel-loader: 8.2.5_z22tmofudeh3tyeifpjvwjl5ei
       clean-webpack-plugin: 4.0.0_webpack@5.74.0
       globby: 11.1.0
-      next: 12.3.0_ceqegk62aowd7zijfxyuzsexrq
+      next: 12.3.0_psqvd2pzzkjlzpo33alcb6tbxu
       terser-webpack-plugin: 5.3.6_webpack@5.74.0
       workbox-webpack-plugin: 6.5.4_nykezisphgdrxmazzqkeruyoma
       workbox-window: 6.5.4
@@ -10503,16 +10496,16 @@ packages:
       - webpack
     dev: false
 
-  /next-seo/5.5.0_5cnqhqacu5mt2w4dmejsl6hu6y:
+  /next-seo/5.5.0_c3hne4hwj64hb7tofigd3bvkji:
     resolution: {integrity: sha512-5ouBHFtx8YrSDW44lj0qIEQ+oMcz6stgoITB+SqHUZbhgizoJsyLmq73gJ0lxtEKpcN8vG2QgRIJfdb8OAPChw==}
     peerDependencies:
       next: ^8.1.1-canary.54 || >=9.0.0
       react: '>=16.0.0'
       react-dom: '>=16.0.0'
     dependencies:
-      next: 12.3.0_ceqegk62aowd7zijfxyuzsexrq
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
+      next: 12.3.0_psqvd2pzzkjlzpo33alcb6tbxu
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /next-sitemap/3.1.22_oft4srhikjzureldvsn5mwkski:
@@ -10526,19 +10519,19 @@ packages:
       '@corex/deepmerge': 4.0.29
       '@next/env': 12.3.0
       minimist: 1.2.6
-      next: 12.3.0_ceqegk62aowd7zijfxyuzsexrq
+      next: 12.3.0_psqvd2pzzkjlzpo33alcb6tbxu
     dev: false
 
-  /next-themes/0.2.1_5cnqhqacu5mt2w4dmejsl6hu6y:
+  /next-themes/0.2.1_c3hne4hwj64hb7tofigd3bvkji:
     resolution: {integrity: sha512-B+AKNfYNIzh0vqQQKqQItTS8evEouKD7H5Hj3kmuPERwddR2TxvDSFZuTj6T7Jfn1oyeUyJMydPl1Bkxkh0W7A==}
     peerDependencies:
       next: '*'
       react: '*'
       react-dom: '*'
     dependencies:
-      next: 12.3.0_ceqegk62aowd7zijfxyuzsexrq
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
+      next: 12.3.0_psqvd2pzzkjlzpo33alcb6tbxu
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /next-unused/0.0.6:
@@ -10552,7 +10545,7 @@ packages:
       - supports-color
     dev: true
 
-  /next/12.3.0_ceqegk62aowd7zijfxyuzsexrq:
+  /next/12.3.0_psqvd2pzzkjlzpo33alcb6tbxu:
     resolution: {integrity: sha512-GpzI6me9V1+XYtfK0Ae9WD0mKqHyzQlGq1xH1rzNIYMASo4Tkl4rTe9jSqtBpXFhOS33KohXs9ZY38Akkhdciw==}
     engines: {node: '>=12.22.0'}
     hasBin: true
@@ -10574,11 +10567,11 @@ packages:
       '@swc/helpers': 0.4.11
       caniuse-lite: 1.0.30001387
       postcss: 8.4.14
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
       sass: 1.54.9
-      styled-jsx: 5.0.6_lyrpg3s5qdiygbgk7rgnrugd7e
-      use-sync-external-store: 1.2.0_react@17.0.2
+      styled-jsx: 5.0.6_obstn65pa6zrrg27pp7sudypiq
+      use-sync-external-store: 1.2.0_react@18.2.0
     optionalDependencies:
       '@next/swc-android-arm-eabi': 12.3.0
       '@next/swc-android-arm64': 12.3.0
@@ -11261,8 +11254,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /pnpm/7.11.0:
-    resolution: {integrity: sha512-cxh4TfCE8L4ZbLBN72kTGKTYP7X08nrIzoQ2rQCKihAcIHAdNIgsk4bEJyE1xHjE+bNJt9skwr7aJv3LpvUawQ==}
+  /pnpm/7.12.2:
+    resolution: {integrity: sha512-8QvnKANKN+YZXDmVYGI7zRJysdKldZI+w3AYnxu9IwtnLv1x6WuzrJr0nxMcTeuUAT908RjDqK+/6KJB9wNqxA==}
     engines: {node: '>=14.6'}
     hasBin: true
     requiresBuild: true
@@ -11995,15 +11988,14 @@ packages:
       strip-json-comments: 2.0.1
     dev: true
 
-  /react-dom/17.0.2_react@17.0.2:
-    resolution: {integrity: sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==}
+  /react-dom/18.2.0_react@18.2.0:
+    resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==}
     peerDependencies:
-      react: 17.0.2
+      react: ^18.2.0
     dependencies:
       loose-envify: 1.4.0
-      object-assign: 4.1.1
-      react: 17.0.2
-      scheduler: 0.20.2
+      react: 18.2.0
+      scheduler: 0.23.0
 
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
@@ -12022,6 +12014,13 @@ packages:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
+    dev: true
+
+  /react/18.2.0:
+    resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      loose-envify: 1.4.0
 
   /read-cache/1.0.0:
     resolution: {integrity: sha512-Owdv/Ft7IjOgm/i0xvNDZ1LrRANRfew4b2prF3OWMQLxLfu3bS8FVhCsrSCMK4lR56Y9ya+AThoTpDCTxCmpRA==}
@@ -12544,11 +12543,10 @@ packages:
       xmlchars: 2.2.0
     dev: true
 
-  /scheduler/0.20.2:
-    resolution: {integrity: sha512-2eWfGgAqqWFGqtdMmcL5zCMK1U8KlXv8SQFGglL3CEtd0aDVDWgeF/YoCmvln55m5zSk3J/20hTaSBeSObsQDQ==}
+  /scheduler/0.23.0:
+    resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
     dependencies:
       loose-envify: 1.4.0
-      object-assign: 4.1.1
 
   /schema-utils/2.7.1:
     resolution: {integrity: sha512-SHiNtMOUGWBQJwzISiVYKu82GiV4QYGePp3odlY1tuKO7gPtphAT5R/py0fA6xtbgLL/RvtJZnU9b8s0F1q0Xg==}
@@ -13144,7 +13142,7 @@ packages:
     resolution: {integrity: sha512-Dj1Okke1C3uKKwQcetra4jSuk0DqbzbYtXipzFlFMZtowbF1x7BKJwB9AayVMyFARvU8EDrZdcax4At/452cAg==}
     dev: true
 
-  /styled-jsx/5.0.6_lyrpg3s5qdiygbgk7rgnrugd7e:
+  /styled-jsx/5.0.6_obstn65pa6zrrg27pp7sudypiq:
     resolution: {integrity: sha512-xOeROtkK5MGMDimBQ3J6iPId8q0t/BDoG5XN6oKkZClVz9ISF/hihN8OCn2LggMU6N32aXnrXBdn3auSqNS9fA==}
     engines: {node: '>= 12.0.0'}
     peerDependencies:
@@ -13158,10 +13156,10 @@ packages:
         optional: true
     dependencies:
       '@babel/core': 7.19.0
-      react: 17.0.2
+      react: 18.2.0
     dev: false
 
-  /styled-jsx/5.0.7_lyrpg3s5qdiygbgk7rgnrugd7e:
+  /styled-jsx/5.0.7_obstn65pa6zrrg27pp7sudypiq:
     resolution: {integrity: sha512-b3sUzamS086YLRuvnaDigdAewz1/EFYlHpYBP5mZovKEdQQOIIYq8lApylub3HHZ6xFjV051kkGU7cudJmrXEA==}
     engines: {node: '>= 12.0.0'}
     peerDependencies:
@@ -13175,7 +13173,7 @@ packages:
         optional: true
     dependencies:
       '@babel/core': 7.19.0
-      react: 17.0.2
+      react: 18.2.0
     dev: false
 
   /stylehacks/5.1.0_postcss@8.4.16:
@@ -14351,12 +14349,12 @@ packages:
       urijs: 1.19.11
     dev: true
 
-  /use-sync-external-store/1.2.0_react@17.0.2:
+  /use-sync-external-store/1.2.0_react@18.2.0:
     resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
-      react: 17.0.2
+      react: 18.2.0
     dev: false
 
   /use/3.1.1:
