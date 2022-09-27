@@ -79,7 +79,7 @@ specifiers:
   eslint-plugin-toml: 0.3.1
   eslint-plugin-tsdoc: 0.2.17
   eslint-plugin-unicorn: 43.0.2
-  eslint_d: 12.2.0
+  eslint_d: 12.2.1
   faunadb: 4.6.0
   fsevents: 2.3.2
   git-format-staged: 3.0.0
@@ -230,7 +230,7 @@ devDependencies:
   eslint-plugin-toml: 0.3.1_eslint@8.24.0
   eslint-plugin-tsdoc: 0.2.17
   eslint-plugin-unicorn: 43.0.2_eslint@8.24.0
-  eslint_d: 12.2.0
+  eslint_d: 12.2.1
   git-format-staged: 3.0.0
   html-validate: 7.5.0_jest@29.0.3
   husky: 8.0.1
@@ -6787,8 +6787,8 @@ packages:
       - supports-color
     dev: true
 
-  /eslint_d/12.2.0:
-    resolution: {integrity: sha512-pra1cvdhKZCmrJHqlnm+EmbNeBQgd9sycQSlhWTl0RSiJEhjA1G8RJuaIaU5am0APIGHts/QbD0ZofS8pV0GKw==}
+  /eslint_d/12.2.1:
+    resolution: {integrity: sha512-qOJ9cTi5AaH5bOgEoCkv41DJ637mHgzffbOLojwU4wadwC6qbR+OxVJRvVzH0v2XYmQOvw4eiJK7ivrr5SvzsA==}
     hasBin: true
     dependencies:
       core_d: 5.0.1
