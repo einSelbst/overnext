@@ -78,7 +78,7 @@ specifiers:
   eslint-plugin-sort-keys-fix: 1.1.2
   eslint-plugin-toml: 0.3.1
   eslint-plugin-tsdoc: 0.2.17
-  eslint-plugin-unicorn: 44.0.0
+  eslint-plugin-unicorn: 44.0.1
   eslint_d: 12.2.1
   faunadb: 4.6.0
   fsevents: 2.3.2
@@ -166,7 +166,7 @@ dependencies:
 optionalDependencies:
   '@axe-core/react': 4.4.5
   fsevents: 2.3.2
-  pnpm: 7.13.0
+  pnpm: 7.13.1
 
 devDependencies:
   '@babel/preset-env': 7.19.3_@babel+core@7.19.0
@@ -229,7 +229,7 @@ devDependencies:
   eslint-plugin-sort-keys-fix: 1.1.2
   eslint-plugin-toml: 0.3.1_eslint@8.24.0
   eslint-plugin-tsdoc: 0.2.17
-  eslint-plugin-unicorn: 44.0.0_eslint@8.24.0
+  eslint-plugin-unicorn: 44.0.1_eslint@8.24.0
   eslint_d: 12.2.1
   git-format-staged: 3.0.0
   html-validate: 7.5.0_jest@29.1.2
@@ -6668,8 +6668,8 @@ packages:
       '@microsoft/tsdoc-config': 0.16.2
     dev: true
 
-  /eslint-plugin-unicorn/44.0.0_eslint@8.24.0:
-    resolution: {integrity: sha512-GbkxkdNzY7wNEfZnraAP+oA+aqqzSrNZmO37kjW1DyqnSK/ah08ySDdIecObpx46twv+zcQvH8i0CHP98Wo64w==}
+  /eslint-plugin-unicorn/44.0.1_eslint@8.24.0:
+    resolution: {integrity: sha512-ly6Ye9OfgYBCw/FfsdycCzAztcRd+pOA0F6xZwtUsUkgOBjtNR0684xC7u+0RmE3SKr3y7z8MaIWunw36tbZdg==}
     engines: {node: '>=14.18'}
     peerDependencies:
       eslint: '>=8.23.1'
@@ -11218,8 +11218,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /pnpm/7.13.0:
-    resolution: {integrity: sha512-n1oG3HAOIXuOpzQAMqaPTTKlP1lJBpj9p9EIom63WYiZmCl2GaTvrcDQ085MZRcb5buQxt5lYgfqXppkluB97A==}
+  /pnpm/7.13.1:
+    resolution: {integrity: sha512-Nu1LzxlH3qdIFe0DJ5SciqBl9i7t/eW+c0zKf9g8TXRo20EhXy/e9YwCLY2fEwbIYL/3gZ4zuys010PRpsbHFQ==}
     engines: {node: '>=14.6'}
     hasBin: true
     requiresBuild: true
