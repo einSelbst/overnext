@@ -204,7 +204,7 @@
     "eslint-plugin-sort-keys-fix": "1.1.2",
     "eslint-plugin-toml": "0.3.1",
     "eslint-plugin-tsdoc": "0.2.17",
-    "eslint-plugin-unicorn": "44.0.1",
+    "eslint-plugin-unicorn": "44.0.2",
     "eslint_d": "12.2.1",
     "git-format-staged": "3.0.0",
     "html-validate": "7.5.0",
