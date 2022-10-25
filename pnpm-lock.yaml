@@ -52,7 +52,7 @@ specifiers:
   c8: 7.12.0
   commitizen: 4.2.5
   core-js: 3.25.1
-  cypress: 10.10.0
+  cypress: 10.11.0
   cypress-watch-and-reload: 1.10.4
   dependency-version-badge: 1.11.0
   eslint: 8.26.0
@@ -172,7 +172,7 @@ devDependencies:
   '@babel/preset-env': 7.19.4_@babel+core@7.19.0
   '@commitlint/cli': 17.1.2
   '@commitlint/config-conventional': 17.1.0
-  '@cypress/code-coverage': 3.10.0_72ubx3ekujijgntnk3j3pdw6v4
+  '@cypress/code-coverage': 3.10.0_zizh5enpm4a6fvhii4utyhh5a4
   '@istanbuljs/nyc-config-typescript': 1.0.2_nyc@15.1.0
   '@next/bundle-analyzer': 12.3.1
   '@next/eslint-plugin-next': 12.3.1
@@ -203,7 +203,7 @@ devDependencies:
   babel-loader: 8.2.5_z22tmofudeh3tyeifpjvwjl5ei
   c8: 7.12.0
   commitizen: 4.2.5
-  cypress: 10.10.0
+  cypress: 10.11.0
   cypress-watch-and-reload: 1.10.4
   dependency-version-badge: 1.11.0
   eslint: 8.26.0
@@ -1662,14 +1662,14 @@ packages:
       postcss-selector-parser: 6.0.10
     dev: true
 
-  /@cypress/code-coverage/3.10.0_72ubx3ekujijgntnk3j3pdw6v4:
+  /@cypress/code-coverage/3.10.0_zizh5enpm4a6fvhii4utyhh5a4:
     resolution: {integrity: sha512-K5pW2KPpK4vKMXqxd6vuzo6m9BNgpAv1LcrrtmqAtOJ1RGoEILXYZVost0L6Q+V01NyY7n7jXIIfS7LR3nP6YA==}
     peerDependencies:
       cypress: '*'
     dependencies:
       '@cypress/webpack-preprocessor': 5.15.0_bsmqicwnif3zntq2cmkfv2xcey
       chalk: 4.1.2
-      cypress: 10.10.0
+      cypress: 10.11.0
       dayjs: 1.10.7
       debug: 4.3.4
       execa: 4.1.0
@@ -5515,8 +5515,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /cypress/10.10.0:
-    resolution: {integrity: sha512-bU8r44x1NIYAUNNXt3CwJpLOVth7HUv2hUhYCxZmgZ1IugowDvuHNpevnoZRQx1KKOEisLvIJW+Xen5Pjn41pg==}
+  /cypress/10.11.0:
+    resolution: {integrity: sha512-lsaE7dprw5DoXM00skni6W5ElVVLGAdRUUdZjX2dYsGjbY/QnpzWZ95Zom1mkGg0hAaO/QVTZoFVS7Jgr/GUPA==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     requiresBuild: true
@@ -14748,7 +14748,7 @@ packages:
   /wide-align/1.1.5:
     resolution: {integrity: sha512-eDMORYaPNZ4sQIuuYPDHdQvf4gyCF9rEEV/yPxGfwPkRodwEgiMUUXTx/dex+Me0wxx53S+NgUHaP7y3MGlDmg==}
     dependencies:
-      string-width: 1.0.2
+      string-width: 4.2.3
     dev: false
 
   /widest-line/3.1.0:
