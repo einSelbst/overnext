@@ -93,7 +93,7 @@ specifiers:
   next: 12.3.1
   next-compose-plugins: 2.2.1
   next-pwa: 5.6.0
-  next-seo: 5.8.0
+  next-seo: 5.11.0
   next-sitemap: 3.1.29
   next-themes: 0.2.1
   next-unused: 0.0.6
@@ -150,7 +150,7 @@ dependencies:
   next: 12.3.1_ceqegk62aowd7zijfxyuzsexrq
   next-compose-plugins: 2.2.1
   next-pwa: 5.6.0_gnxwyesm73gvpxbpoe5bt23n7e
-  next-seo: 5.8.0_dty4et2pnba4zo7o4cegg6bk2e
+  next-seo: 5.11.0_dty4et2pnba4zo7o4cegg6bk2e
   next-sitemap: 3.1.29_mna6xsgplvxkrmeg4ftolwenke
   next-themes: 0.2.1_dty4et2pnba4zo7o4cegg6bk2e
   preact: 10.11.0
@@ -164,7 +164,7 @@ dependencies:
   webpack: 5.74.0
 
 optionalDependencies:
-  '@axe-core/react': 4.4.5
+  '@axe-core/react': 4.5.0
   fsevents: 2.3.2
   pnpm: 7.14.0
 
@@ -293,11 +293,11 @@ packages:
       leven: 3.1.0
     dev: false
 
-  /@axe-core/react/4.4.5:
-    resolution: {integrity: sha512-f5ZoUKg2snKgtonlP1rCTeAHPCjP99id4HvAFGSyHXq/GyE5/y38Ljf3hi1hqfpm2wMPRSeM3qksgNypbves7Q==}
+  /@axe-core/react/4.5.0:
+    resolution: {integrity: sha512-dH810c1PDuq2ZPK9ESPr5mJtxTU9CL/gpVl1oMgQiMKY2430nCDbaacmJVSbXQW0oWUEErE32eQ9vLfr2YP5eQ==}
     requiresBuild: true
     dependencies:
-      axe-core: 4.4.3
+      axe-core: 4.5.0
       requestidlecallback: 0.3.0
     dev: false
     optional: true
@@ -4200,6 +4200,13 @@ packages:
   /axe-core/4.4.3:
     resolution: {integrity: sha512-32+ub6kkdhhWick/UjvEwRchgoetXqTK14INLqbGm5U2TzBkBNF3nQtLYm8ovxSkQWArjEQvftCKryjZaATu3w==}
     engines: {node: '>=4'}
+    dev: true
+
+  /axe-core/4.5.0:
+    resolution: {integrity: sha512-4+rr8eQ7+XXS5nZrKcMO/AikHL0hVqy+lHWAnE3xdHl+aguag8SOQ6eEqLexwLNWgXIMfunGuD3ON1/6Kyet0A==}
+    engines: {node: '>=4'}
+    dev: false
+    optional: true
 
   /axios/0.21.4_debug@4.3.4:
     resolution: {integrity: sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==}
@@ -10606,8 +10613,8 @@ packages:
       - webpack
     dev: false
 
-  /next-seo/5.8.0_dty4et2pnba4zo7o4cegg6bk2e:
-    resolution: {integrity: sha512-V5W/JwqdoX6/0zG4S7m5g8zNajYffytWigkPo2hrbHhLD18yGFBU9607OPhvbI9zX3QjWQFMBSmlUY456xt9cA==}
+  /next-seo/5.11.0_dty4et2pnba4zo7o4cegg6bk2e:
+    resolution: {integrity: sha512-TdGJKh6dVi2b5Ibkz3SF8/xMNx8lBx1Zvtr0/fxsh0IdNPKBHrJamAp9HOacToeVfC0TfWJk3SBVQw4MvzH0hQ==}
     peerDependencies:
       next: ^8.1.1-canary.54 || >=9.0.0
       react: '>=16.0.0'
