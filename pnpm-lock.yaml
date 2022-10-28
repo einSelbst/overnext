@@ -93,7 +93,7 @@ specifiers:
   next: 12.3.1
   next-compose-plugins: 2.2.1
   next-pwa: 5.6.0
-  next-seo: 5.11.0
+  next-seo: 5.11.1
   next-sitemap: 3.1.29
   next-themes: 0.2.1
   next-unused: 0.0.6
@@ -150,7 +150,7 @@ dependencies:
   next: 12.3.1_ceqegk62aowd7zijfxyuzsexrq
   next-compose-plugins: 2.2.1
   next-pwa: 5.6.0_gnxwyesm73gvpxbpoe5bt23n7e
-  next-seo: 5.11.0_dty4et2pnba4zo7o4cegg6bk2e
+  next-seo: 5.11.1_dty4et2pnba4zo7o4cegg6bk2e
   next-sitemap: 3.1.29_mna6xsgplvxkrmeg4ftolwenke
   next-themes: 0.2.1_dty4et2pnba4zo7o4cegg6bk2e
   preact: 10.11.0
@@ -10613,8 +10613,8 @@ packages:
       - webpack
     dev: false
 
-  /next-seo/5.11.0_dty4et2pnba4zo7o4cegg6bk2e:
-    resolution: {integrity: sha512-TdGJKh6dVi2b5Ibkz3SF8/xMNx8lBx1Zvtr0/fxsh0IdNPKBHrJamAp9HOacToeVfC0TfWJk3SBVQw4MvzH0hQ==}
+  /next-seo/5.11.1_dty4et2pnba4zo7o4cegg6bk2e:
+    resolution: {integrity: sha512-P18E5mDaUEvIK/hDlCLAl7w02Ew6a8m1E3KO3d+rIPKWPcBRMckcMzxkdFkafFqwHl4ygCLNCWlKWM9EKD3jIQ==}
     peerDependencies:
       next: ^8.1.1-canary.54 || >=9.0.0
       react: '>=16.0.0'
