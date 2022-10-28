@@ -35,7 +35,7 @@ specifiers:
   '@types/babel__core': 7.1.19
   '@types/babel__preset-env': 7.9.2
   '@types/core-js': 2.5.5
-  '@types/eslint': 8.4.8
+  '@types/eslint': 8.4.9
   '@types/is-ci': 3.0.0
   '@types/jest': 29.2.0
   '@types/node': 18.7.14
@@ -191,7 +191,7 @@ devDependencies:
   '@types/babel__core': 7.1.19
   '@types/babel__preset-env': 7.9.2
   '@types/core-js': 2.5.5
-  '@types/eslint': 8.4.8
+  '@types/eslint': 8.4.9
   '@types/is-ci': 3.0.0
   '@types/jest': 29.2.0
   '@types/prettier': 2.7.1
@@ -3145,7 +3145,7 @@ packages:
   /@types/eslint-scope/3.7.4:
     resolution: {integrity: sha512-9K4zoImiZc3HlIp6AVUDE4CWYx22a+lhSZMYNpbjW04+YF0KWj4pJXnEMjdnFTiQibFFmElcsasJXDbdI/EPhA==}
     dependencies:
-      '@types/eslint': 8.4.8
+      '@types/eslint': 8.4.9
       '@types/estree': 1.0.0
 
   /@types/eslint/7.29.0:
@@ -3155,8 +3155,8 @@ packages:
       '@types/json-schema': 7.0.11
     dev: true
 
-  /@types/eslint/8.4.8:
-    resolution: {integrity: sha512-zUCKQI1bUCTi+0kQs5ZQzQ/XILWRLIlh15FXWNykJ+NG3TMKMVvwwC6GP3DR1Ylga15fB7iAExSzc4PNlR5i3w==}
+  /@types/eslint/8.4.9:
+    resolution: {integrity: sha512-jFCSo4wJzlHQLCpceUhUnXdrPuCNOjGFMQ8Eg6JXxlz3QaCKOb7eGi2cephQdM4XTYsNej69P9JDJ1zqNIbncQ==}
     dependencies:
       '@types/estree': 1.0.0
       '@types/json-schema': 7.0.11
