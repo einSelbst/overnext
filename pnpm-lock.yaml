@@ -130,7 +130,7 @@ specifiers:
   textlint-rule-terminology: 3.0.4
   ts-node: 10.9.1
   typed-query-selector: 2.7.0
-  typedoc: 0.23.18
+  typedoc: 0.23.19
   typescript: 4.8.3
   typescript-eslint-language-service: 5.0.0
   typesync: 0.9.2
@@ -264,7 +264,7 @@ devDependencies:
   textlint-rule-diacritics: 1.0.0
   textlint-rule-terminology: 3.0.4_e6f5qegxjw2uhpjztc7wbhaveq
   ts-node: 10.9.1_5phtbhw2vjptp6mevgyr22345q
-  typedoc: 0.23.18_typescript@4.8.3
+  typedoc: 0.23.19_typescript@4.8.3
   typescript-eslint-language-service: 5.0.0_iyytxovjsifpfr35ydmgi24ee4
   typesync: 0.9.2
 
@@ -14169,8 +14169,8 @@ packages:
     resolution: {integrity: sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==}
     dev: true
 
-  /typedoc/0.23.18_typescript@4.8.3:
-    resolution: {integrity: sha512-0Tq/uFkUuWyRYyjOShTkhsOm6u5E8wf0i6L76/k5znEaxvWKHGeT2ywZThGrDrryV/skO/REM824D1gm8ccQuA==}
+  /typedoc/0.23.19_typescript@4.8.3:
+    resolution: {integrity: sha512-70jPL0GQnSJtgQqI7ifOWxpTXrB3sxc4SWPPRn3K0wdx3txI6ZIT/ZYMF39dNg2Gjmql45cO+cAKXJp0TpqOVA==}
     engines: {node: '>= 14.14'}
     hasBin: true
     peerDependencies:
