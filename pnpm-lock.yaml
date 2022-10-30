@@ -56,7 +56,7 @@ specifiers:
   cypress-watch-and-reload: 1.10.4
   dependency-version-badge: 1.11.0
   eslint: 8.26.0
-  eslint-config-next: 12.3.1
+  eslint-config-next: 12.3.2
   eslint-config-prettier: 8.5.0
   eslint-find-rules: 4.1.0
   eslint-formatter-pretty: 4.1.0
@@ -166,7 +166,7 @@ dependencies:
 optionalDependencies:
   '@axe-core/react': 4.5.0
   fsevents: 2.3.2
-  pnpm: 7.14.0
+  pnpm: 7.14.1
 
 devDependencies:
   '@babel/preset-env': 7.19.4_@babel+core@7.19.0
@@ -207,7 +207,7 @@ devDependencies:
   cypress-watch-and-reload: 1.10.4
   dependency-version-badge: 1.11.0
   eslint: 8.26.0
-  eslint-config-next: 12.3.1_k3rzghlbvxbkeygxp7hcorhnku
+  eslint-config-next: 12.3.2_k3rzghlbvxbkeygxp7hcorhnku
   eslint-config-prettier: 8.5.0_eslint@8.26.0
   eslint-find-rules: 4.1.0_eslint@8.26.0
   eslint-formatter-pretty: 4.1.0
@@ -2174,6 +2174,12 @@ packages:
 
   /@next/eslint-plugin-next/12.3.1:
     resolution: {integrity: sha512-sw+lTf6r6P0j+g/n9y4qdWWI2syPqZx+uc0+B/fRENqfR3KpSid6MIKqc9gNwGhJASazEQ5b3w8h4cAET213jw==}
+    dependencies:
+      glob: 7.1.7
+    dev: true
+
+  /@next/eslint-plugin-next/12.3.2:
+    resolution: {integrity: sha512-Jx0BIS9STamGSbA+vgTxPAi1mRcq4DoH/5kPMs0PFLFi542mmIKUUtYWB61bI+G6KPMTqejYmO3zi+SF6tzGYg==}
     dependencies:
       glob: 7.1.7
     dev: true
@@ -6288,8 +6294,8 @@ packages:
       source-map: 0.6.1
     dev: true
 
-  /eslint-config-next/12.3.1_k3rzghlbvxbkeygxp7hcorhnku:
-    resolution: {integrity: sha512-EN/xwKPU6jz1G0Qi6Bd/BqMnHLyRAL0VsaQaWA7F3KkjAgZHi4f1uL1JKGWNxdQpHTW/sdGONBd0bzxUka/DJg==}
+  /eslint-config-next/12.3.2_k3rzghlbvxbkeygxp7hcorhnku:
+    resolution: {integrity: sha512-ir8t3wRNexUMSKsMNh7J1EWwiBAr2dd015UAiCFvQ/01MRBPmFof1C6PFh/RqlupwamSZlv6j8gfaV1RxHuRoQ==}
     peerDependencies:
       eslint: ^7.23.0 || ^8.0.0
       typescript: '>=3.3.1'
@@ -6297,7 +6303,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@next/eslint-plugin-next': 12.3.1
+      '@next/eslint-plugin-next': 12.3.2
       '@rushstack/eslint-patch': 1.2.0
       '@typescript-eslint/parser': 5.40.1_k3rzghlbvxbkeygxp7hcorhnku
       eslint: 8.26.0
@@ -11367,8 +11373,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /pnpm/7.14.0:
-    resolution: {integrity: sha512-yUKSckJLBIw8ByqMKJF9497kzwrevuQhdL6o2eYbky7woAictxoGX9veBdQYCdBemuC239X2FJq/LGTpCjQ55w==}
+  /pnpm/7.14.1:
+    resolution: {integrity: sha512-jxnp3SGzTZcSITKfaTfRrkOJYSeHwlU/rF+K9ofaIeHUYF3zR3Qcy5vl8mm07ECMfWhNjOy2phs2o3Zb41pHAg==}
     engines: {node: '>=14.6'}
     hasBin: true
     requiresBuild: true
