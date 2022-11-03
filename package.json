@@ -226,7 +226,7 @@
     "source-map-support": "0.5.21",
     "standard-version": "9.5.0",
     "start-server-and-test": "1.14.0",
-    "stylelint": "14.14.0",
+    "stylelint": "14.14.1",
     "stylelint-config-idiomatic-order": "9.0.0",
     "stylelint-config-prettier": "9.0.3",
     "stylelint-config-standard": "29.0.0",
