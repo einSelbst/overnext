@@ -52,7 +52,7 @@ specifiers:
   c8: 7.12.0
   commitizen: 4.2.5
   core-js: 3.25.1
-  cypress: 10.11.0
+  cypress: 11.2.0
   cypress-watch-and-reload: 1.10.4
   dependency-version-badge: 1.11.0
   eslint: 8.26.0
@@ -164,15 +164,15 @@ dependencies:
   webpack: 5.74.0
 
 optionalDependencies:
-  '@axe-core/react': 4.5.0
+  '@axe-core/react': 4.5.2
   fsevents: 2.3.2
-  pnpm: 7.14.2
+  pnpm: 7.17.0
 
 devDependencies:
   '@babel/preset-env': 7.19.4_@babel+core@7.19.0
   '@commitlint/cli': 17.2.0
   '@commitlint/config-conventional': 17.2.0
-  '@cypress/code-coverage': 3.10.0_hrq3va6fzaywhadjouhungdnbq
+  '@cypress/code-coverage': 3.10.0_z2bcskcu5tysudxk4cwadwqg6e
   '@istanbuljs/nyc-config-typescript': 1.0.2_nyc@15.1.0
   '@next/bundle-analyzer': 12.3.2
   '@next/eslint-plugin-next': 12.3.2
@@ -203,7 +203,7 @@ devDependencies:
   babel-loader: 8.3.0_z22tmofudeh3tyeifpjvwjl5ei
   c8: 7.12.0
   commitizen: 4.2.5
-  cypress: 10.11.0
+  cypress: 11.2.0
   cypress-watch-and-reload: 1.10.4
   dependency-version-badge: 1.11.0
   eslint: 8.26.0
@@ -293,11 +293,11 @@ packages:
       leven: 3.1.0
     dev: false
 
-  /@axe-core/react/4.5.0:
-    resolution: {integrity: sha512-dH810c1PDuq2ZPK9ESPr5mJtxTU9CL/gpVl1oMgQiMKY2430nCDbaacmJVSbXQW0oWUEErE32eQ9vLfr2YP5eQ==}
+  /@axe-core/react/4.5.2:
+    resolution: {integrity: sha512-I592DzOZcNE/o/q9KO92kxnAIHYsFMhhGxaByuIAHio8YeK7DGX1GadqWsNzzZ3qmrsfw1RncXZS43rQs2Bfvw==}
     requiresBuild: true
     dependencies:
-      axe-core: 4.5.0
+      axe-core: 4.5.2
       requestidlecallback: 0.3.0
     dev: false
     optional: true
@@ -1662,14 +1662,14 @@ packages:
       postcss-selector-parser: 6.0.10
     dev: true
 
-  /@cypress/code-coverage/3.10.0_hrq3va6fzaywhadjouhungdnbq:
+  /@cypress/code-coverage/3.10.0_z2bcskcu5tysudxk4cwadwqg6e:
     resolution: {integrity: sha512-K5pW2KPpK4vKMXqxd6vuzo6m9BNgpAv1LcrrtmqAtOJ1RGoEILXYZVost0L6Q+V01NyY7n7jXIIfS7LR3nP6YA==}
     peerDependencies:
       cypress: '*'
     dependencies:
       '@cypress/webpack-preprocessor': 5.15.0_2e6cxmjnsjgpqsvceutbdqutgu
       chalk: 4.1.2
-      cypress: 10.11.0
+      cypress: 11.2.0
       dayjs: 1.10.7
       debug: 4.3.4
       execa: 4.1.0
@@ -4194,6 +4194,13 @@ packages:
   /axe-core/4.5.0:
     resolution: {integrity: sha512-4+rr8eQ7+XXS5nZrKcMO/AikHL0hVqy+lHWAnE3xdHl+aguag8SOQ6eEqLexwLNWgXIMfunGuD3ON1/6Kyet0A==}
     engines: {node: '>=4'}
+    dev: true
+
+  /axe-core/4.5.2:
+    resolution: {integrity: sha512-u2MVsXfew5HBvjsczCv+xlwdNnB1oQR9HlAcsejZttNjKKSkeDNVwB1vMThIUIFI9GoT57Vtk8iQLwqOfAkboA==}
+    engines: {node: '>=4'}
+    dev: false
+    optional: true
 
   /axios/0.21.4_debug@4.3.4:
     resolution: {integrity: sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==}
@@ -5509,8 +5516,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /cypress/10.11.0:
-    resolution: {integrity: sha512-lsaE7dprw5DoXM00skni6W5ElVVLGAdRUUdZjX2dYsGjbY/QnpzWZ95Zom1mkGg0hAaO/QVTZoFVS7Jgr/GUPA==}
+  /cypress/11.2.0:
+    resolution: {integrity: sha512-u61UGwtu7lpsNWLUma/FKNOsrjcI6wleNmda/TyKHe0dOBcVjbCPlp1N6uwFZ0doXev7f/91YDpU9bqDCFeBLA==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     requiresBuild: true
@@ -11318,8 +11325,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /pnpm/7.14.2:
-    resolution: {integrity: sha512-NSxrIaRW07jFQQ1fPFFOA8eMfuogsMeygOKd3zaFgyJBdo1oh61jl2JjWc+w0XNzWIMG7/v9HK7nP8RTL5NO3g==}
+  /pnpm/7.17.0:
+    resolution: {integrity: sha512-0oy+VI/6r248MzFrr3jBTQ5qxC1wM+wP3YoGcoohPEMk+5LfQBYHsazdu8QDtuigr2jjaDi0hfg/c8k89jxiEA==}
     engines: {node: '>=14.6'}
     hasBin: true
     requiresBuild: true
