@@ -117,7 +117,7 @@
     }
   },
   "dependencies": {
-    "@babel/core": "7.19.0",
+    "@babel/core": "7.22.6",
     "@next/env": "12.3.2",
     "@sentry/nextjs": "7.12.1",
     "@types/node": "18.7.14",
